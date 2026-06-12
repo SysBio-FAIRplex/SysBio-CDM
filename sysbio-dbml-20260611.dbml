@@ -1,9 +1,25 @@
 // OMOP CDM 5.4 (subset) \+ custom extensions \+ governance table  
 // Shared ERD was created by pasting into https://dbdiagram.io
+//
+// ⚠️ PARTIALLY UPDATED 2026-06-12 — sysbioDDL.sql remains the authoritative schema; the paired
+//    PNG is STALE and must be regenerated from this DBML (paste into dbdiagram.io). Status:
+//    (1) PERSON: shown abbreviated (person_id only) with a Note — the full canonical shape, the
+//        sentinel-0 CHECK constraints, and the placeholder year_of_birth live in sysbioDDL.sql.
+//    (2) OBSERVATION_PERIOD: governed table (delete-guard + read filter, field-concept 1147044)
+//        is now included below, with a Ref to person.person_id.
 
 Table person {  
   person\_id integer \[pk\]  
-  Note: 'Stripped to person\_id only in this build'  
+  Note: 'FULL canonical PERSON in this build (see sysbioDDL.sql). Only person\_id shown here for brevity. gender/race/ethnicity\_concept\_id are pinned to 0 (CHECK); year\_of\_birth is a placeholder. Real demographics live as governed OBSERVATION records.'  
+}
+
+Table observation\_period {
+  observation\_period\_id integer \[pk\]
+  person\_id integer \[not null\]
+  observation\_period\_start\_date date \[not null\]
+  observation\_period\_end\_date date \[not null\]
+  period\_type\_concept\_id integer \[not null\]
+  Note: 'Governed (field concept 1147044): delete\-guard \+ read filter'
 }
 
 Table visit\_occurrence {  
@@ -185,6 +201,7 @@ Table group\_access {
 }
 
 // \---- Relationships (real FKs only) \----  
+Ref: observation\_period.person\_id \> person.person\_id
 Ref: visit\_occurrence.person\_id \> person.person\_id  
 Ref: visit\_occurrence.preceding\_visit\_occurrence\_id \> visit\_occurrence.visit\_occurrence\_id  
 Ref: measurement.person\_id \> person.person\_id  
