@@ -18,6 +18,10 @@
 //   * assay models a wet-lab assay OR a computational pipeline; lineage is
 //     assay_to_specimen (wet-lab inputs) + assay_input_file (pipeline inputs),
 //     with file.assay_id as the output edge.
+//   * specimen_relationship is a non-canonical derivation lineage: specimen_id_1
+//     derives from specimen_id_2 (relationship_concept_id, e.g. SNOMED 32554
+//     "Sub-specimen of"); each edge is backed by procedure_occurrence_id. The
+//     most specific anatomic_site_concept_id propagates along the lineage.
 //
 // Render: paste into https://dbdiagram.io
 
@@ -271,6 +275,16 @@ Table assay_input_file {
   }
 }
 
+Table specimen_relationship {
+  specimen_id_1 INTEGER [not null]
+  specimen_id_2 INTEGER [not null]
+  relationship_concept_id INTEGER
+  procedure_occurrence_id INTEGER [not null]
+  indexes {
+    (specimen_id_1, specimen_id_2) [pk]
+  }
+}
+
 Table condition_occurrence_access {
   condition_occurrence_id INTEGER [not null]
   access_group_id INTEGER [not null]
@@ -333,6 +347,9 @@ Ref: assay_to_specimen.assay_id > assay.assay_id
 Ref: assay_to_specimen.specimen_id > specimen.specimen_id
 Ref: assay_input_file.assay_id > assay.assay_id
 Ref: assay_input_file.file_id > files.file_id
+Ref: specimen_relationship.specimen_id_1 > specimen.specimen_id
+Ref: specimen_relationship.specimen_id_2 > specimen.specimen_id
+Ref: specimen_relationship.procedure_occurrence_id > procedure_occurrence.procedure_occurrence_id
 Ref: condition_occurrence_access.condition_occurrence_id > condition_occurrence.condition_occurrence_id
 Ref: condition_occurrence_access.access_group_id > access_groups.id
 Ref: procedure_occurrence_access.procedure_occurrence_id > procedure_occurrence.procedure_occurrence_id

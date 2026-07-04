@@ -779,3 +779,77 @@ concept_id	concept_name	domain_id	vocabulary_id	concept_class_id	standard_concep
 46286521	Current View Provisional Problem Description item 23 - peer relationship difficulties	Measurement	SNOMED	Staging / Scales	S	987041000000105	2015-10-01	2099-12-31	
 2000000101	assay.assay_id	Metadata	CDM Extension	Field		assay.assay_id			
 2000000102	file_asset.file_asset_id	Metadata	CDM Extension	Field		file_asset.file_asset_id			
+8512	day	Unit	UCUM	Unit	S	d	1970-01-01	2099-12-31	
+8582	centimeter	Unit	UCUM	Unit	S	cm	1970-01-01	2099-12-31	
+9531	kilogram per square meter	Unit	UCUM	Unit	S	kg/m2	1970-01-01	2099-12-31	
+32035	Visit derived from EHR encounter record	Type Concept	Visit Type	Visit Type		OMOP4822480	1970-01-01	2099-12-31	
+32817	EHR	Type Concept	Type Concept	Type Concept	S	OMOP4976890	2020-08-20	2099-12-31	
+32965	nanogram per microliter	Unit	UCUM	Unit	S	ng/uL	1970-01-01	2099-12-31	
+80809	Rheumatoid arthritis	Condition	SNOMED	Disorder	S	69896004	2002-01-31	2099-12-31	
+138502	Vitiligo	Condition	SNOMED	Disorder	S	56727007	2002-01-31	2099-12-31	
+201826	Type 2 diabetes mellitus	Condition	SNOMED	Disorder	S	44054006	2002-01-31	2099-12-31	
+257628	Systemic lupus erythematosus	Condition	SNOMED	Disorder	S	55464009	2002-01-31	2099-12-31	
+375415	Injury of head	Condition	SNOMED	Disorder	S	82271004	2002-01-31	2099-12-31	
+378143	Encephalitis	Condition	SNOMED	Disorder	S	45170000	2002-01-31	2099-12-31	
+380378	Epilepsy	Condition	SNOMED	Disorder	S	84757009	2002-01-31	2099-12-31	
+439664	Relationship problem	Observation	SNOMED	Clinical Finding	S	160822004	2002-01-31	2099-12-31	
+443340	Neuroleptic adverse reaction	Observation	SNOMED	Disorder	S	292371003	2002-01-31	2099-12-31	
+619635	Alcoholic beverage intake	Observation	SNOMED	Observable Entity	S	897148007	2021-01-31	2099-12-31	
+720870	milliliter per minute per 1.73 square meter	Unit	UCUM	Unit	S	mL/min/(173.10*-2.m2)	2022-04-07	2099-12-31	
+756265	OMOP CDM Version 5.4.0	Metadata	CDM	CDM	S	CDM v5.4.0	2021-09-25	2099-12-31	
+1091074	Date and time of last update of data	Observation	LOINC	Clinical Observation	S	106177-9	2024-08-06	2099-12-31	
+3012697	History of Tobacco use	Observation	LOINC	Clinical Observation	S	11367-0	1997-07-31	2099-12-31	
+3046374	Neurological diseases or conditions Set	Observation	LOINC	Survey	S	46023-8	1970-01-01	2099-12-31	
+3187945	Neuropathology observable entity	Observation	Nebraska Lexicon	Observable Entity	S	860301000004107	2019-03-26	2099-12-31	
+4002227	Specimen from brain	Specimen	SNOMED	Specimen	S	119398007	2002-01-31	2099-12-31	
+4011536	B lymphocyte	Spec Anatomic Site	SNOMED	Body Structure	S	112130006	2002-01-31	2099-12-31	
+4012679	Response to memory test for present place	Observation	SNOMED	Observable Entity	S	165285009	2002-01-31	2099-12-31	
+4012956	Response to memory test for present month	Observation	SNOMED	Observable Entity	S	165294003	2002-01-31	2099-12-31	
+4013819	Response to memory test for present time	Observation	SNOMED	Observable Entity	S	165282007	2002-01-31	2099-12-31	
+4066738	Skin structure of lateral margin of forearm	Spec Anatomic Site	SNOMED	Body Structure	S	20086004	2002-01-31	2099-12-31	
+4076654	Memory lapses	Condition	SNOMED	Clinical Finding	S	225038006	2002-01-31	2099-12-31	
+4086495	Keeps falling asleep	Observation	SNOMED	Clinical Finding	S	248219002	2002-01-31	2099-12-31	
+4107185	Diagnosis interpretation	Observation	SNOMED	Observable Entity	S	282291009	2002-01-31	2099-12-31	
+4114720	Difficulty talking	Condition	SNOMED	Clinical Finding	S	286378009	2002-01-31	2099-12-31	
+4117364	Level of anxiety	Observation	SNOMED	Clinical Finding	S	286644009	2002-01-31	2099-12-31	
+4124259	Cerebrospinal fluid specimen	Specimen	SNOMED	Specimen	S	258450006	2002-01-31	2099-12-31	
+4126631	Parkinsonian features	Observation	SNOMED	Clinical Finding	S	304535004	2002-01-31	2099-12-31	
+4133034	Brain structure	Spec Anatomic Site	SNOMED	Body Structure	S	12738006	2002-01-31	2099-12-31	
+4141652	Medication commenced	Observation	SNOMED	Context-dependent	S	266709005	2002-01-31	2099-12-31	
+4153986	Ability to remember day of the week	Observation	SNOMED	Observable Entity	S	283894000	2002-01-31	2099-12-31	
+4171755	>=	Meas Value Operator	SNOMED	Qualifier Value	S	276138003	2002-01-31	2099-12-31	
+4186430	Neuron	Spec Anatomic Site	SNOMED	Body Structure	S	47220008	2002-01-31	2099-12-31	
+4200843	Fibroblast	Spec Anatomic Site	SNOMED	Body Structure	S	52547004	2002-01-31	2099-12-31	
+4204184	Skin biopsy specimen	Specimen	SNOMED	Specimen	S	309066003	2002-01-31	2099-12-31	
+4208122	Monocyte	Spec Anatomic Site	SNOMED	Body Structure	S	55918008	2002-01-31	2099-12-31	
+4220362	Ex-drinker	Observation	SNOMED	Clinical Finding	S	82581004	2002-01-31	2099-12-31	
+4224159	Has method	Observation	SNOMED	Qualifier Value	S	84203001	2002-01-31	2099-12-31	
+4229415	Peripheral blood mononuclear cell	Spec Anatomic Site	SNOMED	Body Structure	S	404798000	2004-01-31	2099-12-31	
+4238820	T lymphocyte	Spec Anatomic Site	SNOMED	Body Structure	S	57184004	2002-01-31	2099-12-31	
+4271761	Ethnic group	Observation	SNOMED	Observable Entity	S	364699009	2002-01-31	2099-12-31	
+4272035	Microgliocyte	Spec Anatomic Site	SNOMED	Body Structure	S	63483002	2002-01-31	2099-12-31	
+4280654	Necrosis	Observation	SNOMED	Morph Abnormality	S	6574001	2002-01-31	2099-12-31	
+4301136	Astrocyte	Spec Anatomic Site	SNOMED	Body Structure	S	78399007	2002-01-31	2099-12-31	
+4307852	Structure of hippocampal formation	Spec Anatomic Site	SNOMED	Body Structure	S	422867004	2007-01-31	2099-12-31	
+4309809	Centrifugation	Procedure	SNOMED	Procedure	S	85457002	2002-01-31	2099-12-31	
+4319906	Dyskinesia	Condition	SNOMED	Clinical Finding	S	9748009	2002-01-31	2099-12-31	
+4321537	Substantia nigra structure	Spec Anatomic Site	SNOMED	Body Structure	S	70007007	2002-01-31	2099-12-31	
+4334503	Tissue section	Specimen	SNOMED	Specimen	S	430856003	2008-07-31	2099-12-31	
+21491926	History of cerebrovascular accident	Observation	LOINC	Clinical Observation	S	78925-5	2016-06-24	2099-12-31	
+21494460	Ability to concentrate	Observation	LOINC	Clinical Observation	S	80298-3	2016-06-24	2099-12-31	
+40767199	Has anyone noticed that you quit breathing during your sleep [PhenX]	Observation	LOINC	Clinical Observation	S	64491-4	2011-04-20	2099-12-31	
+40767223	While your child sleeps, have you seen repeated kicks or jerks of the legs at regular intervals - about every 20 to 40S [PhenX]	Observation	LOINC	Clinical Observation	S	64515-0	2011-04-20	2099-12-31	
+40767237	Has your child ever walked during sleep - sleep walking [PhenX]	Observation	LOINC	Clinical Observation	S	64529-1	2011-04-20	2099-12-31	
+40768330	Alternatively pronate and supinate left hand - 10 times [PhenX]	Observation	LOINC	Clinical Observation	S	65639-7	2011-05-05	2099-12-31	
+40768388	Rapid alternating hand movements - right	Observation	LOINC	Clinical Observation	S	65699-1	2011-05-05	2099-12-31	
+40768389	Rapid alternating hand movements - left	Observation	LOINC	Clinical Observation	S	65700-7	2011-05-05	2099-12-31	
+40768776	Do you get muscle cramps in your legs or feet [PhenX]	Observation	LOINC	Clinical Observation	S	66093-6	2011-05-27	2099-12-31	
+40770700	Lately, because of my illness, I felt embarrassed in social situations [NeuroQol]	Observation	LOINC	Survey	S	68104-9	2011-08-31	2099-12-31	
+42528777	Clinical data [Date and Time Range]	Observation	LOINC	Clinical Observation	S	82607-3	2017-02-21	2099-12-31	
+42529257	Respondent type	Observation	LOINC	Survey	S	83129-7	2017-02-21	2099-12-31	
+42868862	I avoid going out to eat because of my illness in the past 7 days [FACIT]	Observation	LOINC	Survey	S	70391-8	2012-03-02	2099-12-31	
+42869237	I have had trouble saying what I mean in conversations with others in the past 7 days [FACIT]	Observation	LOINC	Survey	S	70769-5	2012-03-08	2099-12-31	
+44804308	Research method	Observation	SNOMED	Qualifier Value	S	725021000000105	2010-10-01	2099-12-31	
+45765892	Ribonucleic acid extraction technique	Observation	SNOMED	Qualifier Value	S	702944000	2014-07-31	2099-12-31	
+46235617	Over the past week, are you able to dress yourself, including shoelaces and buttons [HAQ]	Observation	LOINC	Survey	S	75820-1	2014-11-11	2099-12-31	
+46236411	Complications of therapy panel in the past week [UPDRS]	Measurement	LOINC	Clinical Observation	S	77721-9	2015-06-12	2099-12-31	
