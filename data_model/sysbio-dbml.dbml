@@ -8,8 +8,8 @@
 //   * Record-level access is per-table: access_groups + user_access_groups, with a
 //     <table>_access join table per governed entity (condition_occurrence,
 //     procedure_occurrence, measurement, observation, specimen, files), enforced
-//     in-engine via Postgres row-level security. person, visit_occurrence,
-//     observation_period and the reference tables (concept/assay/cdm_source/
+//     in-engine via Postgres row-level security. person, visit_occurrence and
+//     the reference tables (concept/assay/cdm_source/
 //     fact_relationship + assay_* junctions) are ungoverned / always-accessible.
 //   * fact_relationship connects INTEGER-keyed records across domains. assay and
 //     files use integer surrogate PKs (assay_source_value / drs_id hold the human
@@ -66,14 +66,6 @@ Table person {
   year_of_birth INTEGER [not null]
   race_concept_id INTEGER [not null]
   ethnicity_concept_id INTEGER [not null]
-}
-
-Table observation_period {
-  observation_period_id INTEGER [pk]
-  person_id INTEGER [not null]
-  observation_period_start_date DATE [not null]
-  observation_period_end_date DATE [not null]
-  period_type_concept_id INTEGER [not null]
 }
 
 Table visit_occurrence {
@@ -335,7 +327,6 @@ Table file_access {
 
 // ---- Relationships (real FKs only) ----
 Ref: user_access_groups.access_group_id > access_groups.id
-Ref: observation_period.person_id > person.person_id
 Ref: visit_occurrence.person_id > person.person_id
 Ref: condition_occurrence.person_id > person.person_id
 Ref: measurement.person_id > person.person_id

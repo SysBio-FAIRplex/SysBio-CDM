@@ -48,15 +48,6 @@ CREATE TABLE person (
   CONSTRAINT person_data_free CHECK (gender_concept_id = 0 AND year_of_birth = 0 AND race_concept_id = 0 AND ethnicity_concept_id = 0)
 );
 
-CREATE TABLE observation_period (
-  observation_period_id INTEGER,
-  person_id INTEGER NOT NULL,
-  observation_period_start_date DATE NOT NULL,
-  observation_period_end_date DATE NOT NULL,
-  period_type_concept_id INTEGER NOT NULL,
-  PRIMARY KEY (observation_period_id)
-);
-
 CREATE TABLE visit_occurrence (
   visit_occurrence_id INTEGER,
   person_id INTEGER NOT NULL,
@@ -305,7 +296,6 @@ CREATE TABLE file_access (
 
 -- ---- foreign keys ----
 ALTER TABLE user_access_groups ADD CONSTRAINT user_access_groups_access_group_id_fkey FOREIGN KEY (access_group_id) REFERENCES access_groups (id);
-ALTER TABLE observation_period ADD CONSTRAINT observation_period_person_id_fkey FOREIGN KEY (person_id) REFERENCES person (person_id);
 ALTER TABLE visit_occurrence ADD CONSTRAINT visit_occurrence_person_id_fkey FOREIGN KEY (person_id) REFERENCES person (person_id);
 ALTER TABLE condition_occurrence ADD CONSTRAINT condition_occurrence_person_id_fkey FOREIGN KEY (person_id) REFERENCES person (person_id);
 ALTER TABLE measurement ADD CONSTRAINT measurement_person_id_fkey FOREIGN KEY (person_id) REFERENCES person (person_id);

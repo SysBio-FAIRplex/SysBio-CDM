@@ -103,7 +103,6 @@ concept_id	concept_name	domain_id	vocabulary_id	concept_class_id	standard_concep
 1074624	Monocyte specimen	Specimen	SNOMED	Specimen	S	290211000146104	2024-05-01	2099-12-31	
 1094239	Was on medication	Meas Value	LOINC	Answer	S	LA34443-4	1970-01-01	2099-12-31	
 1147026	person.person_id	Metadata	CDM	Field	S	CDM82	2014-11-11	2099-12-31	
-1147044	observation_period.observation_period_id	Metadata	CDM	Field	S	CDM100	2014-11-11	2099-12-31	
 1147049	specimen.specimen_id	Metadata	CDM	Field	S	CDM105	2014-11-11	2099-12-31	
 1147051	specimen.specimen_concept_id	Metadata	CDM	Field	S	CDM107	2014-11-11	2099-12-31	
 1147059	specimen.specimen_source_id	Metadata	CDM	Field	S	CDM115	2014-11-11	2099-12-31	
@@ -124,7 +123,6 @@ concept_id	concept_name	domain_id	vocabulary_id	concept_class_id	standard_concep
 1147312	death	Metadata	CDM	Table	S	CDM368	2014-11-11	2099-12-31	
 1147314	person	Metadata	CDM	Table	S	CDM370	2014-11-11	2099-12-31	
 1147317	note	Metadata	CDM	Table	S	CDM373	2014-11-11	2099-12-31	
-1147321	observation_period	Metadata	CDM	Table	S	CDM377	2014-11-11	2099-12-31	
 1147325	cdm_source	Metadata	CDM	Table	S	CDM381	2014-11-11	2099-12-31	
 1147330	measurement	Metadata	CDM	Table	S	CDM386	2014-11-11	2099-12-31	
 1147332	visit_occurrence	Metadata	CDM	Table	S	CDM388	2014-11-11	2099-12-31	

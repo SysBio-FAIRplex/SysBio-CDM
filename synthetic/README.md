@@ -6,7 +6,7 @@ Schema: `../data_model/sysbio-cdm-ddl.sql`, generated from `../data_model/sysbio
 Concept and mapping references live in `../transform/`.
 
 ## Contents
-- `sysbio_cdm_synth_20260703.sqlite`: the full dataset in one file. Open and query it with any SQLite client. It includes a `concept` table holding the 295 concepts the data references.
+- `sysbio_cdm_synth.sqlite`: the full dataset in one file. Open and query it with any SQLite client. It includes a `concept` table holding the 295 concepts the data references.
 - `user_stories/query_cookbook.md`: worked cohort-builder queries, S1 to S14 (PostgreSQL dialect, same table and column names).
 
 ## Size
