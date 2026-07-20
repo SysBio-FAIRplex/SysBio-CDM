@@ -1,0 +1,100 @@
+{
+  "variable": "project",
+  "cde_id": "553",
+  "means": "A sub-level attribute of `program` specifying a research initiative working to investigate particular hypotheses.",
+  "program": "AMP-RA-SLE",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "RA",
+      "SLE",
+      "AIM for RA",
+      "STAMP",
+      "LOCKIT",
+      "V-CoRT",
+      "ELLIPSS"
+    ]
+  },
+  "lands": {
+    "table": "observation"
+  },
+  "value_map": [
+    {
+      "value": "EDP2",
+      "write": {
+        "value_as_string": "EDP2",
+        "value_source_value": "EDP2"
+      }
+    },
+    {
+      "value": "SLE",
+      "write": {
+        "value_as_string": "SLE",
+        "value_source_value": "SLE"
+      }
+    },
+    {
+      "value": "STAMP",
+      "write": {
+        "value_as_string": "STAMP",
+        "value_source_value": "STAMP"
+      }
+    },
+    {
+      "value": "METRO",
+      "write": {
+        "value_as_string": "METRO",
+        "value_source_value": "METRO"
+      }
+    },
+    {
+      "value": "EDP1",
+      "write": {
+        "value_as_string": "EDP1",
+        "value_source_value": "EDP1"
+      }
+    },
+    {
+      "value": "AIM for RA",
+      "write": {
+        "value_as_string": "AIM for RA",
+        "value_source_value": "AIM for RA"
+      }
+    },
+    {
+      "value": "LOCKIT",
+      "write": {
+        "value_as_string": "LOCKIT",
+        "value_source_value": "LOCKIT"
+      }
+    },
+    {
+      "value": "UMass V-CoRT",
+      "write": {
+        "value_as_string": "UMass V-CoRT",
+        "value_source_value": "UMass V-CoRT"
+      }
+    },
+    {
+      "value": "ELLIPSS",
+      "write": {
+        "value_as_string": "ELLIPSS",
+        "value_source_value": "ELLIPSS"
+      }
+    },
+    {
+      "value": "RA",
+      "write": {
+        "value_as_string": "RA",
+        "value_source_value": "RA"
+      }
+    }
+  ],
+  "links": [],
+  "derived_from": [],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "manual_approval": true
+}

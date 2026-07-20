@@ -1,0 +1,55 @@
+{
+  "variable": "mms101b_season",
+  "cde_id": "191",
+  "means": "MMSE - What Is The Season (MMS101B)",
+  "program": "AMP-PD",
+  "grain": "visit",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "Correct",
+      "Incorrect"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 3184143,
+      "name": "Folstein Mini-mental State Examination: Is patient oriented to season?",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "Correct",
+      "write": {
+        "value_as_number": 1,
+        "value_as_concept_id": {
+          "id": 45880253,
+          "name": "Correct"
+        },
+        "value_as_string": "Correct",
+        "value_source_value": "Correct"
+      }
+    },
+    {
+      "value": "Incorrect",
+      "write": {
+        "value_as_number": 0,
+        "value_as_concept_id": {
+          "id": 45885185,
+          "name": "Incorrect"
+        },
+        "value_as_string": "Incorrect",
+        "value_source_value": "Incorrect"
+      }
+    }
+  ],
+  "links": [],
+  "derived_from": [],
+  "anchored_to": {
+    "person_id": "staging.person_map",
+    "visit_occurrence_id": "cdm.visit_occurrence"
+  },
+  "manual_approval": true
+}

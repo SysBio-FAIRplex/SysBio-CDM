@@ -1,0 +1,69 @@
+{
+  "variable": "pdq39_28_support_from_spouse",
+  "cde_id": "316",
+  "means": "PDQ-39-Q28: Lacked the support you needed from your spouse or partner?",
+  "program": "AMP-PD",
+  "grain": "visit",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "Never",
+      "Occasionally",
+      "Often",
+      "Sometimes",
+      "Always or cannot do at all"
+    ]
+  },
+  "lands": {
+    "table": "observation"
+  },
+  "value_map": [
+    {
+      "value": "Never",
+      "write": {
+        "value_as_number": 0,
+        "value_as_string": "Never",
+        "value_source_value": "Never"
+      }
+    },
+    {
+      "value": "Occasionally",
+      "write": {
+        "value_as_number": 1,
+        "value_as_string": "Occasionally",
+        "value_source_value": "Occasionally"
+      }
+    },
+    {
+      "value": "Sometimes",
+      "write": {
+        "value_as_number": 2,
+        "value_as_string": "Sometimes",
+        "value_source_value": "Sometimes"
+      }
+    },
+    {
+      "value": "Always or cannot do at all",
+      "write": {
+        "value_as_number": 4,
+        "value_as_string": "Always or cannot do at all",
+        "value_source_value": "Always or cannot do at all"
+      }
+    },
+    {
+      "value": "Often",
+      "write": {
+        "value_as_number": 3,
+        "value_as_string": "Often",
+        "value_source_value": "Often"
+      }
+    }
+  ],
+  "links": [],
+  "derived_from": [],
+  "anchored_to": {
+    "person_id": "staging.person_map",
+    "visit_occurrence_id": "cdm.visit_occurrence"
+  },
+  "manual_approval": true
+}

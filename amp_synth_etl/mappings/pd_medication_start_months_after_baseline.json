@@ -1,0 +1,34 @@
+{
+  "variable": "pd_medication_start_months_after_baseline",
+  "cde_id": "288",
+  "means": "Number of months after baseline visit at which PD Medication Start occurred; negative values indicate PD Medication Start occurred before baseline",
+  "program": "AMP-PD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "integer"
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 4141652,
+      "name": "Medication commenced",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "<any in range>",
+      "write": {
+        "value_as_number": "<value>",
+        "value_source_value": "<raw>"
+      }
+    }
+  ],
+  "links": [],
+  "derived_from": [],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "manual_approval": true,
+  "note": "decimals present in loaded value_as_number -> confirm integer vs float"
+}

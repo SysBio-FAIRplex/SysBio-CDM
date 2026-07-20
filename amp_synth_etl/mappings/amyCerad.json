@@ -1,0 +1,83 @@
+{
+  "variable": "amyCerad",
+  "cde_id": "10",
+  "means": "CERAD neuritic plaque score based on amyloid assessment",
+  "program": "AMP-AD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "None/No AD/C0",
+      "Sparse/Possible/C1",
+      "Moderate/Probable/C2",
+      "Frequent/Definite/C3",
+      "Missing or unknown"
+    ]
+  },
+  "lands": {
+    "table": "measurement",
+    "measurement_concept_id": {
+      "id": 3519134,
+      "name": "CERAD scoring for presence of neuritic plaques",
+      "domain": "Measurement"
+    }
+  },
+  "value_map": [
+    {
+      "value": "Moderate/Probable/C2",
+      "write": {
+        "value_as_concept_id": {
+          "id": 45877983,
+          "name": "Moderate"
+        },
+        "value_source_value": "Moderate/Probable/C2"
+      }
+    },
+    {
+      "value": "Missing or unknown",
+      "write": {
+        "value_as_concept_id": {
+          "id": 45877986,
+          "name": "Unknown"
+        },
+        "value_source_value": "Missing or unknown"
+      }
+    },
+    {
+      "value": "Frequent/Definite/C3",
+      "write": {
+        "value_as_concept_id": {
+          "id": 45881627,
+          "name": "Definite"
+        },
+        "value_source_value": "Frequent/Definite/C3"
+      }
+    },
+    {
+      "value": "None/No AD/C0",
+      "write": {
+        "value_as_concept_id": {
+          "id": 45878582,
+          "name": "None"
+        },
+        "value_source_value": "None/No AD/C0"
+      }
+    },
+    {
+      "value": "Sparse/Possible/C1",
+      "write": {
+        "value_as_concept_id": {
+          "id": 45882954,
+          "name": "Possible"
+        },
+        "value_source_value": "Sparse/Possible/C1"
+      }
+    }
+  ],
+  "links": [],
+  "derived_from": [],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "manual_approval": true
+}

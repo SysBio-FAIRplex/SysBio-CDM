@@ -1,0 +1,52 @@
+TableName,ColumnName,Title,Description,Required,DataType,DataTypeRange,UniqueValues
+PDQ_39.csv,participant_id,Study Subject ID,Study Subject ID,TRUE,String,,
+PDQ_39.csv,GUID,Subject ID,Global Unique ID (USUBJID),FALSE,String,,
+PDQ_39.csv,visit_name,Visit Name,"Visit name: M - in months, SC - screening visit, LOG - records without visit; #2 or #3 define repated records at the same visit or repeated visit",TRUE,String,,
+PDQ_39.csv,visit_month,Visit Month,"Numeric visit in months; for visits prior baseline -1, -2 is an order of screening visits",FALSE,Float,,
+PDQ_39.csv,pdq39_01_doing_leisure_activity,Parkinson's Disease Questionnaire (PDQ-39),PDQ-39-Q1: Had difficulty doing the leisure activities you would like to do?,FALSE,Enumeration,,Never;Occasionally;Often;Sometimes;Always or cannot do at all
+PDQ_39.csv,pdq39_02_looking_after_home,Parkinson's Disease Questionnaire (PDQ-39),"PDQ-39-Q2: Had difficulty looking after your home, for example, housework, cooking or yardwork?",FALSE,Enumeration,,Never;Occasionally;Often;Sometimes;Always or cannot do at all
+PDQ_39.csv,pdq39_03_carrying_shopping_bags,Parkinson's Disease Questionnaire (PDQ-39),PDQ-39-Q3: Had difficulty carrying grocery bags?,FALSE,Enumeration,,Never;Occasionally;Often;Sometimes;Always or cannot do at all
+PDQ_39.csv,pdq39_04_walking_half_mile,Parkinson's Disease Questionnaire (PDQ-39),PDQ-39-Q4: Had problems walking half a mile?,FALSE,Enumeration,,Never;Occasionally;Often;Sometimes;Always or cannot do at all
+PDQ_39.csv,pdq39_05_walking_100_yards,Parkinson's Disease Questionnaire (PDQ-39),PDQ-39-Q5: Had problems walking 100 yards (approximately 1 block)?,FALSE,Enumeration,,Never;Occasionally;Often;Sometimes;Always or cannot do at all
+PDQ_39.csv,pdq39_06_getting_around_house,Parkinson's Disease Questionnaire (PDQ-39),PDQ-39-Q6: Had problems getting around the house as easily as you would like?,FALSE,Enumeration,,Never;Occasionally;Often;Sometimes;Always or cannot do at all
+PDQ_39.csv,pdq39_07_getting_around_in_public,Parkinson's Disease Questionnaire (PDQ-39),PDQ-39-Q7: Had difficulty getting around in public places?,FALSE,Enumeration,,Never;Occasionally;Often;Sometimes;Always or cannot do at all
+PDQ_39.csv,pdq39_08_need_someone_to_accompany,Parkinson's Disease Questionnaire (PDQ-39),PDQ-39-Q8: Needed someone else to accompany you when you went out?,FALSE,Enumeration,,Never;Occasionally;Often;Sometimes;Always or cannot do at all
+PDQ_39.csv,pdq39_09_worried_about_falling,Parkinson's Disease Questionnaire (PDQ-39),PDQ-39-Q9: Felt frightened or worried about falling in public?,FALSE,Enumeration,,Never;Occasionally;Often;Sometimes;Always or cannot do at all
+PDQ_39.csv,pdq39_10_confined_to_house,Parkinson's Disease Questionnaire (PDQ-39),PDQ-39-Q10: Been confined to the house more than you would like?,FALSE,Enumeration,,Never;Occasionally;Often;Sometimes;Always or cannot do at all
+PDQ_39.csv,pdq39_11_showering,Parkinson's Disease Questionnaire (PDQ-39),PDQ-39-Q11: Had difficulty showering and bathing?,FALSE,Enumeration,,Never;Occasionally;Often;Sometimes;Always or cannot do at all
+PDQ_39.csv,pdq39_12_dressing,Parkinson's Disease Questionnaire (PDQ-39),PDQ-39-Q12: Had difficulty dressing?,FALSE,Enumeration,,Never;Occasionally;Often;Sometimes;Always or cannot do at all
+PDQ_39.csv,pdq39_13_buttons_and_shoelaces,Parkinson's Disease Questionnaire (PDQ-39),PDQ-39-Q13: Had difficulty with buttons or shoelaces?,FALSE,Enumeration,,Never;Occasionally;Often;Sometimes;Always or cannot do at all
+PDQ_39.csv,pdq39_14_writing,Parkinson's Disease Questionnaire (PDQ-39),PDQ-39-Q14: Had problems writing clearly?,FALSE,Enumeration,,Never;Occasionally;Often;Sometimes;Always or cannot do at all
+PDQ_39.csv,pdq39_15_cutting_food,Parkinson's Disease Questionnaire (PDQ-39),PDQ-39-Q15: Had difficulty cutting up your food?,FALSE,Enumeration,,Never;Occasionally;Often;Sometimes;Always or cannot do at all
+PDQ_39.csv,pdq39_16_spill_drink,Parkinson's Disease Questionnaire (PDQ-39),PDQ-39-Q16: Had difficulty holding a drink without spilling it?,FALSE,Enumeration,,Never;Occasionally;Often;Sometimes;Always or cannot do at all
+PDQ_39.csv,pdq39_17_depressed,Parkinson's Disease Questionnaire (PDQ-39),PDQ-39-Q17: Felt depressed?,FALSE,Enumeration,,Never;Occasionally;Often;Sometimes;Always or cannot do at all
+PDQ_39.csv,pdq39_18_lonely,Parkinson's Disease Questionnaire (PDQ-39),PDQ-39-Q18: Felt isolated and lonely?,FALSE,Enumeration,,Never;Occasionally;Often;Sometimes;Always or cannot do at all
+PDQ_39.csv,pdq39_19_weepy,Parkinson's Disease Questionnaire (PDQ-39),PDQ-39-Q19: Felt weepy or tearful?,FALSE,Enumeration,,Never;Occasionally;Often;Sometimes;Always or cannot do at all
+PDQ_39.csv,pdq39_20_angry,Parkinson's Disease Questionnaire (PDQ-39),PDQ-39-Q20: Felt angry or bitter?,FALSE,Enumeration,,Never;Occasionally;Often;Sometimes;Always or cannot do at all
+PDQ_39.csv,pdq39_21_anxious,Parkinson's Disease Questionnaire (PDQ-39),PDQ-39-Q21: Felt anxious?,FALSE,Enumeration,,Never;Occasionally;Often;Sometimes;Always or cannot do at all
+PDQ_39.csv,pdq39_22_worried_about_future,Parkinson's Disease Questionnaire (PDQ-39),PDQ-39-Q22: Felt worried about your future?,FALSE,Enumeration,,Never;Occasionally;Often;Sometimes;Always or cannot do at all
+PDQ_39.csv,pdq39_23_hide_pd_from_people,Parkinson's Disease Questionnaire (PDQ-39),PDQ-39-Q23: Felt you had to hide your Parkinson's from people?,FALSE,Enumeration,,Never;Occasionally;Often;Sometimes;Always or cannot do at all
+PDQ_39.csv,pdq39_24_avoid_eat_drink_in_public,Parkinson's Disease Questionnaire (PDQ-39),PDQ-39-Q24: Avoided situations which involve eating or drinking in public?,FALSE,Enumeration,,Never;Occasionally;Often;Sometimes;Always or cannot do at all
+PDQ_39.csv,pdq39_25_embarassed_in_public,Parkinson's Disease Questionnaire (PDQ-39),PDQ-39-Q25: Felt embarrassed in public?,FALSE,Enumeration,,Never;Occasionally;Often;Sometimes;Always or cannot do at all
+PDQ_39.csv,pdq39_26_worried_about_reactions,Parkinson's Disease Questionnaire (PDQ-39),PDQ-39-Q26: Felt worried about other people's reaction to you?,FALSE,Enumeration,,Never;Occasionally;Often;Sometimes;Always or cannot do at all
+PDQ_39.csv,pdq39_27_close_personal_relations,Parkinson's Disease Questionnaire (PDQ-39),PDQ-39-Q27: Had problems with your close personal relationships?,FALSE,Enumeration,,Never;Occasionally;Often;Sometimes;Always or cannot do at all
+PDQ_39.csv,pdq39_28_support_from_spouse,Parkinson's Disease Questionnaire (PDQ-39),PDQ-39-Q28: Lacked the support you needed from your spouse or partner?,FALSE,Enumeration,,Never;Occasionally;Often;Sometimes;Always or cannot do at all
+PDQ_39.csv,pdq39_29_support_from_family,Parkinson's Disease Questionnaire (PDQ-39),PDQ-39-Q29: Lacked the support you needed from your family or close friends?,FALSE,Enumeration,,Never;Occasionally;Often;Sometimes;Always or cannot do at all
+PDQ_39.csv,pdq39_30_sleep_in_day,Parkinson's Disease Questionnaire (PDQ-39),PDQ-39-Q30: Unexpectedly fallen asleep during the day?,FALSE,Enumeration,,Never;Occasionally;Often;Sometimes;Always or cannot do at all
+PDQ_39.csv,pdq39_31_problem_with_concentration,Parkinson's Disease Questionnaire (PDQ-39),"PDQ-39-Q31: Had problems with your concentration, for example when reading or watching TV?",FALSE,Enumeration,,Never;Occasionally;Often;Sometimes;Always or cannot do at all
+PDQ_39.csv,pdq39_32_memory_is_failing,Parkinson's Disease Questionnaire (PDQ-39),PDQ-39-Q32: Felt your memory was failing?,FALSE,Enumeration,,Never;Occasionally;Often;Sometimes;Always or cannot do at all
+PDQ_39.csv,pdq39_33_hallucinations,Parkinson's Disease Questionnaire (PDQ-39),PDQ-39-Q33: Had distressing dreams or hallucinations?,FALSE,Enumeration,,Never;Occasionally;Often;Sometimes;Always or cannot do at all
+PDQ_39.csv,pdq39_34_speaking,Parkinson's Disease Questionnaire (PDQ-39),PDQ-39-Q34: Had difficulty speaking?,FALSE,Enumeration,,Never;Occasionally;Often;Sometimes;Always or cannot do at all
+PDQ_39.csv,pdq39_35_unable_to_communicate,Parkinson's Disease Questionnaire (PDQ-39),PDQ-39-Q35: Felt unable to communicate effectively?,FALSE,Enumeration,,Never;Occasionally;Often;Sometimes;Always or cannot do at all
+PDQ_39.csv,pdq39_36_felt_ignored,Parkinson's Disease Questionnaire (PDQ-39),PDQ-39-Q36: Felt ignored by people?,FALSE,Enumeration,,Never;Occasionally;Often;Sometimes;Always or cannot do at all
+PDQ_39.csv,pdq39_37_muscle_cramps,Parkinson's Disease Questionnaire (PDQ-39),PDQ-39-Q37: Had painful muscle cramps or spasms?,FALSE,Enumeration,,Never;Occasionally;Often;Sometimes;Always or cannot do at all
+PDQ_39.csv,pdq39_38_joint_pains,Parkinson's Disease Questionnaire (PDQ-39),PDQ-39-Q38: Had aches and pains in your joints or body?,FALSE,Enumeration,,Never;Occasionally;Often;Sometimes;Always or cannot do at all
+PDQ_39.csv,pdq39_39_hot_or_cold,Parkinson's Disease Questionnaire (PDQ-39),PDQ-39-Q39: Felt uncomfortably hot or cold?,FALSE,Enumeration,,Never;Occasionally;Often;Sometimes;Always or cannot do at all
+PDQ_39.csv,pdq39_mobility_score,Parkinson's Disease Questionnaire (PDQ-39),PDQ-39-Total Score-Mobility,FALSE,Float,0 - 100,
+PDQ_39.csv,pdq39_adl_score,Parkinson's Disease Questionnaire (PDQ-39),PDQ-39-Total Score-Activities Of Daily Living (ADL),FALSE,Float,0 - 100,
+PDQ_39.csv,pdq39_emotional_score,Parkinson's Disease Questionnaire (PDQ-39),PDQ-39-Total Score-Emotional Well Being,FALSE,Float,0 - 100,
+PDQ_39.csv,pdq39_stigma_score,Parkinson's Disease Questionnaire (PDQ-39),PDQ-39-Total Score-Stigma,FALSE,Float,0 - 100,
+PDQ_39.csv,pdq39_social_score,Parkinson's Disease Questionnaire (PDQ-39),PDQ-39-Total Score-Social Support,FALSE,Float,0 - 100,
+PDQ_39.csv,pdq39_cognition_score,Parkinson's Disease Questionnaire (PDQ-39),PDQ-39-Total Score-Cognitive Impairment (Cognitions),FALSE,Float,0 - 100,
+PDQ_39.csv,pdq39_communication_score,Parkinson's Disease Questionnaire (PDQ-39),PDQ-39-Total Score-Communication,FALSE,Float,0 - 100,
+PDQ_39.csv,pdq39_discomfort_score,Parkinson's Disease Questionnaire (PDQ-39),PDQ-39-Total Score-Bodily Discomfort,FALSE,Float,0 - 100,

@@ -1,0 +1,40 @@
+{
+  "variable": "disease",
+  "cde_id": "82",
+  "means": "Disease or condition diagnosis",
+  "program": "AMP-CMD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "normal"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 436670,
+      "name": "Metabolic disease",
+      "domain": "Condition"
+    }
+  },
+  "value_map": [
+    {
+      "value": "normal",
+      "write": {
+        "value_as_concept_id": {
+          "id": 4069590,
+          "name": "Normal"
+        },
+        "value_as_string": "normal",
+        "value_source_value": "normal"
+      }
+    }
+  ],
+  "links": [],
+  "derived_from": [],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "manual_approval": true
+}

@@ -1,0 +1,38 @@
+{
+  "variable": "moca25_orientation_day_score",
+  "cde_id": "235",
+  "means": "MOCA: 25. Orientation - Day Score",
+  "program": "AMP-PD",
+  "grain": "visit",
+  "reads_as": {
+    "datatype": "integer",
+    "range": {
+      "min": 0,
+      "max": 1
+    }
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 43054876,
+      "name": "Montreal Cognitive Assessment [MoCA]",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "<any in range>",
+      "write": {
+        "value_as_number": "<value>",
+        "value_source_value": "<raw>"
+      }
+    }
+  ],
+  "links": [],
+  "derived_from": [],
+  "anchored_to": {
+    "person_id": "staging.person_map",
+    "visit_occurrence_id": "cdm.visit_occurrence"
+  },
+  "manual_approval": true
+}

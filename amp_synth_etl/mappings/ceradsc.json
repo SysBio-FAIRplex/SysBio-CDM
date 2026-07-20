@@ -1,0 +1,95 @@
+{
+  "variable": "ceradsc",
+  "cde_id": "17",
+  "means": "CERAD Score",
+  "program": "AMP-AD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "code",
+    "values": {
+      "1": "Definite AD",
+      "2": "Probable AD",
+      "3": "Possible AD",
+      "4": "No AD"
+    }
+  },
+  "lands": {
+    "table": "measurement",
+    "measurement_concept_id": {
+      "id": 3168054,
+      "name": "Consortium to Establish Registry for Alzheimer's Disease assessment tool",
+      "domain": "Measurement"
+    }
+  },
+  "value_map": [
+    {
+      "value": "2",
+      "write": {
+        "value_as_concept_id": {
+          "id": 45877983,
+          "name": "Moderate"
+        },
+        "value_source_value": "2"
+      }
+    },
+    {
+      "value": "4",
+      "write": {
+        "value_as_concept_id": {
+          "id": 35821449,
+          "name": "No"
+        },
+        "value_source_value": "4"
+      }
+    },
+    {
+      "value": "1",
+      "write": {
+        "value_as_concept_id": {
+          "id": 45881627,
+          "name": "Definite"
+        },
+        "value_source_value": "1"
+      }
+    },
+    {
+      "value": "3",
+      "write": {
+        "value_as_concept_id": {
+          "id": 45882954,
+          "name": "Possible"
+        },
+        "value_source_value": "3"
+      }
+    }
+  ],
+  "links": [
+    {
+      "kind": "derivation",
+      "related_variable": "amyCerad",
+      "related_concept": {
+        "id": 3519134,
+        "name": "CERAD scoring for presence of neuritic plaques",
+        "domain": "Measurement"
+      },
+      "related_table": "measurement",
+      "related_value_set": [
+        "None/No AD/C0",
+        "Sparse/Possible/C1",
+        "Moderate/Probable/C2",
+        "Frequent/Definite/C3",
+        "Missing or unknown"
+      ],
+      "relationship": "",
+      "mechanism": ""
+    }
+  ],
+  "derived_from": [
+    "amyCerad"
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "manual_approval": true,
+  "derivation_rule": "RADC data set 754 (ROSMAP). CERAD score: a semiquantitative measure of neuritic plaques. A neuropathologic diagnosis was made of no AD, possible AD, probable AD, or definite AD based on semiquantitative estimates of neuritic plaque density as recommended by the Consortium to Establish a Registry for Alzheimer's Disease (CERAD), modified to be implemented without adjustment for age and clinical diagnosis. A CERAD neuropathologic diagnosis of AD required moderate (probable AD) or frequent neuritic plaques (definite AD) in one or more neocortical regions. Diagnosis includes algorithm and neuropathologist's opinion, blinded to age and all clinical data. Value coding: 1=Definite; 2=Probable; 3=Possible; 4=No AD."
+}

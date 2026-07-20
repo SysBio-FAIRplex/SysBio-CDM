@@ -1,0 +1,56 @@
+{
+  "variable": "alcohol_start_age",
+  "cde_id": "137",
+  "means": "Age in years when participant/subject started ingesting alcoholic beverages, including social drinking",
+  "program": "AMP-PD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "integer",
+    "range": {
+      "min": 1,
+      "max": 75
+    }
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 40766358,
+      "name": "About how old were you when you first started drinking, not counting small tastes or sips of alcohol [PhenX]",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "<any in range>",
+      "write": {
+        "value_as_number": "<value>",
+        "value_source_value": "<raw>"
+      }
+    }
+  ],
+  "links": [
+    {
+      "kind": "derivation",
+      "related_variable": "age_at_baseline",
+      "related_concept": {
+        "id": 35815526,
+        "name": "Age at event",
+        "domain": "Observation"
+      },
+      "related_table": "observation",
+      "related_value_set": {
+        "min": 19,
+        "max": 100
+      },
+      "relationship": "",
+      "mechanism": ""
+    }
+  ],
+  "derived_from": [
+    "age_at_baseline"
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "manual_approval": true
+}

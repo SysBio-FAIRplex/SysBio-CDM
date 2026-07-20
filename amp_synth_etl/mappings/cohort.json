@@ -1,0 +1,114 @@
+{
+  "variable": "cohort",
+  "cde_id": "74",
+  "means": "Cohort Identifier",
+  "program": "AMP-AD / AMP-CMD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "AA",
+      "Banner",
+      "Biggs Institute Brain Bank",
+      "CLINCOR",
+      "Emory",
+      "LATC",
+      "MAP",
+      "MARS",
+      "Mayo Clinic",
+      "Mt Sinai Brain Bank",
+      "NY Brain Bank",
+      "UPenn",
+      "ROS",
+      "UFL"
+    ]
+  },
+  "lands": {
+    "table": "observation"
+  },
+  "value_map": [
+    {
+      "value": "MAP",
+      "write": {
+        "value_as_string": "MAP",
+        "value_source_value": "MAP"
+      }
+    },
+    {
+      "value": "ROS",
+      "write": {
+        "value_as_string": "ROS",
+        "value_source_value": "ROS"
+      }
+    },
+    {
+      "value": "Mayo Clinic",
+      "write": {
+        "value_as_string": "Mayo Clinic",
+        "value_source_value": "Mayo Clinic"
+      }
+    },
+    {
+      "value": "Mt Sinai Brain Bank",
+      "write": {
+        "value_as_string": "Mt Sinai Brain Bank",
+        "value_source_value": "Mt Sinai Brain Bank"
+      }
+    },
+    {
+      "value": "Emory",
+      "write": {
+        "value_as_string": "Emory",
+        "value_source_value": "Emory"
+      }
+    },
+    {
+      "value": "CLINCOR",
+      "write": {
+        "value_as_string": "CLINCOR",
+        "value_source_value": "CLINCOR"
+      }
+    },
+    {
+      "value": "MARS",
+      "write": {
+        "value_as_string": "MARS",
+        "value_source_value": "MARS"
+      }
+    },
+    {
+      "value": "Banner",
+      "write": {
+        "value_as_string": "Banner",
+        "value_source_value": "Banner"
+      }
+    },
+    {
+      "value": "UFL",
+      "write": {
+        "value_as_string": "UFL",
+        "value_source_value": "UFL"
+      }
+    },
+    {
+      "value": "UPenn",
+      "write": {
+        "value_as_string": "UPenn",
+        "value_source_value": "UPenn"
+      }
+    },
+    {
+      "value": "LATC",
+      "write": {
+        "value_as_string": "LATC",
+        "value_source_value": "LATC"
+      }
+    }
+  ],
+  "links": [],
+  "derived_from": [],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "manual_approval": true
+}

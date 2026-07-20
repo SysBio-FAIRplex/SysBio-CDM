@@ -1,0 +1,38 @@
+{
+  "variable": "upd133_dyskinesias_disability",
+  "cde_id": "447",
+  "means": "UPDRS - Complications of Therapy: Dyskinesias - Disability (UPD133)",
+  "program": "AMP-PD",
+  "grain": "visit",
+  "reads_as": {
+    "datatype": "integer",
+    "range": {
+      "min": 0.0,
+      "max": 4.0
+    }
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 46236394,
+      "name": "Dyskinesia disability in the past week [UPDRS]",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "<any in range>",
+      "write": {
+        "value_as_number": "<value>",
+        "value_source_value": "<raw>"
+      }
+    }
+  ],
+  "links": [],
+  "derived_from": [],
+  "anchored_to": {
+    "person_id": "staging.person_map",
+    "visit_occurrence_id": "cdm.visit_occurrence"
+  },
+  "manual_approval": true
+}

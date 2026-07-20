@@ -1,0 +1,52 @@
+TableName,ColumnName,Title,Description,Required,DataType,DataTypeRange,UniqueValues
+REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster.csv,participant_id,Study Subject ID,Study Subject ID,TRUE,String,,
+REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster.csv,GUID,Subject ID,Global Unique ID (USUBJID),FALSE,String,,
+REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster.csv,visit_name,Visit Name,"Visit name: M - in months, SC - screening visit, LOG - records without visit; #2 or #3 define repated records at the same visit or repeated visit",TRUE,String,,
+REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster.csv,visit_month,Visit Month,"Numeric visit in months; for visits prior baseline -1, -2 is an order of screening visits",FALSE,Float,,
+REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster.csv,code_rbd_info_source,REM Sleep Behavior Disorder Questionnaire (RBD),RBD Source Of Information,FALSE,Integer,0 - 3,
+REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster.csv,code_rbd01_vivid_dreams,REM Sleep Behavior Disorder Questionnaire (RBD),RBD 01. Vivid Dreams,FALSE,Integer,0 - 1,
+REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster.csv,code_rbd02_aggressive_or_action_packed_dreams,REM Sleep Behavior Disorder Questionnaire (RBD),RBD 02. Aggressive Or Action-Packed Dreams,FALSE,Integer,0 - 1,
+REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster.csv,code_rbd03_nocturnal_behaviour,REM Sleep Behavior Disorder Questionnaire (RBD),RBD 03. Nocturnal Behaviour,FALSE,Integer,0 - 1,
+REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster.csv,code_rbd04_move_arms_legs_during_sleep,REM Sleep Behavior Disorder Questionnaire (RBD),RBD 04. Move Arms and Legs During Sleep,FALSE,Integer,0 - 1,
+REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster.csv,code_rbd05_hurt_bed_partner,REM Sleep Behavior Disorder Questionnaire (RBD),RBD 05. Hurt Bed Partner,FALSE,Integer,0 - 1,
+REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster.csv,code_rbd06_1_speaking_in_sleep,REM Sleep Behavior Disorder Questionnaire (RBD),RBD 06.1 Speaking In Sleep,FALSE,Integer,0 - 1,
+REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster.csv,code_rbd06_2_sudden_limb_movements,REM Sleep Behavior Disorder Questionnaire (RBD),RBD 06.2 Sudden Limb Movements,FALSE,Integer,0 - 1,
+REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster.csv,code_rbd06_3_complex_movements,REM Sleep Behavior Disorder Questionnaire (RBD),RBD 06.3 Complex Movements,FALSE,Integer,0 - 1,
+REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster.csv,code_rbd06_4_things_fell_down,REM Sleep Behavior Disorder Questionnaire (RBD),RBD 06.4 Things Fell Down,FALSE,Integer,0 - 1,
+REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster.csv,code_rbd07_my_movements_awake_me,REM Sleep Behavior Disorder Questionnaire (RBD),RBD 07. My Movements Awake Me,FALSE,Integer,0 - 1,
+REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster.csv,code_rbd08_remember_dreams,REM Sleep Behavior Disorder Questionnaire (RBD),RBD 08. Remember Dreams,FALSE,Integer,0 - 1,
+REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster.csv,code_rbd09_sleep_is_disturbed,REM Sleep Behavior Disorder Questionnaire (RBD),RBD 09. Sleep Is Disturbed,FALSE,Integer,0 - 1,
+REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster.csv,code_rbd10a_stroke,REM Sleep Behavior Disorder Questionnaire (RBD),RBD 10a Stroke,FALSE,Integer,0 - 1,
+REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster.csv,code_rbd10b_head_trauma,REM Sleep Behavior Disorder Questionnaire (RBD),RBD 10b Head Trauma,FALSE,Integer,0 - 1,
+REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster.csv,code_rbd10c_parkinsonism,REM Sleep Behavior Disorder Questionnaire (RBD),RBD 10c Parkinsonism,FALSE,Integer,0 - 1,
+REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster.csv,code_rbd10d_rls,REM Sleep Behavior Disorder Questionnaire (RBD),RBD 10d RLS,FALSE,Integer,0 - 1,
+REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster.csv,code_rbd10e_narcolepsy,REM Sleep Behavior Disorder Questionnaire (RBD),RBD 10e Narcolepsy,FALSE,Integer,0 - 1,
+REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster.csv,code_rbd10f_depression,REM Sleep Behavior Disorder Questionnaire (RBD),RBD 10f Depression,FALSE,Integer,0 - 1,
+REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster.csv,code_rbd10g_epilepsy,REM Sleep Behavior Disorder Questionnaire (RBD),RBD 10g Epilepsy,FALSE,Integer,0 - 1,
+REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster.csv,code_rbd10h_brain_inflammatory_disease,REM Sleep Behavior Disorder Questionnaire (RBD),RBD 10h Inflammatory Disease Of The Brain,FALSE,Integer,0 - 1,
+REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster.csv,code_rbd10i_other,REM Sleep Behavior Disorder Questionnaire (RBD),RBD 10i Other,FALSE,Integer,0 - 1,
+REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster.csv,code_rbd10_nervous_system_disease,REM Sleep Behavior Disorder Questionnaire (RBD),RBD 10. Nervous system Disease,FALSE,Integer,0 - 1,
+REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster.csv,rbd_info_source,REM Sleep Behavior Disorder Questionnaire (RBD),RBD Source Of Information,FALSE,Enumeration,,Patient;Patient and Caregiver;Caregiver
+REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster.csv,rbd01_vivid_dreams,REM Sleep Behavior Disorder Questionnaire (RBD),RBD 01. Vivid Dreams,FALSE,Enumeration,,No;Yes
+REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster.csv,rbd02_aggressive_or_action_packed_dreams,REM Sleep Behavior Disorder Questionnaire (RBD),RBD 02. Aggressive Or Action-Packed Dreams,FALSE,Enumeration,,No;Yes
+REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster.csv,rbd03_nocturnal_behaviour,REM Sleep Behavior Disorder Questionnaire (RBD),RBD 03. Nocturnal Behaviour,FALSE,Enumeration,,No;Yes
+REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster.csv,rbd04_move_arms_legs_during_sleep,REM Sleep Behavior Disorder Questionnaire (RBD),RBD 04. Move Arms and Legs During Sleep,FALSE,Enumeration,,No;Yes
+REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster.csv,rbd05_hurt_bed_partner,REM Sleep Behavior Disorder Questionnaire (RBD),RBD 05. Hurt Bed Partner,FALSE,Enumeration,,No;Yes
+REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster.csv,rbd06_1_speaking_in_sleep,REM Sleep Behavior Disorder Questionnaire (RBD),RBD 06.1 Speaking In Sleep,FALSE,Enumeration,,No;Yes
+REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster.csv,rbd06_2_sudden_limb_movements,REM Sleep Behavior Disorder Questionnaire (RBD),RBD 06.2 Sudden Limb Movements,FALSE,Enumeration,,No;Yes
+REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster.csv,rbd06_3_complex_movements,REM Sleep Behavior Disorder Questionnaire (RBD),RBD 06.3 Complex Movements,FALSE,Enumeration,,No;Yes
+REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster.csv,rbd06_4_things_fell_down,REM Sleep Behavior Disorder Questionnaire (RBD),RBD 06.4 Things Fell Down,FALSE,Enumeration,,No;Yes
+REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster.csv,rbd07_my_movements_awake_me,REM Sleep Behavior Disorder Questionnaire (RBD),RBD 07. My Movements Awake Me,FALSE,Enumeration,,No;Yes
+REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster.csv,rbd08_remember_dreams,REM Sleep Behavior Disorder Questionnaire (RBD),RBD 08. Remember Dreams,FALSE,Enumeration,,No;Yes
+REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster.csv,rbd09_sleep_is_disturbed,REM Sleep Behavior Disorder Questionnaire (RBD),RBD 09. Sleep Is Disturbed,FALSE,Enumeration,,No;Yes
+REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster.csv,rbd10a_stroke,REM Sleep Behavior Disorder Questionnaire (RBD),RBD 10a Stroke,FALSE,Enumeration,,No;Yes
+REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster.csv,rbd10b_head_trauma,REM Sleep Behavior Disorder Questionnaire (RBD),RBD 10b Head Trauma,FALSE,Enumeration,,No;Yes
+REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster.csv,rbd10c_parkinsonism,REM Sleep Behavior Disorder Questionnaire (RBD),RBD 10c Parkinsonism,FALSE,Enumeration,,No;Yes
+REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster.csv,rbd10d_rls,REM Sleep Behavior Disorder Questionnaire (RBD),RBD 10d RLS,FALSE,Enumeration,,No;Yes
+REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster.csv,rbd10e_narcolepsy,REM Sleep Behavior Disorder Questionnaire (RBD),RBD 10e Narcolepsy,FALSE,Enumeration,,No;Yes
+REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster.csv,rbd10f_depression,REM Sleep Behavior Disorder Questionnaire (RBD),RBD 10f Depression,FALSE,Enumeration,,No;Yes
+REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster.csv,rbd10g_epilepsy,REM Sleep Behavior Disorder Questionnaire (RBD),RBD 10g Epilepsy,FALSE,Enumeration,,No;Yes
+REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster.csv,rbd10h_brain_inflammatory_disease,REM Sleep Behavior Disorder Questionnaire (RBD),RBD 10h Inflammatory Disease Of The Brain,FALSE,Enumeration,,No;Yes
+REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster.csv,rbd10i_other,REM Sleep Behavior Disorder Questionnaire (RBD),RBD 10i Other,FALSE,Enumeration,,No;Yes
+REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster.csv,rbd10_nervous_system_disease,REM Sleep Behavior Disorder Questionnaire (RBD),RBD 10. Nervous system Disease,FALSE,Enumeration,,No;Yes
+REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster.csv,rbd_summary_score,REM Sleep Behavior Disorder Questionnaire (RBD),RBD Summary Score,FALSE,Integer,0 - 13,

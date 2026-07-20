@@ -1,0 +1,9 @@
+BulkATACSeqAssayMetadataTemplate	main
+BulkRNASeqAssayMetadataTemplate	main
+DatasetAnnotationTemplate	main
+MetadataFileAnnotationTemplate	main
+PublicationMetadataTemplate	main
+ScRNASeqAssayMetadataTemplate	main
+SnATACseqAssayMetadataTemplate	main
+SnRNASeqAssayMetadataTemplate	main
+SpatialImagingAssayMetadataTemplate	main

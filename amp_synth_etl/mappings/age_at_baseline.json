@@ -1,0 +1,37 @@
+{
+  "variable": "age_at_baseline",
+  "cde_id": "124",
+  "means": "Age At Baseline",
+  "program": "AMP-PD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "integer",
+    "range": {
+      "min": 19,
+      "max": 100
+    }
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 35815526,
+      "name": "Age at event",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "<any in range>",
+      "write": {
+        "value_as_number": "<value>",
+        "value_source_value": "<raw>"
+      }
+    }
+  ],
+  "links": [],
+  "derived_from": [],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "manual_approval": true
+}

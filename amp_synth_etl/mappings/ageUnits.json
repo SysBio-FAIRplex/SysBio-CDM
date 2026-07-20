@@ -1,0 +1,37 @@
+{
+  "variable": "ageUnits",
+  "cde_id": "7",
+  "means": "The unit of measure used for `ageEnrollment` and `ageDiagnosis`",
+  "program": "AMP-AD / AMP-CMD / AMP-RA-SLE",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "years",
+      "months"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 9448,
+      "name": "year",
+      "domain": "Unit"
+    }
+  },
+  "value_map": [
+    {
+      "value": "years",
+      "write": {
+        "value_as_string": "years",
+        "value_source_value": "years"
+      }
+    }
+  ],
+  "links": [],
+  "derived_from": [],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "manual_approval": true
+}

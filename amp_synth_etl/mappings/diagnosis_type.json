@@ -1,0 +1,56 @@
+{
+  "variable": "diagnosis_type",
+  "cde_id": "157",
+  "means": "How was diagnosis made?",
+  "program": "AMP-CMD / AMP-PD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "Clinical",
+      "Pathological",
+      "Unknown"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 1988354,
+      "name": "Diagnosis type",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "Clinical",
+      "write": {
+        "value_as_string": "Clinical",
+        "value_source_value": "Clinical"
+      }
+    },
+    {
+      "value": "Pathological",
+      "write": {
+        "value_as_string": "Pathological",
+        "value_source_value": "Pathological"
+      }
+    },
+    {
+      "value": "Unknown",
+      "write": {
+        "value_as_concept_id": {
+          "id": 45877986,
+          "name": "Unknown"
+        },
+        "value_as_string": "Unknown",
+        "value_source_value": "Unknown"
+      }
+    }
+  ],
+  "links": [],
+  "derived_from": [],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "manual_approval": true
+}

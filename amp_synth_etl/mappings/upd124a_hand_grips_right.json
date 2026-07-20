@@ -1,0 +1,34 @@
+{
+  "variable": "upd124a_hand_grips_right",
+  "cde_id": "435",
+  "means": "UPDRS - Motor Examination: Hand Grips, Right (UPD124A)",
+  "program": "AMP-PD",
+  "grain": "visit",
+  "reads_as": {
+    "datatype": "integer",
+    "range": {
+      "min": 0.0,
+      "max": 4.0
+    }
+  },
+  "lands": {
+    "table": "observation"
+  },
+  "value_map": [
+    {
+      "value": "<any in range>",
+      "write": {
+        "value_as_number": "<value>",
+        "value_source_value": "<raw>"
+      }
+    }
+  ],
+  "links": [],
+  "derived_from": [],
+  "anchored_to": {
+    "person_id": "staging.person_map",
+    "visit_occurrence_id": "cdm.visit_occurrence"
+  },
+  "manual_approval": true,
+  "note": "decimals present in loaded value_as_number -> confirm integer vs float"
+}

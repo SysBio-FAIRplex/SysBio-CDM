@@ -1,0 +1,15 @@
+# pip alternative to environment.yml (see that file for run order and notes).
+#
+#   python -m venv .venv && source .venv/bin/activate
+#   pip install -r amp_synth_etl/requirements.txt
+#
+# The pipeline itself is stdlib-only — verified by AST import audit across all 30
+# modules. pytest is required only to run tests/.
+#
+# NOT installable via pip, must be present on PATH:
+#   psql   Postgres client. The load/verify steps invoke it through subprocess
+#          (not psycopg2). On Debian/Ubuntu: apt-get install postgresql-client
+#
+# PGPASSWORD is read from the environment (or ~/.pgpass), never from this repo.
+
+pytest

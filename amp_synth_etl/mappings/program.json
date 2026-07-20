@@ -1,0 +1,38 @@
+{
+  "variable": "program",
+  "cde_id": "552",
+  "means": "Name of the funding program that supported the generation of data and associated files",
+  "program": "AMP-RA-SLE",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "AMP RA/SLE",
+      "AMP AIM",
+      "Community Contribution"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 42528934,
+      "name": "Participant identifier",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "AMP AIM",
+      "write": {
+        "value_as_string": "AMP AIM",
+        "value_source_value": "AMP AIM"
+      }
+    }
+  ],
+  "links": [],
+  "derived_from": [],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "manual_approval": true
+}

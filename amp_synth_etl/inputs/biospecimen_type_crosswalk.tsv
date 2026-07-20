@@ -1,0 +1,30 @@
+# biospecimen source value -> OMOP SNOMED specimen concept (specimen_concept_id).
+# Concepts sourced ONLY from exports/curated_concept_tables.sqlite (specimen table, domain=Specimen).
+# match: exact = clear 1:1; approx = closest available (review); unmatched = no concept in the sqlite (add one).
+# anatomic_site_concept_id is left to the loader (BrodmannArea sites carried as source_value only, NULL concept).
+source_value	specimen_concept_id	concept_name	match
+PBMCs	4047495	Peripheral blood specimen	approx
+cell line	764477	Cultured cells specimen	exact
+kidney biopsy	4204351	Kidney biopsy specimen	exact
+plasma	4000626	Plasma specimen	exact
+primary cell culture	764477	Cultured cells specimen	exact
+saliva	4001062	Saliva specimen	exact
+salivary gland	4221078	Specimen from major salivary gland	exact
+serum	4001181	Serum specimen	exact
+skin biopsy	4001354	Tissue specimen from skin	exact
+skin swab	4122261	Skin swab	exact
+stool	4002879	Stool specimen	exact
+suction blister cells	4001354	Tissue specimen from skin	approx
+suction blister fluid	43021112	Swab from blister	approx
+synovial fluid	4002875	Synovial fluid specimen	exact
+synovial tissue	4206293	Synovial tissue specimen	exact
+total leukocytes	4045762	Leukocyte specimen from patient	exact
+urine	4046280	Urine specimen	exact
+uvea	4164490	Tissue specimen from uvea	exact
+whole blood	4122283	Whole blood specimen	exact
+Head of caudate nucleus	4134448	Tissue specimen from brain	exact
+blood	4001225	Blood specimen	exact
+cerebellum	40481913	Specimen from cerebellum	exact
+dorsolateral prefrontal cortex	4134448	Tissue specimen from brain	exact
+posterior cingulate cortex	4134448	Tissue specimen from brain	exact
+prefrontal cortex	4134448	Tissue specimen from brain	exact

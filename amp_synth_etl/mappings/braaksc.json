@@ -1,0 +1,109 @@
+{
+  "variable": "braaksc",
+  "cde_id": "14",
+  "means": "Braak Stage Values",
+  "program": "AMP-AD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "code",
+    "values": {
+      "0": "0",
+      "1": "I",
+      "2": "II",
+      "3": "III",
+      "4": "IV",
+      "5": "V",
+      "6": "VI"
+    }
+  },
+  "lands": {
+    "table": "measurement",
+    "measurement_concept_id": {
+      "id": 3187187,
+      "name": "Braak pathology staging for neurofibrillary degeneration in brain",
+      "domain": "Measurement"
+    }
+  },
+  "value_map": [
+    {
+      "value": "5",
+      "write": {
+        "value_as_number": 5,
+        "value_as_string": "5",
+        "value_source_value": "5"
+      }
+    },
+    {
+      "value": "4",
+      "write": {
+        "value_as_number": 4,
+        "value_as_string": "4",
+        "value_source_value": "4"
+      }
+    },
+    {
+      "value": "3",
+      "write": {
+        "value_as_number": 3,
+        "value_as_string": "3",
+        "value_source_value": "3"
+      }
+    },
+    {
+      "value": "2",
+      "write": {
+        "value_as_number": 2,
+        "value_as_string": "2",
+        "value_source_value": "2"
+      }
+    },
+    {
+      "value": "0",
+      "write": {
+        "value_as_number": 0,
+        "value_as_string": "0",
+        "value_source_value": "0"
+      }
+    },
+    {
+      "value": "1",
+      "write": {
+        "value_as_number": 1,
+        "value_as_string": "1",
+        "value_source_value": "1"
+      }
+    }
+  ],
+  "links": [
+    {
+      "kind": "derivation",
+      "related_variable": "Braak",
+      "related_concept": {
+        "id": 3172933,
+        "name": "Braak stage for presence of tau protein accompanying neurofibrillary degeneration in brain",
+        "domain": "Observation"
+      },
+      "related_table": "observation",
+      "related_value_set": [
+        "None",
+        "Stage I",
+        "Stage II",
+        "Stage III",
+        "Stage IV",
+        "Stage V",
+        "Stave VI",
+        "Missing or unknown"
+      ],
+      "relationship": "",
+      "mechanism": ""
+    }
+  ],
+  "derived_from": [
+    "Braak"
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "manual_approval": true,
+  "derivation_rule": "RADC data set 754 (ROSMAP). Braak Stage: a semiquantitative measure of severity of neurofibrillary tangle (NFT) pathology. Bielschowsky silver stain was used to visualize NFTs in the frontal, temporal, parietal, entorhinal cortex, and the hippocampus. Braak stages were based upon the distribution and severity of NFT pathology: stages I and II indicate NFTs confined mainly to the entorhinal region of the brain; stages III and IV indicate involvement of limbic regions such as the hippocampus; stages V and VI indicate moderate to severe neocortical involvement. Diagnosis includes algorithm and neuropathologist's opinion. Value coding: 0=0; 1=I; 2=II; 3=III; 4=IV; 5=V; 6=VI."
+}

@@ -1,0 +1,153 @@
+{
+  "$id": "http://example.com/PublicationMetadataTemplate",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "program": {
+            "enum": [
+              "AMP RA/SLE"
+            ]
+          }
+        },
+        "required": [
+          "program"
+        ]
+      },
+      "then": {
+        "properties": {
+          "programPhase": {
+            "not": {
+              "type": "null"
+            }
+          }
+        },
+        "required": [
+          "programPhase"
+        ]
+      }
+    }
+  ],
+  "description": "A template outlining metadata to use as annotations for Publication ‘file’ entities.",
+  "properties": {
+    "Component": {
+      "description": "A high-level attribute for grouping attributes into templates.",
+      "title": "Component",
+      "type": "string"
+    },
+    "DOI": {
+      "description": "Digital object identifier",
+      "format": "uri-reference",
+      "title": "DOI",
+      "type": "string"
+    },
+    "PMCID": {
+      "description": "Pubmed Central Identifier, formatted as a compact URI string that will automatically resolve into a URL based on the Synapse bioregistry; e.g., pmc:PMCxxxxxxxx",
+      "pattern": "^pmc:PMC[0-9]{8}",
+      "title": "PMCID",
+      "type": "string"
+    },
+    "PMID": {
+      "description": "PubMed(R) Identifier",
+      "pattern": "^PMID",
+      "title": "PMID",
+      "type": "string"
+    },
+    "associatedDataset": {
+      "description": "The synID of a Dataset entity. This serves to link other Synapse entities to Dataset entities. When used to annotate a publication Dataset this attribute should include the synID for an experimental Datasets from which the publication data was derived. Multiple synID can be specified using a comma-delimited list.",
+      "items": {
+        "pattern": "^syn[0-9]{8}",
+        "type": "string"
+      },
+      "pattern": "^syn[0-9]{8}",
+      "title": "associatedDataset",
+      "type": "array"
+    },
+    "journal": {
+      "description": "Journal in which the publication was released",
+      "title": "journal",
+      "type": "string"
+    },
+    "program": {
+      "description": "Name of the funding program that supported the generation of data and associated files",
+      "enum": [
+        "AMP AIM",
+        "AMP RA/SLE",
+        "Community Contribution"
+      ],
+      "title": "program"
+    },
+    "programPhase": {
+      "description": "A label noting which AMP RA/SLE program phase generated the data.",
+      "items": {
+        "enum": [
+          "I",
+          "II"
+        ],
+        "type": "string"
+      },
+      "title": "programPhase",
+      "type": "array"
+    },
+    "project": {
+      "description": "A sub-level attribute of `program` specifying a research initiative working to investigate particular hypotheses.",
+      "items": {
+        "enum": [
+          "AIM for RA",
+          "EDP1",
+          "EDP2",
+          "ELLIPSS",
+          "LOCKIT",
+          "METRO",
+          "RA",
+          "SLE",
+          "STAMP",
+          "UMass V-CoRT"
+        ],
+        "type": "string"
+      },
+      "title": "project",
+      "type": "array"
+    },
+    "publicationDate": {
+      "description": "The publication date extracted from PubMed database",
+      "title": "publicationDate",
+      "type": "string"
+    },
+    "publicationType": {
+      "description": "General classification of publication.",
+      "enum": [
+        "correction",
+        "peer-reviewed",
+        "pre-print"
+      ],
+      "title": "publicationType"
+    },
+    "title": {
+      "description": "Title of the publication.",
+      "title": "title",
+      "type": "string"
+    },
+    "year": {
+      "description": "Year (YYYY) in which the paper was published.",
+      "pattern": "[1-2][0-9]{3}",
+      "title": "year",
+      "type": "string"
+    }
+  },
+  "required": [
+    "Component",
+    "DOI",
+    "journal",
+    "PMID",
+    "program",
+    "project",
+    "publicationDate",
+    "publicationType",
+    "title",
+    "year"
+  ],
+  "title": "PublicationMetadataTemplate",
+  "type": "object"
+}

@@ -1,0 +1,38 @@
+{
+  "variable": "species",
+  "cde_id": "118",
+  "means": "Species of organism",
+  "program": "AMP-CMD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "Homo sapiens",
+      "Mus musculus",
+      "Rattus norvegicus"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 4259632,
+      "name": "Organism",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "Homo sapiens",
+      "write": {
+        "value_as_string": "Homo sapiens",
+        "value_source_value": "Homo sapiens"
+      }
+    }
+  ],
+  "links": [],
+  "derived_from": [],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "manual_approval": true
+}

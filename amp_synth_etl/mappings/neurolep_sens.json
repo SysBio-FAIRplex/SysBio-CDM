@@ -1,0 +1,65 @@
+{
+  "variable": "neurolep_sens",
+  "cde_id": "274",
+  "means": "Neuroleptic sensitivity",
+  "program": "AMP-PD",
+  "grain": "visit",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "Yes",
+      "No",
+      "NA"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 443340,
+      "name": "Neuroleptic adverse reaction",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "NA",
+      "write": {
+        "value_as_concept_id": {
+          "id": 35941270,
+          "name": "NA"
+        },
+        "value_as_string": "NA",
+        "value_source_value": "NA"
+      }
+    },
+    {
+      "value": "No",
+      "write": {
+        "value_as_concept_id": {
+          "id": 4188540,
+          "name": "No"
+        },
+        "value_as_string": "No",
+        "value_source_value": "No"
+      }
+    },
+    {
+      "value": "Yes",
+      "write": {
+        "value_as_concept_id": {
+          "id": 4188539,
+          "name": "Yes"
+        },
+        "value_as_string": "Yes",
+        "value_source_value": "Yes"
+      }
+    }
+  ],
+  "links": [],
+  "derived_from": [],
+  "anchored_to": {
+    "person_id": "staging.person_map",
+    "visit_occurrence_id": "cdm.visit_occurrence"
+  },
+  "manual_approval": true
+}

@@ -1,0 +1,38 @@
+{
+  "variable": "score_from_booklet_1",
+  "cde_id": "379",
+  "means": "UPSIT Score From Booklet #1",
+  "program": "AMP-PD",
+  "grain": "visit",
+  "reads_as": {
+    "datatype": "integer",
+    "range": {
+      "min": 0,
+      "max": 10
+    }
+  },
+  "lands": {
+    "table": "measurement",
+    "measurement_concept_id": {
+      "id": 3654978,
+      "name": "Assessment using University of Pennsylvania Smell Identification Test",
+      "domain": "Measurement"
+    }
+  },
+  "value_map": [
+    {
+      "value": "<any in range>",
+      "write": {
+        "value_as_number": "<value>",
+        "value_source_value": "<raw>"
+      }
+    }
+  ],
+  "links": [],
+  "derived_from": [],
+  "anchored_to": {
+    "person_id": "staging.person_map",
+    "visit_occurrence_id": "cdm.visit_occurrence"
+  },
+  "manual_approval": true
+}

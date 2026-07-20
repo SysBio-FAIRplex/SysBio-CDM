@@ -1,0 +1,63 @@
+{
+  "variable": "age_at_visit",
+  "cde_id": "542",
+  "means": "Age of participant at time of clinical visit",
+  "program": "AMP-AD / AMP-CMD / AMP-RA-SLE",
+  "grain": "visit",
+  "reads_as": {
+    "datatype": "integer",
+    "unit": "years"
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 3022304,
+      "name": "Age",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "<any in range>",
+      "write": {
+        "value_as_number": "<value>",
+        "value_source_value": "<raw>"
+      }
+    }
+  ],
+  "links": [
+    {
+      "kind": "derivation",
+      "related_variable": "age_death",
+      "related_concept": {
+        "id": 3038421,
+        "name": "Age at death",
+        "domain": "Observation"
+      },
+      "related_table": "observation",
+      "related_value_set": null,
+      "relationship": "",
+      "mechanism": ""
+    },
+    {
+      "kind": "derivation",
+      "related_variable": "visit_month",
+      "related_concept": null,
+      "related_table": null,
+      "related_value_set": null,
+      "relationship": "",
+      "mechanism": "",
+      "note": "related element not loaded in the CDM"
+    }
+  ],
+  "derived_from": [
+    "age_death",
+    "visit_month"
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map",
+    "visit_occurrence_id": "cdm.visit_occurrence"
+  },
+  "manual_approval": true,
+  "derivation_rule": "RADC data set 754 (ROSMAP). Age at visit (longitudinal). Calculated by subtracting the date of birth from the date of the visit and dividing the difference by days per year (365.25). The date of the visit is defined as the first valid date in the following hierarchy: (1) cognitive date; (2) clinical evaluation date (neurological exam, med hx, meds); (3) interview date; (4) DCF date (diagnostic classification form); (5) neuropsychologist impression date."
+}

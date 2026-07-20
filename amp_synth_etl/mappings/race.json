@@ -1,0 +1,97 @@
+{
+  "variable": "race",
+  "cde_id": "554",
+  "means": "Race",
+  "program": "AMP-AD / AMP-CMD / AMP-PD / AMP-RA-SLE",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "White",
+      "Black or African American",
+      "Native Hawaiian or Other Pacific Islander",
+      "Asian",
+      "American Indian or Alaska Native",
+      "Unknown",
+      "Multiracial"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 3046853,
+      "name": "Race",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "White",
+      "write": {
+        "value_as_concept_id": {
+          "id": 8527,
+          "name": "White"
+        },
+        "value_as_string": "White",
+        "value_source_value": "White"
+      }
+    },
+    {
+      "value": "Black or African American",
+      "write": {
+        "value_as_concept_id": {
+          "id": 8516,
+          "name": "Black or African American"
+        },
+        "value_as_string": "Black or African American",
+        "value_source_value": "Black or African American"
+      }
+    },
+    {
+      "value": "Multiracial",
+      "write": {
+        "value_as_string": "Multiracial",
+        "value_source_value": "Multiracial"
+      }
+    },
+    {
+      "value": "Asian",
+      "write": {
+        "value_as_concept_id": {
+          "id": 8515,
+          "name": "Asian"
+        },
+        "value_as_string": "Asian",
+        "value_source_value": "Asian"
+      }
+    },
+    {
+      "value": "American Indian or Alaska Native",
+      "write": {
+        "value_as_concept_id": {
+          "id": 8657,
+          "name": "American Indian or Alaska Native"
+        },
+        "value_as_string": "American Indian or Alaska Native",
+        "value_source_value": "American Indian or Alaska Native"
+      }
+    },
+    {
+      "value": "Unknown",
+      "write": {
+        "value_as_concept_id": {
+          "id": 45877986,
+          "name": "Unknown"
+        },
+        "value_as_string": "Unknown",
+        "value_source_value": "Unknown"
+      }
+    }
+  ],
+  "links": [],
+  "derived_from": [],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "manual_approval": true
+}

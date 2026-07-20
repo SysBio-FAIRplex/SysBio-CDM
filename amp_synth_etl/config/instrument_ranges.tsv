@@ -1,0 +1,53 @@
+#	Ranges the AMP source does NOT state, but the measurement does. Applied ONLY where the source is
+#	silent. Every row carries its basis. This is the one place a bound not stated by an AMP source
+#	enters a spec, so it is a reviewable file rather than a number buried in code.
+#
+#	WHY: these columns are declared 'continuous' / columnType=number with an EMPTY minimum and
+#	maximum, so a spec built from the source alone leaves them unbounded and the generator draws
+#	them from a generic 0-100 window. That produced a Krenn synovitis score of 55.1 on a 0-9 scale
+#	and a systolic blood pressure of 12 mmHg.
+#
+#	SCOPED, not global. `height`, `weight` and `sex` exist in BOTH ARK and CMD, and ARK reports
+#	height in INCHES while FUSION reports it in centimetres. A file keyed on the bare variable name
+#	would apply one programme's bounds to the other -- the same collision that had HYPOMAP emitting
+#	Adipose's value set. Scope is `ark` or `cmd:<sheet>`.
+#
+#	These are MEASUREMENT ranges -- the span of values actually seen in these patients -- not narrow
+#	"normal" reference intervals. KPMP is a CKD/AKI cohort and FUSION spans normal glucose tolerance
+#	to type 2 diabetes, so abnormal values are the point and must remain drawable.
+#
+#	►UNIT ASSUMED marks a field whose unit the workbook does NOT state. FUSION's only unit-bearing
+#	field is bmi (kg/m^2) and it is a Finnish cohort, so SI units are assumed. Each is one line to
+#	change if that is wrong.
+#
+#	scope	variable	type	minimum	maximum	provenance
+ark	krennLining	integer	-1	3	Krenn synovitis score component: enlargement/hyperplasia of the synovial lining cell layer, scored 0-3. -1 = unknown, per ARK's own "If value unknown, use '-1'". (Krenn V et al., Histopathology 2006;49:358-364.)
+ark	krennStroma	integer	-1	3	Krenn synovitis score component: resident stromal cell density, scored 0-3. -1 = unknown, per ARK. (Krenn 2006.)
+ark	krennInflammatory	integer	-1	3	Krenn synovitis score component: degree of inflammatory infiltrate, scored 0-3. -1 = unknown, per ARK. (Krenn 2006.)
+ark	krennSynovitisScore	integer	-1	9	The Krenn Synovitis Score: the SUM of its three components (3+3+3=9), so 0-9. -1 = unknown, per ARK. COMPUTED, never drawn -- see scripts/gen/batch_08.py. (Krenn 2006.)
+cmd:KPMP_kidney	np_age	integer	18	90	Participant age, years. KPMP enrols adults; the workbook says the age is "released as range in open file", i.e. bounded, but does not give the bound. Whole years.
+cmd:KPMP_kidney	pm_bmi	number	15	60	BMI, kg/m^2 (unit stated). Spans severe underweight to class III obesity.
+cmd:KPMP_kidney	bsc_bp_sys	integer	70	250	Systolic blood pressure, mmHg (unit stated). Spans profound hypotension to hypertensive crisis. Recorded as whole mmHg.
+cmd:KPMP_kidney	bsc_bp_dia	integer	40	150	Diastolic blood pressure, mmHg (unit stated). Recorded as whole mmHg.
+cmd:KPMP_kidney	a1c_most_recentC	number	4.0	18.0	Haemoglobin A1c, % (unit stated). Non-diabetic ~4-5.6; poorly controlled diabetes reaches the high teens.
+cmd:KPMP_kidney	lab_egfr_most_recentC	number	2	150	eGFR, mL/min/1.73m^2 (unit stated), race-free CKD-EPI. KPMP is a CKD/AKI cohort: kidney failure is <15, normal is ~90-120.
+cmd:KPMP_kidney	op_egfrcr	number	2	150	eGFR, mL/min/1.73m^2 (unit stated), CKD-EPI creatinine 2021. Same span as above.
+cmd:KPMP_kidney	op_egfrcys	number	2	150	eGFR, mL/min/1.73m^2 (unit stated), CKD-EPI cystatin C.
+cmd:KPMP_kidney	op_egfrcrcys	number	2	150	eGFR, mL/min/1.73m^2 (unit stated), CKD-EPI creatinine + cystatin C 2021.
+cmd:KPMP_kidney	op_alb	number	1.0	6.0	Plasma albumin, g/dL -- the unit IS stated, in the description ("Enrollment central-lab plasma: Albumin (g/dL)"), just not in permissible_values. Nephrotic syndrome drives it well below the ~3.5-5.0 normal band.
+cmd:KPMP_kidney	uacr_most_recentC	number	0	15000	Urine albumin-to-creatinine ratio, mg/g creatinine (unit stated). Normal <30; nephrotic-range albuminuria reaches the thousands.
+cmd:KPMP_kidney	upcr_most_recentC	number	0	20000	Urine protein-to-creatinine ratio, mg/g creatinine (unit stated). Normal <150; nephrotic range is >3000 and can go far higher.
+cmd:KPMP_kidney	diabetes_durationC	integer	0	70	Years. The workbook DEFINES it: "Diabetes duration = np_age - mh_diabetes_age". mh_diabetes_age is NOT published, so the duration is drawn -- but it is bounded by the participant's own age and only exists for a diabetic. See scripts/gen/batch_09.py.
+cmd:KPMP_kidney	ht_durationC	integer	0	70	Years. The workbook DEFINES it: "Hypertension duration = np_age - mh_ht_age". mh_ht_age is NOT published, so the same treatment as diabetes_durationC.
+cmd:FUSION_muscle	age_at_biopsy	integer	18	80	Age at muscle biopsy, years. FUSION is an adult cohort. Whole years.
+cmd:FUSION_muscle	bmi	number	15	60	Body mass index, kg/m^2 (unit stated).
+cmd:FUSION_muscle	height	number	140	200	Standing height, cm. ►UNIT ASSUMED -- the workbook says only "Anthropometric measures / continuous".
+cmd:FUSION_muscle	weight	number	40	180	Body weight, kg. ►UNIT ASSUMED.
+cmd:FUSION_muscle	waist_circumference	number	55	160	Waist circumference, cm. ►UNIT ASSUMED.
+cmd:FUSION_muscle	waist_hip_ratio	number	0.6	1.4	Waist/hip ratio. Dimensionless, so no unit to assume.
+cmd:FUSION_muscle	fasting_serum_insulin	number	10	1500	Fasting serum insulin, pmol/L. ►UNIT ASSUMED (SI). Spans normal to the severe hyperinsulinaemia of insulin resistance.
+cmd:FUSION_muscle	ogtt_glucose_0	number	3.5	15	OGTT plasma glucose, fasting, mmol/L. ►UNIT ASSUMED (SI). FUSION spans normal glucose tolerance to type 2 diabetes, so the diabetic range must remain drawable.
+cmd:FUSION_muscle	ogtt_glucose_30	number	4	20	OGTT plasma glucose, 30 min, mmol/L. ►UNIT ASSUMED (SI). The post-load peak.
+cmd:FUSION_muscle	ogtt_glucose_60	number	4	24	OGTT plasma glucose, 60 min, mmol/L. ►UNIT ASSUMED (SI).
+cmd:FUSION_muscle	ogtt_glucose_120	number	3	24	OGTT plasma glucose, 120 min, mmol/L. ►UNIT ASSUMED (SI). The diagnostic 2-hour value: >=11.1 is diabetes, 7.8-11.0 impaired glucose tolerance.
+cmd:FUSION_muscle	rin	number	1.0	10.0	RNA Integrity Number. This one is not an assumption: the RIN is DEFINED on a 1-10 scale by the algorithm that produces it (Schroeder A et al., BMC Molecular Biology 2006;7:3). 10 is intact, 1 is fully degraded.

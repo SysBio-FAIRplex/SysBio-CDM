@@ -1,0 +1,15 @@
+# config/access_groups.tsv — record-level access groups for the SysBio-CDM governance layer.
+# One group per AMP PROGRAM (the real, always-available access signal; access model = file-driven,
+# program fallback, per the approved plan). Every governed row (observation / measurement / specimen /
+# files / procedure) is tagged into the group of its file's program, else its person's program.
+#   * id             — fixed integer PK (referenced by user_access_groups + <entity>_access; never serial).
+#   * program        — the AMP program label; matches files.study and the person's program for the join.
+#   * disease_focus  — factual scope of the program (the acronym's meaning), NOT invented policy.
+#   * dul / data_access_instructions — LEFT BLANK: real AMP data-use-limitation text is not in-repo; we
+#     invent none. The mechanism carries them; a future real policy drop fills them.
+# created_at is a constant stamped by scripts/12_render_governance.py (determinism; never now()).
+id	code	name	description	program	disease_focus	dul	data_access_instructions
+1	AMP-PD	AMP PD	AMP Parkinson's Disease program	AMP-PD	Parkinson's disease
+2	AMP-AD	AMP AD	AMP Alzheimer's Disease program	AMP-AD	Alzheimer's disease and related dementias
+3	AMP-CMD	AMP CMD	AMP Common Metabolic Diseases program	AMP-CMD	Kidney, muscle and adipose metabolic disease
+4	AMP-RA-SLE	AMP RA/SLE	AMP Rheumatoid Arthritis and Systemic Lupus Erythematosus program	AMP-RA-SLE	Rheumatoid arthritis and systemic lupus erythematosus

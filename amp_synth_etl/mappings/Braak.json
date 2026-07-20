@@ -1,0 +1,127 @@
+{
+  "variable": "Braak",
+  "cde_id": "13",
+  "means": "Braak stage for neurofibrillary tangle pathology",
+  "program": "AMP-AD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "None",
+      "Stage I",
+      "Stage II",
+      "Stage III",
+      "Stage IV",
+      "Stage V",
+      "Stave VI",
+      "Missing or unknown"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 3172933,
+      "name": "Braak stage for presence of tau protein accompanying neurofibrillary degeneration in brain",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "Stage V",
+      "write": {
+        "value_as_concept_id": {
+          "id": 45878655,
+          "name": "Stage V"
+        },
+        "value_source_value": "Stage V"
+      }
+    },
+    {
+      "value": "Stage IV",
+      "write": {
+        "value_as_concept_id": {
+          "id": 45880109,
+          "name": "Stage IV"
+        },
+        "value_source_value": "Stage IV"
+      }
+    },
+    {
+      "value": "Stage III",
+      "write": {
+        "value_as_concept_id": {
+          "id": 45878643,
+          "name": "Stage III"
+        },
+        "value_source_value": "Stage III"
+      }
+    },
+    {
+      "value": "Stage II",
+      "write": {
+        "value_as_concept_id": {
+          "id": 45880979,
+          "name": "Stage II"
+        },
+        "value_source_value": "Stage II"
+      }
+    },
+    {
+      "value": "Stage I",
+      "write": {
+        "value_as_concept_id": {
+          "id": 45880980,
+          "name": "Stage I"
+        },
+        "value_source_value": "Stage I"
+      }
+    },
+    {
+      "value": "None",
+      "write": {
+        "value_as_concept_id": {
+          "id": 45878582,
+          "name": "None"
+        },
+        "value_source_value": "None"
+      }
+    },
+    {
+      "value": "Missing or unknown",
+      "write": {
+        "value_as_concept_id": {
+          "id": 45877986,
+          "name": "Unknown"
+        },
+        "value_source_value": "Missing or unknown"
+      }
+    },
+    {
+      "value": "Stage VI",
+      "write": {
+        "value_as_concept_id": {
+          "id": 3188117,
+          "name": "Stage 6"
+        },
+        "value_source_value": "Stage VI"
+      }
+    },
+    {
+      "value": "Stave VI",
+      "write": {
+        "value_as_concept_id": {
+          "id": 3188117,
+          "name": "Stage 6"
+        },
+        "value_source_value": "Stave VI"
+      }
+    }
+  ],
+  "links": [],
+  "derived_from": [],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "manual_approval": true,
+  "derivation_rule": "TYPO IN THE AMP DICTIONARY: the 7th stage is written \"Stave VI\", not \"Stage VI\" (DiverseCohorts_DataDictionary.pdf, confirmed in the PDF text itself). UNRESOLVED: we do not know whether the typo is confined to the dictionary or is also the literal string in the AMP data files. The synthetic data reproduces it verbatim so that an ETL built against the real files does not break on it. Verify against a real AMP-AD extract, then decide whether to normalise. Noted 2026-07-13."
+}
