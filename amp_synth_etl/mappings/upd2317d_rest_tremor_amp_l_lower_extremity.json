@@ -1,0 +1,70 @@
+{
+  "variable": "upd2317d_rest_tremor_amp_l_lower_extremity",
+  "cde_id": null,
+  "means": "",
+  "program": "",
+  "grain": "?",
+  "reads_as": {
+    "datatype": "integer"
+  },
+  "lands": {
+    "table": "measurement",
+    "measurement_concept_id": {
+      "id": 40768872,
+      "name": "Tremor at rest Lower extremity - left [UPDRS]",
+      "domain": "Measurement"
+    }
+  },
+  "value_map": [
+    {
+      "value": "Normal",
+      "write": {
+        "value_as_number": 0,
+        "value_as_concept_id": {
+          "id": 45884153,
+          "name": "Normal"
+        },
+        "value_source_value": "Normal"
+      }
+    },
+    {
+      "value": "Slight",
+      "write": {
+        "value_as_number": 1,
+        "value_as_concept_id": {
+          "id": 45880586,
+          "name": "Slight"
+        },
+        "value_source_value": "Slight"
+      }
+    },
+    {
+      "value": "Mild",
+      "write": {
+        "value_as_number": 2,
+        "value_as_concept_id": {
+          "id": 45883535,
+          "name": "Mild"
+        },
+        "value_source_value": "Mild"
+      }
+    },
+    {
+      "value": "Moderate",
+      "write": {
+        "value_as_number": 3,
+        "value_as_concept_id": {
+          "id": 45877983,
+          "name": "Moderate"
+        },
+        "value_source_value": "Moderate"
+      }
+    }
+  ],
+  "links": [],
+  "derived_from": [],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "manual_approval": true
+}

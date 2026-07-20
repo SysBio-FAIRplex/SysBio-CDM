@@ -1,0 +1,103 @@
+{
+  "variable": "path_braak_lb",
+  "cde_id": "281",
+  "means": "BRAAK stage for Lewy body pathology",
+  "program": "AMP-PD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "NA"
+    ]
+  },
+  "lands": {
+    "table": "measurement",
+    "measurement_concept_id": {
+      "id": 3190069,
+      "name": "Braak pathology staging for Lewy body progression in Parkinsons disease",
+      "domain": "Measurement"
+    }
+  },
+  "value_map": [
+    {
+      "value": "NA",
+      "write": {
+        "value_as_concept_id": {
+          "id": 35941270,
+          "name": "NA"
+        },
+        "value_as_string": "NA",
+        "value_source_value": "NA"
+      }
+    },
+    {
+      "value": "3",
+      "write": {
+        "value_as_number": 3,
+        "value_as_string": "3",
+        "value_source_value": "3"
+      }
+    },
+    {
+      "value": "5",
+      "write": {
+        "value_as_number": 5,
+        "value_as_string": "5",
+        "value_source_value": "5"
+      }
+    },
+    {
+      "value": "6",
+      "write": {
+        "value_as_number": 6,
+        "value_as_string": "6",
+        "value_source_value": "6"
+      }
+    },
+    {
+      "value": "1",
+      "write": {
+        "value_as_number": 1,
+        "value_as_string": "1",
+        "value_source_value": "1"
+      }
+    },
+    {
+      "value": "2",
+      "write": {
+        "value_as_number": 2,
+        "value_as_string": "2",
+        "value_source_value": "2"
+      }
+    },
+    {
+      "value": "4",
+      "write": {
+        "value_as_number": 4,
+        "value_as_string": "4",
+        "value_source_value": "4"
+      }
+    },
+    {
+      "value": "0",
+      "write": {
+        "value_as_number": 0,
+        "value_as_string": "0",
+        "value_source_value": "0"
+      }
+    }
+  ],
+  "links": [],
+  "derived_from": [],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "manual_approval": true
+}

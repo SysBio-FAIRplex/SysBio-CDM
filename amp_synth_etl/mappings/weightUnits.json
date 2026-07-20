@@ -1,0 +1,55 @@
+{
+  "variable": "weightUnits",
+  "cde_id": "560",
+  "means": "Abbreviated unit of measure of value provided for `weight`.",
+  "program": "AMP-RA-SLE",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "lb",
+      "kg",
+      "g",
+      "oz"
+    ]
+  },
+  "lands": {
+    "table": "measurement"
+  },
+  "value_map": [
+    {
+      "value": "lb",
+      "write": {
+        "value_as_string": "lb",
+        "value_source_value": "lb"
+      }
+    },
+    {
+      "value": "kg",
+      "write": {
+        "value_as_string": "kg",
+        "value_source_value": "kg"
+      }
+    },
+    {
+      "value": "g",
+      "write": {
+        "value_as_string": "g",
+        "value_source_value": "g"
+      }
+    },
+    {
+      "value": "oz",
+      "write": {
+        "value_as_string": "oz",
+        "value_source_value": "oz"
+      }
+    }
+  ],
+  "links": [],
+  "derived_from": [],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "manual_approval": true
+}

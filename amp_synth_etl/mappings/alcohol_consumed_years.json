@@ -1,0 +1,57 @@
+{
+  "variable": "alcohol_consumed_years",
+  "cde_id": "126",
+  "means": "How many years consumed alcohol heavily in the past?",
+  "program": "AMP-PD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "integer",
+    "range": {
+      "min": 1.0,
+      "max": 51.0
+    }
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 44786670,
+      "name": "Number of years alcohol consumed [Time]",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "<any in range>",
+      "write": {
+        "value_as_number": "<value>",
+        "value_source_value": "<raw>"
+      }
+    }
+  ],
+  "links": [
+    {
+      "kind": "derivation",
+      "related_variable": "age_at_baseline",
+      "related_concept": {
+        "id": 35815526,
+        "name": "Age at event",
+        "domain": "Observation"
+      },
+      "related_table": "observation",
+      "related_value_set": {
+        "min": 19,
+        "max": 100
+      },
+      "relationship": "",
+      "mechanism": ""
+    }
+  ],
+  "derived_from": [
+    "age_at_baseline"
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "manual_approval": true,
+  "note": "decimals present in loaded value_as_number -> confirm integer vs float"
+}

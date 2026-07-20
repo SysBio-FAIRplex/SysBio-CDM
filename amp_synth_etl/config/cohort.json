@@ -1,0 +1,60 @@
+{
+  "_comment": "GENERATION parameters. None of this comes from an AMP dictionary \u2014 a dictionary describes columns, not cohorts.",
+  "seed": "amp-synth-2026-07-13",
+  "n_subjects": 500,
+  "first_id": 100001,
+  "visits_per_subject": [
+    1,
+    2,
+    3,
+    3,
+    4,
+    4,
+    5
+  ],
+  "visit_interval_months": [
+    3,
+    12
+  ],
+  "p_screening_visit": 0.35,
+  "program_weights": {
+    "AMP-PD": 0.55,
+    "AMP-AD": 0.3,
+    "AMP-CMD": 0.08,
+    "AMP-RA-SLE": 0.07
+  },
+  "_amp_ad_cohort_comment": "DiverseCohorts is the AMP-AD harmonisation layer across 14 brain banks. Its `cohort` element ('The initial study group population to which the individual belonged') lists these 14. ROS and MAP together ARE ROSMAP \u2014 so a ROS/MAP subject carries BOTH the DiverseCohorts harmonised fields AND ROSMAP's native fields, measured from the same autopsy. A Mayo Clinic subject has no ROSMAP data at all. The list is the AMP file's own; the WEIGHTS below are mine.",
+  "amp_ad_cohorts": [
+    "AA",
+    "Banner",
+    "Biggs Institute Brain Bank",
+    "CLINCOR",
+    "Emory",
+    "LATC",
+    "MAP",
+    "MARS",
+    "Mayo Clinic",
+    "Mt Sinai Brain Bank",
+    "NY Brain Bank",
+    "UPenn",
+    "ROS",
+    "UFL"
+  ],
+  "_cohort_gate_comment": "Which subjects appear in which table. A table listed here is emitted ONLY for subjects whose cohort is in its list. Tables not listed here take every subject of their program.",
+  "cohort_gates": {
+    "ROSMAP_subject.csv": [
+      "ROS",
+      "MAP"
+    ],
+    "ROSMAP_clinical.csv": [
+      "ROS",
+      "MAP"
+    ]
+  },
+  "p_missing": 0.04,
+  "unbounded_span": 100,
+  "enrolment_window": [
+    "2011-01-01",
+    "2019-12-31"
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "variable": "upd2hy_hoehn_and_yahr_stage",
+  "cde_id": "527",
+  "means": "3.21 MDS-UPDRS - Hoehn And Yahr Stage (UPD2HY)",
+  "program": "AMP-PD",
+  "grain": "visit",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "Stage 0",
+      "Stage 1",
+      "Stage 1.5",
+      "Stage 2",
+      "Stage 2.5",
+      "Stage 3",
+      "Stage 4",
+      "Stage 5"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 46236404,
+      "name": "Modified Hoen and Yahr stage [UPDRS]",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "Stage 2",
+      "write": {
+        "value_as_number": 2,
+        "value_as_string": "Stage 2",
+        "value_source_value": "Stage 2"
+      }
+    },
+    {
+      "value": "Stage 0",
+      "write": {
+        "value_as_number": 0,
+        "value_as_string": "Stage 0",
+        "value_source_value": "Stage 0"
+      }
+    },
+    {
+      "value": "Stage 1",
+      "write": {
+        "value_as_number": 1,
+        "value_as_string": "Stage 1",
+        "value_source_value": "Stage 1"
+      }
+    },
+    {
+      "value": "Stage 3",
+      "write": {
+        "value_as_number": 3,
+        "value_as_string": "Stage 3",
+        "value_source_value": "Stage 3"
+      }
+    },
+    {
+      "value": "Stage 2.5",
+      "write": {
+        "value_as_number": 2.5,
+        "value_as_string": "Stage 2.5",
+        "value_source_value": "Stage 2.5"
+      }
+    },
+    {
+      "value": "Stage 4",
+      "write": {
+        "value_as_number": 4,
+        "value_as_string": "Stage 4",
+        "value_source_value": "Stage 4"
+      }
+    },
+    {
+      "value": "Stage 5",
+      "write": {
+        "value_as_number": 5,
+        "value_as_string": "Stage 5",
+        "value_source_value": "Stage 5"
+      }
+    },
+    {
+      "value": "Stage 1.5",
+      "write": {
+        "value_as_number": 1.5,
+        "value_as_string": "Stage 1.5",
+        "value_source_value": "Stage 1.5"
+      }
+    }
+  ],
+  "links": [],
+  "derived_from": [],
+  "anchored_to": {
+    "person_id": "staging.person_map",
+    "visit_occurrence_id": "cdm.visit_occurrence"
+  },
+  "manual_approval": true
+}

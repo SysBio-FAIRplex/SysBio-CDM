@@ -1,0 +1,39 @@
+{
+  "variable": "smoke_exposure_other_areas",
+  "cde_id": "386",
+  "means": "How many hours a day are you exposed to the cigarette smoke of others (on average) in other areas?",
+  "program": "AMP-PD",
+  "grain": "visit",
+  "reads_as": {
+    "datatype": "integer",
+    "range": {
+      "min": 0.0,
+      "max": 10.0
+    }
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 40766591,
+      "name": "For how many hours per day were you exposed to smoke from other peoples cigarettes or tobacco products during this time at this location [PhenX]",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "<any in range>",
+      "write": {
+        "value_as_number": "<value>",
+        "value_source_value": "<raw>"
+      }
+    }
+  ],
+  "links": [],
+  "derived_from": [],
+  "anchored_to": {
+    "person_id": "staging.person_map",
+    "visit_occurrence_id": "cdm.visit_occurrence"
+  },
+  "manual_approval": true,
+  "note": "decimals present in loaded value_as_number -> confirm integer vs float"
+}

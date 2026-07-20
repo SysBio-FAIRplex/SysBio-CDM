@@ -1,0 +1,4 @@
+# This config has the same default values as schematic itself has
+google_sheets:
+  service_acct_creds: "schematic_service_account_creds.json"
+  strict_validation: true

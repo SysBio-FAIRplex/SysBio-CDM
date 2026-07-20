@@ -1,0 +1,60 @@
+{
+  "variable": "change_in_diagnosis",
+  "cde_id": "147",
+  "means": "Change In Diagnosis Indicator",
+  "program": "AMP-PD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "No",
+      "Yes"
+    ]
+  },
+  "lands": {
+    "table": "observation"
+  },
+  "value_map": [
+    {
+      "value": "No",
+      "write": {
+        "value_as_concept_id": {
+          "id": 4188540,
+          "name": "No"
+        },
+        "value_as_string": "No",
+        "value_source_value": "No"
+      }
+    },
+    {
+      "value": "Yes",
+      "write": {
+        "value_as_concept_id": {
+          "id": 4188539,
+          "name": "Yes"
+        },
+        "value_as_string": "Yes",
+        "value_source_value": "Yes"
+      }
+    }
+  ],
+  "links": [
+    {
+      "kind": "derivation",
+      "related_variable": "visit_month",
+      "related_concept": null,
+      "related_table": null,
+      "related_value_set": null,
+      "relationship": "",
+      "mechanism": "",
+      "note": "related element not loaded in the CDM"
+    }
+  ],
+  "derived_from": [
+    "visit_month"
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "manual_approval": true
+}

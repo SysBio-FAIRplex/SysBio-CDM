@@ -1,0 +1,18 @@
+#	ARK's conditional requirements, read off the biospecimen model's DependsOn.
+#	A dependent column is emitted ONLY when its trigger column holds the trigger
+#	value. A serum sample therefore carries no Krenn synovitis score.
+trigger_column	trigger_value	dependent_columns
+alignmentReference	custom reference	customAlignmentReferenceSynID
+biospecimenSubtype	cell suspension	cellOntologyID,cellType,userDefinedCellType
+biospecimenSubtype	flow-sorted cells	FACSPopulation,cellOntologyID,cellType,userDefinedCellType
+biospecimenType	cell line	cellType,cellOntologyID
+biospecimenType	primary cell culture	cellType,cellOntologyID,primaryCellSource
+biospecimenType	saliva	salivaCollectionProcedure
+biospecimenType	skin biopsy	skinSiteStatus,anatomicalSite
+biospecimenType	skin swab	skinSiteStatus,anatomicalSite
+biospecimenType	suction blister cells	skinSiteStatus,anatomicalSite
+biospecimenType	suction blister fluid	skinSiteStatus,anatomicalSite
+biospecimenType	synovial fluid	anatomicalSite
+biospecimenType	synovial tissue	synovialCollectionProcedure,anatomicalSite,krennInflammatory,krennLining,krennStroma,krennSynovitisScore
+program	AMP AIM	visitID
+program	AMP RA/SLE	visitID

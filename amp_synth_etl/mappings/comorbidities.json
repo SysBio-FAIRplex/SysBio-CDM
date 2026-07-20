@@ -1,0 +1,157 @@
+{
+  "variable": "comorbidities",
+  "cde_id": "545",
+  "means": "Any diseases or medical condition that is simultaneously present in addition to `diagnosis`.",
+  "program": "AMP-RA-SLE",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "diabetes",
+      "cardiovascular disease",
+      "pulmonary disease",
+      "autoimmune thyroid disease",
+      "inflammatory bowel disease",
+      "psoriasis",
+      "multiple sclerosis",
+      "systemic lupus erythematosus",
+      "rheumatoid arthritis",
+      "psoriatic arthritis",
+      "Hashimoto's Thyroiditis",
+      "other"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 4160039,
+      "name": "Co-morbid conditions",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "psoriatic arthritis",
+      "write": {
+        "value_as_concept_id": {
+          "id": 40319772,
+          "name": "Psoriatic arthritis"
+        },
+        "value_as_string": "psoriatic arthritis",
+        "value_source_value": "psoriatic arthritis"
+      }
+    },
+    {
+      "value": "Hashimoto's Thyroiditis",
+      "write": {
+        "value_as_concept_id": {
+          "id": 135215,
+          "name": "Hashimoto thyroiditis"
+        },
+        "value_as_string": "Hashimoto's Thyroiditis",
+        "value_source_value": "Hashimoto's Thyroiditis"
+      }
+    },
+    {
+      "value": "psoriasis",
+      "write": {
+        "value_as_concept_id": {
+          "id": 140168,
+          "name": "Psoriasis"
+        },
+        "value_as_string": "psoriasis",
+        "value_source_value": "psoriasis"
+      }
+    },
+    {
+      "value": "rheumatoid arthritis",
+      "write": {
+        "value_as_concept_id": {
+          "id": 80809,
+          "name": "Rheumatoid arthritis"
+        },
+        "value_as_string": "rheumatoid arthritis",
+        "value_source_value": "rheumatoid arthritis"
+      }
+    },
+    {
+      "value": "diabetes",
+      "write": {
+        "value_as_concept_id": {
+          "id": 201820,
+          "name": "Diabetes mellitus"
+        },
+        "value_as_string": "diabetes",
+        "value_source_value": "diabetes"
+      }
+    },
+    {
+      "value": "inflammatory bowel disease",
+      "write": {
+        "value_as_concept_id": {
+          "id": 4074815,
+          "name": "Inflammatory bowel disease"
+        },
+        "value_as_string": "inflammatory bowel disease",
+        "value_source_value": "inflammatory bowel disease"
+      }
+    },
+    {
+      "value": "other",
+      "write": {
+        "value_as_string": "other",
+        "value_source_value": "other"
+      }
+    },
+    {
+      "value": "cardiovascular disease",
+      "write": {
+        "value_as_concept_id": {
+          "id": 134057,
+          "name": "Disorder of cardiovascular system"
+        },
+        "value_as_string": "cardiovascular disease",
+        "value_source_value": "cardiovascular disease"
+      }
+    },
+    {
+      "value": "autoimmune thyroid disease",
+      "write": {
+        "value_as_concept_id": {
+          "id": 4281109,
+          "name": "Autoimmune thyroiditis"
+        },
+        "value_as_string": "autoimmune thyroid disease",
+        "value_source_value": "autoimmune thyroid disease"
+      }
+    },
+    {
+      "value": "multiple sclerosis",
+      "write": {
+        "value_as_concept_id": {
+          "id": 374919,
+          "name": "Multiple sclerosis"
+        },
+        "value_as_string": "multiple sclerosis",
+        "value_source_value": "multiple sclerosis"
+      }
+    },
+    {
+      "value": "pulmonary disease",
+      "write": {
+        "value_as_concept_id": {
+          "id": 257907,
+          "name": "Disorder of lung"
+        },
+        "value_as_string": "pulmonary disease",
+        "value_source_value": "pulmonary disease"
+      }
+    }
+  ],
+  "links": [],
+  "derived_from": [],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "manual_approval": true
+}

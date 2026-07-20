@@ -1,0 +1,38 @@
+{
+  "variable": "upd117_sensory_complaints",
+  "cde_id": "418",
+  "means": "UPDRS - Activities of Daily Living: Sensory Complaints Related to Parkinsonism (UPD117)",
+  "program": "AMP-PD",
+  "grain": "visit",
+  "reads_as": {
+    "datatype": "integer",
+    "range": {
+      "min": 0.0,
+      "max": 4.0
+    }
+  },
+  "lands": {
+    "table": "measurement",
+    "measurement_concept_id": {
+      "id": 46236392,
+      "name": "Sensory complaints related to parkinsonism scale [UPDRS]",
+      "domain": "Measurement"
+    }
+  },
+  "value_map": [
+    {
+      "value": "<any in range>",
+      "write": {
+        "value_as_number": "<value>",
+        "value_source_value": "<raw>"
+      }
+    }
+  ],
+  "links": [],
+  "derived_from": [],
+  "anchored_to": {
+    "person_id": "staging.person_map",
+    "visit_occurrence_id": "cdm.visit_occurrence"
+  },
+  "manual_approval": true
+}

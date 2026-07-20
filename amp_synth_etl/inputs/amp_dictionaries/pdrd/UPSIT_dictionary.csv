@@ -1,0 +1,11 @@
+TableName,ColumnName,Title,Description,Required,DataType,DataTypeRange,UniqueValues
+UPSIT.csv,participant_id,Study Subject ID,Study Subject ID,TRUE,String,,
+UPSIT.csv,GUID,Subject ID,Global Unique ID (USUBJID),FALSE,String,,
+UPSIT.csv,visit_name,Visit Name,"Visit name: M - in months, SC - screening visit, LOG - records without visit; #2 or #3 define repated records at the same visit or repeated visit",TRUE,String,,
+UPSIT.csv,visit_month,Visit Month,"Numeric visit in months; for visits prior baseline -1, -2 is an order of screening visits",FALSE,Float,,
+UPSIT.csv,upsit_performed,University Of Pennsylvania Smell Identification Test (UPSIT),UPSIT Performed Indicator,FALSE,Enumeration,,Completed;Not completed;Partially completed
+UPSIT.csv,score_from_booklet_1,University Of Pennsylvania Smell Identification Test (UPSIT),UPSIT Score From Booklet #1,FALSE,Integer,0 - 10,
+UPSIT.csv,score_from_booklet_2,University Of Pennsylvania Smell Identification Test (UPSIT),UPSIT Score From Booklet #2,FALSE,Integer,0 - 10,
+UPSIT.csv,score_from_booklet_3,University Of Pennsylvania Smell Identification Test (UPSIT),UPSIT Score From Booklet #3,FALSE,Integer,0 - 10,
+UPSIT.csv,score_from_booklet_4,University Of Pennsylvania Smell Identification Test (UPSIT),UPSIT Score From Booklet #4,FALSE,Integer,0 - 10,
+UPSIT.csv,upsit_total_score,University Of Pennsylvania Smell Identification Test (UPSIT),UPSIT Total Score,FALSE,Integer,0 - 40,

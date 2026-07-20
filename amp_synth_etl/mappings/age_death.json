@@ -1,0 +1,54 @@
+{
+  "variable": "age_death",
+  "cde_id": "5",
+  "means": "Age at Death",
+  "program": "AMP-AD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "integer",
+    "unit": "years"
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 3038421,
+      "name": "Age at death",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "<any in range>",
+      "write": {
+        "value_as_number": "<value>",
+        "value_source_value": "<raw>"
+      }
+    }
+  ],
+  "links": [
+    {
+      "kind": "derivation",
+      "related_variable": "age_at_baseline",
+      "related_concept": {
+        "id": 35815526,
+        "name": "Age at event",
+        "domain": "Observation"
+      },
+      "related_table": "observation",
+      "related_value_set": {
+        "min": 19,
+        "max": 100
+      },
+      "relationship": "",
+      "mechanism": ""
+    }
+  ],
+  "derived_from": [
+    "age_at_baseline"
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "manual_approval": true,
+  "derivation_rule": "RADC data set 754 (ROSMAP). Age at death. Calculated by subtracting date of birth from date of death and dividing the difference by days per year (365.25). For participants in autopsy cohorts, the exact date of death is known for most participants as it is the day an autopsy was performed. In all cohorts, in addition to annual evaluations, participants are also contacted quarterly to determine vital status and changes in health, and death is occasionally learned of during quarterly contacts."
+}
