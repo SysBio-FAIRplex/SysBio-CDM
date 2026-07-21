@@ -1,0 +1,85 @@
+{
+  "variable": "age_first_ad_dx",
+  "cde_id": "6",
+  "means": "Age at First Alzheimer's Dementia Diagnosis",
+  "program": "AMP-AD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "integer",
+    "unit": "years"
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 378419,
+      "name": "Alzheimer's disease",
+      "domain": "Condition"
+    }
+  },
+  "value_map": [
+    {
+      "value": "<any in range>",
+      "write": {
+        "value_as_number": "<value>",
+        "value_source_value": "<raw>"
+      }
+    }
+  ],
+  "links": [
+    {
+      "kind": "realized",
+      "mechanism": "observation_event_id",
+      "relationship": "",
+      "obs_event_field_concept_id": {
+        "id": 1147165,
+        "name": "observation.observation_id"
+      },
+      "points_to": {
+        "concept": {
+          "id": 378419,
+          "name": "Alzheimer's disease"
+        }
+      },
+      "facts_linked": 187,
+      "note": "each record points, via observation_event_id, to the participant's target observation"
+    },
+    {
+      "kind": "derivation",
+      "related_variable": "age_at_baseline",
+      "related_concept": {
+        "id": 35815526,
+        "name": "Age at event",
+        "domain": "Observation"
+      },
+      "related_table": "observation",
+      "related_value_set": {
+        "min": 19,
+        "max": 100
+      },
+      "relationship": "",
+      "mechanism": ""
+    },
+    {
+      "kind": "derivation",
+      "related_variable": "age_death",
+      "related_concept": {
+        "id": 3038421,
+        "name": "Age at death",
+        "domain": "Observation"
+      },
+      "related_table": "observation",
+      "related_value_set": null,
+      "relationship": "",
+      "mechanism": ""
+    }
+  ],
+  "derived_from": [
+    "age_at_baseline",
+    "age_death"
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "manual_approval": true,
+  "derivation_rule": "RADC data set 754 (ROSMAP). Age at cycle where first Alzheimer's dementia diagnosis was given. Represents the age at the first cycle where an Alzheimer's dementia diagnosis was rendered. Calculated using the variables 'age at visit' and 'clinical diagnosis summary' (dcfdx value = 4 or 5). This is the best approximation of 'age at onset of Alzheimer's dementia' available, as most participants are seen on a yearly basis. Not available for participants that were demented at baseline cycle."
+}

@@ -1,0 +1,37 @@
+# Conda environment for the AMP synthetic-data + CDM ETL pipeline.
+#
+#   conda env create -f amp_synth_etl/environment.yml
+#   conda activate amp-synth
+#
+# Verified by AST import audit across all 30 pipeline modules: the pipeline is
+# stdlib-only. `pytest` is the sole third-party dependency and is needed only to
+# run tests/. The load and verify steps shell out to the `psql` CLI via
+# subprocess (not psycopg2), so a Postgres *client* must be on PATH.
+#
+# Run order:
+#   Generation      python scripts/01_build_specs.py
+#                   python scripts/02_build_tables.py   (+ 02c_build_ark, 02f_build_ark_conditional)
+#                   python scripts/03_generate.py
+#                   python scripts/04_qc.py
+#   CDM delivery    python scripts/10_build_cdm_delivery.py --all
+#                   bash   cdm_load/build_selfcontained.sh
+#                   python scripts/13_verify_governance.py
+#   Tests           pytest tests/ -q
+#
+# 10_build_cdm_delivery.py orchestrates 06/08/09/11/12 internally — do not run
+# those by hand. 05_conflicts.py is a standalone, optional report.
+#
+# PGPASSWORD is read from the environment (or ~/.pgpass). It is never stored in
+# this repo. Export it before running the load/verify steps.
+
+name: amp-synth
+
+channels:
+  - conda-forge
+
+dependencies:
+  - python=3.13
+  - pytest
+  # Provides the `psql` client used by cdm_load/build_selfcontained.sh and
+  # scripts/13_verify_governance.py. Omit if psql is already on PATH.
+  - postgresql

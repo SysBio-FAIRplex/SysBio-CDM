@@ -1,0 +1,74 @@
+{
+  "variable": "pdq39_26_worried_about_reactions",
+  "cde_id": "314",
+  "means": "PDQ-39-Q26: Felt worried about other people's reaction to you?",
+  "program": "AMP-PD",
+  "grain": "visit",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "Never",
+      "Occasionally",
+      "Often",
+      "Sometimes",
+      "Always or cannot do at all"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 1703891,
+      "name": "Do you worry more than most people about being embarrassed, looking stupid, or being judged by other people?",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "Never",
+      "write": {
+        "value_as_number": 0,
+        "value_as_string": "Never",
+        "value_source_value": "Never"
+      }
+    },
+    {
+      "value": "Occasionally",
+      "write": {
+        "value_as_number": 1,
+        "value_as_string": "Occasionally",
+        "value_source_value": "Occasionally"
+      }
+    },
+    {
+      "value": "Sometimes",
+      "write": {
+        "value_as_number": 2,
+        "value_as_string": "Sometimes",
+        "value_source_value": "Sometimes"
+      }
+    },
+    {
+      "value": "Often",
+      "write": {
+        "value_as_number": 3,
+        "value_as_string": "Often",
+        "value_source_value": "Often"
+      }
+    },
+    {
+      "value": "Always or cannot do at all",
+      "write": {
+        "value_as_number": 4,
+        "value_as_string": "Always or cannot do at all",
+        "value_source_value": "Always or cannot do at all"
+      }
+    }
+  ],
+  "links": [],
+  "derived_from": [],
+  "anchored_to": {
+    "person_id": "staging.person_map",
+    "visit_occurrence_id": "cdm.visit_occurrence"
+  },
+  "manual_approval": true
+}

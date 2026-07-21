@@ -1,0 +1,53 @@
+{
+  "variable": "ess_info_source",
+  "cde_id": "171",
+  "means": "ESS - Primary Source Of Information",
+  "program": "AMP-PD",
+  "grain": "visit",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "Patient",
+      "Patient and Caregiver",
+      "Caregiver"
+    ]
+  },
+  "lands": {
+    "table": "measurement",
+    "measurement_concept_id": {
+      "id": 3048270,
+      "name": "Information source",
+      "domain": "Measurement"
+    }
+  },
+  "value_map": [
+    {
+      "value": "Patient",
+      "write": {
+        "value_as_string": "Patient",
+        "value_source_value": "Patient"
+      }
+    },
+    {
+      "value": "Patient and Caregiver",
+      "write": {
+        "value_as_string": "Patient and Caregiver",
+        "value_source_value": "Patient and Caregiver"
+      }
+    },
+    {
+      "value": "Caregiver",
+      "write": {
+        "value_as_string": "Caregiver",
+        "value_source_value": "Caregiver"
+      }
+    }
+  ],
+  "links": [],
+  "derived_from": [],
+  "anchored_to": {
+    "person_id": "staging.person_map",
+    "visit_occurrence_id": "cdm.visit_occurrence"
+  },
+  "manual_approval": true
+}

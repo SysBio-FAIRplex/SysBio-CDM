@@ -1,0 +1,29 @@
+#	Table + grain decisions the dictionaries do not settle mechanically. Each row states its
+#	evidence. Nothing here is inferred from a variable NAME.
+#
+#	Two cases:
+#	(a) ROSMAP — the codebook says "All longitudinal data sets are organized by projid + visit or
+#	    fu_year", but its Clinical/Pathology section headers do not survive PDF text extraction
+#	    (`spanish`, a demographic, lands under 'Pathology' purely by text position). So each ROSMAP
+#	    column's grain is set here from its own description.
+#	(b) Three elements no AMP table claimed. They are AMP-AD and their source_file names a
+#	    DiverseCohorts file, so they are assigned to that subject-grained table.
+#
+#	grain: visit | subject
+#	table: the file the column lives in
+amp_variable	program	table	grain	evidence
+age_at_visit	AMP-AD	ROSMAP_clinical.csv	visit	"Age of participant at time of clinical visit" — one value per visit; ROSMAP: "longitudinal data sets are organized by projid + visit".
+dcfdx	AMP-AD	ROSMAP_clinical.csv	visit	ROSMAP codebook: "A clinical diagnosis of cognitive status is rendered at every assessment." Explicitly per-visit.
+apoe_genotype	AMP-AD	ROSMAP_subject.csv	subject	Germline genotype. Fixed for life; cannot vary by visit.
+educ	AMP-AD	ROSMAP_subject.csv	subject	"Years of Education" — ROSMAP records it once at baseline (Continuous, no visit qualifier).
+msex	AMP-AD	ROSMAP_subject.csv	subject	"Participant sex" — self-reported, recorded once.
+spanish	AMP-AD	ROSMAP_subject.csv	subject	"Spanish/Hispanic/Latino origin" — self-reported ethnicity, recorded once at baseline. (NOT pathology; the PDF section header is a text-extraction artifact.)
+age_death	AMP-AD	ROSMAP_subject.csv	subject	"Age at Death" — a person has exactly one. Cannot appear on a visit row: at the time of a clinical visit the participant is alive.
+age_first_ad_dx	AMP-AD	ROSMAP_subject.csv	subject	"Age at first cycle where an Alzheimer's dementia diagnosis was rendered" — a derived, once-per-person summary over the visit series.
+cogdx	AMP-AD	ROSMAP_subject.csv	subject	ROSMAP: "Clinical consensus diagnosis of cognitive status AT TIME OF DEATH ... all available clinical data were reviewed." One per person, determined post-mortem. Contrast dcfdx, which is per-visit.
+braaksc	AMP-AD	ROSMAP_subject.csv	subject	Braak stage — measured on brain tissue at autopsy. One per person.
+ceradsc	AMP-AD	ROSMAP_subject.csv	subject	CERAD score — neuritic plaque density measured at autopsy. One per person.
+pmi	AMP-AD	ROSMAP_subject.csv	subject	"Post-Mortem Interval" — hours between death and autopsy. One per person, by definition.
+ADoutcome	AMP-AD	DiverseCohorts_DataDictionary.pdf	subject	source_file names DiverseCohorts. A derived autopsy outcome (Braak + CERAD thresholds) — one per person.
+mayoDx	AMP-AD	DiverseCohorts_DataDictionary.pdf	subject	source_file names DiverseCohorts. "Mayo Clinic neuropathological diagnosis" — determined at autopsy, one per person.
+BrodmannArea	AMP-AD	DiverseCohorts_DataDictionary_ExtNeuropath.pdf	subject	No source_file in the dictionary. "Brodmann area designation for brain tissue sample" — a property of the post-mortem tissue sample, so it belongs with the neuropathology table. FLAGGED: this is the one assignment the dictionary does not state; confirm or move it.

@@ -1,0 +1,74 @@
+{
+  "variable": "pdq39_05_walking_100_yards",
+  "cde_id": "293",
+  "means": "PDQ-39-Q5: Had problems walking 100 yards (approximately 1 block)?",
+  "program": "AMP-PD",
+  "grain": "visit",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "Never",
+      "Occasionally",
+      "Often",
+      "Sometimes",
+      "Always or cannot do at all"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 40764451,
+      "name": "Does your health now limit you in walking one hundred yards [PROMIS]",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "Never",
+      "write": {
+        "value_as_number": 0,
+        "value_as_string": "Never",
+        "value_source_value": "Never"
+      }
+    },
+    {
+      "value": "Occasionally",
+      "write": {
+        "value_as_number": 1,
+        "value_as_string": "Occasionally",
+        "value_source_value": "Occasionally"
+      }
+    },
+    {
+      "value": "Sometimes",
+      "write": {
+        "value_as_number": 2,
+        "value_as_string": "Sometimes",
+        "value_source_value": "Sometimes"
+      }
+    },
+    {
+      "value": "Always or cannot do at all",
+      "write": {
+        "value_as_number": 4,
+        "value_as_string": "Always or cannot do at all",
+        "value_source_value": "Always or cannot do at all"
+      }
+    },
+    {
+      "value": "Often",
+      "write": {
+        "value_as_number": 3,
+        "value_as_string": "Often",
+        "value_source_value": "Often"
+      }
+    }
+  ],
+  "links": [],
+  "derived_from": [],
+  "anchored_to": {
+    "person_id": "staging.person_map",
+    "visit_occurrence_id": "cdm.visit_occurrence"
+  },
+  "manual_approval": true
+}

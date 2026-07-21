@@ -1,0 +1,558 @@
+cde_id	source	source_file	amp_variable	amp_variable_description	amp_value_set	amp_extended_definition_comments	amp_units	parked
+1	AMP-AD	DiverseCohortsOutcomes.pdf; DiverseCohorts_DataDictionary.pdf	ADoutcome	"Alzheimer's Disease clinical outcome or disease progression status post-mortem. Used to classify participants into ""control"", ""AD"", ""Other"""	"AD: Braak ≥ 4, CERAD = Frequent or Moderate,  ""Control: Braak ≤ 3, CERAD = Sparse or None"" | ""Other: all other"""	Derived harmonized outcomes based on CERAD neuritic plaque score and Braak stage, or NINCDS-ADRD criteria for Mayo. The following criteria seek to harmonize outcomes between cohorts as closely as possible, with Mayo’s neuropath-based diagnoses (as determined by Mayo specialists) set as the standard to match. These thresholds will also exclude individuals with age-related tauopathies from being classified as AD cases or controls. sh, MSSM, Columbia derived outcome criteria: AD: Braak ≥ 4, CERAD = Frequent or Moderate Control: Braak ≤ 3, CERAD = Sparse or None Other: all other UFL (from Mayo): some patients from UFL were not consistent with other MayoDx criteria (i.e. 8 individuals had Braak < 4 and a mayoDx==AD). These individuals were assigned ‘Other’ criteria in the ADoutcome variable to harmonize more closely with MayoDx criteria.		false
+3	AMP-AD	ROSMAP_clinical_codebook.pdf	age_at_visit	Age of participant at time of clinical visit	Continuous	RADC data set 754 (ROSMAP). Age at visit (longitudinal). Calculated by subtracting the date of birth from the date of the visit and dividing the difference by days per year (365.25). The date of the visit is defined as the first valid date in the following hierarchy: (1) cognitive date; (2) clinical evaluation date (neurological exam, med hx, meds); (3) interview date; (4) DCF date (diagnostic classification form); (5) neuropsychologist impression date.	years	false
+5	AMP-AD	ROSMAP_clinical_codebook.pdf	age_death	Age at Death	Continuous	RADC data set 754 (ROSMAP). Age at death. Calculated by subtracting date of birth from date of death and dividing the difference by days per year (365.25). For participants in autopsy cohorts, the exact date of death is known for most participants as it is the day an autopsy was performed. In all cohorts, in addition to annual evaluations, participants are also contacted quarterly to determine vital status and changes in health, and death is occasionally learned of during quarterly contacts.	years	false
+6	AMP-AD	ROSMAP_clinical_codebook.pdf	age_first_ad_dx	Age at First Alzheimer's Dementia Diagnosis	Continuous	RADC data set 754 (ROSMAP). Age at cycle where first Alzheimer's dementia diagnosis was given. Represents the age at the first cycle where an Alzheimer's dementia diagnosis was rendered. Calculated using the variables 'age at visit' and 'clinical diagnosis summary' (dcfdx value = 4 or 5). This is the best approximation of 'age at onset of Alzheimer's dementia' available, as most participants are seen on a yearly basis. Not available for participants that were demented at baseline cycle.	years	false
+8	AMP-AD	DiverseCohorts_DataDictionary.pdf	amyA	Indicator of Thal Phase, grouped	None; Thal Phase 1 or 2; Thal Phase 3; Thal Phase 4 or 5; Missing or unknown			false
+9	AMP-AD	DiverseCohorts_DataDictionary.pdf	amyAny	Presence of any amyloid pathology	0 = amyCerad = None/No AD/C0; 1 = amyCerad = Sparse/Possible/C1 or Moderate/Probable/C2 or Frequent/Definite/C3; Missing or unknown			false
+10	AMP-AD	DiverseCohorts_DataDictionary.pdf	amyCerad	CERAD neuritic plaque score based on amyloid assessment	None/No AD/C0; Sparse/Possible/C1; Moderate/Probable/C2; Frequent/Definite/C3; Missing or unknown			false
+11	AMP-AD	DiverseCohorts_DataDictionary.pdf	amyThal	Amyloid Thal phase score	None; Phase 1; Phase 2; Phase 3; Phase 4; Phase 5; missing or unknown			false
+12	AMP-AD	ROSMAP_clinical_codebook.pdf	apoe_genotype	APOE Genotype	"{""22"": ""E2E2"", ""23"": ""E2E3"", ""24"": ""E2E4"", ""33"": ""E3E3"", ""34"": ""E3E4"", ""44"": ""E4E4""}"	RADC data set 754 (ROSMAP). ApoE genotype (Apolipoprotein E genotype). DNA was extracted from PBMCs or brain. Genotyping was performed by Agencourt Bioscience Corporation utilizing high-throughput sequencing of codon 112 (position 3937) and codon 158 (position 4075) of exon 4 of the APOE gene on chromosome 19. Participants were genotyped for APOE alleles by Polymorphic DNA Technologies as part of a collaboration with Allan Roses and Zinfandel. Value coding: 22=E2E2; 23=E2E3; 24=E2E4; 33=E3E3; 34=E3E4; 44=E4E4.		false
+13	AMP-AD	DiverseCohorts_DataDictionary.pdf	Braak	Braak stage for neurofibrillary tangle pathology	None; Stage I; Stage II; Stage III; Stage IV; Stage V; Stave VI; Missing or unknown	"TYPO IN THE AMP DICTIONARY: the 7th stage is written ""Stave VI"", not ""Stage VI"" (DiverseCohorts_DataDictionary.pdf, confirmed in the PDF text itself). UNRESOLVED: we do not know whether the typo is confined to the dictionary or is also the literal string in the AMP data files. The synthetic data reproduces it verbatim so that an ETL built against the real files does not break on it. Verify against a real AMP-AD extract, then decide whether to normalise. Noted 2026-07-13."		false
+14	AMP-AD	ROSMAP_clinical_codebook.pdf	braaksc	Braak Stage Values	"{""0"": ""0"", ""1"": ""I"", ""2"": ""II"", ""3"": ""III"", ""4"": ""IV"", ""5"": ""V"", ""6"": ""VI""}"	RADC data set 754 (ROSMAP). Braak Stage: a semiquantitative measure of severity of neurofibrillary tangle (NFT) pathology. Bielschowsky silver stain was used to visualize NFTs in the frontal, temporal, parietal, entorhinal cortex, and the hippocampus. Braak stages were based upon the distribution and severity of NFT pathology: stages I and II indicate NFTs confined mainly to the entorhinal region of the brain; stages III and IV indicate involvement of limbic regions such as the hippocampus; stages V and VI indicate moderate to severe neocortical involvement. Diagnosis includes algorithm and neuropathologist's opinion. Value coding: 0=0; 1=I; 2=II; 3=III; 4=IV; 5=V; 6=VI.		false
+15	AMP-AD		BrodmannArea	Brodmann area designation for brain tissue sample or region of interest	BA1 | BA2 | BA3 | BA4 | BA5 | BA6 | BA7 | BA8 | BA9 | BA10 | BA11 | BA17 | BA18 | BA19 | BA20 | BA21 | BA22 | BA24 | BA39 | BA40 | BA41 | BA42 | BA44 | BA45 | BA46 | BA47			false
+16	AMP-AD	DiverseCohorts_DataDictionary.pdf	bScore	Braak Staging as Binned Values	None; Braak Stage I-II; Braak Stage III-IV; Braak Stage V-VI; Missing or unknown			false
+17	AMP-AD	ROSMAP_clinical_codebook.pdf	ceradsc	CERAD Score	1=Definite AD | 2=Probable AD | 3=Possible AD | 4=No AD	RADC data set 754 (ROSMAP). CERAD score: a semiquantitative measure of neuritic plaques. A neuropathologic diagnosis was made of no AD, possible AD, probable AD, or definite AD based on semiquantitative estimates of neuritic plaque density as recommended by the Consortium to Establish a Registry for Alzheimer's Disease (CERAD), modified to be implemented without adjustment for age and clinical diagnosis. A CERAD neuropathologic diagnosis of AD required moderate (probable AD) or frequent neuritic plaques (definite AD) in one or more neocortical regions. Diagnosis includes algorithm and neuropathologist's opinion, blinded to age and all clinical data. Value coding: 1=Definite; 2=Probable; 3=Possible; 4=No AD.		false
+19	AMP-AD	ROSMAP_clinical_codebook.pdf	cogdx	Final Consensus Cognitive Diagnosis	1=NCI: No cognitive impairment (No impaired domains); 2=MCI: Mild cognitive impairment (One impaired domain) and NO other cause of CI; 3=MCI: Mild cognitive impairment (One impaired domain) AND another cause of CI; 4=AD: Alzheimer's dementia and NO other cause of CI (NINCDS PROB AD); 5=AD: Alzheimer's dementia AND another cause of CI (NINCDS POSS AD); 6=Other dementia: Other primary cause of dementia	RADC data set 754 (ROSMAP). Clinical consensus diagnosis of cognitive status at time of death; physician's overall cognitive diagnostic category. At the time of death, all available clinical data were reviewed by a neurologist with expertise in dementia, and a summary diagnostic opinion was rendered regarding the most likely clinical diagnosis at the time of death. Summary diagnoses were made blinded to all postmortem data. Case conferences including one or more neurologists and a neuropsychologist were used for consensus on selected cases. Value coding: 1=NCI: No cognitive impairment (No impaired domains); 2=MCI: Mild cognitive impairment (One impaired domain) and NO other cause of CI; 3=MCI: Mild cognitive impairment (One impaired domain) AND another cause of CI; 4=AD: Alzheimer's dementia and NO other cause of CI (NINCDS PROB AD); 5=AD: Alzheimer's dementia AND another cause of CI (NINCDS POSS AD); 6=Other dementia: Other primary cause of dementia.		false
+20	AMP-AD	DiverseCohorts_DataDictionary.pdf; DiverseCohorts_DataDictionary_ExtNeuropath.pdf	cohort	Cohort Identifier	AA; Banner; Biggs Institute Brain Bank; CLINCOR; Emory; LATC; MAP; MARS; Mayo Clinic; Mt Sinai Brain Bank; NY Brain Bank; UPenn; ROS; UFL			false
+24	AMP-AD	ROSMAP_clinical_codebook.pdf	dcfdx	Clinical Cognitive Diagnosis Summary	1=NCI: No cognitive impairment | 2=MCI: Mild cognitive impairment, no other condition contributing to CI | 3=MCI+: Mild cognitive impairment AND another condition contributing to CI | 4=AD: Alzheimer's dementia, no other condition contributing to CI (NINCDS/ADRDA Probable AD) | 5=AD+: Alzheimer's dementia AND other condition contributing to CI (NINCDS/ADRDA Possible AD) | 6=Other dementia: Other primary cause of dementia, no clinical evidence of Alzheimer's dementia	RADC data set 754 (ROSMAP). Clinical diagnosis of cognitive status (Alzheimer's dementia, other dementia, MCI, or no impairment). A clinical diagnosis of cognitive status is rendered at every assessment based on a three-stage process: computer scoring of cognitive tests, clinical judgment by a neuropsychologist, and diagnostic classification by a clinician. All participants undergo a uniform, structured clinical evaluation including a battery of 19 cognitive tests. Clinical diagnosis of dementia and clinical Alzheimer's dementia are based on NINCDS/ADRDA criteria; the diagnosis of Alzheimer's dementia requires evidence of a meaningful decline in cognitive function relative to a previous level of performance with impairment in memory and at least one other area of cognition. MCI is rendered for persons judged to have cognitive impairment by the neuropsychologist but judged not to meet criteria for dementia by the clinician. Persons diagnosed with MCI or Alzheimer's dementia may also be diagnosed with another condition that contributes to their cognitive impairment (CI). Persons without dementia or MCI are categorized as having no cognitive impairment (NCI). Value coding: 1=NCI: No cognitive impairment; 2=MCI: Mild cognitive impairment, no other condition contributing to CI; 3=MCI+: Mild cognitive impairment AND another condition contributing to CI; 4=AD: Alzheimer's dementia, no other condition contributing to CI (NINCDS/ADRDA Probable AD); 5=AD+: Alzheimer's dementia AND other condition contributing to CI (NINCDS/ADRDA Possible AD); 6=Other dementia: Other primary cause of dementia, no clinical evidence of Alzheimer's dementia. Other forms: _l, _lv, _bl.		false
+27	AMP-AD	PD_Medical_History_dictionary.csv	diagnosis	The diagnosis is an opportunity for the site investigator to give their opinion on a participant's most likely clinical diagnosis, regardless of cohort. The diagnosis may change over time because the site investigator may update the diagnosis at every longitudinal visit based on their opinion.ś		2026-07-14: value set CLEARED. No AMP-AD/AMP-CMD dictionary declares a `diagnosis` column at all; this row existed only to be picked up by a name-keyed lookup.		false
+28	AMP-AD	ROSMAP_clinical_codebook.pdf	educ	Years of Education	Range: 0-30	RADC data set 754 (ROSMAP). Years of education. Based on the number of years of regular school reported at baseline cognitive testing.		false
+29	AMP-AD	Demographics_dictionary.csv	ethnicity	Ethnicity	Not Hispanic or Latino | Hispanic or Latino | Unknown			false
+33	AMP-AD	Caffeine_history_dictionary.csv; DTI_dictionary.csv; DaTSCAN_SBR_dictionary.csv; DaTSCAN_visual_interpretation_dictionary.csv; Demographics_dictionary.csv; Enrollment_dictionary.csv; Epworth_Sleepiness_Scale_dictionary.csv; Family_History_PD_dictionary.csv; LBD_Cohort_Clinical_Data_dictionary.csv; LBD_Cohort_Path_Data_dictionary.csv; MDS_UPDRS_Part_III_dictionary.csv; MDS_UPDRS_Part_II_dictionary.csv; MDS_UPDRS_Part_IV_dictionary.csv; MDS_UPDRS_Part_I_dictionary.csv; MMSE_dictionary.csv; MOCA_dictionary.csv; MRI_dictionary.csv; Modified_Schwab___England_ADL_dictionary.csv; PDQ_39_dictionary.csv; PD_Medical_History_dictionary.csv; REM_Sleep_Behavior_Disorder_Questionnaire_Mayo_dictionary.csv; REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster_dictionary.csv; Smoking_and_alcohol_history_dictionary.csv; UPDRS_dictionary.csv; UPSIT_dictionary.csv	GUID	Global Unique ID (USUBJID)				false
+34	AMP-AD	DiverseCohorts_DataDictionary.pdf; DiverseCohorts_DataDictionary_ExtNeuropath.pdf	individualID	Unique identifier assigned to each study participant. For multi-specimen data files provide all IDs in a comma-separated list.	Identifier			false
+35	AMP-AD	DiverseCohorts_DataDictionary.pdf	isHispanic	Hispanic or Latino ethnicity indicator	True; False; Missing or unknown			false
+37	AMP-AD	DiverseCohorts_DataDictionary.pdf	mayoDx	Mayo Clinic neuropathological diagnosis	Controlled vocabulary of Mayo Clinic diagnostic categories			false
+38	AMP-AD	ROSMAP_clinical_codebook.pdf	msex	Participant sex	Male | Female | M | F | Unknown	RADC data set 754 (ROSMAP). Self-reported sex, with '1' indicating male sex. Allowable codes: 1=Male; 0=Female.		false
+40	AMP-AD	LBD_Cohort_Path_Data_dictionary.csv	path_braak_nft	BRAAK stage for neurofibrillary tangle pathology	0 | 1 | 2 | 3 | 4 | 5 | 6 | NA			false
+41	AMP-AD	DiverseCohorts_DataDictionary.pdf; ROSMAP_clinical_codebook.pdf	pmi	Post-Mortem Interval	Continuous	RADC data set 754 (ROSMAP). Post-mortem interval (PMI): time interval in hours from time of death to autopsy. PMI refers to the interval between death and tissue preservation in hours.	hours	false
+43	AMP-AD	Demographics_dictionary.csv; DiverseCohorts_DataDictionary.pdf	race	Race	White | Black or African American | Native Hawaiian or Other Pacific Islander | Asian | American Indian or Alaska Native | Unknown | Multiracial			false
+49	AMP-AD	ROSMAP_clinical_codebook.pdf	spanish	Indicator of Spanish ethnicity or language preference	True | False | 1 | 0	RADC data set 754 (ROSMAP). Spanish/Hispanic/Latino origin. Question: 'Are you of Spanish/Hispanic/Latino origin?' Value coding: 1=Yes; 2=No.		false
+57	AMP-AD	Caffeine_history_dictionary.csv; DTI_dictionary.csv; DaTSCAN_SBR_dictionary.csv; DaTSCAN_visual_interpretation_dictionary.csv; Demographics_dictionary.csv; Enrollment_dictionary.csv; Epworth_Sleepiness_Scale_dictionary.csv; Family_History_PD_dictionary.csv; LBD_Cohort_Clinical_Data_dictionary.csv; LBD_Cohort_Path_Data_dictionary.csv; MDS_UPDRS_Part_III_dictionary.csv; MDS_UPDRS_Part_II_dictionary.csv; MDS_UPDRS_Part_IV_dictionary.csv; MDS_UPDRS_Part_I_dictionary.csv; MMSE_dictionary.csv; MOCA_dictionary.csv; MRI_dictionary.csv; Modified_Schwab___England_ADL_dictionary.csv; PDQ_39_dictionary.csv; PD_Medical_History_dictionary.csv; REM_Sleep_Behavior_Disorder_Questionnaire_Mayo_dictionary.csv; REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster_dictionary.csv; Smoking_and_alcohol_history_dictionary.csv; UPDRS_dictionary.csv; UPSIT_dictionary.csv	visit_month	Numeric visit in months; for visits prior baseline -1, -2 is an order of screening visits				false
+59	AMP-AD | AMP-CMD | AMP-PD | AMP-RA/SLE	Demographics_dictionary.csv; DiverseCohorts_DataDictionary.pdf	sex	Sex	Male;Female;Unknown			false
+63	AMP-CMD	ROSMAP_clinical_codebook.pdf	age_at_visit	Age of participant at time of clinical visit	Continuous		years	false
+74	AMP-CMD	DiverseCohorts_DataDictionary.pdf; DiverseCohorts_DataDictionary_ExtNeuropath.pdf	cohort	Cohort Identifier	AA; Banner; Biggs Institute Brain Bank; CLINCOR; Emory; LATC; MAP; MARS; Mayo Clinic; Mt Sinai Brain Bank; NY Brain Bank; UPenn; ROS; UFL			false
+80	AMP-CMD	PD_Medical_History_dictionary.csv	diagnosis	The diagnosis is an opportunity for the site investigator to give their opinion on a participant's most likely clinical diagnosis, regardless of cohort. The diagnosis may change over time because the site investigator may update the diagnosis at every longitudinal visit based on their opinion.ś		2026-07-14: value set CLEARED. No AMP-AD/AMP-CMD dictionary declares a `diagnosis` column at all; this row existed only to be picked up by a name-keyed lookup.		false
+81	AMP-CMD	PD_Medical_History_dictionary.csv	diagnosis_type	How was diagnosis made?	Clinical | Pathological | Unknown			false
+91	AMP-CMD	Demographics_dictionary.csv	ethnicity	Ethnicity	Not Hispanic or Latino | Hispanic or Latino | Unknown			false
+96	AMP-CMD	Caffeine_history_dictionary.csv; DTI_dictionary.csv; DaTSCAN_SBR_dictionary.csv; DaTSCAN_visual_interpretation_dictionary.csv; Demographics_dictionary.csv; Enrollment_dictionary.csv; Epworth_Sleepiness_Scale_dictionary.csv; Family_History_PD_dictionary.csv; LBD_Cohort_Clinical_Data_dictionary.csv; LBD_Cohort_Path_Data_dictionary.csv; MDS_UPDRS_Part_III_dictionary.csv; MDS_UPDRS_Part_II_dictionary.csv; MDS_UPDRS_Part_IV_dictionary.csv; MDS_UPDRS_Part_I_dictionary.csv; MMSE_dictionary.csv; MOCA_dictionary.csv; MRI_dictionary.csv; Modified_Schwab___England_ADL_dictionary.csv; PDQ_39_dictionary.csv; PD_Medical_History_dictionary.csv; REM_Sleep_Behavior_Disorder_Questionnaire_Mayo_dictionary.csv; REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster_dictionary.csv; Smoking_and_alcohol_history_dictionary.csv; UPDRS_dictionary.csv; UPSIT_dictionary.csv	GUID	Global Unique ID (USUBJID)				false
+103	AMP-CMD	Modified_Schwab___England_ADL_dictionary.csv	mod_schwab_england_pct_adl_score	Modified Schwab And England Percent ADL Score	0 - 100			false
+110	AMP-CMD	Demographics_dictionary.csv; DiverseCohorts_DataDictionary.pdf	race	Race	White | Black or African American | Native Hawaiian or Other Pacific Islander | Asian | American Indian or Alaska Native | Unknown | Multiracial			false
+116	AMP-CMD	Demographics_dictionary.csv; DiverseCohorts_DataDictionary.pdf	sex	Sex	Male;Female;Unknown			false
+124	AMP-PD	Demographics_dictionary.csv	age_at_baseline	Age At Baseline	19 - 100			false
+126	AMP-PD	Smoking_and_alcohol_history_dictionary.csv	alcohol_consumed_years	How many years consumed alcohol heavily in the past?	1 - 51			false
+127	AMP-PD	Smoking_and_alcohol_history_dictionary.csv	alcohol_consumption_change	Has your alcohol consumption changed over the past 10 years?	Yes | No | Unknown			false
+128	AMP-PD	Smoking_and_alcohol_history_dictionary.csv	alcohol_current_use	Currentl alcohol use indicator	Yes | No | Unknown			false
+129	AMP-PD	Smoking_and_alcohol_history_dictionary.csv	alcohol_drinks_daily_range	Alcohol drinking day average drinks consumed range				false
+130	AMP-PD	Smoking_and_alcohol_history_dictionary.csv	alcohol_drinks_day	How many drinks do you have on an average day?	0 - 10			false
+131	AMP-PD	Smoking_and_alcohol_history_dictionary.csv	alcohol_ever_used	Indicator of whether subject has ever used alcohol	Yes | No | Unknown			false
+132	AMP-PD	Smoking_and_alcohol_history_dictionary.csv	alcohol_inc_dec	Has there been a general increase or decrease in your consumption over a 10-year period.	Decrease | Increase			false
+133	AMP-PD	Smoking_and_alcohol_history_dictionary.csv	alcohol_prior_use	Indicator of the participant's/subject's alcohol consumption prior to the past 12 months	Yes | No | Unknown			false
+134	AMP-PD	Smoking_and_alcohol_history_dictionary.csv	alcohol_recent_use	Participant (subject) alcohol consumption past 12 months	Yes | No | Unknown			false
+135	AMP-PD	Smoking_and_alcohol_history_dictionary.csv	alcohol_related_hospitalization	Indicator of whether the participant/subject has been hospitalized for an alcohol-related problem (i.e., esophageal varices, delirium tremens (DTs), cirrhosis and others)	Yes | No | Unknown			false
+136	AMP-PD	Smoking_and_alcohol_history_dictionary.csv	alcohol_six_more_drinks_frequency	Alcohol consume six or more drinks frequency	Never | Less than monthly | Unknown | Monthly | Daily or almost daily | Weekly			false
+137	AMP-PD	Smoking_and_alcohol_history_dictionary.csv	alcohol_start_age	Age in years when participant/subject started ingesting alcoholic beverages, including social drinking	1 - 75			false
+138	AMP-PD	Smoking_and_alcohol_history_dictionary.csv	alcohol_stop_age	Age in years when participant/subject stopped ingesting alcoholic beverages, including social drinking	9 - 85			false
+139	AMP-PD	Smoking_and_alcohol_history_dictionary.csv	alcohol_use_frequency	The frequency of consumption of alcohol by the participant				false
+140	AMP-PD	LBD_Cohort_Clinical_Data_dictionary.csv	anosmia	Anosmia (per history or smell test)	Yes | No | NA			false
+141	AMP-PD	LBD_Cohort_Clinical_Data_dictionary.csv	auton_dys	Severe dysautonomia (e.g. constipation requiring medications, urinary incontinence, orthostatic hypotension, anhidrosis)	Yes | No | NA			false
+142	AMP-PD	Family_History_PD_dictionary.csv	biological_father_with_pd	Father Has Or Had Parkinson's Disease	No | Yes | Unknown			false
+143	AMP-PD	Family_History_PD_dictionary.csv	biological_mother_with_pd	Mother Has Or Had Parkinson's Disease	No | Yes | Unknown			false
+144	AMP-PD	Caffeine_history_dictionary.csv	caff_drinks_current_use	Current regular caffeinated drinks use indicator	Yes | No | Unknown			false
+145	AMP-PD	Caffeine_history_dictionary.csv	caff_drinks_ever_used_regularly	Indicator of whether subject has evere used caffeinated drinks	Yes | No | Unknown			false
+147	AMP-PD	PD_Medical_History_dictionary.csv	change_in_diagnosis	Change In Diagnosis Indicator	No | Yes			false
+148	AMP-PD	PD_Medical_History_dictionary.csv	change_in_diagnosis_months_after_baseline	Number of months after baseline visit at which Change in Diagnosis occurred; negative values indicate Change in Diagnosis occurred before baseline				false
+149	AMP-PD	Smoking_and_alcohol_history_dictionary.csv	cigarettes_packs_per_day	Average number packs of cigarettes smoked daily	Unknown | 0.5 pack or less | 1 pack | 0.5 pack | 2 or more packs | 1.5 pack			false
+150	AMP-PD	Smoking_and_alcohol_history_dictionary.csv	cigarettes_per_day	Average number cigarettes smoked daily				false
+151	AMP-PD	Smoking_and_alcohol_history_dictionary.csv	cigarettes_per_day_current	Current smokers: average number cigarettes per day?	0 - 250			false
+152	AMP-PD	Smoking_and_alcohol_history_dictionary.csv	cigarettes_per_day_past	Past smokers: average number of cigarettes smoked daily?	0 - 80			false
+153	AMP-PD	LBD_Cohort_Clinical_Data_dictionary.csv	dat	Dopamine transporter scan result	Positive | Negative | NA			false
+154	AMP-PD	DaTSCAN_visual_interpretation_dictionary.csv	datscan_visual_interpretation	DaTSCAN SPECT Visual Interpretation Assessment Report	Positive | Negative			false
+155	AMP-PD	PD_Medical_History_dictionary.csv	diagnosis	The diagnosis is an opportunity for the site investigator to give their opinion on a participant's most likely clinical diagnosis, regardless of cohort. The diagnosis may change over time because the site investigator may update the diagnosis at every longitudinal visit based on their opinion.ś		2026-07-14: value set CLEARED. AMP-PD's own dictionary leaves UniqueValues blank for this column. The row had been carrying AMP-RA/SLE's rheumatology list (At-Risk RA, CLE, LN, OA, PsA, PsO, SjD, vitiligo...), which was being emitted onto Parkinson's patients. AMP-PD states no value set, so neither does this row.		false
+157	AMP-PD	PD_Medical_History_dictionary.csv	diagnosis_type	How was diagnosis made?	Clinical | Pathological | Unknown			false
+160	AMP-PD	MOCA_dictionary.csv	education_12years_complete	Indicator Of Whether Subject Has Completed 12 Years Of Education	Greater than 12 years of education | Less than or equal to 12 years of education			false
+161	AMP-PD	Demographics_dictionary.csv	education_level_years	Education Level Years	0 years | Less than 12 years | 12-16 years | Greater than 16 years | Unknown			false
+162	AMP-PD	Enrollment_dictionary.csv	enrollment_months_after_baseline	Number of months after baseline visit at which Enrollment occurred; negative values indicate Enrollment occurred before baseline				false
+163	AMP-PD	Epworth_Sleepiness_Scale_dictionary.csv	ess0101_sitting_and_reading	ESS - Sitting And Reading (ESS0101)	Would Never Doze | Slight Chance Of Dozing | Moderate Chance Of Dozing | High Chance Of Dozing			false
+164	AMP-PD	Epworth_Sleepiness_Scale_dictionary.csv	ess0102_watching_tv	ESS - Watching TV (ESS0102)	Would Never Doze | Slight Chance Of Dozing | Moderate Chance Of Dozing | High Chance Of Dozing			false
+165	AMP-PD	Epworth_Sleepiness_Scale_dictionary.csv	ess0103_sitting_inactive_in_public_place	ESS - Sitting, Inactive In A Public Place (ESS0103)	Would Never Doze | Slight Chance Of Dozing | Moderate Chance Of Dozing | High Chance Of Dozing			false
+166	AMP-PD	Epworth_Sleepiness_Scale_dictionary.csv	ess0104_passenger_in_car_for_hour	ESS - As A Passenger In A Car For An Hour Without A Break (ESS0104)	Would Never Doze | Slight Chance Of Dozing | Moderate Chance Of Dozing | High Chance Of Dozing			false
+167	AMP-PD	Epworth_Sleepiness_Scale_dictionary.csv	ess0105_lying_down_to_rest_in_afternoon	ESS - Lying Down To Rest In The Afternoon When Circumstances Permit (ESS0105)	Would Never Doze | Slight Chance Of Dozing | Moderate Chance Of Dozing | High Chance Of Dozing			false
+168	AMP-PD	Epworth_Sleepiness_Scale_dictionary.csv	ess0106_sitting_and_talking_to_someone	ESS - Sitting And Talking To Someone (ESS0106)	Would Never Doze | Slight Chance Of Dozing | Moderate Chance Of Dozing | High Chance Of Dozing			false
+169	AMP-PD	Epworth_Sleepiness_Scale_dictionary.csv	ess0107_sitting_after_lunch	ESS - Sitting Quietly After A Lunch Without Alcohol (ESS0107)	Would Never Doze | Slight Chance Of Dozing | Moderate Chance Of Dozing | High Chance Of Dozing			false
+170	AMP-PD	Epworth_Sleepiness_Scale_dictionary.csv	ess0108_car_stopped_in_traffic	ESS - In A Car, While Stopped For A Few Minutes In The Traffic (ESS0108)	Would Never Doze | Slight Chance Of Dozing | Moderate Chance Of Dozing | High Chance Of Dozing			false
+171	AMP-PD	Epworth_Sleepiness_Scale_dictionary.csv	ess_info_source	ESS - Primary Source Of Information	Patient | Patient and Caregiver | Caregiver			false
+172	AMP-PD	Epworth_Sleepiness_Scale_dictionary.csv	ess_summary_score	Epworth Sleepiness Scale (ESS) - Total Score	0 - 24			false
+173	AMP-PD	Demographics_dictionary.csv	ethnicity	Ethnicity	Not Hispanic or Latino | Hispanic or Latino | Unknown			false
+174	AMP-PD	LBD_Cohort_Clinical_Data_dictionary.csv	exec_dys	Executive dysfunction, such as bradyphrenia, set shifting impairment, impaired attention/planning	Yes | No | NA			false
+175	AMP-PD	LBD_Cohort_Clinical_Data_dictionary.csv	fluc_cogn	Fluctuating cognition	Yes | No | NA			false
+176	AMP-PD	LBD_Cohort_Clinical_Data_dictionary.csv	genetic	Other genetic data available on patient	Exome | SNP chip | Other | NA			false
+177	AMP-PD	Caffeine_history_dictionary.csv; DTI_dictionary.csv; DaTSCAN_SBR_dictionary.csv; DaTSCAN_visual_interpretation_dictionary.csv; Demographics_dictionary.csv; Enrollment_dictionary.csv; Epworth_Sleepiness_Scale_dictionary.csv; Family_History_PD_dictionary.csv; LBD_Cohort_Clinical_Data_dictionary.csv; LBD_Cohort_Path_Data_dictionary.csv; MDS_UPDRS_Part_III_dictionary.csv; MDS_UPDRS_Part_II_dictionary.csv; MDS_UPDRS_Part_IV_dictionary.csv; MDS_UPDRS_Part_I_dictionary.csv; MMSE_dictionary.csv; MOCA_dictionary.csv; MRI_dictionary.csv; Modified_Schwab___England_ADL_dictionary.csv; PDQ_39_dictionary.csv; PD_Medical_History_dictionary.csv; REM_Sleep_Behavior_Disorder_Questionnaire_Mayo_dictionary.csv; REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster_dictionary.csv; Smoking_and_alcohol_history_dictionary.csv; UPDRS_dictionary.csv; UPSIT_dictionary.csv	GUID	Global Unique ID (USUBJID)				false
+178	AMP-PD	Enrollment_dictionary.csv	informed_consent_months_after_baseline	Number of months after baseline visit at which Informed Consent occurred; negative values indicate Informed Consent occurred before baseline				false
+180	AMP-PD	MDS_UPDRS_Part_I_dictionary.csv	mds_updrs_part_i_pat_quest_primary_info_source	MDS-UPDRS Part I Patient Questionnaire Primary Source Of Information	Patient | Patient and Caregiver - Equal Proportion | Caregiver			false
+181	AMP-PD	MDS_UPDRS_Part_I_dictionary.csv	mds_updrs_part_i_pat_quest_sub_score	MDS-UPDRS Part I Patient Questionnaire Questions 7-13 Summary Sub-Score	0 - 24			false
+182	AMP-PD	MDS_UPDRS_Part_I_dictionary.csv	mds_updrs_part_i_primary_info_source	MDS-UPDRS Part I Questions 1-6 Primary Source Of Information	Patient | Patient and Caregiver - Equal Proportion | Caregiver			false
+183	AMP-PD	MDS_UPDRS_Part_I_dictionary.csv	mds_updrs_part_i_sub_score	MDS-UPDRS Part I Questions 1-6 Summary Sub-Score	0 - 24			false
+184	AMP-PD	MDS_UPDRS_Part_I_dictionary.csv	mds_updrs_part_i_summary_score	MDS-UPDRS Part I Summary Score	0 - 48			false
+185	AMP-PD	MDS_UPDRS_Part_II_dictionary.csv	mds_updrs_part_ii_primary_info_source	MDS-UPDRS Part II Primary Source Of Information	Patient | Patient and Caregiver - Equal Proportion | Caregiver			false
+186	AMP-PD	MDS_UPDRS_Part_II_dictionary.csv	mds_updrs_part_ii_summary_score	MDS-UPDRS Part II Summary Score	0 - 52			false
+187	AMP-PD	MDS_UPDRS_Part_III_dictionary.csv	mds_updrs_part_iii_summary_score	MDS-UPDRS Part III Summary Score	0 - 132			false
+188	AMP-PD	MDS_UPDRS_Part_IV_dictionary.csv	mds_updrs_part_iv_summary_score	MDS-UPDRS Part IV Summary Score	0 - 24			false
+189	AMP-PD	LBD_Cohort_Clinical_Data_dictionary.csv	memory_loss	Memory loss	Yes | No | NA			false
+190	AMP-PD	MMSE_dictionary.csv	mms101a_year	MMSE - What Is The Year (MMS101A)	Correct | Incorrect			false
+191	AMP-PD	MMSE_dictionary.csv	mms101b_season	MMSE - What Is The Season (MMS101B)	Correct | Incorrect			false
+192	AMP-PD	MMSE_dictionary.csv	mms101c_month	MMSE - What Is The Month Of Year (MMS101C)	Correct | Incorrect			false
+193	AMP-PD	MMSE_dictionary.csv	mms101d_day	MMSE - What Is the Day of Week (MMS101D)	Correct | Incorrect			false
+194	AMP-PD	MMSE_dictionary.csv	mms101e_date	MMSE - What Is The Date (MMS101E)	Correct | Incorrect			false
+195	AMP-PD	MMSE_dictionary.csv	mms102a_state	MMSE - What Is The State (MMS102A)	Correct | Incorrect			false
+196	AMP-PD	MMSE_dictionary.csv	mms102b_county	MMSE - What Is The County (MMS102B)	Correct | Incorrect			false
+197	AMP-PD	MMSE_dictionary.csv	mms102c_city	MMSE - What Is The City Or Town (MMS102C)	Correct | Incorrect			false
+198	AMP-PD	MMSE_dictionary.csv	mms102d_address	MMSE - What Is The Building (MMS102D)	Correct | Incorrect			false
+199	AMP-PD	MMSE_dictionary.csv	mms102e_floor	MMSE - What Is The Floor (MMS102E)	Correct | Incorrect			false
+200	AMP-PD	MMSE_dictionary.csv	mms103_repeat_objects_score	MMSE - Repeat Three Unrelated Objects Score: MMSE - Repeat Word 1 (MMS103A), MMSE - Repeat Word 2 (103B), MMSE - Repeat Word 3 (103C) (1 point for each correct answer)	0 - 3			false
+201	AMP-PD	MMSE_dictionary.csv	mms104_attention_calculat_score	MMSE - Attention and Calculation Subtotal (MMS104)	0 - 5			false
+202	AMP-PD	MMSE_dictionary.csv	mms105_recall_score	MMSE - Recall Score - Repeat Three Unrelated Objects Again: MMSE - Recall Word 1 (MMS105A), MMSE - Recall Word 2 (MMS105B), MMSE - Recall Word 3 (MMS105C)	0 - 3			false
+203	AMP-PD	MMSE_dictionary.csv	mms106_naming_object_score	MMSE - Naming Object 1 (MMS106A), MMSE - Naming Object 2 (MMS106B)	0 - 2			false
+204	AMP-PD	MMSE_dictionary.csv	mms107_repeat_phrase_score	MMSE - Repeat What I Say (MMS107)	0 - 1			false
+205	AMP-PD	MMSE_dictionary.csv	mms108b_fold_in_half_score	MMSE - Fold In Half (MMS108B)	0 - 3			false
+206	AMP-PD	MMSE_dictionary.csv	mms109_close_eyes_score	MMSE - Read This And Do What It Says (MMS109)	0 - 3			false
+207	AMP-PD	MMSE_dictionary.csv	mms110_sentence_score	MMSE - Write A Sentence (MMS110)	0 - 1			false
+208	AMP-PD	MMSE_dictionary.csv	mms111_copy_design_score	MMSE - Copy This Design (MMS111)	0 - 1			false
+209	AMP-PD	MMSE_dictionary.csv	mms112_total_score	MMSE - Total Score (MMS112)	13 - 30			false
+210	AMP-PD	LBD_Cohort_Clinical_Data_dictionary.csv	mmse	Last MMSE	[0-30] | NA			false
+211	AMP-PD	MOCA_dictionary.csv	moca01_alternating_trail_making	MOCA: 01. Alternating Trail Making	0 - 1			false
+212	AMP-PD	MOCA_dictionary.csv	moca02_visuoconstr_skills_cube	MOCA: 02. Visuoconstructional Skills - Copy Cube	0 - 1			false
+213	AMP-PD	MOCA_dictionary.csv	moca03_visuoconstr_skills_clock_cont	MOCA: 03. Visuoconstructional Skills - Draw Clock Contour	0 - 1			false
+214	AMP-PD	MOCA_dictionary.csv	moca04_visuoconstr_skills_clock_num	MOCA: 04. Visuoconstructional Skills - Draw Clock Numbers	0 - 1			false
+215	AMP-PD	MOCA_dictionary.csv	moca05_visuoconstr_skills_clock_hands	MOCA: 05. Visuoconstructional Skills - Draw Clock Hands	0 - 1			false
+216	AMP-PD	MOCA_dictionary.csv	moca06_naming_lion	MOCA: 06. Naming - Lion	0 - 1			false
+217	AMP-PD	MOCA_dictionary.csv	moca07_naming_rhino	MOCA: 07. Naming - Rhino	0 - 1			false
+218	AMP-PD	MOCA_dictionary.csv	moca08_naming_camel	MOCA: 08. Naming - Camel	0 - 1			false
+219	AMP-PD	MOCA_dictionary.csv	moca09_attention_forward_digit_span	MOCA: 09. Attention - Forward Digit Span	0 - 1			false
+220	AMP-PD	MOCA_dictionary.csv	moca10_attention_backward_digit_span	MOCA: 10. Attention - Backward Digit Span	0 - 1			false
+221	AMP-PD	MOCA_dictionary.csv	moca11_attention_vigilance	MOCA: 11. Attention - Vigilance	0 - 1			false
+222	AMP-PD	MOCA_dictionary.csv	moca12_attention_serial_7s	MOCA: 12. Attention - Serial 7s	0 - 3			false
+223	AMP-PD	MOCA_dictionary.csv	moca13_sentence_repetition	MOCA: 13. Sentence Repetition	0 - 2			false
+224	AMP-PD	MOCA_dictionary.csv	moca14_verbal_fluency_number_of_words	MOCA: 14. Verbal Fluency - Number Of Words	0 - 43			false
+225	AMP-PD	MOCA_dictionary.csv	moca15_verbal_fluency	MOCA: 15. Verbal Fluency	0 - 1			false
+226	AMP-PD	MOCA_dictionary.csv	moca16_abstraction	MOCA: 16. Abstraction	0 - 2			false
+227	AMP-PD	MOCA_dictionary.csv	moca17_delayed_recall_face	MOCA: 17. Delayed Recall - Face	0 - 1			false
+228	AMP-PD	MOCA_dictionary.csv	moca18_delayed_recall_velvet	MOCA: 18. Delayed Recall - Velvet	0 - 1			false
+229	AMP-PD	MOCA_dictionary.csv	moca19_delayed_recall_church	MOCA: 19. Delayed Recall - Church	0 - 1			false
+230	AMP-PD	MOCA_dictionary.csv	moca20_delayed_recall_daisy	MOCA: 20. Delayed Recall - Daisy	0 - 1			false
+231	AMP-PD	MOCA_dictionary.csv	moca21_delayed_recall_red	MOCA: 21. Delayed Recall - Red	0 - 1			false
+232	AMP-PD	MOCA_dictionary.csv	moca22_orientation_date_score	MOCA: 22. Orientation - Date Score	0 - 1			false
+233	AMP-PD	MOCA_dictionary.csv	moca23_orientation_month_score	MOCA: 23. Orientation - Month Score	0 - 1			false
+234	AMP-PD	MOCA_dictionary.csv	moca24_orientation_year_score	MOCA: 24. Orientation - Year Score	0 - 1			false
+235	AMP-PD	MOCA_dictionary.csv	moca25_orientation_day_score	MOCA: 25. Orientation - Day Score	0 - 1			false
+236	AMP-PD	MOCA_dictionary.csv	moca26_orientation_place_score	MOCA: 26. Orientation - Place Score	0 - 1			false
+237	AMP-PD	MOCA_dictionary.csv	moca27_orientation_city_score	MOCA: 27. Orientation - City Score	0 - 1			false
+238	AMP-PD	MOCA_dictionary.csv	moca_abstraction_subscore	MOCA: Abstraction subscore is the same as abstraction test - serial language abstraction points earned	0 - 2			false
+239	AMP-PD	MOCA_dictionary.csv	moca_attention_digits_subscore	MOCA: Attention Forward-Backward Repeat Lists Of Digits Subscore	0 - 2			false
+240	AMP-PD	MOCA_dictionary.csv	moca_delayed_recall_subscore	MOCA: Delayed Recall Subscore Uncued	0 - 5			false
+241	AMP-PD	MOCA_dictionary.csv	moca_delayed_recall_subscore_optnl_cat_cue	MOCA: Delayed Recall Subscore Optional Category Cue	0 - 5			false
+242	AMP-PD	MOCA_dictionary.csv	moca_delayed_recall_subscore_optnl_mult_choice	MOCA: Delayed Recall Subscore Optional Multiple Choice Cue	0 - 5			false
+243	AMP-PD	MOCA_dictionary.csv	moca_language_subscore	MOCA: Language Subscore	0 - 3			false
+244	AMP-PD	MOCA_dictionary.csv	moca_naming_subscore	MOCA: Naming Subscore	0 - 3			false
+245	AMP-PD	MOCA_dictionary.csv	moca_orientation_subscore	MOCA: Orientation Subscore	0 - 6			false
+246	AMP-PD	MOCA_dictionary.csv	moca_total_score	MOCA Total Score	0 - 31			false
+247	AMP-PD	MOCA_dictionary.csv	moca_visuospatial_executive_subscore	MOCA: Visuospatial And Executive Subscore	0 - 5			false
+249	AMP-PD	Modified_Schwab___England_ADL_dictionary.csv	mod_schwab_england_pct_adl_score	Modified Schwab And England Percent ADL Score	0 - 100			false
+250	AMP-PD	LBD_Cohort_Clinical_Data_dictionary.csv	mood_dis	Mood disorder (depression and/or anxiety)	Yes | No | NA			false
+252	AMP-PD	MRI_dictionary.csv	mri_results	MRI results	Abnormal, not clinically significant | Normal | Abnormal, clinically significant			false
+253	AMP-PD	REM_Sleep_Behavior_Disorder_Questionnaire_Mayo_dictionary.csv	msq01_act_out_dreams	MSQ Act Out Dreams Q1	No | Yes			false
+254	AMP-PD	REM_Sleep_Behavior_Disorder_Questionnaire_Mayo_dictionary.csv	msq01a_act_out_months	MSQ Act Out Months Q1a	0 - 2000			false
+255	AMP-PD	REM_Sleep_Behavior_Disorder_Questionnaire_Mayo_dictionary.csv	msq01a_act_out_years	MSQ Act Out Years Q1a	0 - 99			false
+256	AMP-PD	REM_Sleep_Behavior_Disorder_Questionnaire_Mayo_dictionary.csv	msq01b_patient_injured	MSQ Patient injured Q1b	No | Yes			false
+257	AMP-PD	REM_Sleep_Behavior_Disorder_Questionnaire_Mayo_dictionary.csv	msq01c_bedpartner_injured	MSQ Bedpartner Injured Q1c	Yes | No | No bedpartner			false
+258	AMP-PD	REM_Sleep_Behavior_Disorder_Questionnaire_Mayo_dictionary.csv	msq01d_told_dreams	MSQ Told Dreams Q1d	Yes | No | Never told you about dreams			false
+259	AMP-PD	REM_Sleep_Behavior_Disorder_Questionnaire_Mayo_dictionary.csv	msq01e_dream_details_match	MSQ Dream Details Match Q1e	Yes | No | Never told you about dreams			false
+260	AMP-PD	REM_Sleep_Behavior_Disorder_Questionnaire_Mayo_dictionary.csv	msq02_legs_jerk	MSQ Legs Jerk Q2	No | Yes			false
+261	AMP-PD	REM_Sleep_Behavior_Disorder_Questionnaire_Mayo_dictionary.csv	msq03_restless_legs	MSQ Restless Legs Q3	No | Yes			false
+262	AMP-PD	REM_Sleep_Behavior_Disorder_Questionnaire_Mayo_dictionary.csv	msq03a_leg_sensations_decrease	MSQ Leg Sensations Decrease Q3a	No | Yes			false
+263	AMP-PD	REM_Sleep_Behavior_Disorder_Questionnaire_Mayo_dictionary.csv	msq03b_time_leg_sensations_worst	MSQ Time Leg Sensations Worst Q3b	After 6pm | Before 6pm			false
+264	AMP-PD	REM_Sleep_Behavior_Disorder_Questionnaire_Mayo_dictionary.csv	msq04b_walked_asleep	MSQ Walked Asleep Q4	No | Yes			false
+265	AMP-PD	REM_Sleep_Behavior_Disorder_Questionnaire_Mayo_dictionary.csv	msq05_snorted_awake	MSQ Snorted Awake Q5	No | Yes			false
+266	AMP-PD	REM_Sleep_Behavior_Disorder_Questionnaire_Mayo_dictionary.csv	msq06_stop_breathing	MSQ Stop Breathing Q6	No | Yes			false
+267	AMP-PD	REM_Sleep_Behavior_Disorder_Questionnaire_Mayo_dictionary.csv	msq06a_treated_for_stop_breathing	MSQ Treated For Stop Breathing Q6a	No | Yes			false
+268	AMP-PD	REM_Sleep_Behavior_Disorder_Questionnaire_Mayo_dictionary.csv	msq07_leg_cramps	MSQ Leg Cramps Q7	No | Yes			false
+269	AMP-PD	REM_Sleep_Behavior_Disorder_Questionnaire_Mayo_dictionary.csv	msq08_rate_of_alertness	MSQ Rate Of Alertness Q8	0 - 10			false
+270	AMP-PD	REM_Sleep_Behavior_Disorder_Questionnaire_Mayo_dictionary.csv	msq_distracting_sleep_behaviors	MSQ Distracting sleep behaviors	No | Yes			false
+271	AMP-PD	REM_Sleep_Behavior_Disorder_Questionnaire_Mayo_dictionary.csv	msq_info_source	MSQ Source Of Information	Subject | Informant			false
+272	AMP-PD	REM_Sleep_Behavior_Disorder_Questionnaire_Mayo_dictionary.csv	msq_interviewee_live_with_subject	MSQ Live With Subject	No | Yes			false
+273	AMP-PD	REM_Sleep_Behavior_Disorder_Questionnaire_Mayo_dictionary.csv	msq_interviewee_sleep_same_room	MSQ Sleep in the same room	No | Yes			false
+274	AMP-PD	LBD_Cohort_Clinical_Data_dictionary.csv	neurolep_sens	Neuroleptic sensitivity	Yes | No | NA			false
+275	AMP-PD	PD_Medical_History_dictionary.csv	on_dopamine_agonist	Is Subject Taking A Dopamine Agonist?	No | Yes | Unknown			false
+276	AMP-PD	PD_Medical_History_dictionary.csv	on_levodopa	Is Subject Taking Levodopa?	No | Yes | Unknown			false
+277	AMP-PD	PD_Medical_History_dictionary.csv	on_other_pd_medications	Is Subject Taking Some Other PD Medication(s)?	No | Yes | Unknown			false
+278	AMP-PD	Family_History_PD_dictionary.csv	other_relative_with_pd	Other Relative Has Or Had Parkinson's Disease	No | Yes | Unknown			false
+279	AMP-PD	LBD_Cohort_Clinical_Data_dictionary.csv	parkinsonism	Parkinsonism on clinical examination	Yes | No | NA			false
+280	AMP-PD	Caffeine_history_dictionary.csv; DTI_dictionary.csv; DaTSCAN_SBR_dictionary.csv; DaTSCAN_visual_interpretation_dictionary.csv; Demographics_dictionary.csv; Enrollment_dictionary.csv; Epworth_Sleepiness_Scale_dictionary.csv; Family_History_PD_dictionary.csv; LBD_Cohort_Clinical_Data_dictionary.csv; LBD_Cohort_Path_Data_dictionary.csv; MDS_UPDRS_Part_III_dictionary.csv; MDS_UPDRS_Part_II_dictionary.csv; MDS_UPDRS_Part_IV_dictionary.csv; MDS_UPDRS_Part_I_dictionary.csv; MMSE_dictionary.csv; MOCA_dictionary.csv; MRI_dictionary.csv; Modified_Schwab___England_ADL_dictionary.csv; PDQ_39_dictionary.csv; PD_Medical_History_dictionary.csv; REM_Sleep_Behavior_Disorder_Questionnaire_Mayo_dictionary.csv; REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster_dictionary.csv; Smoking_and_alcohol_history_dictionary.csv; UPDRS_dictionary.csv; UPSIT_dictionary.csv	participant_id	Study Subject ID				false
+281	AMP-PD	LBD_Cohort_Path_Data_dictionary.csv	path_braak_lb	BRAAK stage for Lewy body pathology	0 | 1 | 2 | 3 | 4 | 5 | 6 | NA			false
+282	AMP-PD	LBD_Cohort_Path_Data_dictionary.csv	path_braak_nft	BRAAK stage for neurofibrillary tangle pathology	0 | 1 | 2 | 3 | 4 | 5 | 6 | NA			false
+283	AMP-PD	LBD_Cohort_Path_Data_dictionary.csv	path_cerad	CERAD scoreś	0 | A | B | C | NA			false
+284	AMP-PD	LBD_Cohort_Path_Data_dictionary.csv	path_dlb_prob	Likelihood of DLB based on McKeith criteria	Low Likelihood | Intermediate Likelihood | High Likelihood | NA			false
+285	AMP-PD	PD_Medical_History_dictionary.csv	pd_diagnosis_months_after_baseline	Number of months after baseline visit at which Parkinson's Disease Diagnosis occurred; negative values indicate Parkinson's Disease Diagnosis occurred before baseline				false
+286	AMP-PD	PD_Medical_History_dictionary.csv	pd_medication_initiation_months_after_baseline	Number of months after baseline visit at which PD Medication Initiation occurred; negative values indicate PD Medication Initiation occurred before baseline				false
+287	AMP-PD	PD_Medical_History_dictionary.csv	pd_medication_recent_use_months_after_baseline	Number of months after baseline visit at which Most Recent Use of PD Medication occurred; negative values indicate Most Recent Use of PD Medication occurred before baseline				false
+288	AMP-PD	PD_Medical_History_dictionary.csv	pd_medication_start_months_after_baseline	Number of months after baseline visit at which PD Medication Start occurred; negative values indicate PD Medication Start occurred before baseline				false
+289	AMP-PD	PDQ_39_dictionary.csv	pdq39_01_doing_leisure_activity	PDQ-39-Q1: Had difficulty doing the leisure activities you would like to do?	Never | Occasionally | Often | Sometimes | Always or cannot do at all			false
+290	AMP-PD	PDQ_39_dictionary.csv	pdq39_02_looking_after_home	PDQ-39-Q2: Had difficulty looking after your home, for example, housework, cooking or yardwork?	Never | Occasionally | Often | Sometimes | Always or cannot do at all			false
+291	AMP-PD	PDQ_39_dictionary.csv	pdq39_03_carrying_shopping_bags	PDQ-39-Q3: Had difficulty carrying grocery bags?	Never | Occasionally | Often | Sometimes | Always or cannot do at all			false
+292	AMP-PD	PDQ_39_dictionary.csv	pdq39_04_walking_half_mile	PDQ-39-Q4: Had problems walking half a mile?	Never | Occasionally | Often | Sometimes | Always or cannot do at all			false
+293	AMP-PD	PDQ_39_dictionary.csv	pdq39_05_walking_100_yards	PDQ-39-Q5: Had problems walking 100 yards (approximately 1 block)?	Never | Occasionally | Often | Sometimes | Always or cannot do at all			false
+294	AMP-PD	PDQ_39_dictionary.csv	pdq39_06_getting_around_house	PDQ-39-Q6: Had problems getting around the house as easily as you would like?	Never | Occasionally | Often | Sometimes | Always or cannot do at all			false
+295	AMP-PD	PDQ_39_dictionary.csv	pdq39_07_getting_around_in_public	PDQ-39-Q7: Had difficulty getting around in public places?	Never | Occasionally | Often | Sometimes | Always or cannot do at all			false
+296	AMP-PD	PDQ_39_dictionary.csv	pdq39_08_need_someone_to_accompany	PDQ-39-Q8: Needed someone else to accompany you when you went out?	Never | Occasionally | Often | Sometimes | Always or cannot do at all			false
+297	AMP-PD	PDQ_39_dictionary.csv	pdq39_09_worried_about_falling	PDQ-39-Q9: Felt frightened or worried about falling in public?	Never | Occasionally | Often | Sometimes | Always or cannot do at all			false
+298	AMP-PD	PDQ_39_dictionary.csv	pdq39_10_confined_to_house	PDQ-39-Q10: Been confined to the house more than you would like?	Never | Occasionally | Often | Sometimes | Always or cannot do at all			false
+299	AMP-PD	PDQ_39_dictionary.csv	pdq39_11_showering	PDQ-39-Q11: Had difficulty showering and bathing?	Never | Occasionally | Often | Sometimes | Always or cannot do at all			false
+300	AMP-PD	PDQ_39_dictionary.csv	pdq39_12_dressing	PDQ-39-Q12: Had difficulty dressing?	Never | Occasionally | Often | Sometimes | Always or cannot do at all			false
+301	AMP-PD	PDQ_39_dictionary.csv	pdq39_13_buttons_and_shoelaces	PDQ-39-Q13: Had difficulty with buttons or shoelaces?	Never | Occasionally | Often | Sometimes | Always or cannot do at all			false
+302	AMP-PD	PDQ_39_dictionary.csv	pdq39_14_writing	PDQ-39-Q14: Had problems writing clearly?	Never | Occasionally | Often | Sometimes | Always or cannot do at all			false
+303	AMP-PD	PDQ_39_dictionary.csv	pdq39_15_cutting_food	PDQ-39-Q15: Had difficulty cutting up your food?	Never | Occasionally | Often | Sometimes | Always or cannot do at all			false
+304	AMP-PD	PDQ_39_dictionary.csv	pdq39_16_spill_drink	PDQ-39-Q16: Had difficulty holding a drink without spilling it?	Never | Occasionally | Often | Sometimes | Always or cannot do at all			false
+305	AMP-PD	PDQ_39_dictionary.csv	pdq39_17_depressed	PDQ-39-Q17: Felt depressed?	Never | Occasionally | Often | Sometimes | Always or cannot do at all			false
+306	AMP-PD	PDQ_39_dictionary.csv	pdq39_18_lonely	PDQ-39-Q18: Felt isolated and lonely?	Never | Occasionally | Often | Sometimes | Always or cannot do at all			false
+307	AMP-PD	PDQ_39_dictionary.csv	pdq39_19_weepy	PDQ-39-Q19: Felt weepy or tearful?	Never | Occasionally | Often | Sometimes | Always or cannot do at all			false
+308	AMP-PD	PDQ_39_dictionary.csv	pdq39_20_angry	PDQ-39-Q20: Felt angry or bitter?	Never | Occasionally | Often | Sometimes | Always or cannot do at all			false
+309	AMP-PD	PDQ_39_dictionary.csv	pdq39_21_anxious	PDQ-39-Q21: Felt anxious?	Never | Occasionally | Often | Sometimes | Always or cannot do at all			false
+310	AMP-PD	PDQ_39_dictionary.csv	pdq39_22_worried_about_future	PDQ-39-Q22: Felt worried about your future?	Never | Occasionally | Often | Sometimes | Always or cannot do at all			false
+311	AMP-PD	PDQ_39_dictionary.csv	pdq39_23_hide_pd_from_people	PDQ-39-Q23: Felt you had to hide your Parkinson's from people?	Never | Occasionally | Often | Sometimes | Always or cannot do at all			false
+312	AMP-PD	PDQ_39_dictionary.csv	pdq39_24_avoid_eat_drink_in_public	PDQ-39-Q24: Avoided situations which involve eating or drinking in public?	Never | Occasionally | Often | Sometimes | Always or cannot do at all			false
+313	AMP-PD	PDQ_39_dictionary.csv	pdq39_25_embarassed_in_public	PDQ-39-Q25: Felt embarrassed in public?	Never | Occasionally | Often | Sometimes | Always or cannot do at all			false
+314	AMP-PD	PDQ_39_dictionary.csv	pdq39_26_worried_about_reactions	PDQ-39-Q26: Felt worried about other people's reaction to you?	Never | Occasionally | Often | Sometimes | Always or cannot do at all			false
+315	AMP-PD	PDQ_39_dictionary.csv	pdq39_27_close_personal_relations	PDQ-39-Q27: Had problems with your close personal relationships?	Never | Occasionally | Often | Sometimes | Always or cannot do at all			false
+316	AMP-PD	PDQ_39_dictionary.csv	pdq39_28_support_from_spouse	PDQ-39-Q28: Lacked the support you needed from your spouse or partner?	Never | Occasionally | Often | Sometimes | Always or cannot do at all			false
+317	AMP-PD	PDQ_39_dictionary.csv	pdq39_29_support_from_family	PDQ-39-Q29: Lacked the support you needed from your family or close friends?	Never | Occasionally | Often | Sometimes | Always or cannot do at all			false
+318	AMP-PD	PDQ_39_dictionary.csv	pdq39_30_sleep_in_day	PDQ-39-Q30: Unexpectedly fallen asleep during the day?	Never | Occasionally | Often | Sometimes | Always or cannot do at all			false
+319	AMP-PD	PDQ_39_dictionary.csv	pdq39_31_problem_with_concentration	PDQ-39-Q31: Had problems with your concentration, for example when reading or watching TV?	Never | Occasionally | Often | Sometimes | Always or cannot do at all			false
+320	AMP-PD	PDQ_39_dictionary.csv	pdq39_32_memory_is_failing	PDQ-39-Q32: Felt your memory was failing?	Never | Occasionally | Often | Sometimes | Always or cannot do at all			false
+321	AMP-PD	PDQ_39_dictionary.csv	pdq39_33_hallucinations	PDQ-39-Q33: Had distressing dreams or hallucinations?	Never | Occasionally | Often | Sometimes | Always or cannot do at all			false
+322	AMP-PD	PDQ_39_dictionary.csv	pdq39_34_speaking	PDQ-39-Q34: Had difficulty speaking?	Never | Occasionally | Often | Sometimes | Always or cannot do at all			false
+323	AMP-PD	PDQ_39_dictionary.csv	pdq39_35_unable_to_communicate	PDQ-39-Q35: Felt unable to communicate effectively?	Never | Occasionally | Often | Sometimes | Always or cannot do at all			false
+324	AMP-PD	PDQ_39_dictionary.csv	pdq39_36_felt_ignored	PDQ-39-Q36: Felt ignored by people?	Never | Occasionally | Often | Sometimes | Always or cannot do at all			false
+325	AMP-PD	PDQ_39_dictionary.csv	pdq39_37_muscle_cramps	PDQ-39-Q37: Had painful muscle cramps or spasms?	Never | Occasionally | Often | Sometimes | Always or cannot do at all			false
+326	AMP-PD	PDQ_39_dictionary.csv	pdq39_38_joint_pains	PDQ-39-Q38: Had aches and pains in your joints or body?	Never | Occasionally | Often | Sometimes | Always or cannot do at all			false
+327	AMP-PD	PDQ_39_dictionary.csv	pdq39_39_hot_or_cold	PDQ-39-Q39: Felt uncomfortably hot or cold?	Never | Occasionally | Often | Sometimes | Always or cannot do at all			false
+328	AMP-PD	PDQ_39_dictionary.csv	pdq39_adl_score	PDQ-39-Total Score-Activities Of Daily Living (ADL)	0 - 100			false
+329	AMP-PD	PDQ_39_dictionary.csv	pdq39_cognition_score	PDQ-39-Total Score-Cognitive Impairment (Cognitions)	0 - 100			false
+330	AMP-PD	PDQ_39_dictionary.csv	pdq39_communication_score	PDQ-39-Total Score-Communication	0 - 100			false
+331	AMP-PD	PDQ_39_dictionary.csv	pdq39_discomfort_score	PDQ-39-Total Score-Bodily Discomfort	0 - 100			false
+332	AMP-PD	PDQ_39_dictionary.csv	pdq39_emotional_score	PDQ-39-Total Score-Emotional Well Being	0 - 100			false
+333	AMP-PD	PDQ_39_dictionary.csv	pdq39_mobility_score	PDQ-39-Total Score-Mobility	0 - 100			false
+334	AMP-PD	PDQ_39_dictionary.csv	pdq39_social_score	PDQ-39-Total Score-Social Support	0 - 100			false
+335	AMP-PD	PDQ_39_dictionary.csv	pdq39_stigma_score	PDQ-39-Total Score-Stigma	0 - 100			false
+336	AMP-PD	LBD_Cohort_Clinical_Data_dictionary.csv	pres_symptom	Presenting symptom	Cognitive symptoms | Motor symptoms | Both cognitive and motor symptoms | Psychiatric (depression/anxiety/psychosis) | NA			false
+338	AMP-PD	LBD_Cohort_Clinical_Data_dictionary.csv	psychosis	Psychotic thought disorder	Yes | No | NA			false
+339	AMP-PD	Demographics_dictionary.csv; DiverseCohorts_DataDictionary.pdf	race	Race	White | Black or African American | Native Hawaiian or Other Pacific Islander | Asian | American Indian or Alaska Native | Unknown | Multiracial			false
+340	AMP-PD	LBD_Cohort_Clinical_Data_dictionary.csv	rbd	REM-sleep behavior disorder (per history or polysomnogram)	Yes | No | NA			false
+341	AMP-PD	REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster_dictionary.csv	rbd01_vivid_dreams	RBD 01. Vivid Dreams	No | Yes			false
+342	AMP-PD	REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster_dictionary.csv	rbd02_aggressive_or_action_packed_dreams	RBD 02. Aggressive Or Action-Packed Dreams	No | Yes			false
+343	AMP-PD	REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster_dictionary.csv	rbd03_nocturnal_behaviour	RBD 03. Nocturnal Behaviour	No | Yes			false
+344	AMP-PD	REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster_dictionary.csv	rbd04_move_arms_legs_during_sleep	RBD 04. Move Arms and Legs During Sleep	No | Yes			false
+345	AMP-PD	REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster_dictionary.csv	rbd05_hurt_bed_partner	RBD 05. Hurt Bed Partner	No | Yes			false
+346	AMP-PD	REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster_dictionary.csv	rbd06_1_speaking_in_sleep	RBD 06.1 Speaking In Sleep	No | Yes			false
+347	AMP-PD	REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster_dictionary.csv	rbd06_2_sudden_limb_movements	RBD 06.2 Sudden Limb Movements	No | Yes			false
+348	AMP-PD	REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster_dictionary.csv	rbd06_3_complex_movements	RBD 06.3 Complex Movements	No | Yes			false
+349	AMP-PD	REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster_dictionary.csv	rbd06_4_things_fell_down	RBD 06.4 Things Fell Down	No | Yes			false
+350	AMP-PD	REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster_dictionary.csv	rbd07_my_movements_awake_me	RBD 07. My Movements Awake Me	No | Yes			false
+351	AMP-PD	REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster_dictionary.csv	rbd08_remember_dreams	RBD 08. Remember Dreams	No | Yes			false
+352	AMP-PD	REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster_dictionary.csv	rbd09_sleep_is_disturbed	RBD 09. Sleep Is Disturbed	No | Yes			false
+353	AMP-PD	REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster_dictionary.csv	rbd10_nervous_system_disease	RBD 10. Nervous system Disease	No | Yes			false
+354	AMP-PD	REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster_dictionary.csv	rbd10a_stroke	RBD 10a Stroke	No | Yes			false
+355	AMP-PD	REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster_dictionary.csv	rbd10b_head_trauma	RBD 10b Head Trauma	No | Yes			false
+356	AMP-PD	REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster_dictionary.csv	rbd10c_parkinsonism	RBD 10c Parkinsonism	No | Yes			false
+357	AMP-PD	REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster_dictionary.csv	rbd10d_rls	RBD 10d RLS	No | Yes			false
+358	AMP-PD	REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster_dictionary.csv	rbd10e_narcolepsy	RBD 10e Narcolepsy	No | Yes			false
+359	AMP-PD	REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster_dictionary.csv	rbd10f_depression	RBD 10f Depression	No | Yes			false
+360	AMP-PD	REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster_dictionary.csv	rbd10g_epilepsy	RBD 10g Epilepsy	No | Yes			false
+361	AMP-PD	REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster_dictionary.csv	rbd10h_brain_inflammatory_disease	RBD 10h Inflammatory Disease Of The Brain	No | Yes			false
+362	AMP-PD	REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster_dictionary.csv	rbd10i_other	RBD 10i Other	No | Yes			false
+363	AMP-PD	REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster_dictionary.csv	rbd_info_source	RBD Source Of Information	Patient | Patient and Caregiver | Caregiver			false
+364	AMP-PD	REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster_dictionary.csv	rbd_summary_score	RBD Summary Score	0 - 13			false
+365	AMP-PD	DTI_dictionary.csv	ref1_left_reference	Left Reference	0-1			false
+366	AMP-PD	DTI_dictionary.csv	ref2_right_reference	Right Reference	0-1			false
+367	AMP-PD	DTI_dictionary.csv	roi1_left_rostral	Left Rostral	0-1			false
+368	AMP-PD	DTI_dictionary.csv	roi2_left_middle	Left Middle	0-1			false
+369	AMP-PD	DTI_dictionary.csv	roi3_left_caudal	Left Caudal	0-1			false
+370	AMP-PD	DTI_dictionary.csv	roi4_right_rostral	Right Rostral	0-1			false
+371	AMP-PD	DTI_dictionary.csv	roi5_right_middle	Right Middle	0-1			false
+372	AMP-PD	DTI_dictionary.csv	roi6_right_caudal	Right Caudal	0-1			false
+374	AMP-PD	DaTSCAN_SBR_dictionary.csv	sbr_caudate_l	Brain region used for ROI sampling for SBR quantitative analysis - left caudate SBR	0-5			false
+375	AMP-PD	DaTSCAN_SBR_dictionary.csv	sbr_caudate_r	Brain region used for ROI sampling for SBR quantitative analysis - right caudate SBR	0-5			false
+376	AMP-PD	DaTSCAN_SBR_dictionary.csv	sbr_putamen_l	Brain region used for ROI sampling for SBR quantitative analysis - left putamen SBR	0-5			false
+377	AMP-PD	DaTSCAN_SBR_dictionary.csv	sbr_putamen_r	Brain region used for ROI sampling for SBR quantitative analysis - right putamen SBR	0-5			false
+378	AMP-PD	DaTSCAN_visual_interpretation_dictionary.csv	scan_months_after_baseline	Number of months after baseline visit at which DaTSCAN scan occurred; negative values indicate scan occurred before baseline				false
+379	AMP-PD	UPSIT_dictionary.csv	score_from_booklet_1	UPSIT Score From Booklet #1	0 - 10			false
+380	AMP-PD	UPSIT_dictionary.csv	score_from_booklet_2	UPSIT Score From Booklet #2	0 - 10			false
+381	AMP-PD	UPSIT_dictionary.csv	score_from_booklet_3	UPSIT Score From Booklet #3	0 - 10			false
+382	AMP-PD	UPSIT_dictionary.csv	score_from_booklet_4	UPSIT Score From Booklet #4	0 - 10			false
+383	AMP-PD	Demographics_dictionary.csv; DiverseCohorts_DataDictionary.pdf	sex	Sex	Male;Female;Unknown			false
+384	AMP-PD	LBD_Cohort_Clinical_Data_dictionary.csv	smell_detail	UPSIT 40 smell test score	[0-40] | NA			false
+385	AMP-PD	Smoking_and_alcohol_history_dictionary.csv	smoke_exposure_home	How many hours a day are you exposed to the cigarette smoke of others (on average) at home?	0 - 15			false
+386	AMP-PD	Smoking_and_alcohol_history_dictionary.csv	smoke_exposure_other_areas	How many hours a day are you exposed to the cigarette smoke of others (on average) in other areas?	0 - 10			false
+387	AMP-PD	Smoking_and_alcohol_history_dictionary.csv	smoke_exposure_work	How many hours a day are you exposed to the cigarette smoke of others (on average) at work?	0 - 10			false
+388	AMP-PD	Smoking_and_alcohol_history_dictionary.csv	smoked_100_more_cigarettes	Current tobacco use indicator	Yes | No | Unknown			false
+389	AMP-PD	LBD_Cohort_Clinical_Data_dictionary.csv	spect_pet_perf	SPECT or PET perfusion scan showing occipital hypometabolism	Yes | No | NA			false
+395	AMP-PD	Smoking_and_alcohol_history_dictionary.csv	tobacco_current_use	Indicator of whether in your lifetime subject have smoked 100 or more cigarettes (5 packs)	Yes | No | Unknown			false
+396	AMP-PD	Smoking_and_alcohol_history_dictionary.csv	tobacco_ever_used	Indicator of whether subject has ever used tobacco	Yes | No | Unknown			false
+397	AMP-PD	Smoking_and_alcohol_history_dictionary.csv	tobacco_prior_use	Indicator of the participant's/subject's past regular tobacco (e.g. cigarettes, cigars, chewing tobacco or pipe) use prior to the past 12 months	Yes | No | Unknown			false
+399	AMP-PD	Smoking_and_alcohol_history_dictionary.csv	tobacco_recent_use	Tobacco recent use indicator	Yes | No | Unknown			false
+400	AMP-PD	Smoking_and_alcohol_history_dictionary.csv	tobacco_start_age	Age in years when participant/subject started using tobacco products (e.g. cigarettes, cigars, chewing tobacco or pipe)	6 - 75			false
+401	AMP-PD	Smoking_and_alcohol_history_dictionary.csv	tobacco_stop_age	Age in years when participant/subject stopped using tobacco products (e.g. cigarettes, cigars, chewing tobacco or pipe)	13 - 85			false
+402	AMP-PD	UPDRS_dictionary.csv	upd101_intellect_impairment	UPDRS - Mentation, Behavior and Mood: Intellectual Impairment (UPD101)	0 - 4			false
+403	AMP-PD	UPDRS_dictionary.csv	upd102_thought_disorder	UPDRS - Mentation, Behavior and Mood: Thought Disorder (UPD102)	0 - 4			false
+404	AMP-PD	UPDRS_dictionary.csv	upd103_depression	UPDRS - Mentation, Behavior and Mood: Depression (UPD103)	0 - 4			false
+405	AMP-PD	UPDRS_dictionary.csv	upd104_motivation	UPDRS - Mentation, Behavior and Mood: Motivation/Initiative (UPD104)	0 - 4			false
+406	AMP-PD	UPDRS_dictionary.csv	upd105_speech	UPDRS - Activities of Daily Living: Speech (UPD105)	0 - 4			false
+407	AMP-PD	UPDRS_dictionary.csv	upd106_salivation	UPDRS - Activities of Daily Living: Salivation (UPD106)	0 - 4			false
+408	AMP-PD	UPDRS_dictionary.csv	upd107_swallowing	UPDRS - Activities of Daily Living: Swallowing (UPD107)	0 - 4			false
+409	AMP-PD	UPDRS_dictionary.csv	upd108_handwriting	UPDRS - Activities of Daily Living: Handwriting (UPD108)	0 - 4			false
+410	AMP-PD	UPDRS_dictionary.csv	upd109_cutting_food	UPDRS - Activities of Daily Living: Cutting Food and Handling Utensils (UPD109)	0 - 4			false
+411	AMP-PD	UPDRS_dictionary.csv	upd110_dressing	UPDRS - Activities of Daily Living: Dressing (UPD110)	0 - 4			false
+412	AMP-PD	UPDRS_dictionary.csv	upd111_hygiene	UPDRS - Activities of Daily Living: Hygiene (UPD111)	0 - 4			false
+413	AMP-PD	UPDRS_dictionary.csv	upd112_turning_in_bed	UPDRS - Activities of Daily Living: Turning in Bed and Adjusting Bed Clothes (UPD112)	0 - 4			false
+414	AMP-PD	UPDRS_dictionary.csv	upd113_falling	UPDRS - Activities of Daily Living: Falling (UPD113)	0 - 4			false
+415	AMP-PD	UPDRS_dictionary.csv	upd114_freezing_walking	UPDRS - Activities of Daily Living: Freezing When Walking (UPD114)	0 - 4			false
+416	AMP-PD	UPDRS_dictionary.csv	upd115_walking	UPDRS - Activities of Daily Living: Walking (UPD115)	0 - 4			false
+417	AMP-PD	UPDRS_dictionary.csv	upd116_tremor	UPDRS - Activities of Daily Living: Tremor (UPD116)	0 - 4			false
+418	AMP-PD	UPDRS_dictionary.csv	upd117_sensory_complaints	UPDRS - Activities of Daily Living: Sensory Complaints Related to Parkinsonism (UPD117)	0 - 4			false
+419	AMP-PD	UPDRS_dictionary.csv	upd118_speech	UPDRS - Motor Examination: Speech (UPD118)	0 - 4			false
+420	AMP-PD	UPDRS_dictionary.csv	upd119_facial_expression	UPDRS - Motor Examination: Facial Expression (UPD119)	0 - 4			false
+421	AMP-PD	UPDRS_dictionary.csv	upd120a_tremor_face_lips_chin	UPDRS - Motor Examination: Tremor at Rest, Face, Lips, Chin (UPD120A)	0 - 4			false
+422	AMP-PD	UPDRS_dictionary.csv	upd120b_tremor_rest_hand_rt	UPDRS - Motor Examination: Tremor at Rest, Hands, Right (UPD120B)	0 - 4			false
+423	AMP-PD	UPDRS_dictionary.csv	upd120c_tremor_rest_hand_lt	UPDRS - Motor Examination: Tremor at Rest, Hands, Left (UPD120C)	0 - 4			false
+424	AMP-PD	UPDRS_dictionary.csv	upd120d_tremor_rest_feet_rt	UPDRS - Motor Examination: Tremor at Rest, Feet, Right (UPD120D)	0 - 4			false
+425	AMP-PD	UPDRS_dictionary.csv	upd120e_tremor_rest_feet_lt	UPDRS - Motor Examination: Tremor at Rest, Feet, Left (UPD120E)	0 - 4			false
+426	AMP-PD	UPDRS_dictionary.csv	upd121a_action_tremor_hand_rt	UPDRS - Motor Examination: Action Tremor, Hand, Right (UPD121A)	0 - 4			false
+427	AMP-PD	UPDRS_dictionary.csv	upd121b_action_tremor_hand_left	UPDRS - Motor Examination: Action Tremor, Hand, Left (UPD121B)	0 - 4			false
+428	AMP-PD	UPDRS_dictionary.csv	upd122a_rigidity_neck	UPDRS - Motor Examination: Rigidity Neck (UPD122A)	0 - 4			false
+429	AMP-PD	UPDRS_dictionary.csv	upd122b_rigidity_up_extrem_rt	UPDRS - Motor Examination: Rigidity Upper Extremity, Right (UPD122B)	0 - 4			false
+430	AMP-PD	UPDRS_dictionary.csv	upd122c_rigidity_up_extrem_lt	UPDRS - Motor Examination: Rigidity Upper Extremity, Left (UPD122C)	0 - 4			false
+431	AMP-PD	UPDRS_dictionary.csv	upd122d_rigidity_low_extrem_rt	UPDRS - Motor Examination: Rigidity Lower Extremity, Right (UPD122D)	0 - 4			false
+432	AMP-PD	UPDRS_dictionary.csv	upd122e_rigidity_low_extrem_lt	UPDRS - Motor Examination: Rigidity Lower Extremity, Left (UPD122E)	0 - 4			false
+433	AMP-PD	UPDRS_dictionary.csv	upd123a_finger_taps_right	UPDRS - Motor Examination: Finger Taps, Right (UPD123A)	0 - 4			false
+434	AMP-PD	UPDRS_dictionary.csv	upd123b_finger_taps_left	UPDRS - Motor Examination: Finger Taps, Left (UPD123B)	0 - 4			false
+435	AMP-PD	UPDRS_dictionary.csv	upd124a_hand_grips_right	UPDRS - Motor Examination: Hand Grips, Right (UPD124A)	0 - 4			false
+436	AMP-PD	UPDRS_dictionary.csv	upd124b_hand_grips_left	UPDRS - Motor Examination: Hand Grips, Left (UPD124B)	0 - 4			false
+437	AMP-PD	UPDRS_dictionary.csv	upd125a_hand_pronate_supinate_rt	UPDRS - Motor Examination: Hand Pronate/Supinate, Right (UPD125A)	0 - 4			false
+438	AMP-PD	UPDRS_dictionary.csv	upd125b_hand_pronate_supinate_lt	UPDRS - Motor Examination: Hand Pronate/Supinate, Left (UPD125B)	0 - 4			false
+439	AMP-PD	UPDRS_dictionary.csv	upd126a_leg_agility_rt	UPDRS - Motor Examination: Leg Agility, Right (UPD126A)	0 - 4			false
+440	AMP-PD	UPDRS_dictionary.csv	upd126b_leg_agility_lt	UPDRS - Motor Examination: Leg Agility, Left (UPD126B)	0 - 4			false
+441	AMP-PD	UPDRS_dictionary.csv	upd127_arising_from_chair	UPDRS - Motor Examination: Arising from Chair (UPD127)	0 - 4			false
+442	AMP-PD	UPDRS_dictionary.csv	upd128_posture	UPDRS - Motor Examination: Posture (UPD128)	0 - 4			false
+443	AMP-PD	UPDRS_dictionary.csv	upd129_gait	UPDRS - Motor Examination: Gait (UPD129)	0 - 4			false
+444	AMP-PD	UPDRS_dictionary.csv	upd130_postural_stability	UPDRS - Motor Examination: Postural Stability (UPD130)	0 - 4			false
+445	AMP-PD	UPDRS_dictionary.csv	upd131_body_bradykinesia	UPDRS - Motor Examination: Body Bradykinesia and Hypokinesia (UPD131)	0 - 4			false
+446	AMP-PD	UPDRS_dictionary.csv	upd132_dyskinesias_duration	UPDRS - Complications of Therapy: Dyskinesias - Duration (UPD132)	0 - 4			false
+447	AMP-PD	UPDRS_dictionary.csv	upd133_dyskinesias_disability	UPDRS - Complications of Therapy: Dyskinesias - Disability (UPD133)	0 - 4			false
+448	AMP-PD	UPDRS_dictionary.csv	upd134_dyskinesias_painful	UPDRS - Complications of Therapy: Dyskinesias - Painful Dyskinesias (UPD134)	0 - 4			false
+449	AMP-PD	UPDRS_dictionary.csv	upd135_dyskinesias_dystonia	UPDRS - Complications of Therapy: Dyskinesias - Presence of Early Morning Dystonia (UPD135)	0 - 1			false
+450	AMP-PD	UPDRS_dictionary.csv	upd136_off_periods_predictable	UPDRS - Complications of Therapy: Clinical Fluctuations - Off Periods Predictable (UPD136)	0 - 1			false
+451	AMP-PD	UPDRS_dictionary.csv	upd137_off_periods_unpredictable	UPDRS - Complications of Therapy: Clinical Fluctuations - Off Periods Unpredictable (UPD137)	0 - 1			false
+452	AMP-PD	UPDRS_dictionary.csv	upd138_off_periods_sudden	UPDRS - Complications of Therapy: Clinical Fluctuations - Off Periods Sudden (UPD138)	0 - 1			false
+453	AMP-PD	UPDRS_dictionary.csv	upd139_clin_fluctu_off_periods	UPDRS - Complications of Therapy: Clinical Fluctuations - Average Off Periods Per Day (UPD139)	0 - 4			false
+454	AMP-PD	UPDRS_dictionary.csv	upd140_anorexia_nausea_vomit	UPDRS - Complications of Therapy: Other Complications - Anorexia, Nausea, or Vomiting (UPD140)	0 - 1			false
+455	AMP-PD	UPDRS_dictionary.csv	upd141_sleep_disturbances	UPDRS - Complications of Therapy: Other Complications - Sleep Disturbances (UPD141)	0 - 1			false
+456	AMP-PD	UPDRS_dictionary.csv	upd142_symptomatic_orthostasis	UPDRS - Complications of Therapy: Other Complications - Symptomatic Orthostasis (UPD142)	0 - 1			false
+457	AMP-PD	UPDRS_dictionary.csv	upd143_mod_hoehn_and_yahr_stage	UPDRS - Modified Hoehn and Yahr Staging (UPD143)	0 - 5			false
+458	AMP-PD	MDS_UPDRS_Part_I_dictionary.csv	upd2101_cognitive_impairment	1.01 MDS-UPDRS - Cognitive Impairment (UPD2101)	Normal | Slight | Mild | Moderate | Severe			false
+459	AMP-PD	MDS_UPDRS_Part_I_dictionary.csv	upd2102_hallucinations_and_psychosis	1.02 MDS-UPDRS - Hallucinations and Psychosis (UPD2102)	Normal | Slight | Mild | Moderate | Severe			false
+460	AMP-PD	MDS_UPDRS_Part_I_dictionary.csv	upd2103_depressed_mood	1.03 MDS-UPDRS - Depressed Mood (UPD2103)	Normal | Slight | Mild | Moderate | Severe			false
+461	AMP-PD	MDS_UPDRS_Part_I_dictionary.csv	upd2104_anxious_mood	1.04 MDS-UPDRS - Anxious Mood (UPD2104)	Normal | Slight | Mild | Moderate | Severe			false
+462	AMP-PD	MDS_UPDRS_Part_I_dictionary.csv	upd2105_apathy	1.05 MDS-UPDRS - Apathy (UPD2105)	Normal | Slight | Mild | Moderate | Severe			false
+463	AMP-PD	MDS_UPDRS_Part_I_dictionary.csv	upd2106_dopamine_dysregulation_syndrome_features	1.06 MDS-UPDRS - Features of Dopamine Dysregulation Syndrome (UPD2106)	Normal | Slight | Mild | Moderate | Severe			false
+464	AMP-PD	MDS_UPDRS_Part_I_dictionary.csv	upd2107_pat_quest_sleep_problems	1.07 MDS-UPDRS - Sleep Problems (UPD2107)	Normal | Slight | Mild | Moderate | Severe			false
+465	AMP-PD	MDS_UPDRS_Part_I_dictionary.csv	upd2108_pat_quest_daytime_sleepiness	1.08 MDS-UPDRS - Daytime Sleepiness (UPD2108)	Normal | Slight | Mild | Moderate | Severe			false
+466	AMP-PD	MDS_UPDRS_Part_I_dictionary.csv	upd2109_pat_quest_pain_and_other_sensations	1.09 MDS-UPDRS - Pain And Other Sensations (UPD2109)	Normal | Slight | Mild | Moderate | Severe			false
+467	AMP-PD	MDS_UPDRS_Part_I_dictionary.csv	upd2110_pat_quest_urinary_problems	1.10 MDS-UPDRS - Urinary Problems (UPD2110)	Normal | Slight | Mild | Moderate | Severe			false
+468	AMP-PD	MDS_UPDRS_Part_I_dictionary.csv	upd2111_pat_quest_constipation_problems	1.11 MDS-UPDRS - Constipation Problems (UPD2111)	Normal | Slight | Mild | Moderate | Severe			false
+469	AMP-PD	MDS_UPDRS_Part_I_dictionary.csv	upd2112_pat_quest_lightheadedness_on_standing	1.12 MDS-UPDRS - Lightheadedness on Standing (UPD2112)	Normal | Slight | Mild | Moderate | Severe			false
+470	AMP-PD	MDS_UPDRS_Part_I_dictionary.csv	upd2113_pat_quest_fatigue	1.13 MDS-UPDRS - Fatigue (UPD2113)	Normal | Slight | Mild | Moderate | Severe			false
+471	AMP-PD	MDS_UPDRS_Part_II_dictionary.csv	upd2201_speech	2.01 MDS-UPDRS - Speech (UPD2201)	Normal | Slight | Mild | Moderate | Severe			false
+472	AMP-PD	MDS_UPDRS_Part_II_dictionary.csv	upd2202_saliva_and_drooling	2.02 MDS-UPDRS - Saliva And Drooling (UPD2202)	Normal | Slight | Mild | Moderate | Severe			false
+473	AMP-PD	MDS_UPDRS_Part_II_dictionary.csv	upd2203_chewing_and_swallowing	2.03 MDS-UPDRS - Chewing And Swallowing (UPD2203)	Normal | Slight | Mild | Moderate | Severe			false
+474	AMP-PD	MDS_UPDRS_Part_II_dictionary.csv	upd2204_eating_tasks	2.04 MDS-UPDRS - Eating Tasks (UPD2204)	Normal | Slight | Mild | Moderate | Severe			false
+475	AMP-PD	MDS_UPDRS_Part_II_dictionary.csv	upd2205_dressing	2.05 MDS-UPDRS - Dressing (UPD2205)	Normal | Slight | Mild | Moderate | Severe			false
+476	AMP-PD	MDS_UPDRS_Part_II_dictionary.csv	upd2206_hygiene	2.06 MDS-UPDRS - Hygiene (UPD2206)	Normal | Slight | Mild | Moderate | Severe			false
+477	AMP-PD	MDS_UPDRS_Part_II_dictionary.csv	upd2207_handwriting	2.07 MDS-UPDRS - Handwriting (UPD2207)	Normal | Slight | Mild | Moderate | Severe			false
+478	AMP-PD	MDS_UPDRS_Part_II_dictionary.csv	upd2208_doing_hobbies_and_other_activities	2.08 MDS-UPDRS - Doing Hobbies And Other Activities (UPD2208)	Normal | Slight | Mild | Moderate | Severe			false
+479	AMP-PD	MDS_UPDRS_Part_II_dictionary.csv	upd2209_turning_in_bed	2.09 MDS-UPDRS - Turning In Bed (UPD2209)	Normal | Slight | Mild | Moderate | Severe			false
+480	AMP-PD	MDS_UPDRS_Part_II_dictionary.csv	upd2210_tremor	2.10 MDS-UPDRS - Tremor (UPD2210)	Normal | Slight | Mild | Moderate | Severe			false
+481	AMP-PD	MDS_UPDRS_Part_II_dictionary.csv	upd2211_get_out_of_bed_car_or_deep_chair	2.11 MDS-UPDRS - Get Out Of Bed, Car, Or Deep Chair (UPD2211)	Normal | Slight | Mild | Moderate | Severe			false
+482	AMP-PD	MDS_UPDRS_Part_II_dictionary.csv	upd2212_walking_and_balance	2.12 MDS-UPDRS - Walking And Balance (UPD2212)	Normal | Slight | Mild | Moderate | Severe			false
+483	AMP-PD	MDS_UPDRS_Part_II_dictionary.csv	upd2213_freezing	2.13 MDS-UPDRS - Freezing (UPD2213)	Normal | Slight | Mild | Moderate | Severe			false
+484	AMP-PD	MDS_UPDRS_Part_III_dictionary.csv	upd2301_speech_problems	3.01 MDS-UPDRS - Speech Problems (UPD2301)	Normal | Slight | Mild | Moderate | Severe			false
+485	AMP-PD	MDS_UPDRS_Part_III_dictionary.csv	upd2302_facial_expression	3.02 MDS-UPDRS - Facial Expression (UPD2302)	Normal | Slight | Mild | Moderate | Severe			false
+486	AMP-PD	MDS_UPDRS_Part_III_dictionary.csv	upd2303a_rigidity_neck	3.03a MDS-UPDRS - Rigidity Neck (UPD2303A)	Normal | Slight | Mild | Moderate | Severe			false
+487	AMP-PD	MDS_UPDRS_Part_III_dictionary.csv	upd2303b_rigidity_rt_upper_extremity	3.03b MDS-UPDRS - Rigidity Right Upper Extremity (UPD2303B)	Normal | Slight | Mild | Moderate | Severe			false
+488	AMP-PD	MDS_UPDRS_Part_III_dictionary.csv	upd2303c_rigidity_left_upper_extremity	3.03c MDS-UPDRS - Rigidity Left Upper Extremity (UPD2303C)	Normal | Slight | Mild | Moderate | Severe			false
+489	AMP-PD	MDS_UPDRS_Part_III_dictionary.csv	upd2303d_rigidity_rt_lower_extremity	3.03e MDS-UPDRS - Rigidity Left Lower Extremity	Normal | Slight | Mild | Moderate | Severe			false
+490	AMP-PD	MDS_UPDRS_Part_III_dictionary.csv	upd2303e_rigidity_left_lower_extremity	3.03e MDS-UPDRS - Rigidity Left Lower Extremity (UPD2303E)	Normal | Slight | Mild | Moderate | Severe			false
+491	AMP-PD	MDS_UPDRS_Part_III_dictionary.csv	upd2304a_right_finger_tapping	3.04a MDS-UPDRS - Right Finger Tapping (UPD2304A)	Normal | Slight | Mild | Moderate | Severe			false
+492	AMP-PD	MDS_UPDRS_Part_III_dictionary.csv	upd2304b_left_finger_tapping	3.04b MDS-UPDRS - Left Finger Tapping (UPD2304B)	Normal | Slight | Mild | Moderate | Severe			false
+493	AMP-PD	MDS_UPDRS_Part_III_dictionary.csv	upd2305a_right_hand_movements	3.05a MDS-UPDRS - Right Hand Movements (UPD2305A)	Normal | Slight | Mild | Moderate | Severe			false
+494	AMP-PD	MDS_UPDRS_Part_III_dictionary.csv	upd2305b_left_hand_movements	3.05b MDS-UPDRS - Left Hand Movements (UPD2305B)	Normal | Slight | Mild | Moderate | Severe			false
+495	AMP-PD	MDS_UPDRS_Part_III_dictionary.csv	upd2306a_pron_sup_movement_right_hand	3.06a MDS-UPDRS - Pronanation-Supination Movement Of Right Hand (UPD2306A)	Normal | Slight | Mild | Moderate | Severe			false
+496	AMP-PD	MDS_UPDRS_Part_III_dictionary.csv	upd2306b_pron_sup_movement_left_hand	3.06b MDS-UPDRS - Pronanation-Supination Movement Of Left Hand (UPD2306B)	Normal | Slight | Mild | Moderate | Severe			false
+497	AMP-PD	MDS_UPDRS_Part_III_dictionary.csv	upd2307a_right_toe_tapping	3.07a MDS-UPDRS - Right Toe Tapping (UPD2307A)	Normal | Slight | Mild | Moderate | Severe			false
+498	AMP-PD	MDS_UPDRS_Part_III_dictionary.csv	upd2307b_left_toe_tapping	3.07b MDS-UPDRS - Left Toe Tapping (UPD2307B)	Normal | Slight | Mild | Moderate | Severe			false
+499	AMP-PD	MDS_UPDRS_Part_III_dictionary.csv	upd2308a_right_leg_agility	3.08a MDS-UPDRS - Right Leg Agility (UPD2308A)	Normal | Slight | Mild | Moderate | Severe			false
+500	AMP-PD	MDS_UPDRS_Part_III_dictionary.csv	upd2308b_left_leg_agility	3.08b MDS-UPDRS - Left Leg Agility (UPD2308B)	Normal | Slight | Mild | Moderate | Severe			false
+501	AMP-PD	MDS_UPDRS_Part_III_dictionary.csv	upd2309_arising_from_chair	3.09 MDS-UPDRS - Arising from Chair (UPD2309)	Normal | Slight | Mild | Moderate | Severe			false
+502	AMP-PD	MDS_UPDRS_Part_III_dictionary.csv	upd2310_gait	3.10 MDS-UPDRS - Gait (UPD2310)	Normal | Slight | Mild | Moderate | Severe			false
+503	AMP-PD	MDS_UPDRS_Part_III_dictionary.csv	upd2311_freezing_of_gait	3.11 MDS-UPDRS - Freezing Of Gait (UPD2311)	Normal | Slight | Mild | Moderate | Severe			false
+504	AMP-PD	MDS_UPDRS_Part_III_dictionary.csv	upd2312_postural_stability	3.12 MDS-UPDRS - Postural Stability (UPD2312)	Normal | Slight | Mild | Moderate | Severe			false
+505	AMP-PD	MDS_UPDRS_Part_III_dictionary.csv	upd2313_posture	3.13 MDS-UPDRS - Posture (UPD2313)	Normal | Slight | Mild | Moderate | Severe			false
+506	AMP-PD	MDS_UPDRS_Part_III_dictionary.csv	upd2314_body_bradykinesia	3.14 MDS-UPDRS - Body Bradykinesia (UPD2314)	Normal | Slight | Mild | Moderate | Severe			false
+507	AMP-PD	MDS_UPDRS_Part_III_dictionary.csv	upd2315a_postural_tremor_of_right_hand	3.15a MDS-UPDRS - Postural Tremor Of Right Hand (UPD2315A)	Normal | Slight | Mild | Moderate | Severe			false
+508	AMP-PD	MDS_UPDRS_Part_III_dictionary.csv	upd2315b_postural_tremor_of_left_hand	3.15b MDS-UPDRS - Postural Tremor Of Left Hand (UPD2315B)	Normal | Slight | Mild | Moderate | Severe			false
+509	AMP-PD	MDS_UPDRS_Part_III_dictionary.csv	upd2316a_kinetic_tremor_of_right_hand	3.16a MDS-UPDRS - Kinetic Tremor Of Right Hand (UPD2316A)	Normal | Slight | Mild | Moderate | Severe			false
+510	AMP-PD	MDS_UPDRS_Part_III_dictionary.csv	upd2316b_kinetic_tremor_of_left_hand	3.16b MDS-UPDRS - Kinetic Tremor Of Left Hand (UPD2316B)	Normal | Slight | Mild | Moderate | Severe			false
+511	AMP-PD	MDS_UPDRS_Part_III_dictionary.csv	upd2317a_rest_tremor_amplitude_right_upper_extremity	3.17a MDS-UPDRS - Rest Tremor Amplitude Right Upper Extremity (UPD2317A)	Normal | Slight | Mild | Moderate | Severe			false
+512	AMP-PD	MDS_UPDRS_Part_III_dictionary.csv	upd2317b_rest_tremor_amplitude_left_upper_extremity	3.17b MDS-UPDRS - Rest Tremor Amplitude Left Upper Extremity (UPD2317B)	Normal | Slight | Mild | Moderate | Severe			false
+513	AMP-PD	MDS_UPDRS_Part_III_dictionary.csv	upd2317c_rest_tremor_amplitude_right_lower_extremity	3.17c MDS-UPDRS - Rest Tremor Amplitude Right Lower Extremity (UPD2317C)	Normal | Slight | Mild | Moderate | Severe			false
+514	AMP-PD	MDS_UPDRS_Part_III_dictionary.csv	upd2317d_rest_tremor_amplitude_left_lower_extremity	3.17d MDS-UPDRS - Rest Tremor Amplitude Left Lower Extremity (UPD2317D)	Normal | Slight | Mild | Moderate | Severe			false
+515	AMP-PD	MDS_UPDRS_Part_III_dictionary.csv	upd2317e_rest_tremor_amplitude_lip_or_jaw	3.17e MDS-UPDRS - Rest Tremor Amplitude Lip Or Jaw (UPD2317E)	Normal | Slight | Mild | Moderate | Severe			false
+516	AMP-PD	MDS_UPDRS_Part_III_dictionary.csv	upd2318_consistency_of_rest_tremor	3.18 MDS-UPDRS - Consistency Of Rest Tremor (UPD2318)	Normal | Slight | Mild | Moderate | Severe			false
+517	AMP-PD	MDS_UPDRS_Part_III_dictionary.csv	upd23a_medication_for_pd	3a MDS-UPDRS - Medication For Parkinson's Disease (UPD23A)	No | Yes			false
+518	AMP-PD	MDS_UPDRS_Part_III_dictionary.csv	upd23b_clinical_state_on_medication	3b MDS-UPDRS - Clinical State On Medication (UPD23B)	Off | On			false
+519	AMP-PD	MDS_UPDRS_Part_IV_dictionary.csv	upd2401_time_spent_with_dyskinesias	4.01 MDS-UPDRS - Time Spent With Dyskinesias (UPD2401)	Normal | Slight | Mild | Moderate | Severe			false
+520	AMP-PD	MDS_UPDRS_Part_IV_dictionary.csv	upd2402_functional_impact_of_dyskinesias	4.02 MDS-UPDRS - Functional Impact Of Dyskinesias (UPD2402)	Normal | Slight | Mild | Moderate | Severe			false
+521	AMP-PD	MDS_UPDRS_Part_IV_dictionary.csv	upd2403_time_spent_in_the_off_state	4.03 MDS-UPDRS - Time Spent In The Off State (UPD2403)	Normal | Slight | Mild | Moderate | Severe			false
+522	AMP-PD	MDS_UPDRS_Part_IV_dictionary.csv	upd2404_functional_impact_of_fluctuations	4.04 MDS-UPDRS - Functional Impact Of Fluctuations (UPD2404)	Normal | Slight | Mild | Moderate | Severe			false
+523	AMP-PD	MDS_UPDRS_Part_IV_dictionary.csv	upd2405_complexity_of_motor_fluctuations	4.05 MDS-UPDRS - Complexity Of Motor Fluctuations (UPD2405)	Normal | Slight | Mild | Moderate | Severe			false
+524	AMP-PD	MDS_UPDRS_Part_IV_dictionary.csv	upd2406_painful_off_state_dystonia	4.06 MDS-UPDRS - Painful Off-State Dystonia (UPD2406)	Normal | Slight | Mild | Moderate | Severe			false
+525	AMP-PD	MDS_UPDRS_Part_III_dictionary.csv	upd2da_dyskinesias_during_exam	3.19 MDS-UPDRS - Dyskinesias During Exam (UPD2DA)	No | Yes			false
+526	AMP-PD	MDS_UPDRS_Part_III_dictionary.csv	upd2db_movements_interfere_with_ratings	3.20 MDS-UPDRS - Movements Interfere with Ratings (UPD2DB)	No | Yes			false
+527	AMP-PD	MDS_UPDRS_Part_III_dictionary.csv	upd2hy_hoehn_and_yahr_stage	3.21 MDS-UPDRS - Hoehn And Yahr Stage (UPD2HY)	Stage 0 | Stage 1 | Stage 1.5 | Stage 2 | Stage 2.5 | Stage 3 | Stage 4 | Stage 5			false
+528	AMP-PD	UPDRS_dictionary.csv	updrs1_ment_behav_mood_score	UPDRS - Mentation, Behavior and Mood Sub-total (UPD145)	0 - 16			false
+530	AMP-PD	UPDRS_dictionary.csv	updrs2_adl_score	UPDRS - Activities of Daily Living Sub-total (UPD146)	0 - 52			false
+532	AMP-PD	UPDRS_dictionary.csv	updrs3_motor_examination_score	UPDRS - Motor Examination Sub-total (UPD147)	0 - 108			false
+533	AMP-PD	UPDRS_dictionary.csv	updrs4_therapy_complications_score	UPDRS - Complications of Therapy: Sub-total	0 - 30			false
+534	AMP-PD	UPSIT_dictionary.csv	upsit_performed	UPSIT Performed Indicator	Completed | Not completed | Partially completed			false
+535	AMP-PD	UPSIT_dictionary.csv	upsit_total_score	UPSIT Total Score	0 - 40			false
+536	AMP-PD	PD_Medical_History_dictionary.csv	use_of_pd_medication	Is Subject On Medication For PD?	No | Yes | Unknown			false
+537	AMP-PD	LBD_Cohort_Clinical_Data_dictionary.csv	vis_halluc	Recurrent visual hallucinations	Yes | No | NA			false
+538	AMP-PD	Caffeine_history_dictionary.csv; DTI_dictionary.csv; DaTSCAN_SBR_dictionary.csv; DaTSCAN_visual_interpretation_dictionary.csv; Demographics_dictionary.csv; Enrollment_dictionary.csv; Epworth_Sleepiness_Scale_dictionary.csv; Family_History_PD_dictionary.csv; LBD_Cohort_Clinical_Data_dictionary.csv; LBD_Cohort_Path_Data_dictionary.csv; MDS_UPDRS_Part_III_dictionary.csv; MDS_UPDRS_Part_II_dictionary.csv; MDS_UPDRS_Part_IV_dictionary.csv; MDS_UPDRS_Part_I_dictionary.csv; MMSE_dictionary.csv; MOCA_dictionary.csv; MRI_dictionary.csv; Modified_Schwab___England_ADL_dictionary.csv; PDQ_39_dictionary.csv; PD_Medical_History_dictionary.csv; REM_Sleep_Behavior_Disorder_Questionnaire_Mayo_dictionary.csv; REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster_dictionary.csv; Smoking_and_alcohol_history_dictionary.csv; UPDRS_dictionary.csv; UPSIT_dictionary.csv	visit_month	Numeric visit in months; for visits prior baseline -1, -2 is an order of screening visits				false
+539	AMP-PD	Caffeine_history_dictionary.csv; DTI_dictionary.csv; DaTSCAN_SBR_dictionary.csv; DaTSCAN_visual_interpretation_dictionary.csv; Demographics_dictionary.csv; Enrollment_dictionary.csv; Epworth_Sleepiness_Scale_dictionary.csv; Family_History_PD_dictionary.csv; LBD_Cohort_Clinical_Data_dictionary.csv; LBD_Cohort_Path_Data_dictionary.csv; MDS_UPDRS_Part_III_dictionary.csv; MDS_UPDRS_Part_II_dictionary.csv; MDS_UPDRS_Part_IV_dictionary.csv; MDS_UPDRS_Part_I_dictionary.csv; MMSE_dictionary.csv; MOCA_dictionary.csv; MRI_dictionary.csv; Modified_Schwab___England_ADL_dictionary.csv; PDQ_39_dictionary.csv; PD_Medical_History_dictionary.csv; REM_Sleep_Behavior_Disorder_Questionnaire_Mayo_dictionary.csv; REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster_dictionary.csv; Smoking_and_alcohol_history_dictionary.csv; UPDRS_dictionary.csv; UPSIT_dictionary.csv	visit_name	Visit name: M - in months, SC - screening visit, LOG - records without visit; #2 or #3 define repated records at the same visit or repeated visit				false
+542	AMP-RA-SLE	ROSMAP_clinical_codebook.pdf	age_at_visit	Age of participant at time of clinical visit	Continuous		years	false
+546	AMP-RA-SLE	PD_Medical_History_dictionary.csv	diagnosis	The diagnosis is an opportunity for the site investigator to give their opinion on a participant's most likely clinical diagnosis, regardless of cohort. The diagnosis may change over time because the site investigator may update the diagnosis at every longitudinal visit based on their opinion.ś	At-Risk RA | Not Applicable | OA | RA | SLE | Sjogren's disease | control | cutaneous lupus erythematosus | dermatomyositis | discoid lupus erythematosus | lupus nephritis | psoriasis | psoriatic arthritis | scleroderma | unknown | vitiligo	2026-07-14: value set set to ARK's own 16, verbatim from ark.ClinicalMetadataTemplate. It previously held an ABBREVIATED, lossy variant (CLE/LN/PsA/PsO/SjD) that dropped Not Applicable, discoid lupus erythematosus and unknown.		false
+547	AMP-RA-SLE	Demographics_dictionary.csv	ethnicity	Ethnicity	Not Hispanic or Latino | Hispanic or Latino | Unknown			false
+548	AMP-RA-SLE	Caffeine_history_dictionary.csv; DTI_dictionary.csv; DaTSCAN_SBR_dictionary.csv; DaTSCAN_visual_interpretation_dictionary.csv; Demographics_dictionary.csv; Enrollment_dictionary.csv; Epworth_Sleepiness_Scale_dictionary.csv; Family_History_PD_dictionary.csv; LBD_Cohort_Clinical_Data_dictionary.csv; LBD_Cohort_Path_Data_dictionary.csv; MDS_UPDRS_Part_III_dictionary.csv; MDS_UPDRS_Part_II_dictionary.csv; MDS_UPDRS_Part_IV_dictionary.csv; MDS_UPDRS_Part_I_dictionary.csv; MMSE_dictionary.csv; MOCA_dictionary.csv; MRI_dictionary.csv; Modified_Schwab___England_ADL_dictionary.csv; PDQ_39_dictionary.csv; PD_Medical_History_dictionary.csv; REM_Sleep_Behavior_Disorder_Questionnaire_Mayo_dictionary.csv; REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster_dictionary.csv; Smoking_and_alcohol_history_dictionary.csv; UPDRS_dictionary.csv; UPSIT_dictionary.csv	GUID	Global Unique ID (USUBJID)				false
+550	AMP-RA-SLE	DiverseCohorts_DataDictionary.pdf; DiverseCohorts_DataDictionary_ExtNeuropath.pdf	individualID	Unique identifier assigned to each study participant. For multi-specimen data files provide all IDs in a comma-separated list.	Identifier			false
+554	AMP-RA-SLE	Demographics_dictionary.csv; DiverseCohorts_DataDictionary.pdf	race	Race	White | Black or African American | Native Hawaiian or Other Pacific Islander | Asian | American Indian or Alaska Native | Unknown | Multiracial			false
+555	AMP-RA-SLE	Demographics_dictionary.csv; DiverseCohorts_DataDictionary.pdf	sex	Sex	Male;Female;Unknown			false
+2	AMP-AD		age_at_diagnosis_pd	Age At Parkinson's Disease Diagnosis				true
+4	AMP-AD		age_at_visit_max	Maximum age of participant across all study visits	Non-negative numeric value in years		years	true
+7	AMP-AD		ageUnits	The unit of measure used for `ageEnrollment` and `ageDiagnosis`	years | months			true
+18	AMP-AD		clinicalMetadataSource	Source system or repository from which clinical metadata was derived	Free text or controlled vocabulary of metadata sources			true
+21	AMP-AD		cts_mmse30_first_ad_dx	Mini-Mental State Examination (MMSE-30) score at first Alzheimer's disease diagnosis	0-30			true
+22	AMP-AD		cts_mmse30_lv	Mini-Mental State Examination (MMSE-30) total score at last visit	0-30			true
+23	AMP-AD		dataContributionGroup					true
+25	AMP-AD		dcfdx_lv	Lewy Body Variant Diagnostic Indicator	Categorical values indicating presence or classification of Lewy body variant pathology			true
+26	AMP-AD		derivedOutcomeBasedOnMayoDx	Derived clinical outcome classification based on Mayo Clinic diagnostic criteria	Categorical values determined by Mayo diagnostic algorithm			true
+30	AMP-AD		exclude	Flag indicating whether data should be excluded from analysis	True | False | 1 | 0			true
+31	AMP-AD		excludeReason	Reason for exclusion from study or analysis	Text or enumerated value describing exclusion criteria			true
+32	AMP-AD		fastingState	Indicates whether the subject was in a fasting state at the time of specimen collection or clinical assessment	Fasted | Non-Fasted | Unknown			true
+36	AMP-AD		isPostMortem	Indicator of whether the data or sample was collected post-mortem	True | False			true
+39	AMP-AD		organ	Organ or tissue type from which biospecimen was collected	Brain | Heart | Liver | Kidney | Lung | Spleen | Blood | CSF | Other			true
+42	AMP-AD		projid	Project Identifier	String			true
+44	AMP-AD		reag					true
+45	AMP-AD		sampleStatus	Current status or condition of the biological sample	Available | Depleted | Quarantined | In Use | Pending QC | Failed QC			true
+46	AMP-AD		samplingAge	Age of participant at time of sample collection	Age in years, non-negative numeric value		years	true
+47	AMP-AD		samplingAgeUnits	Unit of time measurement for the age at which the biological sample was collected	years | months | days | weeks			true
+48	AMP-AD		samplingDate	Date when biological sample was collected	ISO 8601 format (YYYY-MM-DD)			true
+50	AMP-AD		specimenIdSource	Source system or organization that assigned the specimen identifier	Free text			true
+51	AMP-AD		specimenMetadataSource	Source system or database from which specimen metadata was obtained	Free text or enumerated source identifiers			true
+52	AMP-AD		Study	Identifier of the research study or cohort from which the data was collected	Free text or controlled vocabulary of study names			true
+53	AMP-AD	Enrollment_dictionary.csv	study_arm	Cohort (PD, healthy control, subjects with Scans Without Evidence of Dopaminergic Deficit [SWEDD], Prodromal, Genetic Cohort PD, or Genetic Cohort Unaffected) determined by the inclusion/exclusion criteria established in the study protocol. A given participant's cohort does not change over time, even if the participant develops or is later found to have characteristics of another cohort .				true
+54	AMP-AD		tissue	Tissue the biosample is a component of	adipose tissue | liver tissue | muscle tissue | pancreatic tissue | kidney tissue | other			true
+55	AMP-AD		tissueVolume	Volume of tissue sample measured			mm^3	true
+56	AMP-AD		tissueWeight	Weight of tissue sample collected	Positive numeric value, typically in grams or milligrams			true
+58	AMP-AD		visitNumber	Sequential number assigned to each study visit	Positive integers starting from 1			true
+60	AMP-CMD		Age	Age at which subject was enrolled in study or age at corresponding visit and data collection event.	Range: 0-120 years			true
+61	AMP-CMD		age.range	Age Range	Categorical age groups (e.g., 18-30, 31-45, 46-60, 61-75, 76+)			true
+62	AMP-CMD		age__unit__ontology_label	Ontology label for the unit of measurement used to express age	year | month | week | day			true
+64	AMP-CMD		Age_binned	Age categorized into predefined bins or ranges	Categorical bins (e.g., <40, 40-49, 50-59, 60-69, 70+)			true
+65	AMP-CMD		ageUnits	The unit of measure used for `ageEnrollment` and `ageDiagnosis`	years | months			true
+66	AMP-CMD		ancestry	Genetic ancestry or ancestral background of the participant	Free text or standardized ancestry categories (e.g., European, African, East Asian, South Asian, Hispanic/Latino, Native American, Middle Eastern, Mixed)			true
+67	AMP-CMD		ancestry__ontology_id	Ontology identifier for participant ancestry	Ontology term ID (e.g., HANCESTRO:0008, HANCESTRO:0014)			true
+68	AMP-CMD		ancestry__ontology_label	Standardized ontology term label for participant ancestry	Ontology-based controlled vocabulary (e.g., HANCESTRO)			true
+69	AMP-CMD		Ballooning	Hepatocyte ballooning assessment score	0=None; 1=Few balloon cells; 2=Many cells/prominent ballooning			true
+71	AMP-CMD		BMI	Body Mass Index	Range: 10-100 kg/m²			true
+72	AMP-CMD		bmi.range	Body Mass Index Range Category	Underweight (<18.5) | Normal weight (18.5-24.9) | Overweight (25-29.9) | Obese Class I (30-34.9) | Obese Class II (35-39.9) | Obese Class III (>=40)			true
+73	AMP-CMD		bmi__unit__ontology_label	Ontology label for the unit of measurement used for Body Mass Index	Standardized ontology term (e.g., kg/m^2, kilograms per square meter)			true
+75	AMP-CMD		compartment	Anatomical or cellular compartment where measurement or sample was obtained	plasma | serum | whole blood | intracellular | extracellular | tissue | cell lysate | subcellular fraction			true
+77	AMP-CMD		development_stage	Developmental or life stage of the subject at time of assessment	Enumerated values: embryonic, fetal, neonatal, infant, child, adolescent, adult, elderly			true
+78	AMP-CMD		development_stage_ontology_term_id	Ontology term identifier for developmental stage	Ontology term ID (e.g., HsapDv:0000087, UBERON:0000113)			true
+79	AMP-CMD		diabetes_history	History of diabetes mellitus diagnosis and treatment	Free text or structured data describing diabetes history including type, duration, treatment, and complications			true
+82	AMP-CMD		disease	Disease or condition diagnosis	Controlled vocabulary of metabolic disease classifications			true
+83	AMP-CMD		disease__ontology_id	Disease Ontology Identifier	Ontology identifier (e.g., MONDO, DOID, SNOMED CT)			true
+84	AMP-CMD		disease__ontology_label	Standardized disease term from ontology	Ontology-based disease label			true
+85	AMP-CMD		disease_category	Classification of metabolic disease type	Categorical values representing major metabolic disease classifications			true
+86	AMP-CMD		disease_ontology_term_id	Disease Ontology standardized identifier	Ontology term identifier (e.g., DOID:####)			true
+87	AMP-CMD		disease_status	Classification of the participant's current disease state or condition status	Controlled vocabulary: Active | Remission | Progression | Stable | Resolved | Unknown			true
+88	AMP-CMD		diseasetype	Classification or category of metabolic disease	Enumerated list of metabolic disease types (e.g., Type 2 Diabetes, NAFLD, Obesity, Metabolic Syndrome)			true
+89	AMP-CMD		donor_id	Donor Identifier	String			true
+90	AMP-CMD		eGFR	Estimated Glomerular Filtration Rate	Range: 0-200 mL/min/1.73m²			true
+92	AMP-CMD		ethnicity__ontology_id	Standardized ontology identifier for participant ethnicity	Ontology identifiers (e.g., HANCESTRO, NCIT, MONDO codes)			true
+93	AMP-CMD		ethnicity__ontology_label	Ontology-based standardized label for participant ethnicity	Standard ontology terms (e.g., HANCESTRO, OMRSE)			true
+94	AMP-CMD		Fat.distribution	Body fat distribution	Abdominal/Central | Peripheral | Generalized | Normal			true
+95	AMP-CMD		Fibrosis.stage	Histological stage of liver fibrosis	F0 (No fibrosis) | F1 (Portal fibrosis) | F2 (Periportal fibrosis) | F3 (Bridging fibrosis) | F4 (Cirrhosis)			true
+97	AMP-CMD		height	Standing height of subject.				true
+98	AMP-CMD		Hepatocyte.necrosis	Presence or severity of hepatocyte necrosis observed in liver tissue	Absent;Minimal;Mild;Moderate;Severe			true
+99	AMP-CMD		hypertension	Indicator of hypertension diagnosis or presence of high blood pressure	True, False, Yes, No, 1, 0			true
+100	AMP-CMD		ID	Unique identifier assigned to each study participant	Must be unique across all participants			true
+101	AMP-CMD		is_primary_data	Indicator of whether the data represents primary source data	true, false			true
+102	AMP-CMD		Lobular.inflammation	Assessment of inflammatory infiltrate within hepatic lobules	0=None, 1=Minimal, 2=Mild, 3=Moderate, 4=Severe			true
+104	AMP-CMD		modality	Type or method of clinical assessment, diagnostic procedure, or imaging technique used	Free text or controlled vocabulary (e.g., MRI, CT, Ultrasound, Clinical Examination, Laboratory Test, Questionnaire)			true
+105	AMP-CMD		observation_joinid	Observation Join Identifier	Unique identifier			true
+106	AMP-CMD		organ__ontology_label	Organ Ontology Label	Text value from standardized ontology			true
+107	AMP-CMD		organism	Organism that biosample originated from. Organism meta-data record must already exist in CMDGA	Homo sapiens | Mus musculus | Rattus norvegicus			true
+108	AMP-CMD		phase	Study phase or disease phase indicator	String			true
+109	AMP-CMD		Portal.inflammation	Measurement or assessment of inflammation in portal region	Numeric value or scale score			true
+111	AMP-CMD		region	Anatomical or geographical region associated with the observation or sample	Free text or controlled vocabulary			true
+112	AMP-CMD		sample	Biological sample identifier	String			true
+113	AMP-CMD		sample_id	Sample Identifier	String			true
+114	AMP-CMD		sample_type	Type of biospecimen used for analysis, e.g. CSF, Plasma, Serum, Blood, RNA	CSF, Plasma, RNA, Serum			true
+115	AMP-CMD		self_reported_ethnicity_ontology_term_id	Ontology term identifier for participant's self-reported ethnicity	Ontology term ID (e.g., HANCESTRO, NCIT, or other standardized ethnicity ontology)			true
+117	AMP-CMD		sex_ontology_term_id	Ontology term identifier for biological sex	Valid ontology term ID (e.g., PATO:0000383 for female, PATO:0000384 for male)			true
+118	AMP-CMD		species	Species of organism	Homo sapiens | Mus musculus | Rattus norvegicus			true
+119	AMP-CMD		Steatosis.grade	Histological grade of hepatic steatosis	0-3 (0=<5% hepatocytes affected, 1=5-33%, 2=34-66%, 3=>66%)			true
+120	AMP-CMD	Enrollment_dictionary.csv	study_arm	Cohort (PD, healthy control, subjects with Scans Without Evidence of Dopaminergic Deficit [SWEDD], Prodromal, Genetic Cohort PD, or Genetic Cohort Unaffected) determined by the inclusion/exclusion criteria established in the study protocol. A given participant's cohort does not change over time, even if the participant develops or is later found to have characteristics of another cohort .				true
+121	AMP-CMD		tissue	Tissue the biosample is a component of	Enumerated: adipose tissue, liver tissue, muscle tissue, pancreatic tissue, kidney tissue, other			true
+122	AMP-CMD		tissue__ontology_label	Tissue Ontology Label	Ontology-based standardized tissue type label			true
+123	AMP-CMD		tissue_type	Type of tissue collected or analyzed	Enumeration: adipose tissue, liver tissue, skeletal muscle, pancreatic tissue, blood vessel, kidney tissue, heart tissue, brain tissue, skin, other			true
+125	AMP-PD		age_at_diagnosis_pd	Age At Parkinson's Disease Diagnosis				true
+146	AMP-PD		case_control_other_at_baseline	Case-Control-Other Status at Baseline	Case, Control, Other			true
+156	AMP-PD		diagnosis_at_baseline	Diagnosis at Baseline	Controlled vocabulary of diagnoses; specific values depend on disease area			true
+159	AMP-PD	DTI_dictionary.csv	dti_measure	Brain tissue being measured				true
+179	AMP-PD	PD_Medical_History_dictionary.csv	initial_diagnosis	Initial Diagnosis				true
+248	AMP-PD	Modified_Schwab___England_ADL_dictionary.csv	mod_schwab_england_on_off_med	Clinical State On Medication				true
+251	AMP-PD	PD_Medical_History_dictionary.csv	most_recent_diagnosis	Most recent diagnosis				true
+337	AMP-PD	Enrollment_dictionary.csv	prodromal_category	At-risk for PD individuals having the same diagnosis as healthy controls with enrollment criterion hyposmia or REM Sleep Behavior Disorder. The rest are Unknown/Not collected as enrollment criterion				true
+373	AMP-PD		sample_type	Type of biospecimen used for analysis, e.g. CSF, Plasma, Serum, Blood, RNA	CSF, Plasma, RNA, Serum			true
+390	AMP-PD	Enrollment_dictionary.csv	study_arm	Cohort (PD, healthy control, subjects with Scans Without Evidence of Dopaminergic Deficit [SWEDD], Prodromal, Genetic Cohort PD, or Genetic Cohort Unaffected) determined by the inclusion/exclusion criteria established in the study protocol. A given participant's cohort does not change over time, even if the participant develops or is later found to have characteristics of another cohort .				true
+391	AMP-PD	PD_Medical_History_dictionary.csv	surgery_for_parkinson_disease	Type Of Surgery For Parkinson Disease				true
+392	AMP-PD		test_name	Name of the biospecimen test	Abeta, Tau, beta-glucocerebrosidase, p-Tau			true
+393	AMP-PD		test_units	Biospecimen test units of measure	%CV, Average (pmol/min/mL), Ct Avg, RFU, Stdev, mg/mL, ng/mL, pg/mL, ug/mL			true
+394	AMP-PD		test_value	Biospecimen test result (numeric)	-10-713, 0-22, 1-3710, 49-354600			true
+398	AMP-PD	Smoking_and_alcohol_history_dictionary.csv	tobacco_product_type	Type of tobacco product that has been used				true
+529	AMP-PD	UPDRS_dictionary.csv	updrs1_on_medication	UPDRS Part 1 - Clinical State On Medication				true
+531	AMP-PD	UPDRS_dictionary.csv	updrs2_on_medication	UPDRS Part 2 - Clinical State On Medication				true
+540	AMP-PD (consolidated UPD143 + UPD2HY)		mds_updrs_hoehn_yahr_stage	Hoehn and Yahr Stage — consolidated across original UPDRS (UPD143) and MDS-UPDRS (UPD2HY) since the Modified H&Y scale is version-independent.	0 | 1 | 1.5 | 2 | 2.5 | 3 | 4 | 5			true
+541	AMP-RA-SLE		age	Age at which subject was enrolled in study or age at corresponding visit and data collection event.	Range: 0-120 years			true
+543	AMP-RA-SLE		ageUnits	The unit of measure used for `ageEnrollment` and `ageDiagnosis`	years | months			true
+544	AMP-RA-SLE		CDASI	Cutaneous Dermatomyositis Disease Area and Severity Index, is a measurement used to characterize cutaneous dermatomyositis severity.	Range: 0-100			true
+545	AMP-RA-SLE		comorbidities	Any diseases or medical condition that is simultaneously present in addition to `diagnosis`.	diabetes | cardiovascular disease | pulmonary disease | autoimmune thyroid disease | inflammatory bowel disease | psoriasis | multiple sclerosis | systemic lupus erythematosus | rheumatoid arthritis | psoriatic arthritis | Hashimoto's Thyroiditis | other			true
+549	AMP-RA-SLE		height	Standing height of subject.				true
+551	AMP-RA-SLE		PASI	Psoriasis Area and Severity Index, is a measurement of the discoloration, thickness, scaling, and coverage of psoriasis plaques.	Range: 0-72			true
+552	AMP-RA-SLE		program	Name of the funding program that supported the generation of data and associated files	AMP RA/SLE | AMP AIM | Community Contribution			true
+553	AMP-RA-SLE		project	A sub-level attribute of `program` specifying a research initiative working to investigate particular hypotheses.	RA | SLE | AIM for RA | STAMP | LOCKIT | V-CoRT | ELLIPSS			true
+556	AMP-RA-SLE		VASI	Total body Vitiligo Area Severity Index, a measure of the percentage of vitiligo involvement across the body calculated in terms of hand units.	Range: 0-100; Unit: percentage		percentage	true
+557	AMP-RA-SLE		VETI	Vitiligo Extent Tensity Index measures the extent of vitiligo by a numerical score and combines analysis of extensity and severity of vitiligo to produce a constant and reproducible number.	Range: 0-100			true
+558	AMP-RA-SLE		VIDA	Vitiligo Disease Activity Score, a six-point scale that evaluates the activity of vitiligo	0-6			true
+559	AMP-RA-SLE		vitiligoType	A high-level classification of vitiligo based on the distribution and patterning of lesions across the body.	segmental, non-segmental, mixed, unclassified			true
+560	AMP-RA-SLE		weightUnits	Abbreviated unit of measure of value provided for `weight`.	lb | kg | g | oz			true

@@ -1,0 +1,95 @@
+{
+  "variable": "path_braak_nft",
+  "cde_id": "282",
+  "means": "BRAAK stage for neurofibrillary tangle pathology",
+  "program": "AMP-AD / AMP-PD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "NA"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 3172933,
+      "name": "Braak stage for presence of tau protein accompanying neurofibrillary degeneration in brain",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "NA",
+      "write": {
+        "value_as_concept_id": {
+          "id": 35941270,
+          "name": "NA"
+        },
+        "value_as_string": "NA",
+        "value_source_value": "NA"
+      }
+    },
+    {
+      "value": "5",
+      "write": {
+        "value_as_number": 5,
+        "value_as_string": "5",
+        "value_source_value": "5"
+      }
+    },
+    {
+      "value": "6",
+      "write": {
+        "value_as_number": 6,
+        "value_as_string": "6",
+        "value_source_value": "6"
+      }
+    },
+    {
+      "value": "2",
+      "write": {
+        "value_as_number": 2,
+        "value_as_string": "2",
+        "value_source_value": "2"
+      }
+    },
+    {
+      "value": "4",
+      "write": {
+        "value_as_number": 4,
+        "value_as_string": "4",
+        "value_source_value": "4"
+      }
+    },
+    {
+      "value": "1",
+      "write": {
+        "value_as_number": 1,
+        "value_as_string": "1",
+        "value_source_value": "1"
+      }
+    },
+    {
+      "value": "3",
+      "write": {
+        "value_as_number": 3,
+        "value_as_string": "3",
+        "value_source_value": "3"
+      }
+    }
+  ],
+  "links": [],
+  "derived_from": [],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "manual_approval": true
+}

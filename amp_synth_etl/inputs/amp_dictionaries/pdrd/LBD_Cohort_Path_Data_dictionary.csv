@@ -1,0 +1,9 @@
+TableName,ColumnName,Title,Description,Required,DataType,DataTypeRange,UniqueValues
+LBD_Cohort_Path_Data.csv,participant_id,Study Subject ID,Study Subject ID,TRUE,String,,
+LBD_Cohort_Path_Data.csv,GUID,Subject ID,Global Unique ID (USUBJID),FALSE,String,,
+LBD_Cohort_Path_Data.csv,visit_name,Visit Name,"Visit name: M - in months, SC - screening visit, LOG - records without visit; #2 or #3 define repated records at the same visit or repeated visit",TRUE,String,,
+LBD_Cohort_Path_Data.csv,visit_month,Visit Month,"Numeric visit in months; for visits prior baseline -1, -2 is an order of screening visits",FALSE,Float,,
+LBD_Cohort_Path_Data.csv,path_cerad,CERAD score,CERAD score ,FALSE,Enumeration,,0; A; B; C; NA
+LBD_Cohort_Path_Data.csv,path_braak_nft,BRAAK stage neurofibrillary tangle,BRAAK stage for neurofibrillary tangle pathology,FALSE,Enumeration,,0; 1; 2; 3; 4; 5; 6; NA
+LBD_Cohort_Path_Data.csv,path_braak_lb,BRAAK stage Lewy body,BRAAK stage for Lewy body pathology,FALSE,Enumeration,,0; 1; 2; 3; 4; 5; 6; NA
+LBD_Cohort_Path_Data.csv,path_dlb_prob,DLB probability,Likelihood of DLB based on McKeith criteria,FALSE,Enumeration,,Low Likelihood; Intermediate Likelihood; High Likelihood; NA

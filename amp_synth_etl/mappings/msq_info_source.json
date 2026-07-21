@@ -1,0 +1,38 @@
+{
+  "variable": "msq_info_source",
+  "cde_id": "271",
+  "means": "MSQ Source Of Information",
+  "program": "AMP-PD",
+  "grain": "visit",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "Subject",
+      "Informant"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 42529257,
+      "name": "Respondent type",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "Informant",
+      "write": {
+        "value_as_string": "Informant",
+        "value_source_value": "Informant"
+      }
+    }
+  ],
+  "links": [],
+  "derived_from": [],
+  "anchored_to": {
+    "person_id": "staging.person_map",
+    "visit_occurrence_id": "cdm.visit_occurrence"
+  },
+  "manual_approval": true
+}

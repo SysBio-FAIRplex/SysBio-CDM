@@ -1,0 +1,80 @@
+{
+  "variable": "amyAny",
+  "cde_id": "9",
+  "means": "Presence of any amyloid pathology",
+  "program": "AMP-AD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "0",
+      "1",
+      "Missing or unknown"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 4288616,
+      "name": "Amyloid deposition",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "1",
+      "write": {
+        "value_as_number": 1,
+        "value_as_string": "1",
+        "value_source_value": "1"
+      }
+    },
+    {
+      "value": "Missing or unknown",
+      "write": {
+        "value_as_concept_id": {
+          "id": 45877986,
+          "name": "Unknown"
+        },
+        "value_as_string": "Missing or unknown",
+        "value_source_value": "Missing or unknown"
+      }
+    },
+    {
+      "value": "0",
+      "write": {
+        "value_as_number": 0,
+        "value_as_string": "0",
+        "value_source_value": "0"
+      }
+    }
+  ],
+  "links": [
+    {
+      "kind": "derivation",
+      "related_variable": "amyCerad",
+      "related_concept": {
+        "id": 3519134,
+        "name": "CERAD scoring for presence of neuritic plaques",
+        "domain": "Measurement"
+      },
+      "related_table": "measurement",
+      "related_value_set": [
+        "None/No AD/C0",
+        "Sparse/Possible/C1",
+        "Moderate/Probable/C2",
+        "Frequent/Definite/C3",
+        "Missing or unknown"
+      ],
+      "relationship": "",
+      "mechanism": ""
+    }
+  ],
+  "derived_from": [
+    "amyCerad"
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "manual_approval": true
+}

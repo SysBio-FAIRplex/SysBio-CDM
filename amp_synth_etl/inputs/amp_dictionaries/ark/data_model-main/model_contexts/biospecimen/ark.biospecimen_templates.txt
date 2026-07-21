@@ -1,0 +1,2 @@
+BiospecimenMetadataTemplate	biospecimen
+InVitroBiospecimenMetadataTemplate	biospecimen

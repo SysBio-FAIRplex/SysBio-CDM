@@ -1,0 +1,53 @@
+{
+  "variable": "upsit_performed",
+  "cde_id": "534",
+  "means": "UPSIT Performed Indicator",
+  "program": "AMP-PD",
+  "grain": "visit",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "Completed",
+      "Not completed",
+      "Partially completed"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 3654978,
+      "name": "Assessment using University of Pennsylvania Smell Identification Test",
+      "domain": "Measurement"
+    }
+  },
+  "value_map": [
+    {
+      "value": "Completed",
+      "write": {
+        "value_as_string": "Completed",
+        "value_source_value": "Completed"
+      }
+    },
+    {
+      "value": "Not completed",
+      "write": {
+        "value_as_string": "Not completed",
+        "value_source_value": "Not completed"
+      }
+    },
+    {
+      "value": "Partially completed",
+      "write": {
+        "value_as_string": "Partially completed",
+        "value_source_value": "Partially completed"
+      }
+    }
+  ],
+  "links": [],
+  "derived_from": [],
+  "anchored_to": {
+    "person_id": "staging.person_map",
+    "visit_occurrence_id": "cdm.visit_occurrence"
+  },
+  "manual_approval": true
+}

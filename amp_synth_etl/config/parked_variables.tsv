@@ -1,0 +1,5 @@
+variable	reason	parked_on
+disease	Value set undefined by AMP-CMD; likely ICD codes in source — must confirm before mapping	2026-07-20
+mayoDx	Actual value set is missing	2026-07-20
+mms101c_month	CMS is not the same assessment as MMSE — cannot use as-is	2026-07-20
+mms101d_day	CMS is not the same assessment as MMSE — cannot use as-is	2026-07-20

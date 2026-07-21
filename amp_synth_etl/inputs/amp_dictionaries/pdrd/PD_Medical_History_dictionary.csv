@@ -1,0 +1,21 @@
+TableName,ColumnName,Title,Description,Required,DataType,DataTypeRange,UniqueValues
+PD_Medical_History.csv,participant_id,Study Subject ID,Study Subject ID,TRUE,String,,
+PD_Medical_History.csv,GUID,Subject ID,Global Unique ID (USUBJID),FALSE,String,,
+PD_Medical_History.csv,visit_name,Visit Name,"Visit name: M - in months, SC - screening visit, LOG - records without visit; #2 or #3 define repated records at the same visit or repeated visit",TRUE,String,,
+PD_Medical_History.csv,visit_month,Visit Month,"Numeric visit in months; for visits prior baseline -1, -2 is an order of screening visits",FALSE,Float,,
+PD_Medical_History.csv,diagnosis,Diagnosis,"The diagnosis is an opportunity for the site investigator to give their opinion on a participant's most likely clinical diagnosis, regardless of cohort. The diagnosis may change over time because the site investigator may update the diagnosis at every longitudinal visit based on their opinion. ",FALSE,String,,
+PD_Medical_History.csv,initial_diagnosis,Diagnosis,Initial Diagnosis,FALSE,String,,
+PD_Medical_History.csv,most_recent_diagnosis,Diagnosis,Most recent diagnosis,FALSE,String,,
+PD_Medical_History.csv,change_in_diagnosis,Change In Diagnosis,Change In Diagnosis Indicator,FALSE,Enumeration,,No;Yes
+PD_Medical_History.csv,change_in_diagnosis_months_after_baseline,Change In Diagnosis Date,Number of months after baseline visit at which Change in Diagnosis occurred; negative values indicate Change in Diagnosis occurred before baseline,FALSE,Float,,
+PD_Medical_History.csv,surgery_for_parkinson_disease,Surgery For Parkinson Disease,Type Of Surgery For Parkinson Disease,FALSE,String,,
+PD_Medical_History.csv,pd_diagnosis_months_after_baseline,PD Diagnosis Date,Number of months after baseline visit at which Parkinson's Disease Diagnosis occurred; negative values indicate Parkinson's Disease Diagnosis occurred before baseline,FALSE,Float,,
+PD_Medical_History.csv,age_at_diagnosis,PD Diagnosis Age,Age At Parkinson's Disease Diagnosis,FALSE,Integer,0 - 92,
+PD_Medical_History.csv,pd_medication_initiation_months_after_baseline,Initiation Of PD medication,Number of months after baseline visit at which PD Medication Initiation occurred; negative values indicate PD Medication Initiation occurred before baseline,FALSE,Float,,
+PD_Medical_History.csv,pd_medication_start_months_after_baseline,Start Of PD medication,Number of months after baseline visit at which PD Medication Start occurred; negative values indicate PD Medication Start occurred before baseline,FALSE,Float,,
+PD_Medical_History.csv,use_of_pd_medication,Use Of PD medication,Is Subject On Medication For PD?,FALSE,Enumeration,,No;Yes;Unknown
+PD_Medical_History.csv,pd_medication_recent_use_months_after_baseline,Use Of PD medication,Number of months after baseline visit at which Most Recent Use of PD Medication occurred; negative values indicate Most Recent Use of PD Medication occurred before baseline,FALSE,Float,,
+PD_Medical_History.csv,on_levodopa,Use Of PD medication,Is Subject Taking Levodopa?,FALSE,Enumeration,,No;Yes;Unknown
+PD_Medical_History.csv,on_dopamine_agonist,Use Of PD medication,Is Subject Taking A Dopamine Agonist?,FALSE,Enumeration,,No;Yes;Unknown
+PD_Medical_History.csv,on_other_pd_medications,Use Of PD medication,Is Subject Taking Some Other PD Medication(s)?,FALSE,Enumeration,,No;Yes;Unknown
+PD_Medical_History.csv,diagnosis_type,Diagnosis Type,How was diagnosis made?,FALSE,Enumeration,,Clinical;Pathological;Unknown

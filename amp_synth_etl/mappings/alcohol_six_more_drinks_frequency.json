@@ -1,0 +1,101 @@
+{
+  "variable": "alcohol_six_more_drinks_frequency",
+  "cde_id": "136",
+  "means": "Alcohol consume six or more drinks frequency",
+  "program": "AMP-PD",
+  "grain": "visit",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "Never",
+      "Less than monthly",
+      "Unknown",
+      "Monthly",
+      "Daily or almost daily",
+      "Weekly"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 35811112,
+      "name": "Frequency of consuming six or more units of alcohol",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "Daily or almost daily",
+      "write": {
+        "value_as_concept_id": {
+          "id": 35817658,
+          "name": "Daily or almost daily"
+        },
+        "value_as_string": "Daily or almost daily",
+        "value_source_value": "Daily or almost daily"
+      }
+    },
+    {
+      "value": "Unknown",
+      "write": {
+        "value_as_concept_id": {
+          "id": 45877986,
+          "name": "Unknown"
+        },
+        "value_as_string": "Unknown",
+        "value_source_value": "Unknown"
+      }
+    },
+    {
+      "value": "Never",
+      "write": {
+        "value_as_concept_id": {
+          "id": 35821333,
+          "name": "Never"
+        },
+        "value_as_string": "Never",
+        "value_source_value": "Never"
+      }
+    },
+    {
+      "value": "Weekly",
+      "write": {
+        "value_as_concept_id": {
+          "id": 35825059,
+          "name": "Weekly"
+        },
+        "value_as_string": "Weekly",
+        "value_source_value": "Weekly"
+      }
+    },
+    {
+      "value": "Monthly",
+      "write": {
+        "value_as_concept_id": {
+          "id": 35821021,
+          "name": "Monthly"
+        },
+        "value_as_string": "Monthly",
+        "value_source_value": "Monthly"
+      }
+    },
+    {
+      "value": "Less than monthly",
+      "write": {
+        "value_as_concept_id": {
+          "id": 35820303,
+          "name": "Less than monthly"
+        },
+        "value_as_string": "Less than monthly",
+        "value_source_value": "Less than monthly"
+      }
+    }
+  ],
+  "links": [],
+  "derived_from": [],
+  "anchored_to": {
+    "person_id": "staging.person_map",
+    "visit_occurrence_id": "cdm.visit_occurrence"
+  },
+  "manual_approval": true
+}

@@ -1,0 +1,2860 @@
+{
+  "profile": "tabular-data-package",
+  "name": "cmd-participant-data-dictionaries",
+  "title": "AMP-CMD participant data dictionaries (Frictionless Table Schema)",
+  "description": "Value-set schemas for the harmonized AMP-CMD tissue-atlas participant data, one resource per study, one field per column. Coded responses (incl. 97/99 special codes, NA, unknown) kept as categories; value=source value (KPMP REDCap codes; CELLxGENE obs labels). Empty value sets are gated (FUSION).",
+  "resources": [
+    {
+      "name": "kpmp_kidney",
+      "title": "Kidney (KPMP / Lake 2023)",
+      "profile": "tabular-data-resource",
+      "schema": {
+        "fields": [
+          {
+            "name": "participant_id",
+            "type": "string",
+            "description": "KPMP participant identifier"
+          },
+          {
+            "name": "np_gender",
+            "type": "string",
+            "description": "Sex at birth",
+            "constraints": {
+              "enum": [
+                "1",
+                "2"
+              ]
+            },
+            "categories": [
+              {
+                "value": "1",
+                "label": "Male"
+              },
+              {
+                "value": "2",
+                "label": "Female"
+              }
+            ]
+          },
+          {
+            "name": "np_age",
+            "type": "number",
+            "description": "Participant age (released as range in open file)"
+          },
+          {
+            "name": "raceC",
+            "type": "string",
+            "description": "Race (derived from np_race checkboxes)"
+          },
+          {
+            "name": "np_latino_yn",
+            "type": "string",
+            "description": "Hispanic, Latino, or of Spanish origin?",
+            "constraints": {
+              "enum": [
+                "1",
+                "0",
+                "97",
+                "99"
+              ]
+            },
+            "categories": [
+              {
+                "value": "1",
+                "label": "Yes"
+              },
+              {
+                "value": "0",
+                "label": "No"
+              },
+              {
+                "value": "97",
+                "label": "Declined to answer"
+              },
+              {
+                "value": "99",
+                "label": "Don't know"
+              }
+            ]
+          },
+          {
+            "name": "pm_bmi",
+            "type": "number",
+            "description": "BMI"
+          },
+          {
+            "name": "sc_disease_type",
+            "type": "string",
+            "description": "Which condition applies to this participant?",
+            "constraints": {
+              "enum": [
+                "1",
+                "2",
+                "4",
+                "5",
+                "6"
+              ]
+            },
+            "categories": [
+              {
+                "value": "1",
+                "label": "Diabetic kidney disease (DKD)"
+              },
+              {
+                "value": "2",
+                "label": "Hypertensive CKD (H-CKD)"
+              },
+              {
+                "value": "4",
+                "label": "AKI Percutaneous Biopsy"
+              },
+              {
+                "value": "5",
+                "label": "AKI Open Biopsy"
+              },
+              {
+                "value": "6",
+                "label": "Diabetic Nephropathy Resistors Percutaneous Biopsy"
+              }
+            ]
+          },
+          {
+            "name": "disease_categoryC",
+            "type": "string",
+            "description": "Condition (derived from sc_disease_type)",
+            "constraints": {
+              "enum": [
+                "CKD (",
+                "AKI",
+                "Diabetic Nephropathy Resistor"
+              ]
+            },
+            "categories": [
+              {
+                "value": "CKD (",
+                "label": "DKD or H-CKD)"
+              },
+              {
+                "value": "AKI",
+                "label": "AKI"
+              },
+              {
+                "value": "Diabetic Nephropathy Resistor",
+                "label": "Diabetic Nephropathy Resistor"
+              }
+            ]
+          },
+          {
+            "name": "max_kdigo_scrC",
+            "type": "integer",
+            "description": "Maximum KDIGO stage by serum creatinine (AKI only)",
+            "constraints": {
+              "minimum": 1,
+              "maximum": 3
+            }
+          },
+          {
+            "name": "ckd_stageC",
+            "type": "string",
+            "description": "CKD stage / KDIGO risk (CKD or DN-Resistor; from uACR & eGFR)",
+            "constraints": {
+              "enum": [
+                "low risk",
+                "moderately increased risk",
+                "high risk",
+                "very high risk"
+              ]
+            },
+            "categories": [
+              {
+                "value": "low risk",
+                "label": "low risk"
+              },
+              {
+                "value": "moderately increased risk",
+                "label": "moderately increased risk"
+              },
+              {
+                "value": "high risk",
+                "label": "high risk"
+              },
+              {
+                "value": "very high risk",
+                "label": "very high risk"
+              }
+            ]
+          },
+          {
+            "name": "mh_diabetes_yn",
+            "type": "string",
+            "description": "Told by provider you have diabetes?",
+            "constraints": {
+              "enum": [
+                "1",
+                "0",
+                "99"
+              ]
+            },
+            "categories": [
+              {
+                "value": "1",
+                "label": "Yes"
+              },
+              {
+                "value": "0",
+                "label": "No"
+              },
+              {
+                "value": "99",
+                "label": "Don't know"
+              }
+            ]
+          },
+          {
+            "name": "mh_diabetes_type",
+            "type": "string",
+            "description": "Type of diabetes (if diabetic)",
+            "constraints": {
+              "enum": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "99"
+              ]
+            },
+            "categories": [
+              {
+                "value": "1",
+                "label": "Type 1"
+              },
+              {
+                "value": "2",
+                "label": "Type 2"
+              },
+              {
+                "value": "3",
+                "label": "Diabetes due to steroids"
+              },
+              {
+                "value": "4",
+                "label": "MODY"
+              },
+              {
+                "value": "5",
+                "label": "LADA"
+              },
+              {
+                "value": "99",
+                "label": "Unsure"
+              }
+            ]
+          },
+          {
+            "name": "diabetes_durationC",
+            "type": "number",
+            "description": "Diabetes duration = np_age - mh_diabetes_age"
+          },
+          {
+            "name": "mh_ht_yn",
+            "type": "string",
+            "description": "Told you have high blood pressure/hypertension?",
+            "constraints": {
+              "enum": [
+                "1",
+                "0",
+                "99"
+              ]
+            },
+            "categories": [
+              {
+                "value": "1",
+                "label": "Yes"
+              },
+              {
+                "value": "0",
+                "label": "No"
+              },
+              {
+                "value": "99",
+                "label": "Don't know"
+              }
+            ]
+          },
+          {
+            "name": "ht_durationC",
+            "type": "number",
+            "description": "Hypertension duration = np_age - mh_ht_age"
+          },
+          {
+            "name": "bp_type",
+            "type": "string",
+            "description": "Biopsy procedure type",
+            "constraints": {
+              "enum": [
+                "1",
+                "2"
+              ]
+            },
+            "categories": [
+              {
+                "value": "1",
+                "label": "Percutaneous"
+              },
+              {
+                "value": "2",
+                "label": "Open"
+              }
+            ]
+          },
+          {
+            "name": "bp_guidance",
+            "type": "string",
+            "description": "Procedure guidance (if percutaneous)",
+            "constraints": {
+              "enum": [
+                "1",
+                "2",
+                "98"
+              ]
+            },
+            "categories": [
+              {
+                "value": "1",
+                "label": "CT"
+              },
+              {
+                "value": "2",
+                "label": "Ultrasound"
+              },
+              {
+                "value": "98",
+                "label": "Other"
+              }
+            ]
+          },
+          {
+            "name": "bp_laterality",
+            "type": "string",
+            "description": "Biopsy laterality",
+            "constraints": {
+              "enum": [
+                "1",
+                "2"
+              ]
+            },
+            "categories": [
+              {
+                "value": "1",
+                "label": "Left"
+              },
+              {
+                "value": "2",
+                "label": "Right"
+              }
+            ]
+          },
+          {
+            "name": "bp_location",
+            "type": "string",
+            "description": "Biopsy location",
+            "constraints": {
+              "enum": [
+                "1",
+                "2",
+                "3"
+              ]
+            },
+            "categories": [
+              {
+                "value": "1",
+                "label": "Upper pole"
+              },
+              {
+                "value": "2",
+                "label": "Middle"
+              },
+              {
+                "value": "3",
+                "label": "Lower pole"
+              }
+            ]
+          },
+          {
+            "name": "mh_retinopathy_yn",
+            "type": "string",
+            "description": "Diabetic retinopathy / eye disease (if diabetic)",
+            "constraints": {
+              "enum": [
+                "1",
+                "0",
+                "97",
+                "99"
+              ]
+            },
+            "categories": [
+              {
+                "value": "1",
+                "label": "Yes"
+              },
+              {
+                "value": "0",
+                "label": "No"
+              },
+              {
+                "value": "97",
+                "label": "Declined to answer"
+              },
+              {
+                "value": "99",
+                "label": "Don't know"
+              }
+            ]
+          },
+          {
+            "name": "mh_dm_neuropathy_yn",
+            "type": "string",
+            "description": "Diabetic neuropathy (if diabetic)",
+            "constraints": {
+              "enum": [
+                "1",
+                "0",
+                "99"
+              ]
+            },
+            "categories": [
+              {
+                "value": "1",
+                "label": "Yes"
+              },
+              {
+                "value": "0",
+                "label": "No"
+              },
+              {
+                "value": "99",
+                "label": "Unsure"
+              }
+            ]
+          },
+          {
+            "name": "mh_dm_pvd",
+            "type": "string",
+            "description": "Peripheral vascular disease (if diabetic)",
+            "constraints": {
+              "enum": [
+                "1",
+                "0",
+                "99"
+              ]
+            },
+            "categories": [
+              {
+                "value": "1",
+                "label": "Yes"
+              },
+              {
+                "value": "0",
+                "label": "No"
+              },
+              {
+                "value": "99",
+                "label": "Unsure"
+              }
+            ]
+          },
+          {
+            "name": "mh_cad_dx_yn",
+            "type": "string",
+            "description": "Coronary artery disease",
+            "constraints": {
+              "enum": [
+                "1",
+                "0",
+                "97",
+                "99"
+              ]
+            },
+            "categories": [
+              {
+                "value": "1",
+                "label": "Yes"
+              },
+              {
+                "value": "0",
+                "label": "No"
+              },
+              {
+                "value": "97",
+                "label": "Declined to answer"
+              },
+              {
+                "value": "99",
+                "label": "Don't know"
+              }
+            ]
+          },
+          {
+            "name": "mh_chol_yn",
+            "type": "string",
+            "description": "High cholesterol",
+            "constraints": {
+              "enum": [
+                "1",
+                "0",
+                "97",
+                "99"
+              ]
+            },
+            "categories": [
+              {
+                "value": "1",
+                "label": "Yes"
+              },
+              {
+                "value": "0",
+                "label": "No"
+              },
+              {
+                "value": "97",
+                "label": "Declined to answer"
+              },
+              {
+                "value": "99",
+                "label": "Don't know"
+              }
+            ]
+          },
+          {
+            "name": "mh_hf_dx_yn",
+            "type": "string",
+            "description": "Heart failure",
+            "constraints": {
+              "enum": [
+                "1",
+                "0",
+                "97",
+                "99"
+              ]
+            },
+            "categories": [
+              {
+                "value": "1",
+                "label": "Yes"
+              },
+              {
+                "value": "0",
+                "label": "No"
+              },
+              {
+                "value": "97",
+                "label": "Declined to answer"
+              },
+              {
+                "value": "99",
+                "label": "Don't know"
+              }
+            ]
+          },
+          {
+            "name": "mh_stroke_dx_yn",
+            "type": "string",
+            "description": "Stroke / cerebrovascular event",
+            "constraints": {
+              "enum": [
+                "1",
+                "0",
+                "97",
+                "99"
+              ]
+            },
+            "categories": [
+              {
+                "value": "1",
+                "label": "Yes"
+              },
+              {
+                "value": "0",
+                "label": "No"
+              },
+              {
+                "value": "97",
+                "label": "Declined to answer"
+              },
+              {
+                "value": "99",
+                "label": "Don't know"
+              }
+            ]
+          },
+          {
+            "name": "mh_tia_dx_yn",
+            "type": "string",
+            "description": "Transient ischemic attack (TIA)",
+            "constraints": {
+              "enum": [
+                "1",
+                "0",
+                "97",
+                "99"
+              ]
+            },
+            "categories": [
+              {
+                "value": "1",
+                "label": "Yes"
+              },
+              {
+                "value": "0",
+                "label": "No"
+              },
+              {
+                "value": "97",
+                "label": "Declined to answer"
+              },
+              {
+                "value": "99",
+                "label": "Don't know"
+              }
+            ]
+          },
+          {
+            "name": "mh_af_dx_yn",
+            "type": "string",
+            "description": "Arrhythmia (atrial fibrillation/flutter)",
+            "constraints": {
+              "enum": [
+                "1",
+                "0",
+                "97",
+                "99"
+              ]
+            },
+            "categories": [
+              {
+                "value": "1",
+                "label": "Yes"
+              },
+              {
+                "value": "0",
+                "label": "No"
+              },
+              {
+                "value": "97",
+                "label": "Declined to answer"
+              },
+              {
+                "value": "99",
+                "label": "Don't know"
+              }
+            ]
+          },
+          {
+            "name": "mh_clot_dx_yn",
+            "type": "string",
+            "description": "Blood clot / thromboembolic event",
+            "constraints": {
+              "enum": [
+                "1",
+                "0",
+                "97",
+                "99"
+              ]
+            },
+            "categories": [
+              {
+                "value": "1",
+                "label": "Yes"
+              },
+              {
+                "value": "0",
+                "label": "No"
+              },
+              {
+                "value": "97",
+                "label": "Declined to answer"
+              },
+              {
+                "value": "99",
+                "label": "Don't know"
+              }
+            ]
+          },
+          {
+            "name": "mh_cancer_dx_yn",
+            "type": "string",
+            "description": "Cancer",
+            "constraints": {
+              "enum": [
+                "1",
+                "0",
+                "97",
+                "99"
+              ]
+            },
+            "categories": [
+              {
+                "value": "1",
+                "label": "Yes"
+              },
+              {
+                "value": "0",
+                "label": "No"
+              },
+              {
+                "value": "97",
+                "label": "Declined to answer"
+              },
+              {
+                "value": "99",
+                "label": "Don't know"
+              }
+            ]
+          },
+          {
+            "name": "mh_1_kidney_dx_ynC",
+            "type": "string",
+            "description": "1st-degree family h/o kidney disease (not stones)",
+            "constraints": {
+              "enum": [
+                "1",
+                "0"
+              ]
+            },
+            "categories": [
+              {
+                "value": "1",
+                "label": "Yes"
+              },
+              {
+                "value": "0",
+                "label": "No"
+              }
+            ]
+          },
+          {
+            "name": "mh_1_stones_dx_ynC",
+            "type": "string",
+            "description": "1st-degree family h/o kidney stones",
+            "constraints": {
+              "enum": [
+                "1",
+                "0"
+              ]
+            },
+            "categories": [
+              {
+                "value": "1",
+                "label": "Yes"
+              },
+              {
+                "value": "0",
+                "label": "No"
+              }
+            ]
+          },
+          {
+            "name": "education",
+            "type": "string",
+            "description": "Highest grade/level of school completed",
+            "constraints": {
+              "enum": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "97",
+                "99"
+              ]
+            },
+            "categories": [
+              {
+                "value": "1",
+                "label": "Less than 8th grade"
+              },
+              {
+                "value": "2",
+                "label": "8th to 12th grade"
+              },
+              {
+                "value": "3",
+                "label": "High School Graduate, GED or Equivalent"
+              },
+              {
+                "value": "4",
+                "label": "Some College, No Degree"
+              },
+              {
+                "value": "5",
+                "label": "Associate Degree"
+              },
+              {
+                "value": "6",
+                "label": "Vocational or technical school degree"
+              },
+              {
+                "value": "7",
+                "label": "Bachelor's Degree"
+              },
+              {
+                "value": "8",
+                "label": "Graduate Degree"
+              },
+              {
+                "value": "97",
+                "label": "Declined to answer"
+              },
+              {
+                "value": "99",
+                "label": "Don't Know"
+              }
+            ]
+          },
+          {
+            "name": "employment",
+            "type": "string",
+            "description": "Current employment status (check all)",
+            "constraints": {
+              "enum": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "10",
+                "97"
+              ]
+            },
+            "categories": [
+              {
+                "value": "1",
+                "label": "Employed part-time"
+              },
+              {
+                "value": "2",
+                "label": "Employed full-time"
+              },
+              {
+                "value": "3",
+                "label": "Student"
+              },
+              {
+                "value": "4",
+                "label": "Temporarily laid off/on strike"
+              },
+              {
+                "value": "5",
+                "label": "On temporary medical leave"
+              },
+              {
+                "value": "6",
+                "label": "Permanently disabled"
+              },
+              {
+                "value": "7",
+                "label": "Retired, not currently working"
+              },
+              {
+                "value": "8",
+                "label": "Full-time home maker"
+              },
+              {
+                "value": "9",
+                "label": "Unemployed"
+              },
+              {
+                "value": "10",
+                "label": "Not applicable - does not work outside the home"
+              },
+              {
+                "value": "97",
+                "label": "Declined to answer"
+              }
+            ]
+          },
+          {
+            "name": "insurance",
+            "type": "string",
+            "description": "Health insurance / coverage (select all)"
+          },
+          {
+            "name": "income",
+            "type": "string",
+            "description": "Total combined family income, past 12 months",
+            "constraints": {
+              "enum": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "10",
+                "11",
+                "12",
+                "13",
+                "14",
+                "15",
+                "97",
+                "99"
+              ]
+            },
+            "categories": [
+              {
+                "value": "1",
+                "label": "<$5,000"
+              },
+              {
+                "value": "2",
+                "label": "$5,000-$7,999"
+              },
+              {
+                "value": "3",
+                "label": "$8,000-$11,999"
+              },
+              {
+                "value": "4",
+                "label": "$12,000-$15,999"
+              },
+              {
+                "value": "5",
+                "label": "$16,000-$19,999"
+              },
+              {
+                "value": "6",
+                "label": "$20,000-$24,999"
+              },
+              {
+                "value": "7",
+                "label": "$25,000-$29,999"
+              },
+              {
+                "value": "8",
+                "label": "$30,000-$34,999"
+              },
+              {
+                "value": "9",
+                "label": "$35,000-$39,999"
+              },
+              {
+                "value": "10",
+                "label": "$40,000-$49,999"
+              },
+              {
+                "value": "11",
+                "label": "$50,000-$74,999"
+              },
+              {
+                "value": "12",
+                "label": "$75,000-$99,999"
+              },
+              {
+                "value": "13",
+                "label": "$100,000-$124,999"
+              },
+              {
+                "value": "14",
+                "label": "$125,000-$149,999"
+              },
+              {
+                "value": "15",
+                "label": "$150,000 or more"
+              },
+              {
+                "value": "97",
+                "label": "Declined"
+              },
+              {
+                "value": "99",
+                "label": "Don't know"
+              }
+            ]
+          },
+          {
+            "name": "relationship_status",
+            "type": "string",
+            "description": "Marital / partnership status",
+            "constraints": {
+              "enum": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "97",
+                "99"
+              ]
+            },
+            "categories": [
+              {
+                "value": "1",
+                "label": "Married"
+              },
+              {
+                "value": "2",
+                "label": "Widowed"
+              },
+              {
+                "value": "3",
+                "label": "Divorced"
+              },
+              {
+                "value": "4",
+                "label": "Separated"
+              },
+              {
+                "value": "5",
+                "label": "Never married"
+              },
+              {
+                "value": "6",
+                "label": "Living with a partner"
+              },
+              {
+                "value": "97",
+                "label": "Declined"
+              },
+              {
+                "value": "99",
+                "label": "Don't know"
+              }
+            ]
+          },
+          {
+            "name": "mh_alcohol_frequency",
+            "type": "string",
+            "description": "Alcohol frequency, past 12 months",
+            "constraints": {
+              "enum": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "97",
+                "99"
+              ]
+            },
+            "categories": [
+              {
+                "value": "1",
+                "label": "Every day or almost every day"
+              },
+              {
+                "value": "2",
+                "label": "5 to 6 times a week"
+              },
+              {
+                "value": "3",
+                "label": "3 to 4 times a week"
+              },
+              {
+                "value": "4",
+                "label": "1 to 2 times a week"
+              },
+              {
+                "value": "5",
+                "label": "2 to 4 times a month"
+              },
+              {
+                "value": "6",
+                "label": "Once a month"
+              },
+              {
+                "value": "7",
+                "label": "Less than once a month but at least once in past 12 months"
+              },
+              {
+                "value": "8",
+                "label": "Not at all in past 12 months"
+              },
+              {
+                "value": "9",
+                "label": "Never had any beverage containing alcohol"
+              },
+              {
+                "value": "97",
+                "label": "Declined"
+              },
+              {
+                "value": "99",
+                "label": "Don't know"
+              }
+            ]
+          },
+          {
+            "name": "mh_cigarette_yn",
+            "type": "string",
+            "description": "Smoked >=100 cigarettes in your life?",
+            "constraints": {
+              "enum": [
+                "1",
+                "0",
+                "97",
+                "99"
+              ]
+            },
+            "categories": [
+              {
+                "value": "1",
+                "label": "Yes"
+              },
+              {
+                "value": "0",
+                "label": "No"
+              },
+              {
+                "value": "97",
+                "label": "Declined to answer"
+              },
+              {
+                "value": "99",
+                "label": "Don't know"
+              }
+            ]
+          },
+          {
+            "name": "mh_id_sedative",
+            "type": "string",
+            "description": "Illicit/recreational drug use: Sedatives (e.g., pentobarbital, Halcion, Tuinal)",
+            "constraints": {
+              "enum": [
+                "1",
+                "0",
+                "97",
+                "99"
+              ]
+            },
+            "categories": [
+              {
+                "value": "1",
+                "label": "Yes"
+              },
+              {
+                "value": "0",
+                "label": "No"
+              },
+              {
+                "value": "97",
+                "label": "Declined to answer"
+              },
+              {
+                "value": "99",
+                "label": "Don't know"
+              }
+            ]
+          },
+          {
+            "name": "mh_id_painkiller",
+            "type": "string",
+            "description": "Illicit/recreational drug use: Painkillers (e.g., Demerol, Vicodin, OxyContin)",
+            "constraints": {
+              "enum": [
+                "1",
+                "0",
+                "97",
+                "99"
+              ]
+            },
+            "categories": [
+              {
+                "value": "1",
+                "label": "Yes"
+              },
+              {
+                "value": "0",
+                "label": "No"
+              },
+              {
+                "value": "97",
+                "label": "Declined to answer"
+              },
+              {
+                "value": "99",
+                "label": "Don't know"
+              }
+            ]
+          },
+          {
+            "name": "mh_id_mj",
+            "type": "string",
+            "description": "Illicit/recreational drug use: Marijuana (weed, pot, dope)",
+            "constraints": {
+              "enum": [
+                "1",
+                "0",
+                "97",
+                "99"
+              ]
+            },
+            "categories": [
+              {
+                "value": "1",
+                "label": "Yes"
+              },
+              {
+                "value": "0",
+                "label": "No"
+              },
+              {
+                "value": "97",
+                "label": "Declined to answer"
+              },
+              {
+                "value": "99",
+                "label": "Don't know"
+              }
+            ]
+          },
+          {
+            "name": "mh_id_cocaine",
+            "type": "string",
+            "description": "Illicit/recreational drug use: Cocaine",
+            "constraints": {
+              "enum": [
+                "1",
+                "0",
+                "97",
+                "99"
+              ]
+            },
+            "categories": [
+              {
+                "value": "1",
+                "label": "Yes"
+              },
+              {
+                "value": "0",
+                "label": "No"
+              },
+              {
+                "value": "97",
+                "label": "Declined to answer"
+              },
+              {
+                "value": "99",
+                "label": "Don't know"
+              }
+            ]
+          },
+          {
+            "name": "mh_id_stimulant",
+            "type": "string",
+            "description": "Illicit/recreational drug use: Stimulants (e.g., Dexedrine, speed, amphetamine)",
+            "constraints": {
+              "enum": [
+                "1",
+                "0",
+                "97",
+                "99"
+              ]
+            },
+            "categories": [
+              {
+                "value": "1",
+                "label": "Yes"
+              },
+              {
+                "value": "0",
+                "label": "No"
+              },
+              {
+                "value": "97",
+                "label": "Declined to answer"
+              },
+              {
+                "value": "99",
+                "label": "Don't know"
+              }
+            ]
+          },
+          {
+            "name": "mh_id_club",
+            "type": "string",
+            "description": "Illicit/recreational drug use: Club drugs (e.g., ecstasy, GHB, Rohypnol, ketamine)",
+            "constraints": {
+              "enum": [
+                "1",
+                "0",
+                "97",
+                "99"
+              ]
+            },
+            "categories": [
+              {
+                "value": "1",
+                "label": "Yes"
+              },
+              {
+                "value": "0",
+                "label": "No"
+              },
+              {
+                "value": "97",
+                "label": "Declined to answer"
+              },
+              {
+                "value": "99",
+                "label": "Don't know"
+              }
+            ]
+          },
+          {
+            "name": "mh_id_hallucin",
+            "type": "string",
+            "description": "Illicit/recreational drug use: Hallucinogens",
+            "constraints": {
+              "enum": [
+                "1",
+                "0",
+                "97",
+                "99"
+              ]
+            },
+            "categories": [
+              {
+                "value": "1",
+                "label": "Yes"
+              },
+              {
+                "value": "0",
+                "label": "No"
+              },
+              {
+                "value": "97",
+                "label": "Declined to answer"
+              },
+              {
+                "value": "99",
+                "label": "Don't know"
+              }
+            ]
+          },
+          {
+            "name": "mh_id_inhalant",
+            "type": "string",
+            "description": "Illicit/recreational drug use: Inhalants",
+            "constraints": {
+              "enum": [
+                "1",
+                "0",
+                "97",
+                "99"
+              ]
+            },
+            "categories": [
+              {
+                "value": "1",
+                "label": "Yes"
+              },
+              {
+                "value": "0",
+                "label": "No"
+              },
+              {
+                "value": "97",
+                "label": "Declined to answer"
+              },
+              {
+                "value": "99",
+                "label": "Don't know"
+              }
+            ]
+          },
+          {
+            "name": "mh_id_heroin",
+            "type": "string",
+            "description": "Illicit/recreational drug use: Heroin",
+            "constraints": {
+              "enum": [
+                "1",
+                "0",
+                "97",
+                "99"
+              ]
+            },
+            "categories": [
+              {
+                "value": "1",
+                "label": "Yes"
+              },
+              {
+                "value": "0",
+                "label": "No"
+              },
+              {
+                "value": "97",
+                "label": "Declined to answer"
+              },
+              {
+                "value": "99",
+                "label": "Don't know"
+              }
+            ]
+          },
+          {
+            "name": "bsc_bp_sys",
+            "type": "number",
+            "description": "Systolic blood pressure (mmHg)"
+          },
+          {
+            "name": "bsc_bp_dia",
+            "type": "number",
+            "description": "Diastolic blood pressure (mmHg)"
+          },
+          {
+            "name": "a1c_most_recentC",
+            "type": "number",
+            "description": "Most recent pre-biopsy A1C"
+          },
+          {
+            "name": "lab_egfr_most_recentC",
+            "type": "number",
+            "description": "Most recent pre-biopsy eGFR (race-free CKD-EPI)"
+          },
+          {
+            "name": "uacr_most_recentC",
+            "type": "number",
+            "description": "Most recent pre-biopsy uACR"
+          },
+          {
+            "name": "upcr_most_recentC",
+            "type": "number",
+            "description": "Most recent pre-biopsy uPCR"
+          },
+          {
+            "name": "op_egfrcr",
+            "type": "number",
+            "description": "eGFR (CKD-EPI creatinine, 2021)"
+          },
+          {
+            "name": "op_egfrcys",
+            "type": "number",
+            "description": "eGFR (CKD-EPI cystatin C)"
+          },
+          {
+            "name": "op_egfrcrcys",
+            "type": "number",
+            "description": "eGFR (CKD-EPI creatinine + cystatin C, 2021)"
+          },
+          {
+            "name": "op_alb",
+            "type": "number",
+            "description": "Enrollment central-lab plasma: Albumin (g/dL)"
+          },
+          {
+            "name": "op_alk",
+            "type": "number",
+            "description": "Enrollment central-lab plasma: Alkaline phosphatase (U/L)",
+            "constraints": {
+              "minimum": 5.0,
+              "maximum": 1500.0
+            }
+          },
+          {
+            "name": "op_alt",
+            "type": "number",
+            "description": "Enrollment central-lab plasma: Alanine aminotransferase (U/L)",
+            "constraints": {
+              "minimum": 3.0,
+              "maximum": 500.0
+            }
+          },
+          {
+            "name": "op_ast",
+            "type": "number",
+            "description": "Enrollment central-lab plasma: Aspartate aminotransferase (U/L)",
+            "constraints": {
+              "minimum": 3.0,
+              "maximum": 1000.0
+            }
+          },
+          {
+            "name": "op_co2",
+            "type": "number",
+            "description": "Enrollment central-lab plasma: Carbon dioxide (mEq/L)",
+            "constraints": {
+              "minimum": 2.0,
+              "maximum": 45.0
+            }
+          },
+          {
+            "name": "op_tbil",
+            "type": "number",
+            "description": "Enrollment central-lab plasma: Total bilirubin (mg/dL)",
+            "constraints": {
+              "minimum": 0.0,
+              "maximum": 30.0
+            }
+          },
+          {
+            "name": "op_dbili",
+            "type": "number",
+            "description": "Enrollment central-lab plasma: Direct bilirubin (mg/dL)",
+            "constraints": {
+              "minimum": 0.0,
+              "maximum": 10.0
+            }
+          },
+          {
+            "name": "op_bun",
+            "type": "number",
+            "description": "Enrollment central-lab plasma: Blood urea nitrogen (mg/dL)",
+            "constraints": {
+              "minimum": 2.0,
+              "maximum": 130.0
+            }
+          },
+          {
+            "name": "op_cre",
+            "type": "number",
+            "description": "Enrollment central-lab plasma: Creatinine (mg/dL)",
+            "constraints": {
+              "minimum": 0.2,
+              "maximum": 25.0
+            }
+          },
+          {
+            "name": "op_glu",
+            "type": "number",
+            "description": "Enrollment central-lab plasma: Glucose (mg/dL)",
+            "constraints": {
+              "minimum": 10.0,
+              "maximum": 800.0
+            }
+          },
+          {
+            "name": "op_phos",
+            "type": "number",
+            "description": "Enrollment central-lab plasma: Phosphate (mg/dL)",
+            "constraints": {
+              "minimum": 1.0,
+              "maximum": 20.0
+            }
+          },
+          {
+            "name": "op_hscrp",
+            "type": "number",
+            "description": "Enrollment central-lab plasma: High-sensitivity CRP (mg/L)",
+            "constraints": {
+              "minimum": 0.2,
+              "maximum": 160.0
+            }
+          },
+          {
+            "name": "op_mg",
+            "type": "number",
+            "description": "Enrollment central-lab plasma: Magnesium (mg/dL)",
+            "constraints": {
+              "minimum": 0.5,
+              "maximum": 8.0
+            }
+          },
+          {
+            "name": "op_totprot",
+            "type": "number",
+            "description": "Enrollment central-lab plasma: Total protein (g/dL)",
+            "constraints": {
+              "minimum": 3.0,
+              "maximum": 12.0
+            }
+          },
+          {
+            "name": "op_uric",
+            "type": "number",
+            "description": "Enrollment central-lab plasma: Uric acid (mg/dL)",
+            "constraints": {
+              "minimum": 1.5,
+              "maximum": 30.0
+            }
+          },
+          {
+            "name": "op_na",
+            "type": "number",
+            "description": "Enrollment central-lab plasma: Sodium (mEq/L)",
+            "constraints": {
+              "minimum": 100.0,
+              "maximum": 200.0
+            }
+          },
+          {
+            "name": "op_k",
+            "type": "number",
+            "description": "Enrollment central-lab plasma: Potassium (mEq/L)",
+            "constraints": {
+              "minimum": 1.0,
+              "maximum": 10.0
+            }
+          },
+          {
+            "name": "op_cl",
+            "type": "number",
+            "description": "Enrollment central-lab plasma: Chloride (mEq/L)",
+            "constraints": {
+              "minimum": 50.0,
+              "maximum": 200.0
+            }
+          },
+          {
+            "name": "op_calc",
+            "type": "number",
+            "description": "Enrollment central-lab plasma: Calcium (mg/dL)",
+            "constraints": {
+              "minimum": 4.0,
+              "maximum": 18.0
+            }
+          },
+          {
+            "name": "op_cystc",
+            "type": "number",
+            "description": "Enrollment central-lab plasma: Cystatin C (mg/L)",
+            "constraints": {
+              "minimum": 0.4,
+              "maximum": 7.8
+            }
+          },
+          {
+            "name": "op_lip",
+            "type": "number",
+            "description": "Enrollment central-lab plasma: Lipemic index",
+            "constraints": {
+              "minimum": 0.0,
+              "maximum": 6.0
+            }
+          },
+          {
+            "name": "op_ict",
+            "type": "number",
+            "description": "Enrollment central-lab plasma: Icteric index",
+            "constraints": {
+              "minimum": 0.0,
+              "maximum": 6.0
+            }
+          },
+          {
+            "name": "op_hem",
+            "type": "number",
+            "description": "Enrollment central-lab plasma: Heme index",
+            "constraints": {
+              "minimum": 0.0,
+              "maximum": 6.0
+            }
+          },
+          {
+            "name": "ah_hd_crrt_m5",
+            "type": "string",
+            "description": "AKI hospitalization dialysis modality, day m5 relative to biopsy (m=before, d=on/after)",
+            "constraints": {
+              "enum": [
+                "1",
+                "2",
+                "0"
+              ]
+            },
+            "categories": [
+              {
+                "value": "1",
+                "label": "HD"
+              },
+              {
+                "value": "2",
+                "label": "CRRT"
+              },
+              {
+                "value": "0",
+                "label": "No Dialysis"
+              }
+            ]
+          },
+          {
+            "name": "ah_hd_crrt_m4",
+            "type": "string",
+            "description": "AKI hospitalization dialysis modality, day m4 relative to biopsy (m=before, d=on/after)",
+            "constraints": {
+              "enum": [
+                "1",
+                "2",
+                "0"
+              ]
+            },
+            "categories": [
+              {
+                "value": "1",
+                "label": "HD"
+              },
+              {
+                "value": "2",
+                "label": "CRRT"
+              },
+              {
+                "value": "0",
+                "label": "No Dialysis"
+              }
+            ]
+          },
+          {
+            "name": "ah_hd_crrt_m3",
+            "type": "string",
+            "description": "AKI hospitalization dialysis modality, day m3 relative to biopsy (m=before, d=on/after)",
+            "constraints": {
+              "enum": [
+                "1",
+                "2",
+                "0"
+              ]
+            },
+            "categories": [
+              {
+                "value": "1",
+                "label": "HD"
+              },
+              {
+                "value": "2",
+                "label": "CRRT"
+              },
+              {
+                "value": "0",
+                "label": "No Dialysis"
+              }
+            ]
+          },
+          {
+            "name": "ah_hd_crrt_m2",
+            "type": "string",
+            "description": "AKI hospitalization dialysis modality, day m2 relative to biopsy (m=before, d=on/after)",
+            "constraints": {
+              "enum": [
+                "1",
+                "2",
+                "0"
+              ]
+            },
+            "categories": [
+              {
+                "value": "1",
+                "label": "HD"
+              },
+              {
+                "value": "2",
+                "label": "CRRT"
+              },
+              {
+                "value": "0",
+                "label": "No Dialysis"
+              }
+            ]
+          },
+          {
+            "name": "ah_hd_crrt_m1",
+            "type": "string",
+            "description": "AKI hospitalization dialysis modality, day m1 relative to biopsy (m=before, d=on/after)",
+            "constraints": {
+              "enum": [
+                "1",
+                "2",
+                "0"
+              ]
+            },
+            "categories": [
+              {
+                "value": "1",
+                "label": "HD"
+              },
+              {
+                "value": "2",
+                "label": "CRRT"
+              },
+              {
+                "value": "0",
+                "label": "No Dialysis"
+              }
+            ]
+          },
+          {
+            "name": "ah_hd_crrt_d0",
+            "type": "string",
+            "description": "AKI hospitalization dialysis modality, day d0 relative to biopsy (m=before, d=on/after)",
+            "constraints": {
+              "enum": [
+                "1",
+                "2",
+                "0"
+              ]
+            },
+            "categories": [
+              {
+                "value": "1",
+                "label": "HD"
+              },
+              {
+                "value": "2",
+                "label": "CRRT"
+              },
+              {
+                "value": "0",
+                "label": "No Dialysis"
+              }
+            ]
+          },
+          {
+            "name": "ah_hd_crrt_d1",
+            "type": "string",
+            "description": "AKI hospitalization dialysis modality, day d1 relative to biopsy (m=before, d=on/after)",
+            "constraints": {
+              "enum": [
+                "1",
+                "2",
+                "0"
+              ]
+            },
+            "categories": [
+              {
+                "value": "1",
+                "label": "HD"
+              },
+              {
+                "value": "2",
+                "label": "CRRT"
+              },
+              {
+                "value": "0",
+                "label": "No Dialysis"
+              }
+            ]
+          },
+          {
+            "name": "ah_hd_crrt_d2",
+            "type": "string",
+            "description": "AKI hospitalization dialysis modality, day d2 relative to biopsy (m=before, d=on/after)",
+            "constraints": {
+              "enum": [
+                "1",
+                "2",
+                "0"
+              ]
+            },
+            "categories": [
+              {
+                "value": "1",
+                "label": "HD"
+              },
+              {
+                "value": "2",
+                "label": "CRRT"
+              },
+              {
+                "value": "0",
+                "label": "No Dialysis"
+              }
+            ]
+          },
+          {
+            "name": "ah_hd_crrt_d3",
+            "type": "string",
+            "description": "AKI hospitalization dialysis modality, day d3 relative to biopsy (m=before, d=on/after)",
+            "constraints": {
+              "enum": [
+                "1",
+                "2",
+                "0"
+              ]
+            },
+            "categories": [
+              {
+                "value": "1",
+                "label": "HD"
+              },
+              {
+                "value": "2",
+                "label": "CRRT"
+              },
+              {
+                "value": "0",
+                "label": "No Dialysis"
+              }
+            ]
+          },
+          {
+            "name": "ah_hd_crrt_d4",
+            "type": "string",
+            "description": "AKI hospitalization dialysis modality, day d4 relative to biopsy (m=before, d=on/after)",
+            "constraints": {
+              "enum": [
+                "1",
+                "2",
+                "0"
+              ]
+            },
+            "categories": [
+              {
+                "value": "1",
+                "label": "HD"
+              },
+              {
+                "value": "2",
+                "label": "CRRT"
+              },
+              {
+                "value": "0",
+                "label": "No Dialysis"
+              }
+            ]
+          },
+          {
+            "name": "ah_hd_crrt_d5",
+            "type": "string",
+            "description": "AKI hospitalization dialysis modality, day d5 relative to biopsy (m=before, d=on/after)",
+            "constraints": {
+              "enum": [
+                "1",
+                "2",
+                "0"
+              ]
+            },
+            "categories": [
+              {
+                "value": "1",
+                "label": "HD"
+              },
+              {
+                "value": "2",
+                "label": "CRRT"
+              },
+              {
+                "value": "0",
+                "label": "No Dialysis"
+              }
+            ]
+          },
+          {
+            "name": "ah_hd_yn",
+            "type": "string",
+            "description": "Hemodialysis at any time during AKI hospitalization",
+            "constraints": {
+              "enum": [
+                "1",
+                "0"
+              ]
+            },
+            "categories": [
+              {
+                "value": "1",
+                "label": "Yes"
+              },
+              {
+                "value": "0",
+                "label": "No"
+              }
+            ]
+          },
+          {
+            "name": "ah_crrt_yn",
+            "type": "string",
+            "description": "CRRT at any time during AKI hospitalization",
+            "constraints": {
+              "enum": [
+                "1",
+                "0"
+              ]
+            },
+            "categories": [
+              {
+                "value": "1",
+                "label": "Yes"
+              },
+              {
+                "value": "0",
+                "label": "No"
+              }
+            ]
+          },
+          {
+            "name": "raas_ynC",
+            "type": "string",
+            "description": "On RAAS blockade (ACEi/ARB/aldosterone antag., ATC L3 from RxCUI)",
+            "constraints": {
+              "enum": [
+                "Yes",
+                "No"
+              ]
+            },
+            "categories": [
+              {
+                "value": "Yes",
+                "label": "Yes"
+              },
+              {
+                "value": "No",
+                "label": "No"
+              }
+            ]
+          },
+          {
+            "name": "diuretics_ynC",
+            "type": "string",
+            "description": "On diuretics (ATC L2 from RxCUI)",
+            "constraints": {
+              "enum": [
+                "Yes",
+                "No"
+              ]
+            },
+            "categories": [
+              {
+                "value": "Yes",
+                "label": "Yes"
+              },
+              {
+                "value": "No",
+                "label": "No"
+              }
+            ]
+          },
+          {
+            "name": "aceiarb_ynC",
+            "type": "string",
+            "description": "On ACEi/ARB (ATC L4 from RxCUI)",
+            "constraints": {
+              "enum": [
+                "Yes",
+                "No"
+              ]
+            },
+            "categories": [
+              {
+                "value": "Yes",
+                "label": "Yes"
+              },
+              {
+                "value": "No",
+                "label": "No"
+              }
+            ]
+          },
+          {
+            "name": "metformin_ynC",
+            "type": "string",
+            "description": "On metformin (ATC biguanides / string match)",
+            "constraints": {
+              "enum": [
+                "Yes",
+                "No"
+              ]
+            },
+            "categories": [
+              {
+                "value": "Yes",
+                "label": "Yes"
+              },
+              {
+                "value": "No",
+                "label": "No"
+              }
+            ]
+          },
+          {
+            "name": "sglt2i_ynC",
+            "type": "string",
+            "description": "On SGLT2 inhibitor",
+            "constraints": {
+              "enum": [
+                "Yes",
+                "No"
+              ]
+            },
+            "categories": [
+              {
+                "value": "Yes",
+                "label": "Yes"
+              },
+              {
+                "value": "No",
+                "label": "No"
+              }
+            ]
+          },
+          {
+            "name": "insulin_ynC",
+            "type": "string",
+            "description": "On insulin/analogues",
+            "constraints": {
+              "enum": [
+                "Yes",
+                "No"
+              ]
+            },
+            "categories": [
+              {
+                "value": "Yes",
+                "label": "Yes"
+              },
+              {
+                "value": "No",
+                "label": "No"
+              }
+            ]
+          },
+          {
+            "name": "adj_cm_dm_kd",
+            "type": "string",
+            "description": "Adjudicated: diabetic kidney disease",
+            "constraints": {
+              "enum": [
+                "Yes",
+                "Possibly",
+                "No"
+              ]
+            },
+            "categories": [
+              {
+                "value": "Yes",
+                "label": "Yes"
+              },
+              {
+                "value": "Possibly",
+                "label": "Possibly"
+              },
+              {
+                "value": "No",
+                "label": "No"
+              }
+            ]
+          },
+          {
+            "name": "adj_cm_ht_kd",
+            "type": "string",
+            "description": "Adjudicated: hypertensive kidney disease",
+            "constraints": {
+              "enum": [
+                "Yes",
+                "Possibly",
+                "No"
+              ]
+            },
+            "categories": [
+              {
+                "value": "Yes",
+                "label": "Yes"
+              },
+              {
+                "value": "Possibly",
+                "label": "Possibly"
+              },
+              {
+                "value": "No",
+                "label": "No"
+              }
+            ]
+          },
+          {
+            "name": "adj_cm_ati",
+            "type": "string",
+            "description": "Adjudicated: acute tubular injury",
+            "constraints": {
+              "enum": [
+                "Yes",
+                "Possibly",
+                "No"
+              ]
+            },
+            "categories": [
+              {
+                "value": "Yes",
+                "label": "Yes"
+              },
+              {
+                "value": "Possibly",
+                "label": "Possibly"
+              },
+              {
+                "value": "No",
+                "label": "No"
+              }
+            ]
+          },
+          {
+            "name": "adj_cm_ain",
+            "type": "string",
+            "description": "Adjudicated: acute interstitial nephritis",
+            "constraints": {
+              "enum": [
+                "Yes",
+                "Possibly",
+                "No"
+              ]
+            },
+            "categories": [
+              {
+                "value": "Yes",
+                "label": "Yes"
+              },
+              {
+                "value": "Possibly",
+                "label": "Possibly"
+              },
+              {
+                "value": "No",
+                "label": "No"
+              }
+            ]
+          },
+          {
+            "name": "adj_primary_dxC",
+            "type": "string",
+            "description": "Adjudicated primary diagnosis",
+            "constraints": {
+              "enum": [
+                "Acute Interstitial Nephritis",
+                "Acute Tubular Injury",
+                "Diabetic Kidney Disease",
+                "Hypertensive Kidney Disease",
+                "Other",
+                "Cannot be determined"
+              ]
+            },
+            "categories": [
+              {
+                "value": "Acute Interstitial Nephritis",
+                "label": "Acute Interstitial Nephritis"
+              },
+              {
+                "value": "Acute Tubular Injury",
+                "label": "Acute Tubular Injury"
+              },
+              {
+                "value": "Diabetic Kidney Disease",
+                "label": "Diabetic Kidney Disease"
+              },
+              {
+                "value": "Hypertensive Kidney Disease",
+                "label": "Hypertensive Kidney Disease"
+              },
+              {
+                "value": "Other",
+                "label": "Other"
+              },
+              {
+                "value": "Cannot be determined",
+                "label": "Cannot be determined"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "fusion_muscle",
+      "title": "Muscle (FUSION / phs001048)",
+      "profile": "tabular-data-resource",
+      "schema": {
+        "fields": [
+          {
+            "name": "subject_id",
+            "type": "string",
+            "description": "FUSION subject identifier"
+          },
+          {
+            "name": "sex",
+            "type": "string",
+            "description": "Sex"
+          },
+          {
+            "name": "age_at_biopsy",
+            "type": "number",
+            "description": "Age at biopsy"
+          },
+          {
+            "name": "ogtt_status",
+            "type": "string",
+            "description": "OGTT-based glucose tolerance category",
+            "constraints": {
+              "enum": [
+                "NGT (normal glucose tolerance)",
+                "IGT (impaired glucose tolerance)",
+                "IFG (impaired fasting glucose)",
+                "newly-diagnosed T2D"
+              ]
+            },
+            "categories": [
+              {
+                "value": "NGT (normal glucose tolerance)",
+                "label": "NGT (normal glucose tolerance)"
+              },
+              {
+                "value": "IGT (impaired glucose tolerance)",
+                "label": "IGT (impaired glucose tolerance)"
+              },
+              {
+                "value": "IFG (impaired fasting glucose)",
+                "label": "IFG (impaired fasting glucose)"
+              },
+              {
+                "value": "newly-diagnosed T2D",
+                "label": "newly-diagnosed T2D"
+              }
+            ]
+          },
+          {
+            "name": "ogtt_glucose_0/30/60/120",
+            "type": "number",
+            "description": "Four-point OGTT plasma glucose (fasting,30,60,120 min)"
+          },
+          {
+            "name": "fasting_serum_insulin",
+            "type": "number",
+            "description": "Fasting serum insulin"
+          },
+          {
+            "name": "bmi",
+            "type": "number",
+            "description": "Body mass index"
+          },
+          {
+            "name": "waist_hip_ratio",
+            "type": "number",
+            "description": "Waist/hip ratio"
+          },
+          {
+            "name": "height / waist_circumference / weight",
+            "type": "number",
+            "description": "Anthropometric measures"
+          },
+          {
+            "name": "smoking_status",
+            "type": "string",
+            "description": "Smoking status"
+          },
+          {
+            "name": "sample_collection_site",
+            "type": "string",
+            "description": "Site where sample collected"
+          },
+          {
+            "name": "body_site",
+            "type": "string",
+            "description": "Body site of sample",
+            "constraints": {
+              "enum": [
+                "vastus lateralis skeletal muscle",
+                "abdominal subcutaneous adipose",
+                "abdominal skin"
+              ]
+            },
+            "categories": [
+              {
+                "value": "vastus lateralis skeletal muscle",
+                "label": "vastus lateralis skeletal muscle"
+              },
+              {
+                "value": "abdominal subcutaneous adipose",
+                "label": "abdominal subcutaneous adipose"
+              },
+              {
+                "value": "abdominal skin",
+                "label": "abdominal skin"
+              }
+            ]
+          },
+          {
+            "name": "analyte_type",
+            "type": "string",
+            "description": "Analyte type"
+          },
+          {
+            "name": "tumor_status",
+            "type": "string",
+            "description": "Tumor status"
+          },
+          {
+            "name": "histological_type",
+            "type": "string",
+            "description": "Histological type"
+          },
+          {
+            "name": "rin",
+            "type": "number",
+            "description": "RNA Integrity Number"
+          },
+          {
+            "name": "sample_batch",
+            "type": "string",
+            "description": "RNA extraction / library / sequencing-pool batch"
+          },
+          {
+            "name": "sample_use / inclusion",
+            "type": "string",
+            "description": "Sample use, inclusion in analysis, reason for exclusion"
+          }
+        ]
+      }
+    },
+    {
+      "name": "adipose_emont",
+      "title": "Adipose (Emont 2022)",
+      "profile": "tabular-data-resource",
+      "schema": {
+        "fields": [
+          {
+            "name": "donor_id",
+            "type": "string",
+            "description": "Donor identifier (n=22)"
+          },
+          {
+            "name": "sex",
+            "type": "string",
+            "description": "Sex",
+            "constraints": {
+              "enum": [
+                "female",
+                "male"
+              ]
+            },
+            "categories": [
+              {
+                "value": "female",
+                "label": "female"
+              },
+              {
+                "value": "male",
+                "label": "male"
+              }
+            ]
+          },
+          {
+            "name": "development_stage",
+            "type": "string",
+            "description": "Age (ontology term)"
+          },
+          {
+            "name": "self_reported_ethnicity",
+            "type": "string",
+            "description": "Ethnicity",
+            "constraints": {
+              "enum": [
+                "African American",
+                "European American",
+                "Hispanic or Latin"
+              ]
+            },
+            "categories": [
+              {
+                "value": "African American",
+                "label": "African American"
+              },
+              {
+                "value": "European American",
+                "label": "European American"
+              },
+              {
+                "value": "Hispanic or Latin",
+                "label": "Hispanic or Latin"
+              }
+            ]
+          },
+          {
+            "name": "bmi",
+            "type": "number",
+            "description": "Body mass index"
+          },
+          {
+            "name": "bmi_group",
+            "type": "string",
+            "description": "BMI band",
+            "constraints": {
+              "enum": [
+                "20-30",
+                "30-40",
+                "40-50"
+              ]
+            },
+            "categories": [
+              {
+                "value": "20-30",
+                "label": "20-30"
+              },
+              {
+                "value": "30-40",
+                "label": "30-40"
+              },
+              {
+                "value": "40-50",
+                "label": "40-50"
+              }
+            ]
+          },
+          {
+            "name": "fat_type",
+            "type": "string",
+            "description": "Depot",
+            "constraints": {
+              "enum": [
+                "SAT (subcutaneous)",
+                "VAT (visceral/omental)"
+              ]
+            },
+            "categories": [
+              {
+                "value": "SAT (subcutaneous)",
+                "label": "SAT (subcutaneous)"
+              },
+              {
+                "value": "VAT (visceral/omental)",
+                "label": "VAT (visceral/omental)"
+              }
+            ]
+          },
+          {
+            "name": "surgery",
+            "type": "string",
+            "description": "Surgical context",
+            "constraints": {
+              "enum": [
+                "VSG",
+                "RYGB",
+                "Hernia",
+                "CCY",
+                "Panniculectomy",
+                "Thighplasty",
+                "DIEP",
+                "Abdominoplasty",
+                "TAH BSO",
+                "Colon polyp"
+              ]
+            },
+            "categories": [
+              {
+                "value": "VSG",
+                "label": "VSG"
+              },
+              {
+                "value": "RYGB",
+                "label": "RYGB"
+              },
+              {
+                "value": "Hernia",
+                "label": "Hernia"
+              },
+              {
+                "value": "CCY",
+                "label": "CCY"
+              },
+              {
+                "value": "Panniculectomy",
+                "label": "Panniculectomy"
+              },
+              {
+                "value": "Thighplasty",
+                "label": "Thighplasty"
+              },
+              {
+                "value": "DIEP",
+                "label": "DIEP"
+              },
+              {
+                "value": "Abdominoplasty",
+                "label": "Abdominoplasty"
+              },
+              {
+                "value": "TAH BSO",
+                "label": "TAH BSO"
+              },
+              {
+                "value": "Colon polyp",
+                "label": "Colon polyp"
+              }
+            ]
+          },
+          {
+            "name": "disease",
+            "type": "string",
+            "description": "Disease status",
+            "constraints": {
+              "enum": [
+                "normal"
+              ]
+            },
+            "categories": [
+              {
+                "value": "normal",
+                "label": "normal"
+              }
+            ]
+          },
+          {
+            "name": "assay",
+            "type": "string",
+            "description": "Assay platform",
+            "constraints": {
+              "enum": [
+                "10x 3' v3",
+                "Drop-seq"
+              ]
+            },
+            "categories": [
+              {
+                "value": "10x 3' v3",
+                "label": "10x 3' v3"
+              },
+              {
+                "value": "Drop-seq",
+                "label": "Drop-seq"
+              }
+            ]
+          },
+          {
+            "name": "biosample_id",
+            "type": "string",
+            "description": "Biosample identifier(s)"
+          }
+        ]
+      }
+    },
+    {
+      "name": "hypothalamus_hypomap",
+      "title": "Hypothalamus (HYPOMAP / Tadross 2025)",
+      "profile": "tabular-data-resource",
+      "schema": {
+        "fields": [
+          {
+            "name": "donor_id",
+            "type": "string",
+            "description": "Donor identifier (n=11)"
+          },
+          {
+            "name": "Dataset",
+            "type": "string",
+            "description": "Source study",
+            "constraints": {
+              "enum": [
+                "Tadross (native, n",
+                "Siletti (borrowed, n"
+              ]
+            },
+            "categories": [
+              {
+                "value": "Tadross (native, n",
+                "label": "8)"
+              },
+              {
+                "value": "Siletti (borrowed, n",
+                "label": "3)"
+              }
+            ]
+          },
+          {
+            "name": "sex",
+            "type": "string",
+            "description": "Sex (cohort sex-imbalanced)",
+            "constraints": {
+              "enum": [
+                "female",
+                "male"
+              ]
+            },
+            "categories": [
+              {
+                "value": "female",
+                "label": "female"
+              },
+              {
+                "value": "male",
+                "label": "male"
+              }
+            ]
+          },
+          {
+            "name": "development_stage",
+            "type": "string",
+            "description": "Age (ontology term)"
+          },
+          {
+            "name": "self_reported_ethnicity",
+            "type": "string",
+            "description": "Ethnicity",
+            "constraints": {
+              "enum": [
+                "unknown"
+              ]
+            },
+            "categories": [
+              {
+                "value": "unknown",
+                "label": "unknown"
+              }
+            ]
+          },
+          {
+            "name": "disease",
+            "type": "string",
+            "description": "Disease status",
+            "constraints": {
+              "enum": [
+                "normal"
+              ]
+            },
+            "categories": [
+              {
+                "value": "normal",
+                "label": "normal"
+              }
+            ]
+          },
+          {
+            "name": "assay",
+            "type": "string",
+            "description": "Assay platform",
+            "constraints": {
+              "enum": [
+                "10x 3' v3"
+              ]
+            },
+            "categories": [
+              {
+                "value": "10x 3' v3",
+                "label": "10x 3' v3"
+              }
+            ]
+          },
+          {
+            "name": "region",
+            "type": "string",
+            "description": "Anatomical hypothalamic region sampled",
+            "constraints": {
+              "enum": [
+                "ARC",
+                "DMH",
+                "Fx/OT/ac",
+                "LH",
+                "LPOA",
+                "LTN",
+                "MAM",
+                "ME",
+                "MPOA",
+                "NA",
+                "POA",
+                "PVN",
+                "Perivent",
+                "SCN",
+                "SON",
+                "TMN",
+                "Thalamaus",
+                "Thalamus",
+                "VMH",
+                "Vascular",
+                "Vent"
+              ]
+            },
+            "categories": [
+              {
+                "value": "ARC",
+                "label": "ARC"
+              },
+              {
+                "value": "DMH",
+                "label": "DMH"
+              },
+              {
+                "value": "Fx/OT/ac",
+                "label": "Fx/OT/ac"
+              },
+              {
+                "value": "LH",
+                "label": "LH"
+              },
+              {
+                "value": "LPOA",
+                "label": "LPOA"
+              },
+              {
+                "value": "LTN",
+                "label": "LTN"
+              },
+              {
+                "value": "MAM",
+                "label": "MAM"
+              },
+              {
+                "value": "ME",
+                "label": "ME"
+              },
+              {
+                "value": "MPOA",
+                "label": "MPOA"
+              },
+              {
+                "value": "NA",
+                "label": "NA"
+              },
+              {
+                "value": "POA",
+                "label": "POA"
+              },
+              {
+                "value": "PVN",
+                "label": "PVN"
+              },
+              {
+                "value": "Perivent",
+                "label": "Perivent"
+              },
+              {
+                "value": "SCN",
+                "label": "SCN"
+              },
+              {
+                "value": "SON",
+                "label": "SON"
+              },
+              {
+                "value": "TMN",
+                "label": "TMN"
+              },
+              {
+                "value": "Thalamaus",
+                "label": "Thalamaus"
+              },
+              {
+                "value": "Thalamus",
+                "label": "Thalamus"
+              },
+              {
+                "value": "VMH",
+                "label": "VMH"
+              },
+              {
+                "value": "Vascular",
+                "label": "Vascular"
+              },
+              {
+                "value": "Vent",
+                "label": "Vent"
+              }
+            ]
+          },
+          {
+            "name": "Sample_ID",
+            "type": "string",
+            "description": "Sample identifier"
+          }
+        ]
+      }
+    }
+  ]
+}

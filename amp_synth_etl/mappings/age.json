@@ -1,0 +1,52 @@
+{
+  "variable": "age",
+  "cde_id": "541",
+  "means": "Age at which subject was enrolled in study or age at corresponding visit and data collection event. Confirming that this is supposed to be an integer.",
+  "program": "AMP-RA-SLE",
+  "grain": "visit",
+  "reads_as": {
+    "datatype": "integer",
+    "range": {
+      "min": 0.0,
+      "max": 120.0
+    }
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 3022304,
+      "name": "Age",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "<any in range>",
+      "write": {
+        "value_as_number": "<value>",
+        "value_source_value": "<raw>"
+      }
+    }
+  ],
+  "links": [
+    {
+      "kind": "derivation",
+      "related_variable": "visit_month",
+      "related_concept": null,
+      "related_table": null,
+      "related_value_set": null,
+      "relationship": "",
+      "mechanism": "",
+      "note": "related element not loaded in the CDM"
+    }
+  ],
+  "derived_from": [
+    "visit_month"
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map",
+    "visit_occurrence_id": "cdm.visit_occurrence"
+  },
+  "manual_approval": true,
+  "note": "decimals present in loaded value_as_number -> confirm integer vs float"
+}

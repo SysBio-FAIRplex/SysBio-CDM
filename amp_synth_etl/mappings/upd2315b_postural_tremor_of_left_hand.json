@@ -1,0 +1,82 @@
+{
+  "variable": "upd2315b_postural_tremor_of_left_hand",
+  "cde_id": "508",
+  "means": "3.15b MDS-UPDRS - Postural Tremor Of Left Hand (UPD2315B)",
+  "program": "AMP-PD",
+  "grain": "visit",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "Normal",
+      "Slight",
+      "Mild",
+      "Moderate",
+      "Severe"
+    ]
+  },
+  "lands": {
+    "table": "measurement",
+    "measurement_concept_id": {
+      "id": 40768877,
+      "name": "Postural tremor Upper extremity - left [UPDRS]",
+      "domain": "Measurement"
+    }
+  },
+  "value_map": [
+    {
+      "value": "Normal",
+      "write": {
+        "value_as_number": 0,
+        "value_as_concept_id": {
+          "id": 45884153,
+          "name": "Normal"
+        },
+        "value_as_string": "Normal",
+        "value_source_value": "Normal"
+      }
+    },
+    {
+      "value": "Slight",
+      "write": {
+        "value_as_number": 1,
+        "value_as_concept_id": {
+          "id": 45880586,
+          "name": "Slight"
+        },
+        "value_as_string": "Slight",
+        "value_source_value": "Slight"
+      }
+    },
+    {
+      "value": "Mild",
+      "write": {
+        "value_as_number": 2,
+        "value_as_concept_id": {
+          "id": 45883535,
+          "name": "Mild"
+        },
+        "value_as_string": "Mild",
+        "value_source_value": "Mild"
+      }
+    },
+    {
+      "value": "Moderate",
+      "write": {
+        "value_as_number": 3,
+        "value_as_concept_id": {
+          "id": 45877983,
+          "name": "Moderate"
+        },
+        "value_as_string": "Moderate",
+        "value_source_value": "Moderate"
+      }
+    }
+  ],
+  "links": [],
+  "derived_from": [],
+  "anchored_to": {
+    "person_id": "staging.person_map",
+    "visit_occurrence_id": "cdm.visit_occurrence"
+  },
+  "manual_approval": true
+}

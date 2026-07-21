@@ -1,0 +1,35 @@
+{
+  "variable": "height",
+  "cde_id": "549",
+  "means": "Standing height of subject.",
+  "program": "AMP-CMD / AMP-RA-SLE",
+  "grain": "subject, visit",
+  "reads_as": {
+    "datatype": "integer"
+  },
+  "lands": {
+    "table": "measurement",
+    "measurement_concept_id": {
+      "id": 4093975,
+      "name": "Standing height",
+      "domain": "Measurement"
+    }
+  },
+  "value_map": [
+    {
+      "value": "<any in range>",
+      "write": {
+        "value_as_number": "<value>",
+        "value_source_value": "<raw>"
+      }
+    }
+  ],
+  "links": [],
+  "derived_from": [],
+  "anchored_to": {
+    "person_id": "staging.person_map",
+    "visit_occurrence_id": "cdm.visit_occurrence"
+  },
+  "manual_approval": true,
+  "note": "decimals present in loaded value_as_number -> confirm integer vs float"
+}
