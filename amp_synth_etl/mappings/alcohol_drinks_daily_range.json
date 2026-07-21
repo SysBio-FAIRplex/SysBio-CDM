@@ -1,0 +1,74 @@
+{
+  "variable": "alcohol_drinks_daily_range",
+  "cde_id": "129",
+  "means": "Alcohol drinking day average drinks consumed range",
+  "program": "AMP-PD",
+  "grain": "visit",
+  "reads_as": {
+    "datatype": "string"
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 35811099,
+      "name": "Amount of alcohol drunk on a typical drinking day",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "less than 1",
+      "write": {
+        "value_as_string": "less than 1",
+        "value_source_value": "less than 1"
+      }
+    },
+    {
+      "value": "7 or more",
+      "write": {
+        "value_as_string": "7 or more",
+        "value_source_value": "7 or more"
+      }
+    },
+    {
+      "value": "3-4",
+      "write": {
+        "value_as_concept_id": {
+          "id": 45883428,
+          "name": "3 or 4"
+        },
+        "value_as_string": "3-4",
+        "value_source_value": "3-4"
+      }
+    },
+    {
+      "value": "5-6",
+      "write": {
+        "value_as_concept_id": {
+          "id": 45877926,
+          "name": "5 or 6"
+        },
+        "value_as_string": "5-6",
+        "value_source_value": "5-6"
+      }
+    },
+    {
+      "value": "1-2",
+      "write": {
+        "value_as_concept_id": {
+          "id": 45882591,
+          "name": "1 or 2"
+        },
+        "value_as_string": "1-2",
+        "value_source_value": "1-2"
+      }
+    }
+  ],
+  "links": [],
+  "derived_from": [],
+  "anchored_to": {
+    "person_id": "staging.person_map",
+    "visit_occurrence_id": "cdm.visit_occurrence"
+  },
+  "manual_approval": true
+}

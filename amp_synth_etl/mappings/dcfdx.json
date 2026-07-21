@@ -1,0 +1,104 @@
+{
+  "variable": "dcfdx",
+  "cde_id": "24",
+  "means": "Clinical Cognitive Diagnosis Summary",
+  "program": "AMP-AD",
+  "grain": "visit",
+  "reads_as": {
+    "datatype": "code",
+    "values": {
+      "1": "NCI: No cognitive impairment",
+      "2": "MCI: Mild cognitive impairment, no other condition contributing to CI",
+      "3": "MCI+: Mild cognitive impairment AND another condition contributing to CI",
+      "4": "AD: Alzheimer's dementia, no other condition contributing to CI (NINCDS/ADRDA Probable AD)",
+      "5": "AD+: Alzheimer's dementia AND other condition contributing to CI (NINCDS/ADRDA Possible AD)",
+      "6": "Other dementia: Other primary cause of dementia, no clinical evidence of Alzheimer's dementia"
+    }
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 46235850,
+      "name": "Cognitive function [Interpretation]",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "1",
+      "write": {
+        "value_as_concept_id": {
+          "id": 45884350,
+          "name": "No impairment"
+        },
+        "value_source_value": "1"
+      }
+    },
+    {
+      "value": "2",
+      "write": {
+        "value_as_concept_id": {
+          "id": 4297400,
+          "name": "Mild neurocognitive disorder"
+        },
+        "value_source_value": "2"
+      }
+    },
+    {
+      "value": "3",
+      "write": {
+        "value_as_concept_id": {
+          "id": 45878929,
+          "name": "Cognitive impairment"
+        },
+        "value_source_value": "3",
+        "qualifier_concept_id": {
+          "id": 46235351,
+          "name": "Comorbid condition"
+        }
+      }
+    },
+    {
+      "value": "4",
+      "write": {
+        "value_as_concept_id": {
+          "id": 36311271,
+          "name": "Alzheimer's disease"
+        },
+        "value_source_value": "4"
+      }
+    },
+    {
+      "value": "5",
+      "write": {
+        "value_as_concept_id": {
+          "id": 36311271,
+          "name": "Alzheimer's disease"
+        },
+        "value_source_value": "5",
+        "qualifier_concept_id": {
+          "id": 46235351,
+          "name": "Comorbid condition"
+        }
+      }
+    },
+    {
+      "value": "6",
+      "write": {
+        "value_as_concept_id": {
+          "id": 36310643,
+          "name": "Cognitive loss/dementia"
+        },
+        "value_source_value": "6"
+      }
+    }
+  ],
+  "links": [],
+  "derived_from": [],
+  "anchored_to": {
+    "person_id": "staging.person_map",
+    "visit_occurrence_id": "cdm.visit_occurrence"
+  },
+  "manual_approval": true,
+  "derivation_rule": "RADC data set 754 (ROSMAP). Clinical diagnosis of cognitive status (Alzheimer's dementia, other dementia, MCI, or no impairment). A clinical diagnosis of cognitive status is rendered at every assessment based on a three-stage process: computer scoring of cognitive tests, clinical judgment by a neuropsychologist, and diagnostic classification by a clinician. All participants undergo a uniform, structured clinical evaluation including a battery of 19 cognitive tests. Clinical diagnosis of dementia and clinical Alzheimer's dementia are based on NINCDS/ADRDA criteria; the diagnosis of Alzheimer's dementia requires evidence of a meaningful decline in cognitive function relative to a previous level of performance with impairment in memory and at least one other area of cognition. MCI is rendered for persons judged to have cognitive impairment by the neuropsychologist but judged not to meet criteria for dementia by the clinician. Persons diagnosed with MCI or Alzheimer's dementia may also be diagnosed with another condition that contributes to their cognitive impairment (CI). Persons without dementia or MCI are categorized as having no cognitive impairment (NCI). Value coding: 1=NCI: No cognitive impairment; 2=MCI: Mild cognitive impairment, no other condition contributing to CI; 3=MCI+: Mild cognitive impairment AND another condition contributing to CI; 4=AD: Alzheimer's dementia, no other condition contributing to CI (NINCDS/ADRDA Probable AD); 5=AD+: Alzheimer's dementia AND other condition contributing to CI (NINCDS/ADRDA Possible AD); 6=Other dementia: Other primary cause of dementia, no clinical evidence of Alzheimer's dementia. Other forms: _l, _lv, _bl."
+}

@@ -1,0 +1,76 @@
+{
+  "variable": "path_cerad",
+  "cde_id": "283",
+  "means": "CERAD scoreś",
+  "program": "AMP-PD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "0",
+      "A",
+      "B",
+      "C",
+      "NA"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 3519134,
+      "name": "CERAD scoring for presence of neuritic plaques",
+      "domain": "Measurement"
+    }
+  },
+  "value_map": [
+    {
+      "value": "NA",
+      "write": {
+        "value_as_concept_id": {
+          "id": 35941270,
+          "name": "NA"
+        },
+        "value_as_string": "NA",
+        "value_source_value": "NA"
+      }
+    },
+    {
+      "value": "C",
+      "write": {
+        "value_as_number": 3,
+        "value_as_string": "C",
+        "value_source_value": "C"
+      }
+    },
+    {
+      "value": "B",
+      "write": {
+        "value_as_number": 2,
+        "value_as_string": "B",
+        "value_source_value": "B"
+      }
+    },
+    {
+      "value": "0",
+      "write": {
+        "value_as_number": 0,
+        "value_as_string": "0",
+        "value_source_value": "0"
+      }
+    },
+    {
+      "value": "A",
+      "write": {
+        "value_as_number": 1,
+        "value_as_string": "A",
+        "value_source_value": "A"
+      }
+    }
+  ],
+  "links": [],
+  "derived_from": [],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "manual_approval": true
+}

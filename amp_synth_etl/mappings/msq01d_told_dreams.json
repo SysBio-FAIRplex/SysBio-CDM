@@ -1,0 +1,56 @@
+{
+  "variable": "msq01d_told_dreams",
+  "cde_id": "258",
+  "means": "MSQ Told Dreams Q1d",
+  "program": "AMP-PD",
+  "grain": "visit",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "Yes",
+      "No",
+      "Never told you about dreams"
+    ]
+  },
+  "lands": {
+    "table": "observation"
+  },
+  "value_map": [
+    {
+      "value": "Yes",
+      "write": {
+        "value_as_concept_id": {
+          "id": 4188539,
+          "name": "Yes"
+        },
+        "value_as_string": "Yes",
+        "value_source_value": "Yes"
+      }
+    },
+    {
+      "value": "No",
+      "write": {
+        "value_as_concept_id": {
+          "id": 4188540,
+          "name": "No"
+        },
+        "value_as_string": "No",
+        "value_source_value": "No"
+      }
+    },
+    {
+      "value": "Never told you about dreams",
+      "write": {
+        "value_as_string": "Never told you about dreams",
+        "value_source_value": "Never told you about dreams"
+      }
+    }
+  ],
+  "links": [],
+  "derived_from": [],
+  "anchored_to": {
+    "person_id": "staging.person_map",
+    "visit_occurrence_id": "cdm.visit_occurrence"
+  },
+  "manual_approval": true
+}

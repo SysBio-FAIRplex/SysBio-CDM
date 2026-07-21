@@ -1,0 +1,38 @@
+{
+  "variable": "moca12_attention_serial_7s",
+  "cde_id": "222",
+  "means": "MOCA: 12. Attention - Serial 7s",
+  "program": "AMP-PD",
+  "grain": "visit",
+  "reads_as": {
+    "datatype": "integer",
+    "range": {
+      "min": 0,
+      "max": 3
+    }
+  },
+  "lands": {
+    "table": "measurement",
+    "measurement_concept_id": {
+      "id": 4158754,
+      "name": "Serial sevens test",
+      "domain": "Measurement"
+    }
+  },
+  "value_map": [
+    {
+      "value": "<any in range>",
+      "write": {
+        "value_as_number": "<value>",
+        "value_source_value": "<raw>"
+      }
+    }
+  ],
+  "links": [],
+  "derived_from": [],
+  "anchored_to": {
+    "person_id": "staging.person_map",
+    "visit_occurrence_id": "cdm.visit_occurrence"
+  },
+  "manual_approval": true
+}

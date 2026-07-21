@@ -1,0 +1,318 @@
+{
+  "variable": "development_stage",
+  "cde_id": "77",
+  "means": "Developmental or life stage of the subject at time of assessment",
+  "program": "AMP-CMD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "24-year-old stage",
+      "25-year-old stage",
+      "26-year-old stage",
+      "27-year-old stage",
+      "28-year-old stage",
+      "29-year-old stage",
+      "30-year-old stage",
+      "31-year-old stage",
+      "32-year-old stage",
+      "33-year-old stage",
+      "34-year-old stage",
+      "35-year-old stage",
+      "36-year-old stage",
+      "37-year-old stage",
+      "38-year-old stage",
+      "39-year-old stage",
+      "40-year-old stage",
+      "41-year-old stage",
+      "42-year-old stage",
+      "43-year-old stage",
+      "44-year-old stage",
+      "45-year-old stage",
+      "46-year-old stage",
+      "47-year-old stage",
+      "48-year-old stage",
+      "49-year-old stage",
+      "50-year-old stage",
+      "51-year-old stage",
+      "52-year-old stage",
+      "53-year-old stage",
+      "54-year-old stage",
+      "55-year-old stage",
+      "56-year-old stage",
+      "57-year-old stage",
+      "58-year-old stage",
+      "59-year-old stage",
+      "60-year-old stage",
+      "61-year-old stage",
+      "62-year-old stage",
+      "63-year-old stage",
+      "64-year-old stage",
+      "65-year-old stage",
+      "66-year-old stage",
+      "67-year-old stage",
+      "68-year-old stage",
+      "69-year-old stage",
+      "70-year-old stage",
+      "71-year-old stage",
+      "72-year-old stage",
+      "73-year-old stage"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 3053159,
+      "name": "Age group",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "39-year-old stage",
+      "write": {
+        "value_as_number": 39,
+        "value_as_string": "39-year-old stage",
+        "value_source_value": "39-year-old stage"
+      }
+    },
+    {
+      "value": "34-year-old stage",
+      "write": {
+        "value_as_number": 34,
+        "value_as_string": "34-year-old stage",
+        "value_source_value": "34-year-old stage"
+      }
+    },
+    {
+      "value": "67-year-old stage",
+      "write": {
+        "value_as_number": 67,
+        "value_as_string": "67-year-old stage",
+        "value_source_value": "67-year-old stage"
+      }
+    },
+    {
+      "value": "68-year-old stage",
+      "write": {
+        "value_as_number": 68,
+        "value_as_string": "68-year-old stage",
+        "value_source_value": "68-year-old stage"
+      }
+    },
+    {
+      "value": "26-year-old stage",
+      "write": {
+        "value_as_number": 26,
+        "value_as_string": "26-year-old stage",
+        "value_source_value": "26-year-old stage"
+      }
+    },
+    {
+      "value": "24-year-old stage",
+      "write": {
+        "value_as_number": 24,
+        "value_as_string": "24-year-old stage",
+        "value_source_value": "24-year-old stage"
+      }
+    },
+    {
+      "value": "94-year-old stage",
+      "write": {
+        "value_as_number": 94,
+        "value_as_string": "94-year-old stage",
+        "value_source_value": "94-year-old stage"
+      }
+    },
+    {
+      "value": "66-year-old stage",
+      "write": {
+        "value_as_number": 66,
+        "value_as_string": "66-year-old stage",
+        "value_source_value": "66-year-old stage"
+      }
+    },
+    {
+      "value": "46-year-old stage",
+      "write": {
+        "value_as_number": 46,
+        "value_as_string": "46-year-old stage",
+        "value_source_value": "46-year-old stage"
+      }
+    },
+    {
+      "value": "50-year-old stage",
+      "write": {
+        "value_as_number": 50,
+        "value_as_string": "50-year-old stage",
+        "value_source_value": "50-year-old stage"
+      }
+    },
+    {
+      "value": "53-year-old stage",
+      "write": {
+        "value_as_number": 53,
+        "value_as_string": "53-year-old stage",
+        "value_source_value": "53-year-old stage"
+      }
+    },
+    {
+      "value": "54-year-old stage",
+      "write": {
+        "value_as_number": 54,
+        "value_as_string": "54-year-old stage",
+        "value_source_value": "54-year-old stage"
+      }
+    },
+    {
+      "value": "55-year-old stage",
+      "write": {
+        "value_as_number": 55,
+        "value_as_string": "55-year-old stage",
+        "value_source_value": "55-year-old stage"
+      }
+    },
+    {
+      "value": "57-year-old stage",
+      "write": {
+        "value_as_number": 57,
+        "value_as_string": "57-year-old stage",
+        "value_source_value": "57-year-old stage"
+      }
+    },
+    {
+      "value": "58-year-old stage",
+      "write": {
+        "value_as_number": 58,
+        "value_as_string": "58-year-old stage",
+        "value_source_value": "58-year-old stage"
+      }
+    },
+    {
+      "value": "59-year-old stage",
+      "write": {
+        "value_as_number": 59,
+        "value_as_string": "59-year-old stage",
+        "value_source_value": "59-year-old stage"
+      }
+    },
+    {
+      "value": "60-year-old stage",
+      "write": {
+        "value_as_number": 60,
+        "value_as_string": "60-year-old stage",
+        "value_source_value": "60-year-old stage"
+      }
+    },
+    {
+      "value": "64-year-old stage",
+      "write": {
+        "value_as_number": 64,
+        "value_as_string": "64-year-old stage",
+        "value_source_value": "64-year-old stage"
+      }
+    },
+    {
+      "value": "65-year-old stage",
+      "write": {
+        "value_as_number": 65,
+        "value_as_string": "65-year-old stage",
+        "value_source_value": "65-year-old stage"
+      }
+    },
+    {
+      "value": "71-year-old stage",
+      "write": {
+        "value_as_number": 71,
+        "value_as_string": "71-year-old stage",
+        "value_source_value": "71-year-old stage"
+      }
+    },
+    {
+      "value": "72-year-old stage",
+      "write": {
+        "value_as_number": 72,
+        "value_as_string": "72-year-old stage",
+        "value_source_value": "72-year-old stage"
+      }
+    },
+    {
+      "value": "73-year-old stage",
+      "write": {
+        "value_as_number": 73,
+        "value_as_string": "73-year-old stage",
+        "value_source_value": "73-year-old stage"
+      }
+    },
+    {
+      "value": "56-year-old stage",
+      "write": {
+        "value_as_number": 56,
+        "value_as_string": "56-year-old stage",
+        "value_source_value": "56-year-old stage"
+      }
+    },
+    {
+      "value": "30-year-old stage",
+      "write": {
+        "value_as_number": 30,
+        "value_as_string": "30-year-old stage",
+        "value_source_value": "30-year-old stage"
+      }
+    },
+    {
+      "value": "31-year-old stage",
+      "write": {
+        "value_as_number": 31,
+        "value_as_string": "31-year-old stage",
+        "value_source_value": "31-year-old stage"
+      }
+    },
+    {
+      "value": "33-year-old stage",
+      "write": {
+        "value_as_number": 33,
+        "value_as_string": "33-year-old stage",
+        "value_source_value": "33-year-old stage"
+      }
+    },
+    {
+      "value": "36-year-old stage",
+      "write": {
+        "value_as_number": 36,
+        "value_as_string": "36-year-old stage",
+        "value_source_value": "36-year-old stage"
+      }
+    },
+    {
+      "value": "41-year-old stage",
+      "write": {
+        "value_as_number": 41,
+        "value_as_string": "41-year-old stage",
+        "value_source_value": "41-year-old stage"
+      }
+    },
+    {
+      "value": "43-year-old stage",
+      "write": {
+        "value_as_number": 43,
+        "value_as_string": "43-year-old stage",
+        "value_source_value": "43-year-old stage"
+      }
+    },
+    {
+      "value": "44-year-old stage",
+      "write": {
+        "value_as_number": 44,
+        "value_as_string": "44-year-old stage",
+        "value_source_value": "44-year-old stage"
+      }
+    }
+  ],
+  "links": [],
+  "derived_from": [],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "manual_approval": true
+}

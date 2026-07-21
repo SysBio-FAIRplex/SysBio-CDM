@@ -1,0 +1,9 @@
+# Build context is only used to install requirements; the repo is bind-mounted
+# at runtime. Keep the context small and free of generated artifacts.
+.git
+**/__pycache__
+*.py[cod]
+amp_synth_etl/output
+archive
+pipeline-test-harness
+*.log

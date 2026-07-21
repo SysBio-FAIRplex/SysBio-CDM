@@ -1,0 +1,64 @@
+{
+  "variable": "tobacco_ever_used",
+  "cde_id": "396",
+  "means": "Indicator of whether subject has ever used tobacco",
+  "program": "AMP-PD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "Yes",
+      "No",
+      "Unknown"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 44786669,
+      "name": "Lifetime tobacco use",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "No",
+      "write": {
+        "value_as_concept_id": {
+          "id": 4188540,
+          "name": "No"
+        },
+        "value_as_string": "No",
+        "value_source_value": "No"
+      }
+    },
+    {
+      "value": "Yes",
+      "write": {
+        "value_as_concept_id": {
+          "id": 4188539,
+          "name": "Yes"
+        },
+        "value_as_string": "Yes",
+        "value_source_value": "Yes"
+      }
+    },
+    {
+      "value": "Unknown",
+      "write": {
+        "value_as_concept_id": {
+          "id": 45877986,
+          "name": "Unknown"
+        },
+        "value_as_string": "Unknown",
+        "value_source_value": "Unknown"
+      }
+    }
+  ],
+  "links": [],
+  "derived_from": [],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "manual_approval": true
+}

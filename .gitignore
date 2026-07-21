@@ -1,0 +1,26 @@
+# Ignore rules for the SysBio-CDM repo. Tracked, so they reach everyone who clones.
+# Generic per-developer clutter (editor swap files, OS files) belongs in your own
+# global gitignore -- this file covers only project-specific artifacts.
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+
+# Logs
+*.log
+
+# Pipeline-generated build artifacts -- regenerated on every run, never committed:
+#   output/   synthetic source CSVs (written by 03_generate.py)
+#   reports/  coverage / conflict reports (written by 02, 02c, 05)
+amp_synth_etl/output/
+amp_synth_etl/reports/
+
+# Assembled CDM load SQL (written by 06/08/09/10/11/12). The hand-authored
+# source SQL in the same folder is KEPT, via the exceptions below.
+amp_synth_etl/cdm_load/*.sql
+!amp_synth_etl/cdm_load/cdm_ddl.sql
+!amp_synth_etl/cdm_load/governance_rls.sql
+!amp_synth_etl/cdm_load/_amp_clinical_ddl.sql
+
+# NOT ignored on purpose:
+#   exports/curated_concept_tables.sqlite  -- mandatory concept source, tracked

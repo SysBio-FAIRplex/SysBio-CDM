@@ -1,0 +1,26 @@
+TableName,ColumnName,Title,Description,Required,DataType,DataTypeRange,UniqueValues
+REM_Sleep_Behavior_Disorder_Questionnaire_Mayo.csv,participant_id,Study Subject ID,Study Subject ID,TRUE,String,,
+REM_Sleep_Behavior_Disorder_Questionnaire_Mayo.csv,GUID,Subject ID,Global Unique ID (USUBJID),FALSE,String,,
+REM_Sleep_Behavior_Disorder_Questionnaire_Mayo.csv,visit_name,Visit Name,"Visit name: M - in months, SC - screening visit, LOG - records without visit; #2 or #3 define repated records at the same visit or repeated visit",TRUE,String,,
+REM_Sleep_Behavior_Disorder_Questionnaire_Mayo.csv,visit_month,Visit Month,"Numeric visit in months; for visits prior baseline -1, -2 is an order of screening visits",FALSE,Float,,
+REM_Sleep_Behavior_Disorder_Questionnaire_Mayo.csv,msq_info_source,Mayo Sleep Questionnaire (MSQ),MSQ Source Of Information,FALSE,Enumeration,,Subject;Informant
+REM_Sleep_Behavior_Disorder_Questionnaire_Mayo.csv,msq_interviewee_live_with_subject,Mayo Sleep Questionnaire (MSQ),MSQ Live With Subject,FALSE,Enumeration,,No;Yes
+REM_Sleep_Behavior_Disorder_Questionnaire_Mayo.csv,msq_interviewee_sleep_same_room,Mayo Sleep Questionnaire (MSQ),MSQ Sleep in the same room,FALSE,Enumeration,,No;Yes
+REM_Sleep_Behavior_Disorder_Questionnaire_Mayo.csv,msq_distracting_sleep_behaviors,Mayo Sleep Questionnaire (MSQ),MSQ Distracting sleep behaviors,FALSE,Enumeration,,No;Yes
+REM_Sleep_Behavior_Disorder_Questionnaire_Mayo.csv,msq01_act_out_dreams,Mayo Sleep Questionnaire (MSQ),MSQ Act Out Dreams Q1,FALSE,Enumeration,,No;Yes
+REM_Sleep_Behavior_Disorder_Questionnaire_Mayo.csv,msq01a_act_out_years,Mayo Sleep Questionnaire (MSQ),MSQ Act Out Years Q1a,FALSE,Float,0 - 99,
+REM_Sleep_Behavior_Disorder_Questionnaire_Mayo.csv,msq01a_act_out_months,Mayo Sleep Questionnaire (MSQ),MSQ Act Out Months Q1a,FALSE,Float,0 - 2000,
+REM_Sleep_Behavior_Disorder_Questionnaire_Mayo.csv,msq01b_patient_injured,Mayo Sleep Questionnaire (MSQ),MSQ Patient injured Q1b,FALSE,String,,No;Yes
+REM_Sleep_Behavior_Disorder_Questionnaire_Mayo.csv,msq01c_bedpartner_injured,Mayo Sleep Questionnaire (MSQ),MSQ Bedpartner Injured Q1c,FALSE,Enumeration,,Yes;No;No bedpartner
+REM_Sleep_Behavior_Disorder_Questionnaire_Mayo.csv,msq01d_told_dreams,Mayo Sleep Questionnaire (MSQ),MSQ Told Dreams Q1d,FALSE,Enumeration,,Yes;No;Never told you about dreams
+REM_Sleep_Behavior_Disorder_Questionnaire_Mayo.csv,msq01e_dream_details_match,Mayo Sleep Questionnaire (MSQ),MSQ Dream Details Match Q1e,FALSE,Enumeration,,Yes;No;Never told you about dreams
+REM_Sleep_Behavior_Disorder_Questionnaire_Mayo.csv,msq02_legs_jerk,Mayo Sleep Questionnaire (MSQ),MSQ Legs Jerk Q2,FALSE,Enumeration,,No;Yes
+REM_Sleep_Behavior_Disorder_Questionnaire_Mayo.csv,msq03_restless_legs,Mayo Sleep Questionnaire (MSQ),MSQ Restless Legs Q3,FALSE,Enumeration,,No;Yes
+REM_Sleep_Behavior_Disorder_Questionnaire_Mayo.csv,msq03a_leg_sensations_decrease,Mayo Sleep Questionnaire (MSQ),MSQ Leg Sensations Decrease Q3a,FALSE,Enumeration,,No;Yes
+REM_Sleep_Behavior_Disorder_Questionnaire_Mayo.csv,msq03b_time_leg_sensations_worst,Mayo Sleep Questionnaire (MSQ),MSQ Time Leg Sensations Worst Q3b,FALSE,Enumeration,,After 6pm;Before 6pm
+REM_Sleep_Behavior_Disorder_Questionnaire_Mayo.csv,msq04b_walked_asleep,Mayo Sleep Questionnaire (MSQ),MSQ Walked Asleep Q4,FALSE,Enumeration,,No;Yes
+REM_Sleep_Behavior_Disorder_Questionnaire_Mayo.csv,msq05_snorted_awake,Mayo Sleep Questionnaire (MSQ),MSQ Snorted Awake Q5,FALSE,Enumeration,,No;Yes
+REM_Sleep_Behavior_Disorder_Questionnaire_Mayo.csv,msq06_stop_breathing,Mayo Sleep Questionnaire (MSQ),MSQ Stop Breathing Q6,FALSE,Enumeration,,No;Yes
+REM_Sleep_Behavior_Disorder_Questionnaire_Mayo.csv,msq06a_treated_for_stop_breathing,Mayo Sleep Questionnaire (MSQ),MSQ Treated For Stop Breathing Q6a,FALSE,Enumeration,,No;Yes
+REM_Sleep_Behavior_Disorder_Questionnaire_Mayo.csv,msq07_leg_cramps,Mayo Sleep Questionnaire (MSQ),MSQ Leg Cramps Q7,FALSE,Enumeration,,No;Yes
+REM_Sleep_Behavior_Disorder_Questionnaire_Mayo.csv,msq08_rate_of_alertness,Mayo Sleep Questionnaire (MSQ),MSQ Rate Of Alertness Q8,FALSE,Integer,0 - 10,

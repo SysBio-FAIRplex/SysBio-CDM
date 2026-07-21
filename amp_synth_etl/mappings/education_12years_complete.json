@@ -1,0 +1,45 @@
+{
+  "variable": "education_12years_complete",
+  "cde_id": "160",
+  "means": "Indicator Of Whether Subject Has Completed 12 Years Of Education",
+  "program": "AMP-PD",
+  "grain": "visit",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "Greater than 12 years of education",
+      "Less than or equal to 12 years of education"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 36031310,
+      "name": "Education completion status",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "Greater than 12 years of education",
+      "write": {
+        "value_as_string": "Greater than 12 years of education",
+        "value_source_value": "Greater than 12 years of education"
+      }
+    },
+    {
+      "value": "Less than or equal to 12 years of education",
+      "write": {
+        "value_as_string": "Less than or equal to 12 years of education",
+        "value_source_value": "Less than or equal to 12 years of education"
+      }
+    }
+  ],
+  "links": [],
+  "derived_from": [],
+  "anchored_to": {
+    "person_id": "staging.person_map",
+    "visit_occurrence_id": "cdm.visit_occurrence"
+  },
+  "manual_approval": true
+}

@@ -1,0 +1,64 @@
+{
+  "variable": "mayoDx",
+  "cde_id": "37",
+  "means": "Mayo Clinic neuropathological diagnosis",
+  "program": "AMP-AD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "AD",
+      "Control",
+      "other",
+      "not applicable"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 3187945,
+      "name": "Neuropathology observable entity",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "not applicable",
+      "write": {
+        "value_as_concept_id": {
+          "id": 4294169,
+          "name": "Not applicable"
+        },
+        "value_as_string": "not applicable",
+        "value_source_value": "not applicable"
+      }
+    },
+    {
+      "value": "AD",
+      "write": {
+        "value_as_string": "AD",
+        "value_source_value": "AD"
+      }
+    },
+    {
+      "value": "other",
+      "write": {
+        "value_as_string": "other",
+        "value_source_value": "other"
+      }
+    },
+    {
+      "value": "Control",
+      "write": {
+        "value_as_string": "Control",
+        "value_source_value": "Control"
+      }
+    }
+  ],
+  "links": [],
+  "derived_from": [],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "manual_approval": true
+}

@@ -1,0 +1,75 @@
+{
+  "variable": "ethnicity",
+  "cde_id": "173",
+  "means": "Ethnicity",
+  "program": "AMP-AD / AMP-CMD / AMP-PD / AMP-RA-SLE",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "Not Hispanic or Latino",
+      "Hispanic or Latino",
+      "Unknown"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 40771985,
+      "name": "Ethnicity OMB.1997",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "Not Hispanic or Latino",
+      "write": {
+        "value_as_concept_id": {
+          "id": 38003564,
+          "name": "Not Hispanic or Latino"
+        },
+        "value_as_string": "Not Hispanic or Latino",
+        "value_source_value": "Not Hispanic or Latino"
+      }
+    },
+    {
+      "value": "Unknown",
+      "write": {
+        "value_as_concept_id": {
+          "id": 45877986,
+          "name": "Unknown"
+        },
+        "value_as_string": "Unknown",
+        "value_source_value": "Unknown"
+      }
+    },
+    {
+      "value": "Hispanic or Latino",
+      "write": {
+        "value_as_concept_id": {
+          "id": 38003563,
+          "name": "Hispanic or Latino"
+        },
+        "value_as_string": "Hispanic or Latino",
+        "value_source_value": "Hispanic or Latino"
+      }
+    },
+    {
+      "value": "unknown",
+      "write": {
+        "value_as_concept_id": {
+          "id": 45877986,
+          "name": "Unknown"
+        },
+        "value_as_string": "unknown",
+        "value_source_value": "unknown"
+      }
+    }
+  ],
+  "links": [],
+  "derived_from": [],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "manual_approval": true
+}

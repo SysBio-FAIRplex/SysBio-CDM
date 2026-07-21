@@ -1,0 +1,37 @@
+{
+  "variable": "tobacco_start_age",
+  "cde_id": "400",
+  "means": "Age in years when participant/subject started using tobacco products (e.g. cigarettes, cigars, chewing tobacco or pipe)",
+  "program": "AMP-PD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "integer",
+    "range": {
+      "min": 6,
+      "max": 75
+    }
+  },
+  "lands": {
+    "table": "measurement",
+    "measurement_concept_id": {
+      "id": 40765292,
+      "name": "PhenX - tobacco - age of initiation of use - adolescent protocol 030701",
+      "domain": "Measurement"
+    }
+  },
+  "value_map": [
+    {
+      "value": "<any in range>",
+      "write": {
+        "value_as_number": "<value>",
+        "value_source_value": "<raw>"
+      }
+    }
+  ],
+  "links": [],
+  "derived_from": [],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "manual_approval": true
+}

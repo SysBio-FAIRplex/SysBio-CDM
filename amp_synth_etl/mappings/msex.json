@@ -1,0 +1,89 @@
+{
+  "variable": "msex",
+  "cde_id": "38",
+  "means": "Participant sex",
+  "program": "AMP-AD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "Male",
+      "Female",
+      "M",
+      "F",
+      "Unknown"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 3046965,
+      "name": "Sex",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "M",
+      "write": {
+        "value_as_concept_id": {
+          "id": 8507,
+          "name": "MALE"
+        },
+        "value_as_string": "M",
+        "value_source_value": "M"
+      }
+    },
+    {
+      "value": "Unknown",
+      "write": {
+        "value_as_concept_id": {
+          "id": 45877986,
+          "name": "Unknown"
+        },
+        "value_as_string": "Unknown",
+        "value_source_value": "Unknown"
+      }
+    },
+    {
+      "value": "Female",
+      "write": {
+        "value_as_concept_id": {
+          "id": 8532,
+          "name": "FEMALE"
+        },
+        "value_as_string": "Female",
+        "value_source_value": "Female"
+      }
+    },
+    {
+      "value": "F",
+      "write": {
+        "value_as_concept_id": {
+          "id": 8532,
+          "name": "FEMALE"
+        },
+        "value_as_string": "F",
+        "value_source_value": "F"
+      }
+    },
+    {
+      "value": "Male",
+      "write": {
+        "value_as_concept_id": {
+          "id": 8507,
+          "name": "MALE"
+        },
+        "value_as_string": "Male",
+        "value_source_value": "Male"
+      }
+    }
+  ],
+  "links": [],
+  "derived_from": [],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "manual_approval": true,
+  "derivation_rule": "RADC data set 754 (ROSMAP). Self-reported sex, with '1' indicating male sex. Allowable codes: 1=Male; 0=Female."
+}

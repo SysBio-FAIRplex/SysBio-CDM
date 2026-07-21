@@ -1,0 +1,104 @@
+{
+  "variable": "cogdx",
+  "cde_id": "19",
+  "means": "Final Consensus Cognitive Diagnosis",
+  "program": "AMP-AD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "code",
+    "values": {
+      "1": "NCI: No cognitive impairment (No impaired domains)",
+      "2": "MCI: Mild cognitive impairment (One impaired domain) and NO other cause of CI",
+      "3": "MCI: Mild cognitive impairment (One impaired domain) AND another cause of CI",
+      "4": "AD: Alzheimer's dementia and NO other cause of CI (NINCDS PROB AD)",
+      "5": "AD: Alzheimer's dementia AND another cause of CI (NINCDS POSS AD)",
+      "6": "Other dementia: Other primary cause of dementia"
+    }
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 46235850,
+      "name": "Cognitive function [Interpretation]",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "2",
+      "write": {
+        "value_as_concept_id": {
+          "id": 4297400,
+          "name": "Mild neurocognitive disorder"
+        },
+        "value_source_value": "2"
+      }
+    },
+    {
+      "value": "1",
+      "write": {
+        "value_as_concept_id": {
+          "id": 45884350,
+          "name": "No impairment"
+        },
+        "value_source_value": "1"
+      }
+    },
+    {
+      "value": "3",
+      "write": {
+        "value_as_concept_id": {
+          "id": 4297400,
+          "name": "Mild neurocognitive disorder"
+        },
+        "value_source_value": "3",
+        "qualifier_concept_id": {
+          "id": 46235351,
+          "name": "Comorbid condition"
+        }
+      }
+    },
+    {
+      "value": "4",
+      "write": {
+        "value_as_concept_id": {
+          "id": 36311271,
+          "name": "Alzheimer's disease"
+        },
+        "value_source_value": "4"
+      }
+    },
+    {
+      "value": "5",
+      "write": {
+        "value_as_concept_id": {
+          "id": 36311271,
+          "name": "Alzheimer's disease"
+        },
+        "value_source_value": "5",
+        "qualifier_concept_id": {
+          "id": 46235351,
+          "name": "Comorbid condition"
+        }
+      }
+    },
+    {
+      "value": "6",
+      "write": {
+        "value_as_concept_id": {
+          "id": 36310643,
+          "name": "Cognitive loss/dementia"
+        },
+        "value_source_value": "6"
+      }
+    }
+  ],
+  "links": [],
+  "derived_from": [],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "manual_approval": true,
+  "revision_comment": "Changed MCI+ mapping to align with the MCI. Both are now mild neurocognitive disorder",
+  "derivation_rule": "RADC data set 754 (ROSMAP). Clinical consensus diagnosis of cognitive status at time of death; physician's overall cognitive diagnostic category. At the time of death, all available clinical data were reviewed by a neurologist with expertise in dementia, and a summary diagnostic opinion was rendered regarding the most likely clinical diagnosis at the time of death. Summary diagnoses were made blinded to all postmortem data. Case conferences including one or more neurologists and a neuropsychologist were used for consensus on selected cases. Value coding: 1=NCI: No cognitive impairment (No impaired domains); 2=MCI: Mild cognitive impairment (One impaired domain) and NO other cause of CI; 3=MCI: Mild cognitive impairment (One impaired domain) AND another cause of CI; 4=AD: Alzheimer's dementia and NO other cause of CI (NINCDS PROB AD); 5=AD: Alzheimer's dementia AND another cause of CI (NINCDS POSS AD); 6=Other dementia: Other primary cause of dementia."
+}

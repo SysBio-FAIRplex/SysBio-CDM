@@ -1,0 +1,55 @@
+{
+  "variable": "isHispanic",
+  "cde_id": "35",
+  "means": "Hispanic or Latino ethnicity indicator",
+  "program": "AMP-AD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "True",
+      "False",
+      "Missing or unknown"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 38003563,
+      "name": "Hispanic or Latino",
+      "domain": "Ethnicity"
+    }
+  },
+  "value_map": [
+    {
+      "value": "False",
+      "write": {
+        "value_as_number": 0,
+        "value_as_concept_id": {
+          "id": 4188540,
+          "name": "No"
+        },
+        "value_as_string": "False",
+        "value_source_value": "False"
+      }
+    },
+    {
+      "value": "True",
+      "write": {
+        "value_as_number": 1,
+        "value_as_concept_id": {
+          "id": 4188539,
+          "name": "Yes"
+        },
+        "value_as_string": "True",
+        "value_source_value": "True"
+      }
+    }
+  ],
+  "links": [],
+  "derived_from": [],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "manual_approval": true
+}

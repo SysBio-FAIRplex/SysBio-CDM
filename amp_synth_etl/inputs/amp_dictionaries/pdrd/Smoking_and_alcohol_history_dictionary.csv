@@ -1,0 +1,34 @@
+TableName,ColumnName,Title,Description,Required,DataType,DataTypeRange,UniqueValues
+Smoking_and_alcohol_history.csv,participant_id,Study Subject ID,Study Subject ID,TRUE,String,,
+Smoking_and_alcohol_history.csv,GUID,Subject ID,Global Unique ID (USUBJID),FALSE,String,,
+Smoking_and_alcohol_history.csv,visit_name,Visit Name,"Visit name: M - in months, SC - screening visit, LOG - records without visit; #2 or #3 define repated records at the same visit or repeated visit",TRUE,String,,
+Smoking_and_alcohol_history.csv,visit_month,Visit Month,"Numeric visit in months; for visits prior baseline -1, -2 is an order of screening visits",FALSE,Float,,
+Smoking_and_alcohol_history.csv,tobacco_ever_used,Tobacco Use,Indicator of whether subject has ever used tobacco,FALSE,Enumeration,,Yes;No;Unknown
+Smoking_and_alcohol_history.csv,tobacco_current_use,Tobacco Use,Indicator of whether in your lifetime subject have smoked 100 or more cigarettes (5 packs),FALSE,Enumeration,,Yes;No;Unknown
+Smoking_and_alcohol_history.csv,smoked_100_more_cigarettes,Tobacco Use,Current tobacco use indicator,FALSE,Enumeration,,Yes;No;Unknown
+Smoking_and_alcohol_history.csv,alcohol_ever_used,Alcohol Use,Indicator of whether subject has ever used alcohol,FALSE,Enumeration,,Yes;No;Unknown
+Smoking_and_alcohol_history.csv,alcohol_current_use,Alcohol Use,Currentl alcohol use indicator,FALSE,Enumeration,,Yes;No;Unknown
+Smoking_and_alcohol_history.csv,tobacco_recent_use,Tobacco Use,Tobacco recent use indicator,FALSE,Enumeration,,Yes;No;Unknown
+Smoking_and_alcohol_history.csv,tobacco_prior_use,Tobacco Use,"Indicator of the participant's/subject's past regular tobacco (e.g. cigarettes, cigars, chewing tobacco or pipe) use prior to the past 12 months",FALSE,Enumeration,,Yes;No;Unknown
+Smoking_and_alcohol_history.csv,tobacco_start_age,Tobacco Use,"Age in years when participant/subject started using tobacco products (e.g. cigarettes, cigars, chewing tobacco or pipe)",FALSE,Integer, 6 - 75,
+Smoking_and_alcohol_history.csv,tobacco_stop_age,Tobacco Use,"Age in years when participant/subject stopped using tobacco products (e.g. cigarettes, cigars, chewing tobacco or pipe)",FALSE,Integer, 13 - 85,
+Smoking_and_alcohol_history.csv,tobacco_product_type,Tobacco Use,Type of tobacco product that has been used,FALSE,String,,
+Smoking_and_alcohol_history.csv,cigarettes_per_day,Tobacco Use,Average number cigarettes smoked daily,FALSE,String,,
+Smoking_and_alcohol_history.csv,cigarettes_packs_per_day,Tobacco Use,Average number packs of cigarettes smoked daily,FALSE,Enumeration,,Unknown;0.5 pack or less ;1 pack;0.5 pack;2 or more packs;1.5 pack
+Smoking_and_alcohol_history.csv,alcohol_recent_use,Alcohol Use,Participant (subject) alcohol consumption past 12 months,FALSE,Enumeration,,Yes;No;Unknown
+Smoking_and_alcohol_history.csv,alcohol_prior_use,Alcohol Use,Indicator of the participant's/subject's alcohol consumption prior to the past 12 months,FALSE,Enumeration,,Yes;No;Unknown
+Smoking_and_alcohol_history.csv,alcohol_start_age,Alcohol Use,"Age in years when participant/subject started ingesting alcoholic beverages, including social drinking",FALSE,Integer, 1 - 75,
+Smoking_and_alcohol_history.csv,alcohol_stop_age,Alcohol Use,"Age in years when participant/subject stopped ingesting alcoholic beverages, including social drinking",FALSE,Integer, 9 - 85,
+Smoking_and_alcohol_history.csv,alcohol_use_frequency,Alcohol Use,The frequency of consumption of alcohol by the participant,FALSE,String,,
+Smoking_and_alcohol_history.csv,alcohol_drinks_daily_range,Alcohol Use,Alcohol drinking day average drinks consumed range,FALSE,String,,
+Smoking_and_alcohol_history.csv,alcohol_six_more_drinks_frequency,Alcohol Use,Alcohol consume six or more drinks frequency,FALSE,Enumeration,,Never;Less than monthly;Unknown;Monthly;Daily or almost daily;Weekly
+Smoking_and_alcohol_history.csv,alcohol_related_hospitalization,Alcohol Use,"Indicator of whether the participant/subject has been hospitalized for an alcohol-related problem (i.e., esophageal varices, delirium tremens (DTs), cirrhosis and others)",FALSE,Enumeration,,Yes;No;Unknown
+Smoking_and_alcohol_history.csv,cigarettes_per_day_current,Tobacco Use,Current smokers: average number cigarettes per day?,FALSE,Integer, 0 - 250,
+Smoking_and_alcohol_history.csv,cigarettes_per_day_past,Tobacco Use,Past smokers: average number of cigarettes smoked daily?,FALSE,Float, 0 - 80,
+Smoking_and_alcohol_history.csv,smoke_exposure_home,Tobacco Use,How many hours a day are you exposed to the cigarette smoke of others (on average) at home?,FALSE,Float, 0 - 15,
+Smoking_and_alcohol_history.csv,smoke_exposure_work,Tobacco Use,How many hours a day are you exposed to the cigarette smoke of others (on average) at work?,FALSE,Integer, 0 - 10,
+Smoking_and_alcohol_history.csv,smoke_exposure_other_areas,Tobacco Use,How many hours a day are you exposed to the cigarette smoke of others (on average) in other areas?,FALSE,Float, 0 - 10,
+Smoking_and_alcohol_history.csv,alcohol_drinks_day,Alcohol Use,How many drinks do you have on an average day?,FALSE,Float, 0 - 10,
+Smoking_and_alcohol_history.csv,alcohol_consumed_years,Alcohol Use,How many years consumed alcohol heavily in the past?,FALSE,Float, 1 - 51,
+Smoking_and_alcohol_history.csv,alcohol_consumption_change,Alcohol Use,Has your alcohol consumption changed over the past 10 years?,FALSE,Enumeration,,Yes;No;Unknown
+Smoking_and_alcohol_history.csv,alcohol_inc_dec,Alcohol Use,Has there been a general increase or decrease in your consumption over a 10-year period.,FALSE,Enumeration,,Decrease;Increase

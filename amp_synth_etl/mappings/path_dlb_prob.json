@@ -1,0 +1,67 @@
+{
+  "variable": "path_dlb_prob",
+  "cde_id": "284",
+  "means": "Likelihood of DLB based on McKeith criteria",
+  "program": "AMP-PD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "Low Likelihood",
+      "Intermediate Likelihood",
+      "High Likelihood",
+      "NA"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 3188920,
+      "name": "DLB consortium neuropathologic criteria for diagnosis of Lewy Body Dementia total score",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "NA",
+      "write": {
+        "value_as_concept_id": {
+          "id": 35941270,
+          "name": "NA"
+        },
+        "value_as_string": "NA",
+        "value_source_value": "NA"
+      }
+    },
+    {
+      "value": "Intermediate Likelihood",
+      "write": {
+        "value_as_number": 2,
+        "value_as_string": "Intermediate Likelihood",
+        "value_source_value": "Intermediate Likelihood"
+      }
+    },
+    {
+      "value": "High Likelihood",
+      "write": {
+        "value_as_number": 3,
+        "value_as_string": "High Likelihood",
+        "value_source_value": "High Likelihood"
+      }
+    },
+    {
+      "value": "Low Likelihood",
+      "write": {
+        "value_as_number": 1,
+        "value_as_string": "Low Likelihood",
+        "value_source_value": "Low Likelihood"
+      }
+    }
+  ],
+  "links": [],
+  "derived_from": [],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "manual_approval": true
+}

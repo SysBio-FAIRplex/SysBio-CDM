@@ -1,0 +1,53 @@
+{
+  "variable": "other_relative_with_pd",
+  "cde_id": "278",
+  "means": "Other Relative Has Or Had Parkinson's Disease",
+  "program": "AMP-PD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "No",
+      "Yes",
+      "Unknown"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 4182334,
+      "name": "Family history of Parkinson's disease",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "No",
+      "write": {
+        "value_as_concept_id": {
+          "id": 4188540,
+          "name": "No"
+        },
+        "value_as_string": "No",
+        "value_source_value": "No"
+      }
+    },
+    {
+      "value": "Yes",
+      "write": {
+        "value_as_concept_id": {
+          "id": 4188539,
+          "name": "Yes"
+        },
+        "value_as_string": "Yes",
+        "value_source_value": "Yes"
+      }
+    }
+  ],
+  "links": [],
+  "derived_from": [],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "manual_approval": true
+}

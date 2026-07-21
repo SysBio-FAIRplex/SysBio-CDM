@@ -1,0 +1,58 @@
+# Development bench for the SysBio-CDM pipeline.
+#
+# A collaborator clones this repo and runs:
+#
+#   export PGPASSWORD=<choose-one>
+#   docker compose up -d
+#   docker compose exec bench bash
+#
+# Then inside the bench, from /app/amp_synth_etl:
+#
+#   python scripts/01_build_specs.py   # ... the pipeline (see amp_synth_etl/README.md)
+#
+# Two services:
+#   db    — PostgreSQL, its own service with a persistent named volume. Modelled as
+#           a separate service so it ports cleanly to a hosted database later.
+#   bench — the pipeline toolchain, with the repo live-mounted at /app.
+#
+# The db is reachable inside the compose network by hostname (db:5432); the bench
+# uses that via PGHOST/PGPORT. It is intentionally NOT published to a host port, so
+# it cannot clash with a Postgres you may already run locally. To inspect it from
+# the host:  docker compose exec db psql -U postgres
+name: sysbio-cdm
+
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: ${PGPASSWORD:?set PGPASSWORD in your environment}
+      POSTGRES_DB: postgres
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  bench:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      PGHOST: db
+      PGPORT: "5432"
+      PGUSER: postgres
+      PGPASSWORD: ${PGPASSWORD:?set PGPASSWORD in your environment}
+      PGDATABASE: postgres
+    volumes:
+      - .:/app
+    working_dir: /app/amp_synth_etl
+    command: sleep infinity
+
+volumes:
+  pgdata:

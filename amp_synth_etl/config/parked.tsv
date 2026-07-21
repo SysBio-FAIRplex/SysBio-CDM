@@ -1,0 +1,9 @@
+#	Columns the AMP source declares with NO value set, and for which some OTHER layer supplies one.
+#	They are emitted EMPTY. A value is never invented, and never borrowed from another programme.
+#
+#	This exists because the SysBio dictionary keys `diagnosis` by NAME ALONE, so its single row --
+#	carrying AMP-RA/SLE's rheumatology list -- was resolved for AMP-PD too. A Parkinson's medical
+#	history was being written with a diagnosis of vitiligo.
+#
+#	table	column	why
+PD_Medical_History.csv	diagnosis	AMP-PD's dictionary leaves UniqueValues BLANK for this column, so AMP-PD states no value set. It was drawing the SysBio dictionary's `diagnosis` row, which holds AMP-RA/SLE's list (At-Risk RA, CLE, LN, OA, PsA, PsO, SjD, dermatomyositis, scleroderma, vitiligo). Those are rheumatology diagnoses and do not belong to a Parkinson's cohort. AMP-RA/SLE keeps ARK's own 16 values; AMP-PD gets none, because its source states none.

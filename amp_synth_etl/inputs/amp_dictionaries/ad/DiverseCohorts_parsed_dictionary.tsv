@@ -1,0 +1,38 @@
+source_file	ColumnName	Description	Values
+DiverseCohorts_DataDictionary.pdf	individualID	identifying string linked to a particular individual (example: R1234567)	
+DiverseCohorts_DataDictionary.pdf	dataContributionGroup	The research group who contributed the sample	Columbia; Emory; Mayo; MSSM; Rush
+DiverseCohorts_DataDictionary.pdf	cohort	The initial study group population to which the individual belonged	AA; Banner; Biggs Institute Brain Bank; CLINCOR; Emory; LATC; MAP; MARS; Mayo Clinic; Mt Sinai Brain Bank; NY Brain Bank; UPenn; ROS; UFL
+DiverseCohorts_DataDictionary.pdf	sex	Self-reported sex	Female; Male
+DiverseCohorts_DataDictionary.pdf	race	Self-reported race	American Indian or Alaska Native; Asian; Black or African American; White; other; Missing or unknown
+DiverseCohorts_DataDictionary.pdf	isHispanic	Self-reported indicator for Hispanic or Latino ethnicity	True; False; Missing or unknown
+DiverseCohorts_DataDictionary.pdf	ageDeath	Age at Death (in years)	
+DiverseCohorts_DataDictionary.pdf	pmi	Post-mortem interval (in hours)	
+DiverseCohorts_DataDictionary.pdf	apoeGenotype	Apolipoprotein E genotype	22 = ɛ2ɛ2; 23 = ɛ2ɛ3; 24 = ɛ2ɛ4; 33 = ɛ3ɛ3; 34 = ɛ3ɛ4; 44 = ɛ4ɛ4; missing or unknown
+DiverseCohorts_DataDictionary.pdf	amyThal	Thal Phase (a measure of amyloid deposition)	None; Phase 1; Phase 2; Phase 3; Phase 4; Phase 5; missing or unknown
+DiverseCohorts_DataDictionary.pdf	amyA	Indicator of Thal Phase, grouped	None; Thal Phase 1 or 2; Thal Phase 3; Thal Phase 4 or 5; Missing or unknown
+DiverseCohorts_DataDictionary.pdf	amyCerad	CERAD score, a semi-quantitative measure of neuritic plaque	None/No AD/C0; Sparse/Possible/C1; Moderate/Probable/C2; Frequent/Definite/C3; Missing or unknown
+DiverseCohorts_DataDictionary.pdf	amyAny	Indicator for presence of any amyloid by CERAD score	0 = amyCerad = None/No AD/C0; 1 = amyCerad = Sparse/Possible/C1 or Moderate/Probable/C2 or Frequent/Definite/C3; Missing or unknown
+DiverseCohorts_DataDictionary.pdf	Braak	Braak stage, a semi-quantitative measure of neurofibrillary tangle pathology	None; Stage I; Stage II; Stage III; Stage IV; Stage V; Stave VI; Missing or unknown
+DiverseCohorts_DataDictionary.pdf	bScore	Indicator of Braak Stage, grouped	None; Braak Stage I-II; Braak Stage III-IV; Braak Stage V-VI; Missing or unknown
+DiverseCohorts_DataDictionary_ExtNeuropath.pdf	individualID	identifying string linked to a particular individual (example: R1234567)	
+DiverseCohorts_DataDictionary_ExtNeuropath.pdf	dataContributionGroup	The research group who contributed the sample	Columbia; Emory; Mayo; MSSM; Rush
+DiverseCohorts_DataDictionary_ExtNeuropath.pdf	cohort	The initial study group population to which the individual belonged	AA; Banner; Biggs Institute Brain Bank; CLINCOR; Emory; LATC; MAP; MARS; Mayo Clinic; Mt Sinai Brain Bank; NY Brain Bank; UPenn; ROS; UFL
+DiverseCohorts_DataDictionary_ExtNeuropath.pdf	LEWY_full	PD Braak Staging (1,2)	0 = None; 1 = Brainstem predominant; 2 = Limbic/amygdala (transitional); 3 = Neocortical (diffuse); 4 = Olfactory bulb or Region unspecified; NA = missing or unknown
+DiverseCohorts_DataDictionary_ExtNeuropath.pdf	LEWY_grp	PD Braak (grouped)	0 = None; 1 = Brainstem predominant; 2 = Transitional, diffuse, Amygdala only, olfactory bulb; predominant, or region unspecified; NA = Missing or unknown
+DiverseCohorts_DataDictionary_ExtNeuropath.pdf	LEWY_ANY	PD Braak (dichotomous)	0 = None; 1 = Brainstem, transitional, diffuse, Amygdala only,; olfactory bulb predominant, or region unspecified; NA = missing or unknown
+DiverseCohorts_DataDictionary_ExtNeuropath.pdf	INFA	Infarcts and lacunes. Reports of anoxic ischemic injury will	not be considered within the infarcts and lacunes lesions.; 0 = No; 1 = Yes; NA = missing or unknown
+DiverseCohorts_DataDictionary_ExtNeuropath.pdf	HEMOR	Hemorrhages	0 = No; 1 = Yes; NA = missing or unknown
+DiverseCohorts_DataDictionary_ExtNeuropath.pdf	MICR	Microinfarcts	0 = No; 1 = Yes; NA = missing or unknown
+DiverseCohorts_DataDictionary_ExtNeuropath.pdf	WMR	White matter rarefaction	0 = Absent; 1 = Mild; 2 = Moderate; 3 = Severe; NA = missing or unknown
+DiverseCohorts_DataDictionary_ExtNeuropath.pdf	WBVD	Whole brain vascular disease	0 = No; 1 = Yes; NA = missing or unknown
+DiverseCohorts_DataDictionary_ExtNeuropath.pdf	HS_L	Hippocampal sclerosis (with laterality)	0 = None; 1 = Unilateral; 2 = Bilateral; 3 = Present, Location unknown; NA = missing or unknown
+DiverseCohorts_DataDictionary_ExtNeuropath.pdf	HS_S	Hippocampal sclerosis (simplified)	0 = No; 1 = Yes; NA = missing or unknown
+DiverseCohorts_DataDictionary_ExtNeuropath.pdf	TDP_3	TDP-3 Component	0 = None; 1 = Amygdala; 2 = Hippocampus or Entorhinal; 3 = Neocortex; NA = missing or unknown
+DiverseCohorts_DataDictionary_ExtNeuropath.pdf	TDP_5	TDP Stage	0 = None; 1 = Brainstem/Spinal Cord; 2 = Amygdala; 3 = Hippocampus; 4 = Entorhinal; 5 = Neocortex; NA = missing or unknown
+DiverseCohorts_DataDictionary_ExtNeuropath.pdf	CVD_ATH	Atherosclerosis	0 = None; 1 = Mild; 2 = Moderate; 3 = Severe; NA = missing or unknown
+DiverseCohorts_DataDictionary_ExtNeuropath.pdf	CVD_ATH_ANY	Atherosclerosis (indicator)	0 = None; 1 = Mild, Moderate, or Severe; NA = missing or unknown
+DiverseCohorts_DataDictionary_ExtNeuropath.pdf	CVD_ART	Arteriolosclerosis	0 = None; 1 = Mild; 2 = Moderate; 3 = Severe; NA = missing or unknown
+DiverseCohorts_DataDictionary_ExtNeuropath.pdf	CVD_ART_ANY	Arteriolosclerosis (indicator)	0 = None; 1 = Mild, Moderate, or Severe; NA = missing or unknown
+DiverseCohorts_DataDictionary_ExtNeuropath.pdf	CVD_CAA	Cerebral Amyloid Angiopathy (CAA)	0 = None; 1 = Mild; 2 = Moderate; 3 = Severe; NA = missing or unknown
+DiverseCohorts_DataDictionary_ExtNeuropath.pdf	BRAINWT	Brain weight in grams (numeric)	
+DiverseCohorts_DataDictionary_ExtNeuropath.pdf	Lacunes_MSSM	Presence or absence of lacunes (MSSM only)	0 = No; 1 = Yes; NA = missing or unknown

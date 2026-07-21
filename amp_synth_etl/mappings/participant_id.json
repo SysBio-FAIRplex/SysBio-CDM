@@ -1,0 +1,2979 @@
+{
+  "variable": "participant_id",
+  "cde_id": "280",
+  "means": "Study Subject ID",
+  "program": "AMP-PD",
+  "grain": "specimen, subject, visit",
+  "reads_as": {
+    "datatype": "string"
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 40768976,
+      "name": "Participant [Identifier]",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "100382",
+      "write": {
+        "value_as_number": 100382,
+        "value_as_string": "100382",
+        "value_source_value": "100382"
+      }
+    },
+    {
+      "value": "100474",
+      "write": {
+        "value_as_number": 100474,
+        "value_as_string": "100474",
+        "value_source_value": "100474"
+      }
+    },
+    {
+      "value": "100236",
+      "write": {
+        "value_as_number": 100236,
+        "value_as_string": "100236",
+        "value_source_value": "100236"
+      }
+    },
+    {
+      "value": "100345",
+      "write": {
+        "value_as_number": 100345,
+        "value_as_string": "100345",
+        "value_source_value": "100345"
+      }
+    },
+    {
+      "value": "100339",
+      "write": {
+        "value_as_number": 100339,
+        "value_as_string": "100339",
+        "value_source_value": "100339"
+      }
+    },
+    {
+      "value": "100269",
+      "write": {
+        "value_as_number": 100269,
+        "value_as_string": "100269",
+        "value_source_value": "100269"
+      }
+    },
+    {
+      "value": "100426",
+      "write": {
+        "value_as_number": 100426,
+        "value_as_string": "100426",
+        "value_source_value": "100426"
+      }
+    },
+    {
+      "value": "100186",
+      "write": {
+        "value_as_number": 100186,
+        "value_as_string": "100186",
+        "value_source_value": "100186"
+      }
+    },
+    {
+      "value": "100436",
+      "write": {
+        "value_as_number": 100436,
+        "value_as_string": "100436",
+        "value_source_value": "100436"
+      }
+    },
+    {
+      "value": "100118",
+      "write": {
+        "value_as_number": 100118,
+        "value_as_string": "100118",
+        "value_source_value": "100118"
+      }
+    },
+    {
+      "value": "100096",
+      "write": {
+        "value_as_number": 100096,
+        "value_as_string": "100096",
+        "value_source_value": "100096"
+      }
+    },
+    {
+      "value": "100397",
+      "write": {
+        "value_as_number": 100397,
+        "value_as_string": "100397",
+        "value_source_value": "100397"
+      }
+    },
+    {
+      "value": "100362",
+      "write": {
+        "value_as_number": 100362,
+        "value_as_string": "100362",
+        "value_source_value": "100362"
+      }
+    },
+    {
+      "value": "100411",
+      "write": {
+        "value_as_number": 100411,
+        "value_as_string": "100411",
+        "value_source_value": "100411"
+      }
+    },
+    {
+      "value": "100031",
+      "write": {
+        "value_as_number": 100031,
+        "value_as_string": "100031",
+        "value_source_value": "100031"
+      }
+    },
+    {
+      "value": "100366",
+      "write": {
+        "value_as_number": 100366,
+        "value_as_string": "100366",
+        "value_source_value": "100366"
+      }
+    },
+    {
+      "value": "100064",
+      "write": {
+        "value_as_number": 100064,
+        "value_as_string": "100064",
+        "value_source_value": "100064"
+      }
+    },
+    {
+      "value": "100470",
+      "write": {
+        "value_as_number": 100470,
+        "value_as_string": "100470",
+        "value_source_value": "100470"
+      }
+    },
+    {
+      "value": "100318",
+      "write": {
+        "value_as_number": 100318,
+        "value_as_string": "100318",
+        "value_source_value": "100318"
+      }
+    },
+    {
+      "value": "100394",
+      "write": {
+        "value_as_number": 100394,
+        "value_as_string": "100394",
+        "value_source_value": "100394"
+      }
+    },
+    {
+      "value": "100324",
+      "write": {
+        "value_as_number": 100324,
+        "value_as_string": "100324",
+        "value_source_value": "100324"
+      }
+    },
+    {
+      "value": "100327",
+      "write": {
+        "value_as_number": 100327,
+        "value_as_string": "100327",
+        "value_source_value": "100327"
+      }
+    },
+    {
+      "value": "100035",
+      "write": {
+        "value_as_number": 100035,
+        "value_as_string": "100035",
+        "value_source_value": "100035"
+      }
+    },
+    {
+      "value": "100331",
+      "write": {
+        "value_as_number": 100331,
+        "value_as_string": "100331",
+        "value_source_value": "100331"
+      }
+    },
+    {
+      "value": "100050",
+      "write": {
+        "value_as_number": 100050,
+        "value_as_string": "100050",
+        "value_source_value": "100050"
+      }
+    },
+    {
+      "value": "100334",
+      "write": {
+        "value_as_number": 100334,
+        "value_as_string": "100334",
+        "value_source_value": "100334"
+      }
+    },
+    {
+      "value": "100388",
+      "write": {
+        "value_as_number": 100388,
+        "value_as_string": "100388",
+        "value_source_value": "100388"
+      }
+    },
+    {
+      "value": "100076",
+      "write": {
+        "value_as_number": 100076,
+        "value_as_string": "100076",
+        "value_source_value": "100076"
+      }
+    },
+    {
+      "value": "100356",
+      "write": {
+        "value_as_number": 100356,
+        "value_as_string": "100356",
+        "value_source_value": "100356"
+      }
+    },
+    {
+      "value": "100357",
+      "write": {
+        "value_as_number": 100357,
+        "value_as_string": "100357",
+        "value_source_value": "100357"
+      }
+    },
+    {
+      "value": "100358",
+      "write": {
+        "value_as_number": 100358,
+        "value_as_string": "100358",
+        "value_source_value": "100358"
+      }
+    },
+    {
+      "value": "100361",
+      "write": {
+        "value_as_number": 100361,
+        "value_as_string": "100361",
+        "value_source_value": "100361"
+      }
+    },
+    {
+      "value": "100046",
+      "write": {
+        "value_as_number": 100046,
+        "value_as_string": "100046",
+        "value_source_value": "100046"
+      }
+    },
+    {
+      "value": "100081",
+      "write": {
+        "value_as_number": 100081,
+        "value_as_string": "100081",
+        "value_source_value": "100081"
+      }
+    },
+    {
+      "value": "100021",
+      "write": {
+        "value_as_number": 100021,
+        "value_as_string": "100021",
+        "value_source_value": "100021"
+      }
+    },
+    {
+      "value": "100089",
+      "write": {
+        "value_as_number": 100089,
+        "value_as_string": "100089",
+        "value_source_value": "100089"
+      }
+    },
+    {
+      "value": "100091",
+      "write": {
+        "value_as_number": 100091,
+        "value_as_string": "100091",
+        "value_source_value": "100091"
+      }
+    },
+    {
+      "value": "100094",
+      "write": {
+        "value_as_number": 100094,
+        "value_as_string": "100094",
+        "value_source_value": "100094"
+      }
+    },
+    {
+      "value": "100112",
+      "write": {
+        "value_as_number": 100112,
+        "value_as_string": "100112",
+        "value_source_value": "100112"
+      }
+    },
+    {
+      "value": "100117",
+      "write": {
+        "value_as_number": 100117,
+        "value_as_string": "100117",
+        "value_source_value": "100117"
+      }
+    },
+    {
+      "value": "100451",
+      "write": {
+        "value_as_number": 100451,
+        "value_as_string": "100451",
+        "value_source_value": "100451"
+      }
+    },
+    {
+      "value": "100133",
+      "write": {
+        "value_as_number": 100133,
+        "value_as_string": "100133",
+        "value_source_value": "100133"
+      }
+    },
+    {
+      "value": "100136",
+      "write": {
+        "value_as_number": 100136,
+        "value_as_string": "100136",
+        "value_source_value": "100136"
+      }
+    },
+    {
+      "value": "100137",
+      "write": {
+        "value_as_number": 100137,
+        "value_as_string": "100137",
+        "value_source_value": "100137"
+      }
+    },
+    {
+      "value": "100142",
+      "write": {
+        "value_as_number": 100142,
+        "value_as_string": "100142",
+        "value_source_value": "100142"
+      }
+    },
+    {
+      "value": "100147",
+      "write": {
+        "value_as_number": 100147,
+        "value_as_string": "100147",
+        "value_source_value": "100147"
+      }
+    },
+    {
+      "value": "100149",
+      "write": {
+        "value_as_number": 100149,
+        "value_as_string": "100149",
+        "value_source_value": "100149"
+      }
+    },
+    {
+      "value": "100150",
+      "write": {
+        "value_as_number": 100150,
+        "value_as_string": "100150",
+        "value_source_value": "100150"
+      }
+    },
+    {
+      "value": "100439",
+      "write": {
+        "value_as_number": 100439,
+        "value_as_string": "100439",
+        "value_source_value": "100439"
+      }
+    },
+    {
+      "value": "100157",
+      "write": {
+        "value_as_number": 100157,
+        "value_as_string": "100157",
+        "value_source_value": "100157"
+      }
+    },
+    {
+      "value": "100164",
+      "write": {
+        "value_as_number": 100164,
+        "value_as_string": "100164",
+        "value_source_value": "100164"
+      }
+    },
+    {
+      "value": "100433",
+      "write": {
+        "value_as_number": 100433,
+        "value_as_string": "100433",
+        "value_source_value": "100433"
+      }
+    },
+    {
+      "value": "100167",
+      "write": {
+        "value_as_number": 100167,
+        "value_as_string": "100167",
+        "value_source_value": "100167"
+      }
+    },
+    {
+      "value": "100169",
+      "write": {
+        "value_as_number": 100169,
+        "value_as_string": "100169",
+        "value_source_value": "100169"
+      }
+    },
+    {
+      "value": "100179",
+      "write": {
+        "value_as_number": 100179,
+        "value_as_string": "100179",
+        "value_source_value": "100179"
+      }
+    },
+    {
+      "value": "100180",
+      "write": {
+        "value_as_number": 100180,
+        "value_as_string": "100180",
+        "value_source_value": "100180"
+      }
+    },
+    {
+      "value": "100432",
+      "write": {
+        "value_as_number": 100432,
+        "value_as_string": "100432",
+        "value_source_value": "100432"
+      }
+    },
+    {
+      "value": "100194",
+      "write": {
+        "value_as_number": 100194,
+        "value_as_string": "100194",
+        "value_source_value": "100194"
+      }
+    },
+    {
+      "value": "100197",
+      "write": {
+        "value_as_number": 100197,
+        "value_as_string": "100197",
+        "value_source_value": "100197"
+      }
+    },
+    {
+      "value": "100419",
+      "write": {
+        "value_as_number": 100419,
+        "value_as_string": "100419",
+        "value_source_value": "100419"
+      }
+    },
+    {
+      "value": "100210",
+      "write": {
+        "value_as_number": 100210,
+        "value_as_string": "100210",
+        "value_source_value": "100210"
+      }
+    },
+    {
+      "value": "100215",
+      "write": {
+        "value_as_number": 100215,
+        "value_as_string": "100215",
+        "value_source_value": "100215"
+      }
+    },
+    {
+      "value": "100043",
+      "write": {
+        "value_as_number": 100043,
+        "value_as_string": "100043",
+        "value_source_value": "100043"
+      }
+    },
+    {
+      "value": "100019",
+      "write": {
+        "value_as_number": 100019,
+        "value_as_string": "100019",
+        "value_source_value": "100019"
+      }
+    },
+    {
+      "value": "100226",
+      "write": {
+        "value_as_number": 100226,
+        "value_as_string": "100226",
+        "value_source_value": "100226"
+      }
+    },
+    {
+      "value": "100229",
+      "write": {
+        "value_as_number": 100229,
+        "value_as_string": "100229",
+        "value_source_value": "100229"
+      }
+    },
+    {
+      "value": "100001",
+      "write": {
+        "value_as_number": 100001,
+        "value_as_string": "100001",
+        "value_source_value": "100001"
+      }
+    },
+    {
+      "value": "100004",
+      "write": {
+        "value_as_number": 100004,
+        "value_as_string": "100004",
+        "value_source_value": "100004"
+      }
+    },
+    {
+      "value": "100058",
+      "write": {
+        "value_as_number": 100058,
+        "value_as_string": "100058",
+        "value_source_value": "100058"
+      }
+    },
+    {
+      "value": "100234",
+      "write": {
+        "value_as_number": 100234,
+        "value_as_string": "100234",
+        "value_source_value": "100234"
+      }
+    },
+    {
+      "value": "100054",
+      "write": {
+        "value_as_number": 100054,
+        "value_as_string": "100054",
+        "value_source_value": "100054"
+      }
+    },
+    {
+      "value": "100010",
+      "write": {
+        "value_as_number": 100010,
+        "value_as_string": "100010",
+        "value_source_value": "100010"
+      }
+    },
+    {
+      "value": "100240",
+      "write": {
+        "value_as_number": 100240,
+        "value_as_string": "100240",
+        "value_source_value": "100240"
+      }
+    },
+    {
+      "value": "100415",
+      "write": {
+        "value_as_number": 100415,
+        "value_as_string": "100415",
+        "value_source_value": "100415"
+      }
+    },
+    {
+      "value": "100495",
+      "write": {
+        "value_as_number": 100495,
+        "value_as_string": "100495",
+        "value_source_value": "100495"
+      }
+    },
+    {
+      "value": "100246",
+      "write": {
+        "value_as_number": 100246,
+        "value_as_string": "100246",
+        "value_source_value": "100246"
+      }
+    },
+    {
+      "value": "100250",
+      "write": {
+        "value_as_number": 100250,
+        "value_as_string": "100250",
+        "value_source_value": "100250"
+      }
+    },
+    {
+      "value": "100251",
+      "write": {
+        "value_as_number": 100251,
+        "value_as_string": "100251",
+        "value_source_value": "100251"
+      }
+    },
+    {
+      "value": "100263",
+      "write": {
+        "value_as_number": 100263,
+        "value_as_string": "100263",
+        "value_source_value": "100263"
+      }
+    },
+    {
+      "value": "100268",
+      "write": {
+        "value_as_number": 100268,
+        "value_as_string": "100268",
+        "value_source_value": "100268"
+      }
+    },
+    {
+      "value": "100281",
+      "write": {
+        "value_as_number": 100281,
+        "value_as_string": "100281",
+        "value_source_value": "100281"
+      }
+    },
+    {
+      "value": "100402",
+      "write": {
+        "value_as_number": 100402,
+        "value_as_string": "100402",
+        "value_source_value": "100402"
+      }
+    },
+    {
+      "value": "100399",
+      "write": {
+        "value_as_number": 100399,
+        "value_as_string": "100399",
+        "value_source_value": "100399"
+      }
+    },
+    {
+      "value": "100488",
+      "write": {
+        "value_as_number": 100488,
+        "value_as_string": "100488",
+        "value_source_value": "100488"
+      }
+    },
+    {
+      "value": "100113",
+      "write": {
+        "value_as_number": 100113,
+        "value_as_string": "100113",
+        "value_source_value": "100113"
+      }
+    },
+    {
+      "value": "100115",
+      "write": {
+        "value_as_number": 100115,
+        "value_as_string": "100115",
+        "value_source_value": "100115"
+      }
+    },
+    {
+      "value": "100116",
+      "write": {
+        "value_as_number": 100116,
+        "value_as_string": "100116",
+        "value_source_value": "100116"
+      }
+    },
+    {
+      "value": "100271",
+      "write": {
+        "value_as_number": 100271,
+        "value_as_string": "100271",
+        "value_source_value": "100271"
+      }
+    },
+    {
+      "value": "100307",
+      "write": {
+        "value_as_number": 100307,
+        "value_as_string": "100307",
+        "value_source_value": "100307"
+      }
+    },
+    {
+      "value": "100487",
+      "write": {
+        "value_as_number": 100487,
+        "value_as_string": "100487",
+        "value_source_value": "100487"
+      }
+    },
+    {
+      "value": "100448",
+      "write": {
+        "value_as_number": 100448,
+        "value_as_string": "100448",
+        "value_source_value": "100448"
+      }
+    },
+    {
+      "value": "100018",
+      "write": {
+        "value_as_number": 100018,
+        "value_as_string": "100018",
+        "value_source_value": "100018"
+      }
+    },
+    {
+      "value": "100447",
+      "write": {
+        "value_as_number": 100447,
+        "value_as_string": "100447",
+        "value_source_value": "100447"
+      }
+    },
+    {
+      "value": "100125",
+      "write": {
+        "value_as_number": 100125,
+        "value_as_string": "100125",
+        "value_source_value": "100125"
+      }
+    },
+    {
+      "value": "100126",
+      "write": {
+        "value_as_number": 100126,
+        "value_as_string": "100126",
+        "value_source_value": "100126"
+      }
+    },
+    {
+      "value": "100446",
+      "write": {
+        "value_as_number": 100446,
+        "value_as_string": "100446",
+        "value_source_value": "100446"
+      }
+    },
+    {
+      "value": "100129",
+      "write": {
+        "value_as_number": 100129,
+        "value_as_string": "100129",
+        "value_source_value": "100129"
+      }
+    },
+    {
+      "value": "100445",
+      "write": {
+        "value_as_number": 100445,
+        "value_as_string": "100445",
+        "value_source_value": "100445"
+      }
+    },
+    {
+      "value": "100023",
+      "write": {
+        "value_as_number": 100023,
+        "value_as_string": "100023",
+        "value_source_value": "100023"
+      }
+    },
+    {
+      "value": "100273",
+      "write": {
+        "value_as_number": 100273,
+        "value_as_string": "100273",
+        "value_source_value": "100273"
+      }
+    },
+    {
+      "value": "100134",
+      "write": {
+        "value_as_number": 100134,
+        "value_as_string": "100134",
+        "value_source_value": "100134"
+      }
+    },
+    {
+      "value": "100135",
+      "write": {
+        "value_as_number": 100135,
+        "value_as_string": "100135",
+        "value_source_value": "100135"
+      }
+    },
+    {
+      "value": "100275",
+      "write": {
+        "value_as_number": 100275,
+        "value_as_string": "100275",
+        "value_source_value": "100275"
+      }
+    },
+    {
+      "value": "100471",
+      "write": {
+        "value_as_number": 100471,
+        "value_as_string": "100471",
+        "value_source_value": "100471"
+      }
+    },
+    {
+      "value": "100443",
+      "write": {
+        "value_as_number": 100443,
+        "value_as_string": "100443",
+        "value_source_value": "100443"
+      }
+    },
+    {
+      "value": "100141",
+      "write": {
+        "value_as_number": 100141,
+        "value_as_string": "100141",
+        "value_source_value": "100141"
+      }
+    },
+    {
+      "value": "100276",
+      "write": {
+        "value_as_number": 100276,
+        "value_as_string": "100276",
+        "value_source_value": "100276"
+      }
+    },
+    {
+      "value": "100026",
+      "write": {
+        "value_as_number": 100026,
+        "value_as_string": "100026",
+        "value_source_value": "100026"
+      }
+    },
+    {
+      "value": "100442",
+      "write": {
+        "value_as_number": 100442,
+        "value_as_string": "100442",
+        "value_source_value": "100442"
+      }
+    },
+    {
+      "value": "100441",
+      "write": {
+        "value_as_number": 100441,
+        "value_as_string": "100441",
+        "value_source_value": "100441"
+      }
+    },
+    {
+      "value": "100486",
+      "write": {
+        "value_as_number": 100486,
+        "value_as_string": "100486",
+        "value_source_value": "100486"
+      }
+    },
+    {
+      "value": "100406",
+      "write": {
+        "value_as_number": 100406,
+        "value_as_string": "100406",
+        "value_source_value": "100406"
+      }
+    },
+    {
+      "value": "100401",
+      "write": {
+        "value_as_number": 100401,
+        "value_as_string": "100401",
+        "value_source_value": "100401"
+      }
+    },
+    {
+      "value": "100244",
+      "write": {
+        "value_as_number": 100244,
+        "value_as_string": "100244",
+        "value_source_value": "100244"
+      }
+    },
+    {
+      "value": "100152",
+      "write": {
+        "value_as_number": 100152,
+        "value_as_string": "100152",
+        "value_source_value": "100152"
+      }
+    },
+    {
+      "value": "100153",
+      "write": {
+        "value_as_number": 100153,
+        "value_as_string": "100153",
+        "value_source_value": "100153"
+      }
+    },
+    {
+      "value": "100154",
+      "write": {
+        "value_as_number": 100154,
+        "value_as_string": "100154",
+        "value_source_value": "100154"
+      }
+    },
+    {
+      "value": "100027",
+      "write": {
+        "value_as_number": 100027,
+        "value_as_string": "100027",
+        "value_source_value": "100027"
+      }
+    },
+    {
+      "value": "100484",
+      "write": {
+        "value_as_number": 100484,
+        "value_as_string": "100484",
+        "value_source_value": "100484"
+      }
+    },
+    {
+      "value": "100158",
+      "write": {
+        "value_as_number": 100158,
+        "value_as_string": "100158",
+        "value_source_value": "100158"
+      }
+    },
+    {
+      "value": "100306",
+      "write": {
+        "value_as_number": 100306,
+        "value_as_string": "100306",
+        "value_source_value": "100306"
+      }
+    },
+    {
+      "value": "100435",
+      "write": {
+        "value_as_number": 100435,
+        "value_as_string": "100435",
+        "value_source_value": "100435"
+      }
+    },
+    {
+      "value": "100162",
+      "write": {
+        "value_as_number": 100162,
+        "value_as_string": "100162",
+        "value_source_value": "100162"
+      }
+    },
+    {
+      "value": "100163",
+      "write": {
+        "value_as_number": 100163,
+        "value_as_string": "100163",
+        "value_source_value": "100163"
+      }
+    },
+    {
+      "value": "100493",
+      "write": {
+        "value_as_number": 100493,
+        "value_as_string": "100493",
+        "value_source_value": "100493"
+      }
+    },
+    {
+      "value": "100284",
+      "write": {
+        "value_as_number": 100284,
+        "value_as_string": "100284",
+        "value_source_value": "100284"
+      }
+    },
+    {
+      "value": "100405",
+      "write": {
+        "value_as_number": 100405,
+        "value_as_string": "100405",
+        "value_source_value": "100405"
+      }
+    },
+    {
+      "value": "100168",
+      "write": {
+        "value_as_number": 100168,
+        "value_as_string": "100168",
+        "value_source_value": "100168"
+      }
+    },
+    {
+      "value": "100412",
+      "write": {
+        "value_as_number": 100412,
+        "value_as_string": "100412",
+        "value_source_value": "100412"
+      }
+    },
+    {
+      "value": "100032",
+      "write": {
+        "value_as_number": 100032,
+        "value_as_string": "100032",
+        "value_source_value": "100032"
+      }
+    },
+    {
+      "value": "100033",
+      "write": {
+        "value_as_number": 100033,
+        "value_as_string": "100033",
+        "value_source_value": "100033"
+      }
+    },
+    {
+      "value": "100175",
+      "write": {
+        "value_as_number": 100175,
+        "value_as_string": "100175",
+        "value_source_value": "100175"
+      }
+    },
+    {
+      "value": "100036",
+      "write": {
+        "value_as_number": 100036,
+        "value_as_string": "100036",
+        "value_source_value": "100036"
+      }
+    },
+    {
+      "value": "100177",
+      "write": {
+        "value_as_number": 100177,
+        "value_as_string": "100177",
+        "value_source_value": "100177"
+      }
+    },
+    {
+      "value": "100037",
+      "write": {
+        "value_as_number": 100037,
+        "value_as_string": "100037",
+        "value_source_value": "100037"
+      }
+    },
+    {
+      "value": "100254",
+      "write": {
+        "value_as_number": 100254,
+        "value_as_string": "100254",
+        "value_source_value": "100254"
+      }
+    },
+    {
+      "value": "100297",
+      "write": {
+        "value_as_number": 100297,
+        "value_as_string": "100297",
+        "value_source_value": "100297"
+      }
+    },
+    {
+      "value": "100038",
+      "write": {
+        "value_as_number": 100038,
+        "value_as_string": "100038",
+        "value_source_value": "100038"
+      }
+    },
+    {
+      "value": "100042",
+      "write": {
+        "value_as_number": 100042,
+        "value_as_string": "100042",
+        "value_source_value": "100042"
+      }
+    },
+    {
+      "value": "100184",
+      "write": {
+        "value_as_number": 100184,
+        "value_as_string": "100184",
+        "value_source_value": "100184"
+      }
+    },
+    {
+      "value": "100257",
+      "write": {
+        "value_as_number": 100257,
+        "value_as_string": "100257",
+        "value_source_value": "100257"
+      }
+    },
+    {
+      "value": "100305",
+      "write": {
+        "value_as_number": 100305,
+        "value_as_string": "100305",
+        "value_source_value": "100305"
+      }
+    },
+    {
+      "value": "100052",
+      "write": {
+        "value_as_number": 100052,
+        "value_as_string": "100052",
+        "value_source_value": "100052"
+      }
+    },
+    {
+      "value": "100189",
+      "write": {
+        "value_as_number": 100189,
+        "value_as_string": "100189",
+        "value_source_value": "100189"
+      }
+    },
+    {
+      "value": "100191",
+      "write": {
+        "value_as_number": 100191,
+        "value_as_string": "100191",
+        "value_source_value": "100191"
+      }
+    },
+    {
+      "value": "100430",
+      "write": {
+        "value_as_number": 100430,
+        "value_as_string": "100430",
+        "value_source_value": "100430"
+      }
+    },
+    {
+      "value": "100259",
+      "write": {
+        "value_as_number": 100259,
+        "value_as_string": "100259",
+        "value_source_value": "100259"
+      }
+    },
+    {
+      "value": "100427",
+      "write": {
+        "value_as_number": 100427,
+        "value_as_string": "100427",
+        "value_source_value": "100427"
+      }
+    },
+    {
+      "value": "100196",
+      "write": {
+        "value_as_number": 100196,
+        "value_as_string": "100196",
+        "value_source_value": "100196"
+      }
+    },
+    {
+      "value": "100261",
+      "write": {
+        "value_as_number": 100261,
+        "value_as_string": "100261",
+        "value_source_value": "100261"
+      }
+    },
+    {
+      "value": "100055",
+      "write": {
+        "value_as_number": 100055,
+        "value_as_string": "100055",
+        "value_source_value": "100055"
+      }
+    },
+    {
+      "value": "100304",
+      "write": {
+        "value_as_number": 100304,
+        "value_as_string": "100304",
+        "value_source_value": "100304"
+      }
+    },
+    {
+      "value": "100421",
+      "write": {
+        "value_as_number": 100421,
+        "value_as_string": "100421",
+        "value_source_value": "100421"
+      }
+    },
+    {
+      "value": "100202",
+      "write": {
+        "value_as_number": 100202,
+        "value_as_string": "100202",
+        "value_source_value": "100202"
+      }
+    },
+    {
+      "value": "100325",
+      "write": {
+        "value_as_number": 100325,
+        "value_as_string": "100325",
+        "value_source_value": "100325"
+      }
+    },
+    {
+      "value": "100326",
+      "write": {
+        "value_as_number": 100326,
+        "value_as_string": "100326",
+        "value_source_value": "100326"
+      }
+    },
+    {
+      "value": "100409",
+      "write": {
+        "value_as_number": 100409,
+        "value_as_string": "100409",
+        "value_source_value": "100409"
+      }
+    },
+    {
+      "value": "100329",
+      "write": {
+        "value_as_number": 100329,
+        "value_as_string": "100329",
+        "value_source_value": "100329"
+      }
+    },
+    {
+      "value": "100204",
+      "write": {
+        "value_as_number": 100204,
+        "value_as_string": "100204",
+        "value_source_value": "100204"
+      }
+    },
+    {
+      "value": "100207",
+      "write": {
+        "value_as_number": 100207,
+        "value_as_string": "100207",
+        "value_source_value": "100207"
+      }
+    },
+    {
+      "value": "100208",
+      "write": {
+        "value_as_number": 100208,
+        "value_as_string": "100208",
+        "value_source_value": "100208"
+      }
+    },
+    {
+      "value": "100478",
+      "write": {
+        "value_as_number": 100478,
+        "value_as_string": "100478",
+        "value_source_value": "100478"
+      }
+    },
+    {
+      "value": "100465",
+      "write": {
+        "value_as_number": 100465,
+        "value_as_string": "100465",
+        "value_source_value": "100465"
+      }
+    },
+    {
+      "value": "100389",
+      "write": {
+        "value_as_number": 100389,
+        "value_as_string": "100389",
+        "value_source_value": "100389"
+      }
+    },
+    {
+      "value": "100073",
+      "write": {
+        "value_as_number": 100073,
+        "value_as_string": "100073",
+        "value_source_value": "100073"
+      }
+    },
+    {
+      "value": "100393",
+      "write": {
+        "value_as_number": 100393,
+        "value_as_string": "100393",
+        "value_source_value": "100393"
+      }
+    },
+    {
+      "value": "100418",
+      "write": {
+        "value_as_number": 100418,
+        "value_as_string": "100418",
+        "value_source_value": "100418"
+      }
+    },
+    {
+      "value": "100341",
+      "write": {
+        "value_as_number": 100341,
+        "value_as_string": "100341",
+        "value_source_value": "100341"
+      }
+    },
+    {
+      "value": "100074",
+      "write": {
+        "value_as_number": 100074,
+        "value_as_string": "100074",
+        "value_source_value": "100074"
+      }
+    },
+    {
+      "value": "100343",
+      "write": {
+        "value_as_number": 100343,
+        "value_as_string": "100343",
+        "value_source_value": "100343"
+      }
+    },
+    {
+      "value": "100386",
+      "write": {
+        "value_as_number": 100386,
+        "value_as_string": "100386",
+        "value_source_value": "100386"
+      }
+    },
+    {
+      "value": "100320",
+      "write": {
+        "value_as_number": 100320,
+        "value_as_string": "100320",
+        "value_source_value": "100320"
+      }
+    },
+    {
+      "value": "100346",
+      "write": {
+        "value_as_number": 100346,
+        "value_as_string": "100346",
+        "value_source_value": "100346"
+      }
+    },
+    {
+      "value": "100395",
+      "write": {
+        "value_as_number": 100395,
+        "value_as_string": "100395",
+        "value_source_value": "100395"
+      }
+    },
+    {
+      "value": "100348",
+      "write": {
+        "value_as_number": 100348,
+        "value_as_string": "100348",
+        "value_source_value": "100348"
+      }
+    },
+    {
+      "value": "100349",
+      "write": {
+        "value_as_number": 100349,
+        "value_as_string": "100349",
+        "value_source_value": "100349"
+      }
+    },
+    {
+      "value": "100075",
+      "write": {
+        "value_as_number": 100075,
+        "value_as_string": "100075",
+        "value_source_value": "100075"
+      }
+    },
+    {
+      "value": "100212",
+      "write": {
+        "value_as_number": 100212,
+        "value_as_string": "100212",
+        "value_source_value": "100212"
+      }
+    },
+    {
+      "value": "100354",
+      "write": {
+        "value_as_number": 100354,
+        "value_as_string": "100354",
+        "value_source_value": "100354"
+      }
+    },
+    {
+      "value": "100355",
+      "write": {
+        "value_as_number": 100355,
+        "value_as_string": "100355",
+        "value_source_value": "100355"
+      }
+    },
+    {
+      "value": "100059",
+      "write": {
+        "value_as_number": 100059,
+        "value_as_string": "100059",
+        "value_source_value": "100059"
+      }
+    },
+    {
+      "value": "100492",
+      "write": {
+        "value_as_number": 100492,
+        "value_as_string": "100492",
+        "value_source_value": "100492"
+      }
+    },
+    {
+      "value": "100060",
+      "write": {
+        "value_as_number": 100060,
+        "value_as_string": "100060",
+        "value_source_value": "100060"
+      }
+    },
+    {
+      "value": "100381",
+      "write": {
+        "value_as_number": 100381,
+        "value_as_string": "100381",
+        "value_source_value": "100381"
+      }
+    },
+    {
+      "value": "100218",
+      "write": {
+        "value_as_number": 100218,
+        "value_as_string": "100218",
+        "value_source_value": "100218"
+      }
+    },
+    {
+      "value": "100312",
+      "write": {
+        "value_as_number": 100312,
+        "value_as_string": "100312",
+        "value_source_value": "100312"
+      }
+    },
+    {
+      "value": "100489",
+      "write": {
+        "value_as_number": 100489,
+        "value_as_string": "100489",
+        "value_source_value": "100489"
+      }
+    },
+    {
+      "value": "100396",
+      "write": {
+        "value_as_number": 100396,
+        "value_as_string": "100396",
+        "value_source_value": "100396"
+      }
+    },
+    {
+      "value": "100368",
+      "write": {
+        "value_as_number": 100368,
+        "value_as_string": "100368",
+        "value_source_value": "100368"
+      }
+    },
+    {
+      "value": "100372",
+      "write": {
+        "value_as_number": 100372,
+        "value_as_string": "100372",
+        "value_source_value": "100372"
+      }
+    },
+    {
+      "value": "100373",
+      "write": {
+        "value_as_number": 100373,
+        "value_as_string": "100373",
+        "value_source_value": "100373"
+      }
+    },
+    {
+      "value": "100375",
+      "write": {
+        "value_as_number": 100375,
+        "value_as_string": "100375",
+        "value_source_value": "100375"
+      }
+    },
+    {
+      "value": "100379",
+      "write": {
+        "value_as_number": 100379,
+        "value_as_string": "100379",
+        "value_source_value": "100379"
+      }
+    },
+    {
+      "value": "100079",
+      "write": {
+        "value_as_number": 100079,
+        "value_as_string": "100079",
+        "value_source_value": "100079"
+      }
+    },
+    {
+      "value": "100267",
+      "write": {
+        "value_as_number": 100267,
+        "value_as_string": "100267",
+        "value_source_value": "100267"
+      }
+    },
+    {
+      "value": "100476",
+      "write": {
+        "value_as_number": 100476,
+        "value_as_string": "100476",
+        "value_source_value": "100476"
+      }
+    },
+    {
+      "value": "100083",
+      "write": {
+        "value_as_number": 100083,
+        "value_as_string": "100083",
+        "value_source_value": "100083"
+      }
+    },
+    {
+      "value": "100085",
+      "write": {
+        "value_as_number": 100085,
+        "value_as_string": "100085",
+        "value_source_value": "100085"
+      }
+    },
+    {
+      "value": "100463",
+      "write": {
+        "value_as_number": 100463,
+        "value_as_string": "100463",
+        "value_source_value": "100463"
+      }
+    },
+    {
+      "value": "100087",
+      "write": {
+        "value_as_number": 100087,
+        "value_as_string": "100087",
+        "value_source_value": "100087"
+      }
+    },
+    {
+      "value": "100088",
+      "write": {
+        "value_as_number": 100088,
+        "value_as_string": "100088",
+        "value_source_value": "100088"
+      }
+    },
+    {
+      "value": "100417",
+      "write": {
+        "value_as_number": 100417,
+        "value_as_string": "100417",
+        "value_source_value": "100417"
+      }
+    },
+    {
+      "value": "100416",
+      "write": {
+        "value_as_number": 100416,
+        "value_as_string": "100416",
+        "value_source_value": "100416"
+      }
+    },
+    {
+      "value": "100053",
+      "write": {
+        "value_as_number": 100053,
+        "value_as_string": "100053",
+        "value_source_value": "100053"
+      }
+    },
+    {
+      "value": "100461",
+      "write": {
+        "value_as_number": 100461,
+        "value_as_string": "100461",
+        "value_source_value": "100461"
+      }
+    },
+    {
+      "value": "100293",
+      "write": {
+        "value_as_number": 100293,
+        "value_as_string": "100293",
+        "value_source_value": "100293"
+      }
+    },
+    {
+      "value": "100310",
+      "write": {
+        "value_as_number": 100310,
+        "value_as_string": "100310",
+        "value_source_value": "100310"
+      }
+    },
+    {
+      "value": "100008",
+      "write": {
+        "value_as_number": 100008,
+        "value_as_string": "100008",
+        "value_source_value": "100008"
+      }
+    },
+    {
+      "value": "100015",
+      "write": {
+        "value_as_number": 100015,
+        "value_as_string": "100015",
+        "value_source_value": "100015"
+      }
+    },
+    {
+      "value": "100459",
+      "write": {
+        "value_as_number": 100459,
+        "value_as_string": "100459",
+        "value_source_value": "100459"
+      }
+    },
+    {
+      "value": "100016",
+      "write": {
+        "value_as_number": 100016,
+        "value_as_string": "100016",
+        "value_source_value": "100016"
+      }
+    },
+    {
+      "value": "100104",
+      "write": {
+        "value_as_number": 100104,
+        "value_as_string": "100104",
+        "value_source_value": "100104"
+      }
+    },
+    {
+      "value": "100458",
+      "write": {
+        "value_as_number": 100458,
+        "value_as_string": "100458",
+        "value_source_value": "100458"
+      }
+    },
+    {
+      "value": "100017",
+      "write": {
+        "value_as_number": 100017,
+        "value_as_string": "100017",
+        "value_source_value": "100017"
+      }
+    },
+    {
+      "value": "100456",
+      "write": {
+        "value_as_number": 100456,
+        "value_as_string": "100456",
+        "value_source_value": "100456"
+      }
+    },
+    {
+      "value": "100452",
+      "write": {
+        "value_as_number": 100452,
+        "value_as_string": "100452",
+        "value_source_value": "100452"
+      }
+    },
+    {
+      "value": "100314",
+      "write": {
+        "value_as_number": 100314,
+        "value_as_string": "100314",
+        "value_source_value": "100314"
+      }
+    },
+    {
+      "value": "100057",
+      "write": {
+        "value_as_number": 100057,
+        "value_as_string": "100057",
+        "value_source_value": "100057"
+      }
+    },
+    {
+      "value": "100045",
+      "write": {
+        "value_as_number": 100045,
+        "value_as_string": "100045",
+        "value_source_value": "100045"
+      }
+    },
+    {
+      "value": "100020",
+      "write": {
+        "value_as_number": 100020,
+        "value_as_string": "100020",
+        "value_source_value": "100020"
+      }
+    },
+    {
+      "value": "100028",
+      "write": {
+        "value_as_number": 100028,
+        "value_as_string": "100028",
+        "value_source_value": "100028"
+      }
+    },
+    {
+      "value": "100062",
+      "write": {
+        "value_as_number": 100062,
+        "value_as_string": "100062",
+        "value_source_value": "100062"
+      }
+    },
+    {
+      "value": "100011",
+      "write": {
+        "value_as_number": 100011,
+        "value_as_string": "100011",
+        "value_source_value": "100011"
+      }
+    },
+    {
+      "value": "100034",
+      "write": {
+        "value_as_number": 100034,
+        "value_as_string": "100034",
+        "value_source_value": "100034"
+      }
+    },
+    {
+      "value": "100067",
+      "write": {
+        "value_as_number": 100067,
+        "value_as_string": "100067",
+        "value_source_value": "100067"
+      }
+    },
+    {
+      "value": "100069",
+      "write": {
+        "value_as_number": 100069,
+        "value_as_string": "100069",
+        "value_source_value": "100069"
+      }
+    },
+    {
+      "value": "100077",
+      "write": {
+        "value_as_number": 100077,
+        "value_as_string": "100077",
+        "value_source_value": "100077"
+      }
+    },
+    {
+      "value": "100082",
+      "write": {
+        "value_as_number": 100082,
+        "value_as_string": "100082",
+        "value_source_value": "100082"
+      }
+    },
+    {
+      "value": "100092",
+      "write": {
+        "value_as_number": 100092,
+        "value_as_string": "100092",
+        "value_source_value": "100092"
+      }
+    },
+    {
+      "value": "100097",
+      "write": {
+        "value_as_number": 100097,
+        "value_as_string": "100097",
+        "value_source_value": "100097"
+      }
+    },
+    {
+      "value": "100100",
+      "write": {
+        "value_as_number": 100100,
+        "value_as_string": "100100",
+        "value_source_value": "100100"
+      }
+    },
+    {
+      "value": "100102",
+      "write": {
+        "value_as_number": 100102,
+        "value_as_string": "100102",
+        "value_source_value": "100102"
+      }
+    },
+    {
+      "value": "100108",
+      "write": {
+        "value_as_number": 100108,
+        "value_as_string": "100108",
+        "value_source_value": "100108"
+      }
+    },
+    {
+      "value": "100123",
+      "write": {
+        "value_as_number": 100123,
+        "value_as_string": "100123",
+        "value_source_value": "100123"
+      }
+    },
+    {
+      "value": "100132",
+      "write": {
+        "value_as_number": 100132,
+        "value_as_string": "100132",
+        "value_source_value": "100132"
+      }
+    },
+    {
+      "value": "100143",
+      "write": {
+        "value_as_number": 100143,
+        "value_as_string": "100143",
+        "value_source_value": "100143"
+      }
+    },
+    {
+      "value": "100155",
+      "write": {
+        "value_as_number": 100155,
+        "value_as_string": "100155",
+        "value_source_value": "100155"
+      }
+    },
+    {
+      "value": "100171",
+      "write": {
+        "value_as_number": 100171,
+        "value_as_string": "100171",
+        "value_source_value": "100171"
+      }
+    },
+    {
+      "value": "100174",
+      "write": {
+        "value_as_number": 100174,
+        "value_as_string": "100174",
+        "value_source_value": "100174"
+      }
+    },
+    {
+      "value": "100176",
+      "write": {
+        "value_as_number": 100176,
+        "value_as_string": "100176",
+        "value_source_value": "100176"
+      }
+    },
+    {
+      "value": "100178",
+      "write": {
+        "value_as_number": 100178,
+        "value_as_string": "100178",
+        "value_source_value": "100178"
+      }
+    },
+    {
+      "value": "100181",
+      "write": {
+        "value_as_number": 100181,
+        "value_as_string": "100181",
+        "value_source_value": "100181"
+      }
+    },
+    {
+      "value": "100182",
+      "write": {
+        "value_as_number": 100182,
+        "value_as_string": "100182",
+        "value_source_value": "100182"
+      }
+    },
+    {
+      "value": "100188",
+      "write": {
+        "value_as_number": 100188,
+        "value_as_string": "100188",
+        "value_source_value": "100188"
+      }
+    },
+    {
+      "value": "100199",
+      "write": {
+        "value_as_number": 100199,
+        "value_as_string": "100199",
+        "value_source_value": "100199"
+      }
+    },
+    {
+      "value": "100214",
+      "write": {
+        "value_as_number": 100214,
+        "value_as_string": "100214",
+        "value_source_value": "100214"
+      }
+    },
+    {
+      "value": "100216",
+      "write": {
+        "value_as_number": 100216,
+        "value_as_string": "100216",
+        "value_source_value": "100216"
+      }
+    },
+    {
+      "value": "100222",
+      "write": {
+        "value_as_number": 100222,
+        "value_as_string": "100222",
+        "value_source_value": "100222"
+      }
+    },
+    {
+      "value": "100224",
+      "write": {
+        "value_as_number": 100224,
+        "value_as_string": "100224",
+        "value_source_value": "100224"
+      }
+    },
+    {
+      "value": "100230",
+      "write": {
+        "value_as_number": 100230,
+        "value_as_string": "100230",
+        "value_source_value": "100230"
+      }
+    },
+    {
+      "value": "100231",
+      "write": {
+        "value_as_number": 100231,
+        "value_as_string": "100231",
+        "value_source_value": "100231"
+      }
+    },
+    {
+      "value": "100233",
+      "write": {
+        "value_as_number": 100233,
+        "value_as_string": "100233",
+        "value_source_value": "100233"
+      }
+    },
+    {
+      "value": "100235",
+      "write": {
+        "value_as_number": 100235,
+        "value_as_string": "100235",
+        "value_source_value": "100235"
+      }
+    },
+    {
+      "value": "100238",
+      "write": {
+        "value_as_number": 100238,
+        "value_as_string": "100238",
+        "value_source_value": "100238"
+      }
+    },
+    {
+      "value": "100243",
+      "write": {
+        "value_as_number": 100243,
+        "value_as_string": "100243",
+        "value_source_value": "100243"
+      }
+    },
+    {
+      "value": "100248",
+      "write": {
+        "value_as_number": 100248,
+        "value_as_string": "100248",
+        "value_source_value": "100248"
+      }
+    },
+    {
+      "value": "100265",
+      "write": {
+        "value_as_number": 100265,
+        "value_as_string": "100265",
+        "value_source_value": "100265"
+      }
+    },
+    {
+      "value": "100266",
+      "write": {
+        "value_as_number": 100266,
+        "value_as_string": "100266",
+        "value_source_value": "100266"
+      }
+    },
+    {
+      "value": "100270",
+      "write": {
+        "value_as_number": 100270,
+        "value_as_string": "100270",
+        "value_source_value": "100270"
+      }
+    },
+    {
+      "value": "100272",
+      "write": {
+        "value_as_number": 100272,
+        "value_as_string": "100272",
+        "value_source_value": "100272"
+      }
+    },
+    {
+      "value": "100278",
+      "write": {
+        "value_as_number": 100278,
+        "value_as_string": "100278",
+        "value_source_value": "100278"
+      }
+    },
+    {
+      "value": "100283",
+      "write": {
+        "value_as_number": 100283,
+        "value_as_string": "100283",
+        "value_source_value": "100283"
+      }
+    },
+    {
+      "value": "100286",
+      "write": {
+        "value_as_number": 100286,
+        "value_as_string": "100286",
+        "value_source_value": "100286"
+      }
+    },
+    {
+      "value": "100290",
+      "write": {
+        "value_as_number": 100290,
+        "value_as_string": "100290",
+        "value_source_value": "100290"
+      }
+    },
+    {
+      "value": "100300",
+      "write": {
+        "value_as_number": 100300,
+        "value_as_string": "100300",
+        "value_source_value": "100300"
+      }
+    },
+    {
+      "value": "100302",
+      "write": {
+        "value_as_number": 100302,
+        "value_as_string": "100302",
+        "value_source_value": "100302"
+      }
+    },
+    {
+      "value": "100303",
+      "write": {
+        "value_as_number": 100303,
+        "value_as_string": "100303",
+        "value_source_value": "100303"
+      }
+    },
+    {
+      "value": "100313",
+      "write": {
+        "value_as_number": 100313,
+        "value_as_string": "100313",
+        "value_source_value": "100313"
+      }
+    },
+    {
+      "value": "100330",
+      "write": {
+        "value_as_number": 100330,
+        "value_as_string": "100330",
+        "value_source_value": "100330"
+      }
+    },
+    {
+      "value": "100333",
+      "write": {
+        "value_as_number": 100333,
+        "value_as_string": "100333",
+        "value_source_value": "100333"
+      }
+    },
+    {
+      "value": "100335",
+      "write": {
+        "value_as_number": 100335,
+        "value_as_string": "100335",
+        "value_source_value": "100335"
+      }
+    },
+    {
+      "value": "100337",
+      "write": {
+        "value_as_number": 100337,
+        "value_as_string": "100337",
+        "value_source_value": "100337"
+      }
+    },
+    {
+      "value": "100342",
+      "write": {
+        "value_as_number": 100342,
+        "value_as_string": "100342",
+        "value_source_value": "100342"
+      }
+    },
+    {
+      "value": "100351",
+      "write": {
+        "value_as_number": 100351,
+        "value_as_string": "100351",
+        "value_source_value": "100351"
+      }
+    },
+    {
+      "value": "100353",
+      "write": {
+        "value_as_number": 100353,
+        "value_as_string": "100353",
+        "value_source_value": "100353"
+      }
+    },
+    {
+      "value": "100364",
+      "write": {
+        "value_as_number": 100364,
+        "value_as_string": "100364",
+        "value_source_value": "100364"
+      }
+    },
+    {
+      "value": "100383",
+      "write": {
+        "value_as_number": 100383,
+        "value_as_string": "100383",
+        "value_source_value": "100383"
+      }
+    },
+    {
+      "value": "100384",
+      "write": {
+        "value_as_number": 100384,
+        "value_as_string": "100384",
+        "value_source_value": "100384"
+      }
+    },
+    {
+      "value": "100385",
+      "write": {
+        "value_as_number": 100385,
+        "value_as_string": "100385",
+        "value_source_value": "100385"
+      }
+    },
+    {
+      "value": "100404",
+      "write": {
+        "value_as_number": 100404,
+        "value_as_string": "100404",
+        "value_source_value": "100404"
+      }
+    },
+    {
+      "value": "100424",
+      "write": {
+        "value_as_number": 100424,
+        "value_as_string": "100424",
+        "value_source_value": "100424"
+      }
+    },
+    {
+      "value": "100437",
+      "write": {
+        "value_as_number": 100437,
+        "value_as_string": "100437",
+        "value_source_value": "100437"
+      }
+    },
+    {
+      "value": "100438",
+      "write": {
+        "value_as_number": 100438,
+        "value_as_string": "100438",
+        "value_source_value": "100438"
+      }
+    },
+    {
+      "value": "100453",
+      "write": {
+        "value_as_number": 100453,
+        "value_as_string": "100453",
+        "value_source_value": "100453"
+      }
+    },
+    {
+      "value": "100454",
+      "write": {
+        "value_as_number": 100454,
+        "value_as_string": "100454",
+        "value_source_value": "100454"
+      }
+    },
+    {
+      "value": "100467",
+      "write": {
+        "value_as_number": 100467,
+        "value_as_string": "100467",
+        "value_source_value": "100467"
+      }
+    },
+    {
+      "value": "100469",
+      "write": {
+        "value_as_number": 100469,
+        "value_as_string": "100469",
+        "value_source_value": "100469"
+      }
+    },
+    {
+      "value": "100472",
+      "write": {
+        "value_as_number": 100472,
+        "value_as_string": "100472",
+        "value_source_value": "100472"
+      }
+    },
+    {
+      "value": "100473",
+      "write": {
+        "value_as_number": 100473,
+        "value_as_string": "100473",
+        "value_source_value": "100473"
+      }
+    },
+    {
+      "value": "100485",
+      "write": {
+        "value_as_number": 100485,
+        "value_as_string": "100485",
+        "value_source_value": "100485"
+      }
+    },
+    {
+      "value": "100491",
+      "write": {
+        "value_as_number": 100491,
+        "value_as_string": "100491",
+        "value_source_value": "100491"
+      }
+    },
+    {
+      "value": "100499",
+      "write": {
+        "value_as_number": 100499,
+        "value_as_string": "100499",
+        "value_source_value": "100499"
+      }
+    },
+    {
+      "value": "100500",
+      "write": {
+        "value_as_number": 100500,
+        "value_as_string": "100500",
+        "value_source_value": "100500"
+      }
+    },
+    {
+      "value": "100111",
+      "write": {
+        "value_as_number": 100111,
+        "value_as_string": "100111",
+        "value_source_value": "100111"
+      }
+    },
+    {
+      "value": "100029",
+      "write": {
+        "value_as_number": 100029,
+        "value_as_string": "100029",
+        "value_source_value": "100029"
+      }
+    },
+    {
+      "value": "100013",
+      "write": {
+        "value_as_number": 100013,
+        "value_as_string": "100013",
+        "value_source_value": "100013"
+      }
+    },
+    {
+      "value": "100422",
+      "write": {
+        "value_as_number": 100422,
+        "value_as_string": "100422",
+        "value_source_value": "100422"
+      }
+    },
+    {
+      "value": "100107",
+      "write": {
+        "value_as_number": 100107,
+        "value_as_string": "100107",
+        "value_source_value": "100107"
+      }
+    },
+    {
+      "value": "100101",
+      "write": {
+        "value_as_number": 100101,
+        "value_as_string": "100101",
+        "value_source_value": "100101"
+      }
+    },
+    {
+      "value": "100009",
+      "write": {
+        "value_as_number": 100009,
+        "value_as_string": "100009",
+        "value_source_value": "100009"
+      }
+    },
+    {
+      "value": "100086",
+      "write": {
+        "value_as_number": 100086,
+        "value_as_string": "100086",
+        "value_source_value": "100086"
+      }
+    },
+    {
+      "value": "100072",
+      "write": {
+        "value_as_number": 100072,
+        "value_as_string": "100072",
+        "value_source_value": "100072"
+      }
+    },
+    {
+      "value": "100200",
+      "write": {
+        "value_as_number": 100200,
+        "value_as_string": "100200",
+        "value_source_value": "100200"
+      }
+    },
+    {
+      "value": "100049",
+      "write": {
+        "value_as_number": 100049,
+        "value_as_string": "100049",
+        "value_source_value": "100049"
+      }
+    },
+    {
+      "value": "100039",
+      "write": {
+        "value_as_number": 100039,
+        "value_as_string": "100039",
+        "value_source_value": "100039"
+      }
+    },
+    {
+      "value": "100410",
+      "write": {
+        "value_as_number": 100410,
+        "value_as_string": "100410",
+        "value_source_value": "100410"
+      }
+    },
+    {
+      "value": "100280",
+      "write": {
+        "value_as_number": 100280,
+        "value_as_string": "100280",
+        "value_source_value": "100280"
+      }
+    },
+    {
+      "value": "100014",
+      "write": {
+        "value_as_number": 100014,
+        "value_as_string": "100014",
+        "value_source_value": "100014"
+      }
+    },
+    {
+      "value": "100044",
+      "write": {
+        "value_as_number": 100044,
+        "value_as_string": "100044",
+        "value_source_value": "100044"
+      }
+    },
+    {
+      "value": "100429",
+      "write": {
+        "value_as_number": 100429,
+        "value_as_string": "100429",
+        "value_source_value": "100429"
+      }
+    },
+    {
+      "value": "100360",
+      "write": {
+        "value_as_number": 100360,
+        "value_as_string": "100360",
+        "value_source_value": "100360"
+      }
+    },
+    {
+      "value": "100347",
+      "write": {
+        "value_as_number": 100347,
+        "value_as_string": "100347",
+        "value_source_value": "100347"
+      }
+    },
+    {
+      "value": "100192",
+      "write": {
+        "value_as_number": 100192,
+        "value_as_string": "100192",
+        "value_source_value": "100192"
+      }
+    },
+    {
+      "value": "100185",
+      "write": {
+        "value_as_number": 100185,
+        "value_as_string": "100185",
+        "value_source_value": "100185"
+      }
+    },
+    {
+      "value": "100041",
+      "write": {
+        "value_as_number": 100041,
+        "value_as_string": "100041",
+        "value_source_value": "100041"
+      }
+    },
+    {
+      "value": "100414",
+      "write": {
+        "value_as_number": 100414,
+        "value_as_string": "100414",
+        "value_source_value": "100414"
+      }
+    },
+    {
+      "value": "100241",
+      "write": {
+        "value_as_number": 100241,
+        "value_as_string": "100241",
+        "value_source_value": "100241"
+      }
+    },
+    {
+      "value": "100340",
+      "write": {
+        "value_as_number": 100340,
+        "value_as_string": "100340",
+        "value_source_value": "100340"
+      }
+    },
+    {
+      "value": "100336",
+      "write": {
+        "value_as_number": 100336,
+        "value_as_string": "100336",
+        "value_source_value": "100336"
+      }
+    },
+    {
+      "value": "100228",
+      "write": {
+        "value_as_number": 100228,
+        "value_as_string": "100228",
+        "value_source_value": "100228"
+      }
+    },
+    {
+      "value": "100285",
+      "write": {
+        "value_as_number": 100285,
+        "value_as_string": "100285",
+        "value_source_value": "100285"
+      }
+    },
+    {
+      "value": "100315",
+      "write": {
+        "value_as_number": 100315,
+        "value_as_string": "100315",
+        "value_source_value": "100315"
+      }
+    },
+    {
+      "value": "100311",
+      "write": {
+        "value_as_number": 100311,
+        "value_as_string": "100311",
+        "value_source_value": "100311"
+      }
+    },
+    {
+      "value": "100022",
+      "write": {
+        "value_as_number": 100022,
+        "value_as_string": "100022",
+        "value_source_value": "100022"
+      }
+    },
+    {
+      "value": "100291",
+      "write": {
+        "value_as_number": 100291,
+        "value_as_string": "100291",
+        "value_source_value": "100291"
+      }
+    },
+    {
+      "value": "100289",
+      "write": {
+        "value_as_number": 100289,
+        "value_as_string": "100289",
+        "value_source_value": "100289"
+      }
+    },
+    {
+      "value": "100211",
+      "write": {
+        "value_as_number": 100211,
+        "value_as_string": "100211",
+        "value_source_value": "100211"
+      }
+    },
+    {
+      "value": "100440",
+      "write": {
+        "value_as_number": 100440,
+        "value_as_string": "100440",
+        "value_source_value": "100440"
+      }
+    },
+    {
+      "value": "100203",
+      "write": {
+        "value_as_number": 100203,
+        "value_as_string": "100203",
+        "value_source_value": "100203"
+      }
+    },
+    {
+      "value": "100420",
+      "write": {
+        "value_as_number": 100420,
+        "value_as_string": "100420",
+        "value_source_value": "100420"
+      }
+    },
+    {
+      "value": "100139",
+      "write": {
+        "value_as_number": 100139,
+        "value_as_string": "100139",
+        "value_source_value": "100139"
+      }
+    },
+    {
+      "value": "100262",
+      "write": {
+        "value_as_number": 100262,
+        "value_as_string": "100262",
+        "value_source_value": "100262"
+      }
+    },
+    {
+      "value": "100128",
+      "write": {
+        "value_as_number": 100128,
+        "value_as_string": "100128",
+        "value_source_value": "100128"
+      }
+    },
+    {
+      "value": "100124",
+      "write": {
+        "value_as_number": 100124,
+        "value_as_string": "100124",
+        "value_source_value": "100124"
+      }
+    },
+    {
+      "value": "100122",
+      "write": {
+        "value_as_number": 100122,
+        "value_as_string": "100122",
+        "value_source_value": "100122"
+      }
+    },
+    {
+      "value": "100120",
+      "write": {
+        "value_as_number": 100120,
+        "value_as_string": "100120",
+        "value_source_value": "100120"
+      }
+    },
+    {
+      "value": "100400",
+      "write": {
+        "value_as_number": 100400,
+        "value_as_string": "100400",
+        "value_source_value": "100400"
+      }
+    },
+    {
+      "value": "100287",
+      "write": {
+        "value_as_number": 100287,
+        "value_as_string": "100287",
+        "value_source_value": "100287"
+      }
+    },
+    {
+      "value": "100407",
+      "write": {
+        "value_as_number": 100407,
+        "value_as_string": "100407",
+        "value_source_value": "100407"
+      }
+    },
+    {
+      "value": "100408",
+      "write": {
+        "value_as_number": 100408,
+        "value_as_string": "100408",
+        "value_source_value": "100408"
+      }
+    },
+    {
+      "value": "100256",
+      "write": {
+        "value_as_number": 100256,
+        "value_as_string": "100256",
+        "value_source_value": "100256"
+      }
+    },
+    {
+      "value": "100253",
+      "write": {
+        "value_as_number": 100253,
+        "value_as_string": "100253",
+        "value_source_value": "100253"
+      }
+    },
+    {
+      "value": "100227",
+      "write": {
+        "value_as_number": 100227,
+        "value_as_string": "100227",
+        "value_source_value": "100227"
+      }
+    },
+    {
+      "value": "100201",
+      "write": {
+        "value_as_number": 100201,
+        "value_as_string": "100201",
+        "value_source_value": "100201"
+      }
+    },
+    {
+      "value": "100195",
+      "write": {
+        "value_as_number": 100195,
+        "value_as_string": "100195",
+        "value_source_value": "100195"
+      }
+    },
+    {
+      "value": "100428",
+      "write": {
+        "value_as_number": 100428,
+        "value_as_string": "100428",
+        "value_source_value": "100428"
+      }
+    },
+    {
+      "value": "100165",
+      "write": {
+        "value_as_number": 100165,
+        "value_as_string": "100165",
+        "value_source_value": "100165"
+      }
+    },
+    {
+      "value": "100434",
+      "write": {
+        "value_as_number": 100434,
+        "value_as_string": "100434",
+        "value_source_value": "100434"
+      }
+    },
+    {
+      "value": "100161",
+      "write": {
+        "value_as_number": 100161,
+        "value_as_string": "100161",
+        "value_source_value": "100161"
+      }
+    },
+    {
+      "value": "100159",
+      "write": {
+        "value_as_number": 100159,
+        "value_as_string": "100159",
+        "value_source_value": "100159"
+      }
+    },
+    {
+      "value": "100494",
+      "write": {
+        "value_as_number": 100494,
+        "value_as_string": "100494",
+        "value_source_value": "100494"
+      }
+    },
+    {
+      "value": "100151",
+      "write": {
+        "value_as_number": 100151,
+        "value_as_string": "100151",
+        "value_source_value": "100151"
+      }
+    },
+    {
+      "value": "100146",
+      "write": {
+        "value_as_number": 100146,
+        "value_as_string": "100146",
+        "value_source_value": "100146"
+      }
+    },
+    {
+      "value": "100145",
+      "write": {
+        "value_as_number": 100145,
+        "value_as_string": "100145",
+        "value_source_value": "100145"
+      }
+    },
+    {
+      "value": "100131",
+      "write": {
+        "value_as_number": 100131,
+        "value_as_string": "100131",
+        "value_source_value": "100131"
+      }
+    },
+    {
+      "value": "100109",
+      "write": {
+        "value_as_number": 100109,
+        "value_as_string": "100109",
+        "value_source_value": "100109"
+      }
+    },
+    {
+      "value": "100093",
+      "write": {
+        "value_as_number": 100093,
+        "value_as_string": "100093",
+        "value_source_value": "100093"
+      }
+    },
+    {
+      "value": "100466",
+      "write": {
+        "value_as_number": 100466,
+        "value_as_string": "100466",
+        "value_source_value": "100466"
+      }
+    },
+    {
+      "value": "100066",
+      "write": {
+        "value_as_number": 100066,
+        "value_as_string": "100066",
+        "value_source_value": "100066"
+      }
+    },
+    {
+      "value": "100006",
+      "write": {
+        "value_as_number": 100006,
+        "value_as_string": "100006",
+        "value_source_value": "100006"
+      }
+    },
+    {
+      "value": "100377",
+      "write": {
+        "value_as_number": 100377,
+        "value_as_string": "100377",
+        "value_source_value": "100377"
+      }
+    },
+    {
+      "value": "100063",
+      "write": {
+        "value_as_number": 100063,
+        "value_as_string": "100063",
+        "value_source_value": "100063"
+      }
+    },
+    {
+      "value": "100475",
+      "write": {
+        "value_as_number": 100475,
+        "value_as_string": "100475",
+        "value_source_value": "100475"
+      }
+    },
+    {
+      "value": "100047",
+      "write": {
+        "value_as_number": 100047,
+        "value_as_string": "100047",
+        "value_source_value": "100047"
+      }
+    },
+    {
+      "value": "100344",
+      "write": {
+        "value_as_number": 100344,
+        "value_as_string": "100344",
+        "value_source_value": "100344"
+      }
+    },
+    {
+      "value": "100387",
+      "write": {
+        "value_as_number": 100387,
+        "value_as_string": "100387",
+        "value_source_value": "100387"
+      }
+    },
+    {
+      "value": "100322",
+      "write": {
+        "value_as_number": 100322,
+        "value_as_string": "100322",
+        "value_source_value": "100322"
+      }
+    },
+    {
+      "value": "100319",
+      "write": {
+        "value_as_number": 100319,
+        "value_as_string": "100319",
+        "value_source_value": "100319"
+      }
+    },
+    {
+      "value": "100292",
+      "write": {
+        "value_as_number": 100292,
+        "value_as_string": "100292",
+        "value_source_value": "100292"
+      }
+    }
+  ],
+  "links": [],
+  "derived_from": [],
+  "anchored_to": {
+    "person_id": "staging.person_map",
+    "visit_occurrence_id": "cdm.visit_occurrence"
+  },
+  "manual_approval": true
+}

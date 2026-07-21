@@ -1,0 +1,98 @@
+{
+  "variable": "ADoutcome",
+  "cde_id": "1",
+  "means": "Alzheimer's Disease clinical outcome or disease progression status post-mortem. Used to classify participants into \"control\", \"AD\", \"Other\"",
+  "program": "AMP-AD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "AD",
+      "Control",
+      "Other"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 3187945,
+      "name": "Neuropathology observable entity",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "Other",
+      "write": {
+        "value_as_string": "Other",
+        "value_source_value": "Other"
+      }
+    },
+    {
+      "value": "AD",
+      "write": {
+        "value_as_string": "AD",
+        "value_source_value": "AD"
+      }
+    },
+    {
+      "value": "Control",
+      "write": {
+        "value_as_string": "Control",
+        "value_source_value": "Control"
+      }
+    }
+  ],
+  "links": [
+    {
+      "kind": "derivation",
+      "related_variable": "Braak",
+      "related_concept": {
+        "id": 3172933,
+        "name": "Braak stage for presence of tau protein accompanying neurofibrillary degeneration in brain",
+        "domain": "Observation"
+      },
+      "related_table": "observation",
+      "related_value_set": [
+        "None",
+        "Stage I",
+        "Stage II",
+        "Stage III",
+        "Stage IV",
+        "Stage V",
+        "Stave VI",
+        "Missing or unknown"
+      ],
+      "relationship": "",
+      "mechanism": ""
+    },
+    {
+      "kind": "derivation",
+      "related_variable": "amyCerad",
+      "related_concept": {
+        "id": 3519134,
+        "name": "CERAD scoring for presence of neuritic plaques",
+        "domain": "Measurement"
+      },
+      "related_table": "measurement",
+      "related_value_set": [
+        "None/No AD/C0",
+        "Sparse/Possible/C1",
+        "Moderate/Probable/C2",
+        "Frequent/Definite/C3",
+        "Missing or unknown"
+      ],
+      "relationship": "",
+      "mechanism": ""
+    }
+  ],
+  "derived_from": [
+    "Braak",
+    "amyCerad"
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "manual_approval": true,
+  "derivation_rule": "Derived harmonized outcomes based on CERAD neuritic plaque score and Braak stage, or NINCDS-ADRD criteria for Mayo. The following criteria seek to harmonize outcomes between cohorts as closely as possible, with Mayo’s neuropath-based diagnoses (as determined by Mayo specialists) set as the standard to match. These thresholds will also exclude individuals with age-related tauopathies from being classified as AD cases or controls. sh, MSSM, Columbia derived outcome criteria: AD: Braak ≥ 4, CERAD = Frequent or Moderate Control: Braak ≤ 3, CERAD = Sparse or None Other: all other UFL (from Mayo): some patients from UFL were not consistent with other MayoDx criteria (i.e. 8 individuals had Braak < 4 and a mayoDx==AD). These individuals were assigned ‘Other’ criteria in the ADoutcome variable to harmonize more closely with MayoDx criteria."
+}

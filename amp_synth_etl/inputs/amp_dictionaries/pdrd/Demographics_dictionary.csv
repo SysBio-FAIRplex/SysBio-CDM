@@ -1,0 +1,10 @@
+TableName,ColumnName,Title,Description,Required,DataType,DataTypeRange,UniqueValues
+Demographics.csv,participant_id,Study Subject ID,Study Subject ID,TRUE,String,,
+Demographics.csv,GUID,Subject ID,Global Unique ID (USUBJID),FALSE,String,,
+Demographics.csv,visit_name,Visit Name,"Visit name: M - in months, SC - screening visit, LOG - records without visit; #2 or #3 define repated records at the same visit or repeated visit",TRUE,String,,
+Demographics.csv,visit_month,Visit Month,"Numeric visit in months; for visits prior baseline -1, -2 is an order of screening visits",FALSE,Float,,
+Demographics.csv,age_at_baseline,Age At Baseline,Age At Baseline,FALSE,Integer,19 - 100,
+Demographics.csv,sex,Sex,Sex,FALSE,Enumeration,,Male;Female;Unknown
+Demographics.csv,ethnicity,Ethnicity,Ethnicity,FALSE,Enumeration,,Not Hispanic or Latino;Hispanic or Latino;Unknown
+Demographics.csv,race,Race,Race,FALSE,Enumeration,,White;Black or African American;Native Hawaiian or Other Pacific Islander;Asian;American Indian or Alaska Native;Unknown;Multiracial
+Demographics.csv,education_level_years,Education Level,Education Level Years,FALSE,Enumeration,,0 years;Less than 12 years;12-16 years;Greater than 16 years;Unknown

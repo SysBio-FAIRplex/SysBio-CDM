@@ -1,0 +1,67 @@
+{
+  "variable": "alcohol_use_frequency",
+  "cde_id": "139",
+  "means": "The frequency of consumption of alcohol by the participant",
+  "program": "AMP-PD",
+  "grain": "visit",
+  "reads_as": {
+    "datatype": "string"
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 35811110,
+      "name": "Frequency of drinking alcohol",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "Not currently",
+      "write": {
+        "value_as_string": "Not currently",
+        "value_source_value": "Not currently"
+      }
+    },
+    {
+      "value": "Daily or almost daily",
+      "write": {
+        "value_as_concept_id": {
+          "id": 35817658,
+          "name": "Daily or almost daily"
+        },
+        "value_as_string": "Daily or almost daily",
+        "value_source_value": "Daily or almost daily"
+      }
+    },
+    {
+      "value": "Weekly",
+      "write": {
+        "value_as_concept_id": {
+          "id": 35825059,
+          "name": "Weekly"
+        },
+        "value_as_string": "Weekly",
+        "value_source_value": "Weekly"
+      }
+    },
+    {
+      "value": "Monthly or less",
+      "write": {
+        "value_as_concept_id": {
+          "id": 35821022,
+          "name": "Monthly or less"
+        },
+        "value_as_string": "Monthly or less",
+        "value_source_value": "Monthly or less"
+      }
+    }
+  ],
+  "links": [],
+  "derived_from": [],
+  "anchored_to": {
+    "person_id": "staging.person_map",
+    "visit_occurrence_id": "cdm.visit_occurrence"
+  },
+  "manual_approval": true
+}

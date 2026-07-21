@@ -1,0 +1,36 @@
+{
+  "variable": "pmi",
+  "cde_id": "41",
+  "means": "Post-Mortem Interval",
+  "program": "AMP-AD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "integer",
+    "unit": "hours"
+  },
+  "lands": {
+    "table": "measurement",
+    "measurement_concept_id": {
+      "id": 3029815,
+      "name": "Collection interval from baseline of Unspecified specimen",
+      "domain": "Measurement"
+    }
+  },
+  "value_map": [
+    {
+      "value": "<any in range>",
+      "write": {
+        "value_as_number": "<value>",
+        "value_source_value": "<raw>"
+      }
+    }
+  ],
+  "links": [],
+  "derived_from": [],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "manual_approval": true,
+  "derivation_rule": "RADC data set 754 (ROSMAP). Post-mortem interval (PMI): time interval in hours from time of death to autopsy. PMI refers to the interval between death and tissue preservation in hours.",
+  "note": "decimals present in loaded value_as_number -> confirm integer vs float"
+}
