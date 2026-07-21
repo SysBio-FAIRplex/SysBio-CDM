@@ -5,7 +5,7 @@ set -euo pipefail
 DB="${1:-sysbio_cdm_selfcontained}"
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 # PGPASSWORD is taken from the environment (or ~/.pgpass); it is not stored in this repo.
-P=(psql -h localhost -p 5433 -U postgres)
+P=(psql -h "${PGHOST:-localhost}" -p "${PGPORT:-5433}" -U "${PGUSER:-postgres}")
 "${P[@]}" -d postgres -q -c "DROP DATABASE IF EXISTS $DB"
 "${P[@]}" -d postgres -q -c "CREATE DATABASE $DB"
 echo ">> schema";  "${P[@]}" -d "$DB" -v ON_ERROR_STOP=1 -q -f "$ROOT/cdm_load/cdm_ddl.sql"
