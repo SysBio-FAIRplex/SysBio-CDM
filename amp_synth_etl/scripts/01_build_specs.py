@@ -487,6 +487,11 @@ def main():
     # Never overwrite a spec. Each build is a new timestamped file, so a change to a field
     # descriptor is a visible diff, not a silent rewrite. Six earlier versions were destroyed
     # by `rm -rf specs/*` before this was fixed.
+    # NOTE (for the architect): specs/ is tracked, so every run drops a new -- and not
+    # byte-stable -- file here that shows up as uncommitted; collaborators can `git add` it by
+    # accident. Decide later: gitignore the generated specs, or write a FIXED filename and update
+    # the readers together (they glob `*_fields_*.tsv` and take the newest). Until then, ship only
+    # the current newest set and don't stage the churn.
     out = os.path.join(SPECS, f"table_schema_fields_{ts}.tsv")
     with open(out, "w", newline="", encoding="utf-8") as fh:
         w = csv.writer(fh, delimiter="\t", lineterminator="\n")

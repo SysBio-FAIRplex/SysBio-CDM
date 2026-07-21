@@ -49,6 +49,16 @@ may already run locally); to inspect it from the host, use
 
 ```sh
 export PGPASSWORD=...
+make            # list all targets (make help)
+make all        # whole pipeline: generation -> CDM delivery -> DB load -> verify
+```
+
+`make all` and `bash run_pipeline.sh` are equivalent -- the latter needs no `make`. Run
+one part with `make generate`, `make cdm`, `make load`, `make verify`, or `make test`.
+Or run the stages individually:
+
+```sh
+export PGPASSWORD=...
 
 python scripts/01_build_specs.py
 python scripts/02_build_tables.py
@@ -67,6 +77,17 @@ python scripts/13_verify_governance.py
 any existing database.
 
 ## Pipeline
+
+The `make` / `run_pipeline.sh` front door runs everything in order; this section maps the
+pieces. Each script has one of three roles:
+
+- **Run directly** (or via `make`): generation stages `01`-`04`, then `10_build_cdm_delivery.py`
+  -> `cdm_load/build_selfcontained.sh` -> `13_verify_governance.py`.
+- **Orchestrated** -- run *for* you by `10`, never directly: `06`, `08`, `09`, `11`, `12`.
+- **Helper / imported** -- never run on their own: `inputs_io.py`, `fidelity.py`,
+  `enumerated.py`, and everything under `scripts/gen/`.
+
+`05_conflicts.py` is a standalone, optional report.
 
 ### Specs
 
