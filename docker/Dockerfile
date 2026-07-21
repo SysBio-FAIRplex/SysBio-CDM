@@ -9,9 +9,9 @@ ENV PYTHONUNBUFFERED=1 \
     PIP_NO_CACHE_DIR=1
 
 # postgresql-client: the load/verify steps shell out to `psql`.
-# git: in-container version control.
+# git: in-container version control.  make: the `make` front door (see amp_synth_etl/Makefile).
 RUN apt-get update \
- && apt-get install -y --no-install-recommends postgresql-client git \
+ && apt-get install -y --no-install-recommends postgresql-client git make \
  && rm -rf /var/lib/apt/lists/*
 
 # The pipeline is stdlib-only; pytest is the sole dependency (for tests/).
