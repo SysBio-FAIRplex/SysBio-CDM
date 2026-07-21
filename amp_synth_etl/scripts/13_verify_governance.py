@@ -41,7 +41,9 @@ def q(role, sql):
     """Run sql (optionally under SET ROLE) in a fresh psql session; return list of output lines."""
     prefix = f"SET ROLE {role}; " if role else ""
     env = dict(os.environ)          # PGPASSWORD comes from the environment / ~/.pgpass
-    out = subprocess.run(["psql", "-h", "localhost", "-p", "5433", "-U", "postgres", "-d", DB,
+    out = subprocess.run(["psql", "-h", os.environ.get("PGHOST", "localhost"),
+                          "-p", os.environ.get("PGPORT", "5433"),
+                          "-U", os.environ.get("PGUSER", "postgres"), "-d", DB,
                           "-tAqc", prefix + sql], capture_output=True, text=True, env=env)
     if out.returncode != 0:
         raise RuntimeError(f"psql failed (role={role}): {out.stderr.strip()}\n  SQL: {sql}")

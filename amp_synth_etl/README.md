@@ -10,7 +10,8 @@ database, no network access. Everything it needs is in this directory.
 
 - Python 3.13 (stdlib only; `pytest` for tests)
 - `psql` client on `PATH` — the load and verify steps shell out to it
-- PostgreSQL server reachable at `localhost:5433`
+- A PostgreSQL server for the load/verify steps — connection via `PGHOST`/`PGPORT`/`PGUSER`
+  (defaults `localhost` / `5433` / `postgres`); the Docker path sets these automatically
 
 ```sh
 conda env create -f environment.yml
@@ -25,6 +26,24 @@ pip install -r requirements.txt   # plus: apt-get install postgresql-client
 
 `PGPASSWORD` is read from the environment or `~/.pgpass`. It is not stored in this
 repository.
+
+## Run with Docker (recommended for a fresh clone)
+
+From the **repository root** (where `docker-compose.yml` lives) — no local Python or
+Postgres needed, only Docker:
+
+```sh
+export PGPASSWORD=<choose one>
+docker compose up -d --build     # starts a Postgres service + the pipeline bench
+docker compose exec bench bash   # opens a shell in /app/amp_synth_etl
+```
+
+Then run the pipeline exactly as in Quick start below. Postgres runs as its own
+service with a persistent named volume, reachable at `db:5432` from inside the
+bench. It is not published to a host port (so it will not clash with a Postgres you
+may already run locally); to inspect it from the host, use
+`docker compose exec db psql -U postgres`. Tear down with `docker compose down`
+(add `-v` to also drop the database volume).
 
 ## Quick start
 

@@ -28,8 +28,8 @@
       "value": "33",
       "write": {
         "value_as_concept_id": {
-          "id": 1621052,
-          "name": "ApoE phenotype E3/E3 (wild type)"
+          "id": 36310427,
+          "name": "APOE e3 (wild type)"
         },
         "value_source_value": "33"
       }
@@ -38,8 +38,8 @@
       "value": "34",
       "write": {
         "value_as_concept_id": {
-          "id": 1620476,
-          "name": "ApoE phenotype E3/E4"
+          "id": 36311054,
+          "name": "APOE e3/e4"
         },
         "value_source_value": "34"
       }
@@ -48,8 +48,8 @@
       "value": "23",
       "write": {
         "value_as_concept_id": {
-          "id": 1621144,
-          "name": "ApoE phenotype E2/E3"
+          "id": 36310377,
+          "name": "APOE e2/e3"
         },
         "value_source_value": "23"
       }
@@ -58,8 +58,8 @@
       "value": "24",
       "write": {
         "value_as_concept_id": {
-          "id": 1620858,
-          "name": "ApoE phenotype E2/E4"
+          "id": 36308156,
+          "name": "APOE e2/e4"
         },
         "value_source_value": "24"
       }
@@ -68,8 +68,8 @@
       "value": "22",
       "write": {
         "value_as_concept_id": {
-          "id": 1620859,
-          "name": "ApoE phenotype E2/E2"
+          "id": 36308038,
+          "name": "APOE e2"
         },
         "value_source_value": "22"
       }
@@ -78,8 +78,8 @@
       "value": "44",
       "write": {
         "value_as_concept_id": {
-          "id": 1620613,
-          "name": "ApoE phenotype E4/E4"
+          "id": 36307729,
+          "name": "APOE e4"
         },
         "value_source_value": "44"
       }
