@@ -27,6 +27,7 @@ step "7/9 assemble CDM delivery";      python scripts/10_build_cdm_delivery.py
 # --- load + verify ---
 step "8/9 load throwaway DB ($DB)";    bash cdm_load/build_selfcontained.sh "$DB"
 step "9/9 verify governance";          python scripts/13_verify_governance.py "$DB"
+step "acceptance: user stories";       python scripts/14_verify_user_stories.py "$DB"
 
 echo
-echo ">>> DONE -- CDM built and governance-verified in database '$DB'."
+echo ">>> DONE -- CDM built, governance-verified, and user-story acceptance passed in '$DB'."

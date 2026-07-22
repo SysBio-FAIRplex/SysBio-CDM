@@ -118,7 +118,7 @@ def conflicted(people, var_cols):
     import glob as _g
     spec = defaultdict(dict)                      # column -> {programme: spec-json}
     base = {}
-    f = sorted(_g.glob(os.path.join(ROOT, "specs", "table_schema_fields_*.tsv")))
+    f = sorted(_g.glob(os.path.join(ROOT, "specs", "table_schema_fields.tsv")))
     if f:
         for r in csv.DictReader(open(f[-1], newline="", encoding="utf-8"), delimiter="\t"):
             base.setdefault(r["amp_variable"], r["table_schema_field"])

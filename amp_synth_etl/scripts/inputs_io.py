@@ -68,7 +68,7 @@ def dict_rows(parked=None):
 
 
 def _spec_path():
-    f = sorted(glob.glob(os.path.join(ROOT, "specs", "table_schema_fields*.tsv")))
+    f = sorted(glob.glob(os.path.join(ROOT, "specs", "table_schema_fields.tsv")))
     if not f:
         raise FileNotFoundError(
             "specs/table_schema_fields*.tsv not found -- run scripts/01_build_specs.py first")

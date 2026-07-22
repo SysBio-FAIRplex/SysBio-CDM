@@ -142,7 +142,7 @@ def main():
         w.writerows(rows)
 
     # ---------------------------------------------------------------- coverage report
-    spec_path = sorted(glob.glob(os.path.join(ROOT, "specs", "table_schema_fields_*.tsv")))[-1]
+    spec_path = sorted(glob.glob(os.path.join(ROOT, "specs", "table_schema_fields.tsv")))[-1]
     spec_vars = {r["amp_variable"] for r in
                  csv.DictReader(open(spec_path, newline="", encoding="utf-8"), delimiter="\t")}
     table_vars = {c for d in tables.values() for c in d["cols"]}

@@ -203,7 +203,7 @@ def main():
         w.writerows(rows)
 
     ts = datetime.now().strftime("%Y%m%d_%H%M%S")
-    spath = os.path.join(ROOT, "specs", f"ark_fields_{ts}.tsv")
+    spath = os.path.join(ROOT, "specs", "ark_fields.tsv")
     with open(spath, "w", newline="", encoding="utf-8") as fh:
         w = csv.writer(fh, delimiter="\t", lineterminator="\n")
         w.writerow(["amp_variable", "table_schema_field", "spec_origin", "description"])

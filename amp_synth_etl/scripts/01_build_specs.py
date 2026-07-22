@@ -482,17 +482,12 @@ def main():
             if var not in doc:
                 doc[var] = f
 
-    ts = datetime.now().strftime("%Y%m%d_%H%M%S")
     os.makedirs(SPECS, exist_ok=True)
-    # Never overwrite a spec. Each build is a new timestamped file, so a change to a field
-    # descriptor is a visible diff, not a silent rewrite. Six earlier versions were destroyed
-    # by `rm -rf specs/*` before this was fixed.
-    # NOTE (for the architect): specs/ is tracked, so every run drops a new -- and not
-    # byte-stable -- file here that shows up as uncommitted; collaborators can `git add` it by
-    # accident. Decide later: gitignore the generated specs, or write a FIXED filename and update
-    # the readers together (they glob `*_fields_*.tsv` and take the newest). Until then, ship only
-    # the current newest set and don't stage the churn.
-    out = os.path.join(SPECS, f"table_schema_fields_{ts}.tsv")
+    # FIXED filename, overwritten in place. The spec is deterministic -- re-running yields a
+    # byte-identical file (no diff); a real dictionary change shows as a clean git diff. (Formerly
+    # timestamped, which accumulated untracked files, until the writer + all readers were switched
+    # to the fixed name together.)
+    out = os.path.join(SPECS, "table_schema_fields.tsv")
     with open(out, "w", newline="", encoding="utf-8") as fh:
         w = csv.writer(fh, delimiter="\t", lineterminator="\n")
         w.writerow(["cde_id", "amp_variable", "sb_source", "table_schema_field",
@@ -501,7 +496,7 @@ def main():
         w.writerows(rows)
 
     # real Table Schema documents, one per AMP source dictionary
-    sdir = os.path.join(SPECS, f"table_schemas_{ts}")
+    sdir = os.path.join(SPECS, "table_schemas")
     os.makedirs(sdir, exist_ok=True)
     for src, fields in sorted(schemas.items()):
         stem = re.sub(r"[^A-Za-z0-9]+", "_", src).strip("_")
