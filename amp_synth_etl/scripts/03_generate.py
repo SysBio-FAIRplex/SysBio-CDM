@@ -91,7 +91,7 @@ def load_specs():
     specs = {v: json.loads(r["table_schema_field"])
              for v, r in inputs_io.specs_by_variable().items()}
     ark, cmd = {}, {}
-    f = sorted(glob.glob(os.path.join(ROOT, "specs", "ark_fields_*.tsv")))
+    f = sorted(glob.glob(os.path.join(ROOT, "specs", "ark_fields.tsv")))
     if f:
         for r in csv.DictReader(open(f[-1], newline="", encoding="utf-8"), delimiter="\t"):
             ark[r["amp_variable"]] = json.loads(r["table_schema_field"])

@@ -42,6 +42,17 @@ ASSAY_META = {
     "Visium":         ("transcriptomics", "RNA",     "spatial"),
 }
 
+# ---- curated pseudobulk cell types (small + high-fidelity). AMP-AD labels are the REAL AMP-AD data-model
+# vocabulary: inputs/amp_dictionaries/ad/data_models/BiospecimenMetadataTemplate.json `cellType` enum.
+# AMP-RA-SLE from the ARK cell ontology. Single-cell/nucleus RNA & ATAC -> ONE pseudobulk matrix PER cell type.
+PSEUDOBULK_CELLTYPES = {
+    "AMP-AD":     ["microglia", "astrocytes", "oligodendrocyte", "GLUtamatergic neurons", "GABAergic neurons"],
+    "AMP-RA-SLE": ["synovial fibroblast", "T cell", "B cell", "monocyte"],
+}
+HARMONIZED_TISSUE = {"AMP-AD": "postmortem brain", "AMP-RA-SLE": "synovial tissue"}  # biosample_type on harmonized files
+SINGLE_CELL_TECH  = {"snRNAseq", "scRNAseq", "snATACseq", "10x Multiome"}            # RNA/ATAC pseudobulked per cell type
+_BLOOD_CT = ["monocyte", "T cell", "B cell", "NK cell", "peripheral blood mononuclear cell"]  # clean immune set
+
 def _analysis_types(tech):
     if tech == "10x Multiome": return ["RNA", "ATAC"]        # cookbook: one assay -> RNA + ATAC files
     if "ATAC" in tech:         return ["ATAC"]
@@ -76,7 +87,7 @@ def specimens_ad(rng, pid, visits):
         t_legal = _legal("tissue", [organ])
         if organ == "blood":
             tissue = "blood"
-            ct = _cat("cellType", ["monocytes", "peripheral blood mononuclear cell"], rng)
+            ct = _BLOOD_CT[rng.randrange(len(_BLOOD_CT))]   # clean immune set (nonsense CL terms dropped)
         else:
             brain = [t for t in t_legal if t.strip().lower() != "blood"] or [organ]
             tissue = fidelity.categorical("tissue", brain, rng)
@@ -155,42 +166,62 @@ _OLINK_PLATE = 88   # ASSUMED samples per Olink plate -- one NPX file spans the 
 
 
 def cohort_files(rng, prog, assays):
-    """Files that span MANY assays -- one per (program x modality), NOT one per assay. This is the
-    fidelity fix: a real proteomics NPX file covers a whole plate (many participants), and harmonized
-    data ships as one aggregated matrix per modality, not a file per sample.
-      * proteomics (Olink) -> plate-level NPX file(s) (~88 samples/plate)
-      * every other modality -> one harmonized_output matrix aggregating that modality's assays
-    Returns (files, assay_input_file) where every contributing assay -> the shared file (M:N). The
-    shared file has assay_id = NULL (no single producing assay); it is governed by files.study."""
+    """Files that span MANY assays -- NOT one per assay -- shaped to match what each output IS in reality:
+      * proteomics (Olink)         -> plate-level NPX file(s) (~88 samples/plate; one file, many participants)
+      * single-cell/nucleus RNA/ATAC -> one harmonized PSEUDOBULK HDF5 matrix PER cell type (multi-specimen),
+        over a curated tissue-specific cell-type set. This is the real shape of harmonized single-cell
+        deliverables (SEA-AD / AMP-AD pseudobulk are organized by cell type), and it is what the cohort-
+        builder user stories query (e.g. 'pseudobulked microglia HDF5').
+      * bulk RNAseq / spatial      -> one aggregated matrix per modality (no cell type)
+    Every contributing assay -> the shared file via assay_input_file (M:N). The shared file has
+    assay_id = NULL (no single producing assay); it is governed by files.study. Deterministic: file ids
+    increment within the program's cohort-file band; cell types are a fixed curated list."""
     files, aif = [], []
     fid = _COHORT_FILE_BASE.get(prog, 158_000_000)
-    by_mod = {}
+    tissue    = HARMONIZED_TISSUE.get(prog, "pooled")
+    celltypes = PSEUDOBULK_CELLTYPES.get(prog, [])
+
+    # bucket each assay's modalities: single-cell RNA/ATAC (split by cell type) vs bulk/spatial vs proteomics
+    sc_by_mod, bulk_by_mod, proteomics = {}, {}, []
     for a in assays:
-        for atype in _analysis_types(a["assay_source_value"]):
-            by_mod.setdefault(atype, []).append(a["assay_id"])
-    for atype in sorted(by_mod):
-        aids = by_mod[atype]
-        if atype == "proteomics":
-            plates = [aids[i:i + _OLINK_PLATE] for i in range(0, len(aids), _OLINK_PLATE)]
-            for pno, chunk in enumerate(plates, 1):
-                fid += 1
-                files.append({"participant_id": "", "file_id": fid, "assay_id": "",
-                              "file_name": f"{prog}_OlinkExploreHT_plate{pno}_NPX.parquet",
-                              "file_role": "assay_matrix", "analysis_type": "proteomics",
-                              "file_format": "parquet", "biosample_type": "plasma", "tissue": "plasma",
-                              "cell_type": "", "species": "Homo sapiens", "study": prog, "grant": prog,
-                              "file_size_bytes": _size("parquet", rng), "drs_id": f"drs://sysbio/{fid}"})
-                for aid in chunk:
-                    aif.append({"assay_id": aid, "file_id": fid})
-        else:
-            fid += 1
-            fmt = _out_format(atype)
-            files.append({"participant_id": "", "file_id": fid, "assay_id": "",
-                          "file_name": f"{prog}_{atype}_harmonized_matrix.{fmt.lower()}",
-                          "file_role": "harmonized_output", "analysis_type": atype, "file_format": fmt,
-                          "biosample_type": "pooled", "tissue": "pooled", "cell_type": "",
-                          "species": "Homo sapiens", "study": prog, "grant": prog,
-                          "file_size_bytes": _size(fmt, rng), "drs_id": f"drs://sysbio/{fid}"})
-            for aid in aids:
-                aif.append({"assay_id": aid, "file_id": fid})
+        tech = a["assay_source_value"]
+        for atype in _analysis_types(tech):
+            if atype == "proteomics":
+                proteomics.append(a["assay_id"])
+            elif tech in SINGLE_CELL_TECH and atype in ("RNA", "ATAC"):
+                sc_by_mod.setdefault(atype, []).append(a["assay_id"])
+            else:
+                bulk_by_mod.setdefault(atype, []).append(a["assay_id"])
+
+    def _emit(name, role, atype, fmt, biosample, cell_type, aids):
+        nonlocal fid
+        fid += 1
+        files.append({"participant_id": "", "file_id": fid, "assay_id": "", "file_name": name,
+                      "file_role": role, "analysis_type": atype, "file_format": fmt,
+                      "biosample_type": biosample, "tissue": biosample, "cell_type": cell_type,
+                      "species": "Homo sapiens", "study": prog, "grant": prog,
+                      "file_size_bytes": _size(fmt, rng), "drs_id": f"drs://sysbio/{fid}"})
+        for aid in aids:
+            aif.append({"assay_id": aid, "file_id": fid})
+
+    # proteomics -> plate-level NPX (one file spans many participants)
+    if proteomics:
+        plates = [proteomics[i:i + _OLINK_PLATE] for i in range(0, len(proteomics), _OLINK_PLATE)]
+        for pno, chunk in enumerate(plates, 1):
+            _emit(f"{prog}_OlinkExploreHT_plate{pno}_NPX.parquet", "assay_matrix", "proteomics",
+                  "parquet", "plasma", "", chunk)
+
+    # single-cell / nucleus RNA & ATAC -> one pseudobulk HDF5 PER cell type (multi-specimen)
+    for atype in sorted(sc_by_mod):
+        aids = sc_by_mod[atype]
+        for ct in celltypes:
+            _emit(f"{prog}_{atype}_pseudobulk_{ct.replace(' ', '_')}.h5", "harmonized_output", atype,
+                  "HDF5", tissue, ct, aids)
+
+    # bulk RNAseq / spatial -> one aggregated matrix per modality (no cell type)
+    for atype in sorted(bulk_by_mod):
+        fmt = _out_format(atype)
+        _emit(f"{prog}_{atype}_matrix.{fmt.lower()}", "harmonized_output", atype, fmt, tissue, "",
+              bulk_by_mod[atype])
+
     return files, aif

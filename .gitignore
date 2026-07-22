@@ -24,3 +24,6 @@ amp_synth_etl/cdm_load/*.sql
 
 # NOT ignored on purpose:
 #   exports/curated_concept_tables.sqlite  -- mandatory concept source, tracked
+
+# Generated per-table JSON schemas (write-only; nothing reads them)
+amp_synth_etl/specs/table_schemas/

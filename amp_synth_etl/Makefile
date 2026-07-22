@@ -4,7 +4,7 @@
 .DEFAULT_GOAL := help
 DB ?= sysbio_cdm_selfcontained
 
-.PHONY: help all generate cdm load verify test
+.PHONY: help all generate cdm load verify verify-stories test
 
 help:
 	@echo "Pipeline targets (DB name overridable via DB=..., default $(DB)):"
@@ -13,6 +13,7 @@ help:
 	@echo "  make cdm        Assemble the CDM load SQL (10 orchestrates 06/08/09/11/12)"
 	@echo "  make load       Build a throwaway DB and load the CDM (run 'make cdm' first)"
 	@echo "  make verify     Verify record-level governance on the loaded DB"
+	@echo "  make verify-stories  Run the 13 user-story acceptance queries on the loaded DB"
 	@echo "  make test       Run the pytest suite"
 	@echo ""
 	@echo "PGPASSWORD (and optionally PGHOST/PGPORT/PGUSER) must be set in the environment."
@@ -36,6 +37,9 @@ load:
 
 verify:
 	python scripts/13_verify_governance.py $(DB)
+
+verify-stories:
+	python scripts/14_verify_user_stories.py $(DB)
 
 test:
 	pytest tests/ -q

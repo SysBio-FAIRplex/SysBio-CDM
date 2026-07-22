@@ -50,7 +50,7 @@ def specs():
                 "v": r["sb_value_set"]}
             for v, r in inputs_io.specs_by_variable().items()}
     S = {p: dict(base) for p in ("AMP-PD", "AMP-AD", "AMP-CMD", "AMP-RA-SLE")}
-    f = sorted(glob.glob(os.path.join(ROOT, "specs", "ark_fields_*.tsv")))
+    f = sorted(glob.glob(os.path.join(ROOT, "specs", "ark_fields.tsv")))
     if f:
         for r in csv.DictReader(open(f[-1], newline="", encoding="utf-8"), delimiter="\t"):
             S["AMP-RA-SLE"][r["amp_variable"]] = {"f": json.loads(r["table_schema_field"]), "v": ""}
