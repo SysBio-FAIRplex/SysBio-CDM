@@ -1,7 +1,10 @@
 {
   "variable": "upd120e_tremor_rest_feet_lt",
+  "cde_registry_label": "upd120e_tremor_rest_feet_lt",
+  "harmonized_with": ["upd2317d_rest_tremor_amp_l_lower_extremity"],
   "cde_id": "425",
-  "means": "UPDRS - Motor Examination: Tremor at Rest, Feet, Left (UPD120E)",
+  "definition": "UPDRS - Motor Examination: Tremor at Rest, Feet, Left (UPD120E)",
+  "source_file": "UPDRS_dictionary.csv",
   "program": "AMP-PD",
   "grain": "visit",
   "reads_as": {
@@ -29,7 +32,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map",
     "visit_occurrence_id": "cdm.visit_occurrence"

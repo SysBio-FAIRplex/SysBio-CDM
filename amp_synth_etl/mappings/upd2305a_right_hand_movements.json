@@ -1,7 +1,9 @@
 {
   "variable": "upd2305a_right_hand_movements",
+  "cde_registry_label": "upd2305a_right_hand_movements",
   "cde_id": "493",
-  "means": "3.05a MDS-UPDRS - Right Hand Movements (UPD2305A)",
+  "definition": "3.05a MDS-UPDRS - Right Hand Movements (UPD2305A)",
+  "source_file": "MDS_UPDRS_Part_III_dictionary.csv",
   "program": "AMP-PD",
   "grain": "visit",
   "reads_as": {
@@ -85,7 +87,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map",
     "visit_occurrence_id": "cdm.visit_occurrence"

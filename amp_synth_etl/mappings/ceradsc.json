@@ -1,7 +1,9 @@
 {
   "variable": "ceradsc",
+  "cde_registry_label": "ceradsc",
   "cde_id": "17",
-  "means": "CERAD Score",
+  "definition": "CERAD Score",
+  "source_file": "ROSMAP_clinical_codebook.pdf",
   "program": "AMP-AD",
   "grain": "subject",
   "reads_as": {
@@ -84,12 +86,9 @@
       "mechanism": ""
     }
   ],
-  "derived_from": [
-    "amyCerad"
-  ],
   "anchored_to": {
     "person_id": "staging.person_map"
   },
   "manual_approval": true,
-  "derivation_rule": "RADC data set 754 (ROSMAP). CERAD score: a semiquantitative measure of neuritic plaques. A neuropathologic diagnosis was made of no AD, possible AD, probable AD, or definite AD based on semiquantitative estimates of neuritic plaque density as recommended by the Consortium to Establish a Registry for Alzheimer's Disease (CERAD), modified to be implemented without adjustment for age and clinical diagnosis. A CERAD neuropathologic diagnosis of AD required moderate (probable AD) or frequent neuritic plaques (definite AD) in one or more neocortical regions. Diagnosis includes algorithm and neuropathologist's opinion, blinded to age and all clinical data. Value coding: 1=Definite; 2=Probable; 3=Possible; 4=No AD."
+  "note": "Extended AMP definition: RADC data set 754 (ROSMAP). CERAD score: a semiquantitative measure of neuritic plaques. A neuropathologic diagnosis was made of no AD, possible AD, probable AD, or definite AD based on semiquantitative estimates of neuritic plaque density as recommended by the Consortium to Establish a Registry for Alzheimer's Disease (CERAD), modified to be implemented without adjustment for age and clinical diagnosis. A CERAD neuropathologic diagnosis of AD required moderate (probable AD) or frequent neuritic plaques (definite AD) in one or more neocortical regions. Diagnosis includes algorithm and neuropathologist's opinion, blinded to age and all clinical data. Value coding: 1=Definite; 2=Probable; 3=Possible; 4=No AD."
 }

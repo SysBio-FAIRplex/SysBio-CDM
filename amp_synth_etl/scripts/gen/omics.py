@@ -29,6 +29,9 @@ def _cat(var, fallback, rng):
 # ASSUMED assay technologies per program (grounded in the ARK assay families + real AMP-AD metadata).
 AD_ASSAYS    = ["snRNAseq", "scRNAseq", "snATACseq", "bulkRNAseq", "10x Multiome"]
 RASLE_ASSAYS = ["scRNAseq", "snRNAseq", "bulkRNAseq", "CyTOF", "Olink Explore HT", "Visium"]
+PD_ASSAYS    = ["SomaLogic"]                    # AMP-PD: SomaLogic plasma proteomics (plate-level, many specimens/file)
+CMD_ASSAYS   = ["snRNAseq", "bulkRNAseq"]       # AMP-CMD: hypothalamus single-nucleus + bulk gene-count
+_POOL = {"AMP-AD": AD_ASSAYS, "AMP-RA-SLE": RASLE_ASSAYS, "AMP-PD": PD_ASSAYS, "AMP-CMD": CMD_ASSAYS}
 
 # technology -> (dataType[assay_type], analyte_type, suspension_type). Grounded in ARK assay-dataType.csv.
 ASSAY_META = {
@@ -39,6 +42,7 @@ ASSAY_META = {
     "10x Multiome":   ("multimodal",      "RNA+DNA", "single-nucleus"),
     "CyTOF":          ("cytometry",       "protein", "single-cell"),
     "Olink Explore HT": ("proteomics",    "protein", "bulk"),
+    "SomaLogic":      ("proteomics",      "protein", "bulk"),
     "Visium":         ("transcriptomics", "RNA",     "spatial"),
 }
 
@@ -48,8 +52,10 @@ ASSAY_META = {
 PSEUDOBULK_CELLTYPES = {
     "AMP-AD":     ["microglia", "astrocytes", "oligodendrocyte", "GLUtamatergic neurons", "GABAergic neurons"],
     "AMP-RA-SLE": ["synovial fibroblast", "T cell", "B cell", "monocyte"],
+    "AMP-CMD":    ["oligodendrocyte", "neuron", "astrocyte", "ependymal cell"],   # REAL AMP-CMD hypothalamus cell types (fnih single-cell)
 }
-HARMONIZED_TISSUE = {"AMP-AD": "postmortem brain", "AMP-RA-SLE": "synovial tissue"}  # biosample_type on harmonized files
+HARMONIZED_TISSUE = {"AMP-AD": "postmortem brain", "AMP-RA-SLE": "synovial tissue",
+                     "AMP-CMD": "hypothalamus", "AMP-PD": "plasma"}               # biosample_type on harmonized/aggregate files
 SINGLE_CELL_TECH  = {"snRNAseq", "scRNAseq", "snATACseq", "10x Multiome"}            # RNA/ATAC pseudobulked per cell type
 _BLOOD_CT = ["monocyte", "T cell", "B cell", "NK cell", "peripheral blood mononuclear cell"]  # clean immune set
 
@@ -58,7 +64,7 @@ def _analysis_types(tech):
     if "ATAC" in tech:         return ["ATAC"]
     if "RNA" in tech:          return ["RNA"]
     if tech == "CyTOF":        return ["cytometry"]
-    if tech.startswith("Olink"): return ["proteomics"]
+    if tech.startswith("Olink") or tech == "SomaLogic": return ["proteomics"]
     if tech == "Visium":       return ["spatial"]
     return ["other"]
 
@@ -104,10 +110,37 @@ def specimens_ad(rng, pid, visits):
     return out
 
 
+def specimens_pd(rng, pid, visits):
+    """AMP-PD specimens: plasma for SomaLogic proteomics. ASSUMED 1-2 per subject (living cohort)."""
+    vis = visits[0][0] if visits else "M0"
+    out = []
+    for seq in range(1, rng.randint(1, 2) + 1):
+        out.append({
+            "participant_id": pid, "specimen_id": pid * 100 + seq, "visit_name": vis,
+            "organ": "blood", "specimen_source_value": "plasma", "anatomic_site_source_value": "plasma",
+            "cell_type": "",
+            "nucleic_acid_source": _cat("nucleicAcidSource", ["bulk cell"], rng),
+            "sample_status": _cat("sampleStatus", ["frozen"], rng),
+            "is_post_mortem": "FALSE"})
+    return out
+
+
+def specimens_cmd(rng, pid, visits):
+    """AMP-CMD specimens: postmortem hypothalamus for single-nucleus RNA. ASSUMED 1 per subject."""
+    vis = visits[0][0] if visits else "M0"
+    return [{
+        "participant_id": pid, "specimen_id": pid * 100 + 1, "visit_name": vis,
+        "organ": "brain", "specimen_source_value": "hypothalamus", "anatomic_site_source_value": "hypothalamus",
+        "cell_type": "",
+        "nucleic_acid_source": _cat("nucleicAcidSource", ["bulk cell"], rng),
+        "sample_status": _cat("sampleStatus", ["frozen"], rng),
+        "is_post_mortem": _cat("isPostMortem", ["TRUE"], rng)}]
+
+
 def _raw_files(tech):
     """The PER-SAMPLE raw files a wet-lab assay yields (realistic count + format). Olink proteomics is
     PLATE-level (one file spans a whole plate) so it yields NO per-sample file -- see cohort_files()."""
-    if tech.startswith("Olink"):   return []                                  # plate-level -> cohort_files
+    if tech.startswith("Olink") or tech == "SomaLogic": return []             # plate-level proteomics -> cohort_files
     if tech == "CyTOF":            return [("", "fcs")]                        # one FCS per sample
     if tech == "Visium":           return [("R1", "fastq"), ("R2", "fastq")]  # spatial seq, paired
     if tech == "bulkRNAseq":       return [("R1", "fastq")]                    # bulk, single file
@@ -125,7 +158,7 @@ def assays_and_files(rng, pid, prog, specimens):
     assays, files, a2s = [], [], []
     if not specimens:
         return assays, files, a2s
-    pool = AD_ASSAYS if prog == "AMP-AD" else RASLE_ASSAYS
+    pool = _POOL.get(prog, RASLE_ASSAYS)
     aseq = fseq = 0
     for sp in specimens:
         if rng.random() > 0.6:                      # ASSUMED: ~60% of specimens are assayed
@@ -204,12 +237,12 @@ def cohort_files(rng, prog, assays):
         for aid in aids:
             aif.append({"assay_id": aid, "file_id": fid})
 
-    # proteomics -> plate-level NPX (one file spans many participants)
+    # proteomics -> ONE aggregate matrix spanning ALL proteomics assays for the programme. Real Olink/
+    # SomaLogic deliverables are a single normalized matrix with thousands of specimens -- never one file
+    # per patient. Every proteomics assay links in via assay_input_file (M:N).
     if proteomics:
-        plates = [proteomics[i:i + _OLINK_PLATE] for i in range(0, len(proteomics), _OLINK_PLATE)]
-        for pno, chunk in enumerate(plates, 1):
-            _emit(f"{prog}_OlinkExploreHT_plate{pno}_NPX.parquet", "assay_matrix", "proteomics",
-                  "parquet", "plasma", "", chunk)
+        _emit(f"{prog}_proteomics_matrix.parquet", "assay_matrix", "proteomics",
+              "parquet", "plasma", "", proteomics)
 
     # single-cell / nucleus RNA & ATAC -> one pseudobulk HDF5 PER cell type (multi-specimen)
     for atype in sorted(sc_by_mod):

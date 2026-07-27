@@ -1,7 +1,9 @@
 {
   "variable": "amyAny",
+  "cde_registry_label": "amyAny",
   "cde_id": "9",
-  "means": "Presence of any amyloid pathology",
+  "definition": "Presence of any amyloid pathology",
+  "source_file": "DiverseCohorts_DataDictionary.pdf",
   "program": "AMP-AD",
   "grain": "subject",
   "reads_as": {
@@ -69,9 +71,6 @@
       "relationship": "",
       "mechanism": ""
     }
-  ],
-  "derived_from": [
-    "amyCerad"
   ],
   "anchored_to": {
     "person_id": "staging.person_map"

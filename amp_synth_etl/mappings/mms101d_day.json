@@ -1,7 +1,9 @@
 {
   "variable": "mms101d_day",
+  "cde_registry_label": "mms101d_day",
   "cde_id": "193",
-  "means": "MMSE - What Is the Day of Week (MMS101D)",
+  "definition": "MMSE - What Is the Day of Week (MMS101D)",
+  "source_file": "MMSE_dictionary.csv",
   "program": "AMP-PD",
   "grain": "visit",
   "reads_as": {
@@ -46,7 +48,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map",
     "visit_occurrence_id": "cdm.visit_occurrence"

@@ -1,7 +1,9 @@
 {
   "variable": "cohort",
+  "cde_registry_label": "cohort",
   "cde_id": "74",
-  "means": "Cohort Identifier",
+  "definition": "Cohort Identifier",
+  "source_file": "DiverseCohorts_DataDictionary.pdf; DiverseCohorts_DataDictionary_ExtNeuropath.pdf",
   "program": "AMP-AD / AMP-CMD",
   "grain": "subject",
   "reads_as": {
@@ -24,7 +26,12 @@
     ]
   },
   "lands": {
-    "table": "observation"
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 44813056,
+      "name": "Cohort study",
+      "domain": "Observation"
+    }
   },
   "value_map": [
     {
@@ -106,7 +113,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map"
   },

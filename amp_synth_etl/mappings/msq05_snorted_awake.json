@@ -1,7 +1,9 @@
 {
   "variable": "msq05_snorted_awake",
+  "cde_registry_label": "msq05_snorted_awake",
   "cde_id": "265",
-  "means": "MSQ Snorted Awake Q5",
+  "definition": "MSQ Snorted Awake Q5",
+  "source_file": "REM_Sleep_Behavior_Disorder_Questionnaire_Mayo_dictionary.csv",
   "program": "AMP-PD",
   "grain": "visit",
   "reads_as": {
@@ -44,10 +46,9 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map",
     "visit_occurrence_id": "cdm.visit_occurrence"
   },
-  "manual_approval": true
+  "manual_approval": false
 }

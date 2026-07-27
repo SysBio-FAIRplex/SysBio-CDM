@@ -1,7 +1,9 @@
 {
   "variable": "mod_schwab_england_pct_adl_score",
+  "cde_registry_label": "mod_schwab_england_pct_adl_score",
   "cde_id": "249",
-  "means": "Modified Schwab And England Percent ADL Score",
+  "definition": "Modified Schwab And England Percent ADL Score",
+  "source_file": "Modified_Schwab___England_ADL_dictionary.csv",
   "program": "AMP-CMD / AMP-PD",
   "grain": "visit",
   "reads_as": {
@@ -29,7 +31,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map",
     "visit_occurrence_id": "cdm.visit_occurrence"

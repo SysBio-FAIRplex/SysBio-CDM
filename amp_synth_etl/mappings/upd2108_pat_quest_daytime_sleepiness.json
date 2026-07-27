@@ -1,7 +1,9 @@
 {
   "variable": "upd2108_pat_quest_daytime_sleepiness",
+  "cde_registry_label": "upd2108_pat_quest_daytime_sleepiness",
   "cde_id": "465",
-  "means": "1.08 MDS-UPDRS - Daytime Sleepiness (UPD2108)",
+  "definition": "1.08 MDS-UPDRS - Daytime Sleepiness (UPD2108)",
+  "source_file": "MDS_UPDRS_Part_I_dictionary.csv",
   "program": "AMP-PD",
   "grain": "visit",
   "reads_as": {
@@ -85,5 +87,5 @@
     "person_id": "staging.person_map",
     "visit_occurrence_id": "cdm.visit_occurrence"
   },
-  "manual_approval": true
+  "manual_approval": false
 }

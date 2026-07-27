@@ -1,7 +1,9 @@
 {
   "variable": "upd2315a_postural_tremor_of_right_hand",
+  "cde_registry_label": "upd2315a_postural_tremor_of_right_hand",
   "cde_id": "507",
-  "means": "3.15a MDS-UPDRS - Postural Tremor Of Right Hand (UPD2315A)",
+  "definition": "3.15a MDS-UPDRS - Postural Tremor Of Right Hand (UPD2315A)",
+  "source_file": "MDS_UPDRS_Part_III_dictionary.csv",
   "program": "AMP-PD",
   "grain": "visit",
   "reads_as": {
@@ -85,7 +87,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map",
     "visit_occurrence_id": "cdm.visit_occurrence"

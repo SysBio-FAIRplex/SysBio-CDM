@@ -1,7 +1,10 @@
 {
   "variable": "moca27_orientation_city_score",
+  "cde_registry_label": "moca27_orientation_city_score",
+  "harmonized_with": ["moca22_orientation_date_score", "moca23_orientation_month_score", "moca25_orientation_day_score", "moca26_orientation_place_score"],
   "cde_id": "237",
-  "means": "MOCA: 27. Orientation - City Score",
+  "definition": "MOCA: 27. Orientation - City Score",
+  "source_file": "MOCA_dictionary.csv",
   "program": "AMP-PD",
   "grain": "visit",
   "reads_as": {
@@ -29,7 +32,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map",
     "visit_occurrence_id": "cdm.visit_occurrence"

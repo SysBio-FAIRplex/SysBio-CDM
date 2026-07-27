@@ -1,7 +1,10 @@
 {
   "variable": "upd2312_postural_stability",
+  "cde_registry_label": "upd2312_postural_stability",
+  "harmonized_with": ["upd130_postural_stability"],
   "cde_id": "504",
-  "means": "3.12 MDS-UPDRS - Postural Stability (UPD2312)",
+  "definition": "3.12 MDS-UPDRS - Postural Stability (UPD2312)",
+  "source_file": "MDS_UPDRS_Part_III_dictionary.csv",
   "program": "AMP-PD",
   "grain": "visit",
   "reads_as": {
@@ -85,7 +88,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map",
     "visit_occurrence_id": "cdm.visit_occurrence"

@@ -1,7 +1,10 @@
 {
   "variable": "upd2401_time_spent_with_dyskinesias",
+  "cde_registry_label": "upd2401_time_spent_with_dyskinesias",
+  "harmonized_with": ["upd132_dyskinesias_duration"],
   "cde_id": "519",
-  "means": "4.01 MDS-UPDRS - Time Spent With Dyskinesias (UPD2401)",
+  "definition": "4.01 MDS-UPDRS - Time Spent With Dyskinesias (UPD2401)",
+  "source_file": "MDS_UPDRS_Part_IV_dictionary.csv",
   "program": "AMP-PD",
   "grain": "visit",
   "reads_as": {
@@ -85,7 +88,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map",
     "visit_occurrence_id": "cdm.visit_occurrence"

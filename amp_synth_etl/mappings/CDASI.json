@@ -1,7 +1,9 @@
 {
   "variable": "CDASI",
+  "cde_registry_label": "CDASI",
   "cde_id": "544",
-  "means": "Cutaneous Dermatomyositis Disease Area and Severity Index, is a measurement used to characterize cutaneous dermatomyositis severity.",
+  "definition": "Cutaneous Dermatomyositis Disease Area and Severity Index, is a measurement used to characterize cutaneous dermatomyositis severity.",
+  "source_file": "",
   "program": "AMP-RA-SLE",
   "grain": "visit",
   "reads_as": {
@@ -29,7 +31,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map",
     "visit_occurrence_id": "cdm.visit_occurrence"

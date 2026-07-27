@@ -1,7 +1,9 @@
 {
   "variable": "alcohol_start_age",
+  "cde_registry_label": "alcohol_start_age",
   "cde_id": "137",
-  "means": "Age in years when participant/subject started ingesting alcoholic beverages, including social drinking",
+  "definition": "Age in years when participant/subject started ingesting alcoholic beverages, including social drinking",
+  "source_file": "Smoking_and_alcohol_history_dictionary.csv",
   "program": "AMP-PD",
   "grain": "subject",
   "reads_as": {
@@ -45,9 +47,6 @@
       "relationship": "",
       "mechanism": ""
     }
-  ],
-  "derived_from": [
-    "age_at_baseline"
   ],
   "anchored_to": {
     "person_id": "staging.person_map"

@@ -1,7 +1,9 @@
 {
   "variable": "alcohol_drinks_daily_range",
+  "cde_registry_label": "alcohol_drinks_daily_range",
   "cde_id": "129",
-  "means": "Alcohol drinking day average drinks consumed range",
+  "definition": "Alcohol drinking day average drinks consumed range",
+  "source_file": "Smoking_and_alcohol_history_dictionary.csv",
   "program": "AMP-PD",
   "grain": "visit",
   "reads_as": {
@@ -65,7 +67,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map",
     "visit_occurrence_id": "cdm.visit_occurrence"

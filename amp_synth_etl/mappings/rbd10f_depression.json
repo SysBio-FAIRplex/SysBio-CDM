@@ -1,7 +1,9 @@
 {
   "variable": "rbd10f_depression",
+  "cde_registry_label": "rbd10f_depression",
   "cde_id": "359",
-  "means": "RBD 10f Depression",
+  "definition": "RBD 10f Depression",
+  "source_file": "REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster_dictionary.csv",
   "program": "AMP-PD",
   "grain": "visit",
   "reads_as": {
@@ -44,7 +46,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map",
     "visit_occurrence_id": "cdm.visit_occurrence"

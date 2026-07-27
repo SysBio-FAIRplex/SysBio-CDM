@@ -1,7 +1,10 @@
 {
   "variable": "dat",
+  "cde_registry_label": "dat",
+  "harmonized_with": ["datscan_visual_interpretation", "scan_months_after_baseline"],
   "cde_id": "153",
-  "means": "Dopamine transporter scan result",
+  "definition": "Dopamine transporter scan result",
+  "source_file": "LBD_Cohort_Clinical_Data_dictionary.csv",
   "program": "AMP-PD",
   "grain": "visit",
   "reads_as": {
@@ -56,7 +59,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map",
     "visit_occurrence_id": "cdm.visit_occurrence"

@@ -1,7 +1,9 @@
 {
   "variable": "comorbidities",
+  "cde_registry_label": "comorbidities",
   "cde_id": "545",
-  "means": "Any diseases or medical condition that is simultaneously present in addition to `diagnosis`.",
+  "definition": "Any diseases or medical condition that is simultaneously present in addition to `diagnosis`.",
+  "source_file": "",
   "program": "AMP-RA-SLE",
   "grain": "subject",
   "reads_as": {
@@ -149,7 +151,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map"
   },

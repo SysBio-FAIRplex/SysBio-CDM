@@ -1,7 +1,9 @@
 {
   "variable": "diagnosis_type",
+  "cde_registry_label": "diagnosis_modality",
   "cde_id": "157",
-  "means": "How was diagnosis made?",
+  "definition": "How was diagnosis made?",
+  "source_file": "PD_Medical_History_dictionary.csv",
   "program": "AMP-CMD / AMP-PD",
   "grain": "subject",
   "reads_as": {
@@ -48,7 +50,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map"
   },

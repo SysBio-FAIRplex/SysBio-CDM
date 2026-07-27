@@ -1,7 +1,10 @@
 {
   "variable": "rbd_info_source",
+  "cde_registry_label": "rbd_info_source",
+  "harmonized_with": ["ess_info_source"],
   "cde_id": "363",
-  "means": "RBD Source Of Information",
+  "definition": "RBD Source Of Information",
+  "source_file": "REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster_dictionary.csv",
   "program": "AMP-PD",
   "grain": "visit",
   "reads_as": {
@@ -44,7 +47,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map",
     "visit_occurrence_id": "cdm.visit_occurrence"

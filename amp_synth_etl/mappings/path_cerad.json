@@ -1,7 +1,10 @@
 {
   "variable": "path_cerad",
+  "cde_registry_label": "path_cerad",
+  "harmonized_with": ["amyCerad"],
   "cde_id": "283",
-  "means": "CERAD scoreś",
+  "definition": "CERAD scoreś",
+  "source_file": "LBD_Cohort_Path_Data_dictionary.csv",
   "program": "AMP-PD",
   "grain": "subject",
   "reads_as": {
@@ -68,7 +71,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map"
   },

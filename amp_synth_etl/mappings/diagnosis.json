@@ -1,0 +1,259 @@
+{
+  "variable": "diagnosis",
+  "cde_registry_label": "diagnosis",
+  "harmonized_with": ["ADoutcome", "adj_primary_dxC", "study_arm"],
+  "cde_id": "",
+  "definition": "A high-level classifier indicating the disease status of an individual.",
+  "source_file": "",
+  "program": "AMP-RA-SLE",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "At-Risk RA",
+      "Not Applicable",
+      "OA",
+      "RA",
+      "SLE",
+      "Sjogren's disease",
+      "control",
+      "cutaneous lupus erythematosus",
+      "dermatomyositis",
+      "discoid lupus erythematosus",
+      "lupus nephritis",
+      "psoriasis",
+      "psoriatic arthritis",
+      "scleroderma",
+      "unknown",
+      "vitiligo"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 4234469,
+      "name": "Diagnosis",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "RA",
+      "write": {
+        "value_as_concept_id": {
+          "id": 80809,
+          "name": "Rheumatoid arthritis"
+        },
+        "qualifier_concept_id": {
+          "id": 1989833,
+          "name": "Admitting diagnosis"
+        },
+        "value_source_value": "RA"
+      }
+    },
+    {
+      "value": "SLE",
+      "write": {
+        "value_as_concept_id": {
+          "id": 257628,
+          "name": "Systemic lupus erythematosus"
+        },
+        "qualifier_concept_id": {
+          "id": 1989833,
+          "name": "Admitting diagnosis"
+        },
+        "value_source_value": "SLE"
+      }
+    },
+    {
+      "value": "vitiligo",
+      "write": {
+        "value_as_concept_id": {
+          "id": 138502,
+          "name": "Vitiligo"
+        },
+        "qualifier_concept_id": {
+          "id": 1989833,
+          "name": "Admitting diagnosis"
+        },
+        "value_source_value": "vitiligo"
+      }
+    },
+    {
+      "value": "control",
+      "write": {
+        "value_as_concept_id": {
+          "id": 45884153,
+          "name": "Normal"
+        },
+        "qualifier_concept_id": {
+          "id": 44804027,
+          "name": "Control group"
+        },
+        "value_source_value": "control"
+      }
+    },
+    {
+      "value": "OA",
+      "write": {
+        "value_as_string": "OA",
+        "qualifier_concept_id": {
+          "id": 1989833,
+          "name": "Admitting diagnosis"
+        },
+        "value_source_value": "OA"
+      }
+    },
+    {
+      "value": "Sjogren's disease",
+      "write": {
+        "value_as_concept_id": {
+          "id": 254443,
+          "name": "Sjögren's syndrome"
+        },
+        "qualifier_concept_id": {
+          "id": 1989833,
+          "name": "Admitting diagnosis"
+        },
+        "value_source_value": "Sjogren's disease"
+      }
+    },
+    {
+      "value": "cutaneous lupus erythematosus",
+      "write": {
+        "value_as_string": "cutaneous lupus erythematosus",
+        "qualifier_concept_id": {
+          "id": 1989833,
+          "name": "Admitting diagnosis"
+        },
+        "value_source_value": "cutaneous lupus erythematosus"
+      }
+    },
+    {
+      "value": "dermatomyositis",
+      "write": {
+        "value_as_concept_id": {
+          "id": 80182,
+          "name": "Dermatomyositis"
+        },
+        "qualifier_concept_id": {
+          "id": 1989833,
+          "name": "Admitting diagnosis"
+        },
+        "value_source_value": "dermatomyositis"
+      }
+    },
+    {
+      "value": "discoid lupus erythematosus",
+      "write": {
+        "value_as_concept_id": {
+          "id": 45878952,
+          "name": "Discoid lupus"
+        },
+        "qualifier_concept_id": {
+          "id": 1989833,
+          "name": "Admitting diagnosis"
+        },
+        "value_source_value": "discoid lupus erythematosus"
+      }
+    },
+    {
+      "value": "lupus nephritis",
+      "write": {
+        "value_as_concept_id": {
+          "id": 4285717,
+          "name": "SLE glomerulonephritis syndrome"
+        },
+        "qualifier_concept_id": {
+          "id": 1989833,
+          "name": "Admitting diagnosis"
+        },
+        "value_source_value": "lupus nephritis"
+      }
+    },
+    {
+      "value": "psoriasis",
+      "write": {
+        "value_as_concept_id": {
+          "id": 45881711,
+          "name": "Psoriasis"
+        },
+        "qualifier_concept_id": {
+          "id": 1989833,
+          "name": "Admitting diagnosis"
+        },
+        "value_source_value": "psoriasis"
+      }
+    },
+    {
+      "value": "psoriatic arthritis",
+      "write": {
+        "value_as_string": "psoriatic arthritis",
+        "qualifier_concept_id": {
+          "id": 1989833,
+          "name": "Admitting diagnosis"
+        },
+        "value_source_value": "psoriatic arthritis"
+      }
+    },
+    {
+      "value": "scleroderma",
+      "write": {
+        "value_as_concept_id": {
+          "id": 45877273,
+          "name": "Scleroderma"
+        },
+        "qualifier_concept_id": {
+          "id": 1989833,
+          "name": "Admitting diagnosis"
+        },
+        "value_source_value": "scleroderma"
+      }
+    },
+    {
+      "value": "At-Risk RA",
+      "write": {
+        "value_as_string": "At-Risk RA",
+        "qualifier_concept_id": {
+          "id": 1989833,
+          "name": "Admitting diagnosis"
+        },
+        "value_source_value": "At-Risk RA"
+      }
+    },
+    {
+      "value": "Not Applicable",
+      "write": {
+        "value_as_concept_id": {
+          "id": 45882470,
+          "name": "Not applicable"
+        },
+        "qualifier_concept_id": {
+          "id": 1989833,
+          "name": "Admitting diagnosis"
+        },
+        "value_source_value": "Not Applicable"
+      }
+    },
+    {
+      "value": "unknown",
+      "write": {
+        "value_as_concept_id": {
+          "id": 45877986,
+          "name": "Unknown"
+        },
+        "qualifier_concept_id": {
+          "id": 1989833,
+          "name": "Admitting diagnosis"
+        },
+        "value_source_value": "unknown"
+      }
+    }
+  ],
+  "links": [],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "manual_approval": true,
+  "note": "AMP-RA/SLE participant disease status (ARK 'diagnosis' attribute; value set from ark.all_attributes.csv). Uniform record: observation_concept_id 4234469 'Diagnosis'; the disease is value_as_concept_id. 'control' carries qualifier_concept_id 44804027 'Control group' (no disease value). RA/SLE/vitiligo resolve to curated_concept; the other autoimmune values (OA, Sjogren's, cutaneous/discoid lupus, lupus nephritis, dermatomyositis, psoriasis, psoriatic arthritis, scleroderma, At-Risk RA) are NOT in curated_concept and are preserved as value_as_string/value_source_value pending standard concepts. Subject-grain: one record per participant, anchored to the earliest (baseline) visit. Non-control values carry qualifier 1989833 'Admitting diagnosis'; 'control' carries 44804027 'Control group' + 45884153 'Normal'."
+}

@@ -1,7 +1,10 @@
 {
   "variable": "upd131_body_bradykinesia",
+  "cde_registry_label": "upd131_body_bradykinesia",
+  "harmonized_with": ["upd2314_body_bradykinesia"],
   "cde_id": "445",
-  "means": "UPDRS - Motor Examination: Body Bradykinesia and Hypokinesia (UPD131)",
+  "definition": "UPDRS - Motor Examination: Body Bradykinesia and Hypokinesia (UPD131)",
+  "source_file": "UPDRS_dictionary.csv",
   "program": "AMP-PD",
   "grain": "visit",
   "reads_as": {
@@ -29,7 +32,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map",
     "visit_occurrence_id": "cdm.visit_occurrence"

@@ -1,7 +1,10 @@
 {
   "variable": "upd2109_pat_quest_pain_and_other_sensations",
+  "cde_registry_label": "upd2109_pat_quest_pain_and_other_sensations",
+  "harmonized_with": ["upd117_sensory_complaints"],
   "cde_id": "466",
-  "means": "1.09 MDS-UPDRS - Pain And Other Sensations (UPD2109)",
+  "definition": "1.09 MDS-UPDRS - Pain And Other Sensations (UPD2109)",
+  "source_file": "MDS_UPDRS_Part_I_dictionary.csv",
   "program": "AMP-PD",
   "grain": "visit",
   "reads_as": {
@@ -85,7 +88,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map",
     "visit_occurrence_id": "cdm.visit_occurrence"

@@ -1,7 +1,10 @@
 {
   "variable": "upd2308b_left_leg_agility",
+  "cde_registry_label": "upd2308b_left_leg_agility",
+  "harmonized_with": ["upd126b_leg_agility_lt"],
   "cde_id": "500",
-  "means": "3.08b MDS-UPDRS - Left Leg Agility (UPD2308B)",
+  "definition": "3.08b MDS-UPDRS - Left Leg Agility (UPD2308B)",
+  "source_file": "MDS_UPDRS_Part_III_dictionary.csv",
   "program": "AMP-PD",
   "grain": "visit",
   "reads_as": {
@@ -85,7 +88,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map",
     "visit_occurrence_id": "cdm.visit_occurrence"

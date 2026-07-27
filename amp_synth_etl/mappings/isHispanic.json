@@ -1,7 +1,9 @@
 {
   "variable": "isHispanic",
+  "cde_registry_label": "isHispanic",
   "cde_id": "35",
-  "means": "Hispanic or Latino ethnicity indicator",
+  "definition": "Hispanic or Latino ethnicity indicator",
+  "source_file": "DiverseCohorts_DataDictionary.pdf",
   "program": "AMP-AD",
   "grain": "subject",
   "reads_as": {
@@ -47,7 +49,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map"
   },

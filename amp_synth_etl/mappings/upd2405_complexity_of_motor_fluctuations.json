@@ -1,7 +1,9 @@
 {
   "variable": "upd2405_complexity_of_motor_fluctuations",
+  "cde_registry_label": "upd2405_complexity_of_motor_fluctuations",
   "cde_id": "523",
-  "means": "4.05 MDS-UPDRS - Complexity Of Motor Fluctuations (UPD2405)",
+  "definition": "4.05 MDS-UPDRS - Complexity Of Motor Fluctuations (UPD2405)",
+  "source_file": "MDS_UPDRS_Part_IV_dictionary.csv",
   "program": "AMP-PD",
   "grain": "visit",
   "reads_as": {
@@ -80,10 +82,9 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map",
     "visit_occurrence_id": "cdm.visit_occurrence"
   },
-  "manual_approval": true
+  "manual_approval": false
 }

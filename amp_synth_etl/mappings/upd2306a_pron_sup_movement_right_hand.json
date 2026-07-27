@@ -1,7 +1,10 @@
 {
   "variable": "upd2306a_pron_sup_movement_right_hand",
+  "cde_registry_label": "upd2306a_pron_sup_movement_right_hand",
+  "harmonized_with": ["upd125a_hand_pronate_supinate_rt"],
   "cde_id": "495",
-  "means": "3.06a MDS-UPDRS - Pronanation-Supination Movement Of Right Hand (UPD2306A)",
+  "definition": "3.06a MDS-UPDRS - Pronanation-Supination Movement Of Right Hand (UPD2306A)",
+  "source_file": "MDS_UPDRS_Part_III_dictionary.csv",
   "program": "AMP-PD",
   "grain": "visit",
   "reads_as": {
@@ -73,7 +76,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map",
     "visit_occurrence_id": "cdm.visit_occurrence"

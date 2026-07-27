@@ -1,7 +1,9 @@
 {
   "variable": "mms101c_month",
+  "cde_registry_label": "mms101c_month",
   "cde_id": "192",
-  "means": "MMSE - What Is The Month Of Year (MMS101C)",
+  "definition": "MMSE - What Is The Month Of Year (MMS101C)",
+  "source_file": "MMSE_dictionary.csv",
   "program": "AMP-PD",
   "grain": "visit",
   "reads_as": {
@@ -46,7 +48,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map",
     "visit_occurrence_id": "cdm.visit_occurrence"

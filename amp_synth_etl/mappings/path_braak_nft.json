@@ -1,7 +1,10 @@
 {
   "variable": "path_braak_nft",
+  "cde_registry_label": "path_braak_nft",
+  "harmonized_with": ["Braak", "braaksc"],
   "cde_id": "282",
-  "means": "BRAAK stage for neurofibrillary tangle pathology",
+  "definition": "BRAAK stage for neurofibrillary tangle pathology",
+  "source_file": "LBD_Cohort_Path_Data_dictionary.csv",
   "program": "AMP-AD / AMP-PD",
   "grain": "subject",
   "reads_as": {
@@ -87,7 +90,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map"
   },

@@ -1,7 +1,10 @@
 {
   "variable": "upd2303a_rigidity_neck",
+  "cde_registry_label": "upd2303a_rigidity_neck",
+  "harmonized_with": ["upd122a_rigidity_neck"],
   "cde_id": "486",
-  "means": "3.03a MDS-UPDRS - Rigidity Neck (UPD2303A)",
+  "definition": "3.03a MDS-UPDRS - Rigidity Neck (UPD2303A)",
+  "source_file": "MDS_UPDRS_Part_III_dictionary.csv",
   "program": "AMP-PD",
   "grain": "visit",
   "reads_as": {
@@ -85,7 +88,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map",
     "visit_occurrence_id": "cdm.visit_occurrence"

@@ -1,7 +1,10 @@
 {
   "variable": "upd2306b_pron_sup_movement_left_hand",
+  "cde_registry_label": "upd2306b_pron_sup_movement_left_hand",
+  "harmonized_with": ["upd125b_hand_pronate_supinate_lt"],
   "cde_id": "496",
-  "means": "3.06b MDS-UPDRS - Pronanation-Supination Movement Of Left Hand (UPD2306B)",
+  "definition": "3.06b MDS-UPDRS - Pronanation-Supination Movement Of Left Hand (UPD2306B)",
+  "source_file": "MDS_UPDRS_Part_III_dictionary.csv",
   "program": "AMP-PD",
   "grain": "visit",
   "reads_as": {
@@ -85,7 +88,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map",
     "visit_occurrence_id": "cdm.visit_occurrence"

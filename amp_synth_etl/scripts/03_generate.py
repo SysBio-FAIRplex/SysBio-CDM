@@ -126,32 +126,6 @@ def load_overrides():
     return fns
 
 
-def load_parked():
-    """(table, column) -> parked. KEYED BY TABLE.
-
-    This was flattened to a bare column-name SET during the person-first rewrite, and it wiped a
-    whole feature. config/parked.tsv parks AMP-PD's PD_Medical_History.diagnosis -- AMP-PD's
-    dictionary declares no value set for it. Flattened, `diagnosis` was parked in EVERY programme,
-    so ARK's own declared 16-value diagnosis vanished; the diagnosis gate then read None, matched no
-    trigger, and nulled VASI/VETI/VIDA/PASI/CDASI on every row. All five appeared in zero output
-    files, and QC still reported zero failures.
-
-    That is the bare-name collision this whole rewrite exists to make impossible -- reintroduced in
-    the loader for the fix that was itself created to solve a bare-name problem. parked.tsv's own
-    header says it exists because "the SysBio dictionary keys `diagnosis` by NAME ALONE".
-    """
-    park = set()
-    p = os.path.join(ROOT, "config", "parked.tsv")
-    if os.path.exists(p):
-        for line in open(p, encoding="utf-8"):
-            if line.startswith("#") or not line.strip():
-                continue
-            parts = line.rstrip("\n").split("\t")
-            if len(parts) >= 2:
-                park.add((parts[0], parts[1]))      # (table, column)
-    return park
-
-
 def load_conditional():
     """ARK: a column belongs to a KIND of specimen. krennSynovitisScore exists for 'synovial
     tissue' and nothing else."""
@@ -170,7 +144,7 @@ def load_conditional():
 
 # ---------------------------------------------------------------- the column model
 
-def build_model(dicts, specs, ark, cmd, parked):
+def build_model(dicts, specs, ark, cmd):
     """programme -> grain -> {column: spec}.
 
     A column's grain is the grain of the dictionary that declares it -- EXCEPT that a column named
@@ -194,9 +168,7 @@ def build_model(dicts, specs, ark, cmd, parked):
         if t in E.DROP_TABLE or c in banned:
             continue
         declares[(p, c)].append(t)
-        # parked == "this DICTIONARY declares no value set for this column". Same shape as a drop,
-        # and resolved HERE, where the table is still known.
-        if c in E.DROP_COLUMN.get(t, []) or (t, c) in parked:
+        if c in E.DROP_COLUMN.get(t, []):
             drops[(p, c)].append(t)
 
     for r in dicts:
@@ -445,9 +417,16 @@ def build_person(pid, prog, model, fns, cond, mono):
                     row[c] = person["subject"].get(c, row.get(c))
             person["specimens"].append(apply_conditionals(row, cond))
 
-    # ---- omics extension: AD specimens, and assays -> files for AD + RA-SLE (cohort-builder graph)
+    # ---- omics extension: specimens + assays -> files (cohort-builder graph). AD/PD/CMD mint their own
+    #      omics specimens (specimens_* -> {prog}_specimen.csv); RA-SLE reuses its ARK biospecimens.
     if prog == "AMP-AD":
         person["ad_specimens"] = omics.specimens_ad(rng_for("ad_specimen", pid), pid, visits)
+        spec_for_omics = person["ad_specimens"]
+    elif prog == "AMP-PD":
+        person["ad_specimens"] = omics.specimens_pd(rng_for("ad_specimen", pid), pid, visits)
+        spec_for_omics = person["ad_specimens"]
+    elif prog == "AMP-CMD":
+        person["ad_specimens"] = omics.specimens_cmd(rng_for("ad_specimen", pid), pid, visits)
         spec_for_omics = person["ad_specimens"]
     elif prog == "AMP-RA-SLE":
         spec_for_omics = [{"specimen_id": int(s["biospecimenID"]),
@@ -516,13 +495,14 @@ OMICS_GRAINS = [
 
 def main():
     specs, ark, cmd = load_specs()
-    parked = load_parked()
-    model, disagreements = build_model(load_dictionaries(), specs, ark, cmd, parked)
+    model, disagreements = build_model(load_dictionaries(), specs, ark, cmd)
     fns, cond = load_overrides(), load_conditional()
 
     os.makedirs(OUT, exist_ok=True)
     for f in os.listdir(OUT):
-        os.remove(os.path.join(OUT, f))
+        p = os.path.join(OUT, f)
+        if os.path.isfile(p):          # only remove files; skip any subdirectories under output/
+            os.remove(p)
 
     # ---- the cohort: every participant built ONCE ---------------------------------------------
     people = []

@@ -1,7 +1,9 @@
 {
   "variable": "caff_drinks_ever_used_regularly",
+  "cde_registry_label": "caff_drinks_ever_used_regularly",
   "cde_id": "145",
-  "means": "Indicator of whether subject has evere used caffeinated drinks",
+  "definition": "Indicator of whether subject has evere used caffeinated drinks",
+  "source_file": "Caffeine_history_dictionary.csv",
   "program": "AMP-PD",
   "grain": "subject",
   "reads_as": {
@@ -56,7 +58,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map"
   },

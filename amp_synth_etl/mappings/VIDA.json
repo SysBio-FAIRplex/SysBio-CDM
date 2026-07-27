@@ -1,7 +1,9 @@
 {
   "variable": "VIDA",
+  "cde_registry_label": "VIDA",
   "cde_id": "558",
-  "means": "Vitiligo Disease Activity Score, a six-point scale that evaluates the activity of vitiligo",
+  "definition": "Vitiligo Disease Activity Score, a six-point scale that evaluates the activity of vitiligo",
+  "source_file": "",
   "program": "AMP-RA-SLE",
   "grain": "visit",
   "reads_as": {
@@ -24,10 +26,9 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map",
     "visit_occurrence_id": "cdm.visit_occurrence"
   },
-  "manual_approval": true
+  "manual_approval": false
 }

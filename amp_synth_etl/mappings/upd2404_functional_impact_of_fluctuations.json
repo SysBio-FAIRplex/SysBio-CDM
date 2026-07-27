@@ -1,7 +1,9 @@
 {
   "variable": "upd2404_functional_impact_of_fluctuations",
+  "cde_registry_label": "upd2404_functional_impact_of_fluctuations",
   "cde_id": "522",
-  "means": "4.04 MDS-UPDRS - Functional Impact Of Fluctuations (UPD2404)",
+  "definition": "4.04 MDS-UPDRS - Functional Impact Of Fluctuations (UPD2404)",
+  "source_file": "MDS_UPDRS_Part_IV_dictionary.csv",
   "program": "AMP-PD",
   "grain": "visit",
   "reads_as": {
@@ -80,10 +82,9 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map",
     "visit_occurrence_id": "cdm.visit_occurrence"
   },
-  "manual_approval": true
+  "manual_approval": false
 }

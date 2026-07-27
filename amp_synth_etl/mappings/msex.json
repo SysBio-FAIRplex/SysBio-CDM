@@ -1,7 +1,9 @@
 {
   "variable": "msex",
+  "cde_registry_label": "msex",
   "cde_id": "38",
-  "means": "Participant sex",
+  "definition": "Participant sex",
+  "source_file": "ROSMAP_clinical_codebook.pdf",
   "program": "AMP-AD",
   "grain": "subject",
   "reads_as": {
@@ -80,10 +82,9 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map"
   },
   "manual_approval": true,
-  "derivation_rule": "RADC data set 754 (ROSMAP). Self-reported sex, with '1' indicating male sex. Allowable codes: 1=Male; 0=Female."
+  "note": "Extended AMP definition: RADC data set 754 (ROSMAP). Self-reported sex, with '1' indicating male sex. Allowable codes: 1=Male; 0=Female."
 }

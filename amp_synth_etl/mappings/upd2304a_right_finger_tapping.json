@@ -1,7 +1,10 @@
 {
   "variable": "upd2304a_right_finger_tapping",
+  "cde_registry_label": "upd2304a_right_finger_tapping",
+  "harmonized_with": ["upd123a_finger_taps_right"],
   "cde_id": "491",
-  "means": "3.04a MDS-UPDRS - Right Finger Tapping (UPD2304A)",
+  "definition": "3.04a MDS-UPDRS - Right Finger Tapping (UPD2304A)",
+  "source_file": "MDS_UPDRS_Part_III_dictionary.csv",
   "program": "AMP-PD",
   "grain": "visit",
   "reads_as": {
@@ -85,7 +88,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map",
     "visit_occurrence_id": "cdm.visit_occurrence"

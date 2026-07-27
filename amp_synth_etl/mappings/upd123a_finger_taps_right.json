@@ -1,7 +1,10 @@
 {
   "variable": "upd123a_finger_taps_right",
+  "cde_registry_label": "upd123a_finger_taps_right",
+  "harmonized_with": ["upd2304a_right_finger_tapping"],
   "cde_id": "433",
-  "means": "UPDRS - Motor Examination: Finger Taps, Right (UPD123A)",
+  "definition": "UPDRS - Motor Examination: Finger Taps, Right (UPD123A)",
+  "source_file": "UPDRS_dictionary.csv",
   "program": "AMP-PD",
   "grain": "visit",
   "reads_as": {
@@ -29,7 +32,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map",
     "visit_occurrence_id": "cdm.visit_occurrence"

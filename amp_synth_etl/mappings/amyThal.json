@@ -1,7 +1,9 @@
 {
   "variable": "amyThal",
+  "cde_registry_label": "amyThal",
   "cde_id": "11",
-  "means": "Amyloid Thal phase score",
+  "definition": "Amyloid Thal phase score",
+  "source_file": "DiverseCohorts_DataDictionary.pdf",
   "program": "AMP-AD",
   "grain": "subject",
   "reads_as": {
@@ -97,7 +99,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map"
   },

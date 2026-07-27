@@ -1,7 +1,9 @@
 {
   "variable": "mmse",
+  "cde_registry_label": "mmse",
   "cde_id": "210",
-  "means": "Last MMSE",
+  "definition": "Last MMSE",
+  "source_file": "LBD_Cohort_Clinical_Data_dictionary.csv",
   "program": "AMP-PD",
   "grain": "visit",
   "reads_as": {
@@ -33,7 +35,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map",
     "visit_occurrence_id": "cdm.visit_occurrence"

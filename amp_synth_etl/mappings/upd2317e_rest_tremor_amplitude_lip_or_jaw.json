@@ -1,7 +1,9 @@
 {
   "variable": "upd2317e_rest_tremor_amplitude_lip_or_jaw",
+  "cde_registry_label": "upd2317e_rest_tremor_amplitude_lip_or_jaw",
   "cde_id": "515",
-  "means": "3.17e MDS-UPDRS - Rest Tremor Amplitude Lip Or Jaw (UPD2317E)",
+  "definition": "3.17e MDS-UPDRS - Rest Tremor Amplitude Lip Or Jaw (UPD2317E)",
+  "source_file": "MDS_UPDRS_Part_III_dictionary.csv",
   "program": "AMP-PD",
   "grain": "visit",
   "reads_as": {
@@ -61,7 +63,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map",
     "visit_occurrence_id": "cdm.visit_occurrence"

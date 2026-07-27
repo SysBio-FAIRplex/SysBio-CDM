@@ -1,7 +1,9 @@
 {
   "variable": "tobacco_prior_use",
+  "cde_registry_label": "tobacco_prior_use",
   "cde_id": "397",
-  "means": "Indicator of the participant's/subject's past regular tobacco (e.g. cigarettes, cigars, chewing tobacco or pipe) use prior to the past 12 months",
+  "definition": "Indicator of the participant's/subject's past regular tobacco (e.g. cigarettes, cigars, chewing tobacco or pipe) use prior to the past 12 months",
+  "source_file": "Smoking_and_alcohol_history_dictionary.csv",
   "program": "AMP-PD",
   "grain": "subject",
   "reads_as": {
@@ -56,7 +58,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map"
   },

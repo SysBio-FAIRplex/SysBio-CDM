@@ -1,7 +1,9 @@
 {
   "variable": "mms101b_season",
+  "cde_registry_label": "mms101b_season",
   "cde_id": "191",
-  "means": "MMSE - What Is The Season (MMS101B)",
+  "definition": "MMSE - What Is The Season (MMS101B)",
+  "source_file": "MMSE_dictionary.csv",
   "program": "AMP-PD",
   "grain": "visit",
   "reads_as": {
@@ -46,7 +48,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map",
     "visit_occurrence_id": "cdm.visit_occurrence"

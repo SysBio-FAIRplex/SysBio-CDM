@@ -1,7 +1,10 @@
 {
   "variable": "upsit_performed",
+  "cde_registry_label": "upsit_performed",
+  "harmonized_with": ["score_from_booklet_1", "score_from_booklet_2", "score_from_booklet_3", "score_from_booklet_4"],
   "cde_id": "534",
-  "means": "UPSIT Performed Indicator",
+  "definition": "UPSIT Performed Indicator",
+  "source_file": "UPSIT_dictionary.csv",
   "program": "AMP-PD",
   "grain": "visit",
   "reads_as": {
@@ -44,7 +47,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map",
     "visit_occurrence_id": "cdm.visit_occurrence"

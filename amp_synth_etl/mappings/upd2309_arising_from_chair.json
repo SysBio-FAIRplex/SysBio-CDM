@@ -1,7 +1,10 @@
 {
   "variable": "upd2309_arising_from_chair",
+  "cde_registry_label": "upd2309_arising_from_chair",
+  "harmonized_with": ["upd127_arising_from_chair"],
   "cde_id": "501",
-  "means": "3.09 MDS-UPDRS - Arising from Chair (UPD2309)",
+  "definition": "3.09 MDS-UPDRS - Arising from Chair (UPD2309)",
+  "source_file": "MDS_UPDRS_Part_III_dictionary.csv",
   "program": "AMP-PD",
   "grain": "visit",
   "reads_as": {
@@ -85,7 +88,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map",
     "visit_occurrence_id": "cdm.visit_occurrence"

@@ -1,7 +1,9 @@
 {
   "variable": "tobacco_ever_used",
+  "cde_registry_label": "tobacco_ever_used",
   "cde_id": "396",
-  "means": "Indicator of whether subject has ever used tobacco",
+  "definition": "Indicator of whether subject has ever used tobacco",
+  "source_file": "Smoking_and_alcohol_history_dictionary.csv",
   "program": "AMP-PD",
   "grain": "subject",
   "reads_as": {
@@ -56,7 +58,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map"
   },

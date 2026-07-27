@@ -1,7 +1,10 @@
 {
   "variable": "upd2317c_rest_tremor_amp_r_lower_extremity",
+  "cde_registry_label": "upd2317c_rest_tremor_amp_r_lower_extremity",
+  "harmonized_with": ["upd120d_tremor_rest_feet_rt"],
   "cde_id": null,
-  "means": "",
+  "definition": "3.17c MDS-UPDRS - Rest Tremor Amplitude Right Lower Extremity (UPD2317C)",
+  "source_file": "MDS_UPDRS_Part_III_dictionary.csv",
   "program": "",
   "grain": "?",
   "reads_as": {
@@ -62,7 +65,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map"
   },

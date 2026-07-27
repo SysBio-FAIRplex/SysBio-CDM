@@ -1,7 +1,9 @@
 {
   "variable": "race",
+  "cde_registry_label": "race",
   "cde_id": "554",
-  "means": "Race",
+  "definition": "Race",
+  "source_file": "Demographics_dictionary.csv; DiverseCohorts_DataDictionary.pdf",
   "program": "AMP-AD / AMP-CMD / AMP-PD / AMP-RA-SLE",
   "grain": "subject",
   "reads_as": {
@@ -89,7 +91,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map"
   },

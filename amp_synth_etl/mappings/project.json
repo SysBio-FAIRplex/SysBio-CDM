@@ -1,7 +1,9 @@
 {
   "variable": "project",
+  "cde_registry_label": "project",
   "cde_id": "553",
-  "means": "A sub-level attribute of `program` specifying a research initiative working to investigate particular hypotheses.",
+  "definition": "A sub-level attribute of `program` specifying a research initiative working to investigate particular hypotheses.",
+  "source_file": "",
   "program": "AMP-RA-SLE",
   "grain": "subject",
   "reads_as": {
@@ -92,9 +94,8 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map"
   },
-  "manual_approval": true
+  "manual_approval": false
 }

@@ -1,7 +1,9 @@
 {
   "variable": "pd_medication_start_months_after_baseline",
+  "cde_registry_label": "pd_medication_start_months_after_baseline",
   "cde_id": "288",
-  "means": "Number of months after baseline visit at which PD Medication Start occurred; negative values indicate PD Medication Start occurred before baseline",
+  "definition": "Number of months after baseline visit at which PD Medication Start occurred; negative values indicate PD Medication Start occurred before baseline",
+  "source_file": "PD_Medical_History_dictionary.csv",
   "program": "AMP-PD",
   "grain": "subject",
   "reads_as": {
@@ -25,7 +27,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map"
   },

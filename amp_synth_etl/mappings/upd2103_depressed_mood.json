@@ -1,7 +1,10 @@
 {
   "variable": "upd2103_depressed_mood",
+  "cde_registry_label": "upd2103_depressed_mood",
+  "harmonized_with": ["upd103_depression"],
   "cde_id": "460",
-  "means": "1.03 MDS-UPDRS - Depressed Mood (UPD2103)",
+  "definition": "1.03 MDS-UPDRS - Depressed Mood (UPD2103)",
+  "source_file": "MDS_UPDRS_Part_I_dictionary.csv",
   "program": "AMP-PD",
   "grain": "visit",
   "reads_as": {
@@ -85,7 +88,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map",
     "visit_occurrence_id": "cdm.visit_occurrence"

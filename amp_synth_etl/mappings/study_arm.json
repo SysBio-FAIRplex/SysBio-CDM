@@ -1,0 +1,185 @@
+{
+  "variable": "study_arm",
+  "cde_registry_label": "study_arm",
+  "harmonized_with": ["ADoutcome", "adj_primary_dxC", "diagnosis"],
+  "cde_id": "390",
+  "definition": "Cohort (PD, healthy control, subjects with Scans Without Evidence of Dopaminergic Deficit [SWEDD], Prodromal, Genetic Cohort PD, or Genetic Cohort Unaffected) determined by the inclusion/exclusion criteria established in the study protocol. A given participant's cohort does not change over time, even if the participant develops or is later found to have characteristics of another cohort .",
+  "source_file": "Enrollment_dictionary.csv",
+  "program": "AMP-PD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "PD",
+      "Healthy Control",
+      "LBD",
+      "Genetic Cohort Unaffected",
+      "Genetic Cohort PD",
+      "Genetic Registry Unaffected",
+      "Genetic Registry PD",
+      "Disease Control",
+      "SWEDD",
+      "Prodromal",
+      "Unknown"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 4234469,
+      "name": "Diagnosis",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "PD",
+      "write": {
+        "value_as_concept_id": {
+          "id": 381270,
+          "name": "Parkinson's disease"
+        },
+        "qualifier_concept_id": {
+          "id": 1989833,
+          "name": "Admitting diagnosis"
+        },
+        "value_source_value": "PD"
+      }
+    },
+    {
+      "value": "Genetic Cohort PD",
+      "write": {
+        "value_as_concept_id": {
+          "id": 381270,
+          "name": "Parkinson's disease"
+        },
+        "qualifier_concept_id": {
+          "id": 1989833,
+          "name": "Admitting diagnosis"
+        },
+        "value_source_value": "Genetic Cohort PD"
+      }
+    },
+    {
+      "value": "Genetic Registry PD",
+      "write": {
+        "value_as_concept_id": {
+          "id": 381270,
+          "name": "Parkinson's disease"
+        },
+        "qualifier_concept_id": {
+          "id": 1989833,
+          "name": "Admitting diagnosis"
+        },
+        "value_source_value": "Genetic Registry PD"
+      }
+    },
+    {
+      "value": "LBD",
+      "write": {
+        "value_as_concept_id": {
+          "id": 380701,
+          "name": "Diffuse Lewy body disease"
+        },
+        "qualifier_concept_id": {
+          "id": 1989833,
+          "name": "Admitting diagnosis"
+        },
+        "value_source_value": "LBD"
+      }
+    },
+    {
+      "value": "Healthy Control",
+      "write": {
+        "value_as_concept_id": {
+          "id": 45884153,
+          "name": "Normal"
+        },
+        "qualifier_concept_id": {
+          "id": 44804027,
+          "name": "Control group"
+        },
+        "value_source_value": "Healthy Control"
+      }
+    },
+    {
+      "value": "Genetic Cohort Unaffected",
+      "write": {
+        "value_as_concept_id": {
+          "id": 45884153,
+          "name": "Normal"
+        },
+        "qualifier_concept_id": {
+          "id": 44804027,
+          "name": "Control group"
+        },
+        "value_source_value": "Genetic Cohort Unaffected"
+      }
+    },
+    {
+      "value": "Genetic Registry Unaffected",
+      "write": {
+        "value_as_concept_id": {
+          "id": 45884153,
+          "name": "Normal"
+        },
+        "qualifier_concept_id": {
+          "id": 44804027,
+          "name": "Control group"
+        },
+        "value_source_value": "Genetic Registry Unaffected"
+      }
+    },
+    {
+      "value": "Disease Control",
+      "write": {
+        "value_as_string": "Disease Control",
+        "qualifier_concept_id": {
+          "id": 1989833,
+          "name": "Admitting diagnosis"
+        },
+        "value_source_value": "Disease Control"
+      }
+    },
+    {
+      "value": "SWEDD",
+      "write": {
+        "value_as_string": "SWEDD",
+        "qualifier_concept_id": {
+          "id": 1989833,
+          "name": "Admitting diagnosis"
+        },
+        "value_source_value": "SWEDD"
+      }
+    },
+    {
+      "value": "Prodromal",
+      "write": {
+        "value_as_string": "Prodromal",
+        "qualifier_concept_id": {
+          "id": 1989833,
+          "name": "Admitting diagnosis"
+        },
+        "value_source_value": "Prodromal"
+      }
+    },
+    {
+      "value": "Unknown",
+      "write": {
+        "value_as_string": "Unknown",
+        "qualifier_concept_id": {
+          "id": 1989833,
+          "name": "Admitting diagnosis"
+        },
+        "value_source_value": "Unknown"
+      }
+    }
+  ],
+  "links": [],
+  "derived_from": [],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "manual_approval": true,
+  "note": "AMP-PD cohort/disease status from Enrollment.study_arm (value set now generated; was parked). Uniform record: observation_concept_id 4234469 'Diagnosis'; disease -> value_as_concept_id, unaffected arms -> qualifier 44804027 'Control group'. PENDING (manual_approval left false): (1) Disease Control is DROPPED to a value_as_string placeholder pending refinement - its real disease (PSP/MSA/Essential Tremor/CBD/...) lives in PD_Medical_History.diagnosis, which is not generated yet; (2) per your note, the control arms may also want a positive 'healthy' value concept alongside the qualifier, not yet supplied; (3) SWEDD/Prodromal are neither case nor control (string only). Non-control arms carry qualifier 1989833 'Admitting diagnosis' (status at study entry); the three unaffected arms carry 44804027 'Control group'. — Prior definition: Cohort (PD, healthy control, SWEDD, Prodromal, Genetic Cohort/Registry PD or Unaffected, LBD, Disease Control) determined by the study protocol inclusion/exclusion criteria. A participant's cohort does not change over time."
+}

@@ -1,7 +1,9 @@
 {
   "variable": "PASI",
+  "cde_registry_label": "PASI",
   "cde_id": "551",
-  "means": "Psoriasis Area and Severity Index, is a measurement of the discoloration, thickness, scaling, and coverage of psoriasis plaques.",
+  "definition": "Psoriasis Area and Severity Index, is a measurement of the discoloration, thickness, scaling, and coverage of psoriasis plaques.",
+  "source_file": "",
   "program": "AMP-RA-SLE",
   "grain": "visit",
   "reads_as": {
@@ -29,7 +31,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map",
     "visit_occurrence_id": "cdm.visit_occurrence"

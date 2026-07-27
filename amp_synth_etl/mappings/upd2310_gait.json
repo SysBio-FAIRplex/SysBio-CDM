@@ -1,7 +1,10 @@
 {
   "variable": "upd2310_gait",
+  "cde_registry_label": "upd2310_gait",
+  "harmonized_with": ["upd129_gait"],
   "cde_id": "502",
-  "means": "3.10 MDS-UPDRS - Gait (UPD2310)",
+  "definition": "3.10 MDS-UPDRS - Gait (UPD2310)",
+  "source_file": "MDS_UPDRS_Part_III_dictionary.csv",
   "program": "AMP-PD",
   "grain": "visit",
   "reads_as": {
@@ -85,7 +88,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map",
     "visit_occurrence_id": "cdm.visit_occurrence"

@@ -1,7 +1,10 @@
 {
   "variable": "upd122c_rigidity_up_extrem_lt",
+  "cde_registry_label": "upd122c_rigidity_up_extrem_lt",
+  "harmonized_with": ["upd2303c_rigidity_left_upper_extremity"],
   "cde_id": "430",
-  "means": "UPDRS - Motor Examination: Rigidity Upper Extremity, Left (UPD122C)",
+  "definition": "UPDRS - Motor Examination: Rigidity Upper Extremity, Left (UPD122C)",
+  "source_file": "UPDRS_dictionary.csv",
   "program": "AMP-PD",
   "grain": "visit",
   "reads_as": {
@@ -29,7 +32,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map",
     "visit_occurrence_id": "cdm.visit_occurrence"

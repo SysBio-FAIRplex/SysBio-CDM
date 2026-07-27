@@ -85,6 +85,7 @@ AMP-PD	Enrollment.csv	pdrd/Enrollment_dictionary.csv	visit_name	key	visit
 AMP-PD	Enrollment.csv	pdrd/Enrollment_dictionary.csv	visit_month	key	visit
 AMP-PD	Enrollment.csv	pdrd/Enrollment_dictionary.csv	enrollment_months_after_baseline	data	visit
 AMP-PD	Enrollment.csv	pdrd/Enrollment_dictionary.csv	informed_consent_months_after_baseline	data	visit
+AMP-PD	Enrollment.csv	pdrd/Enrollment_dictionary.csv	study_arm	data	visit
 AMP-PD	Epworth_Sleepiness_Scale.csv	pdrd/Epworth_Sleepiness_Scale_dictionary.csv	participant_id	key	visit
 AMP-PD	Epworth_Sleepiness_Scale.csv	pdrd/Epworth_Sleepiness_Scale_dictionary.csv	GUID	key	visit
 AMP-PD	Epworth_Sleepiness_Scale.csv	pdrd/Epworth_Sleepiness_Scale_dictionary.csv	visit_name	key	visit

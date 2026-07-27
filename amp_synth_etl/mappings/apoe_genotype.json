@@ -1,7 +1,9 @@
 {
   "variable": "apoe_genotype",
+  "cde_registry_label": "apoe_genotype",
   "cde_id": "12",
-  "means": "APOE Genotype",
+  "definition": "APOE Genotype",
+  "source_file": "ROSMAP_clinical_codebook.pdf",
   "program": "AMP-AD",
   "grain": "subject",
   "reads_as": {
@@ -86,10 +88,9 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map"
   },
   "manual_approval": true,
-  "derivation_rule": "RADC data set 754 (ROSMAP). ApoE genotype (Apolipoprotein E genotype). DNA was extracted from PBMCs or brain. Genotyping was performed by Agencourt Bioscience Corporation utilizing high-throughput sequencing of codon 112 (position 3937) and codon 158 (position 4075) of exon 4 of the APOE gene on chromosome 19. Participants were genotyped for APOE alleles by Polymorphic DNA Technologies as part of a collaboration with Allan Roses and Zinfandel. Value coding: 22=E2E2; 23=E2E3; 24=E2E4; 33=E3E3; 34=E3E4; 44=E4E4."
+  "note": "Extended AMP definition: RADC data set 754 (ROSMAP). ApoE genotype (Apolipoprotein E genotype). DNA was extracted from PBMCs or brain. Genotyping was performed by Agencourt Bioscience Corporation utilizing high-throughput sequencing of codon 112 (position 3937) and codon 158 (position 4075) of exon 4 of the APOE gene on chromosome 19. Participants were genotyped for APOE alleles by Polymorphic DNA Technologies as part of a collaboration with Allan Roses and Zinfandel. Value coding: 22=E2E2; 23=E2E3; 24=E2E4; 33=E3E3; 34=E3E4; 44=E4E4."
 }

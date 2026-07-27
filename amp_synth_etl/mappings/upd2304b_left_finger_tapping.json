@@ -1,7 +1,10 @@
 {
   "variable": "upd2304b_left_finger_tapping",
+  "cde_registry_label": "upd2304b_left_finger_tapping",
+  "harmonized_with": ["upd123b_finger_taps_left"],
   "cde_id": "492",
-  "means": "3.04b MDS-UPDRS - Left Finger Tapping (UPD2304B)",
+  "definition": "3.04b MDS-UPDRS - Left Finger Tapping (UPD2304B)",
+  "source_file": "MDS_UPDRS_Part_III_dictionary.csv",
   "program": "AMP-PD",
   "grain": "visit",
   "reads_as": {
@@ -85,7 +88,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map",
     "visit_occurrence_id": "cdm.visit_occurrence"

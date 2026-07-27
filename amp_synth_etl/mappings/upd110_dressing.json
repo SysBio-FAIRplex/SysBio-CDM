@@ -1,7 +1,10 @@
 {
   "variable": "upd110_dressing",
+  "cde_registry_label": "upd110_dressing",
+  "harmonized_with": ["upd2205_dressing"],
   "cde_id": "411",
-  "means": "UPDRS - Activities of Daily Living: Dressing (UPD110)",
+  "definition": "UPDRS - Activities of Daily Living: Dressing (UPD110)",
+  "source_file": "UPDRS_dictionary.csv",
   "program": "AMP-PD",
   "grain": "visit",
   "reads_as": {
@@ -29,7 +32,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map",
     "visit_occurrence_id": "cdm.visit_occurrence"

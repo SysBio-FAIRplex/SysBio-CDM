@@ -1,7 +1,10 @@
 {
   "variable": "upd2301_speech_problems",
+  "cde_registry_label": "upd2301_speech_problems",
+  "harmonized_with": ["upd118_speech", "upd2201_speech"],
   "cde_id": "484",
-  "means": "3.01 MDS-UPDRS - Speech Problems (UPD2301)",
+  "definition": "3.01 MDS-UPDRS - Speech Problems (UPD2301)",
+  "source_file": "MDS_UPDRS_Part_III_dictionary.csv",
   "program": "AMP-PD",
   "grain": "visit",
   "reads_as": {
@@ -85,7 +88,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map",
     "visit_occurrence_id": "cdm.visit_occurrence"

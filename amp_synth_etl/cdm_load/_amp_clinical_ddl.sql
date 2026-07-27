@@ -524,5 +524,6 @@ CREATE TABLE staging.amp_clinical (
   "visit_month" text,
   "visit_name" text,
   "vitiligoType" text,
-  "weightUnits" text
+  "weightUnits" text,
+  "adj_primary_dxC" text
 );

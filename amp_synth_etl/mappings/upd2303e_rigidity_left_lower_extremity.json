@@ -1,7 +1,10 @@
 {
   "variable": "upd2303e_rigidity_left_lower_extremity",
+  "cde_registry_label": "upd2303e_rigidity_left_lower_extremity",
+  "harmonized_with": ["upd122e_rigidity_low_extrem_lt"],
   "cde_id": "490",
-  "means": "3.03e MDS-UPDRS - Rigidity Left Lower Extremity (UPD2303E)",
+  "definition": "3.03e MDS-UPDRS - Rigidity Left Lower Extremity (UPD2303E)",
+  "source_file": "MDS_UPDRS_Part_III_dictionary.csv",
   "program": "AMP-PD",
   "grain": "visit",
   "reads_as": {
@@ -85,7 +88,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map",
     "visit_occurrence_id": "cdm.visit_occurrence"

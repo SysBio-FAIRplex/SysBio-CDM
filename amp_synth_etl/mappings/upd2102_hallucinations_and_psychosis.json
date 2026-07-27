@@ -1,7 +1,10 @@
 {
   "variable": "upd2102_hallucinations_and_psychosis",
+  "cde_registry_label": "upd2102_hallucinations_and_psychosis",
+  "harmonized_with": ["upd102_thought_disorder"],
   "cde_id": "459",
-  "means": "1.02 MDS-UPDRS - Hallucinations and Psychosis (UPD2102)",
+  "definition": "1.02 MDS-UPDRS - Hallucinations and Psychosis (UPD2102)",
+  "source_file": "MDS_UPDRS_Part_I_dictionary.csv",
   "program": "AMP-PD",
   "grain": "visit",
   "reads_as": {
@@ -73,7 +76,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map",
     "visit_occurrence_id": "cdm.visit_occurrence"

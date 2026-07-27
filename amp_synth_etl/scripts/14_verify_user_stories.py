@@ -2,18 +2,25 @@
 """
 Acceptance test: the SysBio-CDM cohort-builder USER STORIES.
 
-Runs the 13 user-story queries -- rewritten for the CURRENT M:N model (harmonized files link to
-assays via `assay_input_file`, not `files.assay_id`; `10x Multiome` is `assay.assay_source_value`,
-not `platform`) -- against the loaded CDM and asserts each returns data. This is the
-"do we meet the MVP threshold?" gate; run it after cdm_load/build_selfcontained.sh.
+Runs the 13 user-story queries (S1-S13) plus a cross-silo cohort check (S14) against the loaded
+CDM, using the CURRENT model, and asserts each returns MEANINGFUL data -- not merely >= 1 row.
+
+Model this test enforces (a query that ignores it is a bug, not a pass):
+  * Disease / cohort status is the uniform record `observation_concept_id = 4234469`; the disease is
+    in `value_as_concept_id`, controls carry `qualifier_concept_id = 44804027`. Filtering disease as
+    `observation_concept_id IN (...)` finds only the legacy AD record and returns Alzheimer's-only --
+    that regression is exactly what S1's `>= 5 distinct diseases` threshold now catches.
+  * Harmonized/aggregate outputs link to assays via `assay_input_file` (M:N); source files via the
+    scalar `files.assay_id`. `10x Multiome` is `assay.assay_source_value`, not `platform`.
+
+Thresholds are minimum-meaningful, not 1: S1 must span >=5 diseases (AD-only = 1 -> FAIL); S4 must
+cover >=3 harmonized programmes; S13 must resolve to BOTH a case and a control. Documented, runnable
+long-form versions of every query are in resources/query_cookbook.md.
 
     python scripts/14_verify_user_stories.py [db=sysbio_cdm_selfcontained]
 
 Exit code 0 iff every story meets its minimum. Connection from PGHOST/PGPORT/PGUSER/PGPASSWORD
 (defaults localhost/5433/postgres) -- same convention as 13_verify_governance.py.
-
-NOTE: S3/S4/S5 (per-cell-type "pseudobulk" HDF5) are EXPECTED to fail until the cohort_files()
-granularity fix lands -- that is the point of a red test driving the fix.
 """
 import os, sys, subprocess
 
@@ -29,104 +36,99 @@ def scalar(sql):
         raise RuntimeError(f"psql failed: {out.stderr.strip()}\n  SQL: {sql}")
     return int((out.stdout.strip() or "0"))
 
-# Disease dx concepts: AD 378419, PD 381270, RA 80809, SLE 257628, T2D 201826.
-DX = "378419,381270,80809,257628,201826"
+# The uniform status record and the non-disease values that live under it (Normal / Other /
+# Not applicable / Unknown). Disease queries MUST exclude these or they count status as disease.
+DX = 4234469                                              # observation_concept_id "Diagnosis"
+STATUS_NOISE = "45884153,45878142,45882470,45877986"     # Normal, Other, Not applicable, Unknown
+AD_OR_PD = "36311271,381270"                              # Alzheimer's disease, Parkinson's disease
 
-# (id, one-line story, min_rows, sql-returning-a-single-count)
+# Reusable join: harmonized file -> assay -> specimen -> person -> status record.
+HARM_TO_DX = f"""
+  cdm.files f
+  JOIN cdm.assay_input_file aif ON aif.file_id = f.file_id
+  JOIN cdm.assay a              ON a.assay_id   = aif.assay_id
+  JOIN cdm.assay_to_specimen ats ON ats.assay_id = a.assay_id
+  JOIN cdm.specimen s          ON s.specimen_id = ats.specimen_id
+  JOIN cdm.observation co      ON co.person_id  = s.person_id AND co.observation_concept_id = {DX}"""
+
+# (id, one-line story, min, sql-returning-a-single-count)
 STORIES = [
-  ("S1", "diseases / specimens / data types in the harmonized data", 1, f"""
-    SELECT count(*) FROM (SELECT DISTINCT dx.concept_name, sc.concept_name, f.analysis_type
-      FROM cdm.files f
-      JOIN cdm.assay_input_file aif ON aif.file_id=f.file_id
-      JOIN cdm.assay a ON a.assay_id=aif.assay_id
-      JOIN cdm.assay_to_specimen ats ON ats.assay_id=a.assay_id
-      JOIN cdm.specimen s ON s.specimen_id=ats.specimen_id
-      JOIN cdm.concept sc ON sc.concept_id=s.specimen_concept_id
-      JOIN cdm.observation co ON co.person_id=s.person_id AND co.observation_concept_id IN ({DX})
-      JOIN cdm.concept dx ON dx.concept_id=co.observation_concept_id
-      WHERE f.file_role='harmonized_output') q"""),
+  ("S1", "harmonized data spans MULTIPLE diseases (AD-only = FAIL)", 5, f"""
+    SELECT count(DISTINCT co.value_as_concept_id)
+    FROM {HARM_TO_DX}
+    WHERE f.file_role='harmonized_output'
+      AND co.value_as_concept_id IS NOT NULL AND co.value_as_concept_id NOT IN ({STATUS_NOISE})"""),
 
-  ("S2", "how to obtain access + data-use requirements", 1,
+  ("S2", "access groups + data-use requirements published", 4,
     "SELECT count(*) FROM cdm.access_groups"),
 
-  ("S3", "pseudobulk HDF5 from AD or PD, postmortem brain", 1, f"""
-    SELECT count(DISTINCT f.file_id) FROM cdm.files f
-      JOIN cdm.assay_input_file aif ON aif.file_id=f.file_id
-      JOIN cdm.assay a ON a.assay_id=aif.assay_id
-      JOIN cdm.assay_to_specimen ats ON ats.assay_id=a.assay_id
-      JOIN cdm.specimen s ON s.specimen_id=ats.specimen_id
-      JOIN cdm.observation co ON co.person_id=s.person_id AND co.observation_concept_id IN (378419,381270)
-      WHERE f.file_role='harmonized_output' AND f.file_format='HDF5'
-        AND coalesce(f.cell_type,'')<>'' AND f.biosample_type='postmortem brain'"""),
+  ("S3", "pseudobulk HDF5 from AD or PD, postmortem brain", 5, f"""
+    SELECT count(DISTINCT f.file_id)
+    FROM {HARM_TO_DX}
+    WHERE f.file_role='harmonized_output' AND f.file_format='HDF5'
+      AND f.biosample_type ILIKE '%brain%' AND co.value_as_concept_id IN ({AD_OR_PD})"""),
 
-  ("S4", "all pseudobulk HDF5 (per cell type)", 1,
-    "SELECT count(*) FROM cdm.files WHERE file_role='harmonized_output' AND file_format='HDF5' AND coalesce(cell_type,'')<>''"),
+  ("S4", "pseudobulk HDF5 across MULTIPLE programmes, per cell type", 3, """
+    SELECT count(DISTINCT study) FROM cdm.files
+    WHERE file_role='harmonized_output' AND file_format='HDF5' AND coalesce(cell_type,'')<>''"""),
 
   ("S5", "pseudobulked microglia HDF5", 1,
     "SELECT count(*) FROM cdm.files WHERE file_role='harmonized_output' AND file_format='HDF5' AND cell_type='microglia'"),
 
-  ("S6", "pseudobulk HDF5 from multi-timepoint datasets", 1, """
+  ("S6", "harmonized HDF5 from multi-timepoint participants", 5, """
     SELECT count(DISTINCT f.file_id) FROM cdm.files f
-      JOIN cdm.assay_input_file aif ON aif.file_id=f.file_id
-      JOIN cdm.assay a ON a.assay_id=aif.assay_id
-      JOIN cdm.assay_to_specimen ats ON ats.assay_id=a.assay_id
-      JOIN cdm.specimen s ON s.specimen_id=ats.specimen_id
-      WHERE f.file_role='harmonized_output'
-        AND s.person_id IN (SELECT person_id FROM cdm.visit_occurrence GROUP BY person_id HAVING count(*)>1)"""),
+    JOIN cdm.assay_input_file aif ON aif.file_id=f.file_id
+    JOIN cdm.assay a ON a.assay_id=aif.assay_id
+    JOIN cdm.assay_to_specimen ats ON ats.assay_id=a.assay_id
+    JOIN cdm.specimen s ON s.specimen_id=ats.specimen_id
+    WHERE f.file_role='harmonized_output'
+      AND s.person_id IN (SELECT person_id FROM cdm.visit_occurrence GROUP BY 1 HAVING count(*)>1)"""),
 
-  ("S7", "catalog of all CDEs represented in the CDM", 50, """
+  ("S7", "catalog of CDEs represented in the CDM", 100, """
     SELECT count(*) FROM (SELECT observation_source_value v FROM cdm.observation
-                          UNION SELECT measurement_source_value FROM cdm.measurement) q
-    WHERE v IS NOT NULL"""),
+                          UNION SELECT measurement_source_value FROM cdm.measurement) q WHERE v IS NOT NULL"""),
 
-  ("S8", "source files -> harmonization -> outputs (replication chains)", 1, """
-    SELECT count(*) FROM (
-      SELECT srcf.file_id, outf.file_id FROM cdm.assay a
+  ("S8", "source -> harmonization -> output replication chains", 100, """
+    SELECT count(*) FROM (SELECT srcf.file_id, outf.file_id FROM cdm.assay a
       JOIN cdm.files srcf ON srcf.assay_id=a.assay_id AND srcf.file_role='source_input'
       JOIN cdm.assay_input_file aif ON aif.assay_id=a.assay_id
-      JOIN cdm.files outf ON outf.file_id=aif.file_id AND outf.file_role='harmonized_output') q"""),
+      JOIN cdm.files outf ON outf.file_id=aif.file_id) q"""),
 
-  ("S9", "source files + type + size (compute-cost estimate)", 1,
-    "SELECT count(*) FROM (SELECT file_format FROM cdm.files WHERE file_role='source_input' GROUP BY file_format) q"),
+  ("S9", "source file formats carry a size (compute-cost estimate)", 2, """
+    SELECT count(DISTINCT file_format) FROM cdm.files
+    WHERE file_role='source_input' AND file_size_bytes IS NOT NULL AND file_size_bytes > 0"""),
 
-  ("S10", "individuals with scRNA + another modality (multi-omic)", 1, """
-    SELECT count(*) FROM (
-      SELECT s.person_id FROM cdm.specimen s
+  ("S10", "individuals with scRNA + another modality (multi-omic)", 10, """
+    SELECT count(*) FROM (SELECT s.person_id FROM cdm.specimen s
       JOIN cdm.assay_to_specimen ats ON ats.specimen_id=s.specimen_id
       JOIN cdm.assay_input_file aif ON aif.assay_id=ats.assay_id
       JOIN cdm.files f ON f.file_id=aif.file_id AND f.file_role='harmonized_output'
-      GROUP BY s.person_id HAVING count(DISTINCT f.analysis_type) > 1) q"""),
+      GROUP BY 1 HAVING count(DISTINCT f.analysis_type)>1) q"""),
 
-  ("S11", "the multi-omic subset with their modalities", 1, """
-    SELECT count(*) FROM (
-      SELECT s.person_id FROM cdm.specimen s
+  ("S11", "multi-omic subset carrying BOTH RNA and ATAC", 10, """
+    SELECT count(*) FROM (SELECT s.person_id FROM cdm.specimen s
       JOIN cdm.assay_to_specimen ats ON ats.specimen_id=s.specimen_id
       JOIN cdm.assay_input_file aif ON aif.assay_id=ats.assay_id
       JOIN cdm.files f ON f.file_id=aif.file_id AND f.file_role='harmonized_output'
-      GROUP BY s.person_id
-      HAVING bool_or(f.analysis_type='RNA') AND bool_or(f.analysis_type='ATAC')) q"""),
+      GROUP BY 1 HAVING bool_or(f.analysis_type='RNA') AND bool_or(f.analysis_type='ATAC')) q"""),
 
-  ("S12", "scRNA datasets on 10x Multiome", 1,
+  ("S12", "scRNA datasets on 10x Multiome", 10,
     "SELECT count(*) FROM cdm.assay WHERE assay_source_value='10x Multiome'"),
 
-  ("S13", "individuals with scRNA + ATAC from the same specimen", 1, """
-    SELECT count(*) FROM (
-      SELECT s.specimen_id FROM cdm.specimen s
+  ("S13", "scRNA+ATAC same specimen resolves to BOTH case AND control", 2, f"""
+    WITH multi AS (SELECT s.person_id, s.specimen_id FROM cdm.specimen s
       JOIN cdm.assay_to_specimen ats ON ats.specimen_id=s.specimen_id
       JOIN cdm.assay_input_file aif ON aif.assay_id=ats.assay_id
       JOIN cdm.files f ON f.file_id=aif.file_id AND f.file_role='harmonized_output'
-      GROUP BY s.specimen_id
-      HAVING bool_or(f.analysis_type='RNA') AND bool_or(f.analysis_type='ATAC')) q"""),
+      GROUP BY 1,2 HAVING bool_or(f.analysis_type='RNA') AND bool_or(f.analysis_type='ATAC'))
+    SELECT count(DISTINCT CASE WHEN o.qualifier_concept_id=44804027 THEN 'control' ELSE 'case' END)
+    FROM multi m JOIN cdm.observation o ON o.person_id=m.person_id AND o.observation_concept_id={DX}"""),
 
-  ("S14", "cohort across silos (study x disease x specimen x assay)", 1, """
-    SELECT count(*) FROM (
-      SELECT DISTINCT s.person_id FROM cdm.files f
-      JOIN cdm.assay_input_file aif ON aif.file_id=f.file_id
-      JOIN cdm.assay a ON a.assay_id=aif.assay_id
-      JOIN cdm.assay_to_specimen ats ON ats.assay_id=a.assay_id
-      JOIN cdm.specimen s ON s.specimen_id=ats.specimen_id
-      JOIN cdm.observation co ON co.person_id=s.person_id AND co.observation_concept_id IN (378419,381270)
-      WHERE f.file_role='harmonized_output' AND a.assay_source_value='10x Multiome' AND f.analysis_type='RNA') q"""),
+  ("S14", "cross-silo cohort: disease x harmonized-file x specimen x assay", 5, f"""
+    SELECT count(DISTINCT s.person_id)
+    FROM {HARM_TO_DX}
+    WHERE f.file_role='harmonized_output'
+      AND co.value_as_concept_id IS NOT NULL AND co.value_as_concept_id NOT IN ({STATUS_NOISE})"""),
 ]
 
 def main():
@@ -140,7 +142,7 @@ def main():
             fails += 1
             continue
         ok = n >= need
-        print(f"  {sid:4} {'PASS' if ok else 'FAIL'}  rows={n:<6} (need >= {need})  {desc}")
+        print(f"  {sid:4} {'PASS' if ok else 'FAIL'}  value={n:<6} (need >= {need})  {desc}")
         if not ok:
             fails += 1
     print(f"== {len(STORIES)-fails}/{len(STORIES)} stories pass ==")

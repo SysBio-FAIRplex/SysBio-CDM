@@ -1,7 +1,9 @@
 {
   "variable": "alcohol_ever_used",
+  "cde_registry_label": "alcohol_ever_used",
   "cde_id": "131",
-  "means": "Indicator of whether subject has ever used alcohol",
+  "definition": "Indicator of whether subject has ever used alcohol",
+  "source_file": "Smoking_and_alcohol_history_dictionary.csv",
   "program": "AMP-PD",
   "grain": "subject",
   "reads_as": {
@@ -56,7 +58,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map"
   },

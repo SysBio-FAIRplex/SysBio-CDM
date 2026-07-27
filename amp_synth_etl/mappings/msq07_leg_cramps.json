@@ -1,7 +1,9 @@
 {
   "variable": "msq07_leg_cramps",
+  "cde_registry_label": "msq07_leg_cramps",
   "cde_id": "268",
-  "means": "MSQ Leg Cramps Q7",
+  "definition": "MSQ Leg Cramps Q7",
+  "source_file": "REM_Sleep_Behavior_Disorder_Questionnaire_Mayo_dictionary.csv",
   "program": "AMP-PD",
   "grain": "visit",
   "reads_as": {
@@ -44,7 +46,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map",
     "visit_occurrence_id": "cdm.visit_occurrence"

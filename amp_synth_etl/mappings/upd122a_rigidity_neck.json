@@ -1,7 +1,10 @@
 {
   "variable": "upd122a_rigidity_neck",
+  "cde_registry_label": "upd122a_rigidity_neck",
+  "harmonized_with": ["upd2303a_rigidity_neck"],
   "cde_id": "428",
-  "means": "UPDRS - Motor Examination: Rigidity Neck (UPD122A)",
+  "definition": "UPDRS - Motor Examination: Rigidity Neck (UPD122A)",
+  "source_file": "UPDRS_dictionary.csv",
   "program": "AMP-PD",
   "grain": "visit",
   "reads_as": {
@@ -29,7 +32,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map",
     "visit_occurrence_id": "cdm.visit_occurrence"

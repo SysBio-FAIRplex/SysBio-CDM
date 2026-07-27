@@ -1,7 +1,10 @@
 {
   "variable": "upd2213_freezing",
+  "cde_registry_label": "upd2213_freezing",
+  "harmonized_with": ["upd114_freezing_walking", "upd2311_freezing_of_gait"],
   "cde_id": "483",
-  "means": "2.13 MDS-UPDRS - Freezing (UPD2213)",
+  "definition": "2.13 MDS-UPDRS - Freezing (UPD2213)",
+  "source_file": "MDS_UPDRS_Part_II_dictionary.csv",
   "program": "AMP-PD",
   "grain": "visit",
   "reads_as": {
@@ -85,7 +88,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map",
     "visit_occurrence_id": "cdm.visit_occurrence"

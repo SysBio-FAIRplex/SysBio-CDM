@@ -1,7 +1,10 @@
 {
   "variable": "upd112_turning_in_bed",
+  "cde_registry_label": "upd112_turning_in_bed",
+  "harmonized_with": ["upd2209_turning_in_bed"],
   "cde_id": "413",
-  "means": "UPDRS - Activities of Daily Living: Turning in Bed and Adjusting Bed Clothes (UPD112)",
+  "definition": "UPDRS - Activities of Daily Living: Turning in Bed and Adjusting Bed Clothes (UPD112)",
+  "source_file": "UPDRS_dictionary.csv",
   "program": "AMP-PD",
   "grain": "visit",
   "reads_as": {
@@ -29,7 +32,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map",
     "visit_occurrence_id": "cdm.visit_occurrence"

@@ -1,7 +1,9 @@
 {
   "variable": "VETI",
+  "cde_registry_label": "VETI",
   "cde_id": "557",
-  "means": "Vitiligo Extent Tensity Index measures the extent of vitiligo by a numerical score and combines analysis of extensity and severity of vitiligo to produce a constant and reproducible number.",
+  "definition": "Vitiligo Extent Tensity Index measures the extent of vitiligo by a numerical score and combines analysis of extensity and severity of vitiligo to produce a constant and reproducible number.",
+  "source_file": "",
   "program": "AMP-RA-SLE",
   "grain": "visit",
   "reads_as": {
@@ -24,11 +26,10 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map",
     "visit_occurrence_id": "cdm.visit_occurrence"
   },
-  "manual_approval": true,
+  "manual_approval": false,
   "note": "decimals present in loaded value_as_number -> confirm integer vs float"
 }

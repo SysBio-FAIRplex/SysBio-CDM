@@ -1,7 +1,10 @@
 {
   "variable": "upd2406_painful_off_state_dystonia",
+  "cde_registry_label": "upd2406_painful_off_state_dystonia",
+  "harmonized_with": ["upd135_dyskinesias_dystonia"],
   "cde_id": "524",
-  "means": "4.06 MDS-UPDRS - Painful Off-State Dystonia (UPD2406)",
+  "definition": "4.06 MDS-UPDRS - Painful Off-State Dystonia (UPD2406)",
+  "source_file": "MDS_UPDRS_Part_IV_dictionary.csv",
   "program": "AMP-PD",
   "grain": "visit",
   "reads_as": {
@@ -85,7 +88,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map",
     "visit_occurrence_id": "cdm.visit_occurrence"

@@ -1,7 +1,9 @@
 {
   "variable": "age_at_baseline",
+  "cde_registry_label": "age_at_baseline",
   "cde_id": "124",
-  "means": "Age At Baseline",
+  "definition": "Age At Baseline",
+  "source_file": "Demographics_dictionary.csv",
   "program": "AMP-PD",
   "grain": "subject",
   "reads_as": {
@@ -29,7 +31,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map"
   },

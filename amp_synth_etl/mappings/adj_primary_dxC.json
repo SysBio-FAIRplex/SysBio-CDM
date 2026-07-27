@@ -1,0 +1,84 @@
+{
+  "variable": "adj_primary_dxC",
+  "cde_registry_label": "kidney_adjud_primary_dx",
+  "harmonized_with": ["ADoutcome", "diagnosis", "study_arm"],
+  "cde_id": "561",
+  "definition": "Adjudicated primary diagnosis",
+  "source_file": "",
+  "program": "AMP-CMD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "Diabetic Kidney Disease",
+      "Hypertensive Kidney Disease",
+      "Acute Tubular Injury",
+      "Acute Interstitial Nephritis",
+      "Other",
+      "Cannot be determined"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 4234469,
+      "name": "Diagnosis",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "Diabetic Kidney Disease",
+      "write": {
+        "value_as_concept_id": {"id": 45883355, "name": "Diabetic Kidney Disease"},
+        "qualifier_concept_id": {"id": 1989833, "name": "Admitting diagnosis"},
+        "value_source_value": "Diabetic Kidney Disease"
+      }
+    },
+    {
+      "value": "Hypertensive Kidney Disease",
+      "write": {
+        "value_as_concept_id": {"id": 201313, "name": "Hypertensive renal disease"},
+        "qualifier_concept_id": {"id": 1989833, "name": "Admitting diagnosis"},
+        "value_source_value": "Hypertensive Kidney Disease"
+      }
+    },
+    {
+      "value": "Acute Tubular Injury",
+      "write": {
+        "value_as_string": "Acute Tubular Injury",
+        "qualifier_concept_id": {"id": 1989833, "name": "Admitting diagnosis"},
+        "value_source_value": "Acute Tubular Injury"
+      }
+    },
+    {
+      "value": "Acute Interstitial Nephritis",
+      "write": {
+        "value_as_concept_id": {"id": 4102631, "name": "Acute tubulointerstitial nephritis"},
+        "qualifier_concept_id": {"id": 1989833, "name": "Admitting diagnosis"},
+        "value_source_value": "Acute Interstitial Nephritis"
+      }
+    },
+    {
+      "value": "Other",
+      "write": {
+        "value_as_concept_id": {"id": 45878142, "name": "Other"},
+        "value_source_value": "Other"
+      }
+    },
+    {
+      "value": "Cannot be determined",
+      "write": {
+        "value_as_concept_id": {"id": 45877986, "name": "Unknown"},
+        "value_source_value": "Cannot be determined"
+      }
+    }
+  ],
+  "links": [],
+  "derived_from": [],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "manual_approval": false,
+  "note": "DISABLED (manual_approval=false): AMP-CMD has NO real kidney-disease data to base this on. The CMDGA donor.tsv/biosample.tsv are schema TEMPLATES (field definitions, zero donors), and adj_primary_dxC values come only from cmd_value_set_schema.json (a list of allowed values) — there is no participant-level kidney diagnosis anywhere. The ONLY real CMD data is a SEPARATE dataset: the fnih hypothalamus single-cell atlas (Tadross et al., Nature 2024; 11 donors, all disease=normal / Reference) — a normal-brain reference map, not kidney patients. The two datasets share no participants, so classifying CMD subjects into DKD/HKD/AIN through this map fabricated kidney disease and attached it to normal-brain-reference omics. Re-enable ONLY if real CMD participant-level diagnosis data arrives. Value map kept for that future case: DKD 45883355, HKD 201313 'Hypertensive renal disease', AIN 4102631 'Acute tubulointerstitial nephritis' (value_as_concept_id); Acute Tubular Injury value_as_string; Other 45878142; Cannot be determined 45877986 'Unknown'."
+}

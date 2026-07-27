@@ -1,7 +1,10 @@
 {
   "variable": "upd2212_walking_and_balance",
+  "cde_registry_label": "upd2212_walking_and_balance",
+  "harmonized_with": ["upd115_walking"],
   "cde_id": "482",
-  "means": "2.12 MDS-UPDRS - Walking And Balance (UPD2212)",
+  "definition": "2.12 MDS-UPDRS - Walking And Balance (UPD2212)",
+  "source_file": "MDS_UPDRS_Part_II_dictionary.csv",
   "program": "AMP-PD",
   "grain": "visit",
   "reads_as": {
@@ -85,7 +88,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map",
     "visit_occurrence_id": "cdm.visit_occurrence"

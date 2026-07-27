@@ -1,7 +1,9 @@
 {
   "variable": "cigarettes_per_day_past",
+  "cde_registry_label": "cigarettes_per_day_past",
   "cde_id": "152",
-  "means": "Past smokers: average number of cigarettes smoked daily?",
+  "definition": "Past smokers: average number of cigarettes smoked daily?",
+  "source_file": "Smoking_and_alcohol_history_dictionary.csv",
   "program": "AMP-PD",
   "grain": "visit",
   "reads_as": {
@@ -29,7 +31,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map",
     "visit_occurrence_id": "cdm.visit_occurrence"

@@ -1,7 +1,10 @@
 {
   "variable": "upd2hy_hoehn_and_yahr_stage",
+  "cde_registry_label": "upd2hy_hoehn_and_yahr_stage",
+  "harmonized_with": ["upd143_mod_hoehn_and_yahr_stage"],
   "cde_id": "527",
-  "means": "3.21 MDS-UPDRS - Hoehn And Yahr Stage (UPD2HY)",
+  "definition": "3.21 MDS-UPDRS - Hoehn And Yahr Stage (UPD2HY)",
+  "source_file": "MDS_UPDRS_Part_III_dictionary.csv",
   "program": "AMP-PD",
   "grain": "visit",
   "reads_as": {
@@ -92,7 +95,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map",
     "visit_occurrence_id": "cdm.visit_occurrence"

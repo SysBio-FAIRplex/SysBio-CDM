@@ -1,7 +1,9 @@
 {
   "variable": "path_braak_lb",
+  "cde_registry_label": "path_braak_lb",
   "cde_id": "281",
-  "means": "BRAAK stage for Lewy body pathology",
+  "definition": "BRAAK stage for Lewy body pathology",
+  "source_file": "LBD_Cohort_Path_Data_dictionary.csv",
   "program": "AMP-PD",
   "grain": "subject",
   "reads_as": {
@@ -95,7 +97,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map"
   },

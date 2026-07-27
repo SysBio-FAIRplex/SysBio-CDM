@@ -1,7 +1,9 @@
 {
   "variable": "ethnicity",
+  "cde_registry_label": "ethnicity",
   "cde_id": "173",
-  "means": "Ethnicity",
+  "definition": "Ethnicity",
+  "source_file": "Demographics_dictionary.csv",
   "program": "AMP-AD / AMP-CMD / AMP-PD / AMP-RA-SLE",
   "grain": "subject",
   "reads_as": {
@@ -67,7 +69,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map"
   },

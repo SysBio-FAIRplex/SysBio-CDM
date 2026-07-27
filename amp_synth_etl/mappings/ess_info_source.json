@@ -1,7 +1,10 @@
 {
   "variable": "ess_info_source",
+  "cde_registry_label": "ess_info_source",
+  "harmonized_with": ["rbd_info_source"],
   "cde_id": "171",
-  "means": "ESS - Primary Source Of Information",
+  "definition": "ESS - Primary Source Of Information",
+  "source_file": "Epworth_Sleepiness_Scale_dictionary.csv",
   "program": "AMP-PD",
   "grain": "visit",
   "reads_as": {
@@ -44,7 +47,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map",
     "visit_occurrence_id": "cdm.visit_occurrence"

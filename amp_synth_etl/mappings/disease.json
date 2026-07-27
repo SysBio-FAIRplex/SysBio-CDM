@@ -1,7 +1,9 @@
 {
   "variable": "disease",
+  "cde_registry_label": "disease_status",
   "cde_id": "82",
-  "means": "Disease or condition diagnosis",
+  "definition": "Disease or condition diagnosis",
+  "source_file": "",
   "program": "AMP-CMD",
   "grain": "subject",
   "reads_as": {
@@ -32,9 +34,9 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map"
   },
-  "manual_approval": true
+  "manual_approval": false,
+  "note": "Disabled (manual_approval=false): 'disease' holds only 'normal' (the fnih single-cell REFERENCE status) for all 42 AMP-CMD subjects and conflicts with the adjudicated kidney diagnosis. CMD cohort membership now comes SOLELY from adj_primary_dxC (mappings/adj_primary_dxC.json) — one field per subject, no conflict. Re-enable only if 'disease' is reconciled with adj_primary_dxC in generation."
 }

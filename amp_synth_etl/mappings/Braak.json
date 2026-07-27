@@ -1,7 +1,10 @@
 {
   "variable": "Braak",
+  "cde_registry_label": "Braak",
+  "harmonized_with": ["braaksc", "path_braak_nft"],
   "cde_id": "13",
-  "means": "Braak stage for neurofibrillary tangle pathology",
+  "definition": "Braak stage for neurofibrillary tangle pathology",
+  "source_file": "DiverseCohorts_DataDictionary.pdf",
   "program": "AMP-AD",
   "grain": "subject",
   "reads_as": {
@@ -118,10 +121,9 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map"
   },
   "manual_approval": true,
-  "derivation_rule": "TYPO IN THE AMP DICTIONARY: the 7th stage is written \"Stave VI\", not \"Stage VI\" (DiverseCohorts_DataDictionary.pdf, confirmed in the PDF text itself). UNRESOLVED: we do not know whether the typo is confined to the dictionary or is also the literal string in the AMP data files. The synthetic data reproduces it verbatim so that an ETL built against the real files does not break on it. Verify against a real AMP-AD extract, then decide whether to normalise. Noted 2026-07-13."
+  "note": "Extended AMP definition: TYPO IN THE AMP DICTIONARY: the 7th stage is written \"Stave VI\", not \"Stage VI\" (DiverseCohorts_DataDictionary.pdf, confirmed in the PDF text itself). UNRESOLVED: we do not know whether the typo is confined to the dictionary or is also the literal string in the AMP data files. The synthetic data reproduces it verbatim so that an ETL built against the real files does not break on it. Verify against a real AMP-AD extract, then decide whether to normalise. Noted 2026-07-13."
 }

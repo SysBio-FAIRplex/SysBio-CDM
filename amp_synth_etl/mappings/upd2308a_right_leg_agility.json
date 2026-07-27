@@ -1,7 +1,10 @@
 {
   "variable": "upd2308a_right_leg_agility",
+  "cde_registry_label": "upd2308a_right_leg_agility",
+  "harmonized_with": ["upd126a_leg_agility_rt"],
   "cde_id": "499",
-  "means": "3.08a MDS-UPDRS - Right Leg Agility (UPD2308A)",
+  "definition": "3.08a MDS-UPDRS - Right Leg Agility (UPD2308A)",
+  "source_file": "MDS_UPDRS_Part_III_dictionary.csv",
   "program": "AMP-PD",
   "grain": "visit",
   "reads_as": {
@@ -85,7 +88,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map",
     "visit_occurrence_id": "cdm.visit_occurrence"

@@ -1,7 +1,10 @@
 {
   "variable": "upd122e_rigidity_low_extrem_lt",
+  "cde_registry_label": "upd122e_rigidity_low_extrem_lt",
+  "harmonized_with": ["upd2303e_rigidity_left_lower_extremity"],
   "cde_id": "432",
-  "means": "UPDRS - Motor Examination: Rigidity Lower Extremity, Left (UPD122E)",
+  "definition": "UPDRS - Motor Examination: Rigidity Lower Extremity, Left (UPD122E)",
+  "source_file": "UPDRS_dictionary.csv",
   "program": "AMP-PD",
   "grain": "visit",
   "reads_as": {
@@ -29,7 +32,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map",
     "visit_occurrence_id": "cdm.visit_occurrence"

@@ -1,7 +1,10 @@
 {
   "variable": "upd2313_posture",
+  "cde_registry_label": "upd2313_posture",
+  "harmonized_with": ["upd128_posture"],
   "cde_id": "505",
-  "means": "3.13 MDS-UPDRS - Posture (UPD2313)",
+  "definition": "3.13 MDS-UPDRS - Posture (UPD2313)",
+  "source_file": "MDS_UPDRS_Part_III_dictionary.csv",
   "program": "AMP-PD",
   "grain": "visit",
   "reads_as": {
@@ -85,7 +88,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map",
     "visit_occurrence_id": "cdm.visit_occurrence"

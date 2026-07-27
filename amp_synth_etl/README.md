@@ -147,7 +147,7 @@ Output is `cdm_load/cdm_load.sql`, applied after `cdm_load/cdm_ddl.sql`.
 ## Layout
 
 ```
-config/      cohort parameters, access groups, parked variables, table overrides
+config/      cohort parameters, access groups, table overrides
 inputs/      AMP program dictionaries (vendored), CDE dictionary, fidelity distributions
 mappings/    one JSON per AMP variable — the ETL logic
 specs/       generated field specs (fixed filenames; table_schemas/ is gitignored)
@@ -176,8 +176,6 @@ Mappings are gated on `manual_approval`. The default run loads approved mappings
 python scripts/10_build_cdm_delivery.py         # approved only (default)
 python scripts/10_build_cdm_delivery.py --all   # every mapping
 ```
-
-Variables listed in `config/parked_variables.tsv` are excluded regardless.
 
 ## Generated vs. committed
 
@@ -217,8 +215,6 @@ concept                1323
 fact_relationship       174
 files (harmonized)       18   (pseudobulk HDF5, per cell type)
 ```
-
-254 of 258 mappings in scope; 4 excluded by `config/parked_variables.tsv`.
 
 ## Known limitations
 

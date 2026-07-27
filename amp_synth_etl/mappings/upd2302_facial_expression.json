@@ -1,7 +1,10 @@
 {
   "variable": "upd2302_facial_expression",
+  "cde_registry_label": "upd2302_facial_expression",
+  "harmonized_with": ["upd119_facial_expression"],
   "cde_id": "485",
-  "means": "3.02 MDS-UPDRS - Facial Expression (UPD2302)",
+  "definition": "3.02 MDS-UPDRS - Facial Expression (UPD2302)",
+  "source_file": "MDS_UPDRS_Part_III_dictionary.csv",
   "program": "AMP-PD",
   "grain": "visit",
   "reads_as": {
@@ -85,7 +88,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map",
     "visit_occurrence_id": "cdm.visit_occurrence"

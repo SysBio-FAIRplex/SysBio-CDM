@@ -1,7 +1,10 @@
 {
   "variable": "upd2403_time_spent_in_the_off_state",
+  "cde_registry_label": "upd2403_time_spent_in_the_off_state",
+  "harmonized_with": ["upd139_clin_fluctu_off_periods"],
   "cde_id": "521",
-  "means": "4.03 MDS-UPDRS - Time Spent In The Off State (UPD2403)",
+  "definition": "4.03 MDS-UPDRS - Time Spent In The Off State (UPD2403)",
+  "source_file": "MDS_UPDRS_Part_IV_dictionary.csv",
   "program": "AMP-PD",
   "grain": "visit",
   "reads_as": {
@@ -85,7 +88,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map",
     "visit_occurrence_id": "cdm.visit_occurrence"

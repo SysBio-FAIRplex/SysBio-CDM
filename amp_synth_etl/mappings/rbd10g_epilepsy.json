@@ -1,7 +1,9 @@
 {
   "variable": "rbd10g_epilepsy",
+  "cde_registry_label": "rbd10g_epilepsy",
   "cde_id": "360",
-  "means": "RBD 10g Epilepsy",
+  "definition": "RBD 10g Epilepsy",
+  "source_file": "REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster_dictionary.csv",
   "program": "AMP-PD",
   "grain": "visit",
   "reads_as": {
@@ -44,7 +46,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map",
     "visit_occurrence_id": "cdm.visit_occurrence"

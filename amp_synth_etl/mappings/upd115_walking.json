@@ -1,7 +1,10 @@
 {
   "variable": "upd115_walking",
+  "cde_registry_label": "upd115_walking",
+  "harmonized_with": ["upd2212_walking_and_balance"],
   "cde_id": "416",
-  "means": "UPDRS - Activities of Daily Living: Walking (UPD115)",
+  "definition": "UPDRS - Activities of Daily Living: Walking (UPD115)",
+  "source_file": "UPDRS_dictionary.csv",
   "program": "AMP-PD",
   "grain": "visit",
   "reads_as": {
@@ -29,7 +32,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map",
     "visit_occurrence_id": "cdm.visit_occurrence"

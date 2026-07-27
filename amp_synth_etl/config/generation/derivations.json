@@ -1,0 +1,92 @@
+{
+  "_what": "Generation-side derivation configuration for the synthetic AMP cohort.",
+  "_status": "NOT WIRED UP. No code reads this file yet. Extracted from mappings/*.json so the mapping files describe only the AMP->CDM load. The derivations it documents are currently hardcoded in scripts/gen/ (see README.md in this directory).",
+  "_extracted_from": "amp_synth_etl/mappings/*.json",
+  "_extracted_on": "2026-07-24",
+  "derivations": {
+    "ADoutcome": {
+      "derived_from": [
+        "Braak",
+        "amyCerad"
+      ],
+      "derivation_rule": "Derived harmonized outcomes based on CERAD neuritic plaque score and Braak stage, or NINCDS-ADRD criteria for Mayo. The following criteria seek to harmonize outcomes between cohorts as closely as possible, with Mayo’s neuropath-based diagnoses (as determined by Mayo specialists) set as the standard to match. These thresholds will also exclude individuals with age-related tauopathies from being classified as AD cases or controls. sh, MSSM, Columbia derived outcome criteria: AD: Braak ≥ 4, CERAD = Frequent or Moderate Control: Braak ≤ 3, CERAD = Sparse or None Other: all other UFL (from Mayo): some patients from UFL were not consistent with other MayoDx criteria (i.e. 8 individuals had Braak < 4 and a mayoDx==AD). These individuals were assigned ‘Other’ criteria in the ADoutcome variable to harmonize more closely with MayoDx criteria."
+    },
+    "Braak": {
+      "derived_from": [],
+      "derivation_rule": "TYPO IN THE AMP DICTIONARY: the 7th stage is written \"Stave VI\", not \"Stage VI\" (DiverseCohorts_DataDictionary.pdf, confirmed in the PDF text itself). UNRESOLVED: we do not know whether the typo is confined to the dictionary or is also the literal string in the AMP data files. The synthetic data reproduces it verbatim so that an ETL built against the real files does not break on it. Verify against a real AMP-AD extract, then decide whether to normalise. Noted 2026-07-13."
+    },
+    "age": {
+      "derived_from": [
+        "visit_month"
+      ]
+    },
+    "age_at_visit": {
+      "derived_from": [
+        "age_death",
+        "visit_month"
+      ],
+      "derivation_rule": "RADC data set 754 (ROSMAP). Age at visit (longitudinal). Calculated by subtracting the date of birth from the date of the visit and dividing the difference by days per year (365.25). The date of the visit is defined as the first valid date in the following hierarchy: (1) cognitive date; (2) clinical evaluation date (neurological exam, med hx, meds); (3) interview date; (4) DCF date (diagnostic classification form); (5) neuropsychologist impression date."
+    },
+    "age_death": {
+      "derived_from": [
+        "age_at_baseline"
+      ],
+      "derivation_rule": "RADC data set 754 (ROSMAP). Age at death. Calculated by subtracting date of birth from date of death and dividing the difference by days per year (365.25). For participants in autopsy cohorts, the exact date of death is known for most participants as it is the day an autopsy was performed. In all cohorts, in addition to annual evaluations, participants are also contacted quarterly to determine vital status and changes in health, and death is occasionally learned of during quarterly contacts."
+    },
+    "age_first_ad_dx": {
+      "derived_from": [
+        "age_at_baseline",
+        "age_death"
+      ],
+      "derivation_rule": "RADC data set 754 (ROSMAP). Age at cycle where first Alzheimer's dementia diagnosis was given. Represents the age at the first cycle where an Alzheimer's dementia diagnosis was rendered. Calculated using the variables 'age at visit' and 'clinical diagnosis summary' (dcfdx value = 4 or 5). This is the best approximation of 'age at onset of Alzheimer's dementia' available, as most participants are seen on a yearly basis. Not available for participants that were demented at baseline cycle."
+    },
+    "alcohol_consumed_years": {
+      "derived_from": [
+        "age_at_baseline"
+      ]
+    },
+    "alcohol_start_age": {
+      "derived_from": [
+        "age_at_baseline"
+      ]
+    },
+    "alcohol_stop_age": {
+      "derived_from": [
+        "age_at_baseline"
+      ]
+    },
+    "amyAny": {
+      "derived_from": [
+        "amyCerad"
+      ]
+    },
+    "apoe_genotype": {
+      "derived_from": [],
+      "derivation_rule": "RADC data set 754 (ROSMAP). ApoE genotype (Apolipoprotein E genotype). DNA was extracted from PBMCs or brain. Genotyping was performed by Agencourt Bioscience Corporation utilizing high-throughput sequencing of codon 112 (position 3937) and codon 158 (position 4075) of exon 4 of the APOE gene on chromosome 19. Participants were genotyped for APOE alleles by Polymorphic DNA Technologies as part of a collaboration with Allan Roses and Zinfandel. Value coding: 22=E2E2; 23=E2E3; 24=E2E4; 33=E3E3; 34=E3E4; 44=E4E4."
+    },
+    "braaksc": {
+      "derived_from": [
+        "Braak"
+      ],
+      "derivation_rule": "RADC data set 754 (ROSMAP). Braak Stage: a semiquantitative measure of severity of neurofibrillary tangle (NFT) pathology. Bielschowsky silver stain was used to visualize NFTs in the frontal, temporal, parietal, entorhinal cortex, and the hippocampus. Braak stages were based upon the distribution and severity of NFT pathology: stages I and II indicate NFTs confined mainly to the entorhinal region of the brain; stages III and IV indicate involvement of limbic regions such as the hippocampus; stages V and VI indicate moderate to severe neocortical involvement. Diagnosis includes algorithm and neuropathologist's opinion. Value coding: 0=0; 1=I; 2=II; 3=III; 4=IV; 5=V; 6=VI."
+    },
+    "ceradsc": {
+      "derived_from": [
+        "amyCerad"
+      ],
+      "derivation_rule": "RADC data set 754 (ROSMAP). CERAD score: a semiquantitative measure of neuritic plaques. A neuropathologic diagnosis was made of no AD, possible AD, probable AD, or definite AD based on semiquantitative estimates of neuritic plaque density as recommended by the Consortium to Establish a Registry for Alzheimer's Disease (CERAD), modified to be implemented without adjustment for age and clinical diagnosis. A CERAD neuropathologic diagnosis of AD required moderate (probable AD) or frequent neuritic plaques (definite AD) in one or more neocortical regions. Diagnosis includes algorithm and neuropathologist's opinion, blinded to age and all clinical data. Value coding: 1=Definite; 2=Probable; 3=Possible; 4=No AD."
+    },
+    "cogdx": {
+      "derived_from": [],
+      "derivation_rule": "RADC data set 754 (ROSMAP). Clinical consensus diagnosis of cognitive status at time of death; physician's overall cognitive diagnostic category. At the time of death, all available clinical data were reviewed by a neurologist with expertise in dementia, and a summary diagnostic opinion was rendered regarding the most likely clinical diagnosis at the time of death. Summary diagnoses were made blinded to all postmortem data. Case conferences including one or more neurologists and a neuropsychologist were used for consensus on selected cases. Value coding: 1=NCI: No cognitive impairment (No impaired domains); 2=MCI: Mild cognitive impairment (One impaired domain) and NO other cause of CI; 3=MCI: Mild cognitive impairment (One impaired domain) AND another cause of CI; 4=AD: Alzheimer's dementia and NO other cause of CI (NINCDS PROB AD); 5=AD: Alzheimer's dementia AND another cause of CI (NINCDS POSS AD); 6=Other dementia: Other primary cause of dementia."
+    },
+    "dcfdx": {
+      "derived_from": [],
+      "derivation_rule": "RADC data set 754 (ROSMAP). Clinical diagnosis of cognitive status (Alzheimer's dementia, other dementia, MCI, or no impairment). A clinical diagnosis of cognitive status is rendered at every assessment based on a three-stage process: computer scoring of cognitive tests, clinical judgment by a neuropsychologist, and diagnostic classification by a clinician. All participants undergo a uniform, structured clinical evaluation including a battery of 19 cognitive tests. Clinical diagnosis of dementia and clinical Alzheimer's dementia are based on NINCDS/ADRDA criteria; the diagnosis of Alzheimer's dementia requires evidence of a meaningful decline in cognitive function relative to a previous level of performance with impairment in memory and at least one other area of cognition. MCI is rendered for persons judged to have cognitive impairment by the neuropsychologist but judged not to meet criteria for dementia by the clinician. Persons diagnosed with MCI or Alzheimer's dementia may also be diagnosed with another condition that contributes to their cognitive impairment (CI). Persons without dementia or MCI are categorized as having no cognitive impairment (NCI). Value coding: 1=NCI: No cognitive impairment; 2=MCI: Mild cognitive impairment, no other condition contributing to CI; 3=MCI+: Mild cognitive impairment AND another condition contributing to CI; 4=AD: Alzheimer's dementia, no other condition contributing to CI (NINCDS/ADRDA Probable AD); 5=AD+: Alzheimer's dementia AND other condition contributing to CI (NINCDS/ADRDA Possible AD); 6=Other dementia: Other primary cause of dementia, no clinical evidence of Alzheimer's dementia. Other forms: _l, _lv, _bl."
+    },
+    "msex": {
+      "derived_from": [],
+      "derivation_rule": "RADC data set 754 (ROSMAP). Self-reported sex, with '1' indicating male sex. Allowable codes: 1=Male; 0=Female."
+    }
+  }
+}

@@ -1,7 +1,10 @@
 {
   "variable": "upd2305b_left_hand_movements",
+  "cde_registry_label": "upd2305b_left_hand_movements",
+  "harmonized_with": ["upd124b_hand_grips_left"],
   "cde_id": "494",
-  "means": "3.05b MDS-UPDRS - Left Hand Movements (UPD2305B)",
+  "definition": "3.05b MDS-UPDRS - Left Hand Movements (UPD2305B)",
+  "source_file": "MDS_UPDRS_Part_III_dictionary.csv",
   "program": "AMP-PD",
   "grain": "visit",
   "reads_as": {
@@ -85,7 +88,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map",
     "visit_occurrence_id": "cdm.visit_occurrence"

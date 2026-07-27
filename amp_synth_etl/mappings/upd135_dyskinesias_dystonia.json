@@ -1,7 +1,10 @@
 {
   "variable": "upd135_dyskinesias_dystonia",
+  "cde_registry_label": "upd135_dyskinesias_dystonia",
+  "harmonized_with": ["upd2406_painful_off_state_dystonia"],
   "cde_id": "449",
-  "means": "UPDRS - Complications of Therapy: Dyskinesias - Presence of Early Morning Dystonia (UPD135)",
+  "definition": "UPDRS - Complications of Therapy: Dyskinesias - Presence of Early Morning Dystonia (UPD135)",
+  "source_file": "UPDRS_dictionary.csv",
   "program": "AMP-PD",
   "grain": "visit",
   "reads_as": {
@@ -29,7 +32,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map",
     "visit_occurrence_id": "cdm.visit_occurrence"

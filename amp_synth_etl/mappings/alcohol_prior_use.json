@@ -1,7 +1,9 @@
 {
   "variable": "alcohol_prior_use",
+  "cde_registry_label": "alcohol_prior_use",
   "cde_id": "133",
-  "means": "Indicator of the participant's/subject's alcohol consumption prior to the past 12 months",
+  "definition": "Indicator of the participant's/subject's alcohol consumption prior to the past 12 months",
+  "source_file": "Smoking_and_alcohol_history_dictionary.csv",
   "program": "AMP-PD",
   "grain": "subject",
   "reads_as": {
@@ -56,7 +58,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map"
   },

@@ -1,7 +1,7 @@
 {
   "_comment": "GENERATION parameters. None of this comes from an AMP dictionary \u2014 a dictionary describes columns, not cohorts.",
   "seed": "amp-synth-2026-07-13",
-  "n_subjects": 500,
+  "n_subjects": 2500,
   "first_id": 100001,
   "visits_per_subject": [
     1,

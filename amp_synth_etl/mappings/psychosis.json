@@ -1,7 +1,9 @@
 {
   "variable": "psychosis",
+  "cde_registry_label": "psychosis",
   "cde_id": "338",
-  "means": "Psychotic thought disorder",
+  "definition": "Psychotic thought disorder",
+  "source_file": "LBD_Cohort_Clinical_Data_dictionary.csv",
   "program": "AMP-PD",
   "grain": "visit",
   "reads_as": {
@@ -56,7 +58,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map",
     "visit_occurrence_id": "cdm.visit_occurrence"

@@ -1,7 +1,10 @@
 {
   "variable": "upd2303b_rigidity_rt_upper_extremity",
+  "cde_registry_label": "upd2303b_rigidity_rt_upper_extremity",
+  "harmonized_with": ["upd122b_rigidity_up_extrem_rt"],
   "cde_id": "487",
-  "means": "3.03b MDS-UPDRS - Rigidity Right Upper Extremity (UPD2303B)",
+  "definition": "3.03b MDS-UPDRS - Rigidity Right Upper Extremity (UPD2303B)",
+  "source_file": "MDS_UPDRS_Part_III_dictionary.csv",
   "program": "AMP-PD",
   "grain": "visit",
   "reads_as": {
@@ -85,7 +88,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map",
     "visit_occurrence_id": "cdm.visit_occurrence"

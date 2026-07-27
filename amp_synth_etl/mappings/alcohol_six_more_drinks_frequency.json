@@ -1,7 +1,9 @@
 {
   "variable": "alcohol_six_more_drinks_frequency",
+  "cde_registry_label": "alcohol_six_more_drinks_frequency",
   "cde_id": "136",
-  "means": "Alcohol consume six or more drinks frequency",
+  "definition": "Alcohol consume six or more drinks frequency",
+  "source_file": "Smoking_and_alcohol_history_dictionary.csv",
   "program": "AMP-PD",
   "grain": "visit",
   "reads_as": {
@@ -92,7 +94,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map",
     "visit_occurrence_id": "cdm.visit_occurrence"

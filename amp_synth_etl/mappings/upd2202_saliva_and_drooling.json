@@ -1,7 +1,10 @@
 {
   "variable": "upd2202_saliva_and_drooling",
+  "cde_registry_label": "upd2202_saliva_and_drooling",
+  "harmonized_with": ["upd106_salivation"],
   "cde_id": "472",
-  "means": "2.02 MDS-UPDRS - Saliva And Drooling (UPD2202)",
+  "definition": "2.02 MDS-UPDRS - Saliva And Drooling (UPD2202)",
+  "source_file": "MDS_UPDRS_Part_II_dictionary.csv",
   "program": "AMP-PD",
   "grain": "visit",
   "reads_as": {
@@ -85,7 +88,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map",
     "visit_occurrence_id": "cdm.visit_occurrence"

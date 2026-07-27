@@ -1,7 +1,9 @@
 {
   "variable": "alcohol_drinks_day",
+  "cde_registry_label": "alcohol_drinks_day",
   "cde_id": "130",
-  "means": "How many drinks do you have on an average day?",
+  "definition": "How many drinks do you have on an average day?",
+  "source_file": "Smoking_and_alcohol_history_dictionary.csv",
   "program": "AMP-PD",
   "grain": "visit",
   "reads_as": {
@@ -29,7 +31,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map",
     "visit_occurrence_id": "cdm.visit_occurrence"

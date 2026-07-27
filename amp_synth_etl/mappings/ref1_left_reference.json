@@ -1,7 +1,9 @@
 {
   "variable": "ref1_left_reference",
+  "cde_registry_label": "ref1_left_reference",
   "cde_id": "365",
-  "means": "Left Reference",
+  "definition": "Left Reference",
+  "source_file": "DTI_dictionary.csv",
   "program": "AMP-PD",
   "grain": "visit",
   "reads_as": {
@@ -24,11 +26,10 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map",
     "visit_occurrence_id": "cdm.visit_occurrence"
   },
-  "manual_approval": true,
+  "manual_approval": false,
   "note": "decimals present in loaded value_as_number -> confirm integer vs float"
 }

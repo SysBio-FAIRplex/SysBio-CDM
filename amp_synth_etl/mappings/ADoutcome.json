@@ -1,7 +1,9 @@
 {
   "variable": "ADoutcome",
+  "cde_registry_label": "ADoutcome",
   "cde_id": "1",
-  "means": "Alzheimer's Disease clinical outcome or disease progression status post-mortem. Used to classify participants into \"control\", \"AD\", \"Other\"",
+  "definition": "Alzheimer's Disease clinical outcome or disease progression status post-mortem. Used to classify participants into \"control\", \"AD\", \"Other\"",
+  "source_file": "DiverseCohortsOutcomes.pdf; DiverseCohorts_DataDictionary.pdf",
   "program": "AMP-AD",
   "grain": "subject",
   "reads_as": {
@@ -86,13 +88,9 @@
       "mechanism": ""
     }
   ],
-  "derived_from": [
-    "Braak",
-    "amyCerad"
-  ],
   "anchored_to": {
     "person_id": "staging.person_map"
   },
   "manual_approval": true,
-  "derivation_rule": "Derived harmonized outcomes based on CERAD neuritic plaque score and Braak stage, or NINCDS-ADRD criteria for Mayo. The following criteria seek to harmonize outcomes between cohorts as closely as possible, with Mayo’s neuropath-based diagnoses (as determined by Mayo specialists) set as the standard to match. These thresholds will also exclude individuals with age-related tauopathies from being classified as AD cases or controls. sh, MSSM, Columbia derived outcome criteria: AD: Braak ≥ 4, CERAD = Frequent or Moderate Control: Braak ≤ 3, CERAD = Sparse or None Other: all other UFL (from Mayo): some patients from UFL were not consistent with other MayoDx criteria (i.e. 8 individuals had Braak < 4 and a mayoDx==AD). These individuals were assigned ‘Other’ criteria in the ADoutcome variable to harmonize more closely with MayoDx criteria."
+  "note": "Extended AMP definition: Derived harmonized outcomes based on CERAD neuritic plaque score and Braak stage, or NINCDS-ADRD criteria for Mayo. The following criteria seek to harmonize outcomes between cohorts as closely as possible, with Mayo’s neuropath-based diagnoses (as determined by Mayo specialists) set as the standard to match. These thresholds will also exclude individuals with age-related tauopathies from being classified as AD cases or controls. sh, MSSM, Columbia derived outcome criteria: AD: Braak ≥ 4, CERAD = Frequent or Moderate Control: Braak ≤ 3, CERAD = Sparse or None Other: all other UFL (from Mayo): some patients from UFL were not consistent with other MayoDx criteria (i.e. 8 individuals had Braak < 4 and a mayoDx==AD). These individuals were assigned ‘Other’ criteria in the ADoutcome variable to harmonize more closely with MayoDx criteria."
 }

@@ -1,7 +1,10 @@
 {
   "variable": "age",
+  "cde_registry_label": "age",
+  "harmonized_with": ["age_at_visit"],
   "cde_id": "541",
-  "means": "Age at which subject was enrolled in study or age at corresponding visit and data collection event. Confirming that this is supposed to be an integer.",
+  "definition": "Age at which subject was enrolled in study or age at corresponding visit and data collection event. Confirming that this is supposed to be an integer.",
+  "source_file": "",
   "program": "AMP-RA-SLE",
   "grain": "visit",
   "reads_as": {
@@ -39,9 +42,6 @@
       "mechanism": "",
       "note": "related element not loaded in the CDM"
     }
-  ],
-  "derived_from": [
-    "visit_month"
   ],
   "anchored_to": {
     "person_id": "staging.person_map",

@@ -1,7 +1,9 @@
 {
   "variable": "mms101a_year",
+  "cde_registry_label": "mms101a_year",
   "cde_id": "190",
-  "means": "MMSE - What Is The Year (MMS101A)",
+  "definition": "MMSE - What Is The Year (MMS101A)",
+  "source_file": "MMSE_dictionary.csv",
   "program": "AMP-PD",
   "grain": "visit",
   "reads_as": {
@@ -46,7 +48,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map",
     "visit_occurrence_id": "cdm.visit_occurrence"

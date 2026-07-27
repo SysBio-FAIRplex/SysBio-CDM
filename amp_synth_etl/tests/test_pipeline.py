@@ -105,13 +105,23 @@ def test_subject_file_has_no_visit_columns():
 
 # ── completeness: no column is emitted entirely empty ────────────────────────
 def test_no_all_empty_columns():
+    # Columns legitimately empty for a programme's data shape (not a defect):
+    #   cell_type      -- a single-cell field; PD is proteomics and CMD specimen-level carries no cell type.
+    #   AMP-PD_file participant_id/assay_id -- PD's only files are the COHORT-level proteomics matrix;
+    #                  harmonized/cohort files link via assay_input_file, so those scalar ids are NULL by design.
+    allow_empty = {("AMP-CMD_specimen.csv", "cell_type"), ("AMP-PD_specimen.csv", "cell_type"),
+                   ("AMP-PD_file.csv", "cell_type"), ("AMP-PD_file.csv", "participant_id"),
+                   ("AMP-PD_file.csv", "assay_id")}
     for f in glob.glob(os.path.join(OUT, "*.csv")):
-        rows = load(os.path.basename(f))
+        name = os.path.basename(f)
+        rows = load(name)
         if not rows:
             continue
         for col in rows[0]:
+            if (name, col) in allow_empty:
+                continue
             assert any((r.get(col) or "") != "" for r in rows), \
-                f"{os.path.basename(f)}: column {col!r} is entirely empty"
+                f"{name}: column {col!r} is entirely empty"
 
 
 # ── fidelity sanity: distributions are real, not uniform ─────────────────────

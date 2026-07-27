@@ -1,7 +1,9 @@
 {
   "variable": "upd138_off_periods_sudden",
+  "cde_registry_label": "upd138_off_periods_sudden",
   "cde_id": "452",
-  "means": "UPDRS - Complications of Therapy: Clinical Fluctuations - Off Periods Sudden (UPD138)",
+  "definition": "UPDRS - Complications of Therapy: Clinical Fluctuations - Off Periods Sudden (UPD138)",
+  "source_file": "UPDRS_dictionary.csv",
   "program": "AMP-PD",
   "grain": "visit",
   "reads_as": {
@@ -29,7 +31,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map",
     "visit_occurrence_id": "cdm.visit_occurrence"

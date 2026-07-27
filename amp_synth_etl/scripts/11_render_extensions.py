@@ -9,9 +9,9 @@ import csv, io, os
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT  = os.path.join(ROOT, "output")
 SQL  = os.path.join(ROOT, "cdm_load", "extensions_load.sql")
-PROGS = ["AMP-AD", "AMP-RA-SLE"]
+PROGS = ["AMP-AD", "AMP-PD", "AMP-CMD", "AMP-RA-SLE"]
 SPECIMEN_DATE = "2016-06-01"     # synthetic collection date (not governance-relevant); constant = deterministic
-SPECIMEN_TYPE = 32817            # OMOP type concept 'EHR' (the pipeline's type concept)
+SPECIMEN_TYPE = 0                # sentinel 'No matching concept' — type concepts are not accurate to the AMP source data
 # specimen-derivation lineage -> cdm.fact_relationship: OMOP 'Specimen' domain + a bidirectional derivation pair.
 SPECIMEN_DOMAIN          = 36     # 'Specimen' domain concept (fact_relationship.domain_concept_id_*)
 REL_SUBSPECIMEN_OF       = 32554  # child -> parent ('Sub-specimen of')
@@ -46,15 +46,9 @@ def main():
     lineage_pairs = []   # (child_specimen_id, parent_specimen_id) from RA-SLE parentBiospecimenID
 
     for prog in PROGS:
-        # specimen: AMP-AD from *_specimen.csv (tissue); AMP-RA-SLE from the ARK specimen CSV (biospecimenType)
-        if prog == "AMP-AD":
-            for r in rd("AMP-AD_specimen.csv"):
-                specimens.append({"specimen_id": r["specimen_id"], "person_id": r["participant_id"],
-                    "specimen_concept_id": concept_for(r["specimen_source_value"]),
-                    "specimen_type_concept_id": SPECIMEN_TYPE, "specimen_date": SPECIMEN_DATE,
-                    "specimen_source_id": r["specimen_id"], "specimen_source_value": r["specimen_source_value"],
-                    "anatomic_site_source_value": r.get("anatomic_site_source_value") or ""})
-        else:
+        # specimen: AMP-AD/PD/CMD from {prog}_specimen.csv (the omics specimens_* shape);
+        # AMP-RA-SLE from the ARK specimen CSV (biospecimenType + parentBiospecimenID lineage).
+        if prog == "AMP-RA-SLE":
             for r in rd("AMP-RA-SLE_specimen.csv"):
                 bid = r.get("biospecimenID")
                 if not bid: continue
@@ -66,6 +60,13 @@ def main():
                 parent = (r.get("parentBiospecimenID") or "").strip()
                 if parent:
                     lineage_pairs.append((bid, parent))
+        else:
+            for r in rd(f"{prog}_specimen.csv"):
+                specimens.append({"specimen_id": r["specimen_id"], "person_id": r["participant_id"],
+                    "specimen_concept_id": concept_for(r["specimen_source_value"]),
+                    "specimen_type_concept_id": SPECIMEN_TYPE, "specimen_date": SPECIMEN_DATE,
+                    "specimen_source_id": r["specimen_id"], "specimen_source_value": r["specimen_source_value"],
+                    "anatomic_site_source_value": r.get("anatomic_site_source_value") or ""})
         assays += rd(f"{prog}_assay.csv")
         files  += rd(f"{prog}_file.csv")
         a2s    += rd(f"{prog}_assay_to_specimen.csv")

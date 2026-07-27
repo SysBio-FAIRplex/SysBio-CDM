@@ -1,7 +1,10 @@
 {
   "variable": "upd2209_turning_in_bed",
+  "cde_registry_label": "upd2209_turning_in_bed",
+  "harmonized_with": ["upd112_turning_in_bed"],
   "cde_id": "479",
-  "means": "2.09 MDS-UPDRS - Turning In Bed (UPD2209)",
+  "definition": "2.09 MDS-UPDRS - Turning In Bed (UPD2209)",
+  "source_file": "MDS_UPDRS_Part_II_dictionary.csv",
   "program": "AMP-PD",
   "grain": "visit",
   "reads_as": {
@@ -85,7 +88,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map",
     "visit_occurrence_id": "cdm.visit_occurrence"

@@ -1,7 +1,9 @@
 {
   "variable": "species",
+  "cde_registry_label": "species",
   "cde_id": "118",
-  "means": "Species of organism",
+  "definition": "Species of organism",
+  "source_file": "",
   "program": "AMP-CMD",
   "grain": "subject",
   "reads_as": {
@@ -30,7 +32,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map"
   },

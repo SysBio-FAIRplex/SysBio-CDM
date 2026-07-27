@@ -73,8 +73,12 @@ KEYS = {"participant_id", "visit_name", "visit_month", "biospecimenID", "parentB
 # person_id == participant_id (100001..). Disjoint from the fixture's 1-200 and 900001-900009,
 # so our cohort cannot collide with theirs.
 VISIT_OCCURRENCE_ID_BASE = 1_000_000
-VISIT_TYPE_CONCEPT_ID = 32035      # the fixture's convention for synthetic visits
+VISIT_TYPE_CONCEPT_ID = 0          # sentinel 'No matching concept' — type concepts are not accurate to the AMP source data
 VISIT_CONCEPT_ID = 32036           # ditto
+# Autopsy provenance for post-mortem brain-bank donors (AD) that have no clinical visits.
+PROCEDURE_OCCURRENCE_ID_BASE = 3_000_000
+AUTOPSY_CONCEPT_ID = 4220533       # 'Autopsy, gross examination with brain' (SNOMED Procedure; in curated sqlite)
+PROCEDURE_TYPE_CONCEPT_ID = 0      # sentinel 'No matching concept' — type concepts not accurate to AMP data
 CONFLICTED = set()                 # columns whose meaning DIFFERS between the programmes supplying them
 
 
@@ -211,7 +215,7 @@ def main():
     print(f"  cohort               : {len(people)} people")
 
     # ── the pivot ────────────────────────────────────────────────────────────────────────────
-    rows, visits, gated, unsupplied = [], [], defaultdict(int), set(var_cols)
+    rows, visits, procedures, gated, unsupplied = [], [], [], defaultdict(int), set(var_cols)
     void = VISIT_OCCURRENCE_ID_BASE
     for pid in sorted(people, key=int):
         p = people[pid]
@@ -243,19 +247,26 @@ def main():
             unsupplied.discard(col)
             return v
 
-        vs = p["visits"] or [None]                  # no visits -> ONE visit-less row (LEFT JOIN safe)
-        for vr in vs:
+        # A participant with no visit rows still needs ONE visit, else its facts load with a NULL
+        # visit_occurrence_id (orphaned — a documented limitation). Synthesize one: AD is a post-mortem
+        # brain cohort, so its no-visit donors get an AUTOPSY visit + a gross-brain-autopsy procedure;
+        # any other visit-less participant (e.g. cross-sectional CMD) gets one BASELINE lab visit.
+        synth = None if p["visits"] else ("AUTOPSY" if prog == "AMP-AD" else "BASELINE")
+        for vr in (p["visits"] or [None]):
             if vr:
                 vsv = f"{pid}_{vr['visit_name']}"
                 vd = enrol + timedelta(days=int(round(float(vr["visit_month"] or 0) * 30.44)))
-                void += 1
-                visits.append((void, pid, vd, vsv))
             else:
-                vsv, vd = None, enrol               # visit_date is NEVER null -- constraint 1
+                vsv, vd = f"{pid}_{synth}", enrol   # synthesized visit; visit_date NEVER null (constraint 1)
+            void += 1
+            visits.append((void, pid, vd, vsv))
+            if synth == "AUTOPSY":
+                procedures.append((pid, vd, void))  # gross-brain autopsy, anchored to this visit
             rows.append([pid, vsv, vd.isoformat()] + [cell(c, vr) for c in var_cols])
 
-    print(f"  staging.amp_clinical : {len(rows)} rows (one per person-visit; visit-less people get one)")
+    print(f"  staging.amp_clinical : {len(rows)} rows (one per person-visit; visit-less people get a synthesized visit)")
     print(f"  cdm.visit_occurrence : {len(visits)} rows")
+    print(f"  cdm.procedure_occurrence : {len(procedures)} autopsy rows (post-mortem brain-bank donors)")
     print(f"  columns we supply    : {len(var_cols) - len(unsupplied)} / {len(var_cols)}")
     print(f"\n  columns supplied by >1 programme whose SPEC DIFFERS (a real conflict): "
           f"{sorted(CONFLICTED) if CONFLICTED else 'none'}")
@@ -291,6 +302,17 @@ def main():
                  "FROM stdin;\n")
         for voi, pid, vd, vsv in visits:
             fh.write(f"{voi}\t{pid}\t{VISIT_CONCEPT_ID}\t{vd}\t{vd}\t{VISIT_TYPE_CONCEPT_ID}\t{vsv}\n")
+        fh.write("\\.\n\n")
+
+        # cdm.procedure_occurrence -- autopsy provenance for the post-mortem brain-bank donors, anchored
+        # to their AUTOPSY visit. First use of this table by the ETL; governance/RLS already cover it.
+        fh.write("-- 2b. autopsy procedures (gross brain autopsy) for post-mortem brain-bank donors.\n")
+        fh.write("COPY procedure_occurrence (procedure_occurrence_id, person_id, procedure_concept_id, "
+                 "procedure_date, procedure_type_concept_id, visit_occurrence_id, procedure_source_value) "
+                 "FROM stdin;\n")
+        for i, (pid, pdate, voi) in enumerate(procedures):
+            fh.write(f"{PROCEDURE_OCCURRENCE_ID_BASE + i}\t{pid}\t{AUTOPSY_CONCEPT_ID}\t{pdate}\t"
+                     f"{PROCEDURE_TYPE_CONCEPT_ID}\t{voi}\tgross_brain_autopsy\n")
         fh.write("\\.\n\n")
 
         fh.write("-- 3. staging. The ETL reads ONLY these two tables.\n")

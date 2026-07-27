@@ -1,7 +1,10 @@
 {
   "variable": "upd102_thought_disorder",
+  "cde_registry_label": "upd102_thought_disorder",
+  "harmonized_with": ["upd2102_hallucinations_and_psychosis"],
   "cde_id": "403",
-  "means": "UPDRS - Mentation, Behavior and Mood: Thought Disorder (UPD102)",
+  "definition": "UPDRS - Mentation, Behavior and Mood: Thought Disorder (UPD102)",
+  "source_file": "UPDRS_dictionary.csv",
   "program": "AMP-PD",
   "grain": "visit",
   "reads_as": {
@@ -29,7 +32,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map",
     "visit_occurrence_id": "cdm.visit_occurrence"

@@ -1,7 +1,10 @@
 {
   "variable": "upd122b_rigidity_up_extrem_rt",
+  "cde_registry_label": "upd122b_rigidity_up_extrem_rt",
+  "harmonized_with": ["upd2303b_rigidity_rt_upper_extremity"],
   "cde_id": "429",
-  "means": "UPDRS - Motor Examination: Rigidity Upper Extremity, Right (UPD122B)",
+  "definition": "UPDRS - Motor Examination: Rigidity Upper Extremity, Right (UPD122B)",
+  "source_file": "UPDRS_dictionary.csv",
   "program": "AMP-PD",
   "grain": "visit",
   "reads_as": {
@@ -29,7 +32,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map",
     "visit_occurrence_id": "cdm.visit_occurrence"

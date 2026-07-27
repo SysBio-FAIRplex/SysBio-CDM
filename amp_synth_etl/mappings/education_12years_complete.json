@@ -1,7 +1,9 @@
 {
   "variable": "education_12years_complete",
+  "cde_registry_label": "education",
   "cde_id": "160",
-  "means": "Indicator Of Whether Subject Has Completed 12 Years Of Education",
+  "definition": "Indicator Of Whether Subject Has Completed 12 Years Of Education",
+  "source_file": "MOCA_dictionary.csv",
   "program": "AMP-PD",
   "grain": "visit",
   "reads_as": {
@@ -36,7 +38,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map",
     "visit_occurrence_id": "cdm.visit_occurrence"

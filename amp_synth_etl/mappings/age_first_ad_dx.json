@@ -1,7 +1,9 @@
 {
   "variable": "age_first_ad_dx",
+  "cde_registry_label": "age_first_ad_dx",
   "cde_id": "6",
-  "means": "Age at First Alzheimer's Dementia Diagnosis",
+  "definition": "Age at First Alzheimer's Dementia Diagnosis",
+  "source_file": "ROSMAP_clinical_codebook.pdf",
   "program": "AMP-AD",
   "grain": "subject",
   "reads_as": {
@@ -73,13 +75,9 @@
       "mechanism": ""
     }
   ],
-  "derived_from": [
-    "age_at_baseline",
-    "age_death"
-  ],
   "anchored_to": {
     "person_id": "staging.person_map"
   },
   "manual_approval": true,
-  "derivation_rule": "RADC data set 754 (ROSMAP). Age at cycle where first Alzheimer's dementia diagnosis was given. Represents the age at the first cycle where an Alzheimer's dementia diagnosis was rendered. Calculated using the variables 'age at visit' and 'clinical diagnosis summary' (dcfdx value = 4 or 5). This is the best approximation of 'age at onset of Alzheimer's dementia' available, as most participants are seen on a yearly basis. Not available for participants that were demented at baseline cycle."
+  "note": "Extended AMP definition: RADC data set 754 (ROSMAP). Age at cycle where first Alzheimer's dementia diagnosis was given. Represents the age at the first cycle where an Alzheimer's dementia diagnosis was rendered. Calculated using the variables 'age at visit' and 'clinical diagnosis summary' (dcfdx value = 4 or 5). This is the best approximation of 'age at onset of Alzheimer's dementia' available, as most participants are seen on a yearly basis. Not available for participants that were demented at baseline cycle."
 }

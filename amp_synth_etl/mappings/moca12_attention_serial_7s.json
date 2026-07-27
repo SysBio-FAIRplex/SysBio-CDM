@@ -1,7 +1,9 @@
 {
   "variable": "moca12_attention_serial_7s",
+  "cde_registry_label": "moca12_attention_serial_7s",
   "cde_id": "222",
-  "means": "MOCA: 12. Attention - Serial 7s",
+  "definition": "MOCA: 12. Attention - Serial 7s",
+  "source_file": "MOCA_dictionary.csv",
   "program": "AMP-PD",
   "grain": "visit",
   "reads_as": {
@@ -29,7 +31,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map",
     "visit_occurrence_id": "cdm.visit_occurrence"

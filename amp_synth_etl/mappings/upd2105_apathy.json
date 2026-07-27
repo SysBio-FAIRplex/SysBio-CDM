@@ -1,7 +1,10 @@
 {
   "variable": "upd2105_apathy",
+  "cde_registry_label": "upd2105_apathy",
+  "harmonized_with": ["upd104_motivation"],
   "cde_id": "462",
-  "means": "1.05 MDS-UPDRS - Apathy (UPD2105)",
+  "definition": "1.05 MDS-UPDRS - Apathy (UPD2105)",
+  "source_file": "MDS_UPDRS_Part_I_dictionary.csv",
   "program": "AMP-PD",
   "grain": "visit",
   "reads_as": {
@@ -73,7 +76,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map",
     "visit_occurrence_id": "cdm.visit_occurrence"

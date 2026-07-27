@@ -1,7 +1,10 @@
 {
   "variable": "scan_months_after_baseline",
+  "cde_registry_label": "scan_months_after_baseline",
+  "harmonized_with": ["dat", "datscan_visual_interpretation"],
   "cde_id": "378",
-  "means": "Number of months after baseline visit at which DaTSCAN scan occurred; negative values indicate scan occurred before baseline",
+  "definition": "Number of months after baseline visit at which DaTSCAN scan occurred; negative values indicate scan occurred before baseline",
+  "source_file": "DaTSCAN_visual_interpretation_dictionary.csv",
   "program": "AMP-PD",
   "grain": "visit",
   "reads_as": {
@@ -25,7 +28,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map",
     "visit_occurrence_id": "cdm.visit_occurrence"

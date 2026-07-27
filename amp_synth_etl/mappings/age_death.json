@@ -1,7 +1,9 @@
 {
   "variable": "age_death",
+  "cde_registry_label": "age_death",
   "cde_id": "5",
-  "means": "Age at Death",
+  "definition": "Age at Death",
+  "source_file": "ROSMAP_clinical_codebook.pdf",
   "program": "AMP-AD",
   "grain": "subject",
   "reads_as": {
@@ -43,12 +45,9 @@
       "mechanism": ""
     }
   ],
-  "derived_from": [
-    "age_at_baseline"
-  ],
   "anchored_to": {
     "person_id": "staging.person_map"
   },
   "manual_approval": true,
-  "derivation_rule": "RADC data set 754 (ROSMAP). Age at death. Calculated by subtracting date of birth from date of death and dividing the difference by days per year (365.25). For participants in autopsy cohorts, the exact date of death is known for most participants as it is the day an autopsy was performed. In all cohorts, in addition to annual evaluations, participants are also contacted quarterly to determine vital status and changes in health, and death is occasionally learned of during quarterly contacts."
+  "note": "Extended AMP definition: RADC data set 754 (ROSMAP). Age at death. Calculated by subtracting date of birth from date of death and dividing the difference by days per year (365.25). For participants in autopsy cohorts, the exact date of death is known for most participants as it is the day an autopsy was performed. In all cohorts, in addition to annual evaluations, participants are also contacted quarterly to determine vital status and changes in health, and death is occasionally learned of during quarterly contacts."
 }

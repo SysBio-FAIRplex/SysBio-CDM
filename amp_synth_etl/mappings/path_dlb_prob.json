@@ -1,7 +1,9 @@
 {
   "variable": "path_dlb_prob",
+  "cde_registry_label": "path_dlb_prob",
   "cde_id": "284",
-  "means": "Likelihood of DLB based on McKeith criteria",
+  "definition": "Likelihood of DLB based on McKeith criteria",
+  "source_file": "LBD_Cohort_Path_Data_dictionary.csv",
   "program": "AMP-PD",
   "grain": "subject",
   "reads_as": {
@@ -59,7 +61,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map"
   },

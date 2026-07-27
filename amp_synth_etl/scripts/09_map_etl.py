@@ -15,7 +15,7 @@ import argparse, glob, json, os, re, sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MAPS = os.path.join(ROOT, "mappings")
 OUT  = os.path.join(ROOT, "cdm_load", "cdm_facts_load.sql")
-TYPE_CONCEPT = 32817                                        # 'EHR' — the type concept the in-repo ETL uses
+TYPE_CONCEPT = 0                                            # sentinel 'No matching concept' — type concepts are not accurate to the AMP source data
 ABBR = {"observation": "obs", "measurement": "meas"}
 # CDM-Field concept id -> (target table, its PK column)  [ground truth from the live schema]
 FIELD = {1147165: ("observation", "observation_id"), 1147138: ("measurement", "measurement_id"),
@@ -50,6 +50,12 @@ def emit_insert(m, var, tbl, cid):
     numeric = len(vm) == 1 and vm[0].get("value") == "<any in range>"
     has_vas = (tbl == "observation")
     C = ident(var)
+    # Optional fallback (subject-grain, coded only): effective source value = first non-empty of
+    # [variable, *fallback], so one cohort record can fall back to another field (e.g. AD ADoutcome ->
+    # mayoDx) when the primary is missing -- COALESCE picks ONE, so still one record per person.
+    fb = [] if (visit or numeric) else (m.get("fallback") or [])
+    eff = ("COALESCE(" + ", ".join(f"NULLIF({ident(c)}, '')" for c in [var] + fb) + ")") if fb else None
+    SRC = "src.srcval" if fb else f"src.{C}"
     cols = [f"{tbl}_id", "person_id", f"{tbl}_concept_id", f"{tbl}_date", f"{tbl}_type_concept_id"]
     sel  = [f"NEXTVAL('cdm.{tbl}_id_seq')", "p.person_id", str(cid), "src.visit_date", str(TYPE_CONCEPT)]
     if numeric:
@@ -65,7 +71,7 @@ def emit_insert(m, var, tbl, cid):
         cols.append("value_as_concept_id"); sel.append("vm.value_as_concept_id")
         if has_vas: cols.append("qualifier_concept_id"); sel.append("vm.qualifier_concept_id")
     cols += [f"{tbl}_source_value", "value_source_value", "visit_occurrence_id"]
-    sel  += [sq(var), f"(src.{C})::text", "vo.visit_occurrence_id"]
+    sel  += [sq(var), f"({SRC})::text", "vo.visit_occurrence_id"]
 
     if visit:
         frm = ("FROM staging.amp_clinical src\n"
@@ -75,18 +81,19 @@ def emit_insert(m, var, tbl, cid):
                     f"AND t.{tbl}_concept_id = {cid} AND t.{tbl}_source_value = {sq(var)} "
                     f"AND t.visit_occurrence_id IS NOT DISTINCT FROM vo.visit_occurrence_id)")
     else:  # subject-grain: one fact/person, anchored to the participant's baseline (earliest) visit
-        frm = (f"FROM (SELECT DISTINCT ON (person_source_value) person_source_value, visit_source_value, visit_date, {C}\n"
-               f"        FROM staging.amp_clinical WHERE {C} IS NOT NULL\n"
+        proj, cond = (f"{eff} AS srcval", eff) if fb else (C, C)
+        frm = (f"FROM (SELECT DISTINCT ON (person_source_value) person_source_value, visit_source_value, visit_date, {proj}\n"
+               f"        FROM staging.amp_clinical WHERE {cond} IS NOT NULL\n"
                f"        ORDER BY person_source_value, visit_date) src\n"
                "JOIN staging.person_map p ON p.person_source_value = src.person_source_value\n"
                "LEFT JOIN cdm.visit_occurrence vo ON vo.visit_source_value = src.visit_source_value AND vo.person_id = p.person_id\n")
         where_ne = (f"  AND NOT EXISTS (SELECT 1 FROM cdm.{tbl} t WHERE t.person_id = p.person_id "
                     f"AND t.{tbl}_concept_id = {cid} AND t.{tbl}_source_value = {sq(var)})")
     if not numeric:
-        frm += f"LEFT JOIN _valuemap vm ON vm.variable = {sq(var)} AND vm.source_value = src.{C}\n"
-    return (f"-- [{var}] -> {tbl} {cid}  ({'numeric' if numeric else 'coded'}, {'visit' if visit else 'subject'})\n"
+        frm += f"LEFT JOIN _valuemap vm ON vm.variable = {sq(var)} AND vm.defining_concept = {cid} AND vm.source_value = {SRC}\n"
+    return (f"-- [{var}] -> {tbl} {cid}  ({'numeric' if numeric else 'coded'}, {'visit' if visit else 'subject'}{', fallback ' + '+'.join([var]+fb) if fb else ''})\n"
             f"INSERT INTO cdm.{tbl} (\n    " + ", ".join(cols) + ")\nSELECT\n    " + ",\n    ".join(sel) + "\n" + frm +
-            f"WHERE src.{C} IS NOT NULL AND src.person_source_value IS NOT NULL\n" + where_ne + ";\n")
+            f"WHERE {SRC} IS NOT NULL AND src.person_source_value IS NOT NULL\n" + where_ne + ";\n")
 
 def emit_link(m, var, tbl, cid, L):
     mech = L.get("mechanism")                                   # e.g. observation_event_id
@@ -108,28 +115,14 @@ def emit_link(m, var, tbl, cid, L):
 def _approved(v):
     return v is True or (isinstance(v, str) and v.strip().upper() in ("TRUE", "YES", "1"))
 
-def load_parked():
-    """Variables to EXCLUDE from the load — the separate parked list (config/parked_variables.tsv)."""
-    parked, fp = set(), os.path.join(os.path.dirname(MAPS), "config", "parked_variables.tsv")
-    if os.path.exists(fp):
-        for i, line in enumerate(open(fp, encoding="utf-8")):
-            t = line.rstrip("\n")
-            if not t.strip() or t.startswith("#"): continue
-            if i == 0 and t.lower().startswith("variable"): continue
-            parked.add(t.split("\t")[0].strip())
-    return parked
-
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument("--all", action="store_true"); a = ap.parse_args()
     stcols = staging_columns()
     inserts, links, valuemap = [], [], {}
-    n_scope = n_concept_less = n_numeric = n_coded = n_subject = n_no_source = n_parked = 0
-    parked = load_parked()
+    n_scope = n_concept_less = n_numeric = n_coded = n_subject = n_no_source = 0
     for p in sorted(glob.glob(os.path.join(MAPS, "*.json"))):
         m = json.load(open(p, encoding="utf-8"))
         var = m.get("variable")
-        if var in parked:
-            n_parked += 1; continue
         if not a.all and not _approved(m.get("manual_approval")):
             continue
         n_scope += 1
@@ -149,7 +142,7 @@ def main():
                 if v is None: continue
                 vc = (w.get("value_as_concept_id") or {}).get("id") if isinstance(w.get("value_as_concept_id"), dict) else None
                 qc = (w.get("qualifier_concept_id") or {}).get("id") if isinstance(w.get("qualifier_concept_id"), dict) else None
-                valuemap[(var, str(v))] = (vc, w.get("value_as_string"), w.get("value_as_number"), qc)
+                valuemap[(var, cid, str(v))] = (vc, w.get("value_as_string"), w.get("value_as_number"), qc)
         if "visit_occurrence_id" not in (m.get("anchored_to") or {}): n_subject += 1
         for L in m.get("links") or []:
             if L.get("kind") == "realized":
@@ -163,13 +156,13 @@ def main():
                 f"{len(links)} realized links; {n_concept_less} skipped (no defining concept).\n")
         f.write("\\set ON_ERROR_STOP on\nSET search_path = cdm, public;\n")
         f.write("CREATE SEQUENCE IF NOT EXISTS cdm.observation_id_seq;\nCREATE SEQUENCE IF NOT EXISTS cdm.measurement_id_seq;\n\n")
-        f.write("CREATE TEMP TABLE _valuemap (variable text, source_value text, value_as_concept_id integer, value_as_string text, value_as_number numeric, qualifier_concept_id integer);\n")
-        f.write("COPY _valuemap (variable, source_value, value_as_concept_id, value_as_string, value_as_number, qualifier_concept_id) FROM stdin;\n")
-        for (var, val), (vc, vas, vn, qc) in sorted(valuemap.items()):
-            f.write("\t".join([txt(var), txt(val),
+        f.write("CREATE TEMP TABLE _valuemap (variable text, defining_concept integer, source_value text, value_as_concept_id integer, value_as_string text, value_as_number numeric, qualifier_concept_id integer);\n")
+        f.write("COPY _valuemap (variable, defining_concept, source_value, value_as_concept_id, value_as_string, value_as_number, qualifier_concept_id) FROM stdin;\n")
+        for (var, dcid, val), (vc, vas, vn, qc) in sorted(valuemap.items()):
+            f.write("\t".join([txt(var), str(int(dcid)), txt(val),
                                (str(int(vc)) if vc else "\\N"), txt(vas), numlit(vn),
                                (str(int(qc)) if qc else "\\N")]) + "\n")
-        f.write("\\.\nCREATE INDEX ON _valuemap (variable, source_value);\n\n")
+        f.write("\\.\nCREATE INDEX ON _valuemap (variable, defining_concept, source_value);\n\n")
         f.write("\\echo '>> pass 1: facts'\n")
         for s in inserts: f.write(s + "\n")
         if links:
@@ -181,7 +174,7 @@ def main():
     print(f"wrote {os.path.relpath(OUT, ROOT)}")
     print(f"scope={'ALL' if a.all else 'approved-only'}: {n_scope} in scope, {len(inserts)} facts "
           f"({n_coded} coded / {n_numeric} numeric, {n_subject} subject-anchored), "
-          f"{len(valuemap)} value-map rows, {len(links)} realized links, {n_concept_less} skipped (concept-less), {n_parked} parked")
+          f"{len(valuemap)} value-map rows, {len(links)} realized links, {n_concept_less} skipped (concept-less)")
 
 if __name__ == "__main__":
     main()

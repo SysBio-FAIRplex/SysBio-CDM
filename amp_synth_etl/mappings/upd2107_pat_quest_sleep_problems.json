@@ -1,7 +1,10 @@
 {
   "variable": "upd2107_pat_quest_sleep_problems",
+  "cde_registry_label": "upd2107_pat_quest_sleep_problems",
+  "harmonized_with": ["upd141_sleep_disturbances"],
   "cde_id": "464",
-  "means": "1.07 MDS-UPDRS - Sleep Problems (UPD2107)",
+  "definition": "1.07 MDS-UPDRS - Sleep Problems (UPD2107)",
+  "source_file": "MDS_UPDRS_Part_I_dictionary.csv",
   "program": "AMP-PD",
   "grain": "visit",
   "reads_as": {
@@ -85,7 +88,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map",
     "visit_occurrence_id": "cdm.visit_occurrence"

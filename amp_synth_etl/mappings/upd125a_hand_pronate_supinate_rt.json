@@ -1,7 +1,10 @@
 {
   "variable": "upd125a_hand_pronate_supinate_rt",
+  "cde_registry_label": "upd125a_hand_pronate_supinate_rt",
+  "harmonized_with": ["upd2306a_pron_sup_movement_right_hand"],
   "cde_id": "437",
-  "means": "UPDRS - Motor Examination: Hand Pronate/Supinate, Right (UPD125A)",
+  "definition": "UPDRS - Motor Examination: Hand Pronate/Supinate, Right (UPD125A)",
+  "source_file": "UPDRS_dictionary.csv",
   "program": "AMP-PD",
   "grain": "visit",
   "reads_as": {
@@ -29,7 +32,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map",
     "visit_occurrence_id": "cdm.visit_occurrence"

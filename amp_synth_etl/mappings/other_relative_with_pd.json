@@ -1,7 +1,9 @@
 {
   "variable": "other_relative_with_pd",
+  "cde_registry_label": "other_relative_with_pd",
   "cde_id": "278",
-  "means": "Other Relative Has Or Had Parkinson's Disease",
+  "definition": "Other Relative Has Or Had Parkinson's Disease",
+  "source_file": "Family_History_PD_dictionary.csv",
   "program": "AMP-PD",
   "grain": "subject",
   "reads_as": {
@@ -45,7 +47,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map"
   },

@@ -1,7 +1,10 @@
 {
   "variable": "upd2317a_rest_tremor_amp_r_upper_extremity",
+  "cde_registry_label": "upd2317a_rest_tremor_amp_r_upper_extremity",
+  "harmonized_with": ["upd120b_tremor_rest_hand_rt"],
   "cde_id": null,
-  "means": "",
+  "definition": "3.17a MDS-UPDRS - Rest Tremor Amplitude Right Upper Extremity (UPD2317A)",
+  "source_file": "MDS_UPDRS_Part_III_dictionary.csv",
   "program": "",
   "grain": "?",
   "reads_as": {
@@ -73,7 +76,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map"
   },

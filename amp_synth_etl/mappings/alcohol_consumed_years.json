@@ -1,7 +1,9 @@
 {
   "variable": "alcohol_consumed_years",
+  "cde_registry_label": "alcohol_consumed_years",
   "cde_id": "126",
-  "means": "How many years consumed alcohol heavily in the past?",
+  "definition": "How many years consumed alcohol heavily in the past?",
+  "source_file": "Smoking_and_alcohol_history_dictionary.csv",
   "program": "AMP-PD",
   "grain": "subject",
   "reads_as": {
@@ -45,9 +47,6 @@
       "relationship": "",
       "mechanism": ""
     }
-  ],
-  "derived_from": [
-    "age_at_baseline"
   ],
   "anchored_to": {
     "person_id": "staging.person_map"

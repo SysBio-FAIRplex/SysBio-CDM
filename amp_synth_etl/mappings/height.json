@@ -1,7 +1,9 @@
 {
   "variable": "height",
+  "cde_registry_label": "height",
   "cde_id": "549",
-  "means": "Standing height of subject.",
+  "definition": "Standing height of subject.",
+  "source_file": "",
   "program": "AMP-CMD / AMP-RA-SLE",
   "grain": "subject, visit",
   "reads_as": {
@@ -25,7 +27,6 @@
     }
   ],
   "links": [],
-  "derived_from": [],
   "anchored_to": {
     "person_id": "staging.person_map",
     "visit_occurrence_id": "cdm.visit_occurrence"
