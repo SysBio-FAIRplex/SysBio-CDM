@@ -1,0 +1,66 @@
+{
+  "variable": "Fat.distribution",
+  "cde_id": "94",
+  "definition": "Body fat distribution",
+  "src_schema_ref": [],
+  "amp_data_files": [],
+  "program": "AMP-CMD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "Abdominal/Central",
+      "Peripheral",
+      "Generalized",
+      "Normal"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 4093857,
+      "name": "Distribution of body fat",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "Abdominal/Central",
+      "write": {
+        "value_as_string": "Abdominal/Central",
+        "value_source_value": "Abdominal/Central"
+      }
+    },
+    {
+      "value": "Peripheral",
+      "write": {
+        "value_as_string": "Peripheral",
+        "value_source_value": "Peripheral"
+      }
+    },
+    {
+      "value": "Generalized",
+      "write": {
+        "value_as_string": "Generalized",
+        "value_source_value": "Generalized"
+      }
+    },
+    {
+      "value": "Normal",
+      "write": {
+        "value_as_concept_id": {
+          "id": 4069590,
+          "name": "Normal"
+        },
+        "value_as_string": "Normal",
+        "value_source_value": "Normal"
+      }
+    }
+  ],
+  "links": [],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "manual_approval": false,
+  "note": "Authored from inputs/cde_dictionary.jsonl (definition + value set verbatim) + sibling species.json (coded observation, value_as_string). Body fat distribution -> observation 4093857 'Distribution of body fat'; 'Normal' -> value_as_concept 4069590 'Normal'."
+}

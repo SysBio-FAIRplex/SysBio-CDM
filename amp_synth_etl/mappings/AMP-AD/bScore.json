@@ -1,0 +1,89 @@
+{
+  "variable": "bScore",
+  "cde_id": "16",
+  "definition": "Braak Staging as Binned Values",
+  "src_schema_ref": ["DiverseCohorts_DataDictionary.pdf"],
+  "amp_data_files": ["AMP-AD_DiverseCohorts_individual_metadata.csv"],
+  "program": "AMP-AD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "None",
+      "Braak Stage I-II",
+      "Braak Stage III-IV",
+      "Braak Stage V-VI",
+      "Missing or unknown"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 3172933,
+      "name": "Braak stage for presence of tau protein accompanying neurofibrillary degeneration in brain",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "None",
+      "write": {
+        "value_as_concept_id": {
+          "id": 45878582,
+          "name": "None"
+        },
+        "value_source_value": "None",
+        "value_as_string": "None"
+      }
+    },
+    {
+      "value": "Braak Stage I-II",
+      "write": {
+        "value_as_string": "Braak Stage I-II",
+        "value_source_value": "Braak Stage I-II"
+      }
+    },
+    {
+      "value": "Braak Stage III-IV",
+      "write": {
+        "value_as_string": "Braak Stage III-IV",
+        "value_source_value": "Braak Stage III-IV"
+      }
+    },
+    {
+      "value": "Braak Stage V-VI",
+      "write": {
+        "value_as_string": "Braak Stage V-VI",
+        "value_source_value": "Braak Stage V-VI"
+      }
+    },
+    {
+      "value": "Missing or unknown",
+      "write": {
+        "value_as_concept_id": {
+          "id": 45877986,
+          "name": "Unknown"
+        },
+        "value_source_value": "Missing or unknown",
+        "value_as_string": "Missing or unknown"
+      }
+    },
+    {
+      "value": "missing or unknown",
+      "write": {
+        "value_as_concept_id": {
+          "id": 45877986,
+          "name": "Unknown"
+        },
+        "value_source_value": "missing or unknown",
+        "value_as_string": "missing or unknown"
+      }
+    }
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "links": [],
+  "manual_approval": false,
+  "note": "Authored from inputs/cde_dictionary.jsonl (AMP-AD row, cde_id 16) + siblings Braak.json / braaksc.json (same observation concept 3172933). bScore is BINNED Braak; the binned ranges have no single stage concept so they land via value_as_string/value_source_value, None->45878582 and Missing-or-unknown (both cases seen in the source) ->45877986."
+}

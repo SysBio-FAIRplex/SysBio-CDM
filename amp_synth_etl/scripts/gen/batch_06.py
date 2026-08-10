@@ -26,7 +26,7 @@ WEIGHT_RANGE = {"kg": (45, 120), "lb": (100, 265), "g": (45000, 120000), "oz": (
 
 # ── age ──────────────────────────────────────────────────────────────────── visit
 # ARK: "Age at which subject was enrolled in study or age at corresponding visit". number,
-#      no Minimum/Maximum. The parked SysBio row gives 0-120 years.
+#      no Minimum/Maximum. The SysBio row gives 0-120 years.
 # Tracks the visit clock: an enrolment age, plus the elapsed months.
 # ageUnits is subject-constant (years|months), so the value is emitted in that unit.
 # ASSUMED: enrolment age 18-85.

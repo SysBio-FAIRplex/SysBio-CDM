@@ -1,0 +1,38 @@
+{
+  "variable": "VASI",
+  "cde_id": "556",
+  "definition": "Total body Vitiligo Area Severity Index, a measure of the percentage of vitiligo involvement across the body calculated in terms of hand units.",
+  "src_schema_ref": [],
+  "amp_data_files": [],
+  "program": "AMP-RA-SLE",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "number",
+    "range": {
+      "min": 0,
+      "max": 100
+    }
+  },
+  "lands": {
+    "table": "measurement",
+    "measurement_concept_id": {
+      "id": 0,
+      "name": "TODO: choose landing concept"
+    }
+  },
+  "value_map": [
+    {
+      "value": "<any in range>",
+      "write": {
+        "value_as_number": "<value>",
+        "value_source_value": "<raw>"
+      }
+    }
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "links": [],
+  "manual_approval": false,
+  "note": "DRAFT STUB (manual_approval:false, landing concept_id 0 = TODO). Flagged: no curated 'Vitiligo Area Severity Index' concept and OMOP vocab not loaded. definition + value set are from cde_dictionary (cde 556); set a real *_concept_id and value_as_concept_id(s), then flip manual_approval to enable."
+}

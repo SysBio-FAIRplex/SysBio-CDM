@@ -1,0 +1,68 @@
+{
+  "variable": "spect_pet_perf",
+  "cde_registry_label": "spect_pet_perf",
+  "cde_id": "389",
+  "definition": "SPECT or PET perfusion scan showing occipital hypometabolism",
+  "src_schema_ref": ["LBD_Cohort_Clinical_Data_dictionary.csv"],
+  "amp_data_files": ["LBD_Cohort_Clinical_Data.csv"],
+  "program": "AMP-PD",
+  "grain": "visit",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "Yes",
+      "No",
+      "NA"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 2212019,
+      "name": "Brain imaging, positron emission tomography (PET); perfusion evaluation",
+      "domain": "Procedure"
+    }
+  },
+  "value_map": [
+    {
+      "value": "Yes",
+      "write": {
+        "value_as_concept_id": {
+          "id": 4188539,
+          "name": "Yes"
+        },
+        "value_as_string": "Yes",
+        "value_source_value": "Yes"
+      }
+    },
+    {
+      "value": "No",
+      "write": {
+        "value_as_concept_id": {
+          "id": 4188540,
+          "name": "No"
+        },
+        "value_as_string": "No",
+        "value_source_value": "No"
+      }
+    },
+    {
+      "value": "NA",
+      "write": {
+        "value_as_concept_id": {
+          "id": 35941270,
+          "name": "NA"
+        },
+        "value_as_string": "NA",
+        "value_source_value": "NA"
+      }
+    }
+  ],
+  "links": [],
+  "anchored_to": {
+    "person_id": "staging.person_map",
+    "visit_occurrence_id": "cdm.visit_occurrence"
+  },
+  "manual_approval": false,
+  "note": "authored from cde_dictionary (cde_id 389) + sibling psychosis.json (LBD Yes/No/NA crosswalk: Yes 4188539 / No 4188540 / NA 35941270); lands on PET perfusion evaluation [2212019] from curated_concept"
+}

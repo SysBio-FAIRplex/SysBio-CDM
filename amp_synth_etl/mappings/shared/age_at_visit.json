@@ -1,0 +1,62 @@
+{
+  "variable": "age_at_visit",
+  "cde_registry_label": "age_at_visit",
+  "harmonized_with": ["age"],
+  "cde_id": "542",
+  "definition": "Age of participant at time of clinical visit",
+  "src_schema_ref": ["ROSMAP_clinical_codebook.pdf"],
+  "amp_data_files": [],
+  "program": "AMP-AD / AMP-CMD / AMP-RA-SLE",
+  "grain": "visit",
+  "reads_as": {
+    "datatype": "integer",
+    "unit": "years"
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 3022304,
+      "name": "Age",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "<any in range>",
+      "write": {
+        "value_as_number": "<value>",
+        "value_source_value": "<raw>"
+      }
+    }
+  ],
+  "links": [
+    {
+      "kind": "derivation",
+      "related_variable": "age_death",
+      "related_concept": {
+        "id": 3038421,
+        "name": "Age at death",
+        "domain": "Observation"
+      },
+      "related_table": "observation",
+      "related_value_set": null,
+      "relationship": "",
+      "mechanism": ""
+    },
+    {
+      "kind": "derivation",
+      "related_variable": "visit_month",
+      "related_concept": null,
+      "related_table": null,
+      "related_value_set": null,
+      "relationship": "",
+      "mechanism": "",
+      "note": "related element not loaded in the CDM"
+    }
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map",
+    "visit_occurrence_id": "cdm.visit_occurrence"
+  },
+  "manual_approval": true
+}

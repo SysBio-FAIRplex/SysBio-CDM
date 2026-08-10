@@ -1,0 +1,85 @@
+{
+  "variable": "sampleStatus",
+  "cde_id": "45",
+  "definition": "Current status or condition of the biological sample",
+  "src_schema_ref": [],
+  "amp_data_files": ["MIT_ROSMAP_Multiomics_biospecimen_metadata.csv"],
+  "program": "AMP-AD",
+  "grain": "specimen",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "Available",
+      "Depleted",
+      "Quarantined",
+      "In Use",
+      "Pending QC",
+      "Failed QC"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 37021329,
+      "name": "Specimen condition [Type]",
+      "domain": "Measurement"
+    }
+  },
+  "value_map": [
+    {
+      "value": "Available",
+      "write": {
+        "value_as_string": "Available",
+        "value_source_value": "Available"
+      }
+    },
+    {
+      "value": "Depleted",
+      "write": {
+        "value_as_string": "Depleted",
+        "value_source_value": "Depleted"
+      }
+    },
+    {
+      "value": "Quarantined",
+      "write": {
+        "value_as_string": "Quarantined",
+        "value_source_value": "Quarantined"
+      }
+    },
+    {
+      "value": "In Use",
+      "write": {
+        "value_as_string": "In Use",
+        "value_source_value": "In Use"
+      }
+    },
+    {
+      "value": "Pending QC",
+      "write": {
+        "value_as_string": "Pending QC",
+        "value_source_value": "Pending QC"
+      }
+    },
+    {
+      "value": "Failed QC",
+      "write": {
+        "value_as_string": "Failed QC",
+        "value_source_value": "Failed QC"
+      }
+    },
+    {
+      "value": "frozen",
+      "write": {
+        "value_as_string": "frozen",
+        "value_source_value": "frozen"
+      }
+    }
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "links": [],
+  "manual_approval": false,
+  "note": "Authored from inputs/cde_dictionary.jsonl (AMP-AD row, cde_id 45); concept 37021329 'Specimen condition [Type]' from curated_concept (no AD sibling). Sample-status label lands via value_as_string; the source also carries 'frozen', mapped for robustness."
+}

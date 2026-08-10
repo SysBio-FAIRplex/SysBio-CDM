@@ -1,0 +1,27 @@
+{
+  "variable": "excludeReason",
+  "cde_id": "31",
+  "definition": "Reason for exclusion from study or analysis",
+  "src_schema_ref": [],
+  "amp_data_files": ["ROSMAP_biospecimen_metadata.csv"],
+  "program": "AMP-AD",
+  "grain": "specimen",
+  "reads_as": {
+    "datatype": "string"
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 4203251,
+      "name": "Patient data status",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "links": [],
+  "manual_approval": false,
+  "note": "Authored from inputs/cde_dictionary.jsonl (AMP-AD row, cde_id 31) + passthrough sibling dti_measure.json. amp_value_set is free text ('Text or enumerated value describing exclusion criteria') so no codes are enumerated -- the exclusion reason lands via value_source_value (string passthrough). Concept 4203251 'Patient data status' from curated_concept, paired with the exclude flag."
+}

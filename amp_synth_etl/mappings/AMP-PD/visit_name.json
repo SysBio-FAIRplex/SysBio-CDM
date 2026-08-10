@@ -1,0 +1,87 @@
+{
+  "variable": "visit_name",
+  "cde_id": "539",
+  "definition": "Visit name: M - in months, SC - screening visit, LOG - records without visit; #2 or #3 define repated records at the same visit or repeated visit",
+  "src_schema_ref": ["Caffeine_history_dictionary.csv", "DTI_dictionary.csv", "DaTSCAN_SBR_dictionary.csv", "DaTSCAN_visual_interpretation_dictionary.csv", "Demographics_dictionary.csv", "Enrollment_dictionary.csv", "Epworth_Sleepiness_Scale_dictionary.csv", "Family_History_PD_dictionary.csv", "LBD_Cohort_Clinical_Data_dictionary.csv", "LBD_Cohort_Path_Data_dictionary.csv", "MDS_UPDRS_Part_III_dictionary.csv", "MDS_UPDRS_Part_II_dictionary.csv", "MDS_UPDRS_Part_IV_dictionary.csv", "MDS_UPDRS_Part_I_dictionary.csv", "MMSE_dictionary.csv", "MOCA_dictionary.csv", "MRI_dictionary.csv", "Modified_Schwab___England_ADL_dictionary.csv", "PDQ_39_dictionary.csv", "PD_Medical_History_dictionary.csv", "REM_Sleep_Behavior_Disorder_Questionnaire_Mayo_dictionary.csv", "REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster_dictionary.csv", "Smoking_and_alcohol_history_dictionary.csv", "UPDRS_dictionary.csv", "UPSIT_dictionary.csv"],
+  "amp_data_files": ["Biospecimen_analyses_SomaLogic_plasma.csv"],
+  "program": "AMP-PD",
+  "grain": "visit",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "SC",
+      "M0",
+      "M6",
+      "M12",
+      "M18",
+      "M24",
+      "LOG"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 37542726,
+      "name": "Study Visit",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "SC",
+      "write": {
+        "value_as_string": "SC",
+        "value_source_value": "SC"
+      }
+    },
+    {
+      "value": "M0",
+      "write": {
+        "value_as_string": "M0",
+        "value_source_value": "M0"
+      }
+    },
+    {
+      "value": "M6",
+      "write": {
+        "value_as_string": "M6",
+        "value_source_value": "M6"
+      }
+    },
+    {
+      "value": "M12",
+      "write": {
+        "value_as_string": "M12",
+        "value_source_value": "M12"
+      }
+    },
+    {
+      "value": "M18",
+      "write": {
+        "value_as_string": "M18",
+        "value_source_value": "M18"
+      }
+    },
+    {
+      "value": "M24",
+      "write": {
+        "value_as_string": "M24",
+        "value_source_value": "M24"
+      }
+    },
+    {
+      "value": "LOG",
+      "write": {
+        "value_as_string": "LOG",
+        "value_source_value": "LOG"
+      }
+    }
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map",
+    "visit_occurrence_id": "cdm.visit_occurrence"
+  },
+  "links": [],
+  "manual_approval": false,
+  "note": "Authored from cde_dictionary (cde_id 539; free-text visit label with no enumerated set, representative month/screening codes listed - other labels still land via value_source_value); value_as_string per shared/cohort.json convention."
+}

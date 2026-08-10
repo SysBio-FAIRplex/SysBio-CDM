@@ -1,0 +1,57 @@
+{
+  "variable": "mms102d_address",
+  "cde_id": "198",
+  "definition": "MMSE - What Is The Building (MMS102D)",
+  "src_schema_ref": ["MMSE_dictionary.csv"],
+  "amp_data_files": ["MMSE.csv"],
+  "program": "AMP-PD",
+  "grain": "visit",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "Correct",
+      "Incorrect"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 37525797,
+      "name": "MMS1-What Is the Building",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "Correct",
+      "write": {
+        "value_as_number": 1,
+        "value_as_concept_id": {
+          "id": 45880253,
+          "name": "Correct"
+        },
+        "value_as_string": "Correct",
+        "value_source_value": "Correct"
+      }
+    },
+    {
+      "value": "Incorrect",
+      "write": {
+        "value_as_number": 0,
+        "value_as_concept_id": {
+          "id": 45885185,
+          "name": "Incorrect"
+        },
+        "value_as_string": "Incorrect",
+        "value_source_value": "Incorrect"
+      }
+    }
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map",
+    "visit_occurrence_id": "cdm.visit_occurrence"
+  },
+  "links": [],
+  "manual_approval": false,
+  "note": "Authored from inputs/cde_dictionary.jsonl (cde_id 198); the description reads 'What Is The Building'. OMOP landing and Correct/Incorrect value crosswalk copied from sibling MMSE orientation map mms101a_year.json, with the dedicated curated concept 37525797 'MMS1-What Is the Building'."
+}

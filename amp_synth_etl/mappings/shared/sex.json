@@ -1,0 +1,35 @@
+{
+  "variable": "sex",
+  "cde_id": "59",
+  "harmonized_with": ["msex"],
+  "definition": "Participant sex, harmonized across all AMP programs.",
+  "src_schema_ref": [],
+  "amp_data_files": ["Demographics.csv"],
+  "program": "AMP-AD | AMP-CMD | AMP-PD | AMP-RA/SLE",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "code",
+    "values": ["Male", "Female", "male", "female", "Unknown"]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 3046965,
+      "name": "Sex",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {"value": "Male",    "write": {"value_as_concept_id": {"id": 8507, "name": "MALE"},   "value_as_string": "Male",    "value_source_value": "Male"}},
+    {"value": "male",    "write": {"value_as_concept_id": {"id": 8507, "name": "MALE"},   "value_as_string": "male",    "value_source_value": "male"}},
+    {"value": "Female",  "write": {"value_as_concept_id": {"id": 8532, "name": "FEMALE"}, "value_as_string": "Female",  "value_source_value": "Female"}},
+    {"value": "female",  "write": {"value_as_concept_id": {"id": 8532, "name": "FEMALE"}, "value_as_string": "female",  "value_source_value": "female"}},
+    {"value": "Unknown", "write": {"value_as_concept_id": {"id": 45877986, "name": "Unknown"}, "value_as_string": "Unknown", "value_source_value": "Unknown"}}
+  ],
+  "links": [],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "manual_approval": true,
+  "note": "Harmonized sex for ALL programs -> observation_concept_id 3046965 'Sex'. `sex` is generated for EVERY participant (AD/PD Title-case Male/Female; CMD/RA-SLE lowercase male/female) and harmonized to MALE 8507 / FEMALE 8532 (per harmonization/variable_crosswalk.tsv). SUPERSEDES msex.json (ROSMAP-only, mixed F/M/Male/Female encoding); msex.json is disabled so the 365 ROSMAP participants who carry BOTH sex and msex don't get two Sex records. Fixes the gap where `sex` was UNMAPPED (no sex.json), so only 365 ROSMAP persons (via msex) had any Sex record -- now all ~2500 do."
+}

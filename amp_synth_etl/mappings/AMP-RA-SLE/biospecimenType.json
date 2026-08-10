@@ -1,0 +1,245 @@
+{
+  "variable": "biospecimenType",
+  "definition": "A label indicating the biological material collected for experimentation and data collection. Where applicable, provide all types in a comma-separated list.",
+  "src_schema_ref": [
+    "ark/data_model-main/ark.all_attributes.csv"
+  ],
+  "amp_data_files": [
+    "BiospecimenMetadataTemplate.csv"
+  ],
+  "program": "AMP-RA-SLE",
+  "grain": "specimen",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "PBMCs",
+      "cell line",
+      "kidney biopsy",
+      "none",
+      "plasma",
+      "primary cell culture",
+      "saliva",
+      "salivary gland",
+      "serum",
+      "skin biopsy",
+      "skin swab",
+      "stool",
+      "suction blister cells",
+      "suction blister fluid",
+      "synovial fluid",
+      "synovial tissue",
+      "total leukocytes",
+      "urine",
+      "uvea",
+      "whole blood"
+    ]
+  },
+  "lands": {
+    "table": "specimen",
+    "specimen_concept_id": "<per value_map>"
+  },
+  "value_map": [
+    {
+      "value": "PBMCs",
+      "write": {
+        "specimen_concept_id": {
+          "id": 4047495,
+          "name": "Peripheral blood specimen"
+        },
+        "value_source_value": "PBMCs"
+      }
+    },
+    {
+      "value": "cell line",
+      "write": {
+        "specimen_concept_id": {
+          "id": 764477,
+          "name": "Cultured cells specimen"
+        },
+        "value_source_value": "cell line"
+      }
+    },
+    {
+      "value": "kidney biopsy",
+      "write": {
+        "specimen_concept_id": {
+          "id": 4204351,
+          "name": "Kidney biopsy specimen"
+        },
+        "value_source_value": "kidney biopsy"
+      }
+    },
+    {
+      "value": "none",
+      "write": {
+        "value_source_value": "none"
+      }
+    },
+    {
+      "value": "plasma",
+      "write": {
+        "specimen_concept_id": {
+          "id": 4000626,
+          "name": "Plasma specimen"
+        },
+        "value_source_value": "plasma"
+      }
+    },
+    {
+      "value": "primary cell culture",
+      "write": {
+        "specimen_concept_id": {
+          "id": 764477,
+          "name": "Cultured cells specimen"
+        },
+        "value_source_value": "primary cell culture"
+      }
+    },
+    {
+      "value": "saliva",
+      "write": {
+        "specimen_concept_id": {
+          "id": 4001062,
+          "name": "Saliva specimen"
+        },
+        "value_source_value": "saliva"
+      }
+    },
+    {
+      "value": "salivary gland",
+      "write": {
+        "specimen_concept_id": {
+          "id": 4221078,
+          "name": "Specimen from major salivary gland"
+        },
+        "value_source_value": "salivary gland"
+      }
+    },
+    {
+      "value": "serum",
+      "write": {
+        "specimen_concept_id": {
+          "id": 4001181,
+          "name": "Serum specimen"
+        },
+        "value_source_value": "serum"
+      }
+    },
+    {
+      "value": "skin biopsy",
+      "write": {
+        "specimen_concept_id": {
+          "id": 4001354,
+          "name": "Tissue specimen from skin"
+        },
+        "value_source_value": "skin biopsy"
+      }
+    },
+    {
+      "value": "skin swab",
+      "write": {
+        "specimen_concept_id": {
+          "id": 4122261,
+          "name": "Skin swab"
+        },
+        "value_source_value": "skin swab"
+      }
+    },
+    {
+      "value": "stool",
+      "write": {
+        "specimen_concept_id": {
+          "id": 4002879,
+          "name": "Stool specimen"
+        },
+        "value_source_value": "stool"
+      }
+    },
+    {
+      "value": "suction blister cells",
+      "write": {
+        "specimen_concept_id": {
+          "id": 4001354,
+          "name": "Tissue specimen from skin"
+        },
+        "value_source_value": "suction blister cells"
+      }
+    },
+    {
+      "value": "suction blister fluid",
+      "write": {
+        "specimen_concept_id": {
+          "id": 43021112,
+          "name": "Swab from blister"
+        },
+        "value_source_value": "suction blister fluid"
+      }
+    },
+    {
+      "value": "synovial fluid",
+      "write": {
+        "specimen_concept_id": {
+          "id": 4002875,
+          "name": "Synovial fluid specimen"
+        },
+        "value_source_value": "synovial fluid"
+      }
+    },
+    {
+      "value": "synovial tissue",
+      "write": {
+        "specimen_concept_id": {
+          "id": 4206293,
+          "name": "Synovial tissue specimen"
+        },
+        "value_source_value": "synovial tissue"
+      }
+    },
+    {
+      "value": "total leukocytes",
+      "write": {
+        "specimen_concept_id": {
+          "id": 4045762,
+          "name": "Leukocyte specimen from patient"
+        },
+        "value_source_value": "total leukocytes"
+      }
+    },
+    {
+      "value": "urine",
+      "write": {
+        "specimen_concept_id": {
+          "id": 4046280,
+          "name": "Urine specimen"
+        },
+        "value_source_value": "urine"
+      }
+    },
+    {
+      "value": "uvea",
+      "write": {
+        "specimen_concept_id": {
+          "id": 4164490,
+          "name": "Tissue specimen from uvea"
+        },
+        "value_source_value": "uvea"
+      }
+    },
+    {
+      "value": "whole blood",
+      "write": {
+        "specimen_concept_id": {
+          "id": 4122283,
+          "name": "Whole blood specimen"
+        },
+        "value_source_value": "whole blood"
+      }
+    }
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "links": [],
+  "manual_approval": true,
+  "note": "Authored VERBATIM from the official ARK data model ark/data_model-main/ark.all_attributes.csv (Attribute biospecimenType: Description + 20 Valid Values). Grain specimen; this is the DEFINING concept of the specimen record: each biospecimen type maps to its OMOP specimen concept (specimen_concept_id, NOT NULL) via inputs/biospecimen_type_crosswalk.tsv, which sources concepts from exports/curated_concept_tables.sqlite (domain=Specimen). 'none' has no specimen concept (never emitted by lineage.plan). Rendered into cdm.specimen by 11_render_extensions. manual_approval left false for your review."
+}

@@ -1,0 +1,55 @@
+{
+  "variable": "msq06_stop_breathing",
+  "cde_registry_label": "msq06_stop_breathing",
+  "cde_id": "266",
+  "definition": "MSQ Stop Breathing Q6",
+  "src_schema_ref": ["REM_Sleep_Behavior_Disorder_Questionnaire_Mayo_dictionary.csv"],
+  "amp_data_files": ["REM_Sleep_Behavior_Disorder_Questionnaire_Mayo.csv"],
+  "program": "AMP-PD",
+  "grain": "visit",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "No",
+      "Yes"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 40767199,
+      "name": "Has anyone noticed that you quit breathing during your sleep [PhenX]",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "No",
+      "write": {
+        "value_as_concept_id": {
+          "id": 4188540,
+          "name": "No"
+        },
+        "value_as_string": "No",
+        "value_source_value": "No"
+      }
+    },
+    {
+      "value": "Yes",
+      "write": {
+        "value_as_concept_id": {
+          "id": 4188539,
+          "name": "Yes"
+        },
+        "value_as_string": "Yes",
+        "value_source_value": "Yes"
+      }
+    }
+  ],
+  "links": [],
+  "anchored_to": {
+    "person_id": "staging.person_map",
+    "visit_occurrence_id": "cdm.visit_occurrence"
+  },
+  "manual_approval": true
+}

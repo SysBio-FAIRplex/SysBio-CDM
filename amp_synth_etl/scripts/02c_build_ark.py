@@ -9,8 +9,8 @@ ARK is AMP-RA/SLE's own dictionary and it is a proper one:
     model_templates/*.csv               30 TABLES -- the header row IS the column list
     ark.metadata_template_primary_keys  the key of each template
 
-It declares CDASI, PASI, VASI, VETI, VIDA -- the disease-activity scores that were parked with the
-unprovenanced batch. ARK establishes their provenance: they are real AMP-RA/SLE elements.
+It declares CDASI, PASI, VASI, VETI, VIDA -- the disease-activity scores whose provenance was once
+unrecorded. ARK establishes their provenance: they are real AMP-RA/SLE elements.
 
 Only the SUBJECT-facing templates are used. The other 25 templates are file annotations for omics
 outputs (fastq, FCS, Olink, scRNA-seq ...) -- they describe files, not participants.
@@ -61,17 +61,16 @@ def field(name, type_, enum=None, minimum=None, maximum=None):
 
 
 def sb_ranges():
-    """Ranges from the SysBio rows that were parked with the unprovenanced batch.
+    """Numeric ranges for the ARK disease-activity scores, from their SysBio dictionary rows.
 
-    ARK declares CDASI / PASI / VASI / VETI / VIDA and age -- so they are NOT unprovenanced; ARK
-    IS their provenance. But ARK states no range for them (columnType=string, no Valid Values).
-    The parked SysBio rows do:  CDASI 0-100, PASI 0-72, VASI 0-100, VETI 0-100, VIDA 0-6,
-    age 0-120. The two sources are complementary: ARK gives the tables, keys and enums; SysBio
-    gives the bounds. Neither is invented.
+    ARK declares CDASI / PASI / VASI / VETI / VIDA and age -- ARK IS their provenance -- but states
+    no range for them (columnType=string, no Valid Values). The SysBio rows do:  CDASI 0-100,
+    PASI 0-72, VASI 0-100, VETI 0-100, VIDA 0-6, age 0-120. The two sources are complementary: ARK
+    gives the tables, keys and enums; SysBio gives the bounds. Neither is invented.
     """
     import re
     rng = {}
-    for r in inputs_io.dict_rows(parked=True):
+    for r in inputs_io.dict_rows():
         if r["source"] != "AMP-RA-SLE":
             continue
         m = re.search(r"(-?\d+(?:\.\d+)?)\s*-\s*(-?\d+(?:\.\d+)?)", r["amp_value_set"] or "")
@@ -156,7 +155,7 @@ def spec_from_ark(a):
         hi = float(mx) if mx else (SB_RANGE.get(name) or (None, None))[1]
         return field(name, "number", minimum=lo, maximum=hi)
     # ARK types the disease-activity scores (CDASI, PASI, VASI, VIDA) as `string` and gives no
-    # values. They are numeric indices; the parked SysBio rows carry their ranges.
+    # values. They are numeric indices; the SysBio rows carry their ranges.
     if name in SB_RANGE:
         lo, hi = SB_RANGE[name]
         is_int = lo == int(lo) and hi == int(hi)

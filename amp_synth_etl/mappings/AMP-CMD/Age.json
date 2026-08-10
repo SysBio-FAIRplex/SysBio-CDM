@@ -1,0 +1,39 @@
+{
+  "variable": "Age",
+  "cde_id": "60",
+  "definition": "Age at which subject was enrolled in study or age at corresponding visit and data collection event.",
+  "src_schema_ref": [],
+  "amp_data_files": [],
+  "program": "AMP-CMD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "integer",
+    "range": {
+      "min": 0,
+      "max": 120
+    }
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 35815526,
+      "name": "Age at event",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "<any in range>",
+      "write": {
+        "value_as_number": "<value>",
+        "value_source_value": "<raw>"
+      }
+    }
+  ],
+  "links": [],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "manual_approval": false,
+  "note": "Authored from inputs/cde_dictionary.jsonl (definition + value set verbatim) + sibling mappings/AMP-CMD/np_age.json. Numeric age -> observation 35815526 'Age at event' (value_as_number); same concept as np_age (a distinct KPMP field), so records are per-variable, not duplicated."
+}

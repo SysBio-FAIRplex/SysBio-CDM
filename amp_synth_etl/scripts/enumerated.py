@@ -440,6 +440,7 @@ AMP_AD_ROSMAP_GATE = {
         "educ",            # ROSMAP's own education field
         "msex",            # ROSMAP's own sex coding
         "spanish",         # ROSMAP's own ethnicity field
+        "race_rosmap",     # ROSMAP's own numeric race coding (real column `race`; emitter renames it back)
         "age_death",       # ROSMAP-native; DiverseCohorts does not declare it
         "age_first_ad_dx",
         "braaksc",         # ROSMAP's coded Braak
@@ -447,6 +448,30 @@ AMP_AD_ROSMAP_GATE = {
         "cogdx",           # the final clinical cognitive diagnosis
         "age_at_visit",    # ROSMAP clinical follow-up
         "dcfdx",           # ROSMAP clinical follow-up
+    ],
+}
+
+
+# ══════════════════════════════════════════════════════════════════════════════════════════════
+#  4d. AMP-PD -- THE LBD (Lewy body) COHORT GATE
+#
+#  LBD_Cohort_Path_Data.csv (post-mortem autopsy neuropathology) and LBD_Cohort_Clinical_Data.csv columns
+#  exist ONLY for a participant enrolled in the LBD arm (study_arm == "LBD"). Without this gate the
+#  person-first generator merged them onto EVERY PD participant -- e.g. a Healthy Control carrying
+#  path_braak_nft=6, a post-mortem value no living / non-LBD participant's file has. Mirror of
+#  AMP_AD_ROSMAP_GATE: null these columns for any PD participant whose study_arm is not LBD.
+# ══════════════════════════════════════════════════════════════════════════════════════════════
+
+AMP_PD_LBD_GATE = {
+    "program": "AMP-PD",
+    "gate": "study_arm",
+    "gated_on": ["LBD"],
+    "columns": [
+        "path_cerad",          # LBD autopsy CERAD score (post-mortem)
+        "path_braak_nft",      # LBD autopsy Braak NFT stage
+        "path_braak_lb",       # LBD autopsy Braak Lewy-body stage
+        "path_dlb_prob",       # LBD McKeith DLB likelihood
+        "smell_detail",        # UPSIT copy carried only in LBD_Cohort_Clinical_Data.csv
     ],
 }
 

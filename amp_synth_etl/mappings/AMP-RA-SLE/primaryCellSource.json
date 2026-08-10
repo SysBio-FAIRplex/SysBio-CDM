@@ -1,0 +1,98 @@
+{
+  "variable": "primaryCellSource",
+  "definition": "A label indicating the biological source material from which a primary cell culture was derived.",
+  "src_schema_ref": [
+    "ark/data_model-main/ark.all_attributes.csv"
+  ],
+  "amp_data_files": [
+    "BiospecimenMetadataTemplate.csv"
+  ],
+  "program": "AMP-RA-SLE",
+  "grain": "specimen",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "PBMCs",
+      "kidney",
+      "pannus-derived dermis",
+      "pannus-derived epidermis",
+      "salivary gland",
+      "synovial tissue",
+      "total leukocytes",
+      "urine",
+      "uvea",
+      "whole blood"
+    ]
+  },
+  "lands": {
+    "table": "specimen"
+  },
+  "value_map": [
+    {
+      "value": "PBMCs",
+      "write": {
+        "value_source_value": "PBMCs"
+      }
+    },
+    {
+      "value": "kidney",
+      "write": {
+        "value_source_value": "kidney"
+      }
+    },
+    {
+      "value": "pannus-derived dermis",
+      "write": {
+        "value_source_value": "pannus-derived dermis"
+      }
+    },
+    {
+      "value": "pannus-derived epidermis",
+      "write": {
+        "value_source_value": "pannus-derived epidermis"
+      }
+    },
+    {
+      "value": "salivary gland",
+      "write": {
+        "value_source_value": "salivary gland"
+      }
+    },
+    {
+      "value": "synovial tissue",
+      "write": {
+        "value_source_value": "synovial tissue"
+      }
+    },
+    {
+      "value": "total leukocytes",
+      "write": {
+        "value_source_value": "total leukocytes"
+      }
+    },
+    {
+      "value": "urine",
+      "write": {
+        "value_source_value": "urine"
+      }
+    },
+    {
+      "value": "uvea",
+      "write": {
+        "value_source_value": "uvea"
+      }
+    },
+    {
+      "value": "whole blood",
+      "write": {
+        "value_source_value": "whole blood"
+      }
+    }
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "links": [],
+  "manual_approval": true,
+  "note": "Authored VERBATIM from the official ARK data model inputs/amp_dictionaries/ark/data_model-main/ark.all_attributes.csv (Attribute primaryCellSource: Description + Valid Values; Required=TRUE). Grain specimen; one row per ARK biospecimen. Approving this (with the other biospecimen maps) opens the AMP-RA-SLE specimen generation gate at 03_generate.py:416 (model[prog]['specimen'] non-empty); specimen rows/skeleton come from scripts/gen/lineage.plan(), and cdm.specimen is rendered by 11_render_extensions (specimen source attribute), not by 09_map_etl. manual_approval left false for your review."
+}

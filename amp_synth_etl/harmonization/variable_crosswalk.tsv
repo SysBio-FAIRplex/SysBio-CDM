@@ -1,8 +1,0 @@
-harmonized_variable	harmonized_target	program	source_file	source_column	encoding	source_values	to_harmonized	notes
-sex	Male;Female;Unknown	AMP-AD	AMP-AD_DiverseCohorts_individual_metadata.csv	sex	title_case	Male;Female	identity	already harmonized
-sex	Male;Female;Unknown	AMP-AD	ROSMAP_clinical.csv	msex	numeric	1;0	1=Male;0=Female	REAL ROSMAP form; synthetic currently emits mixed F/M/Male/Female (BUG)
-sex	Male;Female;Unknown	AMP-PD	Demographics.csv	sex	title_case	Male;Female	identity	
-sex	Male;Female;Unknown	AMP-CMD	donor.tsv;biosample.tsv	sex	lowercase	male;female	male=Male;female=Female	
-sex	Male;Female;Unknown	AMP-CMD	participant_data	np_gender	numeric	1;2	1=Male;2=Female	direction inferred from co-distribution -- VERIFY against CMD dictionary
-sex	Male;Female;Unknown	AMP-CMD	participant_data	sex_ontology_term_id	ontology_PATO	PATO:0000384;PATO:0000383	PATO:0000384=Male;PATO:0000383=Female	
-sex	Male;Female;Unknown	AMP-RA-SLE	ark.ClinicalMetadataTemplate.csv	sex	lowercase	male;female	male=Male;female=Female	

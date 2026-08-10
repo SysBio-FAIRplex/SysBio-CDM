@@ -1,0 +1,27 @@
+{
+  "variable": "ancestry__ontology_label",
+  "cde_id": "68",
+  "definition": "Standardized ontology term label for participant ancestry",
+  "src_schema_ref": [],
+  "amp_data_files": [],
+  "program": "AMP-CMD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "string"
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 3046853,
+      "name": "Race",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [],
+  "links": [],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "manual_approval": false,
+  "note": "Authored from inputs/cde_dictionary.jsonl (definition + value set verbatim) + sibling self_reported_ethnicity.json. Open HANCESTRO ancestry label (dictionary gives no enumerable values) -> observation 3046853 'Race'; raw label preserved in value_source_value (passthrough)."
+}

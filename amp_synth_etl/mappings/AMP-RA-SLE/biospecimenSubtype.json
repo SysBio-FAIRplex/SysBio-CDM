@@ -1,0 +1,91 @@
+{
+  "variable": "biospecimenSubtype",
+  "definition": "Biospecimen status before sample is processed into a scRNA-seq library. Several scRNA-seq technologies support a variety of sample processing methods which can introduces sources of technical variation.",
+  "src_schema_ref": [
+    "ark/data_model-main/ark.all_attributes.csv"
+  ],
+  "amp_data_files": [
+    "BiospecimenMetadataTemplate.csv"
+  ],
+  "program": "AMP-RA-SLE",
+  "grain": "specimen",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "FFPE tissue",
+      "PFA-fixed tissue",
+      "cell or tissue lysate",
+      "cell suspension",
+      "flow-sorted cells",
+      "fresh tissue",
+      "frozen tissue/fluid",
+      "nuclei suspension",
+      "supernatant"
+    ]
+  },
+  "lands": {
+    "table": "specimen"
+  },
+  "value_map": [
+    {
+      "value": "FFPE tissue",
+      "write": {
+        "value_source_value": "FFPE tissue"
+      }
+    },
+    {
+      "value": "PFA-fixed tissue",
+      "write": {
+        "value_source_value": "PFA-fixed tissue"
+      }
+    },
+    {
+      "value": "cell or tissue lysate",
+      "write": {
+        "value_source_value": "cell or tissue lysate"
+      }
+    },
+    {
+      "value": "cell suspension",
+      "write": {
+        "value_source_value": "cell suspension"
+      }
+    },
+    {
+      "value": "flow-sorted cells",
+      "write": {
+        "value_source_value": "flow-sorted cells"
+      }
+    },
+    {
+      "value": "fresh tissue",
+      "write": {
+        "value_source_value": "fresh tissue"
+      }
+    },
+    {
+      "value": "frozen tissue/fluid",
+      "write": {
+        "value_source_value": "frozen tissue/fluid"
+      }
+    },
+    {
+      "value": "nuclei suspension",
+      "write": {
+        "value_source_value": "nuclei suspension"
+      }
+    },
+    {
+      "value": "supernatant",
+      "write": {
+        "value_source_value": "supernatant"
+      }
+    }
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "links": [],
+  "manual_approval": true,
+  "note": "Authored VERBATIM from the official ARK data model inputs/amp_dictionaries/ark/data_model-main/ark.all_attributes.csv (Attribute biospecimenSubtype: Description + Valid Values; Required=FALSE). Grain specimen; one row per ARK biospecimen. Approving this (with the other biospecimen maps) opens the AMP-RA-SLE specimen generation gate at 03_generate.py:416 (model[prog]['specimen'] non-empty); specimen rows/skeleton come from scripts/gen/lineage.plan(), and cdm.specimen is rendered by 11_render_extensions (specimen source attribute), not by 09_map_etl. manual_approval left false for your review."
+}

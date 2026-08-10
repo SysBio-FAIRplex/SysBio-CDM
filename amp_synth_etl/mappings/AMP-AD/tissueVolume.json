@@ -1,0 +1,36 @@
+{
+  "variable": "tissueVolume",
+  "cde_id": "55",
+  "definition": "Volume of tissue sample measured",
+  "src_schema_ref": [],
+  "amp_data_files": ["ROSMAP_biospecimen_metadata.csv"],
+  "program": "AMP-AD",
+  "grain": "specimen",
+  "reads_as": {
+    "datatype": "float",
+    "unit": "mm^3"
+  },
+  "lands": {
+    "table": "measurement",
+    "measurement_concept_id": {
+      "id": 4013576,
+      "name": "Specimen volume measurement",
+      "domain": "Measurement"
+    }
+  },
+  "value_map": [
+    {
+      "value": "<any in range>",
+      "write": {
+        "value_as_number": "<value>",
+        "value_source_value": "<raw>"
+      }
+    }
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "links": [],
+  "manual_approval": false,
+  "note": "Authored from inputs/cde_dictionary.jsonl (AMP-AD row, cde_id 55) + numeric sibling age_death.json. Tissue volume (units mm^3 from the dictionary); concept 4013576 'Specimen volume measurement' from curated_concept."
+}

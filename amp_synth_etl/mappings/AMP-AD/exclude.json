@@ -1,0 +1,100 @@
+{
+  "variable": "exclude",
+  "cde_id": "30",
+  "definition": "Flag indicating whether data should be excluded from analysis",
+  "src_schema_ref": [],
+  "amp_data_files": ["ROSMAP_biospecimen_metadata.csv"],
+  "program": "AMP-AD",
+  "grain": "specimen",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "True",
+      "False",
+      "1",
+      "0"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 4203251,
+      "name": "Patient data status",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "True",
+      "write": {
+        "value_as_concept_id": {
+          "id": 45877994,
+          "name": "Yes"
+        },
+        "value_source_value": "True",
+        "value_as_string": "True"
+      }
+    },
+    {
+      "value": "TRUE",
+      "write": {
+        "value_as_concept_id": {
+          "id": 45877994,
+          "name": "Yes"
+        },
+        "value_source_value": "TRUE",
+        "value_as_string": "TRUE"
+      }
+    },
+    {
+      "value": "1",
+      "write": {
+        "value_as_concept_id": {
+          "id": 45877994,
+          "name": "Yes"
+        },
+        "value_source_value": "1",
+        "value_as_string": "1"
+      }
+    },
+    {
+      "value": "False",
+      "write": {
+        "value_as_concept_id": {
+          "id": 45878245,
+          "name": "No"
+        },
+        "value_source_value": "False",
+        "value_as_string": "False"
+      }
+    },
+    {
+      "value": "FALSE",
+      "write": {
+        "value_as_concept_id": {
+          "id": 45878245,
+          "name": "No"
+        },
+        "value_source_value": "FALSE",
+        "value_as_string": "FALSE"
+      }
+    },
+    {
+      "value": "0",
+      "write": {
+        "value_as_concept_id": {
+          "id": 45878245,
+          "name": "No"
+        },
+        "value_source_value": "0",
+        "value_as_string": "0"
+      }
+    }
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "links": [],
+  "manual_approval": false,
+  "note": "Authored from inputs/cde_dictionary.jsonl (AMP-AD row, cde_id 30); concept 4203251 'Patient data status' from curated_concept as the best fit for a QC record-exclusion flag (no AD sibling). True/1->Yes(45877994), False/0->No(45878245); TRUE/FALSE upper-case variants (seen in the source) also mapped, mirroring the isHispanic.json Yes/No pattern."
+}

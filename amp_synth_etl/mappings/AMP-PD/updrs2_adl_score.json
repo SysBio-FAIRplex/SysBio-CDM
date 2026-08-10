@@ -1,0 +1,40 @@
+{
+  "variable": "updrs2_adl_score",
+  "cde_id": "530",
+  "definition": "UPDRS - Activities of Daily Living Sub-total (UPD146)",
+  "src_schema_ref": ["UPDRS_dictionary.csv"],
+  "amp_data_files": ["UPDRS.csv"],
+  "program": "AMP-PD",
+  "grain": "visit",
+  "reads_as": {
+    "datatype": "integer",
+    "range": {
+      "min": 0.0,
+      "max": 52.0
+    }
+  },
+  "lands": {
+    "table": "measurement",
+    "measurement_concept_id": {
+      "id": 46236409,
+      "name": "Activities of daily living panel [UPDRS]",
+      "domain": "Measurement"
+    }
+  },
+  "value_map": [
+    {
+      "value": "<any in range>",
+      "write": {
+        "value_as_number": "<value>",
+        "value_source_value": "<raw>"
+      }
+    }
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map",
+    "visit_occurrence_id": "cdm.visit_occurrence"
+  },
+  "links": [],
+  "manual_approval": false,
+  "note": "Authored from inputs/cde_dictionary.jsonl (cde_id 530) using the sibling map upd120b_tremor_rest_hand_rt.json for the OMOP landing; landing concept from exports/curated_concept_tables.sqlite."
+}

@@ -1,0 +1,27 @@
+{
+  "variable": "organ__ontology_label",
+  "cde_id": "106",
+  "definition": "Organ Ontology Label",
+  "src_schema_ref": [],
+  "amp_data_files": [],
+  "program": "AMP-CMD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "string"
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 596878,
+      "name": "Please specify organ.",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [],
+  "links": [],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "manual_approval": false,
+  "note": "Authored from inputs/cde_dictionary.jsonl (definition + value set verbatim). Organ ontology label (open) -> observation 596878 'Please specify organ.'; raw label preserved in value_source_value (passthrough)."
+}

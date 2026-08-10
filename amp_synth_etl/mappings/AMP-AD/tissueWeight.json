@@ -1,0 +1,35 @@
+{
+  "variable": "tissueWeight",
+  "cde_id": "56",
+  "definition": "Weight of tissue sample collected",
+  "src_schema_ref": [],
+  "amp_data_files": ["ROSMAP_biospecimen_metadata.csv"],
+  "program": "AMP-AD",
+  "grain": "specimen",
+  "reads_as": {
+    "datatype": "float"
+  },
+  "lands": {
+    "table": "measurement",
+    "measurement_concept_id": {
+      "id": 3020366,
+      "name": "Weight of Tissue",
+      "domain": "Measurement"
+    }
+  },
+  "value_map": [
+    {
+      "value": "<any in range>",
+      "write": {
+        "value_as_number": "<value>",
+        "value_source_value": "<raw>"
+      }
+    }
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "links": [],
+  "manual_approval": false,
+  "note": "Authored from inputs/cde_dictionary.jsonl (AMP-AD row, cde_id 56) + numeric sibling age_death.json. Tissue weight (dictionary: positive numeric, grams/milligrams; no single unit asserted); concept 3020366 'Weight of Tissue' from curated_concept."
+}

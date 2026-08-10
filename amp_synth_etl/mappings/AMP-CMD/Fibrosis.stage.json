@@ -1,0 +1,75 @@
+{
+  "variable": "Fibrosis.stage",
+  "cde_id": "95",
+  "definition": "Histological stage of liver fibrosis",
+  "src_schema_ref": [],
+  "amp_data_files": [],
+  "program": "AMP-CMD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "F0 (No fibrosis)",
+      "F1 (Portal fibrosis)",
+      "F2 (Periportal fibrosis)",
+      "F3 (Bridging fibrosis)",
+      "F4 (Cirrhosis)"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 3048563,
+      "name": "Fibrosis stage",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "F0 (No fibrosis)",
+      "write": {
+        "value_as_number": "0",
+        "value_as_string": "F0 (No fibrosis)",
+        "value_source_value": "F0 (No fibrosis)"
+      }
+    },
+    {
+      "value": "F1 (Portal fibrosis)",
+      "write": {
+        "value_as_number": "1",
+        "value_as_string": "F1 (Portal fibrosis)",
+        "value_source_value": "F1 (Portal fibrosis)"
+      }
+    },
+    {
+      "value": "F2 (Periportal fibrosis)",
+      "write": {
+        "value_as_number": "2",
+        "value_as_string": "F2 (Periportal fibrosis)",
+        "value_source_value": "F2 (Periportal fibrosis)"
+      }
+    },
+    {
+      "value": "F3 (Bridging fibrosis)",
+      "write": {
+        "value_as_number": "3",
+        "value_as_string": "F3 (Bridging fibrosis)",
+        "value_source_value": "F3 (Bridging fibrosis)"
+      }
+    },
+    {
+      "value": "F4 (Cirrhosis)",
+      "write": {
+        "value_as_number": "4",
+        "value_as_string": "F4 (Cirrhosis)",
+        "value_source_value": "F4 (Cirrhosis)"
+      }
+    }
+  ],
+  "links": [],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "manual_approval": false,
+  "note": "Authored from inputs/cde_dictionary.jsonl (definition + value set verbatim) + sibling adj_primary_dxC.json. Liver fibrosis stage F0-F4 -> observation using concept 3048563 'Fibrosis stage' (LOINC, native domain Measurement) so the F-code label can be kept in value_as_string; stage number in value_as_number."
+}

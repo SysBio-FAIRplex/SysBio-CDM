@@ -1,0 +1,86 @@
+{
+  "variable": "Hepatocyte.necrosis",
+  "cde_id": "98",
+  "definition": "Presence or severity of hepatocyte necrosis observed in liver tissue",
+  "src_schema_ref": [],
+  "amp_data_files": [],
+  "program": "AMP-CMD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "Absent",
+      "Minimal",
+      "Mild",
+      "Moderate",
+      "Severe"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 4280654,
+      "name": "Necrosis",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "Absent",
+      "write": {
+        "value_as_concept_id": {
+          "id": 4132135,
+          "name": "Absent"
+        },
+        "value_as_string": "Absent",
+        "value_source_value": "Absent"
+      }
+    },
+    {
+      "value": "Minimal",
+      "write": {
+        "value_as_string": "Minimal",
+        "value_source_value": "Minimal"
+      }
+    },
+    {
+      "value": "Mild",
+      "write": {
+        "value_as_concept_id": {
+          "id": 45883535,
+          "name": "Mild"
+        },
+        "value_as_string": "Mild",
+        "value_source_value": "Mild"
+      }
+    },
+    {
+      "value": "Moderate",
+      "write": {
+        "value_as_concept_id": {
+          "id": 45877983,
+          "name": "Moderate"
+        },
+        "value_as_string": "Moderate",
+        "value_source_value": "Moderate"
+      }
+    },
+    {
+      "value": "Severe",
+      "write": {
+        "value_as_concept_id": {
+          "id": 45883536,
+          "name": "Severe"
+        },
+        "value_as_string": "Severe",
+        "value_source_value": "Severe"
+      }
+    }
+  ],
+  "links": [],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "manual_approval": false,
+  "note": "Authored from inputs/cde_dictionary.jsonl (definition + value set verbatim) + sibling adj_primary_dxC.json. Hepatocyte necrosis severity -> observation 4280654 'Necrosis'; severity terms -> value_as_concept where a curated Meas Value exists (Absent 4132135, Mild 45883535, Moderate 45877983, Severe 45883536), else value_as_string."
+}

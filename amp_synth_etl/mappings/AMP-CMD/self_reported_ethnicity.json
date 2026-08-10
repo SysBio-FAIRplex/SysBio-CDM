@@ -1,0 +1,26 @@
+{
+  "variable": "self_reported_ethnicity",
+  "cde_id": "563",
+  "definition": "AMP-CMD self-reported race/ethnicity. Race axis (African American / European American); 'Hispanic or Latin' reported here is an ethnicity with no separate race.",
+  "src_schema_ref": ["cmd_value_set_schema.json"],
+  "amp_data_files": [],
+  "program": "AMP-CMD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "code",
+    "values": ["African American", "European American", "Hispanic or Latin"]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {"id": 3046853, "name": "Race", "domain": "Observation"}
+  },
+  "value_map": [
+    {"value": "African American",  "write": {"value_as_concept_id": {"id": 8516, "name": "Black or African American"}, "value_as_string": "African American", "value_source_value": "African American"}},
+    {"value": "European American", "write": {"value_as_concept_id": {"id": 8527, "name": "White"}, "value_as_string": "European American", "value_source_value": "European American"}},
+    {"value": "Hispanic or Latin", "write": {"value_as_string": "Hispanic or Latino (self-reported; race not separately specified)", "value_source_value": "Hispanic or Latin"}}
+  ],
+  "links": [],
+  "anchored_to": {"person_id": "staging.person_map"},
+  "manual_approval": true,
+  "note": "AMP-CMD RACE from self_reported_ethnicity (a combined race/ethnicity field): African American -> Black 8516, European American -> White 8527, 'Hispanic or Latin' -> value_as_string (Hispanic is an ethnicity, not an OMB race). Lands observation 3046853 'Race'; CMD has no `race` column, so no overlap with race.json. Hispanic ethnicity STATUS is mapped separately from np_latino_yn -> Ethnicity."
+}

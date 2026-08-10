@@ -1,0 +1,55 @@
+{
+  "variable": "mri_results",
+  "cde_id": "252",
+  "definition": "MRI results",
+  "src_schema_ref": ["MRI_dictionary.csv"],
+  "amp_data_files": ["MRI.csv"],
+  "program": "AMP-PD",
+  "grain": "visit",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "Abnormal, not clinically significant",
+      "Normal",
+      "Abnormal, clinically significant"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 4013636,
+      "name": "Magnetic resonance imaging",
+      "domain": "Procedure"
+    }
+  },
+  "value_map": [
+    {
+      "value": "Abnormal, not clinically significant",
+      "write": {
+        "value_as_string": "Abnormal, not clinically significant",
+        "value_source_value": "Abnormal, not clinically significant"
+      }
+    },
+    {
+      "value": "Normal",
+      "write": {
+        "value_as_string": "Normal",
+        "value_source_value": "Normal"
+      }
+    },
+    {
+      "value": "Abnormal, clinically significant",
+      "write": {
+        "value_as_string": "Abnormal, clinically significant",
+        "value_source_value": "Abnormal, clinically significant"
+      }
+    }
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map",
+    "visit_occurrence_id": "cdm.visit_occurrence"
+  },
+  "links": [],
+  "manual_approval": false,
+  "note": "Authored from cde_dictionary (cde_id 252); imaging-result -> value_as_string pattern copied from sibling datscan_visual_interpretation.json."
+}

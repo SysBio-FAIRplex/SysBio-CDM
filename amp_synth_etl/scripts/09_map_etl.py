@@ -37,6 +37,27 @@ def staging_columns():
     ddl = open(os.path.join(ROOT, "cdm_load", "_amp_clinical_ddl.sql"), encoding="utf-8").read()
     return set(re.findall(r'^\s+"?([A-Za-z_][\w.]*)"?\s+(?:text|date),?$', ddl, re.M))
 
+PREC = {}   # (superseded_var, concept_id) -> native_var; native source wins the CDM record (config/source_precedence.tsv)
+def load_precedence():
+    """config/source_precedence.tsv: native_col wins over superseded_col per concept. The superseded map's
+    INSERT is suppressed for any person whose native column is populated -> ONE harmonized CDM record per
+    concept per person, while BOTH source columns stay in staging for the source-like emitter. This is CDM-
+    landing harmonization only (source-level harmonization is a separate, future CDE-Registry concern)."""
+    path = os.path.join(ROOT, "config", "source_precedence.tsv")
+    out = {}
+    if not os.path.exists(path):
+        return out
+    for line in open(path, encoding="utf-8").read().splitlines()[1:]:
+        if not line.strip() or line.lstrip().startswith("#"):
+            continue
+        parts = line.split("\t")
+        if len(parts) < 3:
+            continue
+        cid, native, superseded = parts[0].strip(), parts[1].strip(), parts[2].strip()
+        if cid.isdigit() and native and superseded:
+            out[(superseded, int(cid))] = native
+    return out
+
 def defining(m):
     t = (m.get("lands") or {}).get("table")
     if t not in ("observation", "measurement"): return None, None
@@ -89,6 +110,11 @@ def emit_insert(m, var, tbl, cid):
                "LEFT JOIN cdm.visit_occurrence vo ON vo.visit_source_value = src.visit_source_value AND vo.person_id = p.person_id\n")
         where_ne = (f"  AND NOT EXISTS (SELECT 1 FROM cdm.{tbl} t WHERE t.person_id = p.person_id "
                     f"AND t.{tbl}_concept_id = {cid} AND t.{tbl}_source_value = {sq(var)})")
+    nat = PREC.get((var, cid))                                 # source precedence: the native source wins the record
+    if nat:
+        where_ne += ("\n  AND NOT EXISTS (SELECT 1 FROM staging.amp_clinical n"
+                     " WHERE n.person_source_value = src.person_source_value"
+                     f" AND NULLIF(n.{ident(nat)}, '') IS NOT NULL)")
     if not numeric:
         frm += f"LEFT JOIN _valuemap vm ON vm.variable = {sq(var)} AND vm.defining_concept = {cid} AND vm.source_value = {SRC}\n"
     return (f"-- [{var}] -> {tbl} {cid}  ({'numeric' if numeric else 'coded'}, {'visit' if visit else 'subject'}{', fallback ' + '+'.join([var]+fb) if fb else ''})\n"
@@ -118,9 +144,10 @@ def _approved(v):
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument("--all", action="store_true"); a = ap.parse_args()
     stcols = staging_columns()
+    PREC.update({k: v for k, v in load_precedence().items() if v in stcols})  # activate rows whose native col exists in staging
     inserts, links, valuemap = [], [], {}
     n_scope = n_concept_less = n_numeric = n_coded = n_subject = n_no_source = 0
-    for p in sorted(glob.glob(os.path.join(MAPS, "*.json"))):
+    for p in sorted(glob.glob(os.path.join(MAPS, "**", "*.json"), recursive=True)):
         m = json.load(open(p, encoding="utf-8"))
         var = m.get("variable")
         if not a.all and not _approved(m.get("manual_approval")):

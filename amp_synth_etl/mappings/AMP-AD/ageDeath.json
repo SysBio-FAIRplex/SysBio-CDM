@@ -1,0 +1,37 @@
+{
+  "variable": "ageDeath",
+  "cde_registry_label": "ageDeath",
+  "cde_id": "567",
+  "definition": "Age at death (DiverseCohorts)",
+  "src_schema_ref": [],
+  "amp_data_files": ["AMP-AD_DiverseCohorts_individual_metadata.csv"],
+  "program": "AMP-AD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "integer",
+    "unit": "years"
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 3038421,
+      "name": "Age at death",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "<any in range>",
+      "write": {
+        "value_as_number": "<value>",
+        "value_source_value": "<raw>"
+      }
+    }
+  ],
+  "links": [],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "manual_approval": false,
+  "note": "DiverseCohorts age-at-death twin of the ROSMAP-native age_death (cde 5): same numeric model (years, '90+' cap). Differ only in source file, range floor (DiverseCohorts 20-90 vs ROSMAP 66-90, a data difference) and missing token ('missing or unknown' vs ROSMAP ''; ROSMAP '' most often means a still-LIVING participant, not missing). AD-wide (NOT in AMP_AD_ROSMAP_GATE). CDM landing harmonized via config/source_precedence.tsv: age_death (ROSMAP-native) wins over ageDeath on 3038421. Note: a numeric field has no 'Unknown' value, so a person with no death age simply lands no age-at-death record. manual_approval false pending review."
+}

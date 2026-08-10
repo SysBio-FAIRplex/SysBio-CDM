@@ -1,0 +1,28 @@
+{
+  "variable": "reag",
+  "cde_id": "44",
+  "definition": "NIA-Reagan Institute criteria: likelihood of Alzheimer's disease based on neuropathological assessment (Braak stage and CERAD score).",
+  "src_schema_ref": [],
+  "amp_data_files": ["AMP-AD_DiverseCohorts_individual_metadata.csv"],
+  "program": "AMP-AD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "code",
+    "values": ["High Likelihood", "Intermediate Likelihood", "Low Likelihood", "No AD", "missing or unknown"]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": { "id": 3187945, "name": "Neuropathology observable entity", "domain": "Observation" }
+  },
+  "value_map": [
+    { "value": "High Likelihood", "write": { "value_as_string": "High Likelihood", "value_source_value": "High Likelihood" } },
+    { "value": "Intermediate Likelihood", "write": { "value_as_string": "Intermediate Likelihood", "value_source_value": "Intermediate Likelihood" } },
+    { "value": "Low Likelihood", "write": { "value_as_string": "Low Likelihood", "value_source_value": "Low Likelihood" } },
+    { "value": "No AD", "write": { "value_as_string": "No AD", "value_source_value": "No AD" } },
+    { "value": "missing or unknown", "write": { "value_as_string": "missing or unknown", "value_source_value": "missing or unknown" } }
+  ],
+  "links": [],
+  "anchored_to": { "person_id": "staging.person_map" },
+  "manual_approval": false,
+  "note": "NIA-Reagan AD-likelihood (reag). cde_dictionary row 44 had lost its description and value set (a parse failure); restored from the real AMP-AD_DiverseCohorts_individual_metadata.csv values (fidelity_distributions.json: High/Intermediate/Low Likelihood, No AD). Lands observation 3187945 'Neuropathology observable entity' (the same 'what' concept ADoutcome.json uses), with the likelihood level in value_as_string. manual_approval false pending review."
+}

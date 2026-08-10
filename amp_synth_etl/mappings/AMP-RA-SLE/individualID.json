@@ -1,0 +1,35 @@
+{
+  "variable": "individualID",
+  "cde_id": "550",
+  "definition": "Unique identifier assigned to each study participant. For multi-specimen data files provide all IDs in a comma-separated list.",
+  "src_schema_ref": ["DiverseCohorts_DataDictionary.pdf", "DiverseCohorts_DataDictionary_ExtNeuropath.pdf"],
+  "amp_data_files": [],
+  "program": "AMP-RA-SLE",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "string"
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 40768976,
+      "name": "Participant [Identifier]",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "<any identifier>",
+      "write": {
+        "value_as_string": "<value>",
+        "value_source_value": "<raw>"
+      }
+    }
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "links": [],
+  "manual_approval": false,
+  "note": "Authored from inputs/cde_dictionary.jsonl (AMP-RA-SLE row, cde_id 550) copying the approved identifier sibling mappings/AMP-PD/participant_id.json: subject identifier lands in observation under concept 40768976 'Participant [Identifier]'. Value set 'Identifier' is free text (no enum), so a single passthrough sentinel entry writes value_as_string/value_source_value; datatype string. Subject-grain, anchored to person_id only like the other AMP-RA-SLE subject-grain maps (diagnosis/project/program)."
+}

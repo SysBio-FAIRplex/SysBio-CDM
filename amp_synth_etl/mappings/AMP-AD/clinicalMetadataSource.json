@@ -1,0 +1,27 @@
+{
+  "variable": "clinicalMetadataSource",
+  "cde_id": "18",
+  "definition": "Source system or repository from which clinical metadata was derived",
+  "src_schema_ref": [],
+  "amp_data_files": ["AMP-AD_DiverseCohorts_individual_metadata.csv"],
+  "program": "AMP-AD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "string"
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 42528934,
+      "name": "Participant identifier",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "links": [],
+  "manual_approval": false,
+  "note": "Authored from inputs/cde_dictionary.jsonl (AMP-AD row, cde_id 18) + passthrough sibling dti_measure.json (and the provenance precedent mappings/AMP-RA-SLE/program.json which lands a provenance string under 42528934). amp_value_set is free text so the metadata-source string lands via value_source_value; concept 42528934 'Participant identifier' from curated_concept as the generic provenance placeholder."
+}

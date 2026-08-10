@@ -1,0 +1,82 @@
+{
+  "variable": "disease_status",
+  "cde_id": "87",
+  "definition": "Classification of the participant's current disease state or condition status",
+  "src_schema_ref": [],
+  "amp_data_files": [],
+  "program": "AMP-CMD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "Active",
+      "Remission",
+      "Progression",
+      "Stable",
+      "Resolved",
+      "Unknown"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 1989567,
+      "name": "Condition clinical status",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "Active",
+      "write": {
+        "value_as_string": "Active",
+        "value_source_value": "Active"
+      }
+    },
+    {
+      "value": "Remission",
+      "write": {
+        "value_as_string": "Remission",
+        "value_source_value": "Remission"
+      }
+    },
+    {
+      "value": "Progression",
+      "write": {
+        "value_as_string": "Progression",
+        "value_source_value": "Progression"
+      }
+    },
+    {
+      "value": "Stable",
+      "write": {
+        "value_as_string": "Stable",
+        "value_source_value": "Stable"
+      }
+    },
+    {
+      "value": "Resolved",
+      "write": {
+        "value_as_string": "Resolved",
+        "value_source_value": "Resolved"
+      }
+    },
+    {
+      "value": "Unknown",
+      "write": {
+        "value_as_concept_id": {
+          "id": 45877986,
+          "name": "Unknown"
+        },
+        "value_as_string": "Unknown",
+        "value_source_value": "Unknown"
+      }
+    }
+  ],
+  "links": [],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "manual_approval": false,
+  "note": "Authored from inputs/cde_dictionary.jsonl (definition + value set verbatim) + sibling mappings/shared/diagnosis_type.json (status -> observation, value_as_string). Disease-course status -> observation 1989567 'Condition clinical status'; 'Unknown' -> value_as_concept 45877986."
+}

@@ -1,0 +1,41 @@
+{
+  "variable": "sbr_caudate_r",
+  "cde_registry_label": "sbr_caudate_r",
+  "cde_id": "375",
+  "definition": "Brain region used for ROI sampling for SBR quantitative analysis - right caudate SBR",
+  "src_schema_ref": ["DaTSCAN_SBR_dictionary.csv"],
+  "amp_data_files": ["DaTSCAN_SBR.csv"],
+  "program": "AMP-PD",
+  "grain": "visit",
+  "reads_as": {
+    "datatype": "integer",
+    "range": {
+      "min": 0,
+      "max": 5
+    }
+  },
+  "lands": {
+    "table": "measurement",
+    "measurement_concept_id": {
+      "id": 4327116,
+      "name": "Single photon emission computed tomography for dopamine transport",
+      "domain": "Procedure"
+    }
+  },
+  "value_map": [
+    {
+      "value": "<any in range>",
+      "write": {
+        "value_as_number": "<value>",
+        "value_source_value": "<raw>"
+      }
+    }
+  ],
+  "links": [],
+  "anchored_to": {
+    "person_id": "staging.person_map",
+    "visit_occurrence_id": "cdm.visit_occurrence"
+  },
+  "manual_approval": false,
+  "note": "authored from cde_dictionary (cde_id 375) + sibling scan_months_after_baseline.json (DaTSCAN family, measurement, concept 4327116); striatal binding ratio quantitative value; range 0-5 from amp_value_set (observed source values may marginally exceed 5 -> confirm bound); decimals present -> confirm integer vs float"
+}

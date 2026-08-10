@@ -1,0 +1,40 @@
+{
+  "variable": "mms109_close_eyes_score",
+  "cde_id": "206",
+  "definition": "MMSE - Read This And Do What It Says (MMS109)",
+  "src_schema_ref": ["MMSE_dictionary.csv"],
+  "amp_data_files": ["MMSE.csv"],
+  "program": "AMP-PD",
+  "grain": "visit",
+  "reads_as": {
+    "datatype": "integer",
+    "range": {
+      "min": 0,
+      "max": 3
+    }
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 4187224,
+      "name": "Language comprehension",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "<any in range>",
+      "write": {
+        "value_as_number": "<value>",
+        "value_source_value": "<raw>"
+      }
+    }
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map",
+    "visit_occurrence_id": "cdm.visit_occurrence"
+  },
+  "links": [],
+  "manual_approval": false,
+  "note": "Authored from inputs/cde_dictionary.jsonl (cde_id 206); numeric sentinel value_map and observation landing copied from sibling MMSE total-score map mmse.json. Concept 4187224 'Language comprehension' selected from curated_concept for the read-and-obey ('Close your eyes') reading-comprehension subscore."
+}

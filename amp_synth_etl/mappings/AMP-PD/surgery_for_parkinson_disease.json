@@ -1,0 +1,26 @@
+{
+  "variable": "surgery_for_parkinson_disease",
+  "cde_id": "391",
+  "definition": "Type Of Surgery For Parkinson Disease",
+  "src_schema_ref": ["PD_Medical_History_dictionary.csv"],
+  "amp_data_files": ["PD_Medical_History.csv"],
+  "program": "AMP-PD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "string"
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 0,
+      "name": "TODO: choose landing concept"
+    }
+  },
+  "value_map": [],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "links": [],
+  "manual_approval": false,
+  "note": "DRAFT STUB (manual_approval:false, landing concept_id 0 = TODO). Flagged: dictionary value set is empty (parse gap); real values in fidelity are DBS / Levodopa Gel / No / Other and need restoring. definition + value set are from cde_dictionary (cde 391); set a real *_concept_id and value_as_concept_id(s), then flip manual_approval to enable."
+}

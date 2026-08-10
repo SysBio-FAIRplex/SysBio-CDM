@@ -1,0 +1,79 @@
+{
+  "variable": "weightUnits",
+  "cde_registry_label": "weightUnits",
+  "cde_id": "560",
+  "definition": "Abbreviated unit of measure of value provided for `weight`.",
+  "src_schema_ref": [],
+  "amp_data_files": [],
+  "program": "AMP-RA-SLE",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "lb",
+      "kg",
+      "g",
+      "oz"
+    ]
+  },
+  "lands": {
+    "table": "measurement",
+    "measurement_concept_id": {
+      "id": 4099154,
+      "name": "Body weight",
+      "domain": "Measurement"
+    }
+  },
+  "value_map": [
+    {
+      "value": "lb",
+      "write": {
+        "unit_concept_id": {
+          "id": 8739,
+          "name": "pound (US)"
+        },
+        "unit_source_value": "lb",
+        "value_source_value": "lb"
+      }
+    },
+    {
+      "value": "kg",
+      "write": {
+        "unit_concept_id": {
+          "id": 9529,
+          "name": "kilogram"
+        },
+        "unit_source_value": "kg",
+        "value_source_value": "kg"
+      }
+    },
+    {
+      "value": "g",
+      "write": {
+        "unit_concept_id": {
+          "id": 8504,
+          "name": "gram"
+        },
+        "unit_source_value": "g",
+        "value_source_value": "g"
+      }
+    },
+    {
+      "value": "oz",
+      "write": {
+        "unit_concept_id": {
+          "id": 9373,
+          "name": "ounce (avoirdupois)"
+        },
+        "unit_source_value": "oz",
+        "value_source_value": "oz"
+      }
+    }
+  ],
+  "links": [],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "manual_approval": true,
+  "note": "Body weight units; unit values carry proper unit_concept_id. NOTE: 09_map_etl.py value-map pipeline does not yet emit unit_concept_id/unit_source_value (engine to be extended separately) — units will not land until then."
+}

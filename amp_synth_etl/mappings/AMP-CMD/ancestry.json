@@ -1,0 +1,114 @@
+{
+  "variable": "ancestry",
+  "cde_id": "66",
+  "definition": "Genetic ancestry or ancestral background of the participant",
+  "src_schema_ref": [],
+  "amp_data_files": [],
+  "program": "AMP-CMD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "European",
+      "African",
+      "East Asian",
+      "South Asian",
+      "Hispanic/Latino",
+      "Native American",
+      "Middle Eastern",
+      "Mixed"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 3046853,
+      "name": "Race",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "European",
+      "write": {
+        "value_as_concept_id": {
+          "id": 8527,
+          "name": "White"
+        },
+        "value_as_string": "European",
+        "value_source_value": "European"
+      }
+    },
+    {
+      "value": "African",
+      "write": {
+        "value_as_concept_id": {
+          "id": 8516,
+          "name": "Black or African American"
+        },
+        "value_as_string": "African",
+        "value_source_value": "African"
+      }
+    },
+    {
+      "value": "East Asian",
+      "write": {
+        "value_as_concept_id": {
+          "id": 8515,
+          "name": "Asian"
+        },
+        "value_as_string": "East Asian",
+        "value_source_value": "East Asian"
+      }
+    },
+    {
+      "value": "South Asian",
+      "write": {
+        "value_as_concept_id": {
+          "id": 8515,
+          "name": "Asian"
+        },
+        "value_as_string": "South Asian",
+        "value_source_value": "South Asian"
+      }
+    },
+    {
+      "value": "Hispanic/Latino",
+      "write": {
+        "value_as_string": "Hispanic/Latino",
+        "value_source_value": "Hispanic/Latino"
+      }
+    },
+    {
+      "value": "Native American",
+      "write": {
+        "value_as_concept_id": {
+          "id": 8657,
+          "name": "American Indian or Alaska Native"
+        },
+        "value_as_string": "Native American",
+        "value_source_value": "Native American"
+      }
+    },
+    {
+      "value": "Middle Eastern",
+      "write": {
+        "value_as_string": "Middle Eastern",
+        "value_source_value": "Middle Eastern"
+      }
+    },
+    {
+      "value": "Mixed",
+      "write": {
+        "value_as_string": "Mixed",
+        "value_source_value": "Mixed"
+      }
+    }
+  ],
+  "links": [],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "manual_approval": false,
+  "note": "Authored from inputs/cde_dictionary.jsonl (definition + value set verbatim) + sibling mappings/AMP-CMD/self_reported_ethnicity.json (race axis). Genetic ancestry (dictionary example categories) -> observation 3046853 'Race'; named categories -> OMB race value_as_concept, others value_as_string."
+}

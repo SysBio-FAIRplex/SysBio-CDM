@@ -1,0 +1,39 @@
+{
+  "variable": "educ",
+  "cde_id": "28",
+  "definition": "Years of Education",
+  "src_schema_ref": [],
+  "amp_data_files": ["ROSMAP_clinical.csv"],
+  "program": "AMP-AD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "integer",
+    "range": {
+      "min": 0,
+      "max": 30
+    }
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 42528764,
+      "name": "Years of education [#] - Reported",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "<any in range>",
+      "write": {
+        "value_as_number": "<value>",
+        "value_source_value": "<raw>"
+      }
+    }
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "links": [],
+  "manual_approval": true,
+  "note": "Authored from inputs/cde_dictionary.jsonl (AMP-AD row, cde_id 28) + numeric sibling age_death.json. Years of education (dictionary range 0-30); concept 42528764 'Years of education [#] - Reported' from curated_concept."
+}

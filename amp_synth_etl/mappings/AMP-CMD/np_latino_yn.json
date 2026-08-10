@@ -1,0 +1,27 @@
+{
+  "variable": "np_latino_yn",
+  "cde_id": "564",
+  "definition": "AMP-CMD Hispanic/Latino ethnicity indicator (NP Latino yes/no).",
+  "src_schema_ref": ["cmd_value_set_schema.json"],
+  "amp_data_files": [],
+  "program": "AMP-CMD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "code",
+    "values": ["1", "0", "97", "99"]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {"id": 40771985, "name": "Ethnicity OMB.1997", "domain": "Observation"}
+  },
+  "value_map": [
+    {"value": "1",  "write": {"value_as_concept_id": {"id": 38003563, "name": "Hispanic or Latino"}, "value_source_value": "1"}},
+    {"value": "0",  "write": {"value_as_concept_id": {"id": 38003564, "name": "Not Hispanic or Latino"}, "value_source_value": "0"}},
+    {"value": "97", "write": {"value_as_concept_id": {"id": 45877986, "name": "Unknown"}, "value_source_value": "97"}},
+    {"value": "99", "write": {"value_as_concept_id": {"id": 45877986, "name": "Unknown"}, "value_source_value": "99"}}
+  ],
+  "links": [],
+  "anchored_to": {"person_id": "staging.person_map"},
+  "manual_approval": true,
+  "note": "AMP-CMD ETHNICITY (Hispanic status) from np_latino_yn: 1=Hispanic 38003563, 0=Not Hispanic 38003564, 97/99=missing/refused -> Unknown 45877986. Lands observation 40771985 'Ethnicity OMB.1997'; CMD has no `ethnicity` column, so no overlap with ethnicity.json."
+}

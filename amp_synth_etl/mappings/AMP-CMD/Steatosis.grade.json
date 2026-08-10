@@ -1,0 +1,66 @@
+{
+  "variable": "Steatosis.grade",
+  "cde_id": "119",
+  "definition": "Histological grade of hepatic steatosis",
+  "src_schema_ref": [],
+  "amp_data_files": [],
+  "program": "AMP-CMD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 1001762,
+      "name": "Liver steatosis grade in Serum or Plasma Qualitative",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "0",
+      "write": {
+        "value_as_number": "0",
+        "value_as_string": "<5% hepatocytes affected",
+        "value_source_value": "0"
+      }
+    },
+    {
+      "value": "1",
+      "write": {
+        "value_as_number": "1",
+        "value_as_string": "5-33%",
+        "value_source_value": "1"
+      }
+    },
+    {
+      "value": "2",
+      "write": {
+        "value_as_number": "2",
+        "value_as_string": "34-66%",
+        "value_source_value": "2"
+      }
+    },
+    {
+      "value": "3",
+      "write": {
+        "value_as_number": "3",
+        "value_as_string": ">66%",
+        "value_source_value": "3"
+      }
+    }
+  ],
+  "links": [],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "manual_approval": false,
+  "note": "Authored from inputs/cde_dictionary.jsonl (definition + value set verbatim) + sibling adj_primary_dxC.json. Hepatic steatosis grade 0-3 -> observation using concept 1001762 'Liver steatosis grade...' (LOINC, native domain Measurement) so the percent-band label can be kept in value_as_string; grade in value_as_number."
+}

@@ -1,0 +1,78 @@
+{
+  "variable": "tissue",
+  "cde_id": "54",
+  "definition": "Tissue the biosample is a component of",
+  "src_schema_ref": [],
+  "amp_data_files": ["ROSMAP_biospecimen_metadata.csv"],
+  "program": "AMP-AD",
+  "grain": "specimen",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "adipose tissue",
+      "liver tissue",
+      "muscle tissue",
+      "pancreatic tissue",
+      "kidney tissue",
+      "other"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 596879,
+      "name": "Please specify tissue.",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "adipose tissue",
+      "write": {
+        "value_as_string": "adipose tissue",
+        "value_source_value": "adipose tissue"
+      }
+    },
+    {
+      "value": "liver tissue",
+      "write": {
+        "value_as_string": "liver tissue",
+        "value_source_value": "liver tissue"
+      }
+    },
+    {
+      "value": "muscle tissue",
+      "write": {
+        "value_as_string": "muscle tissue",
+        "value_source_value": "muscle tissue"
+      }
+    },
+    {
+      "value": "pancreatic tissue",
+      "write": {
+        "value_as_string": "pancreatic tissue",
+        "value_source_value": "pancreatic tissue"
+      }
+    },
+    {
+      "value": "kidney tissue",
+      "write": {
+        "value_as_string": "kidney tissue",
+        "value_source_value": "kidney tissue"
+      }
+    },
+    {
+      "value": "other",
+      "write": {
+        "value_as_string": "other",
+        "value_source_value": "other"
+      }
+    }
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "links": [],
+  "manual_approval": false,
+  "note": "Authored from inputs/cde_dictionary.jsonl (AMP-AD row, cde_id 54); concept 596879 'Please specify tissue.' from curated_concept (no AD sibling). Tissue label lands via value_as_string; tissue names outside the dictionary enum still land via value_source_value (string passthrough)."
+}

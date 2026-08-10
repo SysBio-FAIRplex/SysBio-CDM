@@ -1,0 +1,102 @@
+{
+  "variable": "hypertension",
+  "cde_id": "99",
+  "definition": "Indicator of hypertension diagnosis or presence of high blood pressure",
+  "src_schema_ref": [],
+  "amp_data_files": [],
+  "program": "AMP-CMD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "True",
+      "False",
+      "Yes",
+      "No",
+      "1",
+      "0"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 316866,
+      "name": "Hypertensive disorder",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "True",
+      "write": {
+        "value_as_concept_id": {
+          "id": 45877994,
+          "name": "Yes"
+        },
+        "value_as_string": "True",
+        "value_source_value": "True"
+      }
+    },
+    {
+      "value": "Yes",
+      "write": {
+        "value_as_concept_id": {
+          "id": 45877994,
+          "name": "Yes"
+        },
+        "value_as_string": "Yes",
+        "value_source_value": "Yes"
+      }
+    },
+    {
+      "value": "1",
+      "write": {
+        "value_as_concept_id": {
+          "id": 45877994,
+          "name": "Yes"
+        },
+        "value_as_string": "1",
+        "value_source_value": "1"
+      }
+    },
+    {
+      "value": "False",
+      "write": {
+        "value_as_concept_id": {
+          "id": 45878245,
+          "name": "No"
+        },
+        "value_as_string": "False",
+        "value_source_value": "False"
+      }
+    },
+    {
+      "value": "No",
+      "write": {
+        "value_as_concept_id": {
+          "id": 45878245,
+          "name": "No"
+        },
+        "value_as_string": "No",
+        "value_source_value": "No"
+      }
+    },
+    {
+      "value": "0",
+      "write": {
+        "value_as_concept_id": {
+          "id": 45878245,
+          "name": "No"
+        },
+        "value_as_string": "0",
+        "value_source_value": "0"
+      }
+    }
+  ],
+  "links": [],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "manual_approval": false,
+  "note": "Authored from inputs/cde_dictionary.jsonl (definition + value set verbatim) + sibling species.json. Hypertension yes/no indicator -> observation 316866 'Hypertensive disorder'; True/Yes/1 -> value_as_concept 45877994 'Yes', False/No/0 -> 45878245 'No'."
+}

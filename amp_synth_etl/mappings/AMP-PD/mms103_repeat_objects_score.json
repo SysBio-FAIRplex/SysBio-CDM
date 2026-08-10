@@ -1,0 +1,40 @@
+{
+  "variable": "mms103_repeat_objects_score",
+  "cde_id": "200",
+  "definition": "MMSE - Repeat Three Unrelated Objects Score: MMSE - Repeat Word 1 (MMS103A), MMSE - Repeat Word 2 (103B), MMSE - Repeat Word 3 (103C) (1 point for each correct answer)",
+  "src_schema_ref": ["MMSE_dictionary.csv"],
+  "amp_data_files": ["MMSE.csv"],
+  "program": "AMP-PD",
+  "grain": "visit",
+  "reads_as": {
+    "datatype": "integer",
+    "range": {
+      "min": 0,
+      "max": 3
+    }
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 4205824,
+      "name": "Immediate verbal memory",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "<any in range>",
+      "write": {
+        "value_as_number": "<value>",
+        "value_source_value": "<raw>"
+      }
+    }
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map",
+    "visit_occurrence_id": "cdm.visit_occurrence"
+  },
+  "links": [],
+  "manual_approval": false,
+  "note": "Authored from inputs/cde_dictionary.jsonl (cde_id 200); numeric sentinel value_map and observation landing copied from sibling MMSE total-score map mmse.json. Concept 4205824 'Immediate verbal memory' selected from curated_concept for the three-object registration/immediate-recall subscore."
+}

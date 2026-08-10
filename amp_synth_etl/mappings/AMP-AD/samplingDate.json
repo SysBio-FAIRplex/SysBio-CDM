@@ -1,0 +1,35 @@
+{
+  "variable": "samplingDate",
+  "cde_id": "48",
+  "definition": "Date when biological sample was collected",
+  "src_schema_ref": [],
+  "amp_data_files": [],
+  "program": "AMP-AD",
+  "grain": "specimen",
+  "reads_as": {
+    "datatype": "date"
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 3045429,
+      "name": "Collection date of Specimen",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "<any date>",
+      "write": {
+        "value_as_string": "<value>",
+        "value_source_value": "<raw>"
+      }
+    }
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "links": [],
+  "manual_approval": false,
+  "note": "Authored from inputs/cde_dictionary.jsonl (AMP-AD row, cde_id 48) + passthrough sibling GUID.json. amp_value_set is a free ISO-8601 date so a single '<any date>' passthrough sentinel writes value_as_string/value_source_value; concept 3045429 'Collection date of Specimen' from curated_concept."
+}

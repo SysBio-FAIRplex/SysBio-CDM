@@ -1,0 +1,110 @@
+{
+  "variable": "diagnosis_at_baseline",
+  "cde_id": "156",
+  "definition": "Diagnosis at Baseline",
+  "src_schema_ref": [],
+  "amp_data_files": [],
+  "program": "AMP-PD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "Parkinson's Disease",
+      "Parkinson’s Disease",
+      "Parkinsonism",
+      "Multiple System Atrophy",
+      "Progressive Supranuclear Palsy",
+      "Dementia With Lewy Bodies",
+      "Corticobasal Degeneration",
+      "Olivopontocerebellar Atrophy",
+      "Fahr's Syndrome",
+      "No PD Nor Other Neurological Disorder"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 4234469,
+      "name": "Diagnosis",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "Parkinson's Disease",
+      "write": {
+        "value_as_string": "Parkinson's Disease",
+        "value_source_value": "Parkinson's Disease"
+      }
+    },
+    {
+      "value": "Parkinson’s Disease",
+      "write": {
+        "value_as_string": "Parkinson’s Disease",
+        "value_source_value": "Parkinson’s Disease"
+      }
+    },
+    {
+      "value": "Parkinsonism",
+      "write": {
+        "value_as_string": "Parkinsonism",
+        "value_source_value": "Parkinsonism"
+      }
+    },
+    {
+      "value": "Multiple System Atrophy",
+      "write": {
+        "value_as_string": "Multiple System Atrophy",
+        "value_source_value": "Multiple System Atrophy"
+      }
+    },
+    {
+      "value": "Progressive Supranuclear Palsy",
+      "write": {
+        "value_as_string": "Progressive Supranuclear Palsy",
+        "value_source_value": "Progressive Supranuclear Palsy"
+      }
+    },
+    {
+      "value": "Dementia With Lewy Bodies",
+      "write": {
+        "value_as_string": "Dementia With Lewy Bodies",
+        "value_source_value": "Dementia With Lewy Bodies"
+      }
+    },
+    {
+      "value": "Corticobasal Degeneration",
+      "write": {
+        "value_as_string": "Corticobasal Degeneration",
+        "value_source_value": "Corticobasal Degeneration"
+      }
+    },
+    {
+      "value": "Olivopontocerebellar Atrophy",
+      "write": {
+        "value_as_string": "Olivopontocerebellar Atrophy",
+        "value_source_value": "Olivopontocerebellar Atrophy"
+      }
+    },
+    {
+      "value": "Fahr's Syndrome",
+      "write": {
+        "value_as_string": "Fahr's Syndrome",
+        "value_source_value": "Fahr's Syndrome"
+      }
+    },
+    {
+      "value": "No PD Nor Other Neurological Disorder",
+      "write": {
+        "value_as_string": "No PD Nor Other Neurological Disorder",
+        "value_source_value": "No PD Nor Other Neurological Disorder"
+      }
+    }
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "links": [],
+  "manual_approval": false,
+  "note": "Authored from cde_dictionary (cde_id 156; value set is a controlled diagnosis vocabulary - AMP-PD diagnosis values reused from initial_diagnosis/most_recent_diagnosis); diagnosis name -> value_as_string; source_file unknown (absent from dictionary and fidelity_distributions)."
+}

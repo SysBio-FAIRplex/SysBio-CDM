@@ -1,0 +1,36 @@
+{
+  "variable": "samplingAge",
+  "cde_id": "46",
+  "definition": "Age of participant at time of sample collection",
+  "src_schema_ref": [],
+  "amp_data_files": ["ROSMAP_biospecimen_metadata.csv"],
+  "program": "AMP-AD",
+  "grain": "specimen",
+  "reads_as": {
+    "datatype": "float",
+    "unit": "years"
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 3034297,
+      "name": "Age at specimen collection",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "<any in range>",
+      "write": {
+        "value_as_number": "<value>",
+        "value_source_value": "<raw>"
+      }
+    }
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "links": [],
+  "manual_approval": false,
+  "note": "Authored from inputs/cde_dictionary.jsonl (AMP-AD row, cde_id 46) + numeric sibling age_death.json. Age (years) at specimen collection; concept 3034297 'Age at specimen collection' from curated_concept."
+}

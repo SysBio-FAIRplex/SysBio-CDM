@@ -2,6 +2,10 @@ CREATE TABLE staging.amp_clinical (
   person_source_value text,
   visit_source_value text,
   visit_date date,
+  "apoeGenotype" text,
+  "ageDeath" text,
+  "race_rosmap" text,
+  "reag" text,
   "ADoutcome" text,
   "Age" text,
   "Age_binned" text,
@@ -525,5 +529,8 @@ CREATE TABLE staging.amp_clinical (
   "visit_name" text,
   "vitiligoType" text,
   "weightUnits" text,
-  "adj_primary_dxC" text
+  "adj_primary_dxC" text,
+  "np_age" text,
+  "self_reported_ethnicity" text,
+  "np_latino_yn" text
 );

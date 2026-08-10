@@ -1,0 +1,41 @@
+{
+  "variable": "roi1_left_rostral",
+  "cde_registry_label": "roi1_left_rostral",
+  "cde_id": "367",
+  "definition": "Left Rostral",
+  "src_schema_ref": ["DTI_dictionary.csv"],
+  "amp_data_files": ["DTI.csv"],
+  "program": "AMP-PD",
+  "grain": "visit",
+  "reads_as": {
+    "datatype": "integer",
+    "range": {
+      "min": 0.0,
+      "max": 1.0
+    }
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 40489396,
+      "name": "Diffusion tractography",
+      "domain": "Procedure"
+    }
+  },
+  "value_map": [
+    {
+      "value": "<any in range>",
+      "write": {
+        "value_as_number": "<value>",
+        "value_source_value": "<raw>"
+      }
+    }
+  ],
+  "links": [],
+  "anchored_to": {
+    "person_id": "staging.person_map",
+    "visit_occurrence_id": "cdm.visit_occurrence"
+  },
+  "manual_approval": false,
+  "note": "authored from cde_dictionary (cde_id 367) + sibling ref1_left_reference.json (DTI family, same source_file); concept 40489396 Diffusion tractography sourced from curated_concept because the sibling is concept-less; decimals present in loaded value_as_number -> confirm integer vs float"
+}

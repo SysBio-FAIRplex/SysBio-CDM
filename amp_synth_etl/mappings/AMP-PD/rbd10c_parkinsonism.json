@@ -1,0 +1,55 @@
+{
+  "variable": "rbd10c_parkinsonism",
+  "cde_id": "356",
+  "definition": "RBD 10c Parkinsonism",
+  "src_schema_ref": ["REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster_dictionary.csv"],
+  "amp_data_files": ["REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster.csv"],
+  "program": "AMP-PD",
+  "grain": "visit",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "No",
+      "Yes"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 4140090,
+      "name": "Parkinsonism",
+      "domain": "Condition"
+    }
+  },
+  "value_map": [
+    {
+      "value": "No",
+      "write": {
+        "value_as_concept_id": {
+          "id": 45878245,
+          "name": "No"
+        },
+        "value_as_string": "No",
+        "value_source_value": "No"
+      }
+    },
+    {
+      "value": "Yes",
+      "write": {
+        "value_as_concept_id": {
+          "id": 45877994,
+          "name": "Yes"
+        },
+        "value_as_string": "Yes",
+        "value_source_value": "Yes"
+      }
+    }
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map",
+    "visit_occurrence_id": "cdm.visit_occurrence"
+  },
+  "links": [],
+  "manual_approval": false,
+  "note": "Authored from inputs/cde_dictionary.jsonl (cde_id 356); OMOP landing copied from sibling RBDSQ comorbidity item map rbd10a_stroke.json (visit-grain observation, curated Yes 45877994 / No 45878245 value crosswalk); curated concept 4140090 (Parkinsonism) chosen for the parkinsonism comorbidity item."
+}

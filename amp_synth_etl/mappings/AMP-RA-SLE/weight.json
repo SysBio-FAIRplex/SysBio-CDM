@@ -1,0 +1,37 @@
+{
+  "variable": "weight",
+  "cde_registry_label": "weight",
+  "cde_id": "565",
+  "definition": "Weight of subject. If value unknown, enter '-1'.",
+  "src_schema_ref": ["ark.ClinicalMetadataTemplate.csv"],
+  "amp_data_files": [],
+  "program": "AMP-RA-SLE",
+  "grain": "subject, visit",
+  "reads_as": {
+    "datatype": "number"
+  },
+  "lands": {
+    "table": "measurement",
+    "measurement_concept_id": {
+      "id": 4099154,
+      "name": "Body weight",
+      "domain": "Measurement"
+    }
+  },
+  "value_map": [
+    {
+      "value": "<any in range>",
+      "write": {
+        "value_as_number": "<value>",
+        "value_source_value": "<raw>"
+      }
+    }
+  ],
+  "links": [],
+  "anchored_to": {
+    "person_id": "staging.person_map",
+    "visit_occurrence_id": "cdm.visit_occurrence"
+  },
+  "manual_approval": false,
+  "note": "AMP-RA-SLE weight from the ARK data model (attribute defined in ark.all_attributes.csv; carried as a column of ark.ClinicalMetadataTemplate.csv), cde_dictionary cde 565. Mirrors height.json: lands measurement 4099154 'Body weight' with the magnitude in value_as_number; batch_06 generates the value visit-to-visit. Unit companion weightUnits (cde 560; g|kg|lb|oz) carries the unit separately (unit_concept_id/unit_source_value emission is pending the 09_map_etl engine extension, per weightUnits.json). ARK uses -1 as the unknown-value sentinel; today it would land as value_as_number -1 -- flag for missing-value handling. manual_approval false pending review."
+}

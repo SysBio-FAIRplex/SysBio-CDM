@@ -162,6 +162,7 @@ def build_model(dicts, specs, ark, cmd):
     drops = defaultdict(list)                           # col -> [tables that drop it]
     declares = defaultdict(list)                        # col -> [tables that declare it]
     banned = {c for cols in E.DROP_AGGREGATE.values() for c in cols}
+    mapped = inputs_io.mapped_variables()   # SINGLE gate: an element with no approved map is not generated
 
     for r in dicts:
         t, c, p, g = r["table"], r["column"], r["program"], r["grain"]
@@ -191,6 +192,8 @@ def build_model(dicts, specs, ark, cmd):
               else specs.get(c))
         if sp is None:
             continue                                    # no spec -> nothing to draw
+        if c not in mapped:
+            continue                                    # no approved mapping file -> excluded (the gate)
 
         # SPECIMEN first: tables_ark.tsv declares the biospecimen template grain='subject' (one
         # template per subject), but a ROW of it is a SPECIMEN -- a person has many.
@@ -395,6 +398,17 @@ def build_person(pid, prog, model, fns, cond, mono):
         if st.get(g["gate"]) not in g["gated_on"]:
             for row in [person["subject"]] + person["visit_rows"]:
                 for c in g["columns"]:
+                    if c in row:
+                        row[c] = None
+
+    # AMP-PD: the LBD-cohort autopsy/clinical columns exist only for study_arm == "LBD".
+    # study_arm is a SUBJECT_CONSTANT (it is not mirrored into `st` the way `cohort` is), so read the
+    # authoritative final value off the subject row.
+    g2 = E.AMP_PD_LBD_GATE
+    if prog == g2["program"]:
+        if person["subject"].get(g2["gate"]) not in g2["gated_on"]:
+            for row in [person["subject"]] + person["visit_rows"]:
+                for c in g2["columns"]:
                     if c in row:
                         row[c] = None
 

@@ -1,0 +1,57 @@
+{
+  "variable": "upd23a_medication_for_pd",
+  "cde_id": "517",
+  "definition": "3a MDS-UPDRS - Medication For Parkinson's Disease (UPD23A)",
+  "src_schema_ref": ["MDS_UPDRS_Part_III_dictionary.csv"],
+  "amp_data_files": ["MDS_UPDRS_Part_III.csv"],
+  "program": "AMP-PD",
+  "grain": "visit",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "No",
+      "Yes"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 37544810,
+      "name": "UPD2-Medication for PD",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "No",
+      "write": {
+        "value_as_number": 0,
+        "value_as_concept_id": {
+          "id": 4188540,
+          "name": "No"
+        },
+        "value_as_string": "No",
+        "value_source_value": "No"
+      }
+    },
+    {
+      "value": "Yes",
+      "write": {
+        "value_as_number": 1,
+        "value_as_concept_id": {
+          "id": 4188539,
+          "name": "Yes"
+        },
+        "value_as_string": "Yes",
+        "value_source_value": "Yes"
+      }
+    }
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map",
+    "visit_occurrence_id": "cdm.visit_occurrence"
+  },
+  "links": [],
+  "manual_approval": false,
+  "note": "Authored from inputs/cde_dictionary.jsonl (cde_id 517) using the sibling map upd2da_dyskinesias_during_exam.json for the OMOP landing; landing concept from exports/curated_concept_tables.sqlite."
+}

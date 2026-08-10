@@ -1,0 +1,88 @@
+{
+  "variable": "fastingState",
+  "cde_id": "32",
+  "definition": "Indicates whether the subject was in a fasting state at the time of specimen collection or clinical assessment",
+  "src_schema_ref": [],
+  "amp_data_files": ["ROSMAP_biospecimen_metadata.csv"],
+  "program": "AMP-AD",
+  "grain": "specimen",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "Fasted",
+      "Non-Fasted",
+      "Unknown"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 3031632,
+      "name": "Fasting status - Reported",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "Fasted",
+      "write": {
+        "value_as_concept_id": {
+          "id": 45877994,
+          "name": "Yes"
+        },
+        "value_source_value": "Fasted",
+        "value_as_string": "Fasted"
+      }
+    },
+    {
+      "value": "Non-Fasted",
+      "write": {
+        "value_as_concept_id": {
+          "id": 45878245,
+          "name": "No"
+        },
+        "value_source_value": "Non-Fasted",
+        "value_as_string": "Non-Fasted"
+      }
+    },
+    {
+      "value": "Unknown",
+      "write": {
+        "value_as_concept_id": {
+          "id": 45877986,
+          "name": "Unknown"
+        },
+        "value_source_value": "Unknown",
+        "value_as_string": "Unknown"
+      }
+    },
+    {
+      "value": "TRUE",
+      "write": {
+        "value_as_concept_id": {
+          "id": 45877994,
+          "name": "Yes"
+        },
+        "value_source_value": "TRUE",
+        "value_as_string": "TRUE"
+      }
+    },
+    {
+      "value": "FALSE",
+      "write": {
+        "value_as_concept_id": {
+          "id": 45878245,
+          "name": "No"
+        },
+        "value_source_value": "FALSE",
+        "value_as_string": "FALSE"
+      }
+    }
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "links": [],
+  "manual_approval": false,
+  "note": "Authored from inputs/cde_dictionary.jsonl (AMP-AD row, cde_id 32); concept 3031632 'Fasting status - Reported' from curated_concept (no AD sibling). Fasted->Yes(45877994), Non-Fasted->No(45878245), Unknown->45877986; the source also carries boolean TRUE/FALSE, mapped Yes/No for robustness."
+}

@@ -1,0 +1,103 @@
+{
+  "variable": "mds_updrs_hoehn_yahr_stage",
+  "cde_id": "540",
+  "definition": "Hoehn and Yahr Stage — consolidated across original UPDRS (UPD143) and MDS-UPDRS (UPD2HY) since the Modified H&Y scale is version-independent.",
+  "src_schema_ref": [],
+  "amp_data_files": [],
+  "program": "AMP-PD",
+  "grain": "visit",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "0",
+      "1",
+      "1.5",
+      "2",
+      "2.5",
+      "3",
+      "4",
+      "5"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 46236404,
+      "name": "Modified Hoen and Yahr stage [UPDRS]",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "0",
+      "write": {
+        "value_as_number": 0,
+        "value_as_string": "0",
+        "value_source_value": "0"
+      }
+    },
+    {
+      "value": "1",
+      "write": {
+        "value_as_number": 1,
+        "value_as_string": "1",
+        "value_source_value": "1"
+      }
+    },
+    {
+      "value": "1.5",
+      "write": {
+        "value_as_number": 1.5,
+        "value_as_string": "1.5",
+        "value_source_value": "1.5"
+      }
+    },
+    {
+      "value": "2",
+      "write": {
+        "value_as_number": 2,
+        "value_as_string": "2",
+        "value_source_value": "2"
+      }
+    },
+    {
+      "value": "2.5",
+      "write": {
+        "value_as_number": 2.5,
+        "value_as_string": "2.5",
+        "value_source_value": "2.5"
+      }
+    },
+    {
+      "value": "3",
+      "write": {
+        "value_as_number": 3,
+        "value_as_string": "3",
+        "value_source_value": "3"
+      }
+    },
+    {
+      "value": "4",
+      "write": {
+        "value_as_number": 4,
+        "value_as_string": "4",
+        "value_source_value": "4"
+      }
+    },
+    {
+      "value": "5",
+      "write": {
+        "value_as_number": 5,
+        "value_as_string": "5",
+        "value_source_value": "5"
+      }
+    }
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map",
+    "visit_occurrence_id": "cdm.visit_occurrence"
+  },
+  "links": [],
+  "manual_approval": false,
+  "note": "Authored from inputs/cde_dictionary.jsonl (cde_id 540) using the sibling map upd2hy_hoehn_and_yahr_stage.json for the OMOP landing; landing concept from exports/curated_concept_tables.sqlite."
+}

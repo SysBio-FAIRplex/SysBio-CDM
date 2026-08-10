@@ -1,0 +1,63 @@
+{
+  "variable": "msq01e_dream_details_match",
+  "cde_id": "259",
+  "definition": "MSQ Dream Details Match Q1e",
+  "src_schema_ref": ["REM_Sleep_Behavior_Disorder_Questionnaire_Mayo_dictionary.csv"],
+  "amp_data_files": ["REM_Sleep_Behavior_Disorder_Questionnaire_Mayo.csv"],
+  "program": "AMP-PD",
+  "grain": "visit",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "Yes",
+      "No",
+      "Never told you about dreams"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 4092272,
+      "name": "Detailed recall of dream",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "Yes",
+      "write": {
+        "value_as_concept_id": {
+          "id": 4188539,
+          "name": "Yes"
+        },
+        "value_as_string": "Yes",
+        "value_source_value": "Yes"
+      }
+    },
+    {
+      "value": "No",
+      "write": {
+        "value_as_concept_id": {
+          "id": 4188540,
+          "name": "No"
+        },
+        "value_as_string": "No",
+        "value_source_value": "No"
+      }
+    },
+    {
+      "value": "Never told you about dreams",
+      "write": {
+        "value_as_string": "Never told you about dreams",
+        "value_source_value": "Never told you about dreams"
+      }
+    }
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map",
+    "visit_occurrence_id": "cdm.visit_occurrence"
+  },
+  "links": [],
+  "manual_approval": false,
+  "note": "Authored from inputs/cde_dictionary.jsonl (cde_id 259); three-way Yes/No/other value pattern copied from sibling msq01d_told_dreams.json (unmapped third value carried as value_as_string); lands a dream-recall observation concept (4092272)."
+}

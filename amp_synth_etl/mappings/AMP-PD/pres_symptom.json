@@ -1,0 +1,75 @@
+{
+  "variable": "pres_symptom",
+  "cde_id": "336",
+  "definition": "Presenting symptom",
+  "src_schema_ref": ["LBD_Cohort_Clinical_Data_dictionary.csv"],
+  "amp_data_files": ["LBD_Cohort_Clinical_Data.csv"],
+  "program": "AMP-PD",
+  "grain": "visit",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "Cognitive symptoms",
+      "Motor symptoms",
+      "Both cognitive and motor symptoms",
+      "Psychiatric (depression/anxiety/psychosis)",
+      "NA"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 40769095,
+      "name": "Main presenting symptom [PhenX]",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "Cognitive symptoms",
+      "write": {
+        "value_as_string": "Cognitive symptoms",
+        "value_source_value": "Cognitive symptoms"
+      }
+    },
+    {
+      "value": "Motor symptoms",
+      "write": {
+        "value_as_string": "Motor symptoms",
+        "value_source_value": "Motor symptoms"
+      }
+    },
+    {
+      "value": "Both cognitive and motor symptoms",
+      "write": {
+        "value_as_string": "Both cognitive and motor symptoms",
+        "value_source_value": "Both cognitive and motor symptoms"
+      }
+    },
+    {
+      "value": "Psychiatric (depression/anxiety/psychosis)",
+      "write": {
+        "value_as_string": "Psychiatric (depression/anxiety/psychosis)",
+        "value_source_value": "Psychiatric (depression/anxiety/psychosis)"
+      }
+    },
+    {
+      "value": "NA",
+      "write": {
+        "value_as_concept_id": {
+          "id": 35941270,
+          "name": "NA"
+        },
+        "value_as_string": "NA",
+        "value_source_value": "NA"
+      }
+    }
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map",
+    "visit_occurrence_id": "cdm.visit_occurrence"
+  },
+  "links": [],
+  "manual_approval": false,
+  "note": "Authored from cde_dictionary (cde_id 336); LBD categorical -> value_as_string, NA=35941270 as in sibling exec_dys.json."
+}

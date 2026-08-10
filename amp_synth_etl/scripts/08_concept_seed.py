@@ -39,7 +39,7 @@ def note(cid, name=None, domain=None):
     cid = int(cid); e = ref.setdefault(cid, [None, None])
     if name and not e[0]: e[0] = name
     if domain and not e[1]: e[1] = domain
-for p in glob.glob(os.path.join(MAPS, "*.json")):
+for p in glob.glob(os.path.join(MAPS, "**", "*.json"), recursive=True):
     d = json.load(open(p, encoding="utf-8"))
     for v in d.get("lands", {}).values():
         if isinstance(v, dict) and v.get("id"): note(v["id"], v.get("name"), v.get("domain"))

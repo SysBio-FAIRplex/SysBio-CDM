@@ -1,0 +1,62 @@
+{
+  "variable": "samplingAgeUnits",
+  "cde_id": "47",
+  "definition": "Unit of time measurement for the age at which the biological sample was collected",
+  "src_schema_ref": [],
+  "amp_data_files": [],
+  "program": "AMP-AD",
+  "grain": "specimen",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "years",
+      "months",
+      "days",
+      "weeks"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 37531414,
+      "name": "Age Unit",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "years",
+      "write": {
+        "value_as_string": "years",
+        "value_source_value": "years"
+      }
+    },
+    {
+      "value": "months",
+      "write": {
+        "value_as_string": "months",
+        "value_source_value": "months"
+      }
+    },
+    {
+      "value": "days",
+      "write": {
+        "value_as_string": "days",
+        "value_source_value": "days"
+      }
+    },
+    {
+      "value": "weeks",
+      "write": {
+        "value_as_string": "weeks",
+        "value_source_value": "weeks"
+      }
+    }
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "links": [],
+  "manual_approval": false,
+  "note": "Authored from inputs/cde_dictionary.jsonl (AMP-AD row, cde_id 47); concept 37531414 'Age Unit' from curated_concept (no AD sibling) -- it names the time unit for samplingAge. Unit label lands via value_as_string."
+}

@@ -1,0 +1,66 @@
+{
+  "variable": "diseasetype",
+  "cde_id": "88",
+  "definition": "Classification or category of metabolic disease",
+  "src_schema_ref": [],
+  "amp_data_files": [],
+  "program": "AMP-CMD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "Type 2 Diabetes",
+      "NAFLD",
+      "Obesity",
+      "Metabolic Syndrome"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 436670,
+      "name": "Metabolic disease",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "Type 2 Diabetes",
+      "write": {
+        "value_as_concept_id": {
+          "id": 201826,
+          "name": "Type 2 diabetes mellitus"
+        },
+        "value_as_string": "Type 2 Diabetes",
+        "value_source_value": "Type 2 Diabetes"
+      }
+    },
+    {
+      "value": "NAFLD",
+      "write": {
+        "value_as_string": "NAFLD",
+        "value_source_value": "NAFLD"
+      }
+    },
+    {
+      "value": "Obesity",
+      "write": {
+        "value_as_string": "Obesity",
+        "value_source_value": "Obesity"
+      }
+    },
+    {
+      "value": "Metabolic Syndrome",
+      "write": {
+        "value_as_string": "Metabolic Syndrome",
+        "value_source_value": "Metabolic Syndrome"
+      }
+    }
+  ],
+  "links": [],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "manual_approval": false,
+  "note": "Authored from inputs/cde_dictionary.jsonl (definition + value set verbatim) + sibling disease.json (436670). Metabolic-disease type (dictionary examples) -> observation 436670 'Metabolic disease'; 'Type 2 Diabetes' -> value_as_concept 201826, others value_as_string; other raw types preserved in value_source_value."
+}

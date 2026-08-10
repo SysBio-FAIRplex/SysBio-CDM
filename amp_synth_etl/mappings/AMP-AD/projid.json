@@ -1,0 +1,35 @@
+{
+  "variable": "projid",
+  "cde_id": "42",
+  "definition": "Project Identifier",
+  "src_schema_ref": [],
+  "amp_data_files": ["ROSMAP_clinical.csv"],
+  "program": "AMP-AD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "string"
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 40768976,
+      "name": "Participant [Identifier]",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "<any identifier>",
+      "write": {
+        "value_as_string": "<value>",
+        "value_source_value": "<raw>"
+      }
+    }
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "links": [],
+  "manual_approval": false,
+  "note": "Authored from inputs/cde_dictionary.jsonl (AMP-AD row, cde_id 42) + identifier sibling participant_id.json / GUID.json. amp_value_set is a free-text String identifier so a single '<any identifier>' passthrough sentinel writes value_as_string/value_source_value; concept 40768976 'Participant [Identifier]' from curated_concept."
+}

@@ -1,0 +1,78 @@
+{
+  "variable": "initial_diagnosis",
+  "cde_id": "179",
+  "definition": "Initial Diagnosis",
+  "src_schema_ref": ["PD_Medical_History_dictionary.csv"],
+  "amp_data_files": ["PD_Medical_History.csv"],
+  "program": "AMP-PD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "Parkinson's Disease",
+      "Parkinson’s Disease",
+      "Parkinsonism",
+      "Multiple System Atrophy",
+      "Progressive Supranuclear Palsy",
+      "No PD Nor Other Neurological Disorder"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 4234469,
+      "name": "Diagnosis",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "Parkinson's Disease",
+      "write": {
+        "value_as_string": "Parkinson's Disease",
+        "value_source_value": "Parkinson's Disease"
+      }
+    },
+    {
+      "value": "Parkinson’s Disease",
+      "write": {
+        "value_as_string": "Parkinson’s Disease",
+        "value_source_value": "Parkinson’s Disease"
+      }
+    },
+    {
+      "value": "Parkinsonism",
+      "write": {
+        "value_as_string": "Parkinsonism",
+        "value_source_value": "Parkinsonism"
+      }
+    },
+    {
+      "value": "Multiple System Atrophy",
+      "write": {
+        "value_as_string": "Multiple System Atrophy",
+        "value_source_value": "Multiple System Atrophy"
+      }
+    },
+    {
+      "value": "Progressive Supranuclear Palsy",
+      "write": {
+        "value_as_string": "Progressive Supranuclear Palsy",
+        "value_source_value": "Progressive Supranuclear Palsy"
+      }
+    },
+    {
+      "value": "No PD Nor Other Neurological Disorder",
+      "write": {
+        "value_as_string": "No PD Nor Other Neurological Disorder",
+        "value_source_value": "No PD Nor Other Neurological Disorder"
+      }
+    }
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "links": [],
+  "manual_approval": false,
+  "note": "Authored from cde_dictionary (cde_id 179; empty value set, diagnosis vocabulary from fidelity_distributions); diagnosis name -> value_as_string, concept per shared/diagnosis_type.json convention."
+}

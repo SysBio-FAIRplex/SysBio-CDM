@@ -1,0 +1,26 @@
+{
+  "variable": "dataContributionGroup",
+  "cde_id": "23",
+  "definition": "",
+  "src_schema_ref": [],
+  "amp_data_files": ["AMP-AD_DiverseCohorts_individual_metadata.csv"],
+  "program": "AMP-AD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "string"
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 0,
+      "name": "TODO: choose landing concept"
+    }
+  },
+  "value_map": [],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "links": [],
+  "manual_approval": false,
+  "note": "DRAFT STUB (manual_approval:false, landing concept_id 0 = TODO). Flagged: contributing-institution/group; ties to the open care_site/institution decision. definition + value set are from cde_dictionary (cde 23); set a real *_concept_id and value_as_concept_id(s), then flip manual_approval to enable."
+}

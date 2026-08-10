@@ -1,0 +1,39 @@
+{
+  "variable": "tobacco_stop_age",
+  "cde_id": "401",
+  "definition": "Age in years when participant/subject stopped using tobacco products (e.g. cigarettes, cigars, chewing tobacco or pipe)",
+  "src_schema_ref": ["Smoking_and_alcohol_history_dictionary.csv"],
+  "amp_data_files": ["Smoking_and_alcohol_history.csv"],
+  "program": "AMP-PD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "integer",
+    "range": {
+      "min": 13,
+      "max": 85
+    }
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 37020654,
+      "name": "Age when stopped smoking cigarettes completely",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "<any in range>",
+      "write": {
+        "value_as_number": "<value>",
+        "value_source_value": "<raw>"
+      }
+    }
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "links": [],
+  "manual_approval": false,
+  "note": "Authored from cde_dictionary (cde_id 401; range 13-85); numeric-age -> value_as_number pattern copied from sibling alcohol_stop_age.json."
+}

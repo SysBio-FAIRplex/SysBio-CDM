@@ -1,0 +1,67 @@
+{
+  "variable": "smoked_100_more_cigarettes",
+  "cde_id": "388",
+  "definition": "Current tobacco use indicator",
+  "src_schema_ref": ["Smoking_and_alcohol_history_dictionary.csv"],
+  "amp_data_files": ["Smoking_and_alcohol_history.csv"],
+  "program": "AMP-PD",
+  "grain": "visit",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "Yes",
+      "No",
+      "Unknown"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 40766306,
+      "name": "Smoked at least 100 cigarettes in entire life",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "Yes",
+      "write": {
+        "value_as_concept_id": {
+          "id": 4188539,
+          "name": "Yes"
+        },
+        "value_as_string": "Yes",
+        "value_source_value": "Yes"
+      }
+    },
+    {
+      "value": "No",
+      "write": {
+        "value_as_concept_id": {
+          "id": 4188540,
+          "name": "No"
+        },
+        "value_as_string": "No",
+        "value_source_value": "No"
+      }
+    },
+    {
+      "value": "Unknown",
+      "write": {
+        "value_as_concept_id": {
+          "id": 45877986,
+          "name": "Unknown"
+        },
+        "value_as_string": "Unknown",
+        "value_source_value": "Unknown"
+      }
+    }
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map",
+    "visit_occurrence_id": "cdm.visit_occurrence"
+  },
+  "links": [],
+  "manual_approval": false,
+  "note": "Authored from cde_dictionary (cde_id 388); OMOP landing pattern copied from sibling alcohol_current_use.json (Yes/No/Unknown -> value_as_concept)."
+}

@@ -1,0 +1,46 @@
+{
+  "variable": "bmi__unit__ontology_label",
+  "cde_id": "73",
+  "definition": "Ontology label for the unit of measurement used for Body Mass Index",
+  "src_schema_ref": [],
+  "amp_data_files": [],
+  "program": "AMP-CMD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "kg/m^2",
+      "kilograms per square meter"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 9531,
+      "name": "kilogram per square meter",
+      "domain": "Unit"
+    }
+  },
+  "value_map": [
+    {
+      "value": "kg/m^2",
+      "write": {
+        "value_as_string": "kg/m^2",
+        "value_source_value": "kg/m^2"
+      }
+    },
+    {
+      "value": "kilograms per square meter",
+      "write": {
+        "value_as_string": "kilograms per square meter",
+        "value_source_value": "kilograms per square meter"
+      }
+    }
+  ],
+  "links": [],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "manual_approval": false,
+  "note": "Authored from inputs/cde_dictionary.jsonl (definition + value set verbatim) + sibling mappings/shared/ageUnits.json (unit label pattern). BMI unit label -> observation 9531 'kilogram per square meter' (Unit), value_as_string."
+}

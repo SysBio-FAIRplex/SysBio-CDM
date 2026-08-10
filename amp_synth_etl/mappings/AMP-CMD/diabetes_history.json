@@ -1,0 +1,27 @@
+{
+  "variable": "diabetes_history",
+  "cde_id": "79",
+  "definition": "History of diabetes mellitus diagnosis and treatment",
+  "src_schema_ref": [],
+  "amp_data_files": [],
+  "program": "AMP-CMD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "string"
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 40769338,
+      "name": "History of Diabetes (regardless of treatment) [PhenX]",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [],
+  "links": [],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "manual_approval": false,
+  "note": "Authored from inputs/cde_dictionary.jsonl (definition + value set verbatim) + sibling species.json. Diabetes history (free text / structured; no enumerable value set) -> observation 40769338 'History of Diabetes (regardless of treatment) [PhenX]'; raw preserved in value_source_value (passthrough)."
+}

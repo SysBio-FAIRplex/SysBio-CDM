@@ -1,0 +1,74 @@
+{
+  "variable": "sample_type",
+  "cde_id": "114",
+  "definition": "Type of biospecimen used for analysis, e.g. CSF, Plasma, Serum, Blood, RNA",
+  "src_schema_ref": [],
+  "amp_data_files": [],
+  "program": "AMP-CMD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "CSF",
+      "Plasma",
+      "RNA",
+      "Serum"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 45773156,
+      "name": "Specimen source",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "CSF",
+      "write": {
+        "value_as_concept_id": {
+          "id": 4124259,
+          "name": "Cerebrospinal fluid specimen"
+        },
+        "value_as_string": "CSF",
+        "value_source_value": "CSF"
+      }
+    },
+    {
+      "value": "Plasma",
+      "write": {
+        "value_as_concept_id": {
+          "id": 4000626,
+          "name": "Plasma specimen"
+        },
+        "value_as_string": "Plasma",
+        "value_source_value": "Plasma"
+      }
+    },
+    {
+      "value": "RNA",
+      "write": {
+        "value_as_string": "RNA",
+        "value_source_value": "RNA"
+      }
+    },
+    {
+      "value": "Serum",
+      "write": {
+        "value_as_concept_id": {
+          "id": 4001181,
+          "name": "Serum specimen"
+        },
+        "value_as_string": "Serum",
+        "value_source_value": "Serum"
+      }
+    }
+  ],
+  "links": [],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "manual_approval": false,
+  "note": "Authored from inputs/cde_dictionary.jsonl (definition + value set verbatim) + sibling species.json. Biospecimen type -> observation 45773156 'Specimen source'; CSF/Plasma/Serum -> value_as_concept specimen concepts, RNA -> value_as_string."
+}

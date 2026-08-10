@@ -1,0 +1,40 @@
+{
+  "variable": "moca16_abstraction",
+  "cde_id": "226",
+  "definition": "MOCA: 16. Abstraction",
+  "src_schema_ref": ["MOCA_dictionary.csv"],
+  "amp_data_files": ["MOCA.csv"],
+  "program": "AMP-PD",
+  "grain": "visit",
+  "reads_as": {
+    "datatype": "integer",
+    "range": {
+      "min": 0,
+      "max": 2
+    }
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 43054876,
+      "name": "Montreal Cognitive Assessment [MoCA]",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "<any in range>",
+      "write": {
+        "value_as_number": "<value>",
+        "value_source_value": "<raw>"
+      }
+    }
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map",
+    "visit_occurrence_id": "cdm.visit_occurrence"
+  },
+  "links": [],
+  "manual_approval": false,
+  "note": "Authored from inputs/cde_dictionary.jsonl (cde_id 226); OMOP landing copied from sibling MoCA item map moca22_orientation_date_score.json \u2014 all MoCA items land observation concept 43054876 (Montreal Cognitive Assessment [MoCA])."
+}

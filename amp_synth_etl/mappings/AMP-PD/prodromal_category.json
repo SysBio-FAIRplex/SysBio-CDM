@@ -1,0 +1,54 @@
+{
+  "variable": "prodromal_category",
+  "cde_id": "337",
+  "definition": "At-risk for PD individuals having the same diagnosis as healthy controls with enrollment criterion hyposmia or REM Sleep Behavior Disorder. The rest are Unknown/Not collected as enrollment criterion",
+  "src_schema_ref": ["Enrollment_dictionary.csv"],
+  "amp_data_files": ["Enrollment.csv"],
+  "program": "AMP-PD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "Hyposmia",
+      "REM Sleep Behavior Disorder",
+      "Unknown/Not collected as enrollment criterion"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 46235144,
+      "name": "Enrollment basis",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "Hyposmia",
+      "write": {
+        "value_as_string": "Hyposmia",
+        "value_source_value": "Hyposmia"
+      }
+    },
+    {
+      "value": "REM Sleep Behavior Disorder",
+      "write": {
+        "value_as_string": "REM Sleep Behavior Disorder",
+        "value_source_value": "REM Sleep Behavior Disorder"
+      }
+    },
+    {
+      "value": "Unknown/Not collected as enrollment criterion",
+      "write": {
+        "value_as_string": "Unknown/Not collected as enrollment criterion",
+        "value_source_value": "Unknown/Not collected as enrollment criterion"
+      }
+    }
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "links": [],
+  "manual_approval": false,
+  "note": "Authored from cde_dictionary (cde_id 337; empty value set, categories from fidelity_distributions); value_as_string per sibling shared/cohort.json."
+}

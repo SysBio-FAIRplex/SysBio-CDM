@@ -1,0 +1,40 @@
+{
+  "variable": "msq01a_act_out_years",
+  "cde_id": "255",
+  "definition": "MSQ Act Out Years Q1a",
+  "src_schema_ref": ["REM_Sleep_Behavior_Disorder_Questionnaire_Mayo_dictionary.csv"],
+  "amp_data_files": ["REM_Sleep_Behavior_Disorder_Questionnaire_Mayo.csv"],
+  "program": "AMP-PD",
+  "grain": "visit",
+  "reads_as": {
+    "datatype": "integer",
+    "range": {
+      "min": 0,
+      "max": 99
+    }
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 439007,
+      "name": "REM sleep behavior disorder",
+      "domain": "Condition"
+    }
+  },
+  "value_map": [
+    {
+      "value": "<any in range>",
+      "write": {
+        "value_as_number": "<value>",
+        "value_source_value": "<raw>"
+      }
+    }
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map",
+    "visit_occurrence_id": "cdm.visit_occurrence"
+  },
+  "links": [],
+  "manual_approval": false,
+  "note": "Authored from inputs/cde_dictionary.jsonl (cde_id 255); numeric sentinel pattern copied from sibling msq08_rate_of_alertness.json; lands the Q1 act-out-dreams RBD concept (439007) as a duration-in-years value_as_number (raw preserved in value_source_value)."
+}

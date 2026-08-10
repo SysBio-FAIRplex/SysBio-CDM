@@ -1,0 +1,66 @@
+{
+  "variable": "biological_father_with_pd",
+  "cde_id": "142",
+  "definition": "Father Has Or Had Parkinson's Disease",
+  "src_schema_ref": ["Family_History_PD_dictionary.csv"],
+  "amp_data_files": ["Family_History_PD.csv"],
+  "program": "AMP-PD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "No",
+      "Yes",
+      "Unknown"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 4182334,
+      "name": "Family history of Parkinson's disease",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "No",
+      "write": {
+        "value_as_concept_id": {
+          "id": 4188540,
+          "name": "No"
+        },
+        "value_as_string": "No",
+        "value_source_value": "No"
+      }
+    },
+    {
+      "value": "Yes",
+      "write": {
+        "value_as_concept_id": {
+          "id": 4188539,
+          "name": "Yes"
+        },
+        "value_as_string": "Yes",
+        "value_source_value": "Yes"
+      }
+    },
+    {
+      "value": "Unknown",
+      "write": {
+        "value_as_concept_id": {
+          "id": 45877986,
+          "name": "Unknown"
+        },
+        "value_as_string": "Unknown",
+        "value_source_value": "Unknown"
+      }
+    }
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "links": [],
+  "manual_approval": false,
+  "note": "Authored from cde_dictionary (cde_id 142); OMOP landing concept and No/Yes/Unknown pattern copied from sibling other_relative_with_pd.json."
+}

@@ -1,0 +1,69 @@
+{
+  "variable": "mayoDx",
+  "cde_id": "37",
+  "definition": "Mayo Clinic neuropathological diagnosis",
+  "src_schema_ref": ["DiverseCohorts_DataDictionary.pdf"],
+  "amp_data_files": ["AMP-AD_DiverseCohorts_individual_metadata.csv"],
+  "program": "AMP-AD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "AD",
+      "Control",
+      "Other",
+      "not applicable"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 3187945,
+      "name": "Neuropathology observable entity",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "AD",
+      "write": {
+        "value_as_string": "AD",
+        "value_source_value": "AD"
+      }
+    },
+    {
+      "value": "Control",
+      "write": {
+        "value_as_string": "Control",
+        "value_source_value": "Control"
+      }
+    },
+    {
+      "value": "Other",
+      "write": {
+        "value_as_string": "Other",
+        "value_source_value": "Other"
+      }
+    },
+    {
+      "value": "other",
+      "write": {
+        "value_as_string": "other",
+        "value_source_value": "other"
+      }
+    },
+    {
+      "value": "not applicable",
+      "write": {
+        "value_as_string": "not applicable",
+        "value_source_value": "not applicable"
+      }
+    }
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "links": [],
+  "manual_approval": false,
+  "note": "Authored from inputs/cde_dictionary.jsonl (AMP-AD row, cde_id 37) + sibling ADoutcome.json (same neuropathology-outcome concept 3187945, value_as_string). amp_value_set is a controlled vocabulary of Mayo diagnostic categories; the categories AD/Control/Other/not applicable are those documented by the harmonized sibling ADoutcome_diagnosis.json (lower-case 'other' also mapped)."
+}

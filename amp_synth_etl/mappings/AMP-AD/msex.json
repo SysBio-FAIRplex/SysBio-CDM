@@ -1,0 +1,53 @@
+{
+  "variable": "msex",
+  "cde_registry_label": "msex",
+  "cde_id": "38",
+  "definition": "Participant sex (ROSMAP msex; real coding 1=Male, 0=Female)",
+  "src_schema_ref": [],
+  "amp_data_files": ["ROSMAP_clinical.csv"],
+  "program": "AMP-AD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "1",
+      "0"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 3046965,
+      "name": "Sex",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "1",
+      "write": {
+        "value_as_concept_id": {
+          "id": 8507,
+          "name": "MALE"
+        },
+        "value_source_value": "1"
+      }
+    },
+    {
+      "value": "0",
+      "write": {
+        "value_as_concept_id": {
+          "id": 8532,
+          "name": "FEMALE"
+        },
+        "value_source_value": "0"
+      }
+    }
+  ],
+  "links": [],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "manual_approval": true,
+  "note": "ROSMAP's real sex encoding is numeric 1=Male, 0=Female (ROSMAP_clinical.csv). Its cde_dictionary amp_value_set was corrected to the coded dict {\"1\":\"Male\",\"0\":\"Female\"} (2026-07) so generation emits real 0/1 on the next rebuild, and this value_map now keys on 0/1 -> Sex 3046965 (8507/8532). STILL DISABLED (manual_approval=false): sex.json already lands Sex for ALL participants including ROSMAP, so enabling msex would double the Sex record for ROSMAP people. Enable only once generation is made faithful so a ROSMAP person carries msex INSTEAD OF a fabricated sex column (removing the overlap). See harmonization/variable_crosswalk.tsv (sex family)."
+}

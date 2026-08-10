@@ -27,3 +27,10 @@ amp_synth_etl/cdm_load/*.sql
 
 # Generated per-table JSON schemas (write-only; nothing reads them)
 amp_synth_etl/specs/table_schemas/
+amp_synth_etl/docs/
+
+# dev/reference docs & notes — not for public sharing
+reference/
+transform/
+amp_synth_etl/harmonization/
+amp_synth_etl/resources/development_roadmap.md

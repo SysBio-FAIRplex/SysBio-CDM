@@ -1,0 +1,83 @@
+{
+  "variable": "amyA",
+  "cde_id": "8",
+  "definition": "Indicator of Thal Phase, grouped",
+  "src_schema_ref": ["DiverseCohorts_DataDictionary.pdf"],
+  "amp_data_files": ["AMP-AD_DiverseCohorts_individual_metadata.csv"],
+  "program": "AMP-AD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "None",
+      "Thal Phase 1 or 2",
+      "Thal Phase 3",
+      "Thal Phase 4 or 5",
+      "Missing or unknown"
+    ]
+  },
+  "lands": {
+    "table": "measurement",
+    "measurement_concept_id": {
+      "id": 3170911,
+      "name": "Thal phase staging of amyloid plaques",
+      "domain": "Measurement"
+    }
+  },
+  "value_map": [
+    {
+      "value": "None",
+      "write": {
+        "value_as_concept_id": {
+          "id": 45878582,
+          "name": "None"
+        },
+        "value_source_value": "None"
+      }
+    },
+    {
+      "value": "Thal Phase 1 or 2",
+      "write": {
+        "value_source_value": "Thal Phase 1 or 2"
+      }
+    },
+    {
+      "value": "Thal Phase 3",
+      "write": {
+        "value_source_value": "Thal Phase 3"
+      }
+    },
+    {
+      "value": "Thal Phase 4 or 5",
+      "write": {
+        "value_source_value": "Thal Phase 4 or 5"
+      }
+    },
+    {
+      "value": "Missing or unknown",
+      "write": {
+        "value_as_concept_id": {
+          "id": 45877986,
+          "name": "Unknown"
+        },
+        "value_source_value": "Missing or unknown"
+      }
+    },
+    {
+      "value": "missing or unknown",
+      "write": {
+        "value_as_concept_id": {
+          "id": 45877986,
+          "name": "Unknown"
+        },
+        "value_source_value": "missing or unknown"
+      }
+    }
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "links": [],
+  "manual_approval": false,
+  "note": "Authored from inputs/cde_dictionary.jsonl (AMP-AD row, cde_id 8) + sibling amyThal.json (same measurement concept 3170911 'Thal phase staging of amyloid plaques'). amyA is the GROUPED Thal phase; the ranged groups have no single stage concept so they land via value_source_value, None->45878582 and (Missing or unknown/missing or unknown)->45877986. Measurement drops value_as_string per the ETL, matching amyThal/amyCerad."
+}

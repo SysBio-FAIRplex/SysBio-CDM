@@ -1,0 +1,41 @@
+{
+  "variable": "upd139_clin_fluctu_off_periods",
+  "cde_registry_label": "upd139_clin_fluctu_off_periods",
+  "harmonized_with": ["upd2403_time_spent_in_the_off_state"],
+  "cde_id": "453",
+  "definition": "UPDRS - Complications of Therapy: Clinical Fluctuations - Average Off Periods Per Day (UPD139)",
+  "src_schema_ref": ["UPDRS_dictionary.csv"],
+  "amp_data_files": ["UPDRS.csv"],
+  "program": "AMP-PD",
+  "grain": "visit",
+  "reads_as": {
+    "datatype": "integer",
+    "range": {
+      "min": 0.0,
+      "max": 4.0
+    }
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 46236400,
+      "name": "Average proportion of waking day the patient is off in the past week [UPDRS]",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "<any in range>",
+      "write": {
+        "value_as_number": "<value>",
+        "value_source_value": "<raw>"
+      }
+    }
+  ],
+  "links": [],
+  "anchored_to": {
+    "person_id": "staging.person_map",
+    "visit_occurrence_id": "cdm.visit_occurrence"
+  },
+  "manual_approval": true
+}

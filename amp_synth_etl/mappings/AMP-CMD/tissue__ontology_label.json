@@ -1,0 +1,27 @@
+{
+  "variable": "tissue__ontology_label",
+  "cde_id": "122",
+  "definition": "Tissue Ontology Label",
+  "src_schema_ref": [],
+  "amp_data_files": [],
+  "program": "AMP-CMD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "string"
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 596879,
+      "name": "Please specify tissue.",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [],
+  "links": [],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "manual_approval": false,
+  "note": "Authored from inputs/cde_dictionary.jsonl (definition + value set verbatim). Tissue ontology label (open) -> observation 596879 'Please specify tissue.'; raw label preserved in value_source_value (passthrough)."
+}

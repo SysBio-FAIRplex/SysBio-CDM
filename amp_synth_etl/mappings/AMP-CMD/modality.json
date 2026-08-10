@@ -1,0 +1,86 @@
+{
+  "variable": "modality",
+  "cde_id": "104",
+  "definition": "Type or method of clinical assessment, diagnostic procedure, or imaging technique used",
+  "src_schema_ref": [],
+  "amp_data_files": [],
+  "program": "AMP-CMD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "MRI",
+      "CT",
+      "Ultrasound",
+      "Clinical Examination",
+      "Laboratory Test",
+      "Questionnaire"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 44803445,
+      "name": "Method",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "MRI",
+      "write": {
+        "value_as_concept_id": {
+          "id": 4013636,
+          "name": "Magnetic resonance imaging"
+        },
+        "value_as_string": "MRI",
+        "value_source_value": "MRI"
+      }
+    },
+    {
+      "value": "CT",
+      "write": {
+        "value_as_string": "CT",
+        "value_source_value": "CT"
+      }
+    },
+    {
+      "value": "Ultrasound",
+      "write": {
+        "value_as_string": "Ultrasound",
+        "value_source_value": "Ultrasound"
+      }
+    },
+    {
+      "value": "Clinical Examination",
+      "write": {
+        "value_as_string": "Clinical Examination",
+        "value_source_value": "Clinical Examination"
+      }
+    },
+    {
+      "value": "Laboratory Test",
+      "write": {
+        "value_as_string": "Laboratory Test",
+        "value_source_value": "Laboratory Test"
+      }
+    },
+    {
+      "value": "Questionnaire",
+      "write": {
+        "value_as_concept_id": {
+          "id": 44804112,
+          "name": "Questionnaire"
+        },
+        "value_as_string": "Questionnaire",
+        "value_source_value": "Questionnaire"
+      }
+    }
+  ],
+  "links": [],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "manual_approval": false,
+  "note": "Authored from inputs/cde_dictionary.jsonl (definition + value set verbatim) + sibling species.json. Assessment/diagnostic modality (dictionary examples) -> observation 44803445 'Method'; MRI/Questionnaire -> value_as_concept, others value_as_string; other raw modalities preserved in value_source_value."
+}

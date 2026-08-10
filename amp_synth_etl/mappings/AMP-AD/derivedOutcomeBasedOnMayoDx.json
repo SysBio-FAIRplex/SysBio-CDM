@@ -1,0 +1,54 @@
+{
+  "variable": "derivedOutcomeBasedOnMayoDx",
+  "cde_id": "26",
+  "definition": "Derived clinical outcome classification based on Mayo Clinic diagnostic criteria",
+  "src_schema_ref": [],
+  "amp_data_files": ["AMP-AD_DiverseCohorts_individual_metadata.csv"],
+  "program": "AMP-AD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "TRUE",
+      "FALSE"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 3187945,
+      "name": "Neuropathology observable entity",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "TRUE",
+      "write": {
+        "value_as_concept_id": {
+          "id": 45877994,
+          "name": "Yes"
+        },
+        "value_source_value": "TRUE",
+        "value_as_string": "TRUE"
+      }
+    },
+    {
+      "value": "FALSE",
+      "write": {
+        "value_as_concept_id": {
+          "id": 45878245,
+          "name": "No"
+        },
+        "value_source_value": "FALSE",
+        "value_as_string": "FALSE"
+      }
+    }
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "links": [],
+  "manual_approval": false,
+  "note": "Authored from inputs/cde_dictionary.jsonl (AMP-AD row, cde_id 26) + sibling ADoutcome.json (same neuropathology-outcome concept 3187945). Boolean indicator of whether the harmonized outcome was derived from Mayo Dx criteria; TRUE->Yes(45877994)/FALSE->No(45878245) like the isHispanic.json Yes/No pattern."
+}

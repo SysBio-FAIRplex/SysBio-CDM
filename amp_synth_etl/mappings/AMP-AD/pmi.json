@@ -1,0 +1,36 @@
+{
+  "variable": "pmi",
+  "cde_id": "41",
+  "definition": "Post-Mortem Interval",
+  "src_schema_ref": ["DiverseCohorts_DataDictionary.pdf", "ROSMAP_clinical_codebook.pdf"],
+  "amp_data_files": ["ROSMAP_clinical.csv"],
+  "program": "AMP-AD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "float",
+    "unit": "hours"
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 4121980,
+      "name": "Postmortem period",
+      "domain": "Meas Value"
+    }
+  },
+  "value_map": [
+    {
+      "value": "<any in range>",
+      "write": {
+        "value_as_number": "<value>",
+        "value_source_value": "<raw>"
+      }
+    }
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "links": [],
+  "manual_approval": false,
+  "note": "Authored from inputs/cde_dictionary.jsonl (AMP-AD row, cde_id 41) + numeric sibling age_death.json. Post-mortem interval in hours (Continuous); concept 4121980 'Postmortem period' from curated_concept, landed as a numeric observation like the other AD interval fields."
+}

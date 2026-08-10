@@ -1,0 +1,67 @@
+{
+  "variable": "ess0108_car_stopped_in_traffic",
+  "cde_id": "170",
+  "definition": "ESS - In A Car, While Stopped For A Few Minutes In The Traffic (ESS0108)",
+  "src_schema_ref": ["Epworth_Sleepiness_Scale_dictionary.csv"],
+  "amp_data_files": ["Epworth_Sleepiness_Scale.csv"],
+  "program": "AMP-PD",
+  "grain": "visit",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "Would Never Doze",
+      "Slight Chance Of Dozing",
+      "Moderate Chance Of Dozing",
+      "High Chance Of Dozing"
+    ]
+  },
+  "lands": {
+    "table": "measurement",
+    "measurement_concept_id": {
+      "id": 46273534,
+      "name": "Epworth Sleepiness Scale",
+      "domain": "Measurement"
+    }
+  },
+  "value_map": [
+    {
+      "value": "Would Never Doze",
+      "write": {
+        "value_as_number": 0,
+        "value_as_string": "Would Never Doze",
+        "value_source_value": "Would Never Doze"
+      }
+    },
+    {
+      "value": "Slight Chance Of Dozing",
+      "write": {
+        "value_as_number": 1,
+        "value_as_string": "Slight Chance Of Dozing",
+        "value_source_value": "Slight Chance Of Dozing"
+      }
+    },
+    {
+      "value": "Moderate Chance Of Dozing",
+      "write": {
+        "value_as_number": 2,
+        "value_as_string": "Moderate Chance Of Dozing",
+        "value_source_value": "Moderate Chance Of Dozing"
+      }
+    },
+    {
+      "value": "High Chance Of Dozing",
+      "write": {
+        "value_as_number": 3,
+        "value_as_string": "High Chance Of Dozing",
+        "value_source_value": "High Chance Of Dozing"
+      }
+    }
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map",
+    "visit_occurrence_id": "cdm.visit_occurrence"
+  },
+  "links": [],
+  "manual_approval": false,
+  "note": "Authored from inputs/cde_dictionary.jsonl (cde_id 170) with the ESS-family sibling ess_info_source.json supplying the visit-grain measurement landing; item lands the shared curated 'Epworth Sleepiness Scale' concept (46273534) following the MoCA shared-scale-concept pattern. Dozing levels scored 0-3; no curated value concept exists for them, so value_as_string is used as siblings do for unmapped coded values."
+}

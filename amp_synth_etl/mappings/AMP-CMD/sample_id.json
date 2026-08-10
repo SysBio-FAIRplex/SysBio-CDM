@@ -1,0 +1,27 @@
+{
+  "variable": "sample_id",
+  "cde_id": "113",
+  "definition": "Sample Identifier",
+  "src_schema_ref": [],
+  "amp_data_files": [],
+  "program": "AMP-CMD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "string"
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 4163138,
+      "name": "Sample identification number",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [],
+  "links": [],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "manual_approval": false,
+  "note": "Authored from inputs/cde_dictionary.jsonl (definition + value set verbatim). Sample identifier -> observation 4163138 'Sample identification number'; the id string is preserved in value_source_value (passthrough)."
+}

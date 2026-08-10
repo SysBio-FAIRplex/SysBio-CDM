@@ -1,0 +1,94 @@
+{
+  "variable": "development_stage",
+  "cde_id": "77",
+  "definition": "Developmental or life stage of the subject at time of assessment",
+  "src_schema_ref": [],
+  "amp_data_files": ["fnih_hypothal_metadata.tsv"],
+  "program": "AMP-CMD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "embryonic",
+      "fetal",
+      "neonatal",
+      "infant",
+      "child",
+      "adolescent",
+      "adult",
+      "elderly"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 3053159,
+      "name": "Age group",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "embryonic",
+      "write": {
+        "value_as_string": "embryonic",
+        "value_source_value": "embryonic"
+      }
+    },
+    {
+      "value": "fetal",
+      "write": {
+        "value_as_string": "fetal",
+        "value_source_value": "fetal"
+      }
+    },
+    {
+      "value": "neonatal",
+      "write": {
+        "value_as_string": "neonatal",
+        "value_source_value": "neonatal"
+      }
+    },
+    {
+      "value": "infant",
+      "write": {
+        "value_as_string": "infant",
+        "value_source_value": "infant"
+      }
+    },
+    {
+      "value": "child",
+      "write": {
+        "value_as_string": "child",
+        "value_source_value": "child"
+      }
+    },
+    {
+      "value": "adolescent",
+      "write": {
+        "value_as_string": "adolescent",
+        "value_source_value": "adolescent"
+      }
+    },
+    {
+      "value": "adult",
+      "write": {
+        "value_as_string": "adult",
+        "value_source_value": "adult"
+      }
+    },
+    {
+      "value": "elderly",
+      "write": {
+        "value_as_string": "elderly",
+        "value_source_value": "elderly"
+      }
+    }
+  ],
+  "links": [],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "manual_approval": false,
+  "note": "Authored from inputs/cde_dictionary.jsonl (definition + value set verbatim) + sibling np_age.json. Developmental/life stage (fnih real values are HsapDv '<n>-year-old stage'; dictionary enumerates life stages) -> observation 3053159 'Age group', value_as_string; other raw stages preserved in value_source_value."
+}

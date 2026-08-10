@@ -1,0 +1,35 @@
+{
+  "variable": "pd_diagnosis_months_after_baseline",
+  "cde_id": "285",
+  "definition": "Number of months after baseline visit at which Parkinson's Disease Diagnosis occurred; negative values indicate Parkinson's Disease Diagnosis occurred before baseline",
+  "src_schema_ref": ["PD_Medical_History_dictionary.csv"],
+  "amp_data_files": ["PD_Medical_History.csv"],
+  "program": "AMP-PD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "number"
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 40766651,
+      "name": "Date of diagnosis",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "<any in range>",
+      "write": {
+        "value_as_number": "<value>",
+        "value_source_value": "<raw>"
+      }
+    }
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "links": [],
+  "manual_approval": false,
+  "note": "Authored from cde_dictionary (cde_id 285); months-after-baseline -> value_as_number pattern copied from sibling pd_medication_start_months_after_baseline.json."
+}

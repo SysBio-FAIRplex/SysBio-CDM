@@ -1,0 +1,27 @@
+{
+  "variable": "ID",
+  "cde_id": "100",
+  "definition": "Unique identifier assigned to each study participant",
+  "src_schema_ref": [],
+  "amp_data_files": [],
+  "program": "AMP-CMD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "string"
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 42528934,
+      "name": "Participant identifier",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [],
+  "links": [],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "manual_approval": false,
+  "note": "Authored from inputs/cde_dictionary.jsonl (definition + value set verbatim). Study-participant identifier -> observation 42528934 'Participant identifier'; the id string is preserved in value_source_value (passthrough)."
+}

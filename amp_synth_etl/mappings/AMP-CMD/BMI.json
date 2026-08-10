@@ -1,0 +1,39 @@
+{
+  "variable": "BMI",
+  "cde_id": "71",
+  "definition": "Body Mass Index",
+  "src_schema_ref": [],
+  "amp_data_files": [],
+  "program": "AMP-CMD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "number",
+    "range": {
+      "min": 10,
+      "max": 100
+    }
+  },
+  "lands": {
+    "table": "measurement",
+    "measurement_concept_id": {
+      "id": 4245997,
+      "name": "Body mass index",
+      "domain": "Measurement"
+    }
+  },
+  "value_map": [
+    {
+      "value": "<any in range>",
+      "write": {
+        "value_as_number": "<value>",
+        "value_source_value": "<raw>"
+      }
+    }
+  ],
+  "links": [],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "manual_approval": false,
+  "note": "Authored from inputs/cde_dictionary.jsonl (definition + value set verbatim) + sibling mappings/shared/height.json (measurement numeric). BMI -> measurement 4245997 'Body mass index' (value_as_number, kg/m^2)."
+}

@@ -658,3 +658,4 @@ AMP-PD	UPSIT.csv	pdrd/UPSIT_dictionary.csv	score_from_booklet_2	data	visit
 AMP-PD	UPSIT.csv	pdrd/UPSIT_dictionary.csv	score_from_booklet_3	data	visit
 AMP-PD	UPSIT.csv	pdrd/UPSIT_dictionary.csv	score_from_booklet_4	data	visit
 AMP-PD	UPSIT.csv	pdrd/UPSIT_dictionary.csv	upsit_total_score	data	visit
+AMP-AD	ROSMAP_subject.csv		race_rosmap	data	subject

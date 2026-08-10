@@ -1,0 +1,116 @@
+{
+  "variable": "organ",
+  "cde_id": "39",
+  "definition": "Organ or tissue type from which biospecimen was collected",
+  "src_schema_ref": [],
+  "amp_data_files": ["ROSMAP_biospecimen_metadata.csv"],
+  "program": "AMP-AD",
+  "grain": "specimen",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "Brain",
+      "Heart",
+      "Liver",
+      "Kidney",
+      "Lung",
+      "Spleen",
+      "Blood",
+      "CSF",
+      "Other"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 596878,
+      "name": "Please specify organ.",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "Brain",
+      "write": {
+        "value_as_string": "Brain",
+        "value_source_value": "Brain"
+      }
+    },
+    {
+      "value": "Heart",
+      "write": {
+        "value_as_string": "Heart",
+        "value_source_value": "Heart"
+      }
+    },
+    {
+      "value": "Liver",
+      "write": {
+        "value_as_string": "Liver",
+        "value_source_value": "Liver"
+      }
+    },
+    {
+      "value": "Kidney",
+      "write": {
+        "value_as_string": "Kidney",
+        "value_source_value": "Kidney"
+      }
+    },
+    {
+      "value": "Lung",
+      "write": {
+        "value_as_string": "Lung",
+        "value_source_value": "Lung"
+      }
+    },
+    {
+      "value": "Spleen",
+      "write": {
+        "value_as_string": "Spleen",
+        "value_source_value": "Spleen"
+      }
+    },
+    {
+      "value": "Blood",
+      "write": {
+        "value_as_string": "Blood",
+        "value_source_value": "Blood"
+      }
+    },
+    {
+      "value": "CSF",
+      "write": {
+        "value_as_string": "CSF",
+        "value_source_value": "CSF"
+      }
+    },
+    {
+      "value": "Other",
+      "write": {
+        "value_as_string": "Other",
+        "value_source_value": "Other"
+      }
+    },
+    {
+      "value": "brain",
+      "write": {
+        "value_as_string": "brain",
+        "value_source_value": "brain"
+      }
+    },
+    {
+      "value": "blood",
+      "write": {
+        "value_as_string": "blood",
+        "value_source_value": "blood"
+      }
+    }
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "links": [],
+  "manual_approval": false,
+  "note": "Authored from inputs/cde_dictionary.jsonl (AMP-AD row, cde_id 39); concept 596878 'Please specify organ.' from curated_concept (no AD sibling). Organ label lands via value_as_string; the source also uses lower-case 'brain'/'blood', mapped for robustness."
+}

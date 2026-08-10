@@ -1,0 +1,67 @@
+{
+  "variable": "genetic",
+  "cde_id": "176",
+  "definition": "Other genetic data available on patient",
+  "src_schema_ref": ["LBD_Cohort_Clinical_Data_dictionary.csv"],
+  "amp_data_files": ["LBD_Cohort_Clinical_Data.csv"],
+  "program": "AMP-PD",
+  "grain": "visit",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "Exome",
+      "SNP chip",
+      "Other",
+      "NA"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 4237017,
+      "name": "Genetic test",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "Exome",
+      "write": {
+        "value_as_string": "Exome",
+        "value_source_value": "Exome"
+      }
+    },
+    {
+      "value": "SNP chip",
+      "write": {
+        "value_as_string": "SNP chip",
+        "value_source_value": "SNP chip"
+      }
+    },
+    {
+      "value": "Other",
+      "write": {
+        "value_as_string": "Other",
+        "value_source_value": "Other"
+      }
+    },
+    {
+      "value": "NA",
+      "write": {
+        "value_as_concept_id": {
+          "id": 35941270,
+          "name": "NA"
+        },
+        "value_as_string": "NA",
+        "value_source_value": "NA"
+      }
+    }
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map",
+    "visit_occurrence_id": "cdm.visit_occurrence"
+  },
+  "links": [],
+  "manual_approval": false,
+  "note": "Authored from cde_dictionary (cde_id 176); LBD categorical -> value_as_string, NA=35941270 as in sibling exec_dys.json."
+}

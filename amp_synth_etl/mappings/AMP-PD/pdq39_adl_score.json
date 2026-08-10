@@ -1,0 +1,40 @@
+{
+  "variable": "pdq39_adl_score",
+  "cde_id": "328",
+  "definition": "PDQ-39-Total Score-Activities Of Daily Living (ADL)",
+  "src_schema_ref": ["PDQ_39_dictionary.csv"],
+  "amp_data_files": ["PDQ_39.csv"],
+  "program": "AMP-PD",
+  "grain": "visit",
+  "reads_as": {
+    "datatype": "number",
+    "range": {
+      "min": 0,
+      "max": 100
+    }
+  },
+  "lands": {
+    "table": "measurement",
+    "measurement_concept_id": {
+      "id": 37550978,
+      "name": "PDQ-39",
+      "domain": "Measurement"
+    }
+  },
+  "value_map": [
+    {
+      "value": "<any in range>",
+      "write": {
+        "value_as_number": "<value>",
+        "value_source_value": "<raw>"
+      }
+    }
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map",
+    "visit_occurrence_id": "cdm.visit_occurrence"
+  },
+  "links": [],
+  "manual_approval": false,
+  "note": "Authored from inputs/cde_dictionary.jsonl (cde_id 328; definition and 0-100 value set taken verbatim) and the numeric-score sibling pattern in mmse.json / moca subscore maps; this PDQ-39 domain score is a scaled 0-100 value (decimal in the source, e.g. 12.5/37.5), landed as a measurement on the PDQ-39 scale concept 37550978."
+}

@@ -1,0 +1,35 @@
+{
+  "variable": "Portal.inflammation",
+  "cde_id": "109",
+  "definition": "Measurement or assessment of inflammation in portal region",
+  "src_schema_ref": [],
+  "amp_data_files": [],
+  "program": "AMP-CMD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "integer"
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 4066291,
+      "name": "Portal triaditis",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "<any in range>",
+      "write": {
+        "value_as_number": "<value>",
+        "value_source_value": "<raw>"
+      }
+    }
+  ],
+  "links": [],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "manual_approval": false,
+  "note": "Authored from inputs/cde_dictionary.jsonl (definition + value set verbatim) + sibling mappings/shared/height.json (numeric, no fixed range). Portal-region inflammation scale score -> observation using concept 4066291 'Portal triaditis' (closest curated concept for portal inflammation); value_as_number."
+}

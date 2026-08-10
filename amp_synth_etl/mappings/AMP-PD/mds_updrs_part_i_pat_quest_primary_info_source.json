@@ -1,0 +1,55 @@
+{
+  "variable": "mds_updrs_part_i_pat_quest_primary_info_source",
+  "cde_id": "180",
+  "definition": "MDS-UPDRS Part I Patient Questionnaire Primary Source Of Information",
+  "src_schema_ref": ["MDS_UPDRS_Part_I_dictionary.csv"],
+  "amp_data_files": ["MDS_UPDRS_Part_I.csv"],
+  "program": "AMP-PD",
+  "grain": "visit",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "Patient",
+      "Patient and Caregiver - Equal Proportion",
+      "Caregiver"
+    ]
+  },
+  "lands": {
+    "table": "measurement",
+    "measurement_concept_id": {
+      "id": 3048270,
+      "name": "Information source",
+      "domain": "Measurement"
+    }
+  },
+  "value_map": [
+    {
+      "value": "Patient",
+      "write": {
+        "value_as_string": "Patient",
+        "value_source_value": "Patient"
+      }
+    },
+    {
+      "value": "Patient and Caregiver - Equal Proportion",
+      "write": {
+        "value_as_string": "Patient and Caregiver - Equal Proportion",
+        "value_source_value": "Patient and Caregiver - Equal Proportion"
+      }
+    },
+    {
+      "value": "Caregiver",
+      "write": {
+        "value_as_string": "Caregiver",
+        "value_source_value": "Caregiver"
+      }
+    }
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map",
+    "visit_occurrence_id": "cdm.visit_occurrence"
+  },
+  "links": [],
+  "manual_approval": false,
+  "note": "Authored from inputs/cde_dictionary.jsonl (cde_id 180) using the sibling map ess_info_source.json for the OMOP landing; landing concept from exports/curated_concept_tables.sqlite."
+}

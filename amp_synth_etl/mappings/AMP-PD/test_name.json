@@ -1,0 +1,63 @@
+{
+  "variable": "test_name",
+  "cde_id": "392",
+  "definition": "Name of the biospecimen test",
+  "src_schema_ref": [],
+  "amp_data_files": ["Biospecimen_analyses_CSF_abeta_tau_ptau.csv"],
+  "program": "AMP-PD",
+  "grain": "visit",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "Abeta",
+      "Tau",
+      "beta-glucocerebrosidase",
+      "p-Tau"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 3017278,
+      "name": "Referral lab test name",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "Abeta",
+      "write": {
+        "value_as_string": "Abeta",
+        "value_source_value": "Abeta"
+      }
+    },
+    {
+      "value": "Tau",
+      "write": {
+        "value_as_string": "Tau",
+        "value_source_value": "Tau"
+      }
+    },
+    {
+      "value": "beta-glucocerebrosidase",
+      "write": {
+        "value_as_string": "beta-glucocerebrosidase",
+        "value_source_value": "beta-glucocerebrosidase"
+      }
+    },
+    {
+      "value": "p-Tau",
+      "write": {
+        "value_as_string": "p-Tau",
+        "value_source_value": "p-Tau"
+      }
+    }
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map",
+    "visit_occurrence_id": "cdm.visit_occurrence"
+  },
+  "links": [],
+  "manual_approval": false,
+  "note": "Authored from cde_dictionary (cde_id 392); analyte name -> value_as_string, concept per shared/cohort.json string convention; source_file taken from fidelity_distributions src."
+}

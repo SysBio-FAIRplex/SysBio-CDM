@@ -1,0 +1,55 @@
+{
+  "variable": "rbd06_4_things_fell_down",
+  "cde_id": "349",
+  "definition": "RBD 06.4 Things Fell Down",
+  "src_schema_ref": ["REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster_dictionary.csv"],
+  "amp_data_files": ["REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster.csv"],
+  "program": "AMP-PD",
+  "grain": "visit",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "No",
+      "Yes"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 42689795,
+      "name": "Injury whilst sleeping",
+      "domain": "Condition"
+    }
+  },
+  "value_map": [
+    {
+      "value": "No",
+      "write": {
+        "value_as_concept_id": {
+          "id": 45878245,
+          "name": "No"
+        },
+        "value_as_string": "No",
+        "value_source_value": "No"
+      }
+    },
+    {
+      "value": "Yes",
+      "write": {
+        "value_as_concept_id": {
+          "id": 45877994,
+          "name": "Yes"
+        },
+        "value_as_string": "Yes",
+        "value_source_value": "Yes"
+      }
+    }
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map",
+    "visit_occurrence_id": "cdm.visit_occurrence"
+  },
+  "links": [],
+  "manual_approval": false,
+  "note": "Authored from inputs/cde_dictionary.jsonl (cde_id 349); OMOP landing copied from sibling RBDSQ item map rbd05_hurt_bed_partner.json (visit-grain observation, curated Yes 45877994 / No 45878245 value crosswalk); nearest curated concept 42689795 (Injury whilst sleeping) chosen for physical consequences (objects knocked down) of movements during sleep."
+}

@@ -65,7 +65,7 @@ def main():
     # ---------------------------------------------------------------- AMP-AD: ROSMAP
     # The codebook's variables, taken from the SysBio dictionary rows whose source_file names it.
     # Grain is left for review -- see the module docstring.
-    rosmap = sorted({r["amp_variable"] for r in inputs_io.dict_rows(parked=False)
+    rosmap = sorted({r["amp_variable"] for r in inputs_io.dict_rows()
                      if "rosmap_clinical_codebook" in (r["source_file"] or "").lower()})
     if rosmap:
         tables["ROSMAP_clinical_codebook.pdf"] = {
@@ -103,16 +103,7 @@ def main():
         if t in tables:
             tables[t]["cols"] = keys + [c for c in tables[t]["cols"] if c not in keys]
 
-    # ---------------------------------------------------------------- drop parked elements
-    # An element parked out of the dictionary is dropped from the tables too, so it cannot be
-    # emitted. The AMP dictionary still declares it; the project has retired it.
-    parked = {r["amp_variable"] for r in inputs_io.dict_rows(parked=True)}
-    # A KEY is never parked. `projid` was swept up in the parked unprovenanced batch, but it is
-    # ROSMAP's participant key (the codebook: "organized by projid + visit"), not a data element.
-    # Without it the table has no key at all.
-    parked -= (SUBJECT_KEYS | VISIT_COLS)
-    for t in tables:
-        tables[t]["cols"] = [c for c in tables[t]["cols"] if c not in parked]
+    # ---------------------------------------------------------------- drop empty tables
     for t in [t for t, d in tables.items() if not d["cols"]]:
         tables.pop(t)
 

@@ -1,0 +1,47 @@
+{
+  "variable": "updrs1_on_medication",
+  "cde_id": "529",
+  "definition": "UPDRS Part 1 - Clinical State On Medication",
+  "src_schema_ref": ["UPDRS_dictionary.csv"],
+  "amp_data_files": ["UPDRS.csv"],
+  "program": "AMP-PD",
+  "grain": "visit",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "General",
+      "ON"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 4132778,
+      "name": "General clinical state",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "General",
+      "write": {
+        "value_as_string": "General",
+        "value_source_value": "General"
+      }
+    },
+    {
+      "value": "ON",
+      "write": {
+        "value_as_string": "ON",
+        "value_source_value": "ON"
+      }
+    }
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map",
+    "visit_occurrence_id": "cdm.visit_occurrence"
+  },
+  "links": [],
+  "manual_approval": false,
+  "note": "Authored from inputs/cde_dictionary.jsonl (cde_id 529) using the sibling map ess_info_source.json for the OMOP landing; landing concept from exports/curated_concept_tables.sqlite."
+}

@@ -1,0 +1,54 @@
+{
+  "variable": "sex_ontology_term_id",
+  "cde_id": "117",
+  "definition": "Ontology term identifier for biological sex",
+  "src_schema_ref": [],
+  "amp_data_files": [],
+  "program": "AMP-CMD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "PATO:0000383",
+      "PATO:0000384"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 3046965,
+      "name": "Sex",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "PATO:0000383",
+      "write": {
+        "value_as_concept_id": {
+          "id": 8532,
+          "name": "FEMALE"
+        },
+        "value_as_string": "PATO:0000383",
+        "value_source_value": "PATO:0000383"
+      }
+    },
+    {
+      "value": "PATO:0000384",
+      "write": {
+        "value_as_concept_id": {
+          "id": 8507,
+          "name": "MALE"
+        },
+        "value_as_string": "PATO:0000384",
+        "value_source_value": "PATO:0000384"
+      }
+    }
+  ],
+  "links": [],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "manual_approval": true,
+  "note": "Authored from inputs/cde_dictionary.jsonl (definition + value set verbatim) + sibling mappings/shared/sex.json (Sex 3046965 -> MALE 8507 / FEMALE 8532). PATO term id -> observation 3046965 'Sex'; PATO:0000383 -> FEMALE 8532, PATO:0000384 -> MALE 8507."
+}

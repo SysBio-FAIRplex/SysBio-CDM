@@ -1,0 +1,24 @@
+{
+  "variable": "np_age",
+  "cde_id": "562",
+  "definition": "AMP-CMD participant age (NP age).",
+  "src_schema_ref": ["cmd_value_set_schema.json"],
+  "amp_data_files": [],
+  "program": "AMP-CMD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "integer",
+    "range": {"min": 0, "max": 120}
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {"id": 35815526, "name": "Age at event", "domain": "Observation"}
+  },
+  "value_map": [
+    {"value": "<any in range>", "write": {"value_as_number": "<value>", "value_source_value": "<raw>"}}
+  ],
+  "links": [],
+  "anchored_to": {"person_id": "staging.person_map"},
+  "manual_approval": true,
+  "note": "AMP-CMD age -> observation 35815526 'Age at event' (same concept as age_at_baseline; CMD carries np_age, not age_at_baseline, so no overlap). Closes the CMD age gap. Values are clean integers 18-90."
+}

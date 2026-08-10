@@ -392,7 +392,7 @@ def main():
     pdrd, ad, ark = read_pdrd(), read_ad(), read_ark()
     # CDE dictionary, from the vendored inputs/cde_dictionary.tsv (active rows only). Replaces a
     # read of sysbio.cde_dictionary; a NULL column reads as '' here, matching the old coalesce.
-    sb = inputs_io.dict_rows(parked=False)
+    sb = inputs_io.dict_rows()
 
     rows, invalid = [], 0
     seen_vars = set()

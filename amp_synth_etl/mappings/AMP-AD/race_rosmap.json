@@ -1,0 +1,45 @@
+{
+  "variable": "race_rosmap",
+  "cde_registry_label": "race_rosmap",
+  "cde_id": "568",
+  "definition": "ROSMAP self-reported race (RADC race7, revised NIH categories)",
+  "src_schema_ref": [],
+  "amp_data_files": [],
+  "program": "AMP-AD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "code",
+    "values": {
+      "1": "White",
+      "2": "Black or African American",
+      "3": "American Indian or Alaska Native",
+      "4": "Native Hawaiian or Other Pacific Islander",
+      "5": "Asian",
+      "6": "Other",
+      "7": "Unknown"
+    }
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 3046853,
+      "name": "Race",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    { "value": "1", "write": { "value_as_concept_id": { "id": 8527, "name": "White" }, "value_source_value": "1" } },
+    { "value": "2", "write": { "value_as_concept_id": { "id": 8516, "name": "Black or African American" }, "value_source_value": "2" } },
+    { "value": "3", "write": { "value_as_concept_id": { "id": 8657, "name": "American Indian or Alaska Native" }, "value_source_value": "3" } },
+    { "value": "4", "write": { "value_as_concept_id": { "id": 8557, "name": "Native Hawaiian or Other Pacific Islander" }, "value_source_value": "4" } },
+    { "value": "5", "write": { "value_as_concept_id": { "id": 8515, "name": "Asian" }, "value_source_value": "5" } },
+    { "value": "6", "write": { "value_as_concept_id": { "id": 45877986, "name": "Unknown" }, "value_source_value": "6" } },
+    { "value": "7", "write": { "value_as_concept_id": { "id": 45877986, "name": "Unknown" }, "value_source_value": "7" } }
+  ],
+  "links": [],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "manual_approval": false,
+  "note": "ROSMAP-native race (RADC data set 754 codebook; race7 = revised NIH categories, self-reported at baseline). Distinct INTERNAL name because both ROSMAP_clinical.csv AND AMP-AD_DiverseCohorts_individual_metadata.csv use the real column header `race` with different encodings (ROSMAP numeric 1-7 vs DiverseCohorts text); the source-like emitter renames race_rosmap -> race for the ROSMAP file. CDM landing is harmonized via config/source_precedence.tsv (race_rosmap ROSMAP-native wins over the DiverseCohorts text `race` on 3046853). Codes 1=White(8527), 2=Black or African American(8516), 3=American Indian or Alaska Native(8657), 4=Native Hawaiian or Other Pacific Islander(8557), 5=Asian(8515); 6='Other' and 7='Unknown' BOTH land Unknown(45877986) -- an unspecified 'other' is non-informative and collapsed to a single harmonized value while the real code is preserved in the source column. 'NA' is a missing token (never generated synthetically). manual_approval false pending review."
+}

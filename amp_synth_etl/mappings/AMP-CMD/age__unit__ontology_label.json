@@ -1,0 +1,62 @@
+{
+  "variable": "age__unit__ontology_label",
+  "cde_id": "62",
+  "definition": "Ontology label for the unit of measurement used to express age",
+  "src_schema_ref": [],
+  "amp_data_files": [],
+  "program": "AMP-CMD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "year",
+      "month",
+      "week",
+      "day"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 9448,
+      "name": "year",
+      "domain": "Unit"
+    }
+  },
+  "value_map": [
+    {
+      "value": "year",
+      "write": {
+        "value_as_string": "year",
+        "value_source_value": "year"
+      }
+    },
+    {
+      "value": "month",
+      "write": {
+        "value_as_string": "month",
+        "value_source_value": "month"
+      }
+    },
+    {
+      "value": "week",
+      "write": {
+        "value_as_string": "week",
+        "value_source_value": "week"
+      }
+    },
+    {
+      "value": "day",
+      "write": {
+        "value_as_string": "day",
+        "value_source_value": "day"
+      }
+    }
+  ],
+  "links": [],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "manual_approval": false,
+  "note": "Authored from inputs/cde_dictionary.jsonl (definition + value set verbatim) + sibling mappings/shared/ageUnits.json (unit label -> Unit concept, value_as_string). Age unit label -> observation 9448 'year' (Unit)."
+}

@@ -1,0 +1,35 @@
+{
+  "variable": "visitNumber",
+  "cde_id": "58",
+  "definition": "Sequential number assigned to each study visit",
+  "src_schema_ref": [],
+  "amp_data_files": [],
+  "program": "AMP-AD",
+  "grain": "visit",
+  "reads_as": {
+    "datatype": "integer"
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 37542726,
+      "name": "Study Visit",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "<any in range>",
+      "write": {
+        "value_as_number": "<value>",
+        "value_source_value": "<raw>"
+      }
+    }
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "links": [],
+  "manual_approval": false,
+  "note": "Authored from inputs/cde_dictionary.jsonl (AMP-AD row, cde_id 58) + numeric sibling age_death.json. Sequential visit number (positive integers); concept 37542726 'Study Visit' from curated_concept. Subject-anchored (person-only) like the AD siblings."
+}

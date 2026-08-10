@@ -1,0 +1,27 @@
+{
+  "variable": "disease__ontology_label",
+  "cde_id": "84",
+  "definition": "Standardized disease term from ontology",
+  "src_schema_ref": [],
+  "amp_data_files": [],
+  "program": "AMP-CMD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "string"
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 4234469,
+      "name": "Diagnosis",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [],
+  "links": [],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "manual_approval": false,
+  "note": "Authored from inputs/cde_dictionary.jsonl (definition + value set verbatim) + sibling adj_primary_dxC.json. Ontology disease label (open) -> observation 4234469 'Diagnosis'; raw label preserved in value_source_value."
+}

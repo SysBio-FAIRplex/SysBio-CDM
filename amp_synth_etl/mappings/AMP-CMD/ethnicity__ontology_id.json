@@ -1,0 +1,27 @@
+{
+  "variable": "ethnicity__ontology_id",
+  "cde_id": "92",
+  "definition": "Standardized ontology identifier for participant ethnicity",
+  "src_schema_ref": [],
+  "amp_data_files": [],
+  "program": "AMP-CMD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "string"
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 40771985,
+      "name": "Ethnicity OMB.1997",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [],
+  "links": [],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "manual_approval": false,
+  "note": "Authored from inputs/cde_dictionary.jsonl (definition + value set verbatim) + sibling mappings/shared/ethnicity.json (40771985). Ontology id for ethnicity (open) -> observation 40771985 'Ethnicity OMB.1997'; raw id preserved in value_source_value."
+}

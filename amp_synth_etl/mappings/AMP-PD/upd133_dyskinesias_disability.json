@@ -1,0 +1,41 @@
+{
+  "variable": "upd133_dyskinesias_disability",
+  "cde_registry_label": "upd133_dyskinesias_disability",
+  "harmonized_with": ["upd2402_functional_impact_of_dyskinesias"],
+  "cde_id": "447",
+  "definition": "UPDRS - Complications of Therapy: Dyskinesias - Disability (UPD133)",
+  "src_schema_ref": ["UPDRS_dictionary.csv"],
+  "amp_data_files": ["UPDRS.csv"],
+  "program": "AMP-PD",
+  "grain": "visit",
+  "reads_as": {
+    "datatype": "integer",
+    "range": {
+      "min": 0.0,
+      "max": 4.0
+    }
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 46236394,
+      "name": "Dyskinesia disability in the past week [UPDRS]",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "<any in range>",
+      "write": {
+        "value_as_number": "<value>",
+        "value_source_value": "<raw>"
+      }
+    }
+  ],
+  "links": [],
+  "anchored_to": {
+    "person_id": "staging.person_map",
+    "visit_occurrence_id": "cdm.visit_occurrence"
+  },
+  "manual_approval": true
+}

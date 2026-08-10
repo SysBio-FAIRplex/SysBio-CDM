@@ -1,0 +1,55 @@
+{
+  "variable": "mod_schwab_england_on_off_med",
+  "cde_id": "248",
+  "definition": "Clinical State On Medication",
+  "src_schema_ref": ["Modified_Schwab___England_ADL_dictionary.csv"],
+  "amp_data_files": ["Modified_Schwab___England_ADL.csv"],
+  "program": "AMP-PD",
+  "grain": "visit",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "On",
+      "Off",
+      "General"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 4132778,
+      "name": "General clinical state",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "On",
+      "write": {
+        "value_as_string": "On",
+        "value_source_value": "On"
+      }
+    },
+    {
+      "value": "Off",
+      "write": {
+        "value_as_string": "Off",
+        "value_source_value": "Off"
+      }
+    },
+    {
+      "value": "General",
+      "write": {
+        "value_as_string": "General",
+        "value_source_value": "General"
+      }
+    }
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map",
+    "visit_occurrence_id": "cdm.visit_occurrence"
+  },
+  "links": [],
+  "manual_approval": false,
+  "note": "Authored from cde_dictionary (cde_id 248; empty value set, categories from fidelity_distributions); value_as_string per sibling shared/cohort.json."
+}

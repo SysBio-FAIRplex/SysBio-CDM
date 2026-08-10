@@ -1,0 +1,74 @@
+{
+  "variable": "education_level_years",
+  "cde_id": "161",
+  "definition": "Education Level Years",
+  "src_schema_ref": ["Demographics_dictionary.csv"],
+  "amp_data_files": ["Demographics.csv"],
+  "program": "AMP-PD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "0 years",
+      "Less than 12 years",
+      "12-16 years",
+      "Greater than 16 years",
+      "Unknown"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 42528764,
+      "name": "Years of education [#] - Reported",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "0 years",
+      "write": {
+        "value_as_number": 0,
+        "qualifier_concept_id": { "id": 4172703, "name": "=" },
+        "value_source_value": "0 years"
+      }
+    },
+    {
+      "value": "Less than 12 years",
+      "write": {
+        "value_as_number": 12,
+        "qualifier_concept_id": { "id": 4172756, "name": "<" },
+        "value_source_value": "Less than 12 years"
+      }
+    },
+    {
+      "value": "12-16 years",
+      "write": {
+        "value_as_number": 12,
+        "qualifier_concept_id": { "id": 4171755, "name": ">=" },
+        "value_source_value": "12-16 years"
+      }
+    },
+    {
+      "value": "Greater than 16 years",
+      "write": {
+        "value_as_number": 16,
+        "qualifier_concept_id": { "id": 4172704, "name": ">" },
+        "value_source_value": "Greater than 16 years"
+      }
+    },
+    {
+      "value": "Unknown",
+      "write": {
+        "value_as_concept_id": { "id": 45877986, "name": "Unknown" },
+        "value_source_value": "Unknown"
+      }
+    }
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "links": [],
+  "manual_approval": false,
+  "note": "Harmonized onto the AMP-AD educ concept (cde 28): PD's banded education lands the SAME concept 42528764 'Years of education [#] - Reported' as AD's numeric years, so PD and AD education are queryable together in the CDM. Each band -> value_as_number (the band's year figure, in YEARS) + an operator in qualifier_concept_id: '0 years' = 0 (= 4172703); 'Less than 12 years' = 12 (< 4172756); '12-16 years' = 12 (>= 4171755, lower bound inclusive); 'Greater than 16 years' = 16 (> 4172704); 'Unknown' -> value_as_concept_id 45877986 (no number). value_source_value preserves the raw band. Replaces the prior INCORRECT landing (36031310 'Education completion status' as raw value_as_string). Units are years (inherent to concept 42528764 'Years of education'). manual_approval left false pending your review."
+}

@@ -1,0 +1,40 @@
+{
+  "variable": "rbd_summary_score",
+  "cde_id": "364",
+  "definition": "RBD Summary Score",
+  "src_schema_ref": ["REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster_dictionary.csv"],
+  "amp_data_files": ["REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster.csv"],
+  "program": "AMP-PD",
+  "grain": "visit",
+  "reads_as": {
+    "datatype": "integer",
+    "range": {
+      "min": 0,
+      "max": 13
+    }
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 37551141,
+      "name": "RBDSQ",
+      "domain": "Measurement"
+    }
+  },
+  "value_map": [
+    {
+      "value": "<any in range>",
+      "write": {
+        "value_as_number": "<value>",
+        "value_source_value": "<raw>"
+      }
+    }
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map",
+    "visit_occurrence_id": "cdm.visit_occurrence"
+  },
+  "links": [],
+  "manual_approval": false,
+  "note": "Authored from inputs/cde_dictionary.jsonl (cde_id 364); numeric-score pattern (integer range 0-13, single sentinel value_as_number) copied from sibling summary-score maps moca_delayed_recall_subscore.json / mmse.json; curated concept 37551141 (RBDSQ) chosen as the RBD Screening Questionnaire instrument concept."
+}

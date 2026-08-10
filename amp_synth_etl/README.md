@@ -204,7 +204,8 @@ a meta-test that a deliberately broken cohort fails QC. Determinism/golden only 
 
 ## Reference figures
 
-A full run produces:
+A full run produces (⚠️ **stale — captured from an earlier n=500 build**; `config/cohort.json` now sets
+**n_subjects = 2500**, so every count below scales ~5×. Regenerate to refresh — these are illustrative only):
 
 ```
 person                  500

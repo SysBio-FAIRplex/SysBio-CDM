@@ -1,0 +1,46 @@
+{
+  "variable": "ancestry__ontology_id",
+  "cde_id": "67",
+  "definition": "Ontology identifier for participant ancestry",
+  "src_schema_ref": [],
+  "amp_data_files": [],
+  "program": "AMP-CMD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "HANCESTRO:0008",
+      "HANCESTRO:0014"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 3046853,
+      "name": "Race",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "HANCESTRO:0008",
+      "write": {
+        "value_as_string": "HANCESTRO:0008",
+        "value_source_value": "HANCESTRO:0008"
+      }
+    },
+    {
+      "value": "HANCESTRO:0014",
+      "write": {
+        "value_as_string": "HANCESTRO:0014",
+        "value_source_value": "HANCESTRO:0014"
+      }
+    }
+  ],
+  "links": [],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "manual_approval": false,
+  "note": "Authored from inputs/cde_dictionary.jsonl (definition + value set verbatim) + sibling self_reported_ethnicity.json. HANCESTRO ancestry-code form of `ancestry` -> observation 3046853 'Race', code in value_as_string; other raw codes land with value_source_value preserved."
+}

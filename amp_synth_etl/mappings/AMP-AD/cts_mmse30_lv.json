@@ -1,0 +1,39 @@
+{
+  "variable": "cts_mmse30_lv",
+  "cde_id": "22",
+  "definition": "Mini-Mental State Examination (MMSE-30) total score at last visit",
+  "src_schema_ref": [],
+  "amp_data_files": ["ROSMAP_clinical.csv"],
+  "program": "AMP-AD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "float",
+    "range": {
+      "min": 0,
+      "max": 30
+    }
+  },
+  "lands": {
+    "table": "measurement",
+    "measurement_concept_id": {
+      "id": 4169175,
+      "name": "Mini-mental state examination",
+      "domain": "Measurement"
+    }
+  },
+  "value_map": [
+    {
+      "value": "<any in range>",
+      "write": {
+        "value_as_number": "<value>",
+        "value_source_value": "<raw>"
+      }
+    }
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "links": [],
+  "manual_approval": false,
+  "note": "Authored from inputs/cde_dictionary.jsonl (AMP-AD row, cde_id 22) + numeric sibling age_death.json. MMSE-30 total (range 0-30) at last visit; concept 4169175 'Mini-mental state examination' from curated_concept."
+}

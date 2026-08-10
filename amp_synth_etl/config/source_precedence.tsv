@@ -1,0 +1,7 @@
+concept_id	native_col	superseded_col	note
+3046965	msex	sex	ROSMAP-native sex (0/1) wins over DiverseCohorts harmonized sex
+38003563	spanish	isHispanic	ROSMAP-native ethnicity (1/2) wins over DiverseCohorts (fixes live double-land)
+3172933	braaksc	Braak	ROSMAP-native coded Braak wins over DiverseCohorts (fixes live double-land)
+37397776	apoe_genotype	apoeGenotype	ROSMAP-native APOE wins over DiverseCohorts (inert until apoeGenotype map approved)
+3038421	age_death	ageDeath	ROSMAP-native age-at-death wins over DiverseCohorts (inert until ageDeath map approved)
+3046853	race_rosmap	race	ROSMAP-native numeric race wins over DiverseCohorts text (inert until race_rosmap generated)

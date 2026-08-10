@@ -1,0 +1,27 @@
+{
+  "variable": "disease_category",
+  "cde_id": "85",
+  "definition": "Classification of metabolic disease type",
+  "src_schema_ref": [],
+  "amp_data_files": [],
+  "program": "AMP-CMD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "string"
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 436670,
+      "name": "Metabolic disease",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [],
+  "links": [],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "manual_approval": false,
+  "note": "Authored from inputs/cde_dictionary.jsonl (definition + value set verbatim) + sibling mappings/AMP-CMD/disease.json (metabolic disease 436670). Metabolic-disease classification (open categorical) -> observation 436670 'Metabolic disease'; raw category preserved in value_source_value."
+}

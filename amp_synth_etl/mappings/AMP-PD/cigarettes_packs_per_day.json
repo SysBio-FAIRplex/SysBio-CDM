@@ -1,0 +1,83 @@
+{
+  "variable": "cigarettes_packs_per_day",
+  "cde_id": "149",
+  "definition": "Average number packs of cigarettes smoked daily",
+  "src_schema_ref": ["Smoking_and_alcohol_history_dictionary.csv"],
+  "amp_data_files": ["Smoking_and_alcohol_history.csv"],
+  "program": "AMP-PD",
+  "grain": "visit",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "Unknown",
+      "0.5 pack or less",
+      "1 pack",
+      "0.5 pack",
+      "2 or more packs",
+      "1.5 pack"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 35810373,
+      "name": "Number of cigarettes currently smoked daily (current cigarette smokers)",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "Unknown",
+      "write": {
+        "value_as_concept_id": {
+          "id": 45877986,
+          "name": "Unknown"
+        },
+        "value_as_string": "Unknown",
+        "value_source_value": "Unknown"
+      }
+    },
+    {
+      "value": "0.5 pack or less",
+      "write": {
+        "value_as_string": "0.5 pack or less",
+        "value_source_value": "0.5 pack or less"
+      }
+    },
+    {
+      "value": "1 pack",
+      "write": {
+        "value_as_string": "1 pack",
+        "value_source_value": "1 pack"
+      }
+    },
+    {
+      "value": "0.5 pack",
+      "write": {
+        "value_as_string": "0.5 pack",
+        "value_source_value": "0.5 pack"
+      }
+    },
+    {
+      "value": "2 or more packs",
+      "write": {
+        "value_as_string": "2 or more packs",
+        "value_source_value": "2 or more packs"
+      }
+    },
+    {
+      "value": "1.5 pack",
+      "write": {
+        "value_as_string": "1.5 pack",
+        "value_source_value": "1.5 pack"
+      }
+    }
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map",
+    "visit_occurrence_id": "cdm.visit_occurrence"
+  },
+  "links": [],
+  "manual_approval": false,
+  "note": "Authored from cde_dictionary (cde_id 149); banded smoking-quantity -> value_as_string, Unknown=45877986; no packs-per-day concept in curated so nearest cigarette-count concept used."
+}

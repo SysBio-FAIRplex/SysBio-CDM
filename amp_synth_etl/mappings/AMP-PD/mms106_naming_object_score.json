@@ -1,0 +1,40 @@
+{
+  "variable": "mms106_naming_object_score",
+  "cde_id": "203",
+  "definition": "MMSE - Naming Object 1 (MMS106A), MMSE - Naming Object 2 (MMS106B)",
+  "src_schema_ref": ["MMSE_dictionary.csv"],
+  "amp_data_files": ["MMSE.csv"],
+  "program": "AMP-PD",
+  "grain": "visit",
+  "reads_as": {
+    "datatype": "integer",
+    "range": {
+      "min": 0,
+      "max": 2
+    }
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 4099909,
+      "name": "Naming",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "<any in range>",
+      "write": {
+        "value_as_number": "<value>",
+        "value_source_value": "<raw>"
+      }
+    }
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map",
+    "visit_occurrence_id": "cdm.visit_occurrence"
+  },
+  "links": [],
+  "manual_approval": false,
+  "note": "Authored from inputs/cde_dictionary.jsonl (cde_id 203); numeric sentinel value_map and observation landing copied from sibling MMSE total-score map mmse.json. Concept 4099909 'Naming' selected from curated_concept for the two-object naming subscore."
+}

@@ -1,0 +1,40 @@
+{
+  "variable": "mms105_recall_score",
+  "cde_id": "202",
+  "definition": "MMSE - Recall Score - Repeat Three Unrelated Objects Again: MMSE - Recall Word 1 (MMS105A), MMSE - Recall Word 2 (MMS105B), MMSE - Recall Word 3 (MMS105C)",
+  "src_schema_ref": ["MMSE_dictionary.csv"],
+  "amp_data_files": ["MMSE.csv"],
+  "program": "AMP-PD",
+  "grain": "visit",
+  "reads_as": {
+    "datatype": "integer",
+    "range": {
+      "min": 0,
+      "max": 3
+    }
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 4207640,
+      "name": "Verbal memory recall",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "<any in range>",
+      "write": {
+        "value_as_number": "<value>",
+        "value_source_value": "<raw>"
+      }
+    }
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map",
+    "visit_occurrence_id": "cdm.visit_occurrence"
+  },
+  "links": [],
+  "manual_approval": false,
+  "note": "Authored from inputs/cde_dictionary.jsonl (cde_id 202); numeric sentinel value_map and observation landing copied from sibling MMSE total-score map mmse.json. Concept 4207640 'Verbal memory recall' selected from curated_concept for the three-object delayed-recall subscore."
+}

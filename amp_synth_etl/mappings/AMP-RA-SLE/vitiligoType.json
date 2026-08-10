@@ -1,0 +1,62 @@
+{
+  "variable": "vitiligoType",
+  "cde_id": "559",
+  "definition": "A high-level classification of vitiligo based on the distribution and patterning of lesions across the body.",
+  "src_schema_ref": [],
+  "amp_data_files": [],
+  "program": "AMP-RA-SLE",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "segmental",
+      "non-segmental",
+      "mixed",
+      "unclassified"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 4234469,
+      "name": "Diagnosis",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "segmental",
+      "write": {
+        "value_as_string": "segmental",
+        "value_source_value": "segmental"
+      }
+    },
+    {
+      "value": "non-segmental",
+      "write": {
+        "value_as_string": "non-segmental",
+        "value_source_value": "non-segmental"
+      }
+    },
+    {
+      "value": "mixed",
+      "write": {
+        "value_as_string": "mixed",
+        "value_source_value": "mixed"
+      }
+    },
+    {
+      "value": "unclassified",
+      "write": {
+        "value_as_string": "unclassified",
+        "value_source_value": "unclassified"
+      }
+    }
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "links": [],
+  "manual_approval": false,
+  "note": "Authored from inputs/cde_dictionary.jsonl (AMP-RA-SLE row, cde_id 559) copying the subject-grain sibling mappings/AMP-RA-SLE/diagnosis.json: disease classification lands in observation under concept 4234469 'Diagnosis'. The four vitiligo subtypes (segmental, non-segmental, mixed, unclassified) have no curated_concept, so each is preserved as value_as_string/value_source_value exactly as diagnosis.json handles its unmapped values. Subject-grain, anchored to person_id only."
+}

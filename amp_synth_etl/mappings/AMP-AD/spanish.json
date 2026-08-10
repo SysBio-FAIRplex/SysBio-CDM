@@ -1,0 +1,54 @@
+{
+  "variable": "spanish",
+  "cde_id": "49",
+  "definition": "Indicator of Spanish ethnicity or language preference",
+  "src_schema_ref": [],
+  "amp_data_files": ["ROSMAP_clinical.csv"],
+  "program": "AMP-AD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "code",
+    "values": {
+      "1": "Yes",
+      "2": "No"
+    }
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 38003563,
+      "name": "Hispanic or Latino",
+      "domain": "Ethnicity"
+    }
+  },
+  "value_map": [
+    {
+      "value": "1",
+      "write": {
+        "value_as_number": 1,
+        "value_as_concept_id": {
+          "id": 45877994,
+          "name": "Yes"
+        },
+        "value_source_value": "1"
+      }
+    },
+    {
+      "value": "2",
+      "write": {
+        "value_as_number": 0,
+        "value_as_concept_id": {
+          "id": 45878245,
+          "name": "No"
+        },
+        "value_source_value": "2"
+      }
+    }
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "links": [],
+  "manual_approval": true,
+  "note": "Authored from inputs/cde_dictionary.jsonl (AMP-AD row, cde_id 49) + sibling isHispanic.json (same ethnicity concept 38003563). ROSMAP 'spanish' is coded {1:Yes,2:No}; 1->Yes(45877994)/2->No(45878245) with value_as_number 1/0 like the isHispanic/msex Yes/No pattern."
+}

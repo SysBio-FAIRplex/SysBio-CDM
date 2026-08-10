@@ -1,0 +1,35 @@
+{
+  "variable": "enrollment_months_after_baseline",
+  "cde_id": "162",
+  "definition": "Number of months after baseline visit at which Enrollment occurred; negative values indicate Enrollment occurred before baseline",
+  "src_schema_ref": ["Enrollment_dictionary.csv"],
+  "amp_data_files": ["Enrollment.csv"],
+  "program": "AMP-PD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "number"
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 42528933,
+      "name": "Trial enrollment date",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "<any in range>",
+      "write": {
+        "value_as_number": "<value>",
+        "value_source_value": "<raw>"
+      }
+    }
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "links": [],
+  "manual_approval": false,
+  "note": "Authored from cde_dictionary (cde_id 162); months-after-baseline -> value_as_number pattern copied from sibling pd_medication_start_months_after_baseline.json."
+}

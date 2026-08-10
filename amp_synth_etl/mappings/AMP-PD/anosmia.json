@@ -1,0 +1,67 @@
+{
+  "variable": "anosmia",
+  "cde_id": "140",
+  "definition": "Anosmia (per history or smell test)",
+  "src_schema_ref": ["LBD_Cohort_Clinical_Data_dictionary.csv"],
+  "amp_data_files": ["LBD_Cohort_Clinical_Data.csv"],
+  "program": "AMP-PD",
+  "grain": "visit",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "Yes",
+      "No",
+      "NA"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 4185711,
+      "name": "Loss of sense of smell",
+      "domain": "Condition"
+    }
+  },
+  "value_map": [
+    {
+      "value": "Yes",
+      "write": {
+        "value_as_concept_id": {
+          "id": 4188539,
+          "name": "Yes"
+        },
+        "value_as_string": "Yes",
+        "value_source_value": "Yes"
+      }
+    },
+    {
+      "value": "No",
+      "write": {
+        "value_as_concept_id": {
+          "id": 4188540,
+          "name": "No"
+        },
+        "value_as_string": "No",
+        "value_source_value": "No"
+      }
+    },
+    {
+      "value": "NA",
+      "write": {
+        "value_as_concept_id": {
+          "id": 35941270,
+          "name": "NA"
+        },
+        "value_as_string": "NA",
+        "value_source_value": "NA"
+      }
+    }
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map",
+    "visit_occurrence_id": "cdm.visit_occurrence"
+  },
+  "links": [],
+  "manual_approval": false,
+  "note": "Authored from cde_dictionary (cde_id 140); OMOP landing pattern copied from sibling exec_dys.json (LBD Yes/No/NA -> value_as_concept, NA=35941270)."
+}

@@ -1,0 +1,29 @@
+{
+  "variable": "dti_measure",
+  "cde_registry_label": "dti_measure",
+  "cde_id": "159",
+  "definition": "Brain tissue being measured",
+  "src_schema_ref": ["DTI_dictionary.csv"],
+  "amp_data_files": ["DTI.csv"],
+  "program": "AMP-PD",
+  "grain": "visit",
+  "reads_as": {
+    "datatype": "string"
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 40489396,
+      "name": "Diffusion tractography",
+      "domain": "Procedure"
+    }
+  },
+  "value_map": [],
+  "links": [],
+  "anchored_to": {
+    "person_id": "staging.person_map",
+    "visit_occurrence_id": "cdm.visit_occurrence"
+  },
+  "manual_approval": false,
+  "note": "authored from cde_dictionary (cde_id 159) + sibling ref1_left_reference.json (DTI family, same source_file); concept 40489396 Diffusion tractography sourced from curated_concept because the sibling is concept-less; amp_value_set is null in the dictionary so no value_map codes are enumerated -- the raw DTI measure label lands via value_source_value (string passthrough)"
+}

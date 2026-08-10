@@ -1,0 +1,47 @@
+{
+  "variable": "alcohol_inc_dec",
+  "cde_id": "132",
+  "definition": "Has there been a general increase or decrease in your consumption over a 10-year period.",
+  "src_schema_ref": ["Smoking_and_alcohol_history_dictionary.csv"],
+  "amp_data_files": ["Smoking_and_alcohol_history.csv"],
+  "program": "AMP-PD",
+  "grain": "visit",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "Decrease",
+      "Increase"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 35810233,
+      "name": "Alcohol intake versus 10 years previously",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "Decrease",
+      "write": {
+        "value_as_string": "Decrease",
+        "value_source_value": "Decrease"
+      }
+    },
+    {
+      "value": "Increase",
+      "write": {
+        "value_as_string": "Increase",
+        "value_source_value": "Increase"
+      }
+    }
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map",
+    "visit_occurrence_id": "cdm.visit_occurrence"
+  },
+  "links": [],
+  "manual_approval": false,
+  "note": "Authored from cde_dictionary (cde_id 132); OMOP landing concept reused from sibling alcohol_consumption_change.json; enum -> value_as_string."
+}

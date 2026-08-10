@@ -1,0 +1,35 @@
+{
+  "variable": "GUID",
+  "cde_id": "548",
+  "definition": "Global Unique ID (USUBJID)",
+  "src_schema_ref": ["Caffeine_history_dictionary.csv", "DTI_dictionary.csv", "DaTSCAN_SBR_dictionary.csv", "DaTSCAN_visual_interpretation_dictionary.csv", "Demographics_dictionary.csv", "Enrollment_dictionary.csv", "Epworth_Sleepiness_Scale_dictionary.csv", "Family_History_PD_dictionary.csv", "LBD_Cohort_Clinical_Data_dictionary.csv", "LBD_Cohort_Path_Data_dictionary.csv", "MDS_UPDRS_Part_III_dictionary.csv", "MDS_UPDRS_Part_II_dictionary.csv", "MDS_UPDRS_Part_IV_dictionary.csv", "MDS_UPDRS_Part_I_dictionary.csv", "MMSE_dictionary.csv", "MOCA_dictionary.csv", "MRI_dictionary.csv", "Modified_Schwab___England_ADL_dictionary.csv", "PDQ_39_dictionary.csv", "PD_Medical_History_dictionary.csv", "REM_Sleep_Behavior_Disorder_Questionnaire_Mayo_dictionary.csv", "REM_Sleep_Behavior_Disorder_Questionnaire_Stiasny_Kolster_dictionary.csv", "Smoking_and_alcohol_history_dictionary.csv", "UPDRS_dictionary.csv", "UPSIT_dictionary.csv"],
+  "amp_data_files": [],
+  "program": "AMP-RA-SLE",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "string"
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 40768976,
+      "name": "Participant [Identifier]",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "<any identifier>",
+      "write": {
+        "value_as_string": "<value>",
+        "value_source_value": "<raw>"
+      }
+    }
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "links": [],
+  "manual_approval": false,
+  "note": "Authored from inputs/cde_dictionary.jsonl (AMP-RA-SLE row, cde_id 548) copying the approved identifier sibling mappings/AMP-PD/participant_id.json: subject identifier lands in observation under concept 40768976 'Participant [Identifier]'. Value set is a free-text identifier (no enum in dictionary), so a single passthrough sentinel entry writes value_as_string/value_source_value; datatype string. Subject-grain, anchored to person_id only like the other AMP-RA-SLE subject-grain maps (diagnosis/project/program)."
+}

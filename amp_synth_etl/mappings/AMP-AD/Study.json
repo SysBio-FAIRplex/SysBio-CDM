@@ -1,0 +1,27 @@
+{
+  "variable": "Study",
+  "cde_id": "52",
+  "definition": "Identifier of the research study or cohort from which the data was collected",
+  "src_schema_ref": [],
+  "amp_data_files": ["ROSMAP_clinical.csv"],
+  "program": "AMP-AD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "string"
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 21492138,
+      "name": "Resource identifier [URI] for Study",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "links": [],
+  "manual_approval": false,
+  "note": "Authored from inputs/cde_dictionary.jsonl (AMP-AD row, cde_id 52) + passthrough sibling dti_measure.json. amp_value_set is free text (study names) so no codes are enumerated -- the study/cohort name lands via value_source_value; concept 21492138 'Resource identifier [URI] for Study' from curated_concept."
+}

@@ -1,0 +1,103 @@
+{
+  "variable": "test_units",
+  "cde_id": "393",
+  "definition": "Biospecimen test units of measure",
+  "src_schema_ref": [],
+  "amp_data_files": [],
+  "program": "AMP-PD",
+  "grain": "visit",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "%CV",
+      "Average (pmol/min/mL)",
+      "Ct Avg",
+      "RFU",
+      "Stdev",
+      "mg/mL",
+      "ng/mL",
+      "pg/mL",
+      "ug/mL"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 35624671,
+      "name": "Unit of measure",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "%CV",
+      "write": {
+        "value_as_string": "%CV",
+        "value_source_value": "%CV"
+      }
+    },
+    {
+      "value": "Average (pmol/min/mL)",
+      "write": {
+        "value_as_string": "Average (pmol/min/mL)",
+        "value_source_value": "Average (pmol/min/mL)"
+      }
+    },
+    {
+      "value": "Ct Avg",
+      "write": {
+        "value_as_string": "Ct Avg",
+        "value_source_value": "Ct Avg"
+      }
+    },
+    {
+      "value": "RFU",
+      "write": {
+        "value_as_string": "RFU",
+        "value_source_value": "RFU"
+      }
+    },
+    {
+      "value": "Stdev",
+      "write": {
+        "value_as_string": "Stdev",
+        "value_source_value": "Stdev"
+      }
+    },
+    {
+      "value": "mg/mL",
+      "write": {
+        "value_as_string": "mg/mL",
+        "value_source_value": "mg/mL"
+      }
+    },
+    {
+      "value": "ng/mL",
+      "write": {
+        "value_as_string": "ng/mL",
+        "value_source_value": "ng/mL"
+      }
+    },
+    {
+      "value": "pg/mL",
+      "write": {
+        "value_as_string": "pg/mL",
+        "value_source_value": "pg/mL"
+      }
+    },
+    {
+      "value": "ug/mL",
+      "write": {
+        "value_as_string": "ug/mL",
+        "value_source_value": "ug/mL"
+      }
+    }
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map",
+    "visit_occurrence_id": "cdm.visit_occurrence"
+  },
+  "links": [],
+  "manual_approval": false,
+  "note": "Authored from cde_dictionary (cde_id 393); unit label -> value_as_string, concept per shared/cohort.json string convention; source_file unknown (absent from dictionary and fidelity_distributions)."
+}

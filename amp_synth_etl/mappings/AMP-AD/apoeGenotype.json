@@ -1,0 +1,43 @@
+{
+  "variable": "apoeGenotype",
+  "cde_registry_label": "apoeGenotype",
+  "cde_id": "566",
+  "definition": "APOE genotype (DiverseCohorts)",
+  "src_schema_ref": [],
+  "amp_data_files": ["AMP-AD_DiverseCohorts_individual_metadata.csv"],
+  "program": "AMP-AD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "code",
+    "values": {
+      "22": "E2E2",
+      "23": "E2E3",
+      "24": "E2E4",
+      "33": "E3E3",
+      "34": "E3E4",
+      "44": "E4E4"
+    }
+  },
+  "lands": {
+    "table": "measurement",
+    "measurement_concept_id": {
+      "id": 37397776,
+      "name": "Apolipoprotein E genotype",
+      "domain": "Measurement"
+    }
+  },
+  "value_map": [
+    { "value": "22", "write": { "value_as_concept_id": { "id": 36308038, "name": "APOE e2" }, "value_source_value": "22" } },
+    { "value": "23", "write": { "value_as_concept_id": { "id": 36310377, "name": "APOE e2/e3" }, "value_source_value": "23" } },
+    { "value": "24", "write": { "value_as_concept_id": { "id": 36308156, "name": "APOE e2/e4" }, "value_source_value": "24" } },
+    { "value": "33", "write": { "value_as_concept_id": { "id": 36310427, "name": "APOE e3 (wild type)" }, "value_source_value": "33" } },
+    { "value": "34", "write": { "value_as_concept_id": { "id": 36311054, "name": "APOE e3/e4" }, "value_source_value": "34" } },
+    { "value": "44", "write": { "value_as_concept_id": { "id": 36307729, "name": "APOE e4" }, "value_source_value": "44" } }
+  ],
+  "links": [],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "manual_approval": false,
+  "note": "DiverseCohorts APOE-genotype twin of the ROSMAP-native apoe_genotype (cde 12): same E2/E3/E4 codes 22-44, so the value_map is identical -- the two differ only in source file and missing token ('missing or unknown' here vs 'NA' in ROSMAP; both are MISSING_TOKENS -> read as null -> no record, which is what 'skip' means). AD-wide (DiverseCohorts harmonizes all 14 banks; NOT in AMP_AD_ROSMAP_GATE). CDM landing harmonized via config/source_precedence.tsv: apoe_genotype (ROSMAP-native) wins over apoeGenotype on 37397776, so a ROS/MAP person lands exactly one APOE record while DiverseCohorts-only persons land from here. manual_approval false pending review."
+}

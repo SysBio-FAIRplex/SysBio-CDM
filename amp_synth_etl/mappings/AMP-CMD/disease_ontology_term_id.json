@@ -1,0 +1,27 @@
+{
+  "variable": "disease_ontology_term_id",
+  "cde_id": "86",
+  "definition": "Disease Ontology standardized identifier",
+  "src_schema_ref": [],
+  "amp_data_files": [],
+  "program": "AMP-CMD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "string"
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 4234469,
+      "name": "Diagnosis",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [],
+  "links": [],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "manual_approval": false,
+  "note": "Authored from inputs/cde_dictionary.jsonl (definition + value set verbatim) + sibling adj_primary_dxC.json. Disease ontology term id (open; e.g. DOID/MONDO) -> observation 4234469 'Diagnosis'; raw term preserved in value_source_value."
+}

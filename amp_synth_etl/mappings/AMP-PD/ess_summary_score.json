@@ -1,0 +1,40 @@
+{
+  "variable": "ess_summary_score",
+  "cde_id": "172",
+  "definition": "Epworth Sleepiness Scale (ESS) - Total Score",
+  "src_schema_ref": ["Epworth_Sleepiness_Scale_dictionary.csv"],
+  "amp_data_files": ["Epworth_Sleepiness_Scale.csv"],
+  "program": "AMP-PD",
+  "grain": "visit",
+  "reads_as": {
+    "datatype": "integer",
+    "range": {
+      "min": 0,
+      "max": 24
+    }
+  },
+  "lands": {
+    "table": "measurement",
+    "measurement_concept_id": {
+      "id": 46273534,
+      "name": "Epworth Sleepiness Scale",
+      "domain": "Measurement"
+    }
+  },
+  "value_map": [
+    {
+      "value": "<any in range>",
+      "write": {
+        "value_as_number": "<value>",
+        "value_source_value": "<raw>"
+      }
+    }
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map",
+    "visit_occurrence_id": "cdm.visit_occurrence"
+  },
+  "links": [],
+  "manual_approval": false,
+  "note": "Authored from inputs/cde_dictionary.jsonl (cde_id 172, value set '0 - 24') with the ESS-family sibling ess_info_source.json supplying the visit-grain measurement landing and the numeric siblings mmse.json / msq08_rate_of_alertness.json supplying the integer-range sentinel value_map. Total score lands the curated 'Epworth Sleepiness Scale' concept (46273534)."
+}

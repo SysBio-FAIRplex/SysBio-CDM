@@ -1,0 +1,27 @@
+{
+  "variable": "specimenIdSource",
+  "cde_id": "50",
+  "definition": "Source system or organization that assigned the specimen identifier",
+  "src_schema_ref": [],
+  "amp_data_files": ["MIT_ROSMAP_Multiomics_biospecimen_metadata.csv"],
+  "program": "AMP-AD",
+  "grain": "specimen",
+  "reads_as": {
+    "datatype": "string"
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 45773156,
+      "name": "Specimen source",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "links": [],
+  "manual_approval": false,
+  "note": "Authored from inputs/cde_dictionary.jsonl (AMP-AD row, cde_id 50) + passthrough sibling dti_measure.json. amp_value_set is free text so the specimen-id source string lands via value_source_value; concept 45773156 'Specimen source' from curated_concept."
+}

@@ -1,0 +1,40 @@
+{
+  "variable": "smell_detail",
+  "cde_id": "384",
+  "definition": "UPSIT 40 smell test score",
+  "src_schema_ref": ["LBD_Cohort_Clinical_Data_dictionary.csv"],
+  "amp_data_files": ["LBD_Cohort_Clinical_Data.csv"],
+  "program": "AMP-PD",
+  "grain": "visit",
+  "reads_as": {
+    "datatype": "integer",
+    "range": {
+      "min": 0,
+      "max": 40
+    }
+  },
+  "lands": {
+    "table": "measurement",
+    "measurement_concept_id": {
+      "id": 3654978,
+      "name": "Assessment using University of Pennsylvania Smell Identification Test",
+      "domain": "Measurement"
+    }
+  },
+  "value_map": [
+    {
+      "value": "<any in range>",
+      "write": {
+        "value_as_number": "<value>",
+        "value_source_value": "<raw>"
+      }
+    }
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map",
+    "visit_occurrence_id": "cdm.visit_occurrence"
+  },
+  "links": [],
+  "manual_approval": false,
+  "note": "Authored from cde_dictionary (cde_id 384; value set '[0-40] | NA' -> numeric range 0-40, NA rows land with NULL value_as_number); UPSIT concept from sibling upsit_performed.json, numeric pattern from shared/mod_schwab_england_pct_adl_score.json."
+}

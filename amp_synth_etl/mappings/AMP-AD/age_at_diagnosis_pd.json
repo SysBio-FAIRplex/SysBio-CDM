@@ -1,0 +1,36 @@
+{
+  "variable": "age_at_diagnosis_pd",
+  "cde_id": "2",
+  "definition": "Age At Parkinson's Disease Diagnosis",
+  "src_schema_ref": [],
+  "amp_data_files": [],
+  "program": "AMP-AD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "integer",
+    "unit": "years"
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 40766652,
+      "name": "Age at diagnosis",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "<any in range>",
+      "write": {
+        "value_as_number": "<value>",
+        "value_source_value": "<raw>"
+      }
+    }
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "links": [],
+  "manual_approval": false,
+  "note": "Authored from inputs/cde_dictionary.jsonl (AMP-AD row, cde_id 2) + numeric sibling age_death.json (single '<any in range>' sentinel). Age at PD diagnosis in years; concept 40766652 'Age at diagnosis' from curated_concept. amp_value_set is null so no bounds are asserted."
+}

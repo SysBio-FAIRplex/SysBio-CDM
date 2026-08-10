@@ -1,0 +1,70 @@
+{
+  "variable": "age.range",
+  "cde_id": "61",
+  "definition": "Age Range",
+  "src_schema_ref": [],
+  "amp_data_files": [],
+  "program": "AMP-CMD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "18-30",
+      "31-45",
+      "46-60",
+      "61-75",
+      "76+"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 3053159,
+      "name": "Age group",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "18-30",
+      "write": {
+        "value_as_string": "18-30",
+        "value_source_value": "18-30"
+      }
+    },
+    {
+      "value": "31-45",
+      "write": {
+        "value_as_string": "31-45",
+        "value_source_value": "31-45"
+      }
+    },
+    {
+      "value": "46-60",
+      "write": {
+        "value_as_string": "46-60",
+        "value_source_value": "46-60"
+      }
+    },
+    {
+      "value": "61-75",
+      "write": {
+        "value_as_string": "61-75",
+        "value_source_value": "61-75"
+      }
+    },
+    {
+      "value": "76+",
+      "write": {
+        "value_as_string": "76+",
+        "value_source_value": "76+"
+      }
+    }
+  ],
+  "links": [],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "manual_approval": false,
+  "note": "Authored from inputs/cde_dictionary.jsonl (definition + value set verbatim) + sibling np_age.json. Categorical age groups (dictionary examples) -> observation 3053159 'Age group' with value_as_string band; other raw bins land with value_source_value preserved."
+}

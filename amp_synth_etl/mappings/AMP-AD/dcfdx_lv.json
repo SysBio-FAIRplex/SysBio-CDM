@@ -1,0 +1,104 @@
+{
+  "variable": "dcfdx_lv",
+  "cde_id": "25",
+  "definition": "Clinical Cognitive Diagnosis Summary at last visit",
+  "src_schema_ref": [],
+  "amp_data_files": ["ROSMAP_clinical.csv"],
+  "program": "AMP-AD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "code",
+    "values": {
+      "1": "NCI: No cognitive impairment",
+      "2": "MCI: Mild cognitive impairment, no other condition contributing to CI",
+      "3": "MCI+: Mild cognitive impairment AND another condition contributing to CI",
+      "4": "AD: Alzheimer's dementia, no other condition contributing to CI (NINCDS/ADRDA Probable AD)",
+      "5": "AD+: Alzheimer's dementia AND other condition contributing to CI (NINCDS/ADRDA Possible AD)",
+      "6": "Other dementia: Other primary cause of dementia, no clinical evidence of Alzheimer's dementia"
+    }
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 46235850,
+      "name": "Cognitive function [Interpretation]",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "1",
+      "write": {
+        "value_as_concept_id": {
+          "id": 45884350,
+          "name": "No impairment"
+        },
+        "value_source_value": "1"
+      }
+    },
+    {
+      "value": "2",
+      "write": {
+        "value_as_concept_id": {
+          "id": 4297400,
+          "name": "Mild neurocognitive disorder"
+        },
+        "value_source_value": "2"
+      }
+    },
+    {
+      "value": "3",
+      "write": {
+        "value_as_concept_id": {
+          "id": 45878929,
+          "name": "Cognitive impairment"
+        },
+        "value_source_value": "3",
+        "qualifier_concept_id": {
+          "id": 46235351,
+          "name": "Comorbid condition"
+        }
+      }
+    },
+    {
+      "value": "4",
+      "write": {
+        "value_as_concept_id": {
+          "id": 36311271,
+          "name": "Alzheimer's disease"
+        },
+        "value_source_value": "4"
+      }
+    },
+    {
+      "value": "5",
+      "write": {
+        "value_as_concept_id": {
+          "id": 36311271,
+          "name": "Alzheimer's disease"
+        },
+        "value_source_value": "5",
+        "qualifier_concept_id": {
+          "id": 46235351,
+          "name": "Comorbid condition"
+        }
+      }
+    },
+    {
+      "value": "6",
+      "write": {
+        "value_as_concept_id": {
+          "id": 36310643,
+          "name": "Cognitive loss/dementia"
+        },
+        "value_source_value": "6"
+      }
+    }
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "links": [],
+  "manual_approval": false,
+  "note": "Authored from inputs/cde_dictionary.jsonl (AMP-AD row, cde_id 25) + sibling dcfdx.json (same observation concept 46235850 'Cognitive function [Interpretation]'; the 1-6 value->concept crosswalk is copied verbatim). dcfdx_lv is the dcfdx cognitive-diagnosis summary AT LAST VISIT (1-6 scale), rendered once per subject."
+}

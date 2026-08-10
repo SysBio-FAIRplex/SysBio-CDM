@@ -1,0 +1,27 @@
+{
+  "variable": "self_reported_ethnicity_ontology_term_id",
+  "cde_id": "115",
+  "definition": "Ontology term identifier for participant's self-reported ethnicity",
+  "src_schema_ref": [],
+  "amp_data_files": [],
+  "program": "AMP-CMD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "string"
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 3046853,
+      "name": "Race",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [],
+  "links": [],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "manual_approval": false,
+  "note": "Authored from inputs/cde_dictionary.jsonl (definition + value set verbatim) + sibling mappings/AMP-CMD/self_reported_ethnicity.json (self-reported race/ethnicity -> Race 3046853). Ontology-term-id form (open; HANCESTRO) -> observation 3046853 'Race'; raw term preserved in value_source_value."
+}

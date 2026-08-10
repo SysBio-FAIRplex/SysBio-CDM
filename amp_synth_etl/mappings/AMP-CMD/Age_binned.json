@@ -1,0 +1,70 @@
+{
+  "variable": "Age_binned",
+  "cde_id": "64",
+  "definition": "Age categorized into predefined bins or ranges",
+  "src_schema_ref": [],
+  "amp_data_files": [],
+  "program": "AMP-CMD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "<40",
+      "40-49",
+      "50-59",
+      "60-69",
+      "70+"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 3053159,
+      "name": "Age group",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "<40",
+      "write": {
+        "value_as_string": "<40",
+        "value_source_value": "<40"
+      }
+    },
+    {
+      "value": "40-49",
+      "write": {
+        "value_as_string": "40-49",
+        "value_source_value": "40-49"
+      }
+    },
+    {
+      "value": "50-59",
+      "write": {
+        "value_as_string": "50-59",
+        "value_source_value": "50-59"
+      }
+    },
+    {
+      "value": "60-69",
+      "write": {
+        "value_as_string": "60-69",
+        "value_source_value": "60-69"
+      }
+    },
+    {
+      "value": "70+",
+      "write": {
+        "value_as_string": "70+",
+        "value_source_value": "70+"
+      }
+    }
+  ],
+  "links": [],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "manual_approval": false,
+  "note": "Authored from inputs/cde_dictionary.jsonl (definition + value set verbatim) + sibling np_age.json. Categorical age bins (dictionary examples) -> observation 3053159 'Age group' with value_as_string band; any other raw bin still lands with value_source_value preserved."
+}

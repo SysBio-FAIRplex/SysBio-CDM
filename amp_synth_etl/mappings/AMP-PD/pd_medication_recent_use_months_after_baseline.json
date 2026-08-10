@@ -1,0 +1,35 @@
+{
+  "variable": "pd_medication_recent_use_months_after_baseline",
+  "cde_id": "287",
+  "definition": "Number of months after baseline visit at which Most Recent Use of PD Medication occurred; negative values indicate Most Recent Use of PD Medication occurred before baseline",
+  "src_schema_ref": ["PD_Medical_History_dictionary.csv"],
+  "amp_data_files": ["PD_Medical_History.csv"],
+  "program": "AMP-PD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "number"
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 43528862,
+      "name": "Are you currently prescribed medications and/or receiving treatment for Parkinson's disease?",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "<any in range>",
+      "write": {
+        "value_as_number": "<value>",
+        "value_source_value": "<raw>"
+      }
+    }
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "links": [],
+  "manual_approval": false,
+  "note": "Authored from cde_dictionary (cde_id 287); months-after-baseline -> value_as_number pattern copied from sibling pd_medication_start_months_after_baseline.json; PD-medication concept reused from sibling use_of_pd_medication.json."
+}

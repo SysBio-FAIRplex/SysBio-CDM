@@ -1,0 +1,50 @@
+{
+  "variable": "education_12years_complete",
+  "cde_registry_label": "education",
+  "cde_id": "160",
+  "definition": "Indicator Of Whether Subject Has Completed 12 Years Of Education",
+  "src_schema_ref": ["MOCA_dictionary.csv"],
+  "amp_data_files": ["MOCA.csv"],
+  "program": "AMP-PD",
+  "grain": "visit",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "Greater than 12 years of education",
+      "Less than or equal to 12 years of education"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 42528764,
+      "name": "Years of education [#] - Reported",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "Greater than 12 years of education",
+      "write": {
+        "value_as_number": 12,
+        "qualifier_concept_id": { "id": 4172704, "name": ">" },
+        "value_source_value": "Greater than 12 years of education"
+      }
+    },
+    {
+      "value": "Less than or equal to 12 years of education",
+      "write": {
+        "value_as_number": 12,
+        "qualifier_concept_id": { "id": 4171754, "name": "<=" },
+        "value_source_value": "Less than or equal to 12 years of education"
+      }
+    }
+  ],
+  "links": [],
+  "anchored_to": {
+    "person_id": "staging.person_map",
+    "visit_occurrence_id": "cdm.visit_occurrence"
+  },
+  "manual_approval": true,
+  "note": "Harmonized onto the AMP-AD educ concept (cde 28): lands 42528764 'Years of education [#] - Reported' (same as AD numeric years) with the threshold in value_as_number + an operator qualifier: '> 12 years' = 12 (> 4172704); '<= 12 years' = 12 (<= 4171754). value_source_value preserves the raw category. Units are years (inherent to 42528764). CHANGED FROM the prior 36031310 'Education completion status' / raw value_as_string. NOTE: this map was already manual_approval:true; its LANDING SEMANTICS were changed here per your instruction to harmonize PD education onto the AD educ concept -- flagged for your re-confirmation (approval left true, unchanged)."
+}

@@ -1,0 +1,54 @@
+{
+  "variable": "case_control_other_at_baseline",
+  "cde_id": "146",
+  "definition": "Case-Control-Other Status at Baseline",
+  "src_schema_ref": [],
+  "amp_data_files": [],
+  "program": "AMP-PD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "Case",
+      "Control",
+      "Other"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 44804212,
+      "name": "Case control study",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "Case",
+      "write": {
+        "value_as_string": "Case",
+        "value_source_value": "Case"
+      }
+    },
+    {
+      "value": "Control",
+      "write": {
+        "value_as_string": "Control",
+        "value_source_value": "Control"
+      }
+    },
+    {
+      "value": "Other",
+      "write": {
+        "value_as_string": "Other",
+        "value_source_value": "Other"
+      }
+    }
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "links": [],
+  "manual_approval": false,
+  "note": "Authored from cde_dictionary (cde_id 146); enum -> value_as_string pattern copied from sibling shared/cohort.json; source_file unknown (absent from dictionary and fidelity_distributions)."
+}

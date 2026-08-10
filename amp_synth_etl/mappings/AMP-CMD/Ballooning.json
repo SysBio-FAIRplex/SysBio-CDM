@@ -1,0 +1,57 @@
+{
+  "variable": "Ballooning",
+  "cde_id": "69",
+  "definition": "Hepatocyte ballooning assessment score",
+  "src_schema_ref": [],
+  "amp_data_files": [],
+  "program": "AMP-CMD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "0",
+      "1",
+      "2"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 4150811,
+      "name": "Ballooning degeneration",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "0",
+      "write": {
+        "value_as_number": "0",
+        "value_as_string": "None",
+        "value_source_value": "0"
+      }
+    },
+    {
+      "value": "1",
+      "write": {
+        "value_as_number": "1",
+        "value_as_string": "Few balloon cells",
+        "value_source_value": "1"
+      }
+    },
+    {
+      "value": "2",
+      "write": {
+        "value_as_number": "2",
+        "value_as_string": "Many cells/prominent ballooning",
+        "value_source_value": "2"
+      }
+    }
+  ],
+  "links": [],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "manual_approval": false,
+  "note": "Authored from inputs/cde_dictionary.jsonl (definition + value set verbatim) + sibling adj_primary_dxC.json (coded observation). Hepatocyte ballooning score 0/1/2 -> observation 4150811 'Ballooning degeneration'; ordinal grade in value_as_number, label in value_as_string."
+}

@@ -1,0 +1,41 @@
+{
+  "variable": "smoke_exposure_work",
+  "cde_registry_label": "smoke_exposure_work",
+  "harmonized_with": ["smoke_exposure_home"],
+  "cde_id": "387",
+  "definition": "How many hours a day are you exposed to the cigarette smoke of others (on average) at work?",
+  "src_schema_ref": ["Smoking_and_alcohol_history_dictionary.csv"],
+  "amp_data_files": ["Smoking_and_alcohol_history.csv"],
+  "program": "AMP-PD",
+  "grain": "visit",
+  "reads_as": {
+    "datatype": "integer",
+    "range": {
+      "min": 0,
+      "max": 10
+    }
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 40766593,
+      "name": "At the present time, how many hours per day are you exposed to the smoke of others [PhenX]",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "<any in range>",
+      "write": {
+        "value_as_number": "<value>",
+        "value_source_value": "<raw>"
+      }
+    }
+  ],
+  "links": [],
+  "anchored_to": {
+    "person_id": "staging.person_map",
+    "visit_occurrence_id": "cdm.visit_occurrence"
+  },
+  "manual_approval": true
+}

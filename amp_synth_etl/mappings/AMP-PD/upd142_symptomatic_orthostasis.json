@@ -1,0 +1,40 @@
+{
+  "variable": "upd142_symptomatic_orthostasis",
+  "cde_id": "456",
+  "definition": "UPDRS - Complications of Therapy: Other Complications - Symptomatic Orthostasis (UPD142)",
+  "src_schema_ref": ["UPDRS_dictionary.csv"],
+  "amp_data_files": ["UPDRS.csv"],
+  "program": "AMP-PD",
+  "grain": "visit",
+  "reads_as": {
+    "datatype": "integer",
+    "range": {
+      "min": 0.0,
+      "max": 1.0
+    }
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 46236403,
+      "name": "Symptomatic orthostasis indicator in the past week [UPDRS]",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "<any in range>",
+      "write": {
+        "value_as_number": "<value>",
+        "value_source_value": "<raw>"
+      }
+    }
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map",
+    "visit_occurrence_id": "cdm.visit_occurrence"
+  },
+  "links": [],
+  "manual_approval": false,
+  "note": "Authored from inputs/cde_dictionary.jsonl (cde_id 456) using the sibling map upd120b_tremor_rest_hand_rt.json for the OMOP landing; landing concept from exports/curated_concept_tables.sqlite."
+}

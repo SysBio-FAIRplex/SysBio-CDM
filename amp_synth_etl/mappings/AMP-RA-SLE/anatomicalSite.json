@@ -1,0 +1,5957 @@
+{
+  "variable": "anatomicalSite",
+  "definition": "The anatomical site, i.e., location on or within the body, from which the biospecimen was collected. This attribute is required depending on the value selected for biospecimenType.",
+  "src_schema_ref": [
+    "ark/data_model-main/ark.all_attributes.csv"
+  ],
+  "amp_data_files": [
+    "BiospecimenMetadataTemplate.csv"
+  ],
+  "program": "AMP-RA-SLE",
+  "grain": "specimen",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "Abdominal segment of body wall",
+      "Achilles region",
+      "Acromial part of left shoulder",
+      "Acromial part of right shoulder",
+      "Acromial region of shoulder",
+      "Acromioclavicular joint",
+      "Ala of nose",
+      "Angle of mouth",
+      "Ankle",
+      "Ankle joint",
+      "Anterior axillary fold",
+      "Anterior axillary line region of trunk",
+      "Anterior part of ankle",
+      "Anterior part of elbow",
+      "Anterior part of floor of mouth",
+      "Anterior part of knee",
+      "Anterior part of left ankle",
+      "Anterior part of left elbow",
+      "Anterior part of left knee",
+      "Anterior part of left wrist",
+      "Anterior part of right ankle",
+      "Anterior part of right elbow",
+      "Anterior part of right knee",
+      "Anterior part of right wrist",
+      "Anterior part of wrist",
+      "Anterior part proper of knee",
+      "Anterior part proper of left knee",
+      "Anterior part proper of right knee",
+      "Anterior region of face",
+      "Anterior wall of external acoustic tube",
+      "Anterior wall of left external acoustic tube",
+      "Anterior wall of right external acoustic tube",
+      "Anterolateral part of elbow",
+      "Anterolateral part of knee",
+      "Anterolateral part of neck",
+      "Anteromedial part of elbow",
+      "Anteromedial part of knee",
+      "Antihelix",
+      "Antitragus",
+      "Apex of left pinna",
+      "Apex of pinna",
+      "Apex of right pinna",
+      "Auricular part of head",
+      "Auriculotemporal part of head",
+      "Axilla",
+      "Axilla proper",
+      "Axillary fold",
+      "Back",
+      "Back of abdomen",
+      "Back of body proper",
+      "Back of free lower limb",
+      "Back of free upper limb",
+      "Back of left lower limb",
+      "Back of left upper limb",
+      "Back of lower limb",
+      "Back of lower thorax",
+      "Back of neck",
+      "Back of pelvis",
+      "Back of right lower limb",
+      "Back of right upper limb",
+      "Back of thorax",
+      "Back of upper limb",
+      "Back of upper thorax",
+      "Base of axilla",
+      "Base of left axilla",
+      "Base of right axilla",
+      "Body wall",
+      "Buttock",
+      "Calcaneocuboid joint",
+      "Cardinal free limb region",
+      "Carpometacarpal joint",
+      "Carpometacarpal joint of left thumb",
+      "Carpometacarpal joint of right thumb",
+      "Carpometacarpal joint of thumb",
+      "Cerebral part of head",
+      "Cerebral part proper of head",
+      "Cervicothoracic region",
+      "Cervicothoracic region of back",
+      "Cheek",
+      "Cheek proper",
+      "Chin",
+      "Chirocarpal region",
+      "Coccygeal region of back",
+      "Columella",
+      "Concha proper of left pinna",
+      "Concha proper of pinna",
+      "Concha proper of right pinna",
+      "Conchal part of left pinna",
+      "Conchal part of pinna",
+      "Conchal part of right pinna",
+      "Crown of head",
+      "Crus of helix",
+      "Crus of left helix",
+      "Crus of right helix",
+      "Cuboideonavicular joint",
+      "Cuneocuboid joint",
+      "Cuneonavicular joint",
+      "Cymba conchae of left pinna",
+      "Cymba conchae of pinna",
+      "Cymba conchae of right pinna",
+      "Deltoid part of left shoulder",
+      "Deltoid part of right shoulder",
+      "Deltoid region of shoulder",
+      "Digit",
+      "Distal free limb region",
+      "Distal free lower limb region",
+      "Distal free upper limb region",
+      "Distal interphalangeal joint of finger",
+      "Distal interphalangeal joint of fourth toe",
+      "Distal interphalangeal joint of index finger",
+      "Distal interphalangeal joint of left fourth toe",
+      "Distal interphalangeal joint of left index finger",
+      "Distal interphalangeal joint of left little finger",
+      "Distal interphalangeal joint of left little toe",
+      "Distal interphalangeal joint of left middle finger",
+      "Distal interphalangeal joint of left ring finger",
+      "Distal interphalangeal joint of left second toe",
+      "Distal interphalangeal joint of left third toe",
+      "Distal interphalangeal joint of lesser toe",
+      "Distal interphalangeal joint of little finger",
+      "Distal interphalangeal joint of little toe",
+      "Distal interphalangeal joint of middle finger",
+      "Distal interphalangeal joint of right fourth toe",
+      "Distal interphalangeal joint of right index finger",
+      "Distal interphalangeal joint of right little finger",
+      "Distal interphalangeal joint of right little toe",
+      "Distal interphalangeal joint of right middle finger",
+      "Distal interphalangeal joint of right ring finger",
+      "Distal interphalangeal joint of right second toe",
+      "Distal interphalangeal joint of right third toe",
+      "Distal interphalangeal joint of ring finger",
+      "Distal interphalangeal joint of second toe",
+      "Distal interphalangeal joint of third toe",
+      "Distal interphalangeal joint of toe",
+      "Distal radio-ulnar joint",
+      "Distal segment of left wrist",
+      "Distal segment of right wrist",
+      "Distal segment of wrist",
+      "Dorsum of nose",
+      "Ear",
+      "Elbow",
+      "Elbow crease",
+      "Elbow joint",
+      "External acoustic tube",
+      "External ear",
+      "External mandibular part of mouth",
+      "External nose",
+      "External part of external acoustic tube",
+      "External part of left external acoustic tube",
+      "External part of mouth",
+      "External part of right external acoustic tube",
+      "Extra-articular region of shoulder",
+      "Eye",
+      "Eyebrow region",
+      "Eyelid",
+      "Eyelid complex",
+      "Face",
+      "Fifth carpometacarpal joint",
+      "Fifth tarsometatarsal joint",
+      "First intermetatarsal joint",
+      "First tarsometatarsal joint",
+      "Floor of mouth",
+      "Forehead",
+      "Fossa of antihelix",
+      "Fossa of left antihelix",
+      "Fossa of right antihelix",
+      "Fourth carpometacarpal joint",
+      "Fourth intermetatarsal joint",
+      "Fourth tarsometatarsal joint",
+      "Free limb",
+      "Free limb region",
+      "Free lower limb",
+      "Free lower limb region",
+      "Free upper limb",
+      "Free upper limb region",
+      "Front of body proper",
+      "Front of free upper limb",
+      "Front of left lower limb",
+      "Front of left upper limb",
+      "Front of lower limb",
+      "Front of neck",
+      "Front of right lower limb",
+      "Front of right upper limb",
+      "Front of upper limb",
+      "Frontal part of head",
+      "Frontal part proper of head",
+      "Glenohumeral joint",
+      "Glosso-epiglottic region of mouth",
+      "Greater trochanteric region of hip",
+      "Groove of philtrum proper",
+      "Head proper",
+      "Helix",
+      "Hip",
+      "Hip joint",
+      "Humeroradial joint",
+      "Humeroulnar joint",
+      "Inferior part of back of neck",
+      "Inferior wall of external acoustic tube",
+      "Inferior wall of left external acoustic tube",
+      "Inferior wall of right external acoustic tube",
+      "Inferolateral region of buttock",
+      "Inferolateral region of left buttock",
+      "Inferolateral region of right buttock",
+      "Inferomedial region of buttock",
+      "Inferomedial region of left buttock",
+      "Inferomedial region of right buttock",
+      "Infra-orbital part of cheek",
+      "Infra-orbital part of left cheek",
+      "Infra-orbital part of right cheek",
+      "Infrascapular part of back",
+      "Inner part of external acoustic tube",
+      "Inner part of left external acoustic tube",
+      "Inner part of right external acoustic tube",
+      "Intercarpal joint",
+      "Intercuneiform joint",
+      "Intermetacarpal joint",
+      "Intermetacarpal joint of fourth and fifth metacarpal bones",
+      "Intermetacarpal joint of left fourth and fifth metacarpal bones",
+      "Intermetacarpal joint of left second and third metacarpal bones",
+      "Intermetacarpal joint of left third and fourth metacarpal bones",
+      "Intermetacarpal joint of right fourth and fifth metacarpal bones",
+      "Intermetacarpal joint of right second and third metacarpal bones",
+      "Intermetacarpal joint of right third and fourth metacarpal bones",
+      "Intermetacarpal joint of second and third metacarpal bones",
+      "Intermetacarpal joint of third and fourth metacarpal bones",
+      "Intermetatarsal joint",
+      "Internal part of mouth",
+      "Interphalangeal joint",
+      "Interphalangeal joint of big toe",
+      "Interphalangeal joint of finger",
+      "Interphalangeal joint of fourth toe",
+      "Interphalangeal joint of index finger",
+      "Interphalangeal joint of left big toe",
+      "Interphalangeal joint of left fourth toe",
+      "Interphalangeal joint of left little toe",
+      "Interphalangeal joint of left second toe",
+      "Interphalangeal joint of left third toe",
+      "Interphalangeal joint of left thumb",
+      "Interphalangeal joint of little finger",
+      "Interphalangeal joint of little toe",
+      "Interphalangeal joint of middle finger",
+      "Interphalangeal joint of right big toe",
+      "Interphalangeal joint of right fourth toe",
+      "Interphalangeal joint of right little toe",
+      "Interphalangeal joint of right second toe",
+      "Interphalangeal joint of right third toe",
+      "Interphalangeal joint of right thumb",
+      "Interphalangeal joint of ring finger",
+      "Interphalangeal joint of second toe",
+      "Interphalangeal joint of third toe",
+      "Interphalangeal joint of thumb",
+      "Interphalangeal joint of toe",
+      "Interscapular part of back",
+      "Intertarsal joint",
+      "Isthmus of external acoustic tube",
+      "Isthmus of left external acoustic meatus",
+      "Isthmus of right external acoustic meatus",
+      "Knee",
+      "Knee crease",
+      "Knee joint",
+      "Labial part of mouth",
+      "Lateral crest of philtrum",
+      "Lateral half of back",
+      "Lateral half of back of thorax",
+      "Lateral half of chin",
+      "Lateral half of external nose",
+      "Lateral half of face",
+      "Lateral half of lumbar region of back",
+      "Lateral half of nose",
+      "Lateral half of thoracic segment of trunk",
+      "Lateral half of trunk",
+      "Lateral half of upper lip",
+      "Lateral malleolar part of ankle",
+      "Lateral malleolar part of left ankle",
+      "Lateral malleolar part of right ankle",
+      "Lateral part of ankle",
+      "Lateral part of cheek",
+      "Lateral part of elbow",
+      "Lateral part of floor of mouth",
+      "Lateral part of knee",
+      "Lateral part of left cheek",
+      "Lateral part of left elbow",
+      "Lateral part of left knee",
+      "Lateral part of lower limb",
+      "Lateral part of lower lip",
+      "Lateral part of neck",
+      "Lateral part of right cheek",
+      "Lateral part of right elbow",
+      "Lateral part of right knee",
+      "Lateral region of trunk",
+      "Lateral retromalleolar region",
+      "Lateral wall of external nose",
+      "Lateral-intermediate intercuneiform joint",
+      "Left acromioclavicular joint",
+      "Left ala of nose",
+      "Left angle of mouth",
+      "Left ankle",
+      "Left ankle joint",
+      "Left antihelix",
+      "Left antitragus",
+      "Left auricular part of head",
+      "Left auriculotemporal part of head",
+      "Left axilla",
+      "Left axilla proper",
+      "Left buttock",
+      "Left calcaneocuboid joint",
+      "Left cheek",
+      "Left cheek proper",
+      "Left chirocarpal region",
+      "Left cuboideonavicular joint",
+      "Left cuneocuboid joint",
+      "Left cuneonavicular joint",
+      "Left distal radio-ulnar joint",
+      "Left ear",
+      "Left elbow",
+      "Left elbow joint",
+      "Left external acoustic tube",
+      "Left external ear",
+      "Left eye",
+      "Left fifth carpometacarpal joint",
+      "Left fifth tarsometatarsal joint",
+      "Left first intermetatarsal joint",
+      "Left first tarsometatarsal joint",
+      "Left fourth carpometacarpal joint",
+      "Left fourth intermetatarsal joint",
+      "Left fourth tarsometatarsal joint",
+      "Left free lower limb",
+      "Left free upper limb",
+      "Left glenohumeral joint",
+      "Left half of front of neck",
+      "Left half of inferior part of back of neck",
+      "Left helix",
+      "Left hip",
+      "Left hip joint",
+      "Left humeroradial joint",
+      "Left humeroulnar joint",
+      "Left infrascapular part of back",
+      "Left intercuneiform joint",
+      "Left intertarsal joint",
+      "Left knee",
+      "Left knee joint",
+      "Left lateral crest of philtrum",
+      "Left lateral half of external nose",
+      "Left lateral half of face",
+      "Left lateral half of nose",
+      "Left lateral half of trunk",
+      "Left lateral part of neck",
+      "Left lateral retromalleolar region",
+      "Left lateral-intermediate intercuneiform joint",
+      "Left lower eyelid",
+      "Left mandibular part proper of mouth",
+      "Left mastoid part of head",
+      "Left medial retromalleolar region",
+      "Left medial-intermediate intercuneiform joint",
+      "Left midcarpal joint",
+      "Left nasal sill",
+      "Left olecranon region",
+      "Left paravertebral region of back of neck",
+      "Left parietal part of head",
+      "Left parietal wall of head proper",
+      "Left patellofemoral joint",
+      "Left peri-orbital region of face",
+      "Left pinna",
+      "Left pisiform joint",
+      "Left pisotriquetral joint",
+      "Left proximal radio-ulnar joint",
+      "Left retro-auricular part of head",
+      "Left sacroiliac joint",
+      "Left scapular part of back",
+      "Left second carpometacarpal joint",
+      "Left second intermetatarsal joint",
+      "Left second tarsometatarsal joint",
+      "Left shoulder",
+      "Left side of chin",
+      "Left side of head",
+      "Left side of lower lip",
+      "Left side of lower lip proper",
+      "Left side of maxillary alveolodental arch",
+      "Left side of upper lip",
+      "Left side of upper lip proper",
+      "Left sternoclavicular joint",
+      "Left supra-auricular part of head",
+      "Left supratragic tubercle",
+      "Left talocalcaneal joint",
+      "Left talocalcaneonavicular joint",
+      "Left tarsometatarsal joint",
+      "Left temple",
+      "Left temporal part of head",
+      "Left temporal part proper of head",
+      "Left third carpometacarpal joint",
+      "Left third intermetatarsal joint",
+      "Left third tarsometatarsal joint",
+      "Left tibiofemoral joint",
+      "Left tragus",
+      "Left transverse tarsal joint",
+      "Left upper eyelid",
+      "Left wrist",
+      "Left wrist joint",
+      "Limb region",
+      "Lip",
+      "Lip proper",
+      "Lobule of left pinna",
+      "Lobule of pinna",
+      "Lobule of right pinna",
+      "Lower eyelid",
+      "Lower lip",
+      "Lower lip proper",
+      "Lower part of back of thorax",
+      "Lumbar region of back",
+      "Lumbosacral region of back",
+      "Malleolar part of ankle",
+      "Mandibular part of mouth",
+      "Mandibular part proper of mouth",
+      "Mastoid part of head",
+      "Medial malleolar part of ankle",
+      "Medial malleolar part of left ankle",
+      "Medial malleolar part of right ankle",
+      "Medial part of ankle",
+      "Medial part of elbow",
+      "Medial part of knee",
+      "Medial part of left knee",
+      "Medial part of lower limb",
+      "Medial part of right knee",
+      "Medial retromalleolar region",
+      "Medial-intermediate intercuneiform joint",
+      "Metacarpophalangeal joint",
+      "Metacarpophalangeal joint of index finger",
+      "Metacarpophalangeal joint of left index finger",
+      "Metacarpophalangeal joint of left little finger",
+      "Metacarpophalangeal joint of left middle finger",
+      "Metacarpophalangeal joint of left ring finger",
+      "Metacarpophalangeal joint of left thumb",
+      "Metacarpophalangeal joint of little finger",
+      "Metacarpophalangeal joint of middle finger",
+      "Metacarpophalangeal joint of right index finger",
+      "Metacarpophalangeal joint of right little finger",
+      "Metacarpophalangeal joint of right middle finger",
+      "Metacarpophalangeal joint of right ring finger",
+      "Metacarpophalangeal joint of right thumb",
+      "Metacarpophalangeal joint of ring finger",
+      "Metacarpophalangeal joint of thumb",
+      "Metatarsophalangeal joint",
+      "Metatarsophalangeal joint of big toe",
+      "Metatarsophalangeal joint of fourth toe",
+      "Metatarsophalangeal joint of left big toe",
+      "Metatarsophalangeal joint of left fourth toe",
+      "Metatarsophalangeal joint of left little toe",
+      "Metatarsophalangeal joint of left second toe",
+      "Metatarsophalangeal joint of left third toe",
+      "Metatarsophalangeal joint of lesser toe",
+      "Metatarsophalangeal joint of little toe",
+      "Metatarsophalangeal joint of right big toe",
+      "Metatarsophalangeal joint of right fourth toe",
+      "Metatarsophalangeal joint of right little toe",
+      "Metatarsophalangeal joint of right second toe",
+      "Metatarsophalangeal joint of right third toe",
+      "Metatarsophalangeal joint of second toe",
+      "Metatarsophalangeal joint of third toe",
+      "Midaxillary line region of trunk",
+      "Midcarpal joint",
+      "Middle free limb region",
+      "Middle free lower limb region",
+      "Middle free upper limb region",
+      "Middle interphalangeal joint of finger",
+      "Middle part of external acoustic tube",
+      "Middle part of left external acoustic tube",
+      "Middle part of lower lip",
+      "Middle part of right external acoustic tube",
+      "Midface",
+      "Midline region of external nose",
+      "Milkline region of trunk",
+      "Mouth",
+      "Nasal sill",
+      "Nasomaxillary part of face",
+      "Neck",
+      "Nose",
+      "Obverse part of pinna",
+      "Occipital part of head",
+      "Occipital wall of head proper",
+      "Olecranon region",
+      "Paravertebral part of back of abdomen",
+      "Paravertebral region of back of neck",
+      "Parietal part of head",
+      "Parietal wall of head proper",
+      "Patellar part of knee",
+      "Patellar part of left knee",
+      "Patellar part of right knee",
+      "Patellofemoral joint",
+      "Pectoral girdle region",
+      "Pectoral part of left shoulder",
+      "Pectoral part of right shoulder",
+      "Pectoral region of shoulder",
+      "Peri-orbital region of face",
+      "Perinasal region of lateral half of face",
+      "Philtrum",
+      "Philtrum proper",
+      "Pinna",
+      "Pisiform joint",
+      "Pisotriquetral joint",
+      "Popliteal part of knee",
+      "Popliteal part of left knee",
+      "Popliteal part of right knee",
+      "Posterior axillary fold",
+      "Posterior axillary line region of trunk",
+      "Posterior body wall",
+      "Posterior part of ankle",
+      "Posterior part of elbow",
+      "Posterior part of floor of mouth",
+      "Posterior part of left ankle",
+      "Posterior part of left elbow",
+      "Posterior part of left wrist",
+      "Posterior part of right ankle",
+      "Posterior part of right elbow",
+      "Posterior part of right wrist",
+      "Posterior part of wrist",
+      "Posterior part proper of elbow",
+      "Posterior part proper of left elbow",
+      "Posterior part proper of right elbow",
+      "Posterior wall of external acoustic tube",
+      "Posterior wall of left external acoustic tube",
+      "Posterior wall of right external acoustic tube",
+      "Posterolateral part of elbow",
+      "Posterolateral part of knee",
+      "Posterolateral part of neck",
+      "Posteromedial part of elbow",
+      "Posteromedial part of knee",
+      "Pre-auricular part of cheek",
+      "Pre-auricular part of left cheek",
+      "Pre-auricular part of right cheek",
+      "Presacral region of pelvis",
+      "Proximal free limb region",
+      "Proximal free lower limb region",
+      "Proximal free upper limb region",
+      "Proximal interphalangeal joint of finger",
+      "Proximal interphalangeal joint of fourth toe",
+      "Proximal interphalangeal joint of index finger",
+      "Proximal interphalangeal joint of left fourth toe",
+      "Proximal interphalangeal joint of left index finger",
+      "Proximal interphalangeal joint of left little finger",
+      "Proximal interphalangeal joint of left little toe",
+      "Proximal interphalangeal joint of left middle finger",
+      "Proximal interphalangeal joint of left ring finger",
+      "Proximal interphalangeal joint of left second toe",
+      "Proximal interphalangeal joint of left third toe",
+      "Proximal interphalangeal joint of lesser toe",
+      "Proximal interphalangeal joint of little finger",
+      "Proximal interphalangeal joint of little toe",
+      "Proximal interphalangeal joint of middle finger",
+      "Proximal interphalangeal joint of right fourth toe",
+      "Proximal interphalangeal joint of right index finger",
+      "Proximal interphalangeal joint of right little finger",
+      "Proximal interphalangeal joint of right little toe",
+      "Proximal interphalangeal joint of right middle finger",
+      "Proximal interphalangeal joint of right ring finger",
+      "Proximal interphalangeal joint of right second toe",
+      "Proximal interphalangeal joint of right third toe",
+      "Proximal interphalangeal joint of ring finger",
+      "Proximal interphalangeal joint of second toe",
+      "Proximal interphalangeal joint of third toe",
+      "Proximal interphalangeal joint of toe",
+      "Proximal radio-ulnar joint",
+      "Proximal segment of left wrist",
+      "Proximal segment of right wrist",
+      "Proximal segment of wrist",
+      "Quadrant of buttock",
+      "Radio-ulnar joint",
+      "Radiocarpal joint",
+      "Region of ankle",
+      "Region of anterior part of elbow",
+      "Region of buttock",
+      "Region of elbow",
+      "Region of knee",
+      "Region of labial part of mouth",
+      "Region of lower lip",
+      "Region of lower lip proper",
+      "Region of philtrum",
+      "Region of posterior part of elbow",
+      "Region of upper lip",
+      "Region of upper lip proper",
+      "Region of vermilion",
+      "Renal region of back",
+      "Retro-auricular part of head",
+      "Right acromioclavicular joint",
+      "Right ala of nose",
+      "Right angle of mouth",
+      "Right ankle",
+      "Right ankle joint",
+      "Right antihelix",
+      "Right antitragus",
+      "Right auricular part of head",
+      "Right auriculotemporal part of head",
+      "Right axilla",
+      "Right axilla proper",
+      "Right buttock",
+      "Right calcaneocuboid joint",
+      "Right cheek",
+      "Right cheek proper",
+      "Right chirocarpal region",
+      "Right cuboideonavicular joint",
+      "Right cuneocuboid joint",
+      "Right cuneonavicular joint",
+      "Right distal radio-ulnar joint",
+      "Right ear",
+      "Right elbow",
+      "Right elbow joint",
+      "Right external acoustic tube",
+      "Right external ear",
+      "Right eye",
+      "Right fifth carpometacarpal joint",
+      "Right fifth tarsometatarsal joint",
+      "Right first intermetatarsal joint",
+      "Right first tarsometatarsal joint",
+      "Right fourth carpometacarpal joint",
+      "Right fourth intermetatarsal joint",
+      "Right fourth tarsometatarsal joint",
+      "Right free lower limb",
+      "Right free upper limb",
+      "Right glenohumeral joint",
+      "Right half of front of neck",
+      "Right half of inferior part of back of neck",
+      "Right helix",
+      "Right hip",
+      "Right hip joint",
+      "Right humeroradial joint",
+      "Right humeroulnar joint",
+      "Right infrascapular part of back",
+      "Right intercuneiform joint",
+      "Right intertarsal joint",
+      "Right knee",
+      "Right knee joint",
+      "Right lateral crest of philtrum",
+      "Right lateral half of external nose",
+      "Right lateral half of face",
+      "Right lateral half of nose",
+      "Right lateral half of trunk",
+      "Right lateral part of neck",
+      "Right lateral retromalleolar region",
+      "Right lateral-intermediate intercuneiform joint",
+      "Right lower eyelid",
+      "Right mandibular part proper of mouth",
+      "Right mastoid part of head",
+      "Right medial retromalleolar region",
+      "Right medial-intermediate intercuneiform joint",
+      "Right midcarpal joint",
+      "Right nasal sill",
+      "Right olecranon region",
+      "Right paravertebral region of back of neck",
+      "Right parietal part of head",
+      "Right parietal wall of head proper",
+      "Right patellofemoral joint",
+      "Right peri-orbital region of face",
+      "Right pinna",
+      "Right pisiform joint",
+      "Right pisotriquetral joint",
+      "Right proximal radio-ulnar joint",
+      "Right retro-auricular part of head",
+      "Right sacroiliac joint",
+      "Right scapular part of back",
+      "Right second carpometacarpal joint",
+      "Right second intermetatarsal joint",
+      "Right second tarsometatarsal joint",
+      "Right shoulder",
+      "Right side of chin",
+      "Right side of head",
+      "Right side of lower lip",
+      "Right side of lower lip proper",
+      "Right side of maxillary alveolodental arch",
+      "Right side of upper lip",
+      "Right side of upper lip proper",
+      "Right sternoclavicular joint",
+      "Right supra-auricular part of head",
+      "Right supratragic tubercle",
+      "Right talocalcaneal joint",
+      "Right talocalcaneonavicular joint",
+      "Right tarsometatarsal joint",
+      "Right temple",
+      "Right temporal part of head",
+      "Right temporal part proper of head",
+      "Right third carpometacarpal joint",
+      "Right third intermetatarsal joint",
+      "Right third tarsometatarsal joint",
+      "Right tibiofemoral joint",
+      "Right tragus",
+      "Right transverse tarsal joint",
+      "Right upper eyelid",
+      "Right wrist",
+      "Right wrist joint",
+      "Rim of helix",
+      "Root of nose",
+      "Sacro-iliac joint",
+      "Sacro-iliac region",
+      "Sacrococcygeal region of back",
+      "Scapho-lunate joint",
+      "Scapho-trapezial joint",
+      "Scapular part of back",
+      "Scapular part of left shoulder",
+      "Scapular part of right shoulder",
+      "Scapular region of shoulder",
+      "Second carpometacarpal joint",
+      "Second intermetatarsal joint",
+      "Second tarsometatarsal joint",
+      "Segment of wrist",
+      "Shoulder",
+      "Side of face",
+      "Spine of helical part of left pinna",
+      "Spine of helix",
+      "Spine of right helix",
+      "Sternoclavicular joint",
+      "Subdivision of anterior part of knee",
+      "Subdivision of auriculotemporal part of head",
+      "Subdivision of axilla",
+      "Subdivision of back",
+      "Subdivision of back of neck",
+      "Subdivision of back of thorax",
+      "Subdivision of body proper",
+      "Subdivision of body wall",
+      "Subdivision of cardinal body part",
+      "Subdivision of cheek",
+      "Subdivision of conchal part of pinna",
+      "Subdivision of external acoustic tube",
+      "Subdivision of external ear",
+      "Subdivision of external nose",
+      "Subdivision of face",
+      "Subdivision of front of neck",
+      "Subdivision of front of trunk",
+      "Subdivision of frontal part of head",
+      "Subdivision of head",
+      "Subdivision of head proper",
+      "Subdivision of helix",
+      "Subdivision of hip",
+      "Subdivision of mouth",
+      "Subdivision of neck",
+      "Subdivision of pinna",
+      "Subdivision of shoulder",
+      "Subdivision of temporal part of head",
+      "Subdivision of trunk",
+      "Subdivision of trunk proper",
+      "Subdivision of wall of head proper",
+      "Superior part of back of neck",
+      "Superolateral region of buttock",
+      "Superolateral region of left buttock",
+      "Superolateral region of right buttock",
+      "Superomedial region of buttock",
+      "Superomedial region of left buttock",
+      "Superomedial region of right buttock",
+      "Supra-auricular part of head",
+      "Supraclavicular part of neck",
+      "Suprasternal notch region of neck",
+      "Supratragic tubercle",
+      "Synovial joint of finger",
+      "Synovial joint of foot",
+      "Synovial joint of free lower limb segment",
+      "Synovial joint of free upper limb segment",
+      "Synovial joint of hand",
+      "Synovial joint of index finger",
+      "Synovial joint of little finger",
+      "Synovial joint of middle finger",
+      "Synovial joint of ring finger",
+      "Synovial joint of thumb",
+      "Tail of helix",
+      "Tail of left helix",
+      "Tail of right helix",
+      "Talocalcaneal joint",
+      "Talocalcaneonavicular joint",
+      "Tarsometatarsal joint",
+      "Temple",
+      "Temple region of left temporal part of head",
+      "Temple region of right temporal part of head",
+      "Temple region of temporal part of head",
+      "Temporal part of head",
+      "Temporal part proper of head",
+      "Third carpometacarpal joint",
+      "Third intermetatarsal joint",
+      "Third tarsometatarsal joint",
+      "Thoracic segment of body wall",
+      "Thoracic segment of trunk",
+      "Thoracolumbar part of back",
+      "Throat",
+      "Tibiofemoral joint",
+      "Tip of nose",
+      "Tragus",
+      "Transverse tarsal joint",
+      "Triangular fossa of antihelix",
+      "Triangular fossa of left antihelix",
+      "Triangular fossa of right antihelix",
+      "Trunk",
+      "Trunk proper",
+      "Tubercle of left pinna",
+      "Tubercle of pinna",
+      "Tubercle of right pinna",
+      "Tubercle of upper lip",
+      "Upper eyelid",
+      "Upper lip",
+      "Upper lip proper",
+      "Upper part of back of thorax",
+      "Vermilion",
+      "Vermilion border region",
+      "Vermilion border region of left side of upper lip",
+      "Vermilion border region of lower lip",
+      "Vermilion border region of philtrum",
+      "Vermilion border region of right side of upper lip",
+      "Vermilion border region of upper lip",
+      "Vermilion complex",
+      "Vermilion of left side of upper lip",
+      "Vermilion of lower lip",
+      "Vermilion of philtrum",
+      "Vermilion of right side of upper lip",
+      "Vermilion of upper lip",
+      "Vermilion proper",
+      "Vermilion proper of left side of upper lip",
+      "Vermilion proper of lower lip",
+      "Vermilion proper of philtrum",
+      "Vermilion proper of right side of upper lip",
+      "Vermilion proper of upper lip",
+      "Vertebral part of back of abdomen",
+      "Vertebral part of cervicothoracic region of back",
+      "Vertebral part of lumbosacral region of back",
+      "Vertebral part of sacrococcygeal region of back",
+      "Vertebral part of thoracolumbar region of back",
+      "Vertebral region of back",
+      "Vertebral region of back of neck",
+      "Vestibular part of mouth",
+      "Waist",
+      "Wall of abdominal segment of trunk",
+      "Wall of axilla",
+      "Wall of external acoustic tube",
+      "Wall of external part of external acoustic tube",
+      "Wall of external part of left external acoustic tube",
+      "Wall of external part of right external acoustic tube",
+      "Wall of head proper",
+      "Wall of inner part of external acoustic tube",
+      "Wall of inner part of left external acoustic tube",
+      "Wall of inner part of right external acoustic tube",
+      "Wall of left axilla",
+      "Wall of left external acoustic tube",
+      "Wall of middle part of external acoustic tube",
+      "Wall of middle part of left external acoustic tube",
+      "Wall of middle part of right external acoustic tube",
+      "Wall of right axilla",
+      "Wall of right external acoustic tube",
+      "Wall of subdivision of external acoustic tube",
+      "Wrist",
+      "Zygomatic part of cheek",
+      "Zygomatic part of left cheek",
+      "Zygomatic part of right cheek",
+      "other site",
+      "unknown"
+    ]
+  },
+  "lands": {
+    "table": "specimen"
+  },
+  "value_map": [
+    {
+      "value": "Abdominal segment of body wall",
+      "write": {
+        "value_source_value": "Abdominal segment of body wall"
+      }
+    },
+    {
+      "value": "Achilles region",
+      "write": {
+        "value_source_value": "Achilles region"
+      }
+    },
+    {
+      "value": "Acromial part of left shoulder",
+      "write": {
+        "value_source_value": "Acromial part of left shoulder"
+      }
+    },
+    {
+      "value": "Acromial part of right shoulder",
+      "write": {
+        "value_source_value": "Acromial part of right shoulder"
+      }
+    },
+    {
+      "value": "Acromial region of shoulder",
+      "write": {
+        "value_source_value": "Acromial region of shoulder"
+      }
+    },
+    {
+      "value": "Acromioclavicular joint",
+      "write": {
+        "value_source_value": "Acromioclavicular joint"
+      }
+    },
+    {
+      "value": "Ala of nose",
+      "write": {
+        "value_source_value": "Ala of nose"
+      }
+    },
+    {
+      "value": "Angle of mouth",
+      "write": {
+        "value_source_value": "Angle of mouth"
+      }
+    },
+    {
+      "value": "Ankle",
+      "write": {
+        "value_source_value": "Ankle"
+      }
+    },
+    {
+      "value": "Ankle joint",
+      "write": {
+        "value_source_value": "Ankle joint"
+      }
+    },
+    {
+      "value": "Anterior axillary fold",
+      "write": {
+        "value_source_value": "Anterior axillary fold"
+      }
+    },
+    {
+      "value": "Anterior axillary line region of trunk",
+      "write": {
+        "value_source_value": "Anterior axillary line region of trunk"
+      }
+    },
+    {
+      "value": "Anterior part of ankle",
+      "write": {
+        "value_source_value": "Anterior part of ankle"
+      }
+    },
+    {
+      "value": "Anterior part of elbow",
+      "write": {
+        "value_source_value": "Anterior part of elbow"
+      }
+    },
+    {
+      "value": "Anterior part of floor of mouth",
+      "write": {
+        "value_source_value": "Anterior part of floor of mouth"
+      }
+    },
+    {
+      "value": "Anterior part of knee",
+      "write": {
+        "value_source_value": "Anterior part of knee"
+      }
+    },
+    {
+      "value": "Anterior part of left ankle",
+      "write": {
+        "value_source_value": "Anterior part of left ankle"
+      }
+    },
+    {
+      "value": "Anterior part of left elbow",
+      "write": {
+        "value_source_value": "Anterior part of left elbow"
+      }
+    },
+    {
+      "value": "Anterior part of left knee",
+      "write": {
+        "value_source_value": "Anterior part of left knee"
+      }
+    },
+    {
+      "value": "Anterior part of left wrist",
+      "write": {
+        "value_source_value": "Anterior part of left wrist"
+      }
+    },
+    {
+      "value": "Anterior part of right ankle",
+      "write": {
+        "value_source_value": "Anterior part of right ankle"
+      }
+    },
+    {
+      "value": "Anterior part of right elbow",
+      "write": {
+        "value_source_value": "Anterior part of right elbow"
+      }
+    },
+    {
+      "value": "Anterior part of right knee",
+      "write": {
+        "value_source_value": "Anterior part of right knee"
+      }
+    },
+    {
+      "value": "Anterior part of right wrist",
+      "write": {
+        "value_source_value": "Anterior part of right wrist"
+      }
+    },
+    {
+      "value": "Anterior part of wrist",
+      "write": {
+        "value_source_value": "Anterior part of wrist"
+      }
+    },
+    {
+      "value": "Anterior part proper of knee",
+      "write": {
+        "value_source_value": "Anterior part proper of knee"
+      }
+    },
+    {
+      "value": "Anterior part proper of left knee",
+      "write": {
+        "value_source_value": "Anterior part proper of left knee"
+      }
+    },
+    {
+      "value": "Anterior part proper of right knee",
+      "write": {
+        "value_source_value": "Anterior part proper of right knee"
+      }
+    },
+    {
+      "value": "Anterior region of face",
+      "write": {
+        "value_source_value": "Anterior region of face"
+      }
+    },
+    {
+      "value": "Anterior wall of external acoustic tube",
+      "write": {
+        "value_source_value": "Anterior wall of external acoustic tube"
+      }
+    },
+    {
+      "value": "Anterior wall of left external acoustic tube",
+      "write": {
+        "value_source_value": "Anterior wall of left external acoustic tube"
+      }
+    },
+    {
+      "value": "Anterior wall of right external acoustic tube",
+      "write": {
+        "value_source_value": "Anterior wall of right external acoustic tube"
+      }
+    },
+    {
+      "value": "Anterolateral part of elbow",
+      "write": {
+        "value_source_value": "Anterolateral part of elbow"
+      }
+    },
+    {
+      "value": "Anterolateral part of knee",
+      "write": {
+        "value_source_value": "Anterolateral part of knee"
+      }
+    },
+    {
+      "value": "Anterolateral part of neck",
+      "write": {
+        "value_source_value": "Anterolateral part of neck"
+      }
+    },
+    {
+      "value": "Anteromedial part of elbow",
+      "write": {
+        "value_source_value": "Anteromedial part of elbow"
+      }
+    },
+    {
+      "value": "Anteromedial part of knee",
+      "write": {
+        "value_source_value": "Anteromedial part of knee"
+      }
+    },
+    {
+      "value": "Antihelix",
+      "write": {
+        "value_source_value": "Antihelix"
+      }
+    },
+    {
+      "value": "Antitragus",
+      "write": {
+        "value_source_value": "Antitragus"
+      }
+    },
+    {
+      "value": "Apex of left pinna",
+      "write": {
+        "value_source_value": "Apex of left pinna"
+      }
+    },
+    {
+      "value": "Apex of pinna",
+      "write": {
+        "value_source_value": "Apex of pinna"
+      }
+    },
+    {
+      "value": "Apex of right pinna",
+      "write": {
+        "value_source_value": "Apex of right pinna"
+      }
+    },
+    {
+      "value": "Auricular part of head",
+      "write": {
+        "value_source_value": "Auricular part of head"
+      }
+    },
+    {
+      "value": "Auriculotemporal part of head",
+      "write": {
+        "value_source_value": "Auriculotemporal part of head"
+      }
+    },
+    {
+      "value": "Axilla",
+      "write": {
+        "value_source_value": "Axilla"
+      }
+    },
+    {
+      "value": "Axilla proper",
+      "write": {
+        "value_source_value": "Axilla proper"
+      }
+    },
+    {
+      "value": "Axillary fold",
+      "write": {
+        "value_source_value": "Axillary fold"
+      }
+    },
+    {
+      "value": "Back",
+      "write": {
+        "value_source_value": "Back"
+      }
+    },
+    {
+      "value": "Back of abdomen",
+      "write": {
+        "value_source_value": "Back of abdomen"
+      }
+    },
+    {
+      "value": "Back of body proper",
+      "write": {
+        "value_source_value": "Back of body proper"
+      }
+    },
+    {
+      "value": "Back of free lower limb",
+      "write": {
+        "value_source_value": "Back of free lower limb"
+      }
+    },
+    {
+      "value": "Back of free upper limb",
+      "write": {
+        "value_source_value": "Back of free upper limb"
+      }
+    },
+    {
+      "value": "Back of left lower limb",
+      "write": {
+        "value_source_value": "Back of left lower limb"
+      }
+    },
+    {
+      "value": "Back of left upper limb",
+      "write": {
+        "value_source_value": "Back of left upper limb"
+      }
+    },
+    {
+      "value": "Back of lower limb",
+      "write": {
+        "value_source_value": "Back of lower limb"
+      }
+    },
+    {
+      "value": "Back of lower thorax",
+      "write": {
+        "value_source_value": "Back of lower thorax"
+      }
+    },
+    {
+      "value": "Back of neck",
+      "write": {
+        "value_source_value": "Back of neck"
+      }
+    },
+    {
+      "value": "Back of pelvis",
+      "write": {
+        "value_source_value": "Back of pelvis"
+      }
+    },
+    {
+      "value": "Back of right lower limb",
+      "write": {
+        "value_source_value": "Back of right lower limb"
+      }
+    },
+    {
+      "value": "Back of right upper limb",
+      "write": {
+        "value_source_value": "Back of right upper limb"
+      }
+    },
+    {
+      "value": "Back of thorax",
+      "write": {
+        "value_source_value": "Back of thorax"
+      }
+    },
+    {
+      "value": "Back of upper limb",
+      "write": {
+        "value_source_value": "Back of upper limb"
+      }
+    },
+    {
+      "value": "Back of upper thorax",
+      "write": {
+        "value_source_value": "Back of upper thorax"
+      }
+    },
+    {
+      "value": "Base of axilla",
+      "write": {
+        "value_source_value": "Base of axilla"
+      }
+    },
+    {
+      "value": "Base of left axilla",
+      "write": {
+        "value_source_value": "Base of left axilla"
+      }
+    },
+    {
+      "value": "Base of right axilla",
+      "write": {
+        "value_source_value": "Base of right axilla"
+      }
+    },
+    {
+      "value": "Body wall",
+      "write": {
+        "value_source_value": "Body wall"
+      }
+    },
+    {
+      "value": "Buttock",
+      "write": {
+        "value_source_value": "Buttock"
+      }
+    },
+    {
+      "value": "Calcaneocuboid joint",
+      "write": {
+        "value_source_value": "Calcaneocuboid joint"
+      }
+    },
+    {
+      "value": "Cardinal free limb region",
+      "write": {
+        "value_source_value": "Cardinal free limb region"
+      }
+    },
+    {
+      "value": "Carpometacarpal joint",
+      "write": {
+        "value_source_value": "Carpometacarpal joint"
+      }
+    },
+    {
+      "value": "Carpometacarpal joint of left thumb",
+      "write": {
+        "value_source_value": "Carpometacarpal joint of left thumb"
+      }
+    },
+    {
+      "value": "Carpometacarpal joint of right thumb",
+      "write": {
+        "value_source_value": "Carpometacarpal joint of right thumb"
+      }
+    },
+    {
+      "value": "Carpometacarpal joint of thumb",
+      "write": {
+        "value_source_value": "Carpometacarpal joint of thumb"
+      }
+    },
+    {
+      "value": "Cerebral part of head",
+      "write": {
+        "value_source_value": "Cerebral part of head"
+      }
+    },
+    {
+      "value": "Cerebral part proper of head",
+      "write": {
+        "value_source_value": "Cerebral part proper of head"
+      }
+    },
+    {
+      "value": "Cervicothoracic region",
+      "write": {
+        "value_source_value": "Cervicothoracic region"
+      }
+    },
+    {
+      "value": "Cervicothoracic region of back",
+      "write": {
+        "value_source_value": "Cervicothoracic region of back"
+      }
+    },
+    {
+      "value": "Cheek",
+      "write": {
+        "value_source_value": "Cheek"
+      }
+    },
+    {
+      "value": "Cheek proper",
+      "write": {
+        "value_source_value": "Cheek proper"
+      }
+    },
+    {
+      "value": "Chin",
+      "write": {
+        "value_source_value": "Chin"
+      }
+    },
+    {
+      "value": "Chirocarpal region",
+      "write": {
+        "value_source_value": "Chirocarpal region"
+      }
+    },
+    {
+      "value": "Coccygeal region of back",
+      "write": {
+        "value_source_value": "Coccygeal region of back"
+      }
+    },
+    {
+      "value": "Columella",
+      "write": {
+        "value_source_value": "Columella"
+      }
+    },
+    {
+      "value": "Concha proper of left pinna",
+      "write": {
+        "value_source_value": "Concha proper of left pinna"
+      }
+    },
+    {
+      "value": "Concha proper of pinna",
+      "write": {
+        "value_source_value": "Concha proper of pinna"
+      }
+    },
+    {
+      "value": "Concha proper of right pinna",
+      "write": {
+        "value_source_value": "Concha proper of right pinna"
+      }
+    },
+    {
+      "value": "Conchal part of left pinna",
+      "write": {
+        "value_source_value": "Conchal part of left pinna"
+      }
+    },
+    {
+      "value": "Conchal part of pinna",
+      "write": {
+        "value_source_value": "Conchal part of pinna"
+      }
+    },
+    {
+      "value": "Conchal part of right pinna",
+      "write": {
+        "value_source_value": "Conchal part of right pinna"
+      }
+    },
+    {
+      "value": "Crown of head",
+      "write": {
+        "value_source_value": "Crown of head"
+      }
+    },
+    {
+      "value": "Crus of helix",
+      "write": {
+        "value_source_value": "Crus of helix"
+      }
+    },
+    {
+      "value": "Crus of left helix",
+      "write": {
+        "value_source_value": "Crus of left helix"
+      }
+    },
+    {
+      "value": "Crus of right helix",
+      "write": {
+        "value_source_value": "Crus of right helix"
+      }
+    },
+    {
+      "value": "Cuboideonavicular joint",
+      "write": {
+        "value_source_value": "Cuboideonavicular joint"
+      }
+    },
+    {
+      "value": "Cuneocuboid joint",
+      "write": {
+        "value_source_value": "Cuneocuboid joint"
+      }
+    },
+    {
+      "value": "Cuneonavicular joint",
+      "write": {
+        "value_source_value": "Cuneonavicular joint"
+      }
+    },
+    {
+      "value": "Cymba conchae of left pinna",
+      "write": {
+        "value_source_value": "Cymba conchae of left pinna"
+      }
+    },
+    {
+      "value": "Cymba conchae of pinna",
+      "write": {
+        "value_source_value": "Cymba conchae of pinna"
+      }
+    },
+    {
+      "value": "Cymba conchae of right pinna",
+      "write": {
+        "value_source_value": "Cymba conchae of right pinna"
+      }
+    },
+    {
+      "value": "Deltoid part of left shoulder",
+      "write": {
+        "value_source_value": "Deltoid part of left shoulder"
+      }
+    },
+    {
+      "value": "Deltoid part of right shoulder",
+      "write": {
+        "value_source_value": "Deltoid part of right shoulder"
+      }
+    },
+    {
+      "value": "Deltoid region of shoulder",
+      "write": {
+        "value_source_value": "Deltoid region of shoulder"
+      }
+    },
+    {
+      "value": "Digit",
+      "write": {
+        "value_source_value": "Digit"
+      }
+    },
+    {
+      "value": "Distal free limb region",
+      "write": {
+        "value_source_value": "Distal free limb region"
+      }
+    },
+    {
+      "value": "Distal free lower limb region",
+      "write": {
+        "value_source_value": "Distal free lower limb region"
+      }
+    },
+    {
+      "value": "Distal free upper limb region",
+      "write": {
+        "value_source_value": "Distal free upper limb region"
+      }
+    },
+    {
+      "value": "Distal interphalangeal joint of finger",
+      "write": {
+        "value_source_value": "Distal interphalangeal joint of finger"
+      }
+    },
+    {
+      "value": "Distal interphalangeal joint of fourth toe",
+      "write": {
+        "value_source_value": "Distal interphalangeal joint of fourth toe"
+      }
+    },
+    {
+      "value": "Distal interphalangeal joint of index finger",
+      "write": {
+        "value_source_value": "Distal interphalangeal joint of index finger"
+      }
+    },
+    {
+      "value": "Distal interphalangeal joint of left fourth toe",
+      "write": {
+        "value_source_value": "Distal interphalangeal joint of left fourth toe"
+      }
+    },
+    {
+      "value": "Distal interphalangeal joint of left index finger",
+      "write": {
+        "value_source_value": "Distal interphalangeal joint of left index finger"
+      }
+    },
+    {
+      "value": "Distal interphalangeal joint of left little finger",
+      "write": {
+        "value_source_value": "Distal interphalangeal joint of left little finger"
+      }
+    },
+    {
+      "value": "Distal interphalangeal joint of left little toe",
+      "write": {
+        "value_source_value": "Distal interphalangeal joint of left little toe"
+      }
+    },
+    {
+      "value": "Distal interphalangeal joint of left middle finger",
+      "write": {
+        "value_source_value": "Distal interphalangeal joint of left middle finger"
+      }
+    },
+    {
+      "value": "Distal interphalangeal joint of left ring finger",
+      "write": {
+        "value_source_value": "Distal interphalangeal joint of left ring finger"
+      }
+    },
+    {
+      "value": "Distal interphalangeal joint of left second toe",
+      "write": {
+        "value_source_value": "Distal interphalangeal joint of left second toe"
+      }
+    },
+    {
+      "value": "Distal interphalangeal joint of left third toe",
+      "write": {
+        "value_source_value": "Distal interphalangeal joint of left third toe"
+      }
+    },
+    {
+      "value": "Distal interphalangeal joint of lesser toe",
+      "write": {
+        "value_source_value": "Distal interphalangeal joint of lesser toe"
+      }
+    },
+    {
+      "value": "Distal interphalangeal joint of little finger",
+      "write": {
+        "value_source_value": "Distal interphalangeal joint of little finger"
+      }
+    },
+    {
+      "value": "Distal interphalangeal joint of little toe",
+      "write": {
+        "value_source_value": "Distal interphalangeal joint of little toe"
+      }
+    },
+    {
+      "value": "Distal interphalangeal joint of middle finger",
+      "write": {
+        "value_source_value": "Distal interphalangeal joint of middle finger"
+      }
+    },
+    {
+      "value": "Distal interphalangeal joint of right fourth toe",
+      "write": {
+        "value_source_value": "Distal interphalangeal joint of right fourth toe"
+      }
+    },
+    {
+      "value": "Distal interphalangeal joint of right index finger",
+      "write": {
+        "value_source_value": "Distal interphalangeal joint of right index finger"
+      }
+    },
+    {
+      "value": "Distal interphalangeal joint of right little finger",
+      "write": {
+        "value_source_value": "Distal interphalangeal joint of right little finger"
+      }
+    },
+    {
+      "value": "Distal interphalangeal joint of right little toe",
+      "write": {
+        "value_source_value": "Distal interphalangeal joint of right little toe"
+      }
+    },
+    {
+      "value": "Distal interphalangeal joint of right middle finger",
+      "write": {
+        "value_source_value": "Distal interphalangeal joint of right middle finger"
+      }
+    },
+    {
+      "value": "Distal interphalangeal joint of right ring finger",
+      "write": {
+        "value_source_value": "Distal interphalangeal joint of right ring finger"
+      }
+    },
+    {
+      "value": "Distal interphalangeal joint of right second toe",
+      "write": {
+        "value_source_value": "Distal interphalangeal joint of right second toe"
+      }
+    },
+    {
+      "value": "Distal interphalangeal joint of right third toe",
+      "write": {
+        "value_source_value": "Distal interphalangeal joint of right third toe"
+      }
+    },
+    {
+      "value": "Distal interphalangeal joint of ring finger",
+      "write": {
+        "value_source_value": "Distal interphalangeal joint of ring finger"
+      }
+    },
+    {
+      "value": "Distal interphalangeal joint of second toe",
+      "write": {
+        "value_source_value": "Distal interphalangeal joint of second toe"
+      }
+    },
+    {
+      "value": "Distal interphalangeal joint of third toe",
+      "write": {
+        "value_source_value": "Distal interphalangeal joint of third toe"
+      }
+    },
+    {
+      "value": "Distal interphalangeal joint of toe",
+      "write": {
+        "value_source_value": "Distal interphalangeal joint of toe"
+      }
+    },
+    {
+      "value": "Distal radio-ulnar joint",
+      "write": {
+        "value_source_value": "Distal radio-ulnar joint"
+      }
+    },
+    {
+      "value": "Distal segment of left wrist",
+      "write": {
+        "value_source_value": "Distal segment of left wrist"
+      }
+    },
+    {
+      "value": "Distal segment of right wrist",
+      "write": {
+        "value_source_value": "Distal segment of right wrist"
+      }
+    },
+    {
+      "value": "Distal segment of wrist",
+      "write": {
+        "value_source_value": "Distal segment of wrist"
+      }
+    },
+    {
+      "value": "Dorsum of nose",
+      "write": {
+        "value_source_value": "Dorsum of nose"
+      }
+    },
+    {
+      "value": "Ear",
+      "write": {
+        "value_source_value": "Ear"
+      }
+    },
+    {
+      "value": "Elbow",
+      "write": {
+        "value_source_value": "Elbow"
+      }
+    },
+    {
+      "value": "Elbow crease",
+      "write": {
+        "value_source_value": "Elbow crease"
+      }
+    },
+    {
+      "value": "Elbow joint",
+      "write": {
+        "value_source_value": "Elbow joint"
+      }
+    },
+    {
+      "value": "External acoustic tube",
+      "write": {
+        "value_source_value": "External acoustic tube"
+      }
+    },
+    {
+      "value": "External ear",
+      "write": {
+        "value_source_value": "External ear"
+      }
+    },
+    {
+      "value": "External mandibular part of mouth",
+      "write": {
+        "value_source_value": "External mandibular part of mouth"
+      }
+    },
+    {
+      "value": "External nose",
+      "write": {
+        "value_source_value": "External nose"
+      }
+    },
+    {
+      "value": "External part of external acoustic tube",
+      "write": {
+        "value_source_value": "External part of external acoustic tube"
+      }
+    },
+    {
+      "value": "External part of left external acoustic tube",
+      "write": {
+        "value_source_value": "External part of left external acoustic tube"
+      }
+    },
+    {
+      "value": "External part of mouth",
+      "write": {
+        "value_source_value": "External part of mouth"
+      }
+    },
+    {
+      "value": "External part of right external acoustic tube",
+      "write": {
+        "value_source_value": "External part of right external acoustic tube"
+      }
+    },
+    {
+      "value": "Extra-articular region of shoulder",
+      "write": {
+        "value_source_value": "Extra-articular region of shoulder"
+      }
+    },
+    {
+      "value": "Eye",
+      "write": {
+        "value_source_value": "Eye"
+      }
+    },
+    {
+      "value": "Eyebrow region",
+      "write": {
+        "value_source_value": "Eyebrow region"
+      }
+    },
+    {
+      "value": "Eyelid",
+      "write": {
+        "value_source_value": "Eyelid"
+      }
+    },
+    {
+      "value": "Eyelid complex",
+      "write": {
+        "value_source_value": "Eyelid complex"
+      }
+    },
+    {
+      "value": "Face",
+      "write": {
+        "value_source_value": "Face"
+      }
+    },
+    {
+      "value": "Fifth carpometacarpal joint",
+      "write": {
+        "value_source_value": "Fifth carpometacarpal joint"
+      }
+    },
+    {
+      "value": "Fifth tarsometatarsal joint",
+      "write": {
+        "value_source_value": "Fifth tarsometatarsal joint"
+      }
+    },
+    {
+      "value": "First intermetatarsal joint",
+      "write": {
+        "value_source_value": "First intermetatarsal joint"
+      }
+    },
+    {
+      "value": "First tarsometatarsal joint",
+      "write": {
+        "value_source_value": "First tarsometatarsal joint"
+      }
+    },
+    {
+      "value": "Floor of mouth",
+      "write": {
+        "value_source_value": "Floor of mouth"
+      }
+    },
+    {
+      "value": "Forehead",
+      "write": {
+        "value_source_value": "Forehead"
+      }
+    },
+    {
+      "value": "Fossa of antihelix",
+      "write": {
+        "value_source_value": "Fossa of antihelix"
+      }
+    },
+    {
+      "value": "Fossa of left antihelix",
+      "write": {
+        "value_source_value": "Fossa of left antihelix"
+      }
+    },
+    {
+      "value": "Fossa of right antihelix",
+      "write": {
+        "value_source_value": "Fossa of right antihelix"
+      }
+    },
+    {
+      "value": "Fourth carpometacarpal joint",
+      "write": {
+        "value_source_value": "Fourth carpometacarpal joint"
+      }
+    },
+    {
+      "value": "Fourth intermetatarsal joint",
+      "write": {
+        "value_source_value": "Fourth intermetatarsal joint"
+      }
+    },
+    {
+      "value": "Fourth tarsometatarsal joint",
+      "write": {
+        "value_source_value": "Fourth tarsometatarsal joint"
+      }
+    },
+    {
+      "value": "Free limb",
+      "write": {
+        "value_source_value": "Free limb"
+      }
+    },
+    {
+      "value": "Free limb region",
+      "write": {
+        "value_source_value": "Free limb region"
+      }
+    },
+    {
+      "value": "Free lower limb",
+      "write": {
+        "value_source_value": "Free lower limb"
+      }
+    },
+    {
+      "value": "Free lower limb region",
+      "write": {
+        "value_source_value": "Free lower limb region"
+      }
+    },
+    {
+      "value": "Free upper limb",
+      "write": {
+        "value_source_value": "Free upper limb"
+      }
+    },
+    {
+      "value": "Free upper limb region",
+      "write": {
+        "value_source_value": "Free upper limb region"
+      }
+    },
+    {
+      "value": "Front of body proper",
+      "write": {
+        "value_source_value": "Front of body proper"
+      }
+    },
+    {
+      "value": "Front of free upper limb",
+      "write": {
+        "value_source_value": "Front of free upper limb"
+      }
+    },
+    {
+      "value": "Front of left lower limb",
+      "write": {
+        "value_source_value": "Front of left lower limb"
+      }
+    },
+    {
+      "value": "Front of left upper limb",
+      "write": {
+        "value_source_value": "Front of left upper limb"
+      }
+    },
+    {
+      "value": "Front of lower limb",
+      "write": {
+        "value_source_value": "Front of lower limb"
+      }
+    },
+    {
+      "value": "Front of neck",
+      "write": {
+        "value_source_value": "Front of neck"
+      }
+    },
+    {
+      "value": "Front of right lower limb",
+      "write": {
+        "value_source_value": "Front of right lower limb"
+      }
+    },
+    {
+      "value": "Front of right upper limb",
+      "write": {
+        "value_source_value": "Front of right upper limb"
+      }
+    },
+    {
+      "value": "Front of upper limb",
+      "write": {
+        "value_source_value": "Front of upper limb"
+      }
+    },
+    {
+      "value": "Frontal part of head",
+      "write": {
+        "value_source_value": "Frontal part of head"
+      }
+    },
+    {
+      "value": "Frontal part proper of head",
+      "write": {
+        "value_source_value": "Frontal part proper of head"
+      }
+    },
+    {
+      "value": "Glenohumeral joint",
+      "write": {
+        "value_source_value": "Glenohumeral joint"
+      }
+    },
+    {
+      "value": "Glosso-epiglottic region of mouth",
+      "write": {
+        "value_source_value": "Glosso-epiglottic region of mouth"
+      }
+    },
+    {
+      "value": "Greater trochanteric region of hip",
+      "write": {
+        "value_source_value": "Greater trochanteric region of hip"
+      }
+    },
+    {
+      "value": "Groove of philtrum proper",
+      "write": {
+        "value_source_value": "Groove of philtrum proper"
+      }
+    },
+    {
+      "value": "Head proper",
+      "write": {
+        "value_source_value": "Head proper"
+      }
+    },
+    {
+      "value": "Helix",
+      "write": {
+        "value_source_value": "Helix"
+      }
+    },
+    {
+      "value": "Hip",
+      "write": {
+        "value_source_value": "Hip"
+      }
+    },
+    {
+      "value": "Hip joint",
+      "write": {
+        "value_source_value": "Hip joint"
+      }
+    },
+    {
+      "value": "Humeroradial joint",
+      "write": {
+        "value_source_value": "Humeroradial joint"
+      }
+    },
+    {
+      "value": "Humeroulnar joint",
+      "write": {
+        "value_source_value": "Humeroulnar joint"
+      }
+    },
+    {
+      "value": "Inferior part of back of neck",
+      "write": {
+        "value_source_value": "Inferior part of back of neck"
+      }
+    },
+    {
+      "value": "Inferior wall of external acoustic tube",
+      "write": {
+        "value_source_value": "Inferior wall of external acoustic tube"
+      }
+    },
+    {
+      "value": "Inferior wall of left external acoustic tube",
+      "write": {
+        "value_source_value": "Inferior wall of left external acoustic tube"
+      }
+    },
+    {
+      "value": "Inferior wall of right external acoustic tube",
+      "write": {
+        "value_source_value": "Inferior wall of right external acoustic tube"
+      }
+    },
+    {
+      "value": "Inferolateral region of buttock",
+      "write": {
+        "value_source_value": "Inferolateral region of buttock"
+      }
+    },
+    {
+      "value": "Inferolateral region of left buttock",
+      "write": {
+        "value_source_value": "Inferolateral region of left buttock"
+      }
+    },
+    {
+      "value": "Inferolateral region of right buttock",
+      "write": {
+        "value_source_value": "Inferolateral region of right buttock"
+      }
+    },
+    {
+      "value": "Inferomedial region of buttock",
+      "write": {
+        "value_source_value": "Inferomedial region of buttock"
+      }
+    },
+    {
+      "value": "Inferomedial region of left buttock",
+      "write": {
+        "value_source_value": "Inferomedial region of left buttock"
+      }
+    },
+    {
+      "value": "Inferomedial region of right buttock",
+      "write": {
+        "value_source_value": "Inferomedial region of right buttock"
+      }
+    },
+    {
+      "value": "Infra-orbital part of cheek",
+      "write": {
+        "value_source_value": "Infra-orbital part of cheek"
+      }
+    },
+    {
+      "value": "Infra-orbital part of left cheek",
+      "write": {
+        "value_source_value": "Infra-orbital part of left cheek"
+      }
+    },
+    {
+      "value": "Infra-orbital part of right cheek",
+      "write": {
+        "value_source_value": "Infra-orbital part of right cheek"
+      }
+    },
+    {
+      "value": "Infrascapular part of back",
+      "write": {
+        "value_source_value": "Infrascapular part of back"
+      }
+    },
+    {
+      "value": "Inner part of external acoustic tube",
+      "write": {
+        "value_source_value": "Inner part of external acoustic tube"
+      }
+    },
+    {
+      "value": "Inner part of left external acoustic tube",
+      "write": {
+        "value_source_value": "Inner part of left external acoustic tube"
+      }
+    },
+    {
+      "value": "Inner part of right external acoustic tube",
+      "write": {
+        "value_source_value": "Inner part of right external acoustic tube"
+      }
+    },
+    {
+      "value": "Intercarpal joint",
+      "write": {
+        "value_source_value": "Intercarpal joint"
+      }
+    },
+    {
+      "value": "Intercuneiform joint",
+      "write": {
+        "value_source_value": "Intercuneiform joint"
+      }
+    },
+    {
+      "value": "Intermetacarpal joint",
+      "write": {
+        "value_source_value": "Intermetacarpal joint"
+      }
+    },
+    {
+      "value": "Intermetacarpal joint of fourth and fifth metacarpal bones",
+      "write": {
+        "value_source_value": "Intermetacarpal joint of fourth and fifth metacarpal bones"
+      }
+    },
+    {
+      "value": "Intermetacarpal joint of left fourth and fifth metacarpal bones",
+      "write": {
+        "value_source_value": "Intermetacarpal joint of left fourth and fifth metacarpal bones"
+      }
+    },
+    {
+      "value": "Intermetacarpal joint of left second and third metacarpal bones",
+      "write": {
+        "value_source_value": "Intermetacarpal joint of left second and third metacarpal bones"
+      }
+    },
+    {
+      "value": "Intermetacarpal joint of left third and fourth metacarpal bones",
+      "write": {
+        "value_source_value": "Intermetacarpal joint of left third and fourth metacarpal bones"
+      }
+    },
+    {
+      "value": "Intermetacarpal joint of right fourth and fifth metacarpal bones",
+      "write": {
+        "value_source_value": "Intermetacarpal joint of right fourth and fifth metacarpal bones"
+      }
+    },
+    {
+      "value": "Intermetacarpal joint of right second and third metacarpal bones",
+      "write": {
+        "value_source_value": "Intermetacarpal joint of right second and third metacarpal bones"
+      }
+    },
+    {
+      "value": "Intermetacarpal joint of right third and fourth metacarpal bones",
+      "write": {
+        "value_source_value": "Intermetacarpal joint of right third and fourth metacarpal bones"
+      }
+    },
+    {
+      "value": "Intermetacarpal joint of second and third metacarpal bones",
+      "write": {
+        "value_source_value": "Intermetacarpal joint of second and third metacarpal bones"
+      }
+    },
+    {
+      "value": "Intermetacarpal joint of third and fourth metacarpal bones",
+      "write": {
+        "value_source_value": "Intermetacarpal joint of third and fourth metacarpal bones"
+      }
+    },
+    {
+      "value": "Intermetatarsal joint",
+      "write": {
+        "value_source_value": "Intermetatarsal joint"
+      }
+    },
+    {
+      "value": "Internal part of mouth",
+      "write": {
+        "value_source_value": "Internal part of mouth"
+      }
+    },
+    {
+      "value": "Interphalangeal joint",
+      "write": {
+        "value_source_value": "Interphalangeal joint"
+      }
+    },
+    {
+      "value": "Interphalangeal joint of big toe",
+      "write": {
+        "value_source_value": "Interphalangeal joint of big toe"
+      }
+    },
+    {
+      "value": "Interphalangeal joint of finger",
+      "write": {
+        "value_source_value": "Interphalangeal joint of finger"
+      }
+    },
+    {
+      "value": "Interphalangeal joint of fourth toe",
+      "write": {
+        "value_source_value": "Interphalangeal joint of fourth toe"
+      }
+    },
+    {
+      "value": "Interphalangeal joint of index finger",
+      "write": {
+        "value_source_value": "Interphalangeal joint of index finger"
+      }
+    },
+    {
+      "value": "Interphalangeal joint of left big toe",
+      "write": {
+        "value_source_value": "Interphalangeal joint of left big toe"
+      }
+    },
+    {
+      "value": "Interphalangeal joint of left fourth toe",
+      "write": {
+        "value_source_value": "Interphalangeal joint of left fourth toe"
+      }
+    },
+    {
+      "value": "Interphalangeal joint of left little toe",
+      "write": {
+        "value_source_value": "Interphalangeal joint of left little toe"
+      }
+    },
+    {
+      "value": "Interphalangeal joint of left second toe",
+      "write": {
+        "value_source_value": "Interphalangeal joint of left second toe"
+      }
+    },
+    {
+      "value": "Interphalangeal joint of left third toe",
+      "write": {
+        "value_source_value": "Interphalangeal joint of left third toe"
+      }
+    },
+    {
+      "value": "Interphalangeal joint of left thumb",
+      "write": {
+        "value_source_value": "Interphalangeal joint of left thumb"
+      }
+    },
+    {
+      "value": "Interphalangeal joint of little finger",
+      "write": {
+        "value_source_value": "Interphalangeal joint of little finger"
+      }
+    },
+    {
+      "value": "Interphalangeal joint of little toe",
+      "write": {
+        "value_source_value": "Interphalangeal joint of little toe"
+      }
+    },
+    {
+      "value": "Interphalangeal joint of middle finger",
+      "write": {
+        "value_source_value": "Interphalangeal joint of middle finger"
+      }
+    },
+    {
+      "value": "Interphalangeal joint of right big toe",
+      "write": {
+        "value_source_value": "Interphalangeal joint of right big toe"
+      }
+    },
+    {
+      "value": "Interphalangeal joint of right fourth toe",
+      "write": {
+        "value_source_value": "Interphalangeal joint of right fourth toe"
+      }
+    },
+    {
+      "value": "Interphalangeal joint of right little toe",
+      "write": {
+        "value_source_value": "Interphalangeal joint of right little toe"
+      }
+    },
+    {
+      "value": "Interphalangeal joint of right second toe",
+      "write": {
+        "value_source_value": "Interphalangeal joint of right second toe"
+      }
+    },
+    {
+      "value": "Interphalangeal joint of right third toe",
+      "write": {
+        "value_source_value": "Interphalangeal joint of right third toe"
+      }
+    },
+    {
+      "value": "Interphalangeal joint of right thumb",
+      "write": {
+        "value_source_value": "Interphalangeal joint of right thumb"
+      }
+    },
+    {
+      "value": "Interphalangeal joint of ring finger",
+      "write": {
+        "value_source_value": "Interphalangeal joint of ring finger"
+      }
+    },
+    {
+      "value": "Interphalangeal joint of second toe",
+      "write": {
+        "value_source_value": "Interphalangeal joint of second toe"
+      }
+    },
+    {
+      "value": "Interphalangeal joint of third toe",
+      "write": {
+        "value_source_value": "Interphalangeal joint of third toe"
+      }
+    },
+    {
+      "value": "Interphalangeal joint of thumb",
+      "write": {
+        "value_source_value": "Interphalangeal joint of thumb"
+      }
+    },
+    {
+      "value": "Interphalangeal joint of toe",
+      "write": {
+        "value_source_value": "Interphalangeal joint of toe"
+      }
+    },
+    {
+      "value": "Interscapular part of back",
+      "write": {
+        "value_source_value": "Interscapular part of back"
+      }
+    },
+    {
+      "value": "Intertarsal joint",
+      "write": {
+        "value_source_value": "Intertarsal joint"
+      }
+    },
+    {
+      "value": "Isthmus of external acoustic tube",
+      "write": {
+        "value_source_value": "Isthmus of external acoustic tube"
+      }
+    },
+    {
+      "value": "Isthmus of left external acoustic meatus",
+      "write": {
+        "value_source_value": "Isthmus of left external acoustic meatus"
+      }
+    },
+    {
+      "value": "Isthmus of right external acoustic meatus",
+      "write": {
+        "value_source_value": "Isthmus of right external acoustic meatus"
+      }
+    },
+    {
+      "value": "Knee",
+      "write": {
+        "value_source_value": "Knee"
+      }
+    },
+    {
+      "value": "Knee crease",
+      "write": {
+        "value_source_value": "Knee crease"
+      }
+    },
+    {
+      "value": "Knee joint",
+      "write": {
+        "value_source_value": "Knee joint"
+      }
+    },
+    {
+      "value": "Labial part of mouth",
+      "write": {
+        "value_source_value": "Labial part of mouth"
+      }
+    },
+    {
+      "value": "Lateral crest of philtrum",
+      "write": {
+        "value_source_value": "Lateral crest of philtrum"
+      }
+    },
+    {
+      "value": "Lateral half of back",
+      "write": {
+        "value_source_value": "Lateral half of back"
+      }
+    },
+    {
+      "value": "Lateral half of back of thorax",
+      "write": {
+        "value_source_value": "Lateral half of back of thorax"
+      }
+    },
+    {
+      "value": "Lateral half of chin",
+      "write": {
+        "value_source_value": "Lateral half of chin"
+      }
+    },
+    {
+      "value": "Lateral half of external nose",
+      "write": {
+        "value_source_value": "Lateral half of external nose"
+      }
+    },
+    {
+      "value": "Lateral half of face",
+      "write": {
+        "value_source_value": "Lateral half of face"
+      }
+    },
+    {
+      "value": "Lateral half of lumbar region of back",
+      "write": {
+        "value_source_value": "Lateral half of lumbar region of back"
+      }
+    },
+    {
+      "value": "Lateral half of nose",
+      "write": {
+        "value_source_value": "Lateral half of nose"
+      }
+    },
+    {
+      "value": "Lateral half of thoracic segment of trunk",
+      "write": {
+        "value_source_value": "Lateral half of thoracic segment of trunk"
+      }
+    },
+    {
+      "value": "Lateral half of trunk",
+      "write": {
+        "value_source_value": "Lateral half of trunk"
+      }
+    },
+    {
+      "value": "Lateral half of upper lip",
+      "write": {
+        "value_source_value": "Lateral half of upper lip"
+      }
+    },
+    {
+      "value": "Lateral malleolar part of ankle",
+      "write": {
+        "value_source_value": "Lateral malleolar part of ankle"
+      }
+    },
+    {
+      "value": "Lateral malleolar part of left ankle",
+      "write": {
+        "value_source_value": "Lateral malleolar part of left ankle"
+      }
+    },
+    {
+      "value": "Lateral malleolar part of right ankle",
+      "write": {
+        "value_source_value": "Lateral malleolar part of right ankle"
+      }
+    },
+    {
+      "value": "Lateral part of ankle",
+      "write": {
+        "value_source_value": "Lateral part of ankle"
+      }
+    },
+    {
+      "value": "Lateral part of cheek",
+      "write": {
+        "value_source_value": "Lateral part of cheek"
+      }
+    },
+    {
+      "value": "Lateral part of elbow",
+      "write": {
+        "value_source_value": "Lateral part of elbow"
+      }
+    },
+    {
+      "value": "Lateral part of floor of mouth",
+      "write": {
+        "value_source_value": "Lateral part of floor of mouth"
+      }
+    },
+    {
+      "value": "Lateral part of knee",
+      "write": {
+        "value_source_value": "Lateral part of knee"
+      }
+    },
+    {
+      "value": "Lateral part of left cheek",
+      "write": {
+        "value_source_value": "Lateral part of left cheek"
+      }
+    },
+    {
+      "value": "Lateral part of left elbow",
+      "write": {
+        "value_source_value": "Lateral part of left elbow"
+      }
+    },
+    {
+      "value": "Lateral part of left knee",
+      "write": {
+        "value_source_value": "Lateral part of left knee"
+      }
+    },
+    {
+      "value": "Lateral part of lower limb",
+      "write": {
+        "value_source_value": "Lateral part of lower limb"
+      }
+    },
+    {
+      "value": "Lateral part of lower lip",
+      "write": {
+        "value_source_value": "Lateral part of lower lip"
+      }
+    },
+    {
+      "value": "Lateral part of neck",
+      "write": {
+        "value_source_value": "Lateral part of neck"
+      }
+    },
+    {
+      "value": "Lateral part of right cheek",
+      "write": {
+        "value_source_value": "Lateral part of right cheek"
+      }
+    },
+    {
+      "value": "Lateral part of right elbow",
+      "write": {
+        "value_source_value": "Lateral part of right elbow"
+      }
+    },
+    {
+      "value": "Lateral part of right knee",
+      "write": {
+        "value_source_value": "Lateral part of right knee"
+      }
+    },
+    {
+      "value": "Lateral region of trunk",
+      "write": {
+        "value_source_value": "Lateral region of trunk"
+      }
+    },
+    {
+      "value": "Lateral retromalleolar region",
+      "write": {
+        "value_source_value": "Lateral retromalleolar region"
+      }
+    },
+    {
+      "value": "Lateral wall of external nose",
+      "write": {
+        "value_source_value": "Lateral wall of external nose"
+      }
+    },
+    {
+      "value": "Lateral-intermediate intercuneiform joint",
+      "write": {
+        "value_source_value": "Lateral-intermediate intercuneiform joint"
+      }
+    },
+    {
+      "value": "Left acromioclavicular joint",
+      "write": {
+        "value_source_value": "Left acromioclavicular joint"
+      }
+    },
+    {
+      "value": "Left ala of nose",
+      "write": {
+        "value_source_value": "Left ala of nose"
+      }
+    },
+    {
+      "value": "Left angle of mouth",
+      "write": {
+        "value_source_value": "Left angle of mouth"
+      }
+    },
+    {
+      "value": "Left ankle",
+      "write": {
+        "value_source_value": "Left ankle"
+      }
+    },
+    {
+      "value": "Left ankle joint",
+      "write": {
+        "value_source_value": "Left ankle joint"
+      }
+    },
+    {
+      "value": "Left antihelix",
+      "write": {
+        "value_source_value": "Left antihelix"
+      }
+    },
+    {
+      "value": "Left antitragus",
+      "write": {
+        "value_source_value": "Left antitragus"
+      }
+    },
+    {
+      "value": "Left auricular part of head",
+      "write": {
+        "value_source_value": "Left auricular part of head"
+      }
+    },
+    {
+      "value": "Left auriculotemporal part of head",
+      "write": {
+        "value_source_value": "Left auriculotemporal part of head"
+      }
+    },
+    {
+      "value": "Left axilla",
+      "write": {
+        "value_source_value": "Left axilla"
+      }
+    },
+    {
+      "value": "Left axilla proper",
+      "write": {
+        "value_source_value": "Left axilla proper"
+      }
+    },
+    {
+      "value": "Left buttock",
+      "write": {
+        "value_source_value": "Left buttock"
+      }
+    },
+    {
+      "value": "Left calcaneocuboid joint",
+      "write": {
+        "value_source_value": "Left calcaneocuboid joint"
+      }
+    },
+    {
+      "value": "Left cheek",
+      "write": {
+        "value_source_value": "Left cheek"
+      }
+    },
+    {
+      "value": "Left cheek proper",
+      "write": {
+        "value_source_value": "Left cheek proper"
+      }
+    },
+    {
+      "value": "Left chirocarpal region",
+      "write": {
+        "value_source_value": "Left chirocarpal region"
+      }
+    },
+    {
+      "value": "Left cuboideonavicular joint",
+      "write": {
+        "value_source_value": "Left cuboideonavicular joint"
+      }
+    },
+    {
+      "value": "Left cuneocuboid joint",
+      "write": {
+        "value_source_value": "Left cuneocuboid joint"
+      }
+    },
+    {
+      "value": "Left cuneonavicular joint",
+      "write": {
+        "value_source_value": "Left cuneonavicular joint"
+      }
+    },
+    {
+      "value": "Left distal radio-ulnar joint",
+      "write": {
+        "value_source_value": "Left distal radio-ulnar joint"
+      }
+    },
+    {
+      "value": "Left ear",
+      "write": {
+        "value_source_value": "Left ear"
+      }
+    },
+    {
+      "value": "Left elbow",
+      "write": {
+        "value_source_value": "Left elbow"
+      }
+    },
+    {
+      "value": "Left elbow joint",
+      "write": {
+        "value_source_value": "Left elbow joint"
+      }
+    },
+    {
+      "value": "Left external acoustic tube",
+      "write": {
+        "value_source_value": "Left external acoustic tube"
+      }
+    },
+    {
+      "value": "Left external ear",
+      "write": {
+        "value_source_value": "Left external ear"
+      }
+    },
+    {
+      "value": "Left eye",
+      "write": {
+        "value_source_value": "Left eye"
+      }
+    },
+    {
+      "value": "Left fifth carpometacarpal joint",
+      "write": {
+        "value_source_value": "Left fifth carpometacarpal joint"
+      }
+    },
+    {
+      "value": "Left fifth tarsometatarsal joint",
+      "write": {
+        "value_source_value": "Left fifth tarsometatarsal joint"
+      }
+    },
+    {
+      "value": "Left first intermetatarsal joint",
+      "write": {
+        "value_source_value": "Left first intermetatarsal joint"
+      }
+    },
+    {
+      "value": "Left first tarsometatarsal joint",
+      "write": {
+        "value_source_value": "Left first tarsometatarsal joint"
+      }
+    },
+    {
+      "value": "Left fourth carpometacarpal joint",
+      "write": {
+        "value_source_value": "Left fourth carpometacarpal joint"
+      }
+    },
+    {
+      "value": "Left fourth intermetatarsal joint",
+      "write": {
+        "value_source_value": "Left fourth intermetatarsal joint"
+      }
+    },
+    {
+      "value": "Left fourth tarsometatarsal joint",
+      "write": {
+        "value_source_value": "Left fourth tarsometatarsal joint"
+      }
+    },
+    {
+      "value": "Left free lower limb",
+      "write": {
+        "value_source_value": "Left free lower limb"
+      }
+    },
+    {
+      "value": "Left free upper limb",
+      "write": {
+        "value_source_value": "Left free upper limb"
+      }
+    },
+    {
+      "value": "Left glenohumeral joint",
+      "write": {
+        "value_source_value": "Left glenohumeral joint"
+      }
+    },
+    {
+      "value": "Left half of front of neck",
+      "write": {
+        "value_source_value": "Left half of front of neck"
+      }
+    },
+    {
+      "value": "Left half of inferior part of back of neck",
+      "write": {
+        "value_source_value": "Left half of inferior part of back of neck"
+      }
+    },
+    {
+      "value": "Left helix",
+      "write": {
+        "value_source_value": "Left helix"
+      }
+    },
+    {
+      "value": "Left hip",
+      "write": {
+        "value_source_value": "Left hip"
+      }
+    },
+    {
+      "value": "Left hip joint",
+      "write": {
+        "value_source_value": "Left hip joint"
+      }
+    },
+    {
+      "value": "Left humeroradial joint",
+      "write": {
+        "value_source_value": "Left humeroradial joint"
+      }
+    },
+    {
+      "value": "Left humeroulnar joint",
+      "write": {
+        "value_source_value": "Left humeroulnar joint"
+      }
+    },
+    {
+      "value": "Left infrascapular part of back",
+      "write": {
+        "value_source_value": "Left infrascapular part of back"
+      }
+    },
+    {
+      "value": "Left intercuneiform joint",
+      "write": {
+        "value_source_value": "Left intercuneiform joint"
+      }
+    },
+    {
+      "value": "Left intertarsal joint",
+      "write": {
+        "value_source_value": "Left intertarsal joint"
+      }
+    },
+    {
+      "value": "Left knee",
+      "write": {
+        "value_source_value": "Left knee"
+      }
+    },
+    {
+      "value": "Left knee joint",
+      "write": {
+        "value_source_value": "Left knee joint"
+      }
+    },
+    {
+      "value": "Left lateral crest of philtrum",
+      "write": {
+        "value_source_value": "Left lateral crest of philtrum"
+      }
+    },
+    {
+      "value": "Left lateral half of external nose",
+      "write": {
+        "value_source_value": "Left lateral half of external nose"
+      }
+    },
+    {
+      "value": "Left lateral half of face",
+      "write": {
+        "value_source_value": "Left lateral half of face"
+      }
+    },
+    {
+      "value": "Left lateral half of nose",
+      "write": {
+        "value_source_value": "Left lateral half of nose"
+      }
+    },
+    {
+      "value": "Left lateral half of trunk",
+      "write": {
+        "value_source_value": "Left lateral half of trunk"
+      }
+    },
+    {
+      "value": "Left lateral part of neck",
+      "write": {
+        "value_source_value": "Left lateral part of neck"
+      }
+    },
+    {
+      "value": "Left lateral retromalleolar region",
+      "write": {
+        "value_source_value": "Left lateral retromalleolar region"
+      }
+    },
+    {
+      "value": "Left lateral-intermediate intercuneiform joint",
+      "write": {
+        "value_source_value": "Left lateral-intermediate intercuneiform joint"
+      }
+    },
+    {
+      "value": "Left lower eyelid",
+      "write": {
+        "value_source_value": "Left lower eyelid"
+      }
+    },
+    {
+      "value": "Left mandibular part proper of mouth",
+      "write": {
+        "value_source_value": "Left mandibular part proper of mouth"
+      }
+    },
+    {
+      "value": "Left mastoid part of head",
+      "write": {
+        "value_source_value": "Left mastoid part of head"
+      }
+    },
+    {
+      "value": "Left medial retromalleolar region",
+      "write": {
+        "value_source_value": "Left medial retromalleolar region"
+      }
+    },
+    {
+      "value": "Left medial-intermediate intercuneiform joint",
+      "write": {
+        "value_source_value": "Left medial-intermediate intercuneiform joint"
+      }
+    },
+    {
+      "value": "Left midcarpal joint",
+      "write": {
+        "value_source_value": "Left midcarpal joint"
+      }
+    },
+    {
+      "value": "Left nasal sill",
+      "write": {
+        "value_source_value": "Left nasal sill"
+      }
+    },
+    {
+      "value": "Left olecranon region",
+      "write": {
+        "value_source_value": "Left olecranon region"
+      }
+    },
+    {
+      "value": "Left paravertebral region of back of neck",
+      "write": {
+        "value_source_value": "Left paravertebral region of back of neck"
+      }
+    },
+    {
+      "value": "Left parietal part of head",
+      "write": {
+        "value_source_value": "Left parietal part of head"
+      }
+    },
+    {
+      "value": "Left parietal wall of head proper",
+      "write": {
+        "value_source_value": "Left parietal wall of head proper"
+      }
+    },
+    {
+      "value": "Left patellofemoral joint",
+      "write": {
+        "value_source_value": "Left patellofemoral joint"
+      }
+    },
+    {
+      "value": "Left peri-orbital region of face",
+      "write": {
+        "value_source_value": "Left peri-orbital region of face"
+      }
+    },
+    {
+      "value": "Left pinna",
+      "write": {
+        "value_source_value": "Left pinna"
+      }
+    },
+    {
+      "value": "Left pisiform joint",
+      "write": {
+        "value_source_value": "Left pisiform joint"
+      }
+    },
+    {
+      "value": "Left pisotriquetral joint",
+      "write": {
+        "value_source_value": "Left pisotriquetral joint"
+      }
+    },
+    {
+      "value": "Left proximal radio-ulnar joint",
+      "write": {
+        "value_source_value": "Left proximal radio-ulnar joint"
+      }
+    },
+    {
+      "value": "Left retro-auricular part of head",
+      "write": {
+        "value_source_value": "Left retro-auricular part of head"
+      }
+    },
+    {
+      "value": "Left sacroiliac joint",
+      "write": {
+        "value_source_value": "Left sacroiliac joint"
+      }
+    },
+    {
+      "value": "Left scapular part of back",
+      "write": {
+        "value_source_value": "Left scapular part of back"
+      }
+    },
+    {
+      "value": "Left second carpometacarpal joint",
+      "write": {
+        "value_source_value": "Left second carpometacarpal joint"
+      }
+    },
+    {
+      "value": "Left second intermetatarsal joint",
+      "write": {
+        "value_source_value": "Left second intermetatarsal joint"
+      }
+    },
+    {
+      "value": "Left second tarsometatarsal joint",
+      "write": {
+        "value_source_value": "Left second tarsometatarsal joint"
+      }
+    },
+    {
+      "value": "Left shoulder",
+      "write": {
+        "value_source_value": "Left shoulder"
+      }
+    },
+    {
+      "value": "Left side of chin",
+      "write": {
+        "value_source_value": "Left side of chin"
+      }
+    },
+    {
+      "value": "Left side of head",
+      "write": {
+        "value_source_value": "Left side of head"
+      }
+    },
+    {
+      "value": "Left side of lower lip",
+      "write": {
+        "value_source_value": "Left side of lower lip"
+      }
+    },
+    {
+      "value": "Left side of lower lip proper",
+      "write": {
+        "value_source_value": "Left side of lower lip proper"
+      }
+    },
+    {
+      "value": "Left side of maxillary alveolodental arch",
+      "write": {
+        "value_source_value": "Left side of maxillary alveolodental arch"
+      }
+    },
+    {
+      "value": "Left side of upper lip",
+      "write": {
+        "value_source_value": "Left side of upper lip"
+      }
+    },
+    {
+      "value": "Left side of upper lip proper",
+      "write": {
+        "value_source_value": "Left side of upper lip proper"
+      }
+    },
+    {
+      "value": "Left sternoclavicular joint",
+      "write": {
+        "value_source_value": "Left sternoclavicular joint"
+      }
+    },
+    {
+      "value": "Left supra-auricular part of head",
+      "write": {
+        "value_source_value": "Left supra-auricular part of head"
+      }
+    },
+    {
+      "value": "Left supratragic tubercle",
+      "write": {
+        "value_source_value": "Left supratragic tubercle"
+      }
+    },
+    {
+      "value": "Left talocalcaneal joint",
+      "write": {
+        "value_source_value": "Left talocalcaneal joint"
+      }
+    },
+    {
+      "value": "Left talocalcaneonavicular joint",
+      "write": {
+        "value_source_value": "Left talocalcaneonavicular joint"
+      }
+    },
+    {
+      "value": "Left tarsometatarsal joint",
+      "write": {
+        "value_source_value": "Left tarsometatarsal joint"
+      }
+    },
+    {
+      "value": "Left temple",
+      "write": {
+        "value_source_value": "Left temple"
+      }
+    },
+    {
+      "value": "Left temporal part of head",
+      "write": {
+        "value_source_value": "Left temporal part of head"
+      }
+    },
+    {
+      "value": "Left temporal part proper of head",
+      "write": {
+        "value_source_value": "Left temporal part proper of head"
+      }
+    },
+    {
+      "value": "Left third carpometacarpal joint",
+      "write": {
+        "value_source_value": "Left third carpometacarpal joint"
+      }
+    },
+    {
+      "value": "Left third intermetatarsal joint",
+      "write": {
+        "value_source_value": "Left third intermetatarsal joint"
+      }
+    },
+    {
+      "value": "Left third tarsometatarsal joint",
+      "write": {
+        "value_source_value": "Left third tarsometatarsal joint"
+      }
+    },
+    {
+      "value": "Left tibiofemoral joint",
+      "write": {
+        "value_source_value": "Left tibiofemoral joint"
+      }
+    },
+    {
+      "value": "Left tragus",
+      "write": {
+        "value_source_value": "Left tragus"
+      }
+    },
+    {
+      "value": "Left transverse tarsal joint",
+      "write": {
+        "value_source_value": "Left transverse tarsal joint"
+      }
+    },
+    {
+      "value": "Left upper eyelid",
+      "write": {
+        "value_source_value": "Left upper eyelid"
+      }
+    },
+    {
+      "value": "Left wrist",
+      "write": {
+        "value_source_value": "Left wrist"
+      }
+    },
+    {
+      "value": "Left wrist joint",
+      "write": {
+        "value_source_value": "Left wrist joint"
+      }
+    },
+    {
+      "value": "Limb region",
+      "write": {
+        "value_source_value": "Limb region"
+      }
+    },
+    {
+      "value": "Lip",
+      "write": {
+        "value_source_value": "Lip"
+      }
+    },
+    {
+      "value": "Lip proper",
+      "write": {
+        "value_source_value": "Lip proper"
+      }
+    },
+    {
+      "value": "Lobule of left pinna",
+      "write": {
+        "value_source_value": "Lobule of left pinna"
+      }
+    },
+    {
+      "value": "Lobule of pinna",
+      "write": {
+        "value_source_value": "Lobule of pinna"
+      }
+    },
+    {
+      "value": "Lobule of right pinna",
+      "write": {
+        "value_source_value": "Lobule of right pinna"
+      }
+    },
+    {
+      "value": "Lower eyelid",
+      "write": {
+        "value_source_value": "Lower eyelid"
+      }
+    },
+    {
+      "value": "Lower lip",
+      "write": {
+        "value_source_value": "Lower lip"
+      }
+    },
+    {
+      "value": "Lower lip proper",
+      "write": {
+        "value_source_value": "Lower lip proper"
+      }
+    },
+    {
+      "value": "Lower part of back of thorax",
+      "write": {
+        "value_source_value": "Lower part of back of thorax"
+      }
+    },
+    {
+      "value": "Lumbar region of back",
+      "write": {
+        "value_source_value": "Lumbar region of back"
+      }
+    },
+    {
+      "value": "Lumbosacral region of back",
+      "write": {
+        "value_source_value": "Lumbosacral region of back"
+      }
+    },
+    {
+      "value": "Malleolar part of ankle",
+      "write": {
+        "value_source_value": "Malleolar part of ankle"
+      }
+    },
+    {
+      "value": "Mandibular part of mouth",
+      "write": {
+        "value_source_value": "Mandibular part of mouth"
+      }
+    },
+    {
+      "value": "Mandibular part proper of mouth",
+      "write": {
+        "value_source_value": "Mandibular part proper of mouth"
+      }
+    },
+    {
+      "value": "Mastoid part of head",
+      "write": {
+        "value_source_value": "Mastoid part of head"
+      }
+    },
+    {
+      "value": "Medial malleolar part of ankle",
+      "write": {
+        "value_source_value": "Medial malleolar part of ankle"
+      }
+    },
+    {
+      "value": "Medial malleolar part of left ankle",
+      "write": {
+        "value_source_value": "Medial malleolar part of left ankle"
+      }
+    },
+    {
+      "value": "Medial malleolar part of right ankle",
+      "write": {
+        "value_source_value": "Medial malleolar part of right ankle"
+      }
+    },
+    {
+      "value": "Medial part of ankle",
+      "write": {
+        "value_source_value": "Medial part of ankle"
+      }
+    },
+    {
+      "value": "Medial part of elbow",
+      "write": {
+        "value_source_value": "Medial part of elbow"
+      }
+    },
+    {
+      "value": "Medial part of knee",
+      "write": {
+        "value_source_value": "Medial part of knee"
+      }
+    },
+    {
+      "value": "Medial part of left knee",
+      "write": {
+        "value_source_value": "Medial part of left knee"
+      }
+    },
+    {
+      "value": "Medial part of lower limb",
+      "write": {
+        "value_source_value": "Medial part of lower limb"
+      }
+    },
+    {
+      "value": "Medial part of right knee",
+      "write": {
+        "value_source_value": "Medial part of right knee"
+      }
+    },
+    {
+      "value": "Medial retromalleolar region",
+      "write": {
+        "value_source_value": "Medial retromalleolar region"
+      }
+    },
+    {
+      "value": "Medial-intermediate intercuneiform joint",
+      "write": {
+        "value_source_value": "Medial-intermediate intercuneiform joint"
+      }
+    },
+    {
+      "value": "Metacarpophalangeal joint",
+      "write": {
+        "value_source_value": "Metacarpophalangeal joint"
+      }
+    },
+    {
+      "value": "Metacarpophalangeal joint of index finger",
+      "write": {
+        "value_source_value": "Metacarpophalangeal joint of index finger"
+      }
+    },
+    {
+      "value": "Metacarpophalangeal joint of left index finger",
+      "write": {
+        "value_source_value": "Metacarpophalangeal joint of left index finger"
+      }
+    },
+    {
+      "value": "Metacarpophalangeal joint of left little finger",
+      "write": {
+        "value_source_value": "Metacarpophalangeal joint of left little finger"
+      }
+    },
+    {
+      "value": "Metacarpophalangeal joint of left middle finger",
+      "write": {
+        "value_source_value": "Metacarpophalangeal joint of left middle finger"
+      }
+    },
+    {
+      "value": "Metacarpophalangeal joint of left ring finger",
+      "write": {
+        "value_source_value": "Metacarpophalangeal joint of left ring finger"
+      }
+    },
+    {
+      "value": "Metacarpophalangeal joint of left thumb",
+      "write": {
+        "value_source_value": "Metacarpophalangeal joint of left thumb"
+      }
+    },
+    {
+      "value": "Metacarpophalangeal joint of little finger",
+      "write": {
+        "value_source_value": "Metacarpophalangeal joint of little finger"
+      }
+    },
+    {
+      "value": "Metacarpophalangeal joint of middle finger",
+      "write": {
+        "value_source_value": "Metacarpophalangeal joint of middle finger"
+      }
+    },
+    {
+      "value": "Metacarpophalangeal joint of right index finger",
+      "write": {
+        "value_source_value": "Metacarpophalangeal joint of right index finger"
+      }
+    },
+    {
+      "value": "Metacarpophalangeal joint of right little finger",
+      "write": {
+        "value_source_value": "Metacarpophalangeal joint of right little finger"
+      }
+    },
+    {
+      "value": "Metacarpophalangeal joint of right middle finger",
+      "write": {
+        "value_source_value": "Metacarpophalangeal joint of right middle finger"
+      }
+    },
+    {
+      "value": "Metacarpophalangeal joint of right ring finger",
+      "write": {
+        "value_source_value": "Metacarpophalangeal joint of right ring finger"
+      }
+    },
+    {
+      "value": "Metacarpophalangeal joint of right thumb",
+      "write": {
+        "value_source_value": "Metacarpophalangeal joint of right thumb"
+      }
+    },
+    {
+      "value": "Metacarpophalangeal joint of ring finger",
+      "write": {
+        "value_source_value": "Metacarpophalangeal joint of ring finger"
+      }
+    },
+    {
+      "value": "Metacarpophalangeal joint of thumb",
+      "write": {
+        "value_source_value": "Metacarpophalangeal joint of thumb"
+      }
+    },
+    {
+      "value": "Metatarsophalangeal joint",
+      "write": {
+        "value_source_value": "Metatarsophalangeal joint"
+      }
+    },
+    {
+      "value": "Metatarsophalangeal joint of big toe",
+      "write": {
+        "value_source_value": "Metatarsophalangeal joint of big toe"
+      }
+    },
+    {
+      "value": "Metatarsophalangeal joint of fourth toe",
+      "write": {
+        "value_source_value": "Metatarsophalangeal joint of fourth toe"
+      }
+    },
+    {
+      "value": "Metatarsophalangeal joint of left big toe",
+      "write": {
+        "value_source_value": "Metatarsophalangeal joint of left big toe"
+      }
+    },
+    {
+      "value": "Metatarsophalangeal joint of left fourth toe",
+      "write": {
+        "value_source_value": "Metatarsophalangeal joint of left fourth toe"
+      }
+    },
+    {
+      "value": "Metatarsophalangeal joint of left little toe",
+      "write": {
+        "value_source_value": "Metatarsophalangeal joint of left little toe"
+      }
+    },
+    {
+      "value": "Metatarsophalangeal joint of left second toe",
+      "write": {
+        "value_source_value": "Metatarsophalangeal joint of left second toe"
+      }
+    },
+    {
+      "value": "Metatarsophalangeal joint of left third toe",
+      "write": {
+        "value_source_value": "Metatarsophalangeal joint of left third toe"
+      }
+    },
+    {
+      "value": "Metatarsophalangeal joint of lesser toe",
+      "write": {
+        "value_source_value": "Metatarsophalangeal joint of lesser toe"
+      }
+    },
+    {
+      "value": "Metatarsophalangeal joint of little toe",
+      "write": {
+        "value_source_value": "Metatarsophalangeal joint of little toe"
+      }
+    },
+    {
+      "value": "Metatarsophalangeal joint of right big toe",
+      "write": {
+        "value_source_value": "Metatarsophalangeal joint of right big toe"
+      }
+    },
+    {
+      "value": "Metatarsophalangeal joint of right fourth toe",
+      "write": {
+        "value_source_value": "Metatarsophalangeal joint of right fourth toe"
+      }
+    },
+    {
+      "value": "Metatarsophalangeal joint of right little toe",
+      "write": {
+        "value_source_value": "Metatarsophalangeal joint of right little toe"
+      }
+    },
+    {
+      "value": "Metatarsophalangeal joint of right second toe",
+      "write": {
+        "value_source_value": "Metatarsophalangeal joint of right second toe"
+      }
+    },
+    {
+      "value": "Metatarsophalangeal joint of right third toe",
+      "write": {
+        "value_source_value": "Metatarsophalangeal joint of right third toe"
+      }
+    },
+    {
+      "value": "Metatarsophalangeal joint of second toe",
+      "write": {
+        "value_source_value": "Metatarsophalangeal joint of second toe"
+      }
+    },
+    {
+      "value": "Metatarsophalangeal joint of third toe",
+      "write": {
+        "value_source_value": "Metatarsophalangeal joint of third toe"
+      }
+    },
+    {
+      "value": "Midaxillary line region of trunk",
+      "write": {
+        "value_source_value": "Midaxillary line region of trunk"
+      }
+    },
+    {
+      "value": "Midcarpal joint",
+      "write": {
+        "value_source_value": "Midcarpal joint"
+      }
+    },
+    {
+      "value": "Middle free limb region",
+      "write": {
+        "value_source_value": "Middle free limb region"
+      }
+    },
+    {
+      "value": "Middle free lower limb region",
+      "write": {
+        "value_source_value": "Middle free lower limb region"
+      }
+    },
+    {
+      "value": "Middle free upper limb region",
+      "write": {
+        "value_source_value": "Middle free upper limb region"
+      }
+    },
+    {
+      "value": "Middle interphalangeal joint of finger",
+      "write": {
+        "value_source_value": "Middle interphalangeal joint of finger"
+      }
+    },
+    {
+      "value": "Middle part of external acoustic tube",
+      "write": {
+        "value_source_value": "Middle part of external acoustic tube"
+      }
+    },
+    {
+      "value": "Middle part of left external acoustic tube",
+      "write": {
+        "value_source_value": "Middle part of left external acoustic tube"
+      }
+    },
+    {
+      "value": "Middle part of lower lip",
+      "write": {
+        "value_source_value": "Middle part of lower lip"
+      }
+    },
+    {
+      "value": "Middle part of right external acoustic tube",
+      "write": {
+        "value_source_value": "Middle part of right external acoustic tube"
+      }
+    },
+    {
+      "value": "Midface",
+      "write": {
+        "value_source_value": "Midface"
+      }
+    },
+    {
+      "value": "Midline region of external nose",
+      "write": {
+        "value_source_value": "Midline region of external nose"
+      }
+    },
+    {
+      "value": "Milkline region of trunk",
+      "write": {
+        "value_source_value": "Milkline region of trunk"
+      }
+    },
+    {
+      "value": "Mouth",
+      "write": {
+        "value_source_value": "Mouth"
+      }
+    },
+    {
+      "value": "Nasal sill",
+      "write": {
+        "value_source_value": "Nasal sill"
+      }
+    },
+    {
+      "value": "Nasomaxillary part of face",
+      "write": {
+        "value_source_value": "Nasomaxillary part of face"
+      }
+    },
+    {
+      "value": "Neck",
+      "write": {
+        "value_source_value": "Neck"
+      }
+    },
+    {
+      "value": "Nose",
+      "write": {
+        "value_source_value": "Nose"
+      }
+    },
+    {
+      "value": "Obverse part of pinna",
+      "write": {
+        "value_source_value": "Obverse part of pinna"
+      }
+    },
+    {
+      "value": "Occipital part of head",
+      "write": {
+        "value_source_value": "Occipital part of head"
+      }
+    },
+    {
+      "value": "Occipital wall of head proper",
+      "write": {
+        "value_source_value": "Occipital wall of head proper"
+      }
+    },
+    {
+      "value": "Olecranon region",
+      "write": {
+        "value_source_value": "Olecranon region"
+      }
+    },
+    {
+      "value": "Paravertebral part of back of abdomen",
+      "write": {
+        "value_source_value": "Paravertebral part of back of abdomen"
+      }
+    },
+    {
+      "value": "Paravertebral region of back of neck",
+      "write": {
+        "value_source_value": "Paravertebral region of back of neck"
+      }
+    },
+    {
+      "value": "Parietal part of head",
+      "write": {
+        "value_source_value": "Parietal part of head"
+      }
+    },
+    {
+      "value": "Parietal wall of head proper",
+      "write": {
+        "value_source_value": "Parietal wall of head proper"
+      }
+    },
+    {
+      "value": "Patellar part of knee",
+      "write": {
+        "value_source_value": "Patellar part of knee"
+      }
+    },
+    {
+      "value": "Patellar part of left knee",
+      "write": {
+        "value_source_value": "Patellar part of left knee"
+      }
+    },
+    {
+      "value": "Patellar part of right knee",
+      "write": {
+        "value_source_value": "Patellar part of right knee"
+      }
+    },
+    {
+      "value": "Patellofemoral joint",
+      "write": {
+        "value_source_value": "Patellofemoral joint"
+      }
+    },
+    {
+      "value": "Pectoral girdle region",
+      "write": {
+        "value_source_value": "Pectoral girdle region"
+      }
+    },
+    {
+      "value": "Pectoral part of left shoulder",
+      "write": {
+        "value_source_value": "Pectoral part of left shoulder"
+      }
+    },
+    {
+      "value": "Pectoral part of right shoulder",
+      "write": {
+        "value_source_value": "Pectoral part of right shoulder"
+      }
+    },
+    {
+      "value": "Pectoral region of shoulder",
+      "write": {
+        "value_source_value": "Pectoral region of shoulder"
+      }
+    },
+    {
+      "value": "Peri-orbital region of face",
+      "write": {
+        "value_source_value": "Peri-orbital region of face"
+      }
+    },
+    {
+      "value": "Perinasal region of lateral half of face",
+      "write": {
+        "value_source_value": "Perinasal region of lateral half of face"
+      }
+    },
+    {
+      "value": "Philtrum",
+      "write": {
+        "value_source_value": "Philtrum"
+      }
+    },
+    {
+      "value": "Philtrum proper",
+      "write": {
+        "value_source_value": "Philtrum proper"
+      }
+    },
+    {
+      "value": "Pinna",
+      "write": {
+        "value_source_value": "Pinna"
+      }
+    },
+    {
+      "value": "Pisiform joint",
+      "write": {
+        "value_source_value": "Pisiform joint"
+      }
+    },
+    {
+      "value": "Pisotriquetral joint",
+      "write": {
+        "value_source_value": "Pisotriquetral joint"
+      }
+    },
+    {
+      "value": "Popliteal part of knee",
+      "write": {
+        "value_source_value": "Popliteal part of knee"
+      }
+    },
+    {
+      "value": "Popliteal part of left knee",
+      "write": {
+        "value_source_value": "Popliteal part of left knee"
+      }
+    },
+    {
+      "value": "Popliteal part of right knee",
+      "write": {
+        "value_source_value": "Popliteal part of right knee"
+      }
+    },
+    {
+      "value": "Posterior axillary fold",
+      "write": {
+        "value_source_value": "Posterior axillary fold"
+      }
+    },
+    {
+      "value": "Posterior axillary line region of trunk",
+      "write": {
+        "value_source_value": "Posterior axillary line region of trunk"
+      }
+    },
+    {
+      "value": "Posterior body wall",
+      "write": {
+        "value_source_value": "Posterior body wall"
+      }
+    },
+    {
+      "value": "Posterior part of ankle",
+      "write": {
+        "value_source_value": "Posterior part of ankle"
+      }
+    },
+    {
+      "value": "Posterior part of elbow",
+      "write": {
+        "value_source_value": "Posterior part of elbow"
+      }
+    },
+    {
+      "value": "Posterior part of floor of mouth",
+      "write": {
+        "value_source_value": "Posterior part of floor of mouth"
+      }
+    },
+    {
+      "value": "Posterior part of left ankle",
+      "write": {
+        "value_source_value": "Posterior part of left ankle"
+      }
+    },
+    {
+      "value": "Posterior part of left elbow",
+      "write": {
+        "value_source_value": "Posterior part of left elbow"
+      }
+    },
+    {
+      "value": "Posterior part of left wrist",
+      "write": {
+        "value_source_value": "Posterior part of left wrist"
+      }
+    },
+    {
+      "value": "Posterior part of right ankle",
+      "write": {
+        "value_source_value": "Posterior part of right ankle"
+      }
+    },
+    {
+      "value": "Posterior part of right elbow",
+      "write": {
+        "value_source_value": "Posterior part of right elbow"
+      }
+    },
+    {
+      "value": "Posterior part of right wrist",
+      "write": {
+        "value_source_value": "Posterior part of right wrist"
+      }
+    },
+    {
+      "value": "Posterior part of wrist",
+      "write": {
+        "value_source_value": "Posterior part of wrist"
+      }
+    },
+    {
+      "value": "Posterior part proper of elbow",
+      "write": {
+        "value_source_value": "Posterior part proper of elbow"
+      }
+    },
+    {
+      "value": "Posterior part proper of left elbow",
+      "write": {
+        "value_source_value": "Posterior part proper of left elbow"
+      }
+    },
+    {
+      "value": "Posterior part proper of right elbow",
+      "write": {
+        "value_source_value": "Posterior part proper of right elbow"
+      }
+    },
+    {
+      "value": "Posterior wall of external acoustic tube",
+      "write": {
+        "value_source_value": "Posterior wall of external acoustic tube"
+      }
+    },
+    {
+      "value": "Posterior wall of left external acoustic tube",
+      "write": {
+        "value_source_value": "Posterior wall of left external acoustic tube"
+      }
+    },
+    {
+      "value": "Posterior wall of right external acoustic tube",
+      "write": {
+        "value_source_value": "Posterior wall of right external acoustic tube"
+      }
+    },
+    {
+      "value": "Posterolateral part of elbow",
+      "write": {
+        "value_source_value": "Posterolateral part of elbow"
+      }
+    },
+    {
+      "value": "Posterolateral part of knee",
+      "write": {
+        "value_source_value": "Posterolateral part of knee"
+      }
+    },
+    {
+      "value": "Posterolateral part of neck",
+      "write": {
+        "value_source_value": "Posterolateral part of neck"
+      }
+    },
+    {
+      "value": "Posteromedial part of elbow",
+      "write": {
+        "value_source_value": "Posteromedial part of elbow"
+      }
+    },
+    {
+      "value": "Posteromedial part of knee",
+      "write": {
+        "value_source_value": "Posteromedial part of knee"
+      }
+    },
+    {
+      "value": "Pre-auricular part of cheek",
+      "write": {
+        "value_source_value": "Pre-auricular part of cheek"
+      }
+    },
+    {
+      "value": "Pre-auricular part of left cheek",
+      "write": {
+        "value_source_value": "Pre-auricular part of left cheek"
+      }
+    },
+    {
+      "value": "Pre-auricular part of right cheek",
+      "write": {
+        "value_source_value": "Pre-auricular part of right cheek"
+      }
+    },
+    {
+      "value": "Presacral region of pelvis",
+      "write": {
+        "value_source_value": "Presacral region of pelvis"
+      }
+    },
+    {
+      "value": "Proximal free limb region",
+      "write": {
+        "value_source_value": "Proximal free limb region"
+      }
+    },
+    {
+      "value": "Proximal free lower limb region",
+      "write": {
+        "value_source_value": "Proximal free lower limb region"
+      }
+    },
+    {
+      "value": "Proximal free upper limb region",
+      "write": {
+        "value_source_value": "Proximal free upper limb region"
+      }
+    },
+    {
+      "value": "Proximal interphalangeal joint of finger",
+      "write": {
+        "value_source_value": "Proximal interphalangeal joint of finger"
+      }
+    },
+    {
+      "value": "Proximal interphalangeal joint of fourth toe",
+      "write": {
+        "value_source_value": "Proximal interphalangeal joint of fourth toe"
+      }
+    },
+    {
+      "value": "Proximal interphalangeal joint of index finger",
+      "write": {
+        "value_source_value": "Proximal interphalangeal joint of index finger"
+      }
+    },
+    {
+      "value": "Proximal interphalangeal joint of left fourth toe",
+      "write": {
+        "value_source_value": "Proximal interphalangeal joint of left fourth toe"
+      }
+    },
+    {
+      "value": "Proximal interphalangeal joint of left index finger",
+      "write": {
+        "value_source_value": "Proximal interphalangeal joint of left index finger"
+      }
+    },
+    {
+      "value": "Proximal interphalangeal joint of left little finger",
+      "write": {
+        "value_source_value": "Proximal interphalangeal joint of left little finger"
+      }
+    },
+    {
+      "value": "Proximal interphalangeal joint of left little toe",
+      "write": {
+        "value_source_value": "Proximal interphalangeal joint of left little toe"
+      }
+    },
+    {
+      "value": "Proximal interphalangeal joint of left middle finger",
+      "write": {
+        "value_source_value": "Proximal interphalangeal joint of left middle finger"
+      }
+    },
+    {
+      "value": "Proximal interphalangeal joint of left ring finger",
+      "write": {
+        "value_source_value": "Proximal interphalangeal joint of left ring finger"
+      }
+    },
+    {
+      "value": "Proximal interphalangeal joint of left second toe",
+      "write": {
+        "value_source_value": "Proximal interphalangeal joint of left second toe"
+      }
+    },
+    {
+      "value": "Proximal interphalangeal joint of left third toe",
+      "write": {
+        "value_source_value": "Proximal interphalangeal joint of left third toe"
+      }
+    },
+    {
+      "value": "Proximal interphalangeal joint of lesser toe",
+      "write": {
+        "value_source_value": "Proximal interphalangeal joint of lesser toe"
+      }
+    },
+    {
+      "value": "Proximal interphalangeal joint of little finger",
+      "write": {
+        "value_source_value": "Proximal interphalangeal joint of little finger"
+      }
+    },
+    {
+      "value": "Proximal interphalangeal joint of little toe",
+      "write": {
+        "value_source_value": "Proximal interphalangeal joint of little toe"
+      }
+    },
+    {
+      "value": "Proximal interphalangeal joint of middle finger",
+      "write": {
+        "value_source_value": "Proximal interphalangeal joint of middle finger"
+      }
+    },
+    {
+      "value": "Proximal interphalangeal joint of right fourth toe",
+      "write": {
+        "value_source_value": "Proximal interphalangeal joint of right fourth toe"
+      }
+    },
+    {
+      "value": "Proximal interphalangeal joint of right index finger",
+      "write": {
+        "value_source_value": "Proximal interphalangeal joint of right index finger"
+      }
+    },
+    {
+      "value": "Proximal interphalangeal joint of right little finger",
+      "write": {
+        "value_source_value": "Proximal interphalangeal joint of right little finger"
+      }
+    },
+    {
+      "value": "Proximal interphalangeal joint of right little toe",
+      "write": {
+        "value_source_value": "Proximal interphalangeal joint of right little toe"
+      }
+    },
+    {
+      "value": "Proximal interphalangeal joint of right middle finger",
+      "write": {
+        "value_source_value": "Proximal interphalangeal joint of right middle finger"
+      }
+    },
+    {
+      "value": "Proximal interphalangeal joint of right ring finger",
+      "write": {
+        "value_source_value": "Proximal interphalangeal joint of right ring finger"
+      }
+    },
+    {
+      "value": "Proximal interphalangeal joint of right second toe",
+      "write": {
+        "value_source_value": "Proximal interphalangeal joint of right second toe"
+      }
+    },
+    {
+      "value": "Proximal interphalangeal joint of right third toe",
+      "write": {
+        "value_source_value": "Proximal interphalangeal joint of right third toe"
+      }
+    },
+    {
+      "value": "Proximal interphalangeal joint of ring finger",
+      "write": {
+        "value_source_value": "Proximal interphalangeal joint of ring finger"
+      }
+    },
+    {
+      "value": "Proximal interphalangeal joint of second toe",
+      "write": {
+        "value_source_value": "Proximal interphalangeal joint of second toe"
+      }
+    },
+    {
+      "value": "Proximal interphalangeal joint of third toe",
+      "write": {
+        "value_source_value": "Proximal interphalangeal joint of third toe"
+      }
+    },
+    {
+      "value": "Proximal interphalangeal joint of toe",
+      "write": {
+        "value_source_value": "Proximal interphalangeal joint of toe"
+      }
+    },
+    {
+      "value": "Proximal radio-ulnar joint",
+      "write": {
+        "value_source_value": "Proximal radio-ulnar joint"
+      }
+    },
+    {
+      "value": "Proximal segment of left wrist",
+      "write": {
+        "value_source_value": "Proximal segment of left wrist"
+      }
+    },
+    {
+      "value": "Proximal segment of right wrist",
+      "write": {
+        "value_source_value": "Proximal segment of right wrist"
+      }
+    },
+    {
+      "value": "Proximal segment of wrist",
+      "write": {
+        "value_source_value": "Proximal segment of wrist"
+      }
+    },
+    {
+      "value": "Quadrant of buttock",
+      "write": {
+        "value_source_value": "Quadrant of buttock"
+      }
+    },
+    {
+      "value": "Radio-ulnar joint",
+      "write": {
+        "value_source_value": "Radio-ulnar joint"
+      }
+    },
+    {
+      "value": "Radiocarpal joint",
+      "write": {
+        "value_source_value": "Radiocarpal joint"
+      }
+    },
+    {
+      "value": "Region of ankle",
+      "write": {
+        "value_source_value": "Region of ankle"
+      }
+    },
+    {
+      "value": "Region of anterior part of elbow",
+      "write": {
+        "value_source_value": "Region of anterior part of elbow"
+      }
+    },
+    {
+      "value": "Region of buttock",
+      "write": {
+        "value_source_value": "Region of buttock"
+      }
+    },
+    {
+      "value": "Region of elbow",
+      "write": {
+        "value_source_value": "Region of elbow"
+      }
+    },
+    {
+      "value": "Region of knee",
+      "write": {
+        "value_source_value": "Region of knee"
+      }
+    },
+    {
+      "value": "Region of labial part of mouth",
+      "write": {
+        "value_source_value": "Region of labial part of mouth"
+      }
+    },
+    {
+      "value": "Region of lower lip",
+      "write": {
+        "value_source_value": "Region of lower lip"
+      }
+    },
+    {
+      "value": "Region of lower lip proper",
+      "write": {
+        "value_source_value": "Region of lower lip proper"
+      }
+    },
+    {
+      "value": "Region of philtrum",
+      "write": {
+        "value_source_value": "Region of philtrum"
+      }
+    },
+    {
+      "value": "Region of posterior part of elbow",
+      "write": {
+        "value_source_value": "Region of posterior part of elbow"
+      }
+    },
+    {
+      "value": "Region of upper lip",
+      "write": {
+        "value_source_value": "Region of upper lip"
+      }
+    },
+    {
+      "value": "Region of upper lip proper",
+      "write": {
+        "value_source_value": "Region of upper lip proper"
+      }
+    },
+    {
+      "value": "Region of vermilion",
+      "write": {
+        "value_source_value": "Region of vermilion"
+      }
+    },
+    {
+      "value": "Renal region of back",
+      "write": {
+        "value_source_value": "Renal region of back"
+      }
+    },
+    {
+      "value": "Retro-auricular part of head",
+      "write": {
+        "value_source_value": "Retro-auricular part of head"
+      }
+    },
+    {
+      "value": "Right acromioclavicular joint",
+      "write": {
+        "value_source_value": "Right acromioclavicular joint"
+      }
+    },
+    {
+      "value": "Right ala of nose",
+      "write": {
+        "value_source_value": "Right ala of nose"
+      }
+    },
+    {
+      "value": "Right angle of mouth",
+      "write": {
+        "value_source_value": "Right angle of mouth"
+      }
+    },
+    {
+      "value": "Right ankle",
+      "write": {
+        "value_source_value": "Right ankle"
+      }
+    },
+    {
+      "value": "Right ankle joint",
+      "write": {
+        "value_source_value": "Right ankle joint"
+      }
+    },
+    {
+      "value": "Right antihelix",
+      "write": {
+        "value_source_value": "Right antihelix"
+      }
+    },
+    {
+      "value": "Right antitragus",
+      "write": {
+        "value_source_value": "Right antitragus"
+      }
+    },
+    {
+      "value": "Right auricular part of head",
+      "write": {
+        "value_source_value": "Right auricular part of head"
+      }
+    },
+    {
+      "value": "Right auriculotemporal part of head",
+      "write": {
+        "value_source_value": "Right auriculotemporal part of head"
+      }
+    },
+    {
+      "value": "Right axilla",
+      "write": {
+        "value_source_value": "Right axilla"
+      }
+    },
+    {
+      "value": "Right axilla proper",
+      "write": {
+        "value_source_value": "Right axilla proper"
+      }
+    },
+    {
+      "value": "Right buttock",
+      "write": {
+        "value_source_value": "Right buttock"
+      }
+    },
+    {
+      "value": "Right calcaneocuboid joint",
+      "write": {
+        "value_source_value": "Right calcaneocuboid joint"
+      }
+    },
+    {
+      "value": "Right cheek",
+      "write": {
+        "value_source_value": "Right cheek"
+      }
+    },
+    {
+      "value": "Right cheek proper",
+      "write": {
+        "value_source_value": "Right cheek proper"
+      }
+    },
+    {
+      "value": "Right chirocarpal region",
+      "write": {
+        "value_source_value": "Right chirocarpal region"
+      }
+    },
+    {
+      "value": "Right cuboideonavicular joint",
+      "write": {
+        "value_source_value": "Right cuboideonavicular joint"
+      }
+    },
+    {
+      "value": "Right cuneocuboid joint",
+      "write": {
+        "value_source_value": "Right cuneocuboid joint"
+      }
+    },
+    {
+      "value": "Right cuneonavicular joint",
+      "write": {
+        "value_source_value": "Right cuneonavicular joint"
+      }
+    },
+    {
+      "value": "Right distal radio-ulnar joint",
+      "write": {
+        "value_source_value": "Right distal radio-ulnar joint"
+      }
+    },
+    {
+      "value": "Right ear",
+      "write": {
+        "value_source_value": "Right ear"
+      }
+    },
+    {
+      "value": "Right elbow",
+      "write": {
+        "value_source_value": "Right elbow"
+      }
+    },
+    {
+      "value": "Right elbow joint",
+      "write": {
+        "value_source_value": "Right elbow joint"
+      }
+    },
+    {
+      "value": "Right external acoustic tube",
+      "write": {
+        "value_source_value": "Right external acoustic tube"
+      }
+    },
+    {
+      "value": "Right external ear",
+      "write": {
+        "value_source_value": "Right external ear"
+      }
+    },
+    {
+      "value": "Right eye",
+      "write": {
+        "value_source_value": "Right eye"
+      }
+    },
+    {
+      "value": "Right fifth carpometacarpal joint",
+      "write": {
+        "value_source_value": "Right fifth carpometacarpal joint"
+      }
+    },
+    {
+      "value": "Right fifth tarsometatarsal joint",
+      "write": {
+        "value_source_value": "Right fifth tarsometatarsal joint"
+      }
+    },
+    {
+      "value": "Right first intermetatarsal joint",
+      "write": {
+        "value_source_value": "Right first intermetatarsal joint"
+      }
+    },
+    {
+      "value": "Right first tarsometatarsal joint",
+      "write": {
+        "value_source_value": "Right first tarsometatarsal joint"
+      }
+    },
+    {
+      "value": "Right fourth carpometacarpal joint",
+      "write": {
+        "value_source_value": "Right fourth carpometacarpal joint"
+      }
+    },
+    {
+      "value": "Right fourth intermetatarsal joint",
+      "write": {
+        "value_source_value": "Right fourth intermetatarsal joint"
+      }
+    },
+    {
+      "value": "Right fourth tarsometatarsal joint",
+      "write": {
+        "value_source_value": "Right fourth tarsometatarsal joint"
+      }
+    },
+    {
+      "value": "Right free lower limb",
+      "write": {
+        "value_source_value": "Right free lower limb"
+      }
+    },
+    {
+      "value": "Right free upper limb",
+      "write": {
+        "value_source_value": "Right free upper limb"
+      }
+    },
+    {
+      "value": "Right glenohumeral joint",
+      "write": {
+        "value_source_value": "Right glenohumeral joint"
+      }
+    },
+    {
+      "value": "Right half of front of neck",
+      "write": {
+        "value_source_value": "Right half of front of neck"
+      }
+    },
+    {
+      "value": "Right half of inferior part of back of neck",
+      "write": {
+        "value_source_value": "Right half of inferior part of back of neck"
+      }
+    },
+    {
+      "value": "Right helix",
+      "write": {
+        "value_source_value": "Right helix"
+      }
+    },
+    {
+      "value": "Right hip",
+      "write": {
+        "value_source_value": "Right hip"
+      }
+    },
+    {
+      "value": "Right hip joint",
+      "write": {
+        "value_source_value": "Right hip joint"
+      }
+    },
+    {
+      "value": "Right humeroradial joint",
+      "write": {
+        "value_source_value": "Right humeroradial joint"
+      }
+    },
+    {
+      "value": "Right humeroulnar joint",
+      "write": {
+        "value_source_value": "Right humeroulnar joint"
+      }
+    },
+    {
+      "value": "Right infrascapular part of back",
+      "write": {
+        "value_source_value": "Right infrascapular part of back"
+      }
+    },
+    {
+      "value": "Right intercuneiform joint",
+      "write": {
+        "value_source_value": "Right intercuneiform joint"
+      }
+    },
+    {
+      "value": "Right intertarsal joint",
+      "write": {
+        "value_source_value": "Right intertarsal joint"
+      }
+    },
+    {
+      "value": "Right knee",
+      "write": {
+        "value_source_value": "Right knee"
+      }
+    },
+    {
+      "value": "Right knee joint",
+      "write": {
+        "value_source_value": "Right knee joint"
+      }
+    },
+    {
+      "value": "Right lateral crest of philtrum",
+      "write": {
+        "value_source_value": "Right lateral crest of philtrum"
+      }
+    },
+    {
+      "value": "Right lateral half of external nose",
+      "write": {
+        "value_source_value": "Right lateral half of external nose"
+      }
+    },
+    {
+      "value": "Right lateral half of face",
+      "write": {
+        "value_source_value": "Right lateral half of face"
+      }
+    },
+    {
+      "value": "Right lateral half of nose",
+      "write": {
+        "value_source_value": "Right lateral half of nose"
+      }
+    },
+    {
+      "value": "Right lateral half of trunk",
+      "write": {
+        "value_source_value": "Right lateral half of trunk"
+      }
+    },
+    {
+      "value": "Right lateral part of neck",
+      "write": {
+        "value_source_value": "Right lateral part of neck"
+      }
+    },
+    {
+      "value": "Right lateral retromalleolar region",
+      "write": {
+        "value_source_value": "Right lateral retromalleolar region"
+      }
+    },
+    {
+      "value": "Right lateral-intermediate intercuneiform joint",
+      "write": {
+        "value_source_value": "Right lateral-intermediate intercuneiform joint"
+      }
+    },
+    {
+      "value": "Right lower eyelid",
+      "write": {
+        "value_source_value": "Right lower eyelid"
+      }
+    },
+    {
+      "value": "Right mandibular part proper of mouth",
+      "write": {
+        "value_source_value": "Right mandibular part proper of mouth"
+      }
+    },
+    {
+      "value": "Right mastoid part of head",
+      "write": {
+        "value_source_value": "Right mastoid part of head"
+      }
+    },
+    {
+      "value": "Right medial retromalleolar region",
+      "write": {
+        "value_source_value": "Right medial retromalleolar region"
+      }
+    },
+    {
+      "value": "Right medial-intermediate intercuneiform joint",
+      "write": {
+        "value_source_value": "Right medial-intermediate intercuneiform joint"
+      }
+    },
+    {
+      "value": "Right midcarpal joint",
+      "write": {
+        "value_source_value": "Right midcarpal joint"
+      }
+    },
+    {
+      "value": "Right nasal sill",
+      "write": {
+        "value_source_value": "Right nasal sill"
+      }
+    },
+    {
+      "value": "Right olecranon region",
+      "write": {
+        "value_source_value": "Right olecranon region"
+      }
+    },
+    {
+      "value": "Right paravertebral region of back of neck",
+      "write": {
+        "value_source_value": "Right paravertebral region of back of neck"
+      }
+    },
+    {
+      "value": "Right parietal part of head",
+      "write": {
+        "value_source_value": "Right parietal part of head"
+      }
+    },
+    {
+      "value": "Right parietal wall of head proper",
+      "write": {
+        "value_source_value": "Right parietal wall of head proper"
+      }
+    },
+    {
+      "value": "Right patellofemoral joint",
+      "write": {
+        "value_source_value": "Right patellofemoral joint"
+      }
+    },
+    {
+      "value": "Right peri-orbital region of face",
+      "write": {
+        "value_source_value": "Right peri-orbital region of face"
+      }
+    },
+    {
+      "value": "Right pinna",
+      "write": {
+        "value_source_value": "Right pinna"
+      }
+    },
+    {
+      "value": "Right pisiform joint",
+      "write": {
+        "value_source_value": "Right pisiform joint"
+      }
+    },
+    {
+      "value": "Right pisotriquetral joint",
+      "write": {
+        "value_source_value": "Right pisotriquetral joint"
+      }
+    },
+    {
+      "value": "Right proximal radio-ulnar joint",
+      "write": {
+        "value_source_value": "Right proximal radio-ulnar joint"
+      }
+    },
+    {
+      "value": "Right retro-auricular part of head",
+      "write": {
+        "value_source_value": "Right retro-auricular part of head"
+      }
+    },
+    {
+      "value": "Right sacroiliac joint",
+      "write": {
+        "value_source_value": "Right sacroiliac joint"
+      }
+    },
+    {
+      "value": "Right scapular part of back",
+      "write": {
+        "value_source_value": "Right scapular part of back"
+      }
+    },
+    {
+      "value": "Right second carpometacarpal joint",
+      "write": {
+        "value_source_value": "Right second carpometacarpal joint"
+      }
+    },
+    {
+      "value": "Right second intermetatarsal joint",
+      "write": {
+        "value_source_value": "Right second intermetatarsal joint"
+      }
+    },
+    {
+      "value": "Right second tarsometatarsal joint",
+      "write": {
+        "value_source_value": "Right second tarsometatarsal joint"
+      }
+    },
+    {
+      "value": "Right shoulder",
+      "write": {
+        "value_source_value": "Right shoulder"
+      }
+    },
+    {
+      "value": "Right side of chin",
+      "write": {
+        "value_source_value": "Right side of chin"
+      }
+    },
+    {
+      "value": "Right side of head",
+      "write": {
+        "value_source_value": "Right side of head"
+      }
+    },
+    {
+      "value": "Right side of lower lip",
+      "write": {
+        "value_source_value": "Right side of lower lip"
+      }
+    },
+    {
+      "value": "Right side of lower lip proper",
+      "write": {
+        "value_source_value": "Right side of lower lip proper"
+      }
+    },
+    {
+      "value": "Right side of maxillary alveolodental arch",
+      "write": {
+        "value_source_value": "Right side of maxillary alveolodental arch"
+      }
+    },
+    {
+      "value": "Right side of upper lip",
+      "write": {
+        "value_source_value": "Right side of upper lip"
+      }
+    },
+    {
+      "value": "Right side of upper lip proper",
+      "write": {
+        "value_source_value": "Right side of upper lip proper"
+      }
+    },
+    {
+      "value": "Right sternoclavicular joint",
+      "write": {
+        "value_source_value": "Right sternoclavicular joint"
+      }
+    },
+    {
+      "value": "Right supra-auricular part of head",
+      "write": {
+        "value_source_value": "Right supra-auricular part of head"
+      }
+    },
+    {
+      "value": "Right supratragic tubercle",
+      "write": {
+        "value_source_value": "Right supratragic tubercle"
+      }
+    },
+    {
+      "value": "Right talocalcaneal joint",
+      "write": {
+        "value_source_value": "Right talocalcaneal joint"
+      }
+    },
+    {
+      "value": "Right talocalcaneonavicular joint",
+      "write": {
+        "value_source_value": "Right talocalcaneonavicular joint"
+      }
+    },
+    {
+      "value": "Right tarsometatarsal joint",
+      "write": {
+        "value_source_value": "Right tarsometatarsal joint"
+      }
+    },
+    {
+      "value": "Right temple",
+      "write": {
+        "value_source_value": "Right temple"
+      }
+    },
+    {
+      "value": "Right temporal part of head",
+      "write": {
+        "value_source_value": "Right temporal part of head"
+      }
+    },
+    {
+      "value": "Right temporal part proper of head",
+      "write": {
+        "value_source_value": "Right temporal part proper of head"
+      }
+    },
+    {
+      "value": "Right third carpometacarpal joint",
+      "write": {
+        "value_source_value": "Right third carpometacarpal joint"
+      }
+    },
+    {
+      "value": "Right third intermetatarsal joint",
+      "write": {
+        "value_source_value": "Right third intermetatarsal joint"
+      }
+    },
+    {
+      "value": "Right third tarsometatarsal joint",
+      "write": {
+        "value_source_value": "Right third tarsometatarsal joint"
+      }
+    },
+    {
+      "value": "Right tibiofemoral joint",
+      "write": {
+        "value_source_value": "Right tibiofemoral joint"
+      }
+    },
+    {
+      "value": "Right tragus",
+      "write": {
+        "value_source_value": "Right tragus"
+      }
+    },
+    {
+      "value": "Right transverse tarsal joint",
+      "write": {
+        "value_source_value": "Right transverse tarsal joint"
+      }
+    },
+    {
+      "value": "Right upper eyelid",
+      "write": {
+        "value_source_value": "Right upper eyelid"
+      }
+    },
+    {
+      "value": "Right wrist",
+      "write": {
+        "value_source_value": "Right wrist"
+      }
+    },
+    {
+      "value": "Right wrist joint",
+      "write": {
+        "value_source_value": "Right wrist joint"
+      }
+    },
+    {
+      "value": "Rim of helix",
+      "write": {
+        "value_source_value": "Rim of helix"
+      }
+    },
+    {
+      "value": "Root of nose",
+      "write": {
+        "value_source_value": "Root of nose"
+      }
+    },
+    {
+      "value": "Sacro-iliac joint",
+      "write": {
+        "value_source_value": "Sacro-iliac joint"
+      }
+    },
+    {
+      "value": "Sacro-iliac region",
+      "write": {
+        "value_source_value": "Sacro-iliac region"
+      }
+    },
+    {
+      "value": "Sacrococcygeal region of back",
+      "write": {
+        "value_source_value": "Sacrococcygeal region of back"
+      }
+    },
+    {
+      "value": "Scapho-lunate joint",
+      "write": {
+        "value_source_value": "Scapho-lunate joint"
+      }
+    },
+    {
+      "value": "Scapho-trapezial joint",
+      "write": {
+        "value_source_value": "Scapho-trapezial joint"
+      }
+    },
+    {
+      "value": "Scapular part of back",
+      "write": {
+        "value_source_value": "Scapular part of back"
+      }
+    },
+    {
+      "value": "Scapular part of left shoulder",
+      "write": {
+        "value_source_value": "Scapular part of left shoulder"
+      }
+    },
+    {
+      "value": "Scapular part of right shoulder",
+      "write": {
+        "value_source_value": "Scapular part of right shoulder"
+      }
+    },
+    {
+      "value": "Scapular region of shoulder",
+      "write": {
+        "value_source_value": "Scapular region of shoulder"
+      }
+    },
+    {
+      "value": "Second carpometacarpal joint",
+      "write": {
+        "value_source_value": "Second carpometacarpal joint"
+      }
+    },
+    {
+      "value": "Second intermetatarsal joint",
+      "write": {
+        "value_source_value": "Second intermetatarsal joint"
+      }
+    },
+    {
+      "value": "Second tarsometatarsal joint",
+      "write": {
+        "value_source_value": "Second tarsometatarsal joint"
+      }
+    },
+    {
+      "value": "Segment of wrist",
+      "write": {
+        "value_source_value": "Segment of wrist"
+      }
+    },
+    {
+      "value": "Shoulder",
+      "write": {
+        "value_source_value": "Shoulder"
+      }
+    },
+    {
+      "value": "Side of face",
+      "write": {
+        "value_source_value": "Side of face"
+      }
+    },
+    {
+      "value": "Spine of helical part of left pinna",
+      "write": {
+        "value_source_value": "Spine of helical part of left pinna"
+      }
+    },
+    {
+      "value": "Spine of helix",
+      "write": {
+        "value_source_value": "Spine of helix"
+      }
+    },
+    {
+      "value": "Spine of right helix",
+      "write": {
+        "value_source_value": "Spine of right helix"
+      }
+    },
+    {
+      "value": "Sternoclavicular joint",
+      "write": {
+        "value_source_value": "Sternoclavicular joint"
+      }
+    },
+    {
+      "value": "Subdivision of anterior part of knee",
+      "write": {
+        "value_source_value": "Subdivision of anterior part of knee"
+      }
+    },
+    {
+      "value": "Subdivision of auriculotemporal part of head",
+      "write": {
+        "value_source_value": "Subdivision of auriculotemporal part of head"
+      }
+    },
+    {
+      "value": "Subdivision of axilla",
+      "write": {
+        "value_source_value": "Subdivision of axilla"
+      }
+    },
+    {
+      "value": "Subdivision of back",
+      "write": {
+        "value_source_value": "Subdivision of back"
+      }
+    },
+    {
+      "value": "Subdivision of back of neck",
+      "write": {
+        "value_source_value": "Subdivision of back of neck"
+      }
+    },
+    {
+      "value": "Subdivision of back of thorax",
+      "write": {
+        "value_source_value": "Subdivision of back of thorax"
+      }
+    },
+    {
+      "value": "Subdivision of body proper",
+      "write": {
+        "value_source_value": "Subdivision of body proper"
+      }
+    },
+    {
+      "value": "Subdivision of body wall",
+      "write": {
+        "value_source_value": "Subdivision of body wall"
+      }
+    },
+    {
+      "value": "Subdivision of cardinal body part",
+      "write": {
+        "value_source_value": "Subdivision of cardinal body part"
+      }
+    },
+    {
+      "value": "Subdivision of cheek",
+      "write": {
+        "value_source_value": "Subdivision of cheek"
+      }
+    },
+    {
+      "value": "Subdivision of conchal part of pinna",
+      "write": {
+        "value_source_value": "Subdivision of conchal part of pinna"
+      }
+    },
+    {
+      "value": "Subdivision of external acoustic tube",
+      "write": {
+        "value_source_value": "Subdivision of external acoustic tube"
+      }
+    },
+    {
+      "value": "Subdivision of external ear",
+      "write": {
+        "value_source_value": "Subdivision of external ear"
+      }
+    },
+    {
+      "value": "Subdivision of external nose",
+      "write": {
+        "value_source_value": "Subdivision of external nose"
+      }
+    },
+    {
+      "value": "Subdivision of face",
+      "write": {
+        "value_source_value": "Subdivision of face"
+      }
+    },
+    {
+      "value": "Subdivision of front of neck",
+      "write": {
+        "value_source_value": "Subdivision of front of neck"
+      }
+    },
+    {
+      "value": "Subdivision of front of trunk",
+      "write": {
+        "value_source_value": "Subdivision of front of trunk"
+      }
+    },
+    {
+      "value": "Subdivision of frontal part of head",
+      "write": {
+        "value_source_value": "Subdivision of frontal part of head"
+      }
+    },
+    {
+      "value": "Subdivision of head",
+      "write": {
+        "value_source_value": "Subdivision of head"
+      }
+    },
+    {
+      "value": "Subdivision of head proper",
+      "write": {
+        "value_source_value": "Subdivision of head proper"
+      }
+    },
+    {
+      "value": "Subdivision of helix",
+      "write": {
+        "value_source_value": "Subdivision of helix"
+      }
+    },
+    {
+      "value": "Subdivision of hip",
+      "write": {
+        "value_source_value": "Subdivision of hip"
+      }
+    },
+    {
+      "value": "Subdivision of mouth",
+      "write": {
+        "value_source_value": "Subdivision of mouth"
+      }
+    },
+    {
+      "value": "Subdivision of neck",
+      "write": {
+        "value_source_value": "Subdivision of neck"
+      }
+    },
+    {
+      "value": "Subdivision of pinna",
+      "write": {
+        "value_source_value": "Subdivision of pinna"
+      }
+    },
+    {
+      "value": "Subdivision of shoulder",
+      "write": {
+        "value_source_value": "Subdivision of shoulder"
+      }
+    },
+    {
+      "value": "Subdivision of temporal part of head",
+      "write": {
+        "value_source_value": "Subdivision of temporal part of head"
+      }
+    },
+    {
+      "value": "Subdivision of trunk",
+      "write": {
+        "value_source_value": "Subdivision of trunk"
+      }
+    },
+    {
+      "value": "Subdivision of trunk proper",
+      "write": {
+        "value_source_value": "Subdivision of trunk proper"
+      }
+    },
+    {
+      "value": "Subdivision of wall of head proper",
+      "write": {
+        "value_source_value": "Subdivision of wall of head proper"
+      }
+    },
+    {
+      "value": "Superior part of back of neck",
+      "write": {
+        "value_source_value": "Superior part of back of neck"
+      }
+    },
+    {
+      "value": "Superolateral region of buttock",
+      "write": {
+        "value_source_value": "Superolateral region of buttock"
+      }
+    },
+    {
+      "value": "Superolateral region of left buttock",
+      "write": {
+        "value_source_value": "Superolateral region of left buttock"
+      }
+    },
+    {
+      "value": "Superolateral region of right buttock",
+      "write": {
+        "value_source_value": "Superolateral region of right buttock"
+      }
+    },
+    {
+      "value": "Superomedial region of buttock",
+      "write": {
+        "value_source_value": "Superomedial region of buttock"
+      }
+    },
+    {
+      "value": "Superomedial region of left buttock",
+      "write": {
+        "value_source_value": "Superomedial region of left buttock"
+      }
+    },
+    {
+      "value": "Superomedial region of right buttock",
+      "write": {
+        "value_source_value": "Superomedial region of right buttock"
+      }
+    },
+    {
+      "value": "Supra-auricular part of head",
+      "write": {
+        "value_source_value": "Supra-auricular part of head"
+      }
+    },
+    {
+      "value": "Supraclavicular part of neck",
+      "write": {
+        "value_source_value": "Supraclavicular part of neck"
+      }
+    },
+    {
+      "value": "Suprasternal notch region of neck",
+      "write": {
+        "value_source_value": "Suprasternal notch region of neck"
+      }
+    },
+    {
+      "value": "Supratragic tubercle",
+      "write": {
+        "value_source_value": "Supratragic tubercle"
+      }
+    },
+    {
+      "value": "Synovial joint of finger",
+      "write": {
+        "value_source_value": "Synovial joint of finger"
+      }
+    },
+    {
+      "value": "Synovial joint of foot",
+      "write": {
+        "value_source_value": "Synovial joint of foot"
+      }
+    },
+    {
+      "value": "Synovial joint of free lower limb segment",
+      "write": {
+        "value_source_value": "Synovial joint of free lower limb segment"
+      }
+    },
+    {
+      "value": "Synovial joint of free upper limb segment",
+      "write": {
+        "value_source_value": "Synovial joint of free upper limb segment"
+      }
+    },
+    {
+      "value": "Synovial joint of hand",
+      "write": {
+        "value_source_value": "Synovial joint of hand"
+      }
+    },
+    {
+      "value": "Synovial joint of index finger",
+      "write": {
+        "value_source_value": "Synovial joint of index finger"
+      }
+    },
+    {
+      "value": "Synovial joint of little finger",
+      "write": {
+        "value_source_value": "Synovial joint of little finger"
+      }
+    },
+    {
+      "value": "Synovial joint of middle finger",
+      "write": {
+        "value_source_value": "Synovial joint of middle finger"
+      }
+    },
+    {
+      "value": "Synovial joint of ring finger",
+      "write": {
+        "value_source_value": "Synovial joint of ring finger"
+      }
+    },
+    {
+      "value": "Synovial joint of thumb",
+      "write": {
+        "value_source_value": "Synovial joint of thumb"
+      }
+    },
+    {
+      "value": "Tail of helix",
+      "write": {
+        "value_source_value": "Tail of helix"
+      }
+    },
+    {
+      "value": "Tail of left helix",
+      "write": {
+        "value_source_value": "Tail of left helix"
+      }
+    },
+    {
+      "value": "Tail of right helix",
+      "write": {
+        "value_source_value": "Tail of right helix"
+      }
+    },
+    {
+      "value": "Talocalcaneal joint",
+      "write": {
+        "value_source_value": "Talocalcaneal joint"
+      }
+    },
+    {
+      "value": "Talocalcaneonavicular joint",
+      "write": {
+        "value_source_value": "Talocalcaneonavicular joint"
+      }
+    },
+    {
+      "value": "Tarsometatarsal joint",
+      "write": {
+        "value_source_value": "Tarsometatarsal joint"
+      }
+    },
+    {
+      "value": "Temple",
+      "write": {
+        "value_source_value": "Temple"
+      }
+    },
+    {
+      "value": "Temple region of left temporal part of head",
+      "write": {
+        "value_source_value": "Temple region of left temporal part of head"
+      }
+    },
+    {
+      "value": "Temple region of right temporal part of head",
+      "write": {
+        "value_source_value": "Temple region of right temporal part of head"
+      }
+    },
+    {
+      "value": "Temple region of temporal part of head",
+      "write": {
+        "value_source_value": "Temple region of temporal part of head"
+      }
+    },
+    {
+      "value": "Temporal part of head",
+      "write": {
+        "value_source_value": "Temporal part of head"
+      }
+    },
+    {
+      "value": "Temporal part proper of head",
+      "write": {
+        "value_source_value": "Temporal part proper of head"
+      }
+    },
+    {
+      "value": "Third carpometacarpal joint",
+      "write": {
+        "value_source_value": "Third carpometacarpal joint"
+      }
+    },
+    {
+      "value": "Third intermetatarsal joint",
+      "write": {
+        "value_source_value": "Third intermetatarsal joint"
+      }
+    },
+    {
+      "value": "Third tarsometatarsal joint",
+      "write": {
+        "value_source_value": "Third tarsometatarsal joint"
+      }
+    },
+    {
+      "value": "Thoracic segment of body wall",
+      "write": {
+        "value_source_value": "Thoracic segment of body wall"
+      }
+    },
+    {
+      "value": "Thoracic segment of trunk",
+      "write": {
+        "value_source_value": "Thoracic segment of trunk"
+      }
+    },
+    {
+      "value": "Thoracolumbar part of back",
+      "write": {
+        "value_source_value": "Thoracolumbar part of back"
+      }
+    },
+    {
+      "value": "Throat",
+      "write": {
+        "value_source_value": "Throat"
+      }
+    },
+    {
+      "value": "Tibiofemoral joint",
+      "write": {
+        "value_source_value": "Tibiofemoral joint"
+      }
+    },
+    {
+      "value": "Tip of nose",
+      "write": {
+        "value_source_value": "Tip of nose"
+      }
+    },
+    {
+      "value": "Tragus",
+      "write": {
+        "value_source_value": "Tragus"
+      }
+    },
+    {
+      "value": "Transverse tarsal joint",
+      "write": {
+        "value_source_value": "Transverse tarsal joint"
+      }
+    },
+    {
+      "value": "Triangular fossa of antihelix",
+      "write": {
+        "value_source_value": "Triangular fossa of antihelix"
+      }
+    },
+    {
+      "value": "Triangular fossa of left antihelix",
+      "write": {
+        "value_source_value": "Triangular fossa of left antihelix"
+      }
+    },
+    {
+      "value": "Triangular fossa of right antihelix",
+      "write": {
+        "value_source_value": "Triangular fossa of right antihelix"
+      }
+    },
+    {
+      "value": "Trunk",
+      "write": {
+        "value_source_value": "Trunk"
+      }
+    },
+    {
+      "value": "Trunk proper",
+      "write": {
+        "value_source_value": "Trunk proper"
+      }
+    },
+    {
+      "value": "Tubercle of left pinna",
+      "write": {
+        "value_source_value": "Tubercle of left pinna"
+      }
+    },
+    {
+      "value": "Tubercle of pinna",
+      "write": {
+        "value_source_value": "Tubercle of pinna"
+      }
+    },
+    {
+      "value": "Tubercle of right pinna",
+      "write": {
+        "value_source_value": "Tubercle of right pinna"
+      }
+    },
+    {
+      "value": "Tubercle of upper lip",
+      "write": {
+        "value_source_value": "Tubercle of upper lip"
+      }
+    },
+    {
+      "value": "Upper eyelid",
+      "write": {
+        "value_source_value": "Upper eyelid"
+      }
+    },
+    {
+      "value": "Upper lip",
+      "write": {
+        "value_source_value": "Upper lip"
+      }
+    },
+    {
+      "value": "Upper lip proper",
+      "write": {
+        "value_source_value": "Upper lip proper"
+      }
+    },
+    {
+      "value": "Upper part of back of thorax",
+      "write": {
+        "value_source_value": "Upper part of back of thorax"
+      }
+    },
+    {
+      "value": "Vermilion",
+      "write": {
+        "value_source_value": "Vermilion"
+      }
+    },
+    {
+      "value": "Vermilion border region",
+      "write": {
+        "value_source_value": "Vermilion border region"
+      }
+    },
+    {
+      "value": "Vermilion border region of left side of upper lip",
+      "write": {
+        "value_source_value": "Vermilion border region of left side of upper lip"
+      }
+    },
+    {
+      "value": "Vermilion border region of lower lip",
+      "write": {
+        "value_source_value": "Vermilion border region of lower lip"
+      }
+    },
+    {
+      "value": "Vermilion border region of philtrum",
+      "write": {
+        "value_source_value": "Vermilion border region of philtrum"
+      }
+    },
+    {
+      "value": "Vermilion border region of right side of upper lip",
+      "write": {
+        "value_source_value": "Vermilion border region of right side of upper lip"
+      }
+    },
+    {
+      "value": "Vermilion border region of upper lip",
+      "write": {
+        "value_source_value": "Vermilion border region of upper lip"
+      }
+    },
+    {
+      "value": "Vermilion complex",
+      "write": {
+        "value_source_value": "Vermilion complex"
+      }
+    },
+    {
+      "value": "Vermilion of left side of upper lip",
+      "write": {
+        "value_source_value": "Vermilion of left side of upper lip"
+      }
+    },
+    {
+      "value": "Vermilion of lower lip",
+      "write": {
+        "value_source_value": "Vermilion of lower lip"
+      }
+    },
+    {
+      "value": "Vermilion of philtrum",
+      "write": {
+        "value_source_value": "Vermilion of philtrum"
+      }
+    },
+    {
+      "value": "Vermilion of right side of upper lip",
+      "write": {
+        "value_source_value": "Vermilion of right side of upper lip"
+      }
+    },
+    {
+      "value": "Vermilion of upper lip",
+      "write": {
+        "value_source_value": "Vermilion of upper lip"
+      }
+    },
+    {
+      "value": "Vermilion proper",
+      "write": {
+        "value_source_value": "Vermilion proper"
+      }
+    },
+    {
+      "value": "Vermilion proper of left side of upper lip",
+      "write": {
+        "value_source_value": "Vermilion proper of left side of upper lip"
+      }
+    },
+    {
+      "value": "Vermilion proper of lower lip",
+      "write": {
+        "value_source_value": "Vermilion proper of lower lip"
+      }
+    },
+    {
+      "value": "Vermilion proper of philtrum",
+      "write": {
+        "value_source_value": "Vermilion proper of philtrum"
+      }
+    },
+    {
+      "value": "Vermilion proper of right side of upper lip",
+      "write": {
+        "value_source_value": "Vermilion proper of right side of upper lip"
+      }
+    },
+    {
+      "value": "Vermilion proper of upper lip",
+      "write": {
+        "value_source_value": "Vermilion proper of upper lip"
+      }
+    },
+    {
+      "value": "Vertebral part of back of abdomen",
+      "write": {
+        "value_source_value": "Vertebral part of back of abdomen"
+      }
+    },
+    {
+      "value": "Vertebral part of cervicothoracic region of back",
+      "write": {
+        "value_source_value": "Vertebral part of cervicothoracic region of back"
+      }
+    },
+    {
+      "value": "Vertebral part of lumbosacral region of back",
+      "write": {
+        "value_source_value": "Vertebral part of lumbosacral region of back"
+      }
+    },
+    {
+      "value": "Vertebral part of sacrococcygeal region of back",
+      "write": {
+        "value_source_value": "Vertebral part of sacrococcygeal region of back"
+      }
+    },
+    {
+      "value": "Vertebral part of thoracolumbar region of back",
+      "write": {
+        "value_source_value": "Vertebral part of thoracolumbar region of back"
+      }
+    },
+    {
+      "value": "Vertebral region of back",
+      "write": {
+        "value_source_value": "Vertebral region of back"
+      }
+    },
+    {
+      "value": "Vertebral region of back of neck",
+      "write": {
+        "value_source_value": "Vertebral region of back of neck"
+      }
+    },
+    {
+      "value": "Vestibular part of mouth",
+      "write": {
+        "value_source_value": "Vestibular part of mouth"
+      }
+    },
+    {
+      "value": "Waist",
+      "write": {
+        "value_source_value": "Waist"
+      }
+    },
+    {
+      "value": "Wall of abdominal segment of trunk",
+      "write": {
+        "value_source_value": "Wall of abdominal segment of trunk"
+      }
+    },
+    {
+      "value": "Wall of axilla",
+      "write": {
+        "value_source_value": "Wall of axilla"
+      }
+    },
+    {
+      "value": "Wall of external acoustic tube",
+      "write": {
+        "value_source_value": "Wall of external acoustic tube"
+      }
+    },
+    {
+      "value": "Wall of external part of external acoustic tube",
+      "write": {
+        "value_source_value": "Wall of external part of external acoustic tube"
+      }
+    },
+    {
+      "value": "Wall of external part of left external acoustic tube",
+      "write": {
+        "value_source_value": "Wall of external part of left external acoustic tube"
+      }
+    },
+    {
+      "value": "Wall of external part of right external acoustic tube",
+      "write": {
+        "value_source_value": "Wall of external part of right external acoustic tube"
+      }
+    },
+    {
+      "value": "Wall of head proper",
+      "write": {
+        "value_source_value": "Wall of head proper"
+      }
+    },
+    {
+      "value": "Wall of inner part of external acoustic tube",
+      "write": {
+        "value_source_value": "Wall of inner part of external acoustic tube"
+      }
+    },
+    {
+      "value": "Wall of inner part of left external acoustic tube",
+      "write": {
+        "value_source_value": "Wall of inner part of left external acoustic tube"
+      }
+    },
+    {
+      "value": "Wall of inner part of right external acoustic tube",
+      "write": {
+        "value_source_value": "Wall of inner part of right external acoustic tube"
+      }
+    },
+    {
+      "value": "Wall of left axilla",
+      "write": {
+        "value_source_value": "Wall of left axilla"
+      }
+    },
+    {
+      "value": "Wall of left external acoustic tube",
+      "write": {
+        "value_source_value": "Wall of left external acoustic tube"
+      }
+    },
+    {
+      "value": "Wall of middle part of external acoustic tube",
+      "write": {
+        "value_source_value": "Wall of middle part of external acoustic tube"
+      }
+    },
+    {
+      "value": "Wall of middle part of left external acoustic tube",
+      "write": {
+        "value_source_value": "Wall of middle part of left external acoustic tube"
+      }
+    },
+    {
+      "value": "Wall of middle part of right external acoustic tube",
+      "write": {
+        "value_source_value": "Wall of middle part of right external acoustic tube"
+      }
+    },
+    {
+      "value": "Wall of right axilla",
+      "write": {
+        "value_source_value": "Wall of right axilla"
+      }
+    },
+    {
+      "value": "Wall of right external acoustic tube",
+      "write": {
+        "value_source_value": "Wall of right external acoustic tube"
+      }
+    },
+    {
+      "value": "Wall of subdivision of external acoustic tube",
+      "write": {
+        "value_source_value": "Wall of subdivision of external acoustic tube"
+      }
+    },
+    {
+      "value": "Wrist",
+      "write": {
+        "value_source_value": "Wrist"
+      }
+    },
+    {
+      "value": "Zygomatic part of cheek",
+      "write": {
+        "value_source_value": "Zygomatic part of cheek"
+      }
+    },
+    {
+      "value": "Zygomatic part of left cheek",
+      "write": {
+        "value_source_value": "Zygomatic part of left cheek"
+      }
+    },
+    {
+      "value": "Zygomatic part of right cheek",
+      "write": {
+        "value_source_value": "Zygomatic part of right cheek"
+      }
+    },
+    {
+      "value": "other site",
+      "write": {
+        "value_source_value": "other site"
+      }
+    },
+    {
+      "value": "unknown",
+      "write": {
+        "value_source_value": "unknown"
+      }
+    }
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "links": [],
+  "manual_approval": true,
+  "note": "Authored VERBATIM from the official ARK data model inputs/amp_dictionaries/ark/data_model-main/ark.all_attributes.csv (Attribute anatomicalSite: Description + Valid Values; Required=TRUE). Grain specimen; one row per ARK biospecimen. Approving this (with the other biospecimen maps) opens the AMP-RA-SLE specimen generation gate at 03_generate.py:416 (model[prog]['specimen'] non-empty); specimen rows/skeleton come from scripts/gen/lineage.plan(), and cdm.specimen is rendered by 11_render_extensions (anatomicalSite -> specimen.anatomic_site_source_value), not by 09_map_etl. manual_approval left false for your review. TODO (future): value_source_value currently holds the anatomy LABEL; it will be replaced by the ontology concept id (FMA) from inputs/amp_dictionaries/ark/data_model-main/annotation_maps/FMAID-anatomicalSite.csv."
+}

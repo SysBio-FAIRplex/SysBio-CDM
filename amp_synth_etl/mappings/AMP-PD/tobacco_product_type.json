@@ -1,0 +1,95 @@
+{
+  "variable": "tobacco_product_type",
+  "cde_id": "398",
+  "definition": "Type of tobacco product that has been used",
+  "src_schema_ref": ["Smoking_and_alcohol_history_dictionary.csv"],
+  "amp_data_files": ["Smoking_and_alcohol_history.csv"],
+  "program": "AMP-PD",
+  "grain": "visit",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "Cigarettes",
+      "Filtered cigarettes",
+      "Non-filtered (plain) cigarettes",
+      "Low tar cigarettes",
+      "Cigar",
+      "Pipe",
+      "Chewing tobacco",
+      "Smokeless tobacco"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 37172639,
+      "name": "Type of tobacco used",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "Cigarettes",
+      "write": {
+        "value_as_string": "Cigarettes",
+        "value_source_value": "Cigarettes"
+      }
+    },
+    {
+      "value": "Filtered cigarettes",
+      "write": {
+        "value_as_string": "Filtered cigarettes",
+        "value_source_value": "Filtered cigarettes"
+      }
+    },
+    {
+      "value": "Non-filtered (plain) cigarettes",
+      "write": {
+        "value_as_string": "Non-filtered (plain) cigarettes",
+        "value_source_value": "Non-filtered (plain) cigarettes"
+      }
+    },
+    {
+      "value": "Low tar cigarettes",
+      "write": {
+        "value_as_string": "Low tar cigarettes",
+        "value_source_value": "Low tar cigarettes"
+      }
+    },
+    {
+      "value": "Cigar",
+      "write": {
+        "value_as_string": "Cigar",
+        "value_source_value": "Cigar"
+      }
+    },
+    {
+      "value": "Pipe",
+      "write": {
+        "value_as_string": "Pipe",
+        "value_source_value": "Pipe"
+      }
+    },
+    {
+      "value": "Chewing tobacco",
+      "write": {
+        "value_as_string": "Chewing tobacco",
+        "value_source_value": "Chewing tobacco"
+      }
+    },
+    {
+      "value": "Smokeless tobacco",
+      "write": {
+        "value_as_string": "Smokeless tobacco",
+        "value_source_value": "Smokeless tobacco"
+      }
+    }
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map",
+    "visit_occurrence_id": "cdm.visit_occurrence"
+  },
+  "links": [],
+  "manual_approval": false,
+  "note": "Authored from cde_dictionary (cde_id 398; empty value set, base product categories from fidelity_distributions - free-text combinations still land via value_source_value); value_as_string per sibling shared/cohort.json."
+}

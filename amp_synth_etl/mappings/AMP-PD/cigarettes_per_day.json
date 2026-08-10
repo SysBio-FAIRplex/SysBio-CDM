@@ -1,0 +1,99 @@
+{
+  "variable": "cigarettes_per_day",
+  "cde_id": "150",
+  "definition": "Average number cigarettes smoked daily",
+  "src_schema_ref": ["Smoking_and_alcohol_history_dictionary.csv"],
+  "amp_data_files": ["Smoking_and_alcohol_history.csv"],
+  "program": "AMP-PD",
+  "grain": "visit",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "Less than one cigarette",
+      "1 cigarette",
+      "2 to 5 cigarettes",
+      "6 to 15 cigarettes",
+      "16 to 25 cigarettes",
+      "26 to 35 cigarettes",
+      "More than 35 cigarettes",
+      "Unknown"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 40766930,
+      "name": "On the average of the entire time you smoked, how many cigarettes did you smoke per day [PhenX]",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "Less than one cigarette",
+      "write": {
+        "value_as_string": "Less than one cigarette",
+        "value_source_value": "Less than one cigarette"
+      }
+    },
+    {
+      "value": "1 cigarette",
+      "write": {
+        "value_as_string": "1 cigarette",
+        "value_source_value": "1 cigarette"
+      }
+    },
+    {
+      "value": "2 to 5 cigarettes",
+      "write": {
+        "value_as_string": "2 to 5 cigarettes",
+        "value_source_value": "2 to 5 cigarettes"
+      }
+    },
+    {
+      "value": "6 to 15 cigarettes",
+      "write": {
+        "value_as_string": "6 to 15 cigarettes",
+        "value_source_value": "6 to 15 cigarettes"
+      }
+    },
+    {
+      "value": "16 to 25 cigarettes",
+      "write": {
+        "value_as_string": "16 to 25 cigarettes",
+        "value_source_value": "16 to 25 cigarettes"
+      }
+    },
+    {
+      "value": "26 to 35 cigarettes",
+      "write": {
+        "value_as_string": "26 to 35 cigarettes",
+        "value_source_value": "26 to 35 cigarettes"
+      }
+    },
+    {
+      "value": "More than 35 cigarettes",
+      "write": {
+        "value_as_string": "More than 35 cigarettes",
+        "value_source_value": "More than 35 cigarettes"
+      }
+    },
+    {
+      "value": "Unknown",
+      "write": {
+        "value_as_concept_id": {
+          "id": 45877986,
+          "name": "Unknown"
+        },
+        "value_as_string": "Unknown",
+        "value_source_value": "Unknown"
+      }
+    }
+  ],
+  "anchored_to": {
+    "person_id": "staging.person_map",
+    "visit_occurrence_id": "cdm.visit_occurrence"
+  },
+  "links": [],
+  "manual_approval": false,
+  "note": "Authored from cde_dictionary (cde_id 150; value set empty in dictionary, banded categories taken from fidelity_distributions); value_as_string, Unknown=45877986; landing pattern per sibling cigarettes_per_day_current.json."
+}

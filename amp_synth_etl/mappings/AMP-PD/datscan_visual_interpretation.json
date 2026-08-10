@@ -1,0 +1,57 @@
+{
+  "variable": "datscan_visual_interpretation",
+  "cde_registry_label": "datscan_visual_interpretation",
+  "harmonized_with": ["dat", "scan_months_after_baseline"],
+  "cde_id": "154",
+  "definition": "DaTSCAN SPECT Visual Interpretation Assessment Report",
+  "src_schema_ref": ["DaTSCAN_visual_interpretation_dictionary.csv"],
+  "amp_data_files": ["DaTSCAN_visual_interpretation.csv"],
+  "program": "AMP-PD",
+  "grain": "visit",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "Positive",
+      "Negative"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 4327116,
+      "name": "Single photon emission computed tomography for dopamine transport",
+      "domain": "Procedure"
+    }
+  },
+  "value_map": [
+    {
+      "value": "Positive",
+      "write": {
+        "value_as_concept_id": {
+          "id": 9191,
+          "name": "Positive"
+        },
+        "value_as_string": "Positive",
+        "value_source_value": "Positive"
+      }
+    },
+    {
+      "value": "Negative",
+      "write": {
+        "value_as_concept_id": {
+          "id": 9189,
+          "name": "Negative"
+        },
+        "value_as_string": "Negative",
+        "value_source_value": "Negative"
+      }
+    }
+  ],
+  "links": [],
+  "anchored_to": {
+    "person_id": "staging.person_map",
+    "visit_occurrence_id": "cdm.visit_occurrence"
+  },
+  "manual_approval": true,
+  "note": "use Imaging interpretation [4086692] as qualifier/modifier"
+}

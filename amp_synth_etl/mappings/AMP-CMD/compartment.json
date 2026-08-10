@@ -1,0 +1,106 @@
+{
+  "variable": "compartment",
+  "cde_id": "75",
+  "definition": "Anatomical or cellular compartment where measurement or sample was obtained",
+  "src_schema_ref": [],
+  "amp_data_files": [],
+  "program": "AMP-CMD",
+  "grain": "subject",
+  "reads_as": {
+    "datatype": "code",
+    "values": [
+      "plasma",
+      "serum",
+      "whole blood",
+      "intracellular",
+      "extracellular",
+      "tissue",
+      "cell lysate",
+      "subcellular fraction"
+    ]
+  },
+  "lands": {
+    "table": "observation",
+    "observation_concept_id": {
+      "id": 44783492,
+      "name": "Structure of anatomical compartment",
+      "domain": "Observation"
+    }
+  },
+  "value_map": [
+    {
+      "value": "plasma",
+      "write": {
+        "value_as_concept_id": {
+          "id": 4000626,
+          "name": "Plasma specimen"
+        },
+        "value_as_string": "plasma",
+        "value_source_value": "plasma"
+      }
+    },
+    {
+      "value": "serum",
+      "write": {
+        "value_as_concept_id": {
+          "id": 4001181,
+          "name": "Serum specimen"
+        },
+        "value_as_string": "serum",
+        "value_source_value": "serum"
+      }
+    },
+    {
+      "value": "whole blood",
+      "write": {
+        "value_as_concept_id": {
+          "id": 4122283,
+          "name": "Whole blood specimen"
+        },
+        "value_as_string": "whole blood",
+        "value_source_value": "whole blood"
+      }
+    },
+    {
+      "value": "intracellular",
+      "write": {
+        "value_as_string": "intracellular",
+        "value_source_value": "intracellular"
+      }
+    },
+    {
+      "value": "extracellular",
+      "write": {
+        "value_as_string": "extracellular",
+        "value_source_value": "extracellular"
+      }
+    },
+    {
+      "value": "tissue",
+      "write": {
+        "value_as_string": "tissue",
+        "value_source_value": "tissue"
+      }
+    },
+    {
+      "value": "cell lysate",
+      "write": {
+        "value_as_string": "cell lysate",
+        "value_source_value": "cell lysate"
+      }
+    },
+    {
+      "value": "subcellular fraction",
+      "write": {
+        "value_as_string": "subcellular fraction",
+        "value_source_value": "subcellular fraction"
+      }
+    }
+  ],
+  "links": [],
+  "anchored_to": {
+    "person_id": "staging.person_map"
+  },
+  "manual_approval": false,
+  "note": "Authored from inputs/cde_dictionary.jsonl (definition + value set verbatim) + sibling species.json. Anatomical/cellular compartment -> observation 44783492 'Structure of anatomical compartment'; specimen-like values -> value_as_concept, others value_as_string."
+}
