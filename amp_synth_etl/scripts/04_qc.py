@@ -224,6 +224,48 @@ def lineage_and_krenn(prog, spec):
         fail.append(f"{prog}: no specimen has a parent -- the lineage is absent")
 
 
+def _crosswalk_classes():
+    """source_value -> organ class, derived from the biospecimen crosswalk's concept ids.
+    Single source of truth: the same crosswalk 11_render uses to mint specimen_concept_id, so
+    QC coherence and CDM concept coverage cannot drift apart."""
+    import io
+    BRAIN = {4134448, 40481913, 4002227}                       # brain tissue / cerebellum / brain
+    BLOOD = {4001225, 4122283, 4000626, 4001181, 4047495, 4045762}  # blood/whole/plasma/serum/PBMC/leukocyte
+    path = os.path.join(ROOT, "inputs", "biospecimen_type_crosswalk.tsv")
+    lines = [l for l in open(path, encoding="utf-8") if not l.startswith("#")]
+    out = {}
+    for r in csv.DictReader(io.StringIO("".join(lines)), delimiter="\t"):
+        cid = int(r["specimen_concept_id"])
+        out[r["source_value"]] = "brain" if cid in BRAIN else ("blood" if cid in BLOOD else "other")
+    return out
+
+
+def omics_coherence(prog, spec):
+    """The omics specimen grain (AD/PD/CMD shape: organ + specimen_source_value) must be
+    internally coherent and crosswalk-resolvable:
+      * every specimen_source_value resolves in the biospecimen crosswalk (else it lands as
+        specimen_concept_id = 0 in cdm.specimen — the 2026-09 tissue bug put 31% of rows there)
+      * the organ column agrees with the source value's organ class (no 'brain' organ carrying
+        a kidney tissue — the same bug's visible face: (brain, Kidney) x 325 rows)"""
+    if not spec or "organ" not in spec[0] or "specimen_source_value" not in spec[0]:
+        return                                  # ARK (RA-SLE) specimen grain has its own checks
+    classes = _crosswalk_classes()
+    unmapped, incoherent = defaultdict(int), defaultdict(int)
+    for r in spec:
+        sv, organ = r["specimen_source_value"], (r.get("organ") or "").strip().lower()
+        cls = classes.get(sv)
+        if cls is None:
+            unmapped[sv] += 1
+            continue
+        if organ in ("brain", "blood") and cls != "other" and cls != organ:
+            incoherent[(organ, sv)] += 1
+    for sv, n in sorted(unmapped.items()):
+        fail.append(f"{prog}: specimen_source_value {sv!r} ({n} rows) has no crosswalk row -- "
+                    f"would land specimen_concept_id=0 in cdm.specimen")
+    for (organ, sv), n in sorted(incoherent.items()):
+        fail.append(f"{prog}: organ {organ!r} with {sv!r} tissue ({n} rows) -- organ/tissue incoherent")
+
+
 def main():
     SP = specs()
     # Enumerate programmes from the one-per-programme subject file. (rsplit on *_*.csv breaks now that
@@ -240,6 +282,7 @@ def main():
         structure(prog, subj, visit, spec)
         contract(prog, subj, visit, spec)
         lineage_and_krenn(prog, spec)
+        omics_coherence(prog, spec)
         for grain, rows in (("subject", subj), ("visit", visit), ("specimen", spec)):
             if rows:
                 rows_n += len(rows)

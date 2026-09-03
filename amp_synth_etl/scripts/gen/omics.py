@@ -19,12 +19,19 @@ IDs are deterministic and used directly as CDM surrogate PKs (no DB sequence nee
 import fidelity
 
 # ---- helpers: draw from the real distribution's own value set, else a ASSUMED fallback ----
-def _legal(var, fallback):
-    fd = fidelity.DIST.get(var)
+# Draws are SCOPED to the programme ('AMP-AD::tissue' etc.): the pooled entries merge every
+# dataset across programmes, so an unscoped tissue draw weighted AD specimens by a CMD
+# cell-grain distribution (the brain/Kidney specimen bug). fidelity.resolve falls back to the
+# pooled entry when no programme-keyed one exists.
+def _legal(var, fallback, scope=None):
+    fd = fidelity.DIST.get(fidelity.resolve(var, scope))
     return list(fd["values"].keys()) if fd and fd.get("values") else list(fallback)
 
-def _cat(var, fallback, rng):
-    return fidelity.categorical(var, _legal(var, fallback), rng)
+def _cat(var, fallback, rng, scope=None):
+    return fidelity.categorical(var, _legal(var, fallback, scope), rng, scope=scope)
+
+# tokens that are blood-compartment draws, not solid tissue — used to condition tissue on organ
+_BLOOD_TOKENS = {"blood", "serum", "plasma", "whole blood", "pbmc", "pbmcs", "buffy coat"}
 
 # ASSUMED assay technologies per program (grounded in the ARK assay families + real AMP-AD metadata).
 AD_ASSAYS    = ["snRNAseq", "scRNAseq", "snATACseq", "bulkRNAseq", "10x Multiome"]
@@ -87,26 +94,29 @@ def specimens_ad(rng, pid, visits):
     out, seq = [], 0
     for _ in range(rng.randint(1, 3)):
         seq += 1
-        organ  = _cat("organ", ["brain", "blood"], rng)
-        # organ-coherent tissue + cell type: the marginal fidelity dists pool across organs, so a
-        # bare draw yields nonsense like a 'blood' organ with a brain tissue -- condition on organ. ASSUMED.
-        t_legal = _legal("tissue", [organ])
+        organ  = _cat("organ", ["brain", "blood"], rng, scope="AMP-AD")
+        # organ-coherent tissue + cell type: even the programme-scoped tissue marginal mixes
+        # organs (AD holds brain regions AND blood/serum), so condition the draw on organ. The
+        # AMP-AD scope guarantees every candidate token is an AD token; the organ split then
+        # keeps the pair coherent. ASSUMED.
+        t_legal = _legal("tissue", [organ], scope="AMP-AD")
         if organ == "blood":
-            tissue = "blood"
+            bloods = [t for t in t_legal if t.strip().lower() in _BLOOD_TOKENS] or ["blood"]
+            tissue = fidelity.categorical("tissue", bloods, rng, scope="AMP-AD")
             ct = _BLOOD_CT[rng.randrange(len(_BLOOD_CT))]   # clean immune set (nonsense CL terms dropped)
         else:
-            brain = [t for t in t_legal if t.strip().lower() != "blood"] or [organ]
-            tissue = fidelity.categorical("tissue", brain, rng)
+            brain = [t for t in t_legal if t.strip().lower() not in _BLOOD_TOKENS] or [organ]
+            tissue = fidelity.categorical("tissue", brain, rng, scope="AMP-AD")
             ct = "microglia" if rng.random() < 0.25 else ""   # most AD brain is bulk (no cell type)
-        site   = _cat("BrodmannArea", ["NA"], rng) if organ == "brain" else tissue
+        site   = _cat("BrodmannArea", ["NA"], rng, scope="AMP-AD") if organ == "brain" else tissue
         out.append({
             "participant_id": pid, "specimen_id": pid * 100 + seq,
             "visit_name": vis, "organ": organ,
             "specimen_source_value": tissue, "anatomic_site_source_value": site,
             "cell_type": ct,
-            "nucleic_acid_source": _cat("nucleicAcidSource", ["bulk cell"], rng),
-            "sample_status": _cat("sampleStatus", ["frozen"], rng),
-            "is_post_mortem": _cat("isPostMortem", ["TRUE"], rng)})
+            "nucleic_acid_source": _cat("nucleicAcidSource", ["bulk cell"], rng, scope="AMP-AD"),
+            "sample_status": _cat("sampleStatus", ["frozen"], rng, scope="AMP-AD"),
+            "is_post_mortem": _cat("isPostMortem", ["TRUE"], rng, scope="AMP-AD")})
     return out
 
 
@@ -119,8 +129,8 @@ def specimens_pd(rng, pid, visits):
             "participant_id": pid, "specimen_id": pid * 100 + seq, "visit_name": vis,
             "organ": "blood", "specimen_source_value": "plasma", "anatomic_site_source_value": "plasma",
             "cell_type": "",
-            "nucleic_acid_source": _cat("nucleicAcidSource", ["bulk cell"], rng),
-            "sample_status": _cat("sampleStatus", ["frozen"], rng),
+            "nucleic_acid_source": _cat("nucleicAcidSource", ["bulk cell"], rng, scope="AMP-PD"),
+            "sample_status": _cat("sampleStatus", ["frozen"], rng, scope="AMP-PD"),
             "is_post_mortem": "FALSE"})
     return out
 
@@ -132,9 +142,9 @@ def specimens_cmd(rng, pid, visits):
         "participant_id": pid, "specimen_id": pid * 100 + 1, "visit_name": vis,
         "organ": "brain", "specimen_source_value": "hypothalamus", "anatomic_site_source_value": "hypothalamus",
         "cell_type": "",
-        "nucleic_acid_source": _cat("nucleicAcidSource", ["bulk cell"], rng),
-        "sample_status": _cat("sampleStatus", ["frozen"], rng),
-        "is_post_mortem": _cat("isPostMortem", ["TRUE"], rng)}]
+        "nucleic_acid_source": _cat("nucleicAcidSource", ["bulk cell"], rng, scope="AMP-CMD"),
+        "sample_status": _cat("sampleStatus", ["frozen"], rng, scope="AMP-CMD"),
+        "is_post_mortem": _cat("isPostMortem", ["TRUE"], rng, scope="AMP-CMD")}]
 
 
 def _raw_files(tech):
@@ -166,7 +176,7 @@ def assays_and_files(rng, pid, prog, specimens):
         aseq += 1
         tech = pool[rng.randrange(len(pool))]
         dtype, analyte, suspension = ASSAY_META.get(tech, ("other", "", ""))
-        platform = _cat("platform", ["Illumina NovaSeq 6000"], rng)
+        platform = _cat("platform", ["Illumina NovaSeq 6000"], rng, scope=prog)
         assay_id = pid * 10000 + aseq
         assays.append({
             "participant_id": pid, "assay_id": assay_id,

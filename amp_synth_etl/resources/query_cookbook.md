@@ -132,19 +132,19 @@ Returns — study, cell_type, biosample_type, modalities, n_files, n_diseases �
 ```
    study    |       cell_type       |  biosample_type  | modalities | n_files | n_diseases 
 ------------+-----------------------+------------------+------------+---------+------------
- AMP-AD     | astrocytes            | postmortem brain | ATAC, RNA  |       2 |          1
  AMP-AD     | GABAergic neurons     | postmortem brain | ATAC, RNA  |       2 |          1
  AMP-AD     | GLUtamatergic neurons | postmortem brain | ATAC, RNA  |       2 |          1
+ AMP-AD     | astrocytes            | postmortem brain | ATAC, RNA  |       2 |          1
  AMP-AD     | microglia             | postmortem brain | ATAC, RNA  |       2 |          1
  AMP-AD     | oligodendrocyte       | postmortem brain | ATAC, RNA  |       2 |          1
  AMP-CMD    | astrocyte             | hypothalamus     | RNA        |       1 |          0
  AMP-CMD    | ependymal cell        | hypothalamus     | RNA        |       1 |          0
  AMP-CMD    | neuron                | hypothalamus     | RNA        |       1 |          0
  AMP-CMD    | oligodendrocyte       | hypothalamus     | RNA        |       1 |          0
- AMP-RA-SLE | B cell                | synovial tissue  | RNA        |       1 |          9
- AMP-RA-SLE | monocyte              | synovial tissue  | RNA        |       1 |          9
- AMP-RA-SLE | synovial fibroblast   | synovial tissue  | RNA        |       1 |          9
- AMP-RA-SLE | T cell                | synovial tissue  | RNA        |       1 |          9
+ AMP-RA-SLE | B cell                | synovial tissue  | RNA        |       1 |          4
+ AMP-RA-SLE | T cell                | synovial tissue  | RNA        |       1 |          4
+ AMP-RA-SLE | monocyte              | synovial tissue  | RNA        |       1 |          4
+ AMP-RA-SLE | synovial fibroblast   | synovial tissue  | RNA        |       1 |          4
 (13 rows)
 ```
 
@@ -176,11 +176,11 @@ ORDER BY study;
 ```
 Returns — study, n_files, n_diseases, diseases (semicolon list), modalities, specimen_types, total_size — one relevance card per program:
 ```
-   study    | n_files | n_diseases |                                                                                 diseases                                                                                  |       modalities        |  specimen_types  | total_size 
-------------+---------+------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------+------------------+------------
- AMP-AD     |      11 |          1 | Alzheimer's disease                                                                                                                                                       | ATAC, RNA               | postmortem brain | 14 GB
- AMP-CMD    |       5 |          0 |                                                                                                                                                                           | RNA                     | hypothalamus     | 5747 MB
- AMP-RA-SLE |       7 |          9 | Dermatomyositis; Discoid lupus; Psoriasis; Rheumatoid arthritis; Scleroderma; Sjögren's syndrome; SLE glomerulonephritis syndrome; Systemic lupus erythematosus; Vitiligo | cytometry, RNA, spatial | synovial tissue  | 9094 MB
+   study    | n_files | n_diseases |                                         diseases                                         |       modalities        |  specimen_types  | total_size 
+------------+---------+------------+------------------------------------------------------------------------------------------+-------------------------+------------------+------------
+ AMP-AD     |      11 |          1 | Alzheimer's disease                                                                      | ATAC, RNA               | postmortem brain | 14 GB
+ AMP-CMD    |       5 |          0 |                                                                                          | RNA                     | hypothalamus     | 5747 MB
+ AMP-RA-SLE |       7 |          5 | Dermatomyositis; Psoriasis; Rheumatoid arthritis; Systemic lupus erythematosus; Vitiligo | RNA, cytometry, spatial | synovial tissue  | 9094 MB
 (3 rows)
 ```
 
@@ -248,10 +248,10 @@ Returns — access_group, program, disease_focus, files, specimens, observations
 ```
  access_group |  program   |                     disease_focus                     | files | specimens | observations | measurements | granted_users 
 --------------+------------+-------------------------------------------------------+-------+-----------+--------------+--------------+---------------
- AMP-PD       | AMP-PD     | Parkinson's disease                                   |     1 |      2038 |       638488 |       289189 |             1
- AMP-AD       | AMP-AD     | Alzheimer's disease and related dementias             |  1651 |      1541 |        11265 |         2178 |             2
- AMP-CMD      | AMP-CMD    | Kidney, muscle and adipose metabolic disease          |   180 |       203 |          203 |          203 |             1
- AMP-RA-SLE   | AMP-RA-SLE | Rheumatoid arthritis and systemic lupus erythematosus |   742 |       887 |         2622 |          893 |             2
+ AMP-PD       | AMP-PD     | Parkinson's disease                                   |     2 |      2038 |       636910 |       288141 |             1
+ AMP-AD       | AMP-AD     | Alzheimer's disease and related dementias             |  1652 |      1541 |        20231 |         2551 |             2
+ AMP-CMD      | AMP-CMD    | Kidney, muscle and adipose metabolic disease          |   181 |       203 |         1477 |          203 |             1
+ AMP-RA-SLE   | AMP-RA-SLE | Rheumatoid arthritis and systemic lupus erythematosus |   743 |       887 |         4287 |         1240 |             2
 (4 rows)
 ```
 
@@ -304,14 +304,14 @@ Returns — file_name, cell_type, biosample_type, analysis_type, disease -- one 
 ```
                     file_name                    |       cell_type       |  biosample_type  | analysis_type |       disease       
 -------------------------------------------------+-----------------------+------------------+---------------+---------------------
- AMP-AD_ATAC_pseudobulk_astrocytes.h5            | astrocytes            | postmortem brain | ATAC          | Alzheimer's disease
  AMP-AD_ATAC_pseudobulk_GABAergic_neurons.h5     | GABAergic neurons     | postmortem brain | ATAC          | Alzheimer's disease
  AMP-AD_ATAC_pseudobulk_GLUtamatergic_neurons.h5 | GLUtamatergic neurons | postmortem brain | ATAC          | Alzheimer's disease
+ AMP-AD_ATAC_pseudobulk_astrocytes.h5            | astrocytes            | postmortem brain | ATAC          | Alzheimer's disease
  AMP-AD_ATAC_pseudobulk_microglia.h5             | microglia             | postmortem brain | ATAC          | Alzheimer's disease
  AMP-AD_ATAC_pseudobulk_oligodendrocyte.h5       | oligodendrocyte       | postmortem brain | ATAC          | Alzheimer's disease
- AMP-AD_RNA_pseudobulk_astrocytes.h5             | astrocytes            | postmortem brain | RNA           | Alzheimer's disease
  AMP-AD_RNA_pseudobulk_GABAergic_neurons.h5      | GABAergic neurons     | postmortem brain | RNA           | Alzheimer's disease
  AMP-AD_RNA_pseudobulk_GLUtamatergic_neurons.h5  | GLUtamatergic neurons | postmortem brain | RNA           | Alzheimer's disease
+ AMP-AD_RNA_pseudobulk_astrocytes.h5             | astrocytes            | postmortem brain | RNA           | Alzheimer's disease
  AMP-AD_RNA_pseudobulk_microglia.h5              | microglia             | postmortem brain | RNA           | Alzheimer's disease
  AMP-AD_RNA_pseudobulk_oligodendrocyte.h5        | oligodendrocyte       | postmortem brain | RNA           | Alzheimer's disease
 (10 rows)
@@ -339,12 +339,12 @@ Returns — analysis_type, cell_type, n_files -- 5 brain cell types x 2 modaliti
 ```
  analysis_type |       cell_type       | n_files 
 ---------------+-----------------------+---------
- ATAC          | astrocytes            |       1
- RNA           | astrocytes            |       1
  ATAC          | GABAergic neurons     |       1
  RNA           | GABAergic neurons     |       1
  ATAC          | GLUtamatergic neurons |       1
  RNA           | GLUtamatergic neurons |       1
+ ATAC          | astrocytes            |       1
+ RNA           | astrocytes            |       1
  ATAC          | microglia             |       1
  RNA           | microglia             |       1
  ATAC          | oligodendrocyte       |       1
@@ -375,9 +375,9 @@ Returns — disease, n_contributors, harmonized_format, analysis_type, n_harmoni
 ```
        disease       | n_contributors | harmonized_format | analysis_type | n_harmonized_files 
 ---------------------+----------------+-------------------+---------------+--------------------
- Alzheimer's disease |            138 | HDF5              | RNA           |                  6
- Alzheimer's disease |             89 | HDF5              | ATAC          |                  5
- Alzheimer's disease |            142 | (none)            | (none)        |                  0
+ Alzheimer's disease |             66 | HDF5              | RNA           |                  6
+ Alzheimer's disease |             46 | HDF5              | ATAC          |                  5
+ Alzheimer's disease |             78 | (none)            | (none)        |                  0
  Parkinson's disease |            448 | (none)            | (none)        |                  0
 (4 rows)
 ```
@@ -487,19 +487,14 @@ ORDER BY total DESC;
 ```
 Returns — disease, male, female, unknown_or_missing, total (one row per real disease; status codes 45884153/45878142/45882470/45877986 excluded):
 ```
-             disease             | male | female | unknown_or_missing | total 
----------------------------------+------+--------+--------------------+-------
- Alzheimer's disease             |   72 |     64 |                  0 |   136
- Psoriasis                       |    8 |      6 |                  0 |    14
- SLE glomerulonephritis syndrome |    5 |      4 |                  0 |     9
- Systemic lupus erythematosus    |    4 |      4 |                  0 |     8
- Dermatomyositis                 |    5 |      3 |                  0 |     8
- Vitiligo                        |    3 |      4 |                  0 |     7
- Rheumatoid arthritis            |    3 |      4 |                  0 |     7
- Sjögren's syndrome              |    2 |      5 |                  0 |     7
- Scleroderma                     |    3 |      1 |                  0 |     4
- Discoid lupus                   |    1 |      3 |                  0 |     4
-(10 rows)
+           disease            | male | female | unknown_or_missing | total 
+------------------------------+------+--------+--------------------+-------
+ Alzheimer's disease          |    4 |     12 |                 54 |    70
+ Systemic lupus erythematosus |   12 |     38 |                  1 |    51
+ Rheumatoid arthritis         |    8 |     27 |                  1 |    36
+ Vitiligo                     |    1 |      2 |                  0 |     3
+ Dermatomyositis              |    0 |      1 |                  0 |     1
+(5 rows)
 ```
 
 **variation: per biosample source x sex** — How does male/female contributor availability break down by biospecimen source (study x tissue) across the pseudobulk HDF5 set?
@@ -525,9 +520,9 @@ Returns — study, biosample_source, n_files, male, female, unknown_or_missing, 
 ```
    study    | biosample_source | n_files | male | female | unknown_or_missing | total_contributors 
 ------------+------------------+---------+------+--------+--------------------+--------------------
- AMP-AD     | postmortem brain |      10 |  304 |    221 |                  0 |                525
- AMP-RA-SLE | synovial tissue  |       4 |   64 |     54 |                  0 |                118
- AMP-CMD    | hypothalamus     |       4 |   31 |     25 |                  0 |                 56
+ AMP-AD     | postmortem brain |      10 |   33 |     68 |                424 |                525
+ AMP-RA-SLE | synovial tissue  |       4 |   29 |     87 |                  2 |                118
+ AMP-CMD    | hypothalamus     |       4 |   30 |     26 |                  0 |                 56
 (3 rows)
 ```
 
@@ -606,15 +601,13 @@ Returns — file_name, analysis_type, dx, female, male, unknown, total (one row 
 ```
               file_name              | analysis_type |         dx          | female | male | unknown | total 
 -------------------------------------+---------------+---------------------+--------+------+---------+-------
- AMP-AD_ATAC_pseudobulk_microglia.h5 | ATAC          | Other               |     76 |  107 |       0 |   183
- AMP-AD_ATAC_pseudobulk_microglia.h5 | ATAC          | Alzheimer's disease |     46 |   43 |       0 |    89
- AMP-AD_ATAC_pseudobulk_microglia.h5 | ATAC          | Normal              |     25 |   29 |       0 |    54
- AMP-AD_ATAC_pseudobulk_microglia.h5 | ATAC          | Not applicable      |      3 |    1 |       0 |     4
- AMP-AD_RNA_pseudobulk_microglia.h5  | RNA           | Other               |     91 |  143 |       0 |   234
- AMP-AD_RNA_pseudobulk_microglia.h5  | RNA           | Alzheimer's disease |     46 |   59 |       0 |   105
- AMP-AD_RNA_pseudobulk_microglia.h5  | RNA           | Normal              |     32 |   46 |       0 |    78
- AMP-AD_RNA_pseudobulk_microglia.h5  | RNA           | Not applicable      |      2 |    1 |       0 |     3
-(8 rows)
+ AMP-AD_ATAC_pseudobulk_microglia.h5 | ATAC          | Other               |     14 |   12 |     124 |   150
+ AMP-AD_ATAC_pseudobulk_microglia.h5 | ATAC          | Alzheimer's disease |     12 |    3 |      31 |    46
+ AMP-AD_ATAC_pseudobulk_microglia.h5 | ATAC          | Normal              |      4 |    3 |      28 |    35
+ AMP-AD_RNA_pseudobulk_microglia.h5  | RNA           | Other               |     22 |   12 |     163 |   197
+ AMP-AD_RNA_pseudobulk_microglia.h5  | RNA           | Normal              |      6 |    6 |      39 |    51
+ AMP-AD_RNA_pseudobulk_microglia.h5  | RNA           | Alzheimer's disease |      9 |    2 |      37 |    48
+(6 rows)
 ```
 
 **variation: file inventory (names + sizes)** — What exactly are the pseudobulked-microglia HDF5 files -- names, program, assay modality, tissue, and size?
@@ -666,11 +659,10 @@ Returns — dx_group (case/control label), female, male, unknown, total (one row
 ```
          dx_group          | female | male | unknown | total 
 ---------------------------+--------+------+---------+-------
- Other                     |    115 |  177 |       0 |   292
- Case: Alzheimer's disease |     64 |   72 |       0 |   136
- Control (Normal)          |     39 |   53 |       0 |    92
- Not applicable            |      3 |    2 |       0 |     5
-(4 rows)
+ Other                     |     26 |   15 |     201 |   242
+ Case: Alzheimer's disease |     12 |    4 |      54 |    70
+ Control (Normal)          |      6 |    6 |      45 |    57
+(3 rows)
 ```
 
 **variation: per program** — Across all programs that ship pseudobulk cell-type HDF5, which offer microglia -- so the microglia request can be placed in the per-program landscape?
@@ -687,9 +679,9 @@ Returns — program, pseudobulk_hdf5_files, cell_types (agg), has_microglia (boo
 ```
   program   | pseudobulk_hdf5_files |                                    cell_types                                    | has_microglia 
 ------------+-----------------------+----------------------------------------------------------------------------------+---------------
- AMP-AD     |                    10 | astrocytes, GABAergic neurons, GLUtamatergic neurons, microglia, oligodendrocyte | t
+ AMP-AD     |                    10 | GABAergic neurons, GLUtamatergic neurons, astrocytes, microglia, oligodendrocyte | t
  AMP-CMD    |                     4 | astrocyte, ependymal cell, neuron, oligodendrocyte                               | f
- AMP-RA-SLE |                     4 | B cell, monocyte, synovial fibroblast, T cell                                    | f
+ AMP-RA-SLE |                     4 | B cell, T cell, monocyte, synovial fibroblast                                    | f
 (3 rows)
 ```
 
@@ -765,20 +757,20 @@ LIMIT 12;
 ```
 Returns — study, person_id, n_visits, first_visit, last_visit, span_days, disease -- one row per multi-visit contributor, ranked by longitudinal span:
 ```
-   study    | person_id | n_visits | first_visit | last_visit | span_days |       disease       
-------------+-----------+----------+-------------+------------+-----------+---------------------
- AMP-AD     |    101398 |        5 | 2012-05-31  | 2015-10-31 |      1248 | Other
- AMP-AD     |    100728 |        6 | 2015-07-05  | 2018-11-03 |      1217 | Alzheimer's disease
- AMP-AD     |    101034 |        5 | 2019-07-06  | 2022-10-05 |      1187 | Alzheimer's disease
- AMP-AD     |    100591 |        6 | 2014-01-28  | 2017-03-29 |      1156 | Alzheimer's disease
- AMP-AD     |    101521 |        6 | 2016-02-11  | 2019-03-13 |      1126 | Other
- AMP-AD     |    101289 |        6 | 2015-03-14  | 2018-04-13 |      1126 | Alzheimer's disease
- AMP-AD     |    102217 |        5 | 2018-12-09  | 2021-12-09 |      1096 | Alzheimer's disease
- AMP-AD     |    101227 |        5 | 2011-07-19  | 2014-07-19 |      1096 | Other
- AMP-AD     |    101885 |        5 | 2018-02-04  | 2021-02-04 |      1096 | Other
- AMP-RA-SLE |    100415 |        5 | 2012-11-04  | 2015-10-05 |      1065 | Discoid lupus
- AMP-RA-SLE |    100749 |        5 | 2012-01-25  | 2014-12-25 |      1065 | Vitiligo
- AMP-AD     |    102148 |        5 | 2016-05-18  | 2019-04-18 |      1065 | Alzheimer's disease
+ study  | person_id | n_visits | first_visit | last_visit | span_days |       disease       
+--------+-----------+----------+-------------+------------+-----------+---------------------
+ AMP-AD |       766 |        6 | 1899-12-02  | 1903-05-04 |      1248 | Alzheimer's disease
+ AMP-AD |      1398 |        5 | 1900-01-01  | 1903-06-03 |      1248 | Other
+ AMP-AD |       119 |        5 | 1900-01-01  | 1903-05-04 |      1218 | Normal
+ AMP-AD |       378 |        5 | 1900-01-01  | 1903-05-04 |      1218 | 
+ AMP-AD |      1095 |        5 | 1900-01-01  | 1903-05-04 |      1218 | Alzheimer's disease
+ AMP-AD |       728 |        6 | 1899-12-02  | 1903-04-03 |      1217 | 
+ AMP-AD |      1384 |        6 | 1899-12-02  | 1903-04-03 |      1217 | Alzheimer's disease
+ AMP-AD |      1034 |        5 | 1900-01-01  | 1903-04-03 |      1187 | 
+ AMP-AD |      2227 |        5 | 1900-01-01  | 1903-03-04 |      1157 | 
+ AMP-AD |       591 |        6 | 1899-12-02  | 1903-02-01 |      1156 | 
+ AMP-AD |      1289 |        6 | 1899-12-02  | 1903-01-02 |      1126 | 
+ AMP-AD |      1521 |        6 | 1899-12-02  | 1903-01-02 |      1126 | Other
 (12 rows)
 ```
 
@@ -803,12 +795,12 @@ Returns — study, time_points, participants -- histogram of visit counts; note 
 ```
    study    | time_points | participants 
 ------------+-------------+--------------
- AMP-AD     |           1 |          312
- AMP-AD     |           2 |           32
- AMP-AD     |           3 |           59
- AMP-AD     |           4 |           64
- AMP-AD     |           5 |           48
- AMP-AD     |           6 |           10
+ AMP-AD     |           1 |          151
+ AMP-AD     |           2 |           61
+ AMP-AD     |           3 |           96
+ AMP-AD     |           4 |          115
+ AMP-AD     |           5 |           83
+ AMP-AD     |           6 |           19
  AMP-CMD    |           1 |           56
  AMP-RA-SLE |           1 |           11
  AMP-RA-SLE |           2 |           16
@@ -847,19 +839,14 @@ ORDER BY pp.study, multi_visit_participants DESC;
 ```
 Returns — study, disease, multi_visit_participants, avg_span_days, max_time_points -- real-disease cohorts (status values 45884153/45878142/45882470/45877986 excluded) that have longitudinal support:
 ```
-   study    |             disease             | multi_visit_participants | avg_span_days | max_time_points 
-------------+---------------------------------+--------------------------+---------------+-----------------
- AMP-AD     | Alzheimer's disease             |                       59 |           617 |               6
- AMP-RA-SLE | Psoriasis                       |                       13 |           440 |               6
- AMP-RA-SLE | SLE glomerulonephritis syndrome |                        9 |           555 |               5
- AMP-RA-SLE | Dermatomyositis                 |                        8 |           430 |               4
- AMP-RA-SLE | Sjögren's syndrome              |                        7 |           530 |               5
- AMP-RA-SLE | Systemic lupus erythematosus    |                        7 |           570 |               5
- AMP-RA-SLE | Vitiligo                        |                        6 |           604 |               5
- AMP-RA-SLE | Rheumatoid arthritis            |                        5 |           317 |               4
- AMP-RA-SLE | Scleroderma                     |                        4 |           396 |               5
- AMP-RA-SLE | Discoid lupus                   |                        4 |           654 |               6
-(10 rows)
+   study    |           disease            | multi_visit_participants | avg_span_days | max_time_points 
+------------+------------------------------+--------------------------+---------------+-----------------
+ AMP-AD     | Alzheimer's disease          |                       49 |           598 |               6
+ AMP-RA-SLE | Systemic lupus erythematosus |                       46 |           518 |               6
+ AMP-RA-SLE | Rheumatoid arthritis         |                       33 |           491 |               6
+ AMP-RA-SLE | Vitiligo                     |                        2 |           579 |               4
+ AMP-RA-SLE | Dermatomyositis              |                        1 |           183 |               2
+(5 rows)
 ```
 
 > **Coverage:** Coverage limits, all confirmed against the live CDM: (1) Only AMP-AD (10 files: RNA+ATAC x5 cell types) and AMP-RA-SLE (4 files: RNA x4 cell types) pseudobulk HDF5 files qualify -- their datasets carry multi-visit participants (127-169 and 107 longitudinal contributors respectively, up to 6 time points). (2) AMP-CMD's 4 pseudobulk HDF5 files (astrocyte, ependymal_cell, neuron, oligodendrocyte, hypothalamus) are correctly EXCLUDED by the base: all 56 contributors are single-visit (see variation 2, AMP-CMD sits entirely at 1 time point) and CMD carries NO 4234469 disease record -- it is a normal reference, unusable for progression. (3) AMP-PD contributes ZERO pseudobulk HDF5 files -- PD harmonized data is proteomics assay_matrix (parquet) only, no brain HDF5 -- so its study-arm longitudinal design cannot be reached through pseudobulk HDF5. (4) The `_matrix.hdf5` full single-cell matrices and `spatial_matrix.hdf5` are intentionally NOT matched (filter requires file_name ILIKE '%pseudobulk%'). (5) In variation 1 the disease column can show status values like 'Other' (value_as_concept 45878142) rather than a true disease; variation 3 filters those out (45884153/45878142/45882470/45877986). (6) All visit dates are synthetic, so span_days reflects the generated visit schedule, not real clinical follow-up.
@@ -916,13 +903,13 @@ Returns — entity, field, n_values, examples:
 ```
   entity  |           field            | n_values |                                examples                                
 ----------+----------------------------+----------+------------------------------------------------------------------------
- specimen | specimen_source_value      |       26 | blood, cell line, cerebellum, dorsolateral prefrontal cortex, Head of 
- specimen | anatomic_site_source_value |        9 | BA10, BA22, BA23, BA39, BA9, blood, hypothalamus, NA, plasma
- assay    | assay_source_value         |        9 | 10x Multiome, bulkRNAseq, CyTOF, Olink Explore HT, scRNAseq, snATACseq
- assay    | platform                   |        2 | HiSeq2000, Illumina NovaSeq 6000
- files    | analysis_type              |        6 | ATAC, cytometry, proteomics, raw, RNA, spatial
- files    | cell_type                  |       96 | AB diffuse-1 amacrine cell, adrenal cortex chromaffin cell, alveolar a
- files    | biosample_type             |       23 | blood, brain, cell line, hypothalamus, kidney biopsy, PBMCs, plasma, p
+ specimen | specimen_source_value      |       44 | ACC, CBE, DLPFC, Head of caudate nucleus, PBMCs, PCC, TCX, blood, caud
+ specimen | anatomic_site_source_value |       11 | 18, 19, BA10, BA22, BA23, BA38, BA39, BA9, blood, hypothalamus, plasma
+ assay    | assay_source_value         |        9 | 10x Multiome, CyTOF, Olink Explore HT, SomaLogic, Visium, bulkRNAseq, 
+ assay    | platform                   |       20 | 10x Genomics, Chromium Controller, Illumina NovaSeq 6000, Eclipse, Exp
+ files    | analysis_type              |        7 | ATAC, RNA, cytometry, metadata, proteomics, raw, spatial
+ files    | cell_type                  |       99 | B cell, B cell of medullary sinus of lymph node, Bm5 B cell, CD14-posi
+ files    | biosample_type             |       23 | PBMCs, blood, brain, cell line, hypothalamus, kidney biopsy, plasma, p
 (7 rows)
 ```
 
@@ -936,8 +923,8 @@ Returns — landing_table, n_cdes, min_coverage, max_coverage:
 ```
  landing_table | n_cdes | min_coverage | max_coverage 
 ---------------+--------+--------------+--------------
- measurement   |     70 |           15 |         1364
- observation   |    170 |           54 |         2500
+ measurement   |     71 |            1 |         1364
+ observation   |    174 |          142 |         2500
 (2 rows)
 ```
 
@@ -965,18 +952,18 @@ LIMIT 10;
 ```
 Returns — study, source_file, src_fmt, assay, platform, harmonized_output, out_fmt -- one row per (raw source file -> assay -> harmonized output) chain:
 ```
- study  |               source_file               | src_fmt |    assay     |       platform        |          harmonized_output           | out_fmt 
---------+-----------------------------------------+---------+--------------+-----------------------+--------------------------------------+---------
- AMP-AD | AMP-AD_10xMultiome_10001901_R1.fastq.gz | fastq   | 10x Multiome | HiSeq2000             | AMP-AD_ATAC_pseudobulk_astrocytes.h5 | HDF5
- AMP-AD | AMP-AD_10xMultiome_10001901_R2.fastq.gz | fastq   | 10x Multiome | HiSeq2000             | AMP-AD_ATAC_pseudobulk_astrocytes.h5 | HDF5
- AMP-AD | AMP-AD_10xMultiome_10002701_R1.fastq.gz | fastq   | 10x Multiome | HiSeq2000             | AMP-AD_ATAC_pseudobulk_astrocytes.h5 | HDF5
- AMP-AD | AMP-AD_10xMultiome_10002701_R2.fastq.gz | fastq   | 10x Multiome | HiSeq2000             | AMP-AD_ATAC_pseudobulk_astrocytes.h5 | HDF5
- AMP-AD | AMP-AD_10xMultiome_10003002_R1.fastq.gz | fastq   | 10x Multiome | Illumina NovaSeq 6000 | AMP-AD_ATAC_pseudobulk_astrocytes.h5 | HDF5
- AMP-AD | AMP-AD_10xMultiome_10003002_R2.fastq.gz | fastq   | 10x Multiome | Illumina NovaSeq 6000 | AMP-AD_ATAC_pseudobulk_astrocytes.h5 | HDF5
- AMP-AD | AMP-AD_10xMultiome_10004801_R1.fastq.gz | fastq   | 10x Multiome | HiSeq2000             | AMP-AD_ATAC_pseudobulk_astrocytes.h5 | HDF5
- AMP-AD | AMP-AD_10xMultiome_10004801_R2.fastq.gz | fastq   | 10x Multiome | HiSeq2000             | AMP-AD_ATAC_pseudobulk_astrocytes.h5 | HDF5
- AMP-AD | AMP-AD_10xMultiome_10006801_R1.fastq.gz | fastq   | 10x Multiome | HiSeq2000             | AMP-AD_ATAC_pseudobulk_astrocytes.h5 | HDF5
- AMP-AD | AMP-AD_10xMultiome_10006801_R2.fastq.gz | fastq   | 10x Multiome | HiSeq2000             | AMP-AD_ATAC_pseudobulk_astrocytes.h5 | HDF5
+ study  |               source_file               | src_fmt |    assay     |    platform     |              harmonized_output              | out_fmt 
+--------+-----------------------------------------+---------+--------------+-----------------+---------------------------------------------+---------
+ AMP-AD | AMP-AD_10xMultiome_10001901_R1.fastq.gz | fastq   | 10x Multiome | HiSeqX          | AMP-AD_ATAC_pseudobulk_GABAergic_neurons.h5 | HDF5
+ AMP-AD | AMP-AD_10xMultiome_10001901_R2.fastq.gz | fastq   | 10x Multiome | HiSeqX          | AMP-AD_ATAC_pseudobulk_GABAergic_neurons.h5 | HDF5
+ AMP-AD | AMP-AD_10xMultiome_10002701_R1.fastq.gz | fastq   | 10x Multiome | HiSeq2000       | AMP-AD_ATAC_pseudobulk_GABAergic_neurons.h5 | HDF5
+ AMP-AD | AMP-AD_10xMultiome_10002701_R2.fastq.gz | fastq   | 10x Multiome | HiSeq2000       | AMP-AD_ATAC_pseudobulk_GABAergic_neurons.h5 | HDF5
+ AMP-AD | AMP-AD_10xMultiome_10003002_R1.fastq.gz | fastq   | 10x Multiome | Q Exactive Plus | AMP-AD_ATAC_pseudobulk_GABAergic_neurons.h5 | HDF5
+ AMP-AD | AMP-AD_10xMultiome_10003002_R2.fastq.gz | fastq   | 10x Multiome | Q Exactive Plus | AMP-AD_ATAC_pseudobulk_GABAergic_neurons.h5 | HDF5
+ AMP-AD | AMP-AD_10xMultiome_10004801_R1.fastq.gz | fastq   | 10x Multiome | NovaSeq 6000    | AMP-AD_ATAC_pseudobulk_GABAergic_neurons.h5 | HDF5
+ AMP-AD | AMP-AD_10xMultiome_10004801_R2.fastq.gz | fastq   | 10x Multiome | NovaSeq 6000    | AMP-AD_ATAC_pseudobulk_GABAergic_neurons.h5 | HDF5
+ AMP-AD | AMP-AD_10xMultiome_10006801_R1.fastq.gz | fastq   | 10x Multiome | Lumos           | AMP-AD_ATAC_pseudobulk_GABAergic_neurons.h5 | HDF5
+ AMP-AD | AMP-AD_10xMultiome_10006801_R2.fastq.gz | fastq   | 10x Multiome | Lumos           | AMP-AD_ATAC_pseudobulk_GABAergic_neurons.h5 | HDF5
 (10 rows)
 ```
 
@@ -997,20 +984,20 @@ LIMIT 12;
 ```
 Returns — source_file, src_fmt, assay, platform, source_size -- every raw fastq that contributed to the one named harmonized output:
 ```
-               source_file                | src_fmt |  assay   |       platform        | source_size 
-------------------------------------------+---------+----------+-----------------------+-------------
- AMP-RA-SLE_scRNAseq_10000603_R1.fastq.gz | fastq   | scRNAseq | HiSeq2000             | 66 GB
- AMP-RA-SLE_scRNAseq_10000603_R2.fastq.gz | fastq   | scRNAseq | HiSeq2000             | 21 GB
- AMP-RA-SLE_scRNAseq_10000604_R1.fastq.gz | fastq   | scRNAseq | HiSeq2000             | 4224 MB
- AMP-RA-SLE_scRNAseq_10000604_R2.fastq.gz | fastq   | scRNAseq | HiSeq2000             | 14 GB
- AMP-RA-SLE_scRNAseq_10002206_R1.fastq.gz | fastq   | scRNAseq | HiSeq2000             | 59 GB
- AMP-RA-SLE_scRNAseq_10002206_R2.fastq.gz | fastq   | scRNAseq | HiSeq2000             | 60 GB
- AMP-RA-SLE_scRNAseq_10003706_R1.fastq.gz | fastq   | scRNAseq | HiSeq2000             | 84 GB
- AMP-RA-SLE_scRNAseq_10003706_R2.fastq.gz | fastq   | scRNAseq | HiSeq2000             | 77 GB
- AMP-RA-SLE_scRNAseq_10003711_R1.fastq.gz | fastq   | scRNAseq | HiSeq2000             | 35 GB
- AMP-RA-SLE_scRNAseq_10003711_R2.fastq.gz | fastq   | scRNAseq | HiSeq2000             | 38 GB
- AMP-RA-SLE_scRNAseq_10004305_R1.fastq.gz | fastq   | scRNAseq | Illumina NovaSeq 6000 | 13 GB
- AMP-RA-SLE_scRNAseq_10004305_R2.fastq.gz | fastq   | scRNAseq | Illumina NovaSeq 6000 | 56 GB
+               source_file                | src_fmt |  assay   |                    platform                     | source_size 
+------------------------------------------+---------+----------+-------------------------------------------------+-------------
+ AMP-RA-SLE_scRNAseq_10000603_R1.fastq.gz | fastq   | scRNAseq | Chromium Controller, Illumina NovaSeq 6000      | 66 GB
+ AMP-RA-SLE_scRNAseq_10000603_R2.fastq.gz | fastq   | scRNAseq | Chromium Controller, Illumina NovaSeq 6000      | 21 GB
+ AMP-RA-SLE_scRNAseq_10000604_R1.fastq.gz | fastq   | scRNAseq | Chromium Controller, Illumina NovaSeq 6000      | 4224 MB
+ AMP-RA-SLE_scRNAseq_10000604_R2.fastq.gz | fastq   | scRNAseq | Chromium Controller, Illumina NovaSeq 6000      | 14 GB
+ AMP-RA-SLE_scRNAseq_10002206_R1.fastq.gz | fastq   | scRNAseq | Illumina HiSeq X Ten, Chromium Next GEM Chip G  | 59 GB
+ AMP-RA-SLE_scRNAseq_10002206_R2.fastq.gz | fastq   | scRNAseq | Illumina HiSeq X Ten, Chromium Next GEM Chip G  | 60 GB
+ AMP-RA-SLE_scRNAseq_10003706_R1.fastq.gz | fastq   | scRNAseq | Illumina HiSeq X Ten, Chromium Next GEM Chip G  | 84 GB
+ AMP-RA-SLE_scRNAseq_10003706_R2.fastq.gz | fastq   | scRNAseq | Illumina HiSeq X Ten, Chromium Next GEM Chip G  | 77 GB
+ AMP-RA-SLE_scRNAseq_10003711_R1.fastq.gz | fastq   | scRNAseq | Illumina NovaSeq 6000, Chromium Next GEM Chip G | 35 GB
+ AMP-RA-SLE_scRNAseq_10003711_R2.fastq.gz | fastq   | scRNAseq | Illumina NovaSeq 6000, Chromium Next GEM Chip G | 38 GB
+ AMP-RA-SLE_scRNAseq_10004305_R1.fastq.gz | fastq   | scRNAseq | unknown                                         | 13 GB
+ AMP-RA-SLE_scRNAseq_10004305_R2.fastq.gz | fastq   | scRNAseq | unknown                                         | 56 GB
 (12 rows)
 ```
 
@@ -1036,15 +1023,15 @@ Returns — study, harmonized_output, analysis_type, n_source_files, n_assays, o
 ```
   study  |                harmonized_output                | analysis_type | n_source_files | n_assays | output_size | total_source_size 
 ---------+-------------------------------------------------+---------------+----------------+----------+-------------+-------------------
- AMP-AD  | AMP-AD_ATAC_pseudobulk_astrocytes.h5            | ATAC          |            764 |      382 | 933 MB      | 31 TB
  AMP-AD  | AMP-AD_ATAC_pseudobulk_GABAergic_neurons.h5     | ATAC          |            764 |      382 | 952 MB      | 31 TB
  AMP-AD  | AMP-AD_ATAC_pseudobulk_GLUtamatergic_neurons.h5 | ATAC          |            764 |      382 | 518 MB      | 31 TB
+ AMP-AD  | AMP-AD_ATAC_pseudobulk_astrocytes.h5            | ATAC          |            764 |      382 | 933 MB      | 31 TB
  AMP-AD  | AMP-AD_ATAC_pseudobulk_microglia.h5             | ATAC          |            764 |      382 | 1060 MB     | 31 TB
  AMP-AD  | AMP-AD_ATAC_pseudobulk_oligodendrocyte.h5       | ATAC          |            764 |      382 | 1545 MB     | 31 TB
  AMP-AD  | AMP-AD_RNA_matrix.hdf5                          | RNA           |            200 |      200 | 2243 MB     | 8645 GB
- AMP-AD  | AMP-AD_RNA_pseudobulk_astrocytes.h5             | RNA           |           1038 |      519 | 2610 MB     | 43 TB
  AMP-AD  | AMP-AD_RNA_pseudobulk_GABAergic_neurons.h5      | RNA           |           1038 |      519 | 808 MB      | 43 TB
  AMP-AD  | AMP-AD_RNA_pseudobulk_GLUtamatergic_neurons.h5  | RNA           |           1038 |      519 | 1614 MB     | 43 TB
+ AMP-AD  | AMP-AD_RNA_pseudobulk_astrocytes.h5             | RNA           |           1038 |      519 | 2610 MB     | 43 TB
  AMP-AD  | AMP-AD_RNA_pseudobulk_microglia.h5              | RNA           |           1038 |      519 | 608 MB      | 43 TB
  AMP-AD  | AMP-AD_RNA_pseudobulk_oligodendrocyte.h5        | RNA           |           1038 |      519 | 1228 MB     | 43 TB
  AMP-CMD | AMP-CMD_RNA_matrix.hdf5                         | RNA           |             63 |       63 | 1636 MB     | 2634 GB
@@ -1073,20 +1060,20 @@ LIMIT 12;
 ```
 Returns — study, harmonized_output, contributor_disease, n_participants -- disease composition of the cohort behind each RA-SLE harmonized output:
 ```
-   study    |        harmonized_output        |       contributor_disease       | n_participants 
-------------+---------------------------------+---------------------------------+----------------
- AMP-RA-SLE | AMP-RA-SLE_cytometry_matrix.fcs | Dermatomyositis                 |              7
- AMP-RA-SLE | AMP-RA-SLE_cytometry_matrix.fcs | Systemic lupus erythematosus    |              6
- AMP-RA-SLE | AMP-RA-SLE_cytometry_matrix.fcs | Rheumatoid arthritis            |              4
- AMP-RA-SLE | AMP-RA-SLE_cytometry_matrix.fcs | Vitiligo                        |              4
- AMP-RA-SLE | AMP-RA-SLE_cytometry_matrix.fcs | Psoriasis                       |              4
- AMP-RA-SLE | AMP-RA-SLE_cytometry_matrix.fcs | SLE glomerulonephritis syndrome |              3
- AMP-RA-SLE | AMP-RA-SLE_cytometry_matrix.fcs | Discoid lupus                   |              3
- AMP-RA-SLE | AMP-RA-SLE_cytometry_matrix.fcs | Sjögren's syndrome              |              2
- AMP-RA-SLE | AMP-RA-SLE_cytometry_matrix.fcs | Scleroderma                     |              1
- AMP-RA-SLE | AMP-RA-SLE_RNA_matrix.hdf5      | Rheumatoid arthritis            |              8
- AMP-RA-SLE | AMP-RA-SLE_RNA_matrix.hdf5      | Psoriasis                       |              7
- AMP-RA-SLE | AMP-RA-SLE_RNA_matrix.hdf5      | Dermatomyositis                 |              6
+   study    |          harmonized_output          |     contributor_disease      | n_participants 
+------------+-------------------------------------+------------------------------+----------------
+ AMP-RA-SLE | AMP-RA-SLE_RNA_matrix.hdf5          | Systemic lupus erythematosus |             36
+ AMP-RA-SLE | AMP-RA-SLE_RNA_matrix.hdf5          | Rheumatoid arthritis         |             22
+ AMP-RA-SLE | AMP-RA-SLE_RNA_matrix.hdf5          | Vitiligo                     |              2
+ AMP-RA-SLE | AMP-RA-SLE_RNA_matrix.hdf5          | Dermatomyositis              |              1
+ AMP-RA-SLE | AMP-RA-SLE_RNA_pseudobulk_B_cell.h5 | Systemic lupus erythematosus |             51
+ AMP-RA-SLE | AMP-RA-SLE_RNA_pseudobulk_B_cell.h5 | Rheumatoid arthritis         |             36
+ AMP-RA-SLE | AMP-RA-SLE_RNA_pseudobulk_B_cell.h5 | Vitiligo                     |              3
+ AMP-RA-SLE | AMP-RA-SLE_RNA_pseudobulk_B_cell.h5 | Dermatomyositis              |              1
+ AMP-RA-SLE | AMP-RA-SLE_RNA_pseudobulk_T_cell.h5 | Systemic lupus erythematosus |             51
+ AMP-RA-SLE | AMP-RA-SLE_RNA_pseudobulk_T_cell.h5 | Rheumatoid arthritis         |             36
+ AMP-RA-SLE | AMP-RA-SLE_RNA_pseudobulk_T_cell.h5 | Vitiligo                     |              3
+ AMP-RA-SLE | AMP-RA-SLE_RNA_pseudobulk_T_cell.h5 | Dermatomyositis              |              1
 (12 rows)
 ```
 
@@ -1250,18 +1237,18 @@ Returns — person_id, study, modalities (text[] of distinct modality labels), n
 ```
  person_id |   study    |                             modalities                             | n_files 
 -----------+------------+--------------------------------------------------------------------+---------
-    100120 | AMP-RA-SLE | {cytometry,proteomics(matrix),RNA,source:fastq,source:fcs,spatial} |       8
-    100632 | AMP-RA-SLE | {cytometry,proteomics(matrix),RNA,source:fastq,source:fcs,spatial} |      14
-    101247 | AMP-RA-SLE | {cytometry,proteomics(matrix),RNA,source:fastq,source:fcs,spatial} |      20
-    101641 | AMP-RA-SLE | {cytometry,proteomics(matrix),RNA,source:fastq,source:fcs,spatial} |      14
-    101677 | AMP-RA-SLE | {cytometry,proteomics(matrix),RNA,source:fastq,source:fcs,spatial} |      16
-    101914 | AMP-RA-SLE | {cytometry,proteomics(matrix),RNA,source:fastq,source:fcs,spatial} |      16
-    101962 | AMP-RA-SLE | {cytometry,proteomics(matrix),RNA,source:fastq,source:fcs,spatial} |      18
-    102072 | AMP-RA-SLE | {cytometry,proteomics(matrix),RNA,source:fastq,source:fcs,spatial} |      18
-    100006 | AMP-RA-SLE | {cytometry,proteomics(matrix),RNA,source:fastq,source:fcs}         |      15
-    100022 | AMP-RA-SLE | {cytometry,RNA,source:fastq,source:fcs,spatial}                    |      16
-    100037 | AMP-RA-SLE | {cytometry,RNA,source:fastq,source:fcs,spatial}                    |      20
-    100049 | AMP-RA-SLE | {cytometry,proteomics(matrix),RNA,source:fastq,source:fcs}         |      15
+       120 | AMP-RA-SLE | {RNA,cytometry,proteomics(matrix),source:fastq,source:fcs,spatial} |       8
+       632 | AMP-RA-SLE | {RNA,cytometry,proteomics(matrix),source:fastq,source:fcs,spatial} |      14
+      1247 | AMP-RA-SLE | {RNA,cytometry,proteomics(matrix),source:fastq,source:fcs,spatial} |      20
+      1641 | AMP-RA-SLE | {RNA,cytometry,proteomics(matrix),source:fastq,source:fcs,spatial} |      14
+      1677 | AMP-RA-SLE | {RNA,cytometry,proteomics(matrix),source:fastq,source:fcs,spatial} |      16
+      1914 | AMP-RA-SLE | {RNA,cytometry,proteomics(matrix),source:fastq,source:fcs,spatial} |      16
+      1962 | AMP-RA-SLE | {RNA,cytometry,proteomics(matrix),source:fastq,source:fcs,spatial} |      18
+      2072 | AMP-RA-SLE | {RNA,cytometry,proteomics(matrix),source:fastq,source:fcs,spatial} |      18
+         6 | AMP-RA-SLE | {RNA,cytometry,proteomics(matrix),source:fastq,source:fcs}         |      15
+        22 | AMP-RA-SLE | {RNA,cytometry,source:fastq,source:fcs,spatial}                    |      16
+        37 | AMP-RA-SLE | {RNA,cytometry,source:fastq,source:fcs,spatial}                    |      20
+        49 | AMP-RA-SLE | {RNA,cytometry,proteomics(matrix),source:fastq,source:fcs}         |      15
 (12 rows)
 ```
 
@@ -1305,13 +1292,13 @@ Returns — modality_set (text[]), n_modalities, n_individuals. 9 combinations; 
 --------------------------------------------------------------------+--------------+---------------
  {RNA,source:fastq}                                                 |            2 |           420
  {ATAC,RNA,source:fastq}                                            |            3 |           250
- {proteomics(matrix),RNA,source:fastq}                              |            3 |            28
+ {RNA,proteomics(matrix),source:fastq}                              |            3 |            28
  {RNA,source:fastq,spatial}                                         |            3 |            22
- {proteomics(matrix),RNA,source:fastq,spatial}                      |            4 |            16
- {cytometry,RNA,source:fastq,source:fcs}                            |            4 |            14
- {cytometry,proteomics(matrix),RNA,source:fastq,source:fcs}         |            5 |            11
- {cytometry,RNA,source:fastq,source:fcs,spatial}                    |            5 |            11
- {cytometry,proteomics(matrix),RNA,source:fastq,source:fcs,spatial} |            6 |             8
+ {RNA,proteomics(matrix),source:fastq,spatial}                      |            4 |            16
+ {RNA,cytometry,source:fastq,source:fcs}                            |            4 |            14
+ {RNA,cytometry,source:fastq,source:fcs,spatial}                    |            5 |            11
+ {RNA,cytometry,proteomics(matrix),source:fastq,source:fcs}         |            5 |            11
+ {RNA,cytometry,proteomics(matrix),source:fastq,source:fcs,spatial} |            6 |             8
 (9 rows)
 ```
 
@@ -1350,20 +1337,20 @@ LIMIT 12;
 ```
 Returns — person_id, study, extra_omics (harmonized/matrix omics beyond RNA), disease. Only individuals with >=1 extra omic (the actionable multi-omic subset); AMP-AD members carry {ATAC}.:
 ```
- person_id |   study    |              extra_omics               |             disease             
------------+------------+----------------------------------------+---------------------------------
-    100120 | AMP-RA-SLE | {cytometry,proteomics(matrix),spatial} | Rheumatoid arthritis
-    100632 | AMP-RA-SLE | {cytometry,proteomics(matrix),spatial} | SLE glomerulonephritis syndrome
-    101247 | AMP-RA-SLE | {cytometry,proteomics(matrix),spatial} | Systemic lupus erythematosus
-    101641 | AMP-RA-SLE | {cytometry,proteomics(matrix),spatial} | (none)
-    101677 | AMP-RA-SLE | {cytometry,proteomics(matrix),spatial} | Dermatomyositis
-    101914 | AMP-RA-SLE | {cytometry,proteomics(matrix),spatial} | (none)
-    101962 | AMP-RA-SLE | {cytometry,proteomics(matrix),spatial} | Discoid lupus
-    102072 | AMP-RA-SLE | {cytometry,proteomics(matrix),spatial} | Sjögren's syndrome
-    100006 | AMP-RA-SLE | {cytometry,proteomics(matrix)}         | Systemic lupus erythematosus
-    100022 | AMP-RA-SLE | {cytometry,spatial}                    | Systemic lupus erythematosus
-    100037 | AMP-RA-SLE | {cytometry,spatial}                    | (none)
-    100049 | AMP-RA-SLE | {cytometry,proteomics(matrix)}         | Psoriasis
+ person_id |   study    |              extra_omics               |           disease            
+-----------+------------+----------------------------------------+------------------------------
+       120 | AMP-RA-SLE | {cytometry,proteomics(matrix),spatial} | Systemic lupus erythematosus
+       632 | AMP-RA-SLE | {cytometry,proteomics(matrix),spatial} | Rheumatoid arthritis
+      1247 | AMP-RA-SLE | {cytometry,proteomics(matrix),spatial} | Rheumatoid arthritis
+      1641 | AMP-RA-SLE | {cytometry,proteomics(matrix),spatial} | (none)
+      1677 | AMP-RA-SLE | {cytometry,proteomics(matrix),spatial} | Rheumatoid arthritis
+      1914 | AMP-RA-SLE | {cytometry,proteomics(matrix),spatial} | (none)
+      1962 | AMP-RA-SLE | {cytometry,proteomics(matrix),spatial} | Rheumatoid arthritis
+      2072 | AMP-RA-SLE | {cytometry,proteomics(matrix),spatial} | Rheumatoid arthritis
+         6 | AMP-RA-SLE | {cytometry,proteomics(matrix)}         | (none)
+        22 | AMP-RA-SLE | {cytometry,spatial}                    | Rheumatoid arthritis
+        37 | AMP-RA-SLE | {cytometry,spatial}                    | (none)
+        49 | AMP-RA-SLE | {cytometry,proteomics(matrix)}         | Systemic lupus erythematosus
 (12 rows)
 ```
 
@@ -1442,18 +1429,18 @@ Returns — person_id, diagnosis, group_label (case/control/unspecified), n_rna 
 ```
  person_id |      diagnosis      | group_label | n_rna | n_atac 
 -----------+---------------------+-------------+-------+--------
-    100009 | Alzheimer's disease | case        |     1 |      5
-    100019 | Alzheimer's disease | case        |     5 |      5
-    100027 | Alzheimer's disease | case        |     5 |      5
-    100030 | Alzheimer's disease | case        |     5 |      5
-    100187 | Alzheimer's disease | case        |     5 |      5
-    100193 | Alzheimer's disease | case        |     5 |      5
-    100207 | Alzheimer's disease | case        |     1 |      5
-    100225 | Alzheimer's disease | case        |     6 |      5
-    100255 | Alzheimer's disease | case        |     5 |      5
-    100274 | Alzheimer's disease | case        |     5 |      5
-    100293 | Alzheimer's disease | case        |     5 |      5
-    100450 | Alzheimer's disease | case        |     5 |      5
+        68 | Alzheimer's disease | case        |     5 |      5
+       193 | Alzheimer's disease | case        |     5 |      5
+       232 | Alzheimer's disease | case        |     1 |      5
+       453 | Alzheimer's disease | case        |     6 |      5
+       689 | Alzheimer's disease | case        |     5 |      5
+       952 | Alzheimer's disease | case        |     5 |      5
+       974 | Alzheimer's disease | case        |     1 |      5
+      1000 | Alzheimer's disease | case        |     6 |      5
+      1020 | Alzheimer's disease | case        |     5 |      5
+      1097 | Alzheimer's disease | case        |     5 |      5
+      1138 | Alzheimer's disease | case        |     5 |      5
+      1369 | Alzheimer's disease | case        |     5 |      5
 (12 rows)
 ```
 
@@ -1486,11 +1473,10 @@ Returns — group_label (case/control/unspecified), diagnosis, n_individuals -- 
 ```
     group_label     |      diagnosis      | n_individuals 
 --------------------+---------------------+---------------
- unspecified status | Other               |           138
- case (disease)     | Alzheimer's disease |            68
- control (healthy)  | Normal              |            41
- unspecified status | Not applicable      |             3
-(4 rows)
+ unspecified status | Other               |           113
+ case (disease)     | Alzheimer's disease |            32
+ control (healthy)  | Normal              |            29
+(3 rows)
 ```
 
 **variation: RNA/ATAC file inventory** — Which harmonized RNA and ATAC matrices back the multi-omic comparison, per cell type, with format, size, and contributor count?
@@ -1514,15 +1500,15 @@ Returns — analysis_type, cell_type, file_name, file_format, size_mb, n_contrib
 ```
  analysis_type |       cell_type       |                    file_name                    | file_format | size_mb | n_contributors 
 ---------------+-----------------------+-------------------------------------------------+-------------+---------+----------------
- ATAC          | astrocytes            | AMP-AD_ATAC_pseudobulk_astrocytes.h5            | HDF5        |   933.3 |            330
  ATAC          | GABAergic neurons     | AMP-AD_ATAC_pseudobulk_GABAergic_neurons.h5     | HDF5        |   952.0 |            330
  ATAC          | GLUtamatergic neurons | AMP-AD_ATAC_pseudobulk_GLUtamatergic_neurons.h5 | HDF5        |   517.9 |            330
+ ATAC          | astrocytes            | AMP-AD_ATAC_pseudobulk_astrocytes.h5            | HDF5        |   933.3 |            330
  ATAC          | microglia             | AMP-AD_ATAC_pseudobulk_microglia.h5             | HDF5        |  1060.2 |            330
  ATAC          | oligodendrocyte       | AMP-AD_ATAC_pseudobulk_oligodendrocyte.h5       | HDF5        |  1545.5 |            330
  RNA           | (bulk matrix)         | AMP-AD_RNA_matrix.hdf5                          | HDF5        |  2242.5 |            182
- RNA           | astrocytes            | AMP-AD_RNA_pseudobulk_astrocytes.h5             | HDF5        |  2609.8 |            420
  RNA           | GABAergic neurons     | AMP-AD_RNA_pseudobulk_GABAergic_neurons.h5      | HDF5        |   807.9 |            420
  RNA           | GLUtamatergic neurons | AMP-AD_RNA_pseudobulk_GLUtamatergic_neurons.h5  | HDF5        |  1613.6 |            420
+ RNA           | astrocytes            | AMP-AD_RNA_pseudobulk_astrocytes.h5             | HDF5        |  2609.8 |            420
  RNA           | microglia             | AMP-AD_RNA_pseudobulk_microglia.h5              | HDF5        |   607.7 |            420
  RNA           | oligodendrocyte       | AMP-AD_RNA_pseudobulk_oligodendrocyte.h5        | HDF5        |  1228.3 |            420
 (11 rows)
@@ -1556,15 +1542,18 @@ ORDER BY group_label, n_individuals DESC;
 ```
 Returns — group_label (case/control/unspecified), sex (MALE/FEMALE/Unknown/no sex record; from the harmonized sex observation, value_as_concept_id 8507/8532), n_individuals:
 ```
-    group_label     |  sex   | n_individuals 
---------------------+--------+---------------
- case (disease)     | MALE   |            35
- case (disease)     | FEMALE |            33
- control (healthy)  | MALE   |            23
- control (healthy)  | FEMALE |            18
- unspecified status | MALE   |            82
- unspecified status | FEMALE |            59
-(6 rows)
+    group_label     |       sex       | n_individuals 
+--------------------+-----------------+---------------
+ case (disease)     | (no sex record) |            21
+ case (disease)     | FEMALE          |             9
+ case (disease)     | MALE            |             2
+ control (healthy)  | (no sex record) |            22
+ control (healthy)  | FEMALE          |             4
+ control (healthy)  | MALE            |             3
+ unspecified status | (no sex record) |            93
+ unspecified status | FEMALE          |            11
+ unspecified status | MALE            |             9
+(9 rows)
 ```
 
 > **Coverage:** The multi-omic (RNA+ATAC harmonized) subset exists ONLY in AMP-AD: 250 individuals who contributed to at least one RNA and one ATAC harmonized matrix. No other program has ATAC harmonized data, so PD/CMD/RA-SLE cannot appear here. The disease-vs-healthy contrast is therefore Alzheimer's disease only -- the analyzable arms are 68 AD cases (qualifier 1989833 'Admitting diagnosis') vs 41 healthy controls (qualifier 44804027 'Control group' / value 'Normal'). A large majority of the subset (141 of 250) carries a non-disease STATUS instead of a clean case/control label -- 138 'Other', 3 'Not applicable' -- and is bucketed as 'unspecified'; these are unusable for the signature contrast without additional clinical fields. Sex is now recorded for the full multi-omic subset via the harmonized `sex` observation (concept 3046965 -> MALE/FEMALE), so sex-adjusted analysis is supported across both the case and control arms. Note the file-inventory contributor counts (330 ATAC, 420 RNA per pseudobulk matrix) exceed the 250 both-omic individuals because each harmonized matrix also aggregates RNA-only or ATAC-only donors; the 250 figure is the intersection who have BOTH modalities.
@@ -1604,9 +1593,9 @@ Returns — cell_type, scrnaseq_dataset, rna_size, matching_atacseq_dataset, ata
 ```
        cell_type       |                scrnaseq_dataset                | rna_size |            matching_atacseq_dataset             | atac_size | shared_specimens 
 -----------------------+------------------------------------------------+----------+-------------------------------------------------+-----------+------------------
- astrocytes            | AMP-AD_RNA_pseudobulk_astrocytes.h5            | 2610 MB  | AMP-AD_ATAC_pseudobulk_astrocytes.h5            | 933 MB    |              181
  GABAergic neurons     | AMP-AD_RNA_pseudobulk_GABAergic_neurons.h5     | 808 MB   | AMP-AD_ATAC_pseudobulk_GABAergic_neurons.h5     | 952 MB    |              181
  GLUtamatergic neurons | AMP-AD_RNA_pseudobulk_GLUtamatergic_neurons.h5 | 1614 MB  | AMP-AD_ATAC_pseudobulk_GLUtamatergic_neurons.h5 | 518 MB    |              181
+ astrocytes            | AMP-AD_RNA_pseudobulk_astrocytes.h5            | 2610 MB  | AMP-AD_ATAC_pseudobulk_astrocytes.h5            | 933 MB    |              181
  microglia             | AMP-AD_RNA_pseudobulk_microglia.h5             | 608 MB   | AMP-AD_ATAC_pseudobulk_microglia.h5             | 1060 MB   |              181
  oligodendrocyte       | AMP-AD_RNA_pseudobulk_oligodendrocyte.h5       | 1228 MB  | AMP-AD_ATAC_pseudobulk_oligodendrocyte.h5       | 1545 MB   |              181
 (5 rows)
@@ -1629,18 +1618,18 @@ Returns — specimen_id, person_id, specimen_source_value, anatomic_site, platfo
 ```
  specimen_id | person_id |     specimen_source_value      | anatomic_site |       platform        |       disease       
 -------------+-----------+--------------------------------+---------------+-----------------------+---------------------
-    10001901 |    100019 | Head of caudate nucleus        | BA9           | HiSeq2000             | Alzheimer's disease
-    10002701 |    100027 | dorsolateral prefrontal cortex | NA            | HiSeq2000             | Alzheimer's disease
-    10003002 |    100030 | posterior cingulate cortex     | NA            | Illumina NovaSeq 6000 | Alzheimer's disease
-    10004801 |    100048 | blood                          | blood         | HiSeq2000             | Other
-    10006801 |    100068 | dorsolateral prefrontal cortex | NA            | HiSeq2000             | Other
-    10014702 |    100147 | dorsolateral prefrontal cortex | NA            | HiSeq2000             | Other
-    10014703 |    100147 | dorsolateral prefrontal cortex | NA            | HiSeq2000             | Other
-    10016101 |    100161 | dorsolateral prefrontal cortex | NA            | HiSeq2000             | Other
-    10017101 |    100171 | dorsolateral prefrontal cortex | NA            | HiSeq2000             | Normal
-    10017303 |    100173 | dorsolateral prefrontal cortex | NA            | HiSeq2000             | Normal
-    10017702 |    100177 | dorsolateral prefrontal cortex | NA            | HiSeq2000             | Other
-    10018701 |    100187 | blood                          | blood         | HiSeq2000             | Alzheimer's disease
+    10001901 |        19 | DLPFC                          | BA22          | HiSeqX                | 
+    10002701 |        27 | dorsolateral prefrontal cortex | BA9           | HiSeq2000             | 
+    10003002 |        30 | superior temporal gyrus        | BA9           | Q Exactive Plus       | 
+    10004801 |        48 | serum                          | serum         | NovaSeq 6000          | Other
+    10006801 |        68 | cerebellum                     | BA22          | Lumos                 | Alzheimer's disease
+    10014702 |       147 | dorsolateral prefrontal cortex | BA9           | NovaSeq 6000          | Other
+    10014703 |       147 | dorsolateral prefrontal cortex | BA23          | HiSeq2000             | Other
+    10016101 |       161 | dorsolateral prefrontal cortex | BA9           | HiSeq2000             | Other
+    10017101 |       171 | prefrontal cortex              | BA9           | HiSeq2000             | Normal
+    10017303 |       173 | dorsolateral prefrontal cortex | BA22          | Illumina NovaSeq 6000 | Other
+    10017702 |       177 | prefrontal cortex              | BA9           | HiSeq2000             | Other
+    10018701 |       187 | dorsolateral prefrontal cortex | BA22          | HiSeqX                | Other
 (12 rows)
 ```
 
@@ -1664,18 +1653,18 @@ Returns — specimen_id, person_id, rna_files, atac_files, cell_types[]:
 ```
  specimen_id | person_id | rna_files | atac_files |                                     cell_types                                     
 -------------+-----------+-----------+------------+------------------------------------------------------------------------------------
-    10001901 |    100019 |         5 |          5 | {astrocytes,"GABAergic neurons","GLUtamatergic neurons",microglia,oligodendrocyte}
-    10002701 |    100027 |         5 |          5 | {astrocytes,"GABAergic neurons","GLUtamatergic neurons",microglia,oligodendrocyte}
-    10003002 |    100030 |         5 |          5 | {astrocytes,"GABAergic neurons","GLUtamatergic neurons",microglia,oligodendrocyte}
-    10004801 |    100048 |         5 |          5 | {astrocytes,"GABAergic neurons","GLUtamatergic neurons",microglia,oligodendrocyte}
-    10006801 |    100068 |         5 |          5 | {astrocytes,"GABAergic neurons","GLUtamatergic neurons",microglia,oligodendrocyte}
-    10014702 |    100147 |         5 |          5 | {astrocytes,"GABAergic neurons","GLUtamatergic neurons",microglia,oligodendrocyte}
-    10014703 |    100147 |         5 |          5 | {astrocytes,"GABAergic neurons","GLUtamatergic neurons",microglia,oligodendrocyte}
-    10016101 |    100161 |         5 |          5 | {astrocytes,"GABAergic neurons","GLUtamatergic neurons",microglia,oligodendrocyte}
-    10017101 |    100171 |         5 |          5 | {astrocytes,"GABAergic neurons","GLUtamatergic neurons",microglia,oligodendrocyte}
-    10017303 |    100173 |         5 |          5 | {astrocytes,"GABAergic neurons","GLUtamatergic neurons",microglia,oligodendrocyte}
-    10017702 |    100177 |         5 |          5 | {astrocytes,"GABAergic neurons","GLUtamatergic neurons",microglia,oligodendrocyte}
-    10018701 |    100187 |         5 |          5 | {astrocytes,"GABAergic neurons","GLUtamatergic neurons",microglia,oligodendrocyte}
+    10001901 |        19 |         5 |          5 | {"GABAergic neurons","GLUtamatergic neurons",astrocytes,microglia,oligodendrocyte}
+    10002701 |        27 |         5 |          5 | {"GABAergic neurons","GLUtamatergic neurons",astrocytes,microglia,oligodendrocyte}
+    10003002 |        30 |         5 |          5 | {"GABAergic neurons","GLUtamatergic neurons",astrocytes,microglia,oligodendrocyte}
+    10004801 |        48 |         5 |          5 | {"GABAergic neurons","GLUtamatergic neurons",astrocytes,microglia,oligodendrocyte}
+    10006801 |        68 |         5 |          5 | {"GABAergic neurons","GLUtamatergic neurons",astrocytes,microglia,oligodendrocyte}
+    10014702 |       147 |         5 |          5 | {"GABAergic neurons","GLUtamatergic neurons",astrocytes,microglia,oligodendrocyte}
+    10014703 |       147 |         5 |          5 | {"GABAergic neurons","GLUtamatergic neurons",astrocytes,microglia,oligodendrocyte}
+    10016101 |       161 |         5 |          5 | {"GABAergic neurons","GLUtamatergic neurons",astrocytes,microglia,oligodendrocyte}
+    10017101 |       171 |         5 |          5 | {"GABAergic neurons","GLUtamatergic neurons",astrocytes,microglia,oligodendrocyte}
+    10017303 |       173 |         5 |          5 | {"GABAergic neurons","GLUtamatergic neurons",astrocytes,microglia,oligodendrocyte}
+    10017702 |       177 |         5 |          5 | {"GABAergic neurons","GLUtamatergic neurons",astrocytes,microglia,oligodendrocyte}
+    10018701 |       187 |         5 |          5 | {"GABAergic neurons","GLUtamatergic neurons",astrocytes,microglia,oligodendrocyte}
 (12 rows)
 ```
 
@@ -1697,9 +1686,23 @@ Returns — platform, multiome_specimens, rna_datasets, atac_datasets:
 ```
        platform        | multiome_specimens | rna_datasets | atac_datasets 
 -----------------------+--------------------+--------------+---------------
- HiSeq2000             |                166 |            5 |             5
- Illumina NovaSeq 6000 |                 15 |            5 |             5
-(2 rows)
+ HiSeq2000             |                 64 |            5 |             5
+ IlluminaNovaseq6000   |                 25 |            5 |             5
+ Illumina NovaSeq 6000 |                 19 |            5 |             5
+ HiSeqX                |                 13 |            5 |             5
+ NovaSeq 6000          |                 12 |            5 |             5
+ HiSeq2500             |                 12 |            5 |             5
+ Lumos                 |                  8 |            5 |             5
+ Q Extrative Plus      |                  5 |            5 |             5
+ Q Exactive Plus       |                  5 |            5 |             5
+ 10x Genomics          |                  5 |            5 |             5
+ OrbiTrap Fusion       |                  4 |            5 |             5
+ Eclipse               |                  2 |            5 |             5
+ Q Exactive HF         |                  2 |            5 |             5
+ Q Exactive HF-X       |                  2 |            5 |             5
+ Exploris 240          |                  2 |            5 |             5
+ HiSeq4000             |                  1 |            5 |             5
+(16 rows)
 ```
 
 > **Coverage:** 10x Multiome exists ONLY in AMP-AD (181 assays = 181 specimens; 166 on HiSeq2000, 15 on NovaSeq). Its harmonized outputs are pseudobulk-per-cell-type HDF5 files: exactly 10 distinct files = 5 cell types (astrocytes, GABAergic neurons, GLUtamatergic neurons, microglia, oligodendrocyte) x 2 modalities (RNA, ATAC). Because they are pseudobulk, each of the 10 files aggregates ALL 181 Multiome specimens (assay_input_file is M:N and every specimen links to every file) -- so 'files per specimen' is uniform (5 RNA + 5 ATAC each) and the RNA<->ATAC 'same specimens' relationship is the shared 181-specimen roster, not distinct per-specimen files. The RNA modality is tagged analysis_type='RNA' (single-cell/single-nucleus Multiome), not a separate 'scRNAseq' label; pairing to the ATAC counterpart is done on cell_type. Disease on these specimens is AMP-AD only: Alzheimer's disease, plus Normal/Other status values (no other disease programs run 10x Multiome). Specimen anatomic_site is frequently 'NA' or 'blood'; specimen_source_value carries the brain-region text.
@@ -1736,18 +1739,18 @@ Returns — person_id, specimen_id, specimen_source, rna_hdf5 (count), atac_hdf5
 ```
  person_id | specimen_id |        specimen_source         | rna_hdf5 | atac_hdf5 | n_cell_types |                                    cell_types                                    |         dx          | dx_role 
 -----------+-------------+--------------------------------+----------+-----------+--------------+----------------------------------------------------------------------------------+---------------------+---------
-    100019 |    10001901 | Head of caudate nucleus        |        5 |         5 |            5 | astrocytes, GABAergic neurons, GLUtamatergic neurons, microglia, oligodendrocyte | Alzheimer's disease | case
-    100027 |    10002701 | dorsolateral prefrontal cortex |        5 |         5 |            5 | astrocytes, GABAergic neurons, GLUtamatergic neurons, microglia, oligodendrocyte | Alzheimer's disease | case
-    100030 |    10003002 | posterior cingulate cortex     |        5 |         5 |            5 | astrocytes, GABAergic neurons, GLUtamatergic neurons, microglia, oligodendrocyte | Alzheimer's disease | case
-    100187 |    10018701 | blood                          |        5 |         5 |            5 | astrocytes, GABAergic neurons, GLUtamatergic neurons, microglia, oligodendrocyte | Alzheimer's disease | case
-    100193 |    10019302 | serum                          |        5 |         5 |            5 | astrocytes, GABAergic neurons, GLUtamatergic neurons, microglia, oligodendrocyte | Alzheimer's disease | case
-    100225 |    10022501 | posterior cingulate cortex     |        5 |         5 |            5 | astrocytes, GABAergic neurons, GLUtamatergic neurons, microglia, oligodendrocyte | Alzheimer's disease | case
-    100255 |    10025501 | posterior cingulate cortex     |        5 |         5 |            5 | astrocytes, GABAergic neurons, GLUtamatergic neurons, microglia, oligodendrocyte | Alzheimer's disease | case
-    100293 |    10029302 | dorsolateral prefrontal cortex |        5 |         5 |            5 | astrocytes, GABAergic neurons, GLUtamatergic neurons, microglia, oligodendrocyte | Alzheimer's disease | case
-    100450 |    10045003 | posterior cingulate cortex     |        5 |         5 |            5 | astrocytes, GABAergic neurons, GLUtamatergic neurons, microglia, oligodendrocyte | Alzheimer's disease | case
-    100453 |    10045302 | dorsolateral prefrontal cortex |        5 |         5 |            5 | astrocytes, GABAergic neurons, GLUtamatergic neurons, microglia, oligodendrocyte | Alzheimer's disease | case
-    100458 |    10045802 | dorsolateral prefrontal cortex |        5 |         5 |            5 | astrocytes, GABAergic neurons, GLUtamatergic neurons, microglia, oligodendrocyte | Alzheimer's disease | case
-    100714 |    10071401 | blood                          |        5 |         5 |            5 | astrocytes, GABAergic neurons, GLUtamatergic neurons, microglia, oligodendrocyte | Alzheimer's disease | case
+        68 |    10006801 | cerebellum                     |        5 |         5 |            5 | GABAergic neurons, GLUtamatergic neurons, astrocytes, microglia, oligodendrocyte | Alzheimer's disease | case
+       193 |    10019302 | temporal cortex                |        5 |         5 |            5 | GABAergic neurons, GLUtamatergic neurons, astrocytes, microglia, oligodendrocyte | Alzheimer's disease | case
+       453 |    10045302 | superior temporal gyrus        |        5 |         5 |            5 | GABAergic neurons, GLUtamatergic neurons, astrocytes, microglia, oligodendrocyte | Alzheimer's disease | case
+       689 |    10068901 | prefrontal cortex              |        5 |         5 |            5 | GABAergic neurons, GLUtamatergic neurons, astrocytes, microglia, oligodendrocyte | Alzheimer's disease | case
+       952 |    10095202 | posterior cingulate cortex     |        5 |         5 |            5 | GABAergic neurons, GLUtamatergic neurons, astrocytes, microglia, oligodendrocyte | Alzheimer's disease | case
+      1000 |    10100001 | prefrontal cortex              |        5 |         5 |            5 | GABAergic neurons, GLUtamatergic neurons, astrocytes, microglia, oligodendrocyte | Alzheimer's disease | case
+      1020 |    10102003 | prefrontal cortex              |        5 |         5 |            5 | GABAergic neurons, GLUtamatergic neurons, astrocytes, microglia, oligodendrocyte | Alzheimer's disease | case
+      1138 |    10113802 | superior temporal gyrus        |        5 |         5 |            5 | GABAergic neurons, GLUtamatergic neurons, astrocytes, microglia, oligodendrocyte | Alzheimer's disease | case
+      1138 |    10113803 | prefrontal cortex              |        5 |         5 |            5 | GABAergic neurons, GLUtamatergic neurons, astrocytes, microglia, oligodendrocyte | Alzheimer's disease | case
+      1369 |    10136902 | prefrontal cortex              |        5 |         5 |            5 | GABAergic neurons, GLUtamatergic neurons, astrocytes, microglia, oligodendrocyte | Alzheimer's disease | case
+      1383 |    10138301 | frontal cortex                 |        5 |         5 |            5 | GABAergic neurons, GLUtamatergic neurons, astrocytes, microglia, oligodendrocyte | Alzheimer's disease | case
+      1508 |    10150801 | dorsolateral prefrontal cortex |        5 |         5 |            5 | GABAergic neurons, GLUtamatergic neurons, astrocytes, microglia, oligodendrocyte | Alzheimer's disease | case
 (12 rows)
 ```
 
@@ -1773,11 +1776,11 @@ Returns — cell_type, rna_hdf5, atac_hdf5, n_persons, n_ad_case, n_control -- o
 ```
        cell_type       | rna_hdf5 | atac_hdf5 | n_persons | n_ad_case | n_control 
 -----------------------+----------+-----------+-----------+-----------+-----------
- astrocytes            |        1 |         1 |       173 |        49 |        22
- GABAergic neurons     |        1 |         1 |       173 |        49 |        22
- GLUtamatergic neurons |        1 |         1 |       173 |        49 |        22
- microglia             |        1 |         1 |       173 |        49 |        22
- oligodendrocyte       |        1 |         1 |       173 |        49 |        22
+ GABAergic neurons     |        1 |         1 |       173 |        19 |        16
+ GLUtamatergic neurons |        1 |         1 |       173 |        19 |        16
+ astrocytes            |        1 |         1 |       173 |        19 |        16
+ microglia             |        1 |         1 |       173 |        19 |        16
+ oligodendrocyte       |        1 |         1 |       173 |        19 |        16
 (5 rows)
 ```
 
@@ -1801,13 +1804,64 @@ Returns — specimen_source, n_persons, n_specimens, n_ad_case, n_control, n_oth
 ```
         specimen_source         | n_persons | n_specimens | n_ad_case | n_control | n_other_status 
 --------------------------------+-----------+-------------+-----------+-----------+----------------
- dorsolateral prefrontal cortex |       109 |         114 |        31 |        18 |             60
- blood                          |        22 |          22 |         5 |         1 |             16
- Head of caudate nucleus        |        17 |          17 |         3 |         1 |             13
- posterior cingulate cortex     |        14 |          14 |         8 |         1 |              5
- serum                          |        12 |          12 |         5 |         1 |              6
- cerebellum                     |         2 |           2 |         0 |         0 |              2
-(6 rows)
+ dorsolateral prefrontal cortex |        64 |          65 |         6 |         6 |             34
+ prefrontal cortex              |        27 |          27 |         7 |         5 |              7
+ superior temporal gyrus        |        20 |          21 |         3 |         0 |             12
+ temporal cortex                |        12 |          12 |         1 |         0 |              4
+ parahippocampal gyrus          |         7 |           7 |         0 |         0 |              5
+ DLPFC                          |         6 |           6 |         0 |         0 |              3
+ Head of caudate nucleus        |         6 |           6 |         1 |         0 |              3
+ posterior cingulate cortex     |         6 |           6 |         1 |         1 |              2
+ frontal pole                   |         5 |           5 |         0 |         2 |              1
+ caudate nucleus                |         5 |           5 |         1 |         0 |              2
+ ACC                            |         4 |           4 |         0 |         0 |              1
+ blood                          |         4 |           4 |         0 |         0 |              3
+ cerebellum                     |         4 |           4 |         1 |         1 |              1
+ serum                          |         4 |           4 |         0 |         0 |              3
+ frontal cortex                 |         2 |           2 |         1 |         0 |              1
+ inferior frontal gyrus         |         2 |           2 |         0 |         1 |              1
+ PCC                            |         1 |           1 |         0 |         0 |              1
+(17 rows)
 ```
 
 > **Coverage:** Joint scRNAseq+ATACseq "from the same specimen" exists ONLY as the 10x Multiome assay (181 assays / 181 specimens / 173 individuals). Verified: no specimen in the CDM links two separate assays (a scRNAseq assay and a snATACseq assay never share a specimen_id) -- every specimen maps to exactly one assay type. Multiome is the intended same-specimen paired RNA+ATAC modality: each Multiome specimen's assay yields both RNA and ATAC HDF5 harmonized output (confirmed 5 RNA + 5 ATAC distinct matrices reachable per specimen). If a user literally expects two physically distinct assays sharing one specimen_id, that does not exist. Cell-type resolution exists only for the AMP-AD study: all 173 Multiome individuals route to AMP-AD harmonized output with 5 cell types (astrocytes, GABAergic neurons, GLUtamatergic neurons, microglia, oligodendrocyte). The harmonized matrices are cohort-aggregated pseudobulk -- there are only 10 distinct harmonized files total (5 cell types x {RNA,ATAC}), each pooling all 173 individuals -- so the cell-type set is uniform across individuals, not per-specimen-variable (hence the by-cell-type variation shows identical 173/49/22 counts per cell type). Dx vs control: the clean contrast is Alzheimer's disease (49 cases, qualifier 1989833) vs Normal (22 controls, qualifier 44804027); the majority (100 individuals) carry a non-specific dx='Other' and 2 'Not applicable' status -- these are not true controls. Specimen sources include non-brain blood/serum Multiome specimens (34 individuals) alongside the biologically expected brain regions (DLPFC dominant at 109); the blood/serum Multiome pairings are a synthetic-data artifact. No same-specimen RNA+ATAC exists for AMP-PD (proteomics assay_matrix only, no brain HDF5), AMP-CMD (single-modality hypothalamus, no disease record), or standalone AMP-RA-SLE outside the AMP-AD harmonized pool.
+
+## Beta-2 additions (2026-09-03): file records and standard-concept specimen lineage
+
+**All files a participant is in — one query, per the file_name-as-observation contract (ask 7).**
+Every file a donor contributed to (their own raw files AND the cohort-level harmonized
+products) carries one observation row under that donor; the event fields point at cdm.files.
+
+```sql
+SELECT o.person_id, f.file_name, f.file_role, o.qualifier_source_value AS assay_modality
+FROM cdm.observation o
+JOIN cdm.files f ON f.file_id = o.observation_event_id
+WHERE o.observation_concept_id = 4303445           -- 'Research data collection'
+  AND o.obs_event_field_concept_id = 2000000001    -- 'files.file_id' (SysBio field concept)
+  AND o.person_id = 1247
+ORDER BY f.file_name;
+```
+
+**Specimen derivation lineage — standard concepts end to end.** A derivation is one
+measurement row (concept 1176306 'Unique identifier of Initial sample'): its event fields
+point at the CHILD specimen (field concept 1147049 'specimen.specimen_id'), its
+value_source_value carries the parent's id, and fact_relationship reinforces the link to the
+PARENT with the standard pair 32668/32669 (Measurement to Specimen / reverse). Parent of a
+given specimen:
+
+```sql
+SELECT m.measurement_event_id AS child_specimen_id,
+       fr.fact_id_2           AS parent_specimen_id
+FROM cdm.measurement m
+JOIN cdm.fact_relationship fr
+  ON fr.domain_concept_id_1 = 21 AND fr.fact_id_1 = m.measurement_id
+ AND fr.domain_concept_id_2 = 36 AND fr.relationship_concept_id = 32668
+WHERE m.measurement_concept_id = 1176306
+  AND m.measurement_event_id = 10000603;          -- the child specimen you hold
+```
+
+> Design note (2026-09-03): specimen lineage moved off the non-standard 32554/32553
+> 'Sub-specimen of' pair onto this measurement-based pattern, which uses only Standard
+> concepts. Sensitive content is NOT restricted to the observation table by policy:
+> measurement is governed identically (measurement_access + RLS), which is what the access
+> tables are for.

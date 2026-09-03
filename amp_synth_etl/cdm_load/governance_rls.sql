@@ -40,6 +40,8 @@ ALTER TABLE cdm.files                 ENABLE ROW LEVEL SECURITY;
 ALTER TABLE cdm.files                 FORCE  ROW LEVEL SECURITY;
 ALTER TABLE cdm.procedure_occurrence  ENABLE ROW LEVEL SECURITY;
 ALTER TABLE cdm.procedure_occurrence  FORCE  ROW LEVEL SECURITY;
+ALTER TABLE cdm.condition_occurrence  ENABLE ROW LEVEL SECURITY;
+ALTER TABLE cdm.condition_occurrence  FORCE  ROW LEVEL SECURITY;
 
 -- ---- one SELECT policy per governed table: visible iff current_user shares a group with the row ----
 DROP POLICY IF EXISTS p_observation_acl ON cdm.observation;
@@ -68,6 +70,13 @@ CREATE POLICY p_files_acl ON cdm.files FOR SELECT USING (
   EXISTS (SELECT 1 FROM cdm.file_access a
             JOIN cdm.user_access_groups u ON u.access_group_id = a.access_group_id
            WHERE a.file_id = cdm.files.file_id
+             AND u.user_id = current_user));
+
+DROP POLICY IF EXISTS p_condition_acl ON cdm.condition_occurrence;
+CREATE POLICY p_condition_acl ON cdm.condition_occurrence FOR SELECT USING (
+  EXISTS (SELECT 1 FROM cdm.condition_occurrence_access a
+            JOIN cdm.user_access_groups u ON u.access_group_id = a.access_group_id
+           WHERE a.condition_occurrence_id = cdm.condition_occurrence.condition_occurrence_id
              AND u.user_id = current_user));
 
 DROP POLICY IF EXISTS p_procedure_acl ON cdm.procedure_occurrence;

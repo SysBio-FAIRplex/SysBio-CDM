@@ -1,11 +1,18 @@
 {
   "variable": "path_braak_nft",
   "cde_registry_label": "path_braak_nft",
-  "harmonized_with": ["Braak", "braaksc"],
+  "harmonized_with": [
+    "Braak",
+    "braaksc"
+  ],
   "cde_id": "282",
   "definition": "BRAAK stage for neurofibrillary tangle pathology",
-  "src_schema_ref": ["LBD_Cohort_Path_Data_dictionary.csv"],
-  "amp_data_files": ["LBD_Cohort_Path_Data.csv"],
+  "src_schema_ref": [
+    "LBD_Cohort_Path_Data_dictionary.csv"
+  ],
+  "amp_data_files": [
+    "LBD_Cohort_Path_Data.csv"
+  ],
   "program": "AMP-AD / AMP-PD",
   "grain": "subject",
   "reads_as": {
@@ -46,7 +53,11 @@
       "write": {
         "value_as_number": 5,
         "value_as_string": "5",
-        "value_source_value": "5"
+        "value_source_value": "5",
+        "value_as_concept_id": {
+          "id": 45878655,
+          "name": "Stage V"
+        }
       }
     },
     {
@@ -54,7 +65,11 @@
       "write": {
         "value_as_number": 6,
         "value_as_string": "6",
-        "value_source_value": "6"
+        "value_source_value": "6",
+        "value_as_concept_id": {
+          "id": 3188117,
+          "name": "Stage 6"
+        }
       }
     },
     {
@@ -62,7 +77,11 @@
       "write": {
         "value_as_number": 2,
         "value_as_string": "2",
-        "value_source_value": "2"
+        "value_source_value": "2",
+        "value_as_concept_id": {
+          "id": 45880979,
+          "name": "Stage II"
+        }
       }
     },
     {
@@ -70,7 +89,11 @@
       "write": {
         "value_as_number": 4,
         "value_as_string": "4",
-        "value_source_value": "4"
+        "value_source_value": "4",
+        "value_as_concept_id": {
+          "id": 45880109,
+          "name": "Stage IV"
+        }
       }
     },
     {
@@ -78,7 +101,11 @@
       "write": {
         "value_as_number": 1,
         "value_as_string": "1",
-        "value_source_value": "1"
+        "value_source_value": "1",
+        "value_as_concept_id": {
+          "id": 45880980,
+          "name": "Stage I"
+        }
       }
     },
     {
@@ -86,7 +113,22 @@
       "write": {
         "value_as_number": 3,
         "value_as_string": "3",
-        "value_source_value": "3"
+        "value_source_value": "3",
+        "value_as_concept_id": {
+          "id": 45878643,
+          "name": "Stage III"
+        }
+      }
+    },
+    {
+      "value": "0",
+      "write": {
+        "value_as_concept_id": {
+          "id": 45878582,
+          "name": "None"
+        },
+        "value_as_number": 0,
+        "value_source_value": "0"
       }
     }
   ],

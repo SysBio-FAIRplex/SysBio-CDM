@@ -78,6 +78,27 @@ VISIT_CONCEPT_ID = 32036           # ditto
 # Autopsy provenance for post-mortem brain-bank donors (AD) that have no clinical visits.
 PROCEDURE_OCCURRENCE_ID_BASE = 3_000_000
 AUTOPSY_CONCEPT_ID = 4220533       # 'Autopsy, gross examination with brain' (SNOMED Procedure; in curated sqlite)
+PM_COLLECTION_CONCEPT_ID = 44808183  # 'Post mortem specimen collection' (SNOMED Procedure; in curated sqlite)
+CONDITION_OCCURRENCE_ID_BASE = 4_000_000
+OBSERVATION_PERIOD_ID_BASE = 5_000_000
+RECORD_TYPE_REGISTRY = 32879       # 'Registry' -- record provenance, consistent with the specimen_type choice
+# Disease cohort status -> curated Condition concept. NOTE: condition_occurrence was previously
+# DROPPED by design; that decision is REVERSED (2026-09-01) because the Technome/Verily Beta-2
+# ask (2026-08-28, item 8) names condition_occurrence explicitly. Concepts come ONLY from the
+# curated sqlite; 0 = no curated concept yet (token preserved in condition_source_value);
+# a status ABSENT from the map asserts no condition (controls, unknowns, unaffected, at-risk).
+STATUS_COL = {"AMP-AD": "ADoutcome", "AMP-PD": "study_arm", "AMP-RA-SLE": "diagnosis"}  # AMP-CMD carries no status column
+CONDITION_MAP = {
+  "AMP-AD": {"AD": 378419},                                   # Alzheimer's disease
+  "AMP-PD": {"PD": 381270, "Genetic Cohort PD": 381270, "Genetic Registry PD": 381270,
+             "LBD": 380701},                                  # Parkinson's disease / Diffuse Lewy body disease
+  "AMP-RA-SLE": {"RA": 80809, "SLE": 257628, "dermatomyositis": 80182, "vitiligo": 138502,
+                 "lupus nephritis": 4285717,                  # SLE glomerulonephritis syndrome (closest curated)
+                 "psoriasis": 140168, "psoriatic arthritis": 40319772, "scleroderma": 40352976,
+                 "OA": 80180, "discoid lupus erythematosus": 4066824,
+                 "cutaneous lupus erythematosus": 4324123, "CLE": 4324123,
+                 "Sjogren's disease": 254443},                # all Standard SNOMED, verified 2026-09-03
+}
 PROCEDURE_TYPE_CONCEPT_ID = 0      # sentinel 'No matching concept' — type concepts not accurate to AMP data
 CONFLICTED = set()                 # columns whose meaning DIFFERS between the programmes supplying them
 
@@ -191,12 +212,42 @@ def load_cohort():
     return people
 
 
+
+def person_id_map():
+    """Beta-2 ask 4: cdm.person_id is a MINTED SEQUENTIAL sysbio id (1..N over participants
+    sorted numerically), decoupled from the generator's participant_id. staging.person_map is
+    the one crosswalk; everything CDM-side speaks minted ids only."""
+    import glob as _glob
+    pids = set()
+    for fp in sorted(_glob.glob(os.path.join(ROOT, "output", "*_subject.csv"))) + \
+              sorted(_glob.glob(os.path.join(ROOT, "output", "*_visit.csv"))):
+        for r in csv.DictReader(open(fp, newline="", encoding="utf-8")):
+            pids.add(r["participant_id"])
+    return {p: i + 1 for i, p in enumerate(sorted(pids, key=int))}
+
+
+def postmortem_donors():
+    """participant_ids with >=1 post-mortem specimen, from the generated specimen CSVs.
+    The autopsy branch below only fired for AMP-AD donors that happened to have NO visits, so
+    post-mortem donors WITH visits -- and every AMP-CMD donor -- got no collection procedure."""
+    pm = set()
+    gen = os.path.join(ROOT, "output")
+    for prog in ("AMP-AD", "AMP-PD", "AMP-CMD", "AMP-RA-SLE"):
+        p = os.path.join(gen, f"{prog}_specimen.csv")
+        if not os.path.exists(p):
+            continue
+        with open(p, newline="", encoding="utf-8") as fh:
+            for r in csv.DictReader(fh):
+                if (r.get("is_post_mortem") or "").strip().upper() == "TRUE":
+                    pm.add(r["participant_id"])
+    return pm
+
+
 def enrolment_date(pid):
-    """Deterministic per person, from a GENERATION PARAMETER -- not invented per row."""
-    lo = date.fromisoformat(CFG["enrolment_window"][0])
-    hi = date.fromisoformat(CFG["enrolment_window"][1])
-    span = (hi - lo).days
-    return lo + timedelta(days=(int(pid) * 7919) % span)   # stable, spread
+    """Beta-2 contract (Technome/Verily 2026-08-28, asks 1-3): every date is RELATIVE TO THE
+    BASELINE VISIT with the baseline anchored at the 1900-01-01 sentinel epoch. The previous
+    enrolment-window spread leaked nothing but implied calendar time that does not exist."""
+    return date(1900, 1, 1)
 
 
 def sql_lit(v):
@@ -216,10 +267,15 @@ def main():
 
     # ── the pivot ────────────────────────────────────────────────────────────────────────────
     rows, visits, procedures, gated, unsupplied = [], [], [], defaultdict(int), set(var_cols)
+    obs_periods, conditions = [], []
     void = VISIT_OCCURRENCE_ID_BASE
+    PM_DONORS = postmortem_donors()
+    PMAP = person_id_map()          # participant_id -> minted sysbio person_id
+    _pm_done = set()
     for pid in sorted(people, key=int):
         p = people[pid]
         prog, enrol = p["program"], enrolment_date(pid)
+        pdates = []
 
         def cell(col, visit_row):
             # what this person's own files hold for this column
@@ -252,21 +308,49 @@ def main():
         # brain cohort, so its no-visit donors get an AUTOPSY visit + a gross-brain-autopsy procedure;
         # any other visit-less participant (e.g. cross-sectional CMD) gets one BASELINE lab visit.
         synth = None if p["visits"] else ("AUTOPSY" if prog == "AMP-AD" else "BASELINE")
+        pvisits = []                     # (visit_occurrence_id, visit_date) for THIS person
         for vr in (p["visits"] or [None]):
             if vr:
-                vsv = f"{pid}_{vr['visit_name']}"
+                vsv = vr['visit_name']            # source-faithful; join is (person_id, vsv)
                 vd = enrol + timedelta(days=int(round(float(vr["visit_month"] or 0) * 30.44)))
             else:
-                vsv, vd = f"{pid}_{synth}", enrol   # synthesized visit; visit_date NEVER null (constraint 1)
+                vsv, vd = synth, enrol   # synthesized visit; visit_date NEVER null (constraint 1)
             void += 1
-            visits.append((void, pid, vd, vsv))
+            visits.append((void, PMAP[pid], vd, vsv))
+            pvisits.append((void, vd))
+            pdates.append(vd)
             if synth == "AUTOPSY":
-                procedures.append((pid, vd, void))  # gross-brain autopsy, anchored to this visit
+                procedures.append((PMAP[pid], vd, void, AUTOPSY_CONCEPT_ID, "gross_brain_autopsy"))
+            elif pid in PM_DONORS and pid not in _pm_done:
+                # every post-mortem donor gets ONE collection procedure, anchored to its first visit
+                procedures.append((PMAP[pid], vd, void, PM_COLLECTION_CONCEPT_ID, "post_mortem_collection"))
+                _pm_done.add(pid)
             rows.append([pid, vsv, vd.isoformat()] + [cell(c, vr) for c in var_cols])
+
+        # observation_period (Beta-2 ask 9) + condition_occurrence (Beta-2 ask 8; drop-decision
+        # reversed -- see CONDITION_MAP note). The condition period MIRRORS the observation period.
+        if pdates:
+            obs_periods.append((OBSERVATION_PERIOD_ID_BASE + len(obs_periods), PMAP[pid],
+                                min(pdates), max(pdates)))
+            raw = (p["subject"].get(STATUS_COL.get(prog, ""), "") or "").strip()
+            cid = CONDITION_MAP.get(prog, {}).get(raw)
+            if cid is not None:
+                # anchor the condition to the person's FIRST visit (its start date IS that visit's
+                # date) so condition_occurrence joins the visit graph like every other event table —
+                # a blind-review finding 2026-09-02: conditions carried visit_occurrence_id NULL
+                # while procedures were 100% linked.
+                first_visit_id = min(pvisits, key=lambda t: t[1])[0]
+                conditions.append((CONDITION_OCCURRENCE_ID_BASE + len(conditions), PMAP[pid], cid,
+                                   min(pdates), max(pdates), first_visit_id, raw))
 
     print(f"  staging.amp_clinical : {len(rows)} rows (one per person-visit; visit-less people get a synthesized visit)")
     print(f"  cdm.visit_occurrence : {len(visits)} rows")
-    print(f"  cdm.procedure_occurrence : {len(procedures)} autopsy rows (post-mortem brain-bank donors)")
+    print(f"  cdm.procedure_occurrence : {len(procedures)} rows "
+          f"({sum(1 for x in procedures if x[3]==AUTOPSY_CONCEPT_ID)} autopsy, "
+          f"{sum(1 for x in procedures if x[3]==PM_COLLECTION_CONCEPT_ID)} post-mortem collection)")
+    print(f"  cdm.observation_period : {len(obs_periods)} rows (one span per person with visits)")
+    print(f"  cdm.condition_occurrence : {len(conditions)} rows "
+          f"({sum(1 for x in conditions if x[2]==0)} with concept 0, awaiting curation)")
     print(f"  columns we supply    : {len(var_cols) - len(unsupplied)} / {len(var_cols)}")
     print(f"\n  columns supplied by >1 programme whose SPEC DIFFERS (a real conflict): "
           f"{sorted(CONFLICTED) if CONFLICTED else 'none'}")
@@ -291,7 +375,7 @@ def main():
         fh.write("COPY person (person_id, gender_concept_id, year_of_birth, race_concept_id, "
                  "ethnicity_concept_id) FROM stdin;\n")
         for pid in sorted(people, key=int):
-            fh.write(f"{pid}\t0\t0\t0\t0\n")
+            fh.write(f"{PMAP[pid]}\t0\t0\t0\t0\n")
         fh.write("\\.\n\n")
 
         # cdm.visit_occurrence -- the ETL never inserts these. Without them every fact gets
@@ -310,9 +394,25 @@ def main():
         fh.write("COPY procedure_occurrence (procedure_occurrence_id, person_id, procedure_concept_id, "
                  "procedure_date, procedure_type_concept_id, visit_occurrence_id, procedure_source_value) "
                  "FROM stdin;\n")
-        for i, (pid, pdate, voi) in enumerate(procedures):
-            fh.write(f"{PROCEDURE_OCCURRENCE_ID_BASE + i}\t{pid}\t{AUTOPSY_CONCEPT_ID}\t{pdate}\t"
-                     f"{PROCEDURE_TYPE_CONCEPT_ID}\t{voi}\tgross_brain_autopsy\n")
+        for i, (pid, pdate, voi, pconcept, psrc) in enumerate(procedures):
+            fh.write(f"{PROCEDURE_OCCURRENCE_ID_BASE + i}\t{pid}\t{pconcept}\t{pdate}\t"
+                     f"{PROCEDURE_TYPE_CONCEPT_ID}\t{voi}\t{psrc}\n")
+        fh.write("\\.\n\n")
+
+        fh.write("-- 2c. observation_period -- one span per person (first..last visit); Beta-2 ask 9.\n")
+        fh.write("COPY observation_period (observation_period_id, person_id, observation_period_start_date, "
+                 "observation_period_end_date, period_type_concept_id) FROM stdin;\n")
+        for op_id, opid_, d0, d1 in obs_periods:
+            fh.write(f"{op_id}\t{opid_}\t{d0}\t{d1}\t{RECORD_TYPE_REGISTRY}\n")
+        fh.write("\\.\n\n")
+
+        fh.write("-- 2d. condition_occurrence -- disease cohort status; previously dropped by design,\n"
+                 "-- REVERSED for Beta-2 (Technome/Verily 2026-08-28 ask 8). Period mirrors observation_period.\n")
+        fh.write("COPY condition_occurrence (condition_occurrence_id, person_id, condition_concept_id, "
+                 "condition_start_date, condition_end_date, condition_type_concept_id, "
+                 "visit_occurrence_id, condition_source_value) FROM stdin;\n")
+        for coid, cpid, ccid, d0, d1, cvid, raw in conditions:
+            fh.write(f"{coid}\t{cpid}\t{ccid}\t{d0}\t{d1}\t{RECORD_TYPE_REGISTRY}\t{cvid}\t{raw}\n")
         fh.write("\\.\n\n")
 
         fh.write("-- 3. staging. The ETL reads ONLY these two tables.\n")
@@ -321,7 +421,7 @@ def main():
                  "person_id integer);\n")
         fh.write("COPY staging.person_map (person_source_value, person_id) FROM stdin;\n")
         for pid in sorted(people, key=int):
-            fh.write(f"{pid}\t{pid}\n")          # person_source_value == person_id, both numeric
+            fh.write(f"{pid}\t{PMAP[pid]}\n")    # REAL crosswalk: participant_id -> minted sysbio id
         fh.write("\\.\n\n")
 
         fh.write("-- lifted VERBATIM from the CDM repo so the column set cannot drift:\n")

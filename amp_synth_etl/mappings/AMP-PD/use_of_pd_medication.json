@@ -3,8 +3,12 @@
   "cde_registry_label": "use_of_pd_medication",
   "cde_id": "536",
   "definition": "Is Subject On Medication For PD?",
-  "src_schema_ref": ["PD_Medical_History_dictionary.csv"],
-  "amp_data_files": ["PD_Medical_History.csv"],
+  "src_schema_ref": [
+    "PD_Medical_History_dictionary.csv"
+  ],
+  "amp_data_files": [
+    "PD_Medical_History.csv"
+  ],
   "program": "AMP-PD",
   "grain": "visit",
   "reads_as": {
@@ -44,6 +48,17 @@
         },
         "value_as_string": "No",
         "value_source_value": "No"
+      }
+    },
+    {
+      "value": "Unknown",
+      "write": {
+        "value_as_concept_id": {
+          "id": 45877986,
+          "name": "Unknown"
+        },
+        "value_as_string": "Unknown",
+        "value_source_value": "Unknown"
       }
     }
   ],

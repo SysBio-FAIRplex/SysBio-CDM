@@ -180,6 +180,25 @@ CREATE TABLE cdm.procedure_occurrence (
     modifier_source_value          text
 );
 
+CREATE TABLE cdm.condition_occurrence (
+    condition_occurrence_id        integer      PRIMARY KEY,
+    person_id                      integer      NOT NULL,
+    condition_concept_id           integer      NOT NULL,
+    condition_start_date           date         NOT NULL,
+    condition_start_datetime       timestamp(3),
+    condition_end_date             date,
+    condition_end_datetime         timestamp(3),
+    condition_type_concept_id      integer      NOT NULL,
+    condition_status_concept_id    integer,
+    stop_reason                    text,
+    provider_id                    integer,
+    visit_occurrence_id            integer,
+    visit_detail_id                integer,
+    condition_source_value         text,
+    condition_source_concept_id    integer,
+    condition_status_source_value  text
+);
+
 CREATE TABLE cdm.fact_relationship (
     domain_concept_id_1        integer NOT NULL,
     fact_id_1                  integer NOT NULL,
@@ -253,6 +272,12 @@ CREATE TABLE cdm.procedure_occurrence_access (
     procedure_occurrence_id  integer NOT NULL,
     access_group_id          integer NOT NULL,
     PRIMARY KEY (procedure_occurrence_id, access_group_id)
+);
+
+CREATE TABLE cdm.condition_occurrence_access (
+    condition_occurrence_id  integer NOT NULL,
+    access_group_id          integer NOT NULL,
+    PRIMARY KEY (condition_occurrence_id, access_group_id)
 );
 
 CREATE TABLE cdm.measurement_access (

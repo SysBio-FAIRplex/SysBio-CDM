@@ -3,6 +3,7 @@
 # match: exact = clear 1:1; approx = closest available (review); unmatched = no concept in the sqlite (add one).
 # anatomic_site_concept_id is left to the loader (BrodmannArea sites carried as source_value only, NULL concept).
 source_value	specimen_concept_id	concept_name	match
+brain	4134448	Tissue specimen from brain	exact
 PBMCs	4047495	Peripheral blood specimen	approx
 cell line	764477	Cultured cells specimen	exact
 kidney biopsy	4204351	Kidney biopsy specimen	exact
@@ -29,3 +30,30 @@ dorsolateral prefrontal cortex	4134448	Tissue specimen from brain	exact
 posterior cingulate cortex	4134448	Tissue specimen from brain	exact
 prefrontal cortex	4134448	Tissue specimen from brain	exact
 hypothalamus	4134448	Tissue specimen from brain	assumed
+angular gyrus	4134448	Tissue specimen from brain	exact
+caudate nucleus	4134448	Tissue specimen from brain	exact
+cerebellar cortex	40481913	Specimen from cerebellum	exact
+entorhinal cortex	4134448	Tissue specimen from brain	exact
+frontal cortex	4134448	Tissue specimen from brain	exact
+frontal pole	4134448	Tissue specimen from brain	exact
+hippocampus	4134448	Tissue specimen from brain	exact
+inferior frontal gyrus	4134448	Tissue specimen from brain	exact
+medial frontal cortex	4134448	Tissue specimen from brain	exact
+midtemporal cortex	4134448	Tissue specimen from brain	exact
+occipital visual cortex	4134448	Tissue specimen from brain	exact
+parahippocampal gyrus	4134448	Tissue specimen from brain	exact
+superior temporal gyrus	4134448	Tissue specimen from brain	exact
+temporal cortex	4134448	Tissue specimen from brain	exact
+temporal pole	4134448	Tissue specimen from brain	exact
+thalamus	4134448	Tissue specimen from brain	exact
+unspecified	4002227	Specimen from brain	approx
+ACC	4134448	Tissue specimen from brain	exact
+DLPFC	4134448	Tissue specimen from brain	exact
+PCC	4134448	Tissue specimen from brain	exact
+TCX	4134448	Tissue specimen from brain	exact
+CBE	40481913	Specimen from cerebellum	exact
+cerebrospinal fluid	4124259	Cerebrospinal fluid specimen	exact
+Kidney	4133743	Tissue specimen from kidney	exact
+kidney	4133743	Tissue specimen from kidney	exact
+Adipose_Visceral	4120212	Adipose tissue specimen	approx
+Hypothalamus	4134448	Tissue specimen from brain	assumed

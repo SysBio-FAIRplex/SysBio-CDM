@@ -93,13 +93,26 @@ python scripts/13_verify_governance.py
 (`sysbio_cdm_selfcontained` by default; pass a name to override). It does not touch
 any existing database.
 
+## Data-contract conventions (Beta-2, 2026-09)
+
+The synthetic CDM follows the external data contract: all visit/specimen/event dates are
+RELATIVE to a 1900-01-01 baseline sentinel (pre-baseline screens land just before it);
+`person_id` is a minted sequential id decoupled from the generator's participant id
+(`staging.person_map` is the crosswalk); `visit_source_value` carries bare visit names;
+`specimen_source_id` is blanked at emission; every data file yields one observation row per
+(file, donor) pointed at `files` via the CDM event-linkage pair; and specimen derivation is
+recorded through measurement rows with the standard Measurement<->Specimen relationship pair.
+Full rationale for the linkage designs: `resources/LINEAGE_DESIGN.md`. The `files` table
+holds data files only (dictionaries/protocols/templates are excluded by an emission guard).
+
 ## Pipeline
 
 The `make` / `run_pipeline.sh` front door runs everything in order; this section maps the
 pieces. Each script has one of three roles:
 
 - **Run directly** (or via `make`): generation stages `01`-`04`, then `10_build_cdm_delivery.py`
-  -> `cdm_load/build_selfcontained.sh` -> `13_verify_governance.py` -> `14_verify_user_stories.py`.
+  -> `cdm_load/build_selfcontained.sh` -> `13_verify_governance.py` -> `14_verify_user_stories.py`
+  -> `15_blind_review.py` (the cold-reviewer gate — run before EVERY push).
 - **Orchestrated** -- run *for* you by `10`, never directly: `06`, `08`, `09`, `11`, `12`.
 - **Helper / imported** -- never run on their own: `inputs_io.py`, `fidelity.py`,
   `enumerated.py`, and everything under `scripts/gen/`.
@@ -142,6 +155,7 @@ Output is `cdm_load/cdm_load.sql`, applied after `cdm_load/cdm_ddl.sql`.
 | --- | --- |
 | `13_verify_governance.py` | Proves record-level RLS restricts. Recomputes expected access independently of the loader |
 | `14_verify_user_stories.py` | MVP acceptance gate: runs the user-story queries against the built CDM (14/14 must pass) |
+| `15_blind_review.py` | Cold-reviewer gate: population coverage, event→visit linkage (with named exemptions), file-layer reachability, procedure/condition presence, lineage-graph integrity, date floor, no-empty-tables. Exit 1 on any FAIL |
 | `05_conflicts.py` | Standalone report of AMP vs SysBio dictionary disagreements. Not part of the chain |
 
 ## Layout
@@ -149,6 +163,8 @@ Output is `cdm_load/cdm_load.sql`, applied after `cdm_load/cdm_ddl.sql`.
 ```
 config/      cohort parameters, access groups, table overrides
 inputs/      AMP program dictionaries (vendored), CDE dictionary, fidelity distributions
+             (pooled "var" + programme-scoped "PROGRAMME::var" keys — scoped draws keep
+             each programme inside its own tissue/platform vocabulary)
 mappings/    one JSON per AMP variable — the ETL logic
 specs/       generated field specs (fixed filenames; table_schemas/ is gitignored)
 scripts/     pipeline

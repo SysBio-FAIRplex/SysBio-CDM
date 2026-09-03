@@ -141,7 +141,14 @@ def diagnosis(rng, subj):
     if "diagnosis" not in subj:
         spec = subj.get("_spec") or {}
         enum = (spec.get("constraints") or {}).get("enum")
-        subj["diagnosis"] = rng.choice(enum) if enum else None
+        # Weighted by the programme's REAL diagnosis frequencies (e.g. ARK clinical:
+        # SLE-dominant, RA-heavy) instead of uniform over the dictionary enum — a uniform
+        # draw made every legal-but-rare diagnosis as common as RA. Enum tokens absent
+        # from the real data get weight 0 and stop appearing; fidelity falls back to
+        # uniform only when no distribution matches the legal set.
+        subj["diagnosis"] = (fidelity.categorical("diagnosis", list(enum), rng,
+                                                  scope=subj.get("_amp_program"))
+                             if enum else None)
     return subj["diagnosis"]
 
 

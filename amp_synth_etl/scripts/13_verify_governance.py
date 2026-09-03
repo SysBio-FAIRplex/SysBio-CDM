@@ -22,7 +22,7 @@ DB   = sys.argv[1] if len(sys.argv) > 1 else "sysbio_cdm_selfcontained"
 SUBJECT_FILES = {"AMP-PD": "AMP-PD_subject.csv", "AMP-AD": "AMP-AD_subject.csv",
                  "AMP-CMD": "AMP-CMD_subject.csv", "AMP-RA-SLE": "AMP-RA-SLE_subject.csv"}
 
-GOVERNED   = ["observation", "measurement", "specimen", "files", "procedure_occurrence"]
+GOVERNED   = ["observation", "measurement", "specimen", "files", "procedure_occurrence", "condition_occurrence"]
 UNGOVERNED = ["person", "visit_occurrence", "concept", "assay", "fact_relationship"]
 
 FAIL = []
@@ -33,8 +33,21 @@ def persons_by_program():
     for prog, fn in SUBJECT_FILES.items():
         p = os.path.join(OUT, fn)
         if os.path.exists(p):
-            m[prog] = {int(r["participant_id"]) for r in csv.DictReader(open(p, newline="", encoding="utf-8"))}
+            m[prog] = {r["participant_id"] for r in csv.DictReader(open(p, newline="", encoding="utf-8"))}
     return m
+
+
+def to_minted(m):
+    """participant_id sets -> minted person_id sets, via the LOADED staging.person_map
+    (Beta-2 ask 4: person_id is a minted sequential id; the crosswalk is the one mapping,
+    so translating through it also verifies the crosswalk itself)."""
+    pairs = q(None, "SELECT person_source_value || '|' || person_id FROM staging.person_map")
+    xw = {}
+    for ln in pairs:
+        if "|" in ln:
+            src, pidv = ln.rsplit("|", 1)
+            xw[src] = int(pidv)
+    return {prog: {xw[p] for p in pids if p in xw} for prog, pids in m.items()}
 
 
 def q(role, sql):
@@ -70,6 +83,7 @@ def check(name, ok, detail=""):
 
 def main():
     prog = persons_by_program()
+    prog = to_minted(prog)   # translate participant ids -> minted person ids via the loaded crosswalk
     ad, rasle = prog.get("AMP-AD", set()), prog.get("AMP-RA-SLE", set())
     print(f"expected persons (from output CSVs): AMP-AD={len(ad)}  AMP-RA-SLE={len(rasle)}\n")
 

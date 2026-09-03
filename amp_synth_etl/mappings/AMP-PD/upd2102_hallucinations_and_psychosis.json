@@ -1,11 +1,17 @@
 {
   "variable": "upd2102_hallucinations_and_psychosis",
   "cde_registry_label": "upd2102_hallucinations_and_psychosis",
-  "harmonized_with": ["upd102_thought_disorder"],
+  "harmonized_with": [
+    "upd102_thought_disorder"
+  ],
   "cde_id": "459",
   "definition": "1.02 MDS-UPDRS - Hallucinations and Psychosis (UPD2102)",
-  "src_schema_ref": ["MDS_UPDRS_Part_I_dictionary.csv"],
-  "amp_data_files": ["MDS_UPDRS_Part_I.csv"],
+  "src_schema_ref": [
+    "MDS_UPDRS_Part_I_dictionary.csv"
+  ],
+  "amp_data_files": [
+    "MDS_UPDRS_Part_I.csv"
+  ],
   "program": "AMP-PD",
   "grain": "visit",
   "reads_as": {
@@ -73,6 +79,18 @@
         },
         "value_as_string": "Moderate",
         "value_source_value": "Moderate"
+      }
+    },
+    {
+      "value": "Severe",
+      "write": {
+        "value_as_number": 4,
+        "value_as_concept_id": {
+          "id": 45883536,
+          "name": "Severe"
+        },
+        "value_as_string": "Severe",
+        "value_source_value": "Severe"
       }
     }
   ],

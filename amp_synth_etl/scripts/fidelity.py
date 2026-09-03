@@ -17,8 +17,17 @@ _PATH = os.path.join(ROOT, "inputs", "fidelity_distributions.json")
 DIST = json.load(open(_PATH, encoding="utf-8")) if os.path.exists(_PATH) else {}
 
 
-def has(var):
-    return var in DIST
+def resolve(var, scope=None):
+    """Scoped lookup: 'PROGRAM::var' wins over the pooled 'var' entry. The pooled entries merge
+    every dataset, which crosses programme boundaries (a CMD cell-grain tissue distribution must
+    never weight an AD specimen draw) — callers that know their programme pass it as scope."""
+    if scope and f"{scope}::{var}" in DIST:
+        return f"{scope}::{var}"
+    return var
+
+
+def has(var, scope=None):
+    return resolve(var, scope) in DIST
 
 
 def _pick(rng, items, weights):
@@ -51,10 +60,11 @@ def _sample_numeric(fd, rng):
     return None
 
 
-def categorical(var, legal, rng, labels=None):
+def categorical(var, legal, rng, labels=None, scope=None):
     """Pick from `legal` weighted by var's real frequency; uniform if no distribution. `labels`
-    (parallel to legal) lets a coded value also match the real data's label form."""
-    fd = DIST.get(var)
+    (parallel to legal) lets a coded value also match the real data's label form. `scope` (a
+    programme, e.g. 'AMP-AD') prefers the programme-keyed distribution over the pooled one."""
+    fd = DIST.get(resolve(var, scope))
     if fd and fd.get("values"):
         vals = fd["values"]
         lower = {k.lower(): v for k, v in vals.items()}
@@ -72,10 +82,10 @@ def categorical(var, legal, rng, labels=None):
     return legal[rng.randrange(len(legal))]
 
 
-def numeric(var, lo, hi, rng, integer=True):
+def numeric(var, lo, hi, rng, integer=True, scope=None):
     """Draw a number from var's real distribution, clamped to [lo, hi]; uniform if none. Honours
     integer vs float (a float field must not collapse to int)."""
-    fd = DIST.get(var)
+    fd = DIST.get(resolve(var, scope))
     if fd:
         v = _sample_numeric(fd, rng)
         if v is not None:

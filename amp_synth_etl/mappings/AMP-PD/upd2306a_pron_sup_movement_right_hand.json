@@ -1,11 +1,17 @@
 {
   "variable": "upd2306a_pron_sup_movement_right_hand",
   "cde_registry_label": "upd2306a_pron_sup_movement_right_hand",
-  "harmonized_with": ["upd125a_hand_pronate_supinate_rt"],
+  "harmonized_with": [
+    "upd125a_hand_pronate_supinate_rt"
+  ],
   "cde_id": "495",
   "definition": "3.06a MDS-UPDRS - Pronanation-Supination Movement Of Right Hand (UPD2306A)",
-  "src_schema_ref": ["MDS_UPDRS_Part_III_dictionary.csv"],
-  "amp_data_files": ["MDS_UPDRS_Part_III.csv"],
+  "src_schema_ref": [
+    "MDS_UPDRS_Part_III_dictionary.csv"
+  ],
+  "amp_data_files": [
+    "MDS_UPDRS_Part_III.csv"
+  ],
   "program": "AMP-PD",
   "grain": "visit",
   "reads_as": {
@@ -73,6 +79,18 @@
         },
         "value_as_string": "Moderate",
         "value_source_value": "Moderate"
+      }
+    },
+    {
+      "value": "Severe",
+      "write": {
+        "value_as_number": 4,
+        "value_as_concept_id": {
+          "id": 45883536,
+          "name": "Severe"
+        },
+        "value_as_string": "Severe",
+        "value_source_value": "Severe"
       }
     }
   ],

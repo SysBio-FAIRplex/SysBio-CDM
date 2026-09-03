@@ -230,18 +230,19 @@ def draw(var, spec, rng, st):
     distribution, fall back to uniform (honouring integer-vs-number type)."""
     if spec is None:
         return None
+    scope = st.get("_amp_program")   # programme-scoped fidelity ("AMP-X::var" wins over pooled)
     c = spec.get("constraints", {})
     cats = spec.get("categories")
     if cats:
         return fidelity.categorical(var, [e["value"] for e in cats], rng,
-                                    labels=[e.get("label", "") for e in cats])
+                                    labels=[e.get("label", "") for e in cats], scope=scope)
     if c.get("enum"):
-        return fidelity.categorical(var, list(c["enum"]), rng)
+        return fidelity.categorical(var, list(c["enum"]), rng, scope=scope)
     t = spec.get("type")
     if t in ("integer", "number"):
         lo = c.get("minimum", 0)
         hi = c.get("maximum", lo + CFG["unbounded_span"])
-        return fidelity.numeric(var, lo, hi, rng, integer=(t == "integer"))
+        return fidelity.numeric(var, lo, hi, rng, integer=(t == "integer"), scope=scope)
     if t == "date":
         return f"{rng.randint(1995, 2023)}-{rng.randint(1, 12):02d}-{rng.randint(1, 28):02d}"
     # A string column with no value set. The source states nothing, so there is nothing to draw.
@@ -333,6 +334,8 @@ def build_person(pid, prog, model, fns, cond, mono):
     for _ in range(n):
         visits.append((f"M{month}", float(month)))
         month += r.randint(*CFG["visit_interval_months"])
+    st["_amp_program"] = prog    # lets hand generators scope fidelity draws to the programme
+                                 # (NOT "_program" — batch_07.program() owns that key for ARK)
     if prog == "AMP-AD":
         st["cohort"] = fidelity.categorical("cohort", CFG["amp_ad_cohorts"], rng_for("cohort", pid))
 

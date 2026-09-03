@@ -179,6 +179,25 @@ Table procedure_occurrence {
   modifier_source_value VARCHAR(50)
 }
 
+Table condition_occurrence {
+  condition_occurrence_id INTEGER [pk]
+  person_id INTEGER [not null]
+  condition_concept_id INTEGER [not null]
+  condition_start_date DATE [not null]
+  condition_start_datetime TIMESTAMP
+  condition_end_date DATE
+  condition_end_datetime TIMESTAMP
+  condition_type_concept_id INTEGER [not null]
+  condition_status_concept_id INTEGER
+  stop_reason TEXT
+  provider_id INTEGER
+  visit_occurrence_id INTEGER
+  visit_detail_id INTEGER
+  condition_source_value TEXT
+  condition_source_concept_id INTEGER
+  condition_status_source_value TEXT
+}
+
 Table fact_relationship {
   domain_concept_id_1 INTEGER [not null]
   fact_id_1 INTEGER [not null]
@@ -252,6 +271,14 @@ Table assay_input_file {
   }
 }
 
+Table condition_occurrence_access {
+  condition_occurrence_id INTEGER [not null]
+  access_group_id INTEGER [not null]
+  indexes {
+    (condition_occurrence_id, access_group_id) [pk]
+  }
+}
+
 Table procedure_occurrence_access {
   procedure_occurrence_id INTEGER [not null]
   access_group_id INTEGER [not null]
@@ -305,6 +332,10 @@ Ref: assay_to_specimen.assay_id > assay.assay_id
 Ref: assay_to_specimen.specimen_id > specimen.specimen_id
 Ref: assay_input_file.assay_id > assay.assay_id
 Ref: assay_input_file.file_id > files.file_id
+Ref: condition_occurrence.person_id > person.person_id
+Ref: condition_occurrence.visit_occurrence_id > visit_occurrence.visit_occurrence_id
+Ref: condition_occurrence_access.condition_occurrence_id > condition_occurrence.condition_occurrence_id
+Ref: condition_occurrence_access.access_group_id > access_groups.id
 Ref: procedure_occurrence_access.procedure_occurrence_id > procedure_occurrence.procedure_occurrence_id
 Ref: procedure_occurrence_access.access_group_id > access_groups.id
 Ref: measurement_access.measurement_id > measurement.measurement_id

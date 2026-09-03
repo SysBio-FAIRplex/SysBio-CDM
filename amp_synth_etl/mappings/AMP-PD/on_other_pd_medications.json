@@ -3,8 +3,12 @@
   "cde_registry_label": "on_other_pd_medications",
   "cde_id": "277",
   "definition": "Is Subject Taking Some Other PD Medication(s)?",
-  "src_schema_ref": ["PD_Medical_History_dictionary.csv"],
-  "amp_data_files": ["PD_Medical_History.csv"],
+  "src_schema_ref": [
+    "PD_Medical_History_dictionary.csv"
+  ],
+  "amp_data_files": [
+    "PD_Medical_History.csv"
+  ],
   "program": "AMP-PD",
   "grain": "visit",
   "reads_as": {
@@ -39,6 +43,17 @@
         },
         "value_as_string": "Yes",
         "value_source_value": "Yes"
+      }
+    },
+    {
+      "value": "Unknown",
+      "write": {
+        "value_as_concept_id": {
+          "id": 45877986,
+          "name": "Unknown"
+        },
+        "value_as_string": "Unknown",
+        "value_source_value": "Unknown"
       }
     }
   ],

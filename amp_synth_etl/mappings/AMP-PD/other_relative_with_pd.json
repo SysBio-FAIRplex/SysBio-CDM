@@ -3,8 +3,12 @@
   "cde_registry_label": "other_relative_with_pd",
   "cde_id": "278",
   "definition": "Other Relative Has Or Had Parkinson's Disease",
-  "src_schema_ref": ["Family_History_PD_dictionary.csv"],
-  "amp_data_files": ["Family_History_PD.csv"],
+  "src_schema_ref": [
+    "Family_History_PD_dictionary.csv"
+  ],
+  "amp_data_files": [
+    "Family_History_PD.csv"
+  ],
   "program": "AMP-PD",
   "grain": "subject",
   "reads_as": {
@@ -44,6 +48,17 @@
         },
         "value_as_string": "Yes",
         "value_source_value": "Yes"
+      }
+    },
+    {
+      "value": "Unknown",
+      "write": {
+        "value_as_concept_id": {
+          "id": 45877986,
+          "name": "Unknown"
+        },
+        "value_as_string": "Unknown",
+        "value_source_value": "Unknown"
       }
     }
   ],
