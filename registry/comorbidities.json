@@ -1,0 +1,410 @@
+{
+  "registry_id": 100113,
+  "schema_version": "harmonized-element/2.5",
+  "registry_label": "comorbidities",
+  "definition": "Any diseases or medical condition that is simultaneously present in addition to `diagnosis`.",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-RA-SLE",
+    "AMP-CMD"
+  ],
+  "harmonized_values": [
+    "psoriatic arthritis",
+    "hashimotos thyroiditis",
+    "psoriasis",
+    "rheumatoid arthritis",
+    "diabetes",
+    "inflammatory bowel disease",
+    "other",
+    "cardiovascular disease",
+    "autoimmune thyroid disease",
+    "multiple sclerosis",
+    "pulmonary disease",
+    "coronary artery disease",
+    "cirrhosis",
+    "no coronary artery disease",
+    "no cirrhosis"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "comorbidities",
+      "program": "AMP-RA-SLE",
+      "status": "approved",
+      "status_note": null,
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn72107707",
+            "id_type": "synapse",
+            "sha256": "b08804a4c9d1ad82fc7b22b55bd290a717a62fe6715ef530cbc9b2941351e3f5",
+            "access_groups": [
+              "AMP-RA-SLE"
+            ],
+            "item_as_source_id": 501306
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn72108810",
+            "id_type": "synapse",
+            "sha256": "e0638843795298edcbd72c43e5e25a936136b1ef76da32083fb0f07b2c7634ed",
+            "access_groups": [
+              "AMP-RA-SLE"
+            ],
+            "item_as_source_id": 501307
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn72122099",
+            "id_type": "synapse",
+            "sha256": "369ae16a7adcf9c00867055ef65debe9ea3b65e44c3f8476e9892654a8a27a11",
+            "access_groups": [
+              "AMP-RA-SLE"
+            ],
+            "item_as_source_id": 501308
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn75080274",
+            "id_type": "synapse",
+            "sha256": "2a028d467997f1a181bd4229563d6a01e99c0eb4cde4c3c19fcc86f846ece7c8",
+            "access_groups": [
+              "AMP-RA-SLE"
+            ],
+            "item_as_source_id": 501309
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn75080282",
+            "id_type": "synapse",
+            "sha256": "ecf9586757876da610dc6acc40eb2bb8cd8bf983d4f3fc36f6c61d1eb671e51e",
+            "access_groups": [
+              "AMP-RA-SLE"
+            ],
+            "item_as_source_id": 501310
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "864de4f5775a590375a916e109fd9cfe011b568624e2f77e68865dcbb815edcc",
+            "access_groups": [
+              "AMP-RA-SLE"
+            ],
+            "item_as_source_id": 501311
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "psoriatic arthritis",
+            "source_encoding": null,
+            "harmonized_value": "psoriatic arthritis",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Hashimoto's Thyroiditis",
+            "source_encoding": null,
+            "harmonized_value": "hashimotos thyroiditis",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "psoriasis",
+            "source_encoding": null,
+            "harmonized_value": "psoriasis",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "rheumatoid arthritis",
+            "source_encoding": null,
+            "harmonized_value": "rheumatoid arthritis",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "diabetes",
+            "source_encoding": null,
+            "harmonized_value": "diabetes",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "inflammatory bowel disease",
+            "source_encoding": null,
+            "harmonized_value": "inflammatory bowel disease",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "other",
+            "source_encoding": null,
+            "harmonized_value": "other",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "cardiovascular disease",
+            "source_encoding": null,
+            "harmonized_value": "cardiovascular disease",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "autoimmune thyroid disease",
+            "source_encoding": null,
+            "harmonized_value": "autoimmune thyroid disease",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "multiple sclerosis",
+            "source_encoding": null,
+            "harmonized_value": "multiple sclerosis",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "pulmonary disease",
+            "source_encoding": null,
+            "harmonized_value": "pulmonary disease",
+            "harmonized_encoding": null,
+            "note": null
+          }
+        ]
+      },
+      "src_entity": {
+        "entity": "subject",
+        "dictionaries": [
+          "[data file name withheld]"
+        ],
+        "ambiguous": false,
+        "evidence": "",
+        "status": "proposed"
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "comorbidities"
+      }
+    },
+    {
+      "source_label": "Trait:CAD",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "FNIH_Liver_scRNA_v4.0",
+            "id_type": "cmd_dataset",
+            "sha256": "da44a53604e23f8760a3f1fce7e269e4ef06ebd5234aa96bbc78f6bb0a40c66e",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 501312
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "Coronary artery disease",
+            "source_encoding": null,
+            "harmonized_value": "coronary artery disease",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "Non disease",
+            "source_encoding": null,
+            "harmonized_value": "no coronary artery disease",
+            "harmonized_encoding": null,
+            "note": ""
+          }
+        ],
+        "missing_values": [
+          "-"
+        ]
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "comorbidities"
+      },
+      "layout": {
+        "file_type": "fields"
+      }
+    },
+    {
+      "source_label": "Trait:Cirrhosis",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "FNIH_Liver_scRNA_v4.0",
+            "id_type": "cmd_dataset",
+            "sha256": "da44a53604e23f8760a3f1fce7e269e4ef06ebd5234aa96bbc78f6bb0a40c66e",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 501313
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "Cirrhosis",
+            "source_encoding": null,
+            "harmonized_value": "cirrhosis",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "No cirrhosis",
+            "source_encoding": null,
+            "harmonized_value": "no cirrhosis",
+            "harmonized_encoding": null,
+            "note": ""
+          }
+        ]
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "comorbidities"
+      },
+      "layout": {
+        "file_type": "fields"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "observation",
+      "defining_concept_id": {
+        "id": 4160039,
+        "name": "Co-morbid conditions",
+        "domain": "Observation",
+        "target_field": "observation_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": [
+        {
+          "harmonized_value": "psoriatic arthritis",
+          "value_as_concept_id": {
+            "id": 40319772,
+            "name": "Psoriatic arthritis"
+          },
+          "value_as_string": "psoriatic arthritis"
+        },
+        {
+          "harmonized_value": "hashimotos thyroiditis",
+          "value_as_concept_id": {
+            "id": 135215,
+            "name": "Hashimoto thyroiditis"
+          },
+          "value_as_string": "hashimotos thyroiditis"
+        },
+        {
+          "harmonized_value": "psoriasis",
+          "value_as_concept_id": {
+            "id": 140168,
+            "name": "Psoriasis"
+          },
+          "value_as_string": "psoriasis"
+        },
+        {
+          "harmonized_value": "rheumatoid arthritis",
+          "value_as_concept_id": {
+            "id": 80809,
+            "name": "Rheumatoid arthritis"
+          },
+          "value_as_string": "rheumatoid arthritis"
+        },
+        {
+          "harmonized_value": "diabetes",
+          "value_as_concept_id": {
+            "id": 201820,
+            "name": "Diabetes mellitus"
+          },
+          "value_as_string": "diabetes"
+        },
+        {
+          "harmonized_value": "inflammatory bowel disease",
+          "value_as_concept_id": {
+            "id": 4074815,
+            "name": "Inflammatory bowel disease"
+          },
+          "value_as_string": "inflammatory bowel disease"
+        },
+        {
+          "harmonized_value": "other",
+          "value_as_concept_id": {
+            "id": 45878142,
+            "name": "Other"
+          },
+          "value_as_string": "other"
+        },
+        {
+          "harmonized_value": "cardiovascular disease",
+          "value_as_concept_id": {
+            "id": 134057,
+            "name": "Disorder of cardiovascular system"
+          },
+          "value_as_string": "cardiovascular disease"
+        },
+        {
+          "harmonized_value": "autoimmune thyroid disease",
+          "value_as_concept_id": {
+            "id": 4281109,
+            "name": "Autoimmune thyroiditis"
+          },
+          "value_as_string": "autoimmune thyroid disease"
+        },
+        {
+          "harmonized_value": "multiple sclerosis",
+          "value_as_concept_id": {
+            "id": 374919,
+            "name": "Multiple sclerosis"
+          },
+          "value_as_string": "multiple sclerosis"
+        },
+        {
+          "harmonized_value": "pulmonary disease",
+          "value_as_concept_id": {
+            "id": 257907,
+            "name": "Disorder of lung"
+          },
+          "value_as_string": "pulmonary disease"
+        }
+      ]
+    }
+  ]
+}

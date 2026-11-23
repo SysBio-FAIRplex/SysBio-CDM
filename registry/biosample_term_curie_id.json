@@ -1,0 +1,3195 @@
+{
+  "registry_id": 100064,
+  "schema_version": "harmonized-element/2.7",
+  "registry_label": "biosample_term_curie_id",
+  "definition": "Ontology identifier (CURIE, UBERON/CL) of the biosample term in biosample_term_curie_label, as reported in the CMDGA Biosample record.",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-CMD"
+  ],
+  "harmonized_values": [
+    "BTO:0000453",
+    "BTO:0001079",
+    "BTO:0002881",
+    "BTO:0003953",
+    "CL:0000007",
+    "CL:0000034",
+    "CL:0000062",
+    "CL:0000097",
+    "CL:0000115",
+    "CL:0000121",
+    "CL:0000128",
+    "CL:0000129",
+    "CL:0000134",
+    "CL:0000136",
+    "CL:0000138",
+    "CL:0000152",
+    "CL:0000163",
+    "CL:0000164",
+    "CL:0000169",
+    "CL:0000171",
+    "CL:0000173",
+    "CL:0000182",
+    "CL:0000188",
+    "CL:0000192",
+    "CL:0000222",
+    "CL:0000235",
+    "CL:0000236",
+    "CL:0000448",
+    "CL:0000453",
+    "CL:0000515",
+    "CL:0000540",
+    "CL:0000545",
+    "CL:0000546",
+    "CL:0000556",
+    "CL:0000576",
+    "CL:0000594",
+    "CL:0000595",
+    "CL:0000596",
+    "CL:0000617",
+    "CL:0000623",
+    "CL:0000624",
+    "CL:0000625",
+    "CL:0000632",
+    "CL:0000650",
+    "CL:0000653",
+    "CL:0000679",
+    "CL:0000706",
+    "CL:0000746",
+    "CL:0000765",
+    "CL:0000775",
+    "CL:0000782",
+    "CL:0000784",
+    "CL:0000786",
+    "CL:0000787",
+    "CL:0000788",
+    "CL:0000798",
+    "CL:0000813",
+    "CL:0000815",
+    "CL:0000823",
+    "CL:0000824",
+    "CL:0000837",
+    "CL:0000863",
+    "CL:0000890",
+    "CL:0000895",
+    "CL:0000896",
+    "CL:0000897",
+    "CL:0000899",
+    "CL:0000900",
+    "CL:0000907",
+    "CL:0000911",
+    "CL:0000913",
+    "CL:0000945",
+    "CL:0001031",
+    "CL:0001044",
+    "CL:0002038",
+    "CL:0002064",
+    "CL:0002079",
+    "CL:0002188",
+    "CL:0002275",
+    "CL:0002306",
+    "CL:0002307",
+    "CL:0002322",
+    "CL:0002334",
+    "CL:0002351",
+    "CL:0002410",
+    "CL:0002518",
+    "CL:0002519",
+    "CL:0002520",
+    "CL:0002548",
+    "CL:0002549",
+    "CL:0002550",
+    "CL:0002570",
+    "CL:0002584",
+    "CL:0002586",
+    "CL:0002590",
+    "CL:0002591",
+    "CL:0002592",
+    "CL:0002603",
+    "CL:0002604",
+    "CL:0002618",
+    "CL:0002619",
+    "CL:0002677",
+    "CL:0002678",
+    "CL:0005019",
+    "CL:0008019",
+    "CL:0008024",
+    "CL:0011020",
+    "CL:1000398",
+    "CL:1000507",
+    "CL:1000510",
+    "CL:1000892",
+    "CL:2000001",
+    "CL:2000018",
+    "CL:2000043",
+    "CL:2000044",
+    "CL:2000066",
+    "CL:2000067",
+    "CL:2000068",
+    "CLO:0000280",
+    "EFO:0001184",
+    "EFO:0001187",
+    "EFO:0001203",
+    "EFO:0002579",
+    "EFO:0002713",
+    "EFO:0002784",
+    "EFO:0002966",
+    "EFO:0003042",
+    "EFO:0004905",
+    "EFO:0005707",
+    "EFO:0005740",
+    "NTR:0000428",
+    "NTR:0001407",
+    "NTR:0001484",
+    "NTR:0002929",
+    "NTR:0005188",
+    "NTR:0005192",
+    "UBERON:0000000",
+    "UBERON:0000006",
+    "UBERON:0000007",
+    "UBERON:0000016",
+    "UBERON:0000074",
+    "UBERON:0000081",
+    "UBERON:0000128",
+    "UBERON:0000138",
+    "UBERON:0000947",
+    "UBERON:0000948",
+    "UBERON:0000955",
+    "UBERON:0000966",
+    "UBERON:0000988",
+    "UBERON:0000992",
+    "UBERON:0001013",
+    "UBERON:0001041",
+    "UBERON:0001043",
+    "UBERON:0001114",
+    "UBERON:0001134",
+    "UBERON:0001150",
+    "UBERON:0001159",
+    "UBERON:0001199",
+    "UBERON:0001224",
+    "UBERON:0001255",
+    "UBERON:0001264",
+    "UBERON:0001269",
+    "UBERON:0001273",
+    "UBERON:0001274",
+    "UBERON:0001275",
+    "UBERON:0001323",
+    "UBERON:0001347",
+    "UBERON:0001383",
+    "UBERON:0001384",
+    "UBERON:0001393",
+    "UBERON:0001474",
+    "UBERON:0001496",
+    "UBERON:0001499",
+    "UBERON:0001515",
+    "UBERON:0001621",
+    "UBERON:0001782",
+    "UBERON:0001870",
+    "UBERON:0001871",
+    "UBERON:0001872",
+    "UBERON:0001873",
+    "UBERON:0001874",
+    "UBERON:0001875",
+    "UBERON:0001876",
+    "UBERON:0001880",
+    "UBERON:0001882",
+    "UBERON:0001891",
+    "UBERON:0001894",
+    "UBERON:0001896",
+    "UBERON:0001897",
+    "UBERON:0001898",
+    "UBERON:0001905",
+    "UBERON:0001906",
+    "UBERON:0001923",
+    "UBERON:0001927",
+    "UBERON:0001932",
+    "UBERON:0001947",
+    "UBERON:0001954",
+    "UBERON:0001966",
+    "UBERON:0002012",
+    "UBERON:0002021",
+    "UBERON:0002022",
+    "UBERON:0002023",
+    "UBERON:0002034",
+    "UBERON:0002037",
+    "UBERON:0002038",
+    "UBERON:0002048",
+    "UBERON:0002078",
+    "UBERON:0002079",
+    "UBERON:0002080",
+    "UBERON:0002081",
+    "UBERON:0002082",
+    "UBERON:0002084",
+    "UBERON:0002094",
+    "UBERON:0002106",
+    "UBERON:0002107",
+    "UBERON:0002108",
+    "UBERON:0002113",
+    "UBERON:0002129",
+    "UBERON:0002132",
+    "UBERON:0002134",
+    "UBERON:0002135",
+    "UBERON:0002137",
+    "UBERON:0002146",
+    "UBERON:0002148",
+    "UBERON:0002153",
+    "UBERON:0002190",
+    "UBERON:0002191",
+    "UBERON:0002206",
+    "UBERON:0002305",
+    "UBERON:0002314",
+    "UBERON:0002316",
+    "UBERON:0002369",
+    "UBERON:0002370",
+    "UBERON:0002407",
+    "UBERON:0002430",
+    "UBERON:0002476",
+    "UBERON:0002477",
+    "UBERON:0002479",
+    "UBERON:0002481",
+    "UBERON:0002576",
+    "UBERON:0002581",
+    "UBERON:0002603",
+    "UBERON:0002626",
+    "UBERON:0002630",
+    "UBERON:0002637",
+    "UBERON:0002661",
+    "UBERON:0002667",
+    "UBERON:0002686",
+    "UBERON:0002688",
+    "UBERON:0002702",
+    "UBERON:0002739",
+    "UBERON:0002740",
+    "UBERON:0002751",
+    "UBERON:0002756",
+    "UBERON:0002766",
+    "UBERON:0002769",
+    "UBERON:0002771",
+    "UBERON:0002795",
+    "UBERON:0002902",
+    "UBERON:0002943",
+    "UBERON:0002948",
+    "UBERON:0002967",
+    "UBERON:0002973",
+    "UBERON:0002981",
+    "UBERON:0002998",
+    "UBERON:0003662",
+    "UBERON:0003663",
+    "UBERON:0003894",
+    "UBERON:0003921",
+    "UBERON:0003939",
+    "UBERON:0004379",
+    "UBERON:0004380",
+    "UBERON:0004404",
+    "UBERON:0004405",
+    "UBERON:0004406",
+    "UBERON:0004411",
+    "UBERON:0004412",
+    "UBERON:0004538",
+    "UBERON:0004539",
+    "UBERON:0004671",
+    "UBERON:0004684",
+    "UBERON:0004725",
+    "UBERON:0005215",
+    "UBERON:0005270",
+    "UBERON:0005290",
+    "UBERON:0006088",
+    "UBERON:0006092",
+    "UBERON:0006093",
+    "UBERON:0006094",
+    "UBERON:0006114",
+    "UBERON:0006469",
+    "UBERON:0006483",
+    "UBERON:0006566",
+    "UBERON:0006631",
+    "UBERON:0007026",
+    "UBERON:0007193",
+    "UBERON:0007610",
+    "UBERON:0008450",
+    "UBERON:0008772",
+    "UBERON:0008933",
+    "UBERON:0009834",
+    "UBERON:0009835",
+    "UBERON:0010414",
+    "UBERON:0011907",
+    "UBERON:0013561",
+    "UBERON:0014454",
+    "UBERON:0014455",
+    "UBERON:0018115",
+    "UBERON:0018116",
+    "UBERON:0018117",
+    "UBERON:0018118",
+    "UBERON:0022268",
+    "UBERON:0022353",
+    "UBERON:0023861",
+    "UBERON:0034752",
+    "UBERON:0034773",
+    "UBERON:0034893",
+    "UBERON:0035932"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "biosample_term_id",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [
+        "cmdga_profiles.json::Biosample::biosample_term_name"
+      ],
+      "src_definition": "Ontology term describing biosample.",
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "",
+            "id_type": "cmdga",
+            "sha256": "f787c47ca854b6398bf7ca9834b5274a1681e0dae796409381e3bb0ea88ed29a",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 500627
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "faeb766427e362f787ba4a2068063be9cfd74bdf805509da46b053fe54e553a4",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 500628
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "7acb4973ef6a328dcde766466c01bbb25743657742d1469bc5b3f30155447793",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 500629
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "5afed41f01b873e00e9f7c9a456beba1025da209a7d710a7c061658602f5ee7e",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 500630
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "431b67fda082d48ed35747bf7a76e1b962d1031ff7be0e1e8158d6240a56794e",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 500631
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "acd6fae8edd35fb5f64db50df22bcaa8e0ba29aa23735541d96b645ae6f58e4c",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 500632
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "5a7e8abd1f56dfb74b51807230c0e84b58f6b5283f39f466d595613ec544d3d1",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 500633
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "33de49ccf0e1a4ff54fa67fb197ea9f012f16da411c28abc421454f57055454b",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 500634
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "e2f9d33037c8f94b58b5a6a22392a1cfd17018892afef6fd7396d8a231974bb5",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 500635
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "72f3ef36f4181328012a059de1d4b2896357b724b9503514f3ea98a440650a53",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 500636
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "8932c30ea7ed35e35b0844b54cab5a0aa6df0d4bf3bdc752b8271ce03c7c5b60",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 500637
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "f977142c07c86fbc7eeadbc60ebd63686306c5b859b1dafd95c0d20e37dd8b47",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 500638
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "80244d8e91404fe34561f175369985a7f19256e6ea5c1108919233a94a3f0aec",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 500639
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "3b1c08542b947f7b113b59d700696d9d6d7e910f5b9a16ec349b4aa1478c100d",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 500640
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "ca218124515c58c333f35ad8c3dab1c842301e270e553cef43802f07f0c251b6",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 500641
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "ecf847d0b36faba72fe7e20d70d008af41ed379e87fd7d875a74301d71796ebb",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 500642
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "c8c82627b0a36c2f252b40c6ba9c203bb748ef7e8ca2db69ba0df8f127e4fc8b",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 500643
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "ab0ebe6b04a9b87db238f9af75543d1f4341f59ee576b23a278ca2b1e1665741",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 500644
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "80eeafb288c359603458cb24a3684ac022c1b221b48193fe92cea681e7b0219e",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 500645
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "0590cf8ade4f2a9dd797cd0c01c25b467bb7e53e4d68895bad22b59073d1107e",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 500646
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "d94eed553b4c0b48a58fee4cd0d859674943ccd1277dd2f2d1271c197f4bd134",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 500647
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "2a07c17fe338f028530e2d584ea823ebd408ed059480da940d372c94b9ac3019",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 500648
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "91eb1ae56ef192c1a03e96767bb386ec79a110080144a778519b297094a3482b",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 500649
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "040ea68994176dcac34d87fc41da6fbe8102b14e516df065e38e44ba67eac2eb",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 500650
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "d5943f827b1cedc09a86489e4d94b73a8ff70db0ecc2bdd2de804e704415ecac",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 500651
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "dc0352d0eb6bf19b7bd4815dc73ccc5fe32c3fac107cf63935f9b05289c57f79",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 500652
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "796e5e1dea99b3581b2f6455b269552257ef26f2038d7988ade41b3d7b46c629",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 500653
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "36f5fcfc3143966d088dbd5ebd4eaaa4c8b646ac1f2816942f559c786181fe83",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 500654
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "f1342dd55c5b696d89c42e4e5352818159c72146e8c6d3abf5b8b60620ee5afe",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 500655
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "b1369d7d3f3d03f6345089d7640dd71440696479fc2182caa697793b97936c7e",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 500656
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "96e54f07cda735800f8de03aa2551a89dacaa40cbcb0b8be6671efbb375b220c",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 500657
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "d28faff4ca4cbd27954674d660ccb0602e351c8d3c73a9da454c5ffdc666d4f8",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 500658
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "ecbb408124ee7dfbed9aa8dd492efe63044d2761966ac90502b71dbd65a55789",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 500659
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "de671a7b43dd7f929a1ffb0b416306e0b53e83864bd6e87813a3742b47fc259d",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 500660
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "ec868c791459aed79ba16e20fb569cc26be76da40970392cb97b6db059d3d3d2",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 500661
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "add29b92d68543946c7880fdaa599af5422c6603af1701e454dae5fc4e9e759b",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 500662
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "59b971d66866ad10f9fdd7651e39592cbb07ebd3a80173ea61108941ac48dd48",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 500663
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "a97bae77d0e69ef55a2400a3a24b24deb5080544ce47bed9bd35551be74dff05",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 500664
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "4d13c883e72ccf2b423f0c7dd1ed16008913abf29b1736d362374998277f59b3",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 500665
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "ccc9413bdd0ef6333155afd007bd26216327061c4731946c13760be7fefafa0a",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 500666
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "cd0bd798e26e3a64a1a660e132599bdbd4d659d48dee5cf496d06fc1ea7669d8",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 500667
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "b11f59a8b94a8876486775af9c62eb7c8806363d1a821b8ff1dd94575f5495f5",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 500668
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "99082971a09be82f82d3db983a4dadae846b02e904b1f1e29b2b150cf699e83d",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 500669
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "9d4e6c90e5727fef4a56562ed289761da80de0f60d93e132bbafbd87f0b7f58c",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 500670
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "b198c5142fc07daafbec3f15cdc7062e7792c40d40cfbeba971976ce50b52558",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 500671
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "d41003e4a5015fd845b4204873217bcc5e65c87c70428900eb1214cc17ccd139",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 500672
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "f118032fef76ce85503a4ebebfa147d639d25b8b16dbcea616f0f70514e70acb",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 500673
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "fee71e61d00065ea6e9536721cf37d509ff5f9f4e1bc04fc5537d6a2c42ba81b",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 500674
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "20b56748bb502b8513d02b1a160ea96132d65f9028a2522e006762b1af6777f9",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 500675
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "b9bbc2b778e12494be918100e8e64a966f45463560543b232bfbf6ee3177c1fd",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 500676
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "0d6adf4293bd18670c41e2afba62ca094aa77aa91d54a310f8256e9d793c3e0e",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 500677
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "e8ec00c794bb516b38635adf241c09c48fd20940a24e3fb7bf5925b30c8c935d",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 500678
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "91786eca6f2777ebda99793a3443bdbe921888000d5d7f6c64e7aae9b6c33d79",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 500679
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "f30c6ed403fcc6a4b4bdef8adfa81a4807bbcc4c888c279c78e0ba96dc586631",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 500680
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "BTO:0000453",
+            "source_encoding": null,
+            "harmonized_value": "BTO:0000453",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "BTO:0001079",
+            "source_encoding": null,
+            "harmonized_value": "BTO:0001079",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "BTO:0002881",
+            "source_encoding": null,
+            "harmonized_value": "BTO:0002881",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "BTO:0003953",
+            "source_encoding": null,
+            "harmonized_value": "BTO:0003953",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0000007",
+            "source_encoding": null,
+            "harmonized_value": "CL:0000007",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0000034",
+            "source_encoding": null,
+            "harmonized_value": "CL:0000034",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0000062",
+            "source_encoding": null,
+            "harmonized_value": "CL:0000062",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0000097",
+            "source_encoding": null,
+            "harmonized_value": "CL:0000097",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0000115",
+            "source_encoding": null,
+            "harmonized_value": "CL:0000115",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0000121",
+            "source_encoding": null,
+            "harmonized_value": "CL:0000121",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0000128",
+            "source_encoding": null,
+            "harmonized_value": "CL:0000128",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0000129",
+            "source_encoding": null,
+            "harmonized_value": "CL:0000129",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0000134",
+            "source_encoding": null,
+            "harmonized_value": "CL:0000134",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0000136",
+            "source_encoding": null,
+            "harmonized_value": "CL:0000136",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0000138",
+            "source_encoding": null,
+            "harmonized_value": "CL:0000138",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0000152",
+            "source_encoding": null,
+            "harmonized_value": "CL:0000152",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0000163",
+            "source_encoding": null,
+            "harmonized_value": "CL:0000163",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0000164",
+            "source_encoding": null,
+            "harmonized_value": "CL:0000164",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0000169",
+            "source_encoding": null,
+            "harmonized_value": "CL:0000169",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0000171",
+            "source_encoding": null,
+            "harmonized_value": "CL:0000171",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0000173",
+            "source_encoding": null,
+            "harmonized_value": "CL:0000173",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0000182",
+            "source_encoding": null,
+            "harmonized_value": "CL:0000182",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0000188",
+            "source_encoding": null,
+            "harmonized_value": "CL:0000188",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0000192",
+            "source_encoding": null,
+            "harmonized_value": "CL:0000192",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0000222",
+            "source_encoding": null,
+            "harmonized_value": "CL:0000222",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0000235",
+            "source_encoding": null,
+            "harmonized_value": "CL:0000235",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0000236",
+            "source_encoding": null,
+            "harmonized_value": "CL:0000236",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0000448",
+            "source_encoding": null,
+            "harmonized_value": "CL:0000448",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0000453",
+            "source_encoding": null,
+            "harmonized_value": "CL:0000453",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0000515",
+            "source_encoding": null,
+            "harmonized_value": "CL:0000515",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0000540",
+            "source_encoding": null,
+            "harmonized_value": "CL:0000540",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0000545",
+            "source_encoding": null,
+            "harmonized_value": "CL:0000545",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0000546",
+            "source_encoding": null,
+            "harmonized_value": "CL:0000546",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0000556",
+            "source_encoding": null,
+            "harmonized_value": "CL:0000556",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0000576",
+            "source_encoding": null,
+            "harmonized_value": "CL:0000576",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0000594",
+            "source_encoding": null,
+            "harmonized_value": "CL:0000594",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0000595",
+            "source_encoding": null,
+            "harmonized_value": "CL:0000595",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0000596",
+            "source_encoding": null,
+            "harmonized_value": "CL:0000596",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0000617",
+            "source_encoding": null,
+            "harmonized_value": "CL:0000617",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0000623",
+            "source_encoding": null,
+            "harmonized_value": "CL:0000623",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0000624",
+            "source_encoding": null,
+            "harmonized_value": "CL:0000624",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0000625",
+            "source_encoding": null,
+            "harmonized_value": "CL:0000625",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0000632",
+            "source_encoding": null,
+            "harmonized_value": "CL:0000632",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0000650",
+            "source_encoding": null,
+            "harmonized_value": "CL:0000650",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0000653",
+            "source_encoding": null,
+            "harmonized_value": "CL:0000653",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0000679",
+            "source_encoding": null,
+            "harmonized_value": "CL:0000679",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0000706",
+            "source_encoding": null,
+            "harmonized_value": "CL:0000706",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0000746",
+            "source_encoding": null,
+            "harmonized_value": "CL:0000746",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0000765",
+            "source_encoding": null,
+            "harmonized_value": "CL:0000765",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0000775",
+            "source_encoding": null,
+            "harmonized_value": "CL:0000775",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0000782",
+            "source_encoding": null,
+            "harmonized_value": "CL:0000782",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0000784",
+            "source_encoding": null,
+            "harmonized_value": "CL:0000784",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0000786",
+            "source_encoding": null,
+            "harmonized_value": "CL:0000786",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0000787",
+            "source_encoding": null,
+            "harmonized_value": "CL:0000787",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0000788",
+            "source_encoding": null,
+            "harmonized_value": "CL:0000788",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0000798",
+            "source_encoding": null,
+            "harmonized_value": "CL:0000798",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0000813",
+            "source_encoding": null,
+            "harmonized_value": "CL:0000813",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0000815",
+            "source_encoding": null,
+            "harmonized_value": "CL:0000815",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0000823",
+            "source_encoding": null,
+            "harmonized_value": "CL:0000823",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0000824",
+            "source_encoding": null,
+            "harmonized_value": "CL:0000824",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0000837",
+            "source_encoding": null,
+            "harmonized_value": "CL:0000837",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0000863",
+            "source_encoding": null,
+            "harmonized_value": "CL:0000863",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0000890",
+            "source_encoding": null,
+            "harmonized_value": "CL:0000890",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0000895",
+            "source_encoding": null,
+            "harmonized_value": "CL:0000895",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0000896",
+            "source_encoding": null,
+            "harmonized_value": "CL:0000896",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0000897",
+            "source_encoding": null,
+            "harmonized_value": "CL:0000897",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0000899",
+            "source_encoding": null,
+            "harmonized_value": "CL:0000899",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0000900",
+            "source_encoding": null,
+            "harmonized_value": "CL:0000900",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0000907",
+            "source_encoding": null,
+            "harmonized_value": "CL:0000907",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0000911",
+            "source_encoding": null,
+            "harmonized_value": "CL:0000911",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0000913",
+            "source_encoding": null,
+            "harmonized_value": "CL:0000913",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0000945",
+            "source_encoding": null,
+            "harmonized_value": "CL:0000945",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0001031",
+            "source_encoding": null,
+            "harmonized_value": "CL:0001031",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0001044",
+            "source_encoding": null,
+            "harmonized_value": "CL:0001044",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0002038",
+            "source_encoding": null,
+            "harmonized_value": "CL:0002038",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0002064",
+            "source_encoding": null,
+            "harmonized_value": "CL:0002064",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0002079",
+            "source_encoding": null,
+            "harmonized_value": "CL:0002079",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0002188",
+            "source_encoding": null,
+            "harmonized_value": "CL:0002188",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0002275",
+            "source_encoding": null,
+            "harmonized_value": "CL:0002275",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0002306",
+            "source_encoding": null,
+            "harmonized_value": "CL:0002306",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0002307",
+            "source_encoding": null,
+            "harmonized_value": "CL:0002307",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0002322",
+            "source_encoding": null,
+            "harmonized_value": "CL:0002322",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0002334",
+            "source_encoding": null,
+            "harmonized_value": "CL:0002334",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0002351",
+            "source_encoding": null,
+            "harmonized_value": "CL:0002351",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0002410",
+            "source_encoding": null,
+            "harmonized_value": "CL:0002410",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0002518",
+            "source_encoding": null,
+            "harmonized_value": "CL:0002518",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0002519",
+            "source_encoding": null,
+            "harmonized_value": "CL:0002519",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0002520",
+            "source_encoding": null,
+            "harmonized_value": "CL:0002520",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0002548",
+            "source_encoding": null,
+            "harmonized_value": "CL:0002548",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0002549",
+            "source_encoding": null,
+            "harmonized_value": "CL:0002549",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0002550",
+            "source_encoding": null,
+            "harmonized_value": "CL:0002550",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0002570",
+            "source_encoding": null,
+            "harmonized_value": "CL:0002570",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0002584",
+            "source_encoding": null,
+            "harmonized_value": "CL:0002584",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0002586",
+            "source_encoding": null,
+            "harmonized_value": "CL:0002586",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0002590",
+            "source_encoding": null,
+            "harmonized_value": "CL:0002590",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0002591",
+            "source_encoding": null,
+            "harmonized_value": "CL:0002591",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0002592",
+            "source_encoding": null,
+            "harmonized_value": "CL:0002592",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0002603",
+            "source_encoding": null,
+            "harmonized_value": "CL:0002603",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0002604",
+            "source_encoding": null,
+            "harmonized_value": "CL:0002604",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0002618",
+            "source_encoding": null,
+            "harmonized_value": "CL:0002618",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0002619",
+            "source_encoding": null,
+            "harmonized_value": "CL:0002619",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0002677",
+            "source_encoding": null,
+            "harmonized_value": "CL:0002677",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0002678",
+            "source_encoding": null,
+            "harmonized_value": "CL:0002678",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0005019",
+            "source_encoding": null,
+            "harmonized_value": "CL:0005019",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0008019",
+            "source_encoding": null,
+            "harmonized_value": "CL:0008019",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0008024",
+            "source_encoding": null,
+            "harmonized_value": "CL:0008024",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:0011020",
+            "source_encoding": null,
+            "harmonized_value": "CL:0011020",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:1000398",
+            "source_encoding": null,
+            "harmonized_value": "CL:1000398",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:1000507",
+            "source_encoding": null,
+            "harmonized_value": "CL:1000507",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:1000510",
+            "source_encoding": null,
+            "harmonized_value": "CL:1000510",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:1000892",
+            "source_encoding": null,
+            "harmonized_value": "CL:1000892",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:2000001",
+            "source_encoding": null,
+            "harmonized_value": "CL:2000001",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:2000018",
+            "source_encoding": null,
+            "harmonized_value": "CL:2000018",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:2000043",
+            "source_encoding": null,
+            "harmonized_value": "CL:2000043",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:2000044",
+            "source_encoding": null,
+            "harmonized_value": "CL:2000044",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:2000066",
+            "source_encoding": null,
+            "harmonized_value": "CL:2000066",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:2000067",
+            "source_encoding": null,
+            "harmonized_value": "CL:2000067",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CL:2000068",
+            "source_encoding": null,
+            "harmonized_value": "CL:2000068",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CLO:0000280",
+            "source_encoding": null,
+            "harmonized_value": "CLO:0000280",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "EFO:0001184",
+            "source_encoding": null,
+            "harmonized_value": "EFO:0001184",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "EFO:0001187",
+            "source_encoding": null,
+            "harmonized_value": "EFO:0001187",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "EFO:0001203",
+            "source_encoding": null,
+            "harmonized_value": "EFO:0001203",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "EFO:0002579",
+            "source_encoding": null,
+            "harmonized_value": "EFO:0002579",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "EFO:0002713",
+            "source_encoding": null,
+            "harmonized_value": "EFO:0002713",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "EFO:0002784",
+            "source_encoding": null,
+            "harmonized_value": "EFO:0002784",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "EFO:0002966",
+            "source_encoding": null,
+            "harmonized_value": "EFO:0002966",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "EFO:0003042",
+            "source_encoding": null,
+            "harmonized_value": "EFO:0003042",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "EFO:0004905",
+            "source_encoding": null,
+            "harmonized_value": "EFO:0004905",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "EFO:0005707",
+            "source_encoding": null,
+            "harmonized_value": "EFO:0005707",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "EFO:0005740",
+            "source_encoding": null,
+            "harmonized_value": "EFO:0005740",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "NTR:0000428",
+            "source_encoding": null,
+            "harmonized_value": "NTR:0000428",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "NTR:0001407",
+            "source_encoding": null,
+            "harmonized_value": "NTR:0001407",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "NTR:0001484",
+            "source_encoding": null,
+            "harmonized_value": "NTR:0001484",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "NTR:0002929",
+            "source_encoding": null,
+            "harmonized_value": "NTR:0002929",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "NTR:0005188",
+            "source_encoding": null,
+            "harmonized_value": "NTR:0005188",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "NTR:0005192",
+            "source_encoding": null,
+            "harmonized_value": "NTR:0005192",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0000000",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0000000",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0000006",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0000006",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0000007",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0000007",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0000016",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0000016",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0000074",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0000074",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0000081",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0000081",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0000128",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0000128",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0000138",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0000138",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0000947",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0000947",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0000948",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0000948",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0000955",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0000955",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0000966",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0000966",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0000988",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0000988",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0000992",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0000992",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0001013",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0001013",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0001041",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0001041",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0001043",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0001043",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0001114",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0001114",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0001134",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0001134",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0001150",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0001150",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0001159",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0001159",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0001199",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0001199",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0001224",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0001224",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0001255",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0001255",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0001264",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0001264",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0001269",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0001269",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0001273",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0001273",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0001274",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0001274",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0001275",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0001275",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0001323",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0001323",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0001347",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0001347",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0001383",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0001383",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0001384",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0001384",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0001393",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0001393",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0001474",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0001474",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0001496",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0001496",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0001499",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0001499",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0001515",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0001515",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0001621",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0001621",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0001782",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0001782",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0001870",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0001870",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0001871",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0001871",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0001872",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0001872",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0001873",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0001873",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0001874",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0001874",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0001875",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0001875",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0001876",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0001876",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0001880",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0001880",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0001882",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0001882",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0001891",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0001891",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0001894",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0001894",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0001896",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0001896",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0001897",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0001897",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0001898",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0001898",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0001905",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0001905",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0001906",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0001906",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0001923",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0001923",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0001927",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0001927",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0001932",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0001932",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0001947",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0001947",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0001954",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0001954",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0001966",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0001966",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0002012",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0002012",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0002021",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0002021",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0002022",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0002022",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0002023",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0002023",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0002034",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0002034",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0002037",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0002037",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0002038",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0002038",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0002048",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0002048",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0002078",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0002078",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0002079",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0002079",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0002080",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0002080",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0002081",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0002081",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0002082",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0002082",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0002084",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0002084",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0002094",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0002094",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0002106",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0002106",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0002107",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0002107",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0002108",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0002108",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0002113",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0002113",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0002129",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0002129",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0002132",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0002132",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0002134",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0002134",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0002135",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0002135",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0002137",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0002137",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0002146",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0002146",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0002148",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0002148",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0002153",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0002153",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0002190",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0002190",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0002191",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0002191",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0002206",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0002206",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0002305",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0002305",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0002314",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0002314",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0002316",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0002316",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0002369",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0002369",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0002370",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0002370",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0002407",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0002407",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0002430",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0002430",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0002476",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0002476",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0002477",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0002477",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0002479",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0002479",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0002481",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0002481",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0002576",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0002576",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0002581",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0002581",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0002603",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0002603",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0002626",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0002626",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0002630",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0002630",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0002637",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0002637",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0002661",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0002661",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0002667",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0002667",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0002686",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0002686",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0002688",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0002688",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0002702",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0002702",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0002739",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0002739",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0002740",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0002740",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0002751",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0002751",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0002756",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0002756",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0002766",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0002766",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0002769",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0002769",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0002771",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0002771",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0002795",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0002795",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0002902",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0002902",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0002943",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0002943",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0002948",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0002948",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0002967",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0002967",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0002973",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0002973",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0002981",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0002981",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0002998",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0002998",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0003662",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0003662",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0003663",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0003663",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0003894",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0003894",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0003921",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0003921",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0003939",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0003939",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0004379",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0004379",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0004380",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0004380",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0004404",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0004404",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0004405",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0004405",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0004406",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0004406",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0004411",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0004411",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0004412",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0004412",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0004538",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0004538",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0004539",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0004539",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0004671",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0004671",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0004684",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0004684",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0004725",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0004725",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0005215",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0005215",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0005270",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0005270",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0005290",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0005290",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0006088",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0006088",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0006092",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0006092",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0006093",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0006093",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0006094",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0006094",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0006114",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0006114",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0006469",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0006469",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0006483",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0006483",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0006566",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0006566",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0006631",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0006631",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0007026",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0007026",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0007193",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0007193",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0007610",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0007610",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0008450",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0008450",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0008772",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0008772",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0008933",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0008933",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0009834",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0009834",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0009835",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0009835",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0010414",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0010414",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0011907",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0011907",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0013561",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0013561",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0014454",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0014454",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0014455",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0014455",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0018115",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0018115",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0018116",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0018116",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0018117",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0018117",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0018118",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0018118",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0022268",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0022268",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0022353",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0022353",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0023861",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0023861",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0034752",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0034752",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0034773",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0034773",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0034893",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0034893",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0035932",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0035932",
+            "harmonized_encoding": null,
+            "note": null
+          }
+        ]
+      },
+      "loading_grain": {
+        "anchor": "specimen_id",
+        "entity": "specimen",
+        "attribute": "biosample_term_curie_id"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "specimen",
+      "defining_concept_id": {
+        "id": 0,
+        "name": "",
+        "domain": "",
+        "target_field": "specimen_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [
+        {
+          "role": "attribute",
+          "column": null,
+          "status": "proposed",
+          "note": ""
+        },
+        {
+          "role": "attribute",
+          "column": null,
+          "status": "candidate",
+          "note": ""
+        }
+      ],
+      "value_map": [
+        {
+          "harmonized_value": "kidney",
+          "value_as_concept_id": {
+            "id": 4271678,
+            "name": "Kidney structure"
+          },
+          "value_as_string": "kidney"
+        },
+        {
+          "harmonized_value": "right lobe of liver",
+          "value_as_concept_id": {
+            "id": 4168794,
+            "name": "Structure of right lobe of liver"
+          },
+          "value_as_string": "right lobe of liver"
+        },
+        {
+          "harmonized_value": "omental fat pad",
+          "value_as_concept_id": {
+            "id": 4149520,
+            "name": "Greater omentum structure"
+          },
+          "value_as_string": "omental fat pad"
+        },
+        {
+          "harmonized_value": "heart left ventricle",
+          "value_as_concept_id": {
+            "id": 4339094,
+            "name": "Left cardiac ventricular structure"
+          },
+          "value_as_string": "heart left ventricle"
+        }
+      ]
+    }
+  ],
+  "loading_grain": {
+    "anchor": "specimen_id",
+    "entity": "specimen_acquisition",
+    "attribute": "biosample_term_curie_id"
+  }
+}

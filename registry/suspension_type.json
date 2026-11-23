@@ -1,0 +1,233 @@
+{
+  "registry_id": 100713,
+  "schema_version": "harmonized-element/2.5",
+  "registry_label": "suspension_type",
+  "definition": "The physical form of the specimen as prepared for the omics assay - a cell sample, nucleic acid, RNA, and so on. This is what specimen_concept_id holds; the organ it came from is anatomic_site_concept_id.",
+  "one_per": [
+    "person",
+    "specimen"
+  ],
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-CMD",
+    "AMP-AD",
+    "AMP-RA-SLE"
+  ],
+  "harmonized_values": [
+    "cell",
+    "nucleus"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "suspension_type",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "string",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "DFF520384",
+            "id_type": "cmdga",
+            "sha256": "8d480d206f6a44e492bd25e1339caefbe465a8de77942af6991bd3d830dd0cb8",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 504482
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "DFF142690",
+            "id_type": "cmdga",
+            "sha256": "c1070bcc2011d593709d2bad78cf8a25b7caa913f58418cb6b28c6eab92eb1d9",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 505512
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "cell",
+            "source_encoding": null,
+            "harmonized_value": "cell",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "nucleus",
+            "source_encoding": null,
+            "harmonized_value": "nucleus",
+            "harmonized_encoding": null,
+            "note": ""
+          }
+        ]
+      },
+      "loading_grain": {
+        "anchor": "library_id",
+        "entity": "library",
+        "attribute": "suspension_type"
+      }
+    },
+    {
+      "source_label": "compartment",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "DFF963439",
+            "id_type": "cmdga",
+            "sha256": "831987cb98b993bd1ef977d8758b4201210189a55d5bd38260dc41df3eefb5ac",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 501314
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "nucleus",
+            "source_encoding": null,
+            "harmonized_value": "nucleus",
+            "harmonized_encoding": null,
+            "note": ""
+          }
+        ]
+      },
+      "loading_grain": {
+        "anchor": "library_id",
+        "entity": "library",
+        "attribute": "suspension_type"
+      }
+    },
+    {
+      "source_label": "nucleicAcidSource",
+      "program": "AMP-AD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layout": {
+        "file_type": "csv",
+        "sheet": null
+      },
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn51757645",
+            "id_type": "synapse",
+            "sha256": "9eaa383ee973146ebfe02915b8119e33cc5533c7dfb7623ef9bfbc8c4a9bc945",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 505513
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "single nucleus",
+            "source_encoding": null,
+            "harmonized_value": "nucleus",
+            "harmonized_encoding": null
+          }
+        ]
+      },
+      "loading_grain": {
+        "anchor": "library_id",
+        "entity": "library",
+        "attribute": "suspension_type"
+      }
+    },
+    {
+      "source_label": "protocol",
+      "program": "AMP-RA-SLE",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layout": {
+        "file_type": "xlsx",
+        "sheet": "data"
+      },
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn43078438",
+            "id_type": "synapse",
+            "sha256": "6545f7428465f8877cea9d64589552b692e5a79a9ecc4265f99118523555b972",
+            "access_groups": [
+              "AMP-RA-SLE"
+            ],
+            "item_as_source_id": 505514
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "nuc",
+            "source_encoding": null,
+            "harmonized_value": "nucleus",
+            "harmonized_encoding": null
+          }
+        ]
+      },
+      "loading_grain": {
+        "anchor": "library_id",
+        "entity": "library",
+        "attribute": "suspension_type"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "specimen",
+      "defining_concept_id": {
+        "id": 44806863,
+        "name": "Cell sample",
+        "domain": "Specimen",
+        "target_field": "specimen_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map",
+        "specimen_id": "staging.specimen_map"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": [
+        {
+          "harmonized_value": "cell",
+          "value_as_concept_id": {
+            "id": 44806863,
+            "name": "Cell sample"
+          },
+          "value_as_string": "cell"
+        }
+      ]
+    }
+  ]
+}

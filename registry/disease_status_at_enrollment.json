@@ -1,0 +1,867 @@
+{
+  "registry_id": 100207,
+  "schema_version": "harmonized-element/2.7",
+  "registry_label": "disease_status_at_enrollment",
+  "definition": "The disease status of interest to the study, recorded at enrollment: the disease the person was enrolled as having, or control when enrolled free of it.",
+  "programs_covered": [
+    "AMP-CMD",
+    "AMP-PD",
+    "AMP-RA-SLE"
+  ],
+  "harmonized_values": [
+    "acute kidney injury",
+    "chronic kidney disease",
+    "control",
+    "corticobasal degeneration",
+    "dementia with lewy bodies",
+    "diabetic kidney disease",
+    "diabetic nephropathy resistor",
+    "fahrs syndrome",
+    "focal segmental glomerulosclerosis",
+    "hypertensive chronic kidney disease",
+    "metabolic and alcohol-related liver disease",
+    "metabolic dysfunction-associated steatohepatitis",
+    "metabolic dysfunction-associated steatotic liver",
+    "metabolic syndrome",
+    "multiple system atrophy",
+    "non-alcoholic fatty liver disease",
+    "obesity",
+    "olivopontocerebellar atrophy",
+    "other",
+    "parkinsonism",
+    "parkinsons disease",
+    "progressive supranuclear palsy",
+    "systemic lupus erythematosus",
+    "type 2 diabetes"
+  ],
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "harmonized_with": [],
+  "sources": [
+    {
+      "program": "AMP-CMD",
+      "source_label": "sampletype",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "disease_status_at_enrollment"
+      },
+      "precedence": 1,
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "missing_values": [],
+        "value_map": [
+          {
+            "source_value": "DKD",
+            "source_encoding": null,
+            "harmonized_value": "diabetic kidney disease",
+            "harmonized_encoding": null,
+            "harmonized_curie": null,
+            "note": ""
+          },
+          {
+            "source_value": "LD",
+            "source_encoding": null,
+            "harmonized_value": "control",
+            "harmonized_encoding": null,
+            "harmonized_curie": null,
+            "note": ""
+          },
+          {
+            "source_value": "AKI",
+            "source_encoding": null,
+            "harmonized_value": "acute kidney injury",
+            "harmonized_encoding": null,
+            "harmonized_curie": null,
+            "note": ""
+          },
+          {
+            "source_value": "HCKD",
+            "source_encoding": null,
+            "harmonized_value": "hypertensive chronic kidney disease",
+            "harmonized_encoding": null,
+            "harmonized_curie": null,
+            "note": ""
+          },
+          {
+            "source_value": "HRT",
+            "source_encoding": null,
+            "harmonized_value": "control",
+            "harmonized_encoding": null,
+            "harmonized_curie": null,
+            "note": ""
+          }
+        ],
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "DFF520384",
+            "id_type": "cmdga",
+            "sha256": "8d480d206f6a44e492bd25e1339caefbe465a8de77942af6991bd3d830dd0cb8",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 501479
+          }
+        ]
+      }
+    },
+    {
+      "program": "AMP-CMD",
+      "source_label": "Enrollment Category",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "disease_status_at_enrollment"
+      },
+      "precedence": 2,
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "missing_values": [],
+        "value_map": [
+          {
+            "source_value": "CKD",
+            "source_encoding": null,
+            "harmonized_value": "chronic kidney disease",
+            "harmonized_encoding": null,
+            "harmonized_curie": null,
+            "note": ""
+          },
+          {
+            "source_value": "Healthy Reference",
+            "source_encoding": null,
+            "harmonized_value": "control",
+            "harmonized_encoding": null,
+            "harmonized_curie": null,
+            "note": ""
+          },
+          {
+            "source_value": "AKI",
+            "source_encoding": null,
+            "harmonized_value": "acute kidney injury",
+            "harmonized_encoding": null,
+            "harmonized_curie": null,
+            "note": ""
+          },
+          {
+            "source_value": "DM-R",
+            "source_encoding": null,
+            "harmonized_value": "diabetic nephropathy resistor",
+            "harmonized_encoding": null,
+            "harmonized_curie": null,
+            "note": ""
+          },
+          {
+            "source_value": "FSGS",
+            "source_encoding": null,
+            "harmonized_value": "focal segmental glomerulosclerosis",
+            "harmonized_encoding": null,
+            "harmonized_curie": null,
+            "note": ""
+          }
+        ],
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "",
+            "id_type": "",
+            "sha256": "0843ef9d8dbce1d400ab88d2b71c69b245c2d992bf13746c9c716c752d073ba6",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 501480
+          }
+        ]
+      }
+    },
+    {
+      "program": "AMP-CMD",
+      "source_label": "disease",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "disease_status_at_enrollment"
+      },
+      "precedence": 3,
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "missing_values": [],
+        "value_map": [
+          {
+            "source_value": "chronic kidney disease",
+            "source_encoding": null,
+            "harmonized_value": "chronic kidney disease",
+            "harmonized_encoding": null,
+            "harmonized_curie": null,
+            "note": ""
+          },
+          {
+            "source_value": "acute kidney failure",
+            "source_encoding": null,
+            "harmonized_value": "acute kidney injury",
+            "harmonized_encoding": null,
+            "harmonized_curie": null,
+            "note": ""
+          },
+          {
+            "source_value": "normal",
+            "source_encoding": null,
+            "harmonized_value": "control",
+            "harmonized_encoding": null,
+            "harmonized_curie": null,
+            "note": ""
+          }
+        ],
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "DFF520384",
+            "id_type": "cmdga",
+            "sha256": "8d480d206f6a44e492bd25e1339caefbe465a8de77942af6991bd3d830dd0cb8",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 501464
+          }
+        ]
+      }
+    },
+    {
+      "program": "AMP-CMD",
+      "source_label": "disease",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "disease_status_at_enrollment"
+      },
+      "precedence": 3,
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "missing_values": [],
+        "value_map": [
+          {
+            "source_value": "MASL",
+            "source_encoding": null,
+            "harmonized_value": "metabolic dysfunction-associated steatotic liver",
+            "harmonized_encoding": null,
+            "harmonized_curie": null,
+            "note": ""
+          },
+          {
+            "source_value": "MASH",
+            "source_encoding": null,
+            "harmonized_value": "metabolic dysfunction-associated steatohepatitis",
+            "harmonized_encoding": null,
+            "harmonized_curie": null,
+            "note": ""
+          },
+          {
+            "source_value": "MetALD",
+            "source_encoding": null,
+            "harmonized_value": "metabolic and alcohol-related liver disease",
+            "harmonized_encoding": null,
+            "harmonized_curie": null,
+            "note": ""
+          },
+          {
+            "source_value": "Control",
+            "source_encoding": null,
+            "harmonized_value": "control",
+            "harmonized_encoding": null,
+            "harmonized_curie": null,
+            "note": ""
+          }
+        ],
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "FNIH_Liver_scRNA_v1",
+            "id_type": "cmd_dataset",
+            "sha256": "eac08c00fe30ffbbde76c8c61db382183b674f02f972888a05afac14d1855e4d",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 501465
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "FNIH_Liver_scRNA_v1_Pseudobulk_NK",
+            "id_type": "cmd_dataset",
+            "sha256": "01fa7b159e181b67458c775f9a3cf1debb1cdec24b8c699148678c6d6f91d6c1",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 501466
+          }
+        ]
+      }
+    },
+    {
+      "program": "AMP-CMD",
+      "source_label": "disease",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "disease_status_at_enrollment"
+      },
+      "precedence": 3,
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "missing_values": [],
+        "value_map": [
+          {
+            "source_value": "normal",
+            "source_encoding": null,
+            "harmonized_value": "control",
+            "harmonized_encoding": null,
+            "harmonized_curie": null,
+            "note": ""
+          }
+        ],
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "DFF142690",
+            "id_type": "cmdga",
+            "sha256": "c1070bcc2011d593709d2bad78cf8a25b7caa913f58418cb6b28c6eab92eb1d9",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 501467
+          }
+        ]
+      }
+    },
+    {
+      "program": "AMP-CMD",
+      "source_label": "diseasetype",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "disease_status_at_enrollment"
+      },
+      "precedence": 4,
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "missing_values": [],
+        "value_map": [
+          {
+            "source_value": "Type 2 Diabetes",
+            "source_encoding": null,
+            "harmonized_value": "type 2 diabetes",
+            "harmonized_encoding": null,
+            "harmonized_curie": null,
+            "note": ""
+          },
+          {
+            "source_value": "NAFLD",
+            "source_encoding": null,
+            "harmonized_value": "non-alcoholic fatty liver disease",
+            "harmonized_encoding": null,
+            "harmonized_curie": null,
+            "note": ""
+          },
+          {
+            "source_value": "Obesity",
+            "source_encoding": null,
+            "harmonized_value": "obesity",
+            "harmonized_encoding": null,
+            "harmonized_curie": null,
+            "note": ""
+          },
+          {
+            "source_value": "Metabolic Syndrome",
+            "source_encoding": null,
+            "harmonized_value": "metabolic syndrome",
+            "harmonized_encoding": null,
+            "harmonized_curie": null,
+            "note": ""
+          },
+          {
+            "source_value": "CKD",
+            "source_encoding": null,
+            "harmonized_value": "chronic kidney disease",
+            "harmonized_encoding": null,
+            "harmonized_curie": null,
+            "note": ""
+          },
+          {
+            "source_value": "AKI",
+            "source_encoding": null,
+            "harmonized_value": "acute kidney injury",
+            "harmonized_encoding": null,
+            "harmonized_curie": null,
+            "note": ""
+          },
+          {
+            "source_value": "Reference",
+            "source_encoding": null,
+            "harmonized_value": "control",
+            "harmonized_encoding": null,
+            "harmonized_curie": null,
+            "note": ""
+          }
+        ],
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "DFF520384",
+            "id_type": "cmdga",
+            "sha256": "8d480d206f6a44e492bd25e1339caefbe465a8de77942af6991bd3d830dd0cb8",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 501485
+          }
+        ]
+      }
+    },
+    {
+      "program": "AMP-PD",
+      "source_label": "diagnosis_at_baseline",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "disease_status_at_enrollment"
+      },
+      "precedence": 1,
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "missing_values": [],
+        "value_map": [
+          {
+            "source_value": "Parkinson's Disease",
+            "source_encoding": null,
+            "harmonized_value": "parkinsons disease",
+            "harmonized_encoding": null,
+            "harmonized_curie": null,
+            "note": ""
+          },
+          {
+            "source_value": "Parkinson’s Disease",
+            "source_encoding": null,
+            "harmonized_value": "parkinsons disease",
+            "harmonized_encoding": null,
+            "harmonized_curie": null,
+            "note": ""
+          },
+          {
+            "source_value": "Parkinsonism",
+            "source_encoding": null,
+            "harmonized_value": "parkinsonism",
+            "harmonized_encoding": null,
+            "harmonized_curie": null,
+            "note": ""
+          },
+          {
+            "source_value": "Multiple System Atrophy",
+            "source_encoding": null,
+            "harmonized_value": "multiple system atrophy",
+            "harmonized_encoding": null,
+            "harmonized_curie": null,
+            "note": ""
+          },
+          {
+            "source_value": "Progressive Supranuclear Palsy",
+            "source_encoding": null,
+            "harmonized_value": "progressive supranuclear palsy",
+            "harmonized_encoding": null,
+            "harmonized_curie": null,
+            "note": ""
+          },
+          {
+            "source_value": "Dementia With Lewy Bodies",
+            "source_encoding": null,
+            "harmonized_value": "dementia with lewy bodies",
+            "harmonized_encoding": null,
+            "harmonized_curie": null,
+            "note": ""
+          },
+          {
+            "source_value": "Corticobasal Degeneration",
+            "source_encoding": null,
+            "harmonized_value": "corticobasal degeneration",
+            "harmonized_encoding": null,
+            "harmonized_curie": null,
+            "note": ""
+          },
+          {
+            "source_value": "Olivopontocerebellar Atrophy",
+            "source_encoding": null,
+            "harmonized_value": "olivopontocerebellar atrophy",
+            "harmonized_encoding": null,
+            "harmonized_curie": null,
+            "note": ""
+          },
+          {
+            "source_value": "Fahr's Syndrome",
+            "source_encoding": null,
+            "harmonized_value": "fahrs syndrome",
+            "harmonized_encoding": null,
+            "harmonized_curie": null,
+            "note": ""
+          },
+          {
+            "source_value": "No PD Nor Other Neurological Disorder",
+            "source_encoding": null,
+            "harmonized_value": "control",
+            "harmonized_encoding": null,
+            "harmonized_curie": null,
+            "note": ""
+          }
+        ],
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "ecfdd4b3e9604f1d8270484893fcc5b820bb65b9f13a9091ee6f3ac64a5c3b0a",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 501462
+          }
+        ]
+      }
+    },
+    {
+      "program": "AMP-PD",
+      "source_label": "case_control_other_at_baseline",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "disease_status_at_enrollment"
+      },
+      "precedence": 2,
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "missing_values": [],
+        "value_map": [
+          {
+            "source_value": "Case",
+            "source_encoding": null,
+            "harmonized_value": "parkinsons disease",
+            "harmonized_encoding": null,
+            "harmonized_curie": null,
+            "note": ""
+          },
+          {
+            "source_value": "Control",
+            "source_encoding": null,
+            "harmonized_value": "control",
+            "harmonized_encoding": null,
+            "harmonized_curie": null,
+            "note": ""
+          },
+          {
+            "source_value": "Other",
+            "source_encoding": null,
+            "harmonized_value": "other",
+            "harmonized_encoding": null,
+            "harmonized_curie": null,
+            "note": ""
+          }
+        ],
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "ecfdd4b3e9604f1d8270484893fcc5b820bb65b9f13a9091ee6f3ac64a5c3b0a",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 500844
+          }
+        ]
+      }
+    },
+    {
+      "program": "AMP-RA-SLE",
+      "source_label": "diagnosis",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "disease_status_at_enrollment"
+      },
+      "precedence": 1,
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "missing_values": [],
+        "value_map": [
+          {
+            "source_value": "SLE",
+            "source_encoding": null,
+            "harmonized_value": "systemic lupus erythematosus",
+            "harmonized_encoding": null,
+            "harmonized_curie": null,
+            "note": ""
+          },
+          {
+            "source_value": "control",
+            "source_encoding": null,
+            "harmonized_value": "control",
+            "harmonized_encoding": null,
+            "harmonized_curie": null,
+            "note": ""
+          }
+        ],
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn47136972",
+            "id_type": "synapse",
+            "sha256": "a5203e27eeb64900d06fd6cfc3684860e7008efaade42c16f8dc897185cf9324",
+            "access_groups": [
+              "AMP-RA-SLE"
+            ],
+            "item_as_source_id": 501469
+          }
+        ]
+      },
+      "layout": {
+        "file_type": "csv",
+        "sheet": null
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "observation",
+      "defining_concept_id": {
+        "id": 1989567,
+        "name": "Condition clinical status",
+        "domain": "Observation",
+        "target_field": "observation_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": [
+        {
+          "harmonized_value": "acute kidney injury",
+          "value_as_string": "acute kidney injury",
+          "value_as_concept_id": {
+            "id": 197320,
+            "name": "Acute kidney injury"
+          }
+        },
+        {
+          "harmonized_value": "chronic kidney disease",
+          "value_as_string": "chronic kidney disease",
+          "value_as_concept_id": {
+            "id": 46271022,
+            "name": "Chronic kidney disease"
+          }
+        },
+        {
+          "harmonized_value": "control",
+          "value_as_string": "control",
+          "value_as_concept_id": {
+            "id": 45884153,
+            "name": "Normal"
+          }
+        },
+        {
+          "harmonized_value": "corticobasal degeneration",
+          "value_as_string": "corticobasal degeneration",
+          "value_as_concept_id": {
+            "id": 4077904,
+            "name": "Corticobasal degeneration"
+          }
+        },
+        {
+          "harmonized_value": "dementia with lewy bodies",
+          "value_as_string": "dementia with lewy bodies",
+          "value_as_concept_id": {
+            "id": 4182210,
+            "name": "Dementia"
+          }
+        },
+        {
+          "harmonized_value": "diabetic kidney disease",
+          "value_as_string": "diabetic kidney disease",
+          "value_as_concept_id": {
+            "id": 45883355,
+            "name": "Diabetic Kidney Disease"
+          }
+        },
+        {
+          "harmonized_value": "diabetic nephropathy resistor",
+          "value_as_string": "diabetic nephropathy resistor"
+        },
+        {
+          "harmonized_value": "fahrs syndrome",
+          "value_as_string": "fahrs syndrome",
+          "value_as_concept_id": {
+            "id": 4006783,
+            "name": "Fahr's syndrome"
+          }
+        },
+        {
+          "harmonized_value": "focal segmental glomerulosclerosis",
+          "value_as_string": "focal segmental glomerulosclerosis",
+          "value_as_concept_id": {
+            "id": 4030513,
+            "name": "Focal segmental glomerulosclerosis"
+          }
+        },
+        {
+          "harmonized_value": "hypertensive chronic kidney disease",
+          "value_as_string": "hypertensive chronic kidney disease",
+          "value_as_concept_id": {
+            "id": 201313,
+            "name": "Hypertensive renal disease"
+          }
+        },
+        {
+          "harmonized_value": "metabolic and alcohol-related liver disease",
+          "value_as_string": "metabolic and alcohol-related liver disease"
+        },
+        {
+          "harmonized_value": "metabolic dysfunction-associated steatohepatitis",
+          "value_as_string": "metabolic dysfunction-associated steatohepatitis",
+          "value_as_concept_id": {
+            "id": 40484532,
+            "name": "Nonalcoholic steatohepatitis"
+          }
+        },
+        {
+          "harmonized_value": "metabolic dysfunction-associated steatotic liver",
+          "value_as_string": "metabolic dysfunction-associated steatotic liver",
+          "value_as_concept_id": {
+            "id": 4026131,
+            "name": "Non-alcoholic fatty liver"
+          }
+        },
+        {
+          "harmonized_value": "metabolic syndrome",
+          "value_as_string": "metabolic syndrome"
+        },
+        {
+          "harmonized_value": "multiple system atrophy",
+          "value_as_string": "multiple system atrophy",
+          "value_as_concept_id": {
+            "id": 4044053,
+            "name": "Multiple system atrophy"
+          }
+        },
+        {
+          "harmonized_value": "non-alcoholic fatty liver disease",
+          "value_as_string": "non-alcoholic fatty liver disease"
+        },
+        {
+          "harmonized_value": "obesity",
+          "value_as_string": "obesity"
+        },
+        {
+          "harmonized_value": "olivopontocerebellar atrophy",
+          "value_as_string": "olivopontocerebellar atrophy",
+          "value_as_concept_id": {
+            "id": 4283390,
+            "name": "Olivopontocerebellar degeneration"
+          }
+        },
+        {
+          "harmonized_value": "other",
+          "value_as_string": "other",
+          "value_as_concept_id": {
+            "id": 45878142,
+            "name": "Other"
+          }
+        },
+        {
+          "harmonized_value": "parkinsonism",
+          "value_as_string": "parkinsonism",
+          "value_as_concept_id": {
+            "id": 4140090,
+            "name": "Parkinsonism"
+          }
+        },
+        {
+          "harmonized_value": "parkinsons disease",
+          "value_as_string": "parkinsons disease",
+          "value_as_concept_id": {
+            "id": 381270,
+            "name": "Parkinson's disease"
+          }
+        },
+        {
+          "harmonized_value": "progressive supranuclear palsy",
+          "value_as_string": "progressive supranuclear palsy",
+          "value_as_concept_id": {
+            "id": 40391011,
+            "name": "Progressive supranuclear palsy"
+          }
+        },
+        {
+          "harmonized_value": "systemic lupus erythematosus",
+          "value_as_string": "systemic lupus erythematosus"
+        },
+        {
+          "harmonized_value": "type 2 diabetes",
+          "value_as_string": "type 2 diabetes"
+        }
+      ]
+    }
+  ],
+  "links": []
+}

@@ -1,0 +1,233 @@
+{
+  "registry_id": 100109,
+  "schema_version": "harmonized-element/2.5",
+  "registry_label": "cogdx",
+  "definition": "Final Consensus Cognitive Diagnosis",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-AD"
+  ],
+  "harmonized_values": [
+    "2",
+    "1",
+    "3",
+    "4",
+    "5",
+    "6"
+  ],
+  "harmonized_with": [
+    "dcfdx"
+  ],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "cogdx",
+      "program": "AMP-AD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [
+        "[data file name withheld]_codebook.pdf"
+      ],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn3191087",
+            "id_type": "synapse",
+            "sha256": "5d9efbdc845990ed75a2f3a5784554c7afe0e1b04484e2aa4a9d9d01911e1b90",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 501294
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn27034471",
+            "id_type": "synapse",
+            "sha256": "9c2be87182338c6d25a0bf52b27d2d4fc51136929bd250e76bdbdb6024120d18",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 501295
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn73713768",
+            "id_type": "synapse",
+            "sha256": "6ebec61ee5ebd81051fe1eac0abe6c2dc106acf9e499f818f4d1e855a1f1850f",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 501296
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "2",
+            "source_encoding": null,
+            "harmonized_value": "2",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "1",
+            "source_encoding": null,
+            "harmonized_value": "1",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "3",
+            "source_encoding": null,
+            "harmonized_value": "3",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "4",
+            "source_encoding": null,
+            "harmonized_value": "4",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "5",
+            "source_encoding": null,
+            "harmonized_value": "5",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "6",
+            "source_encoding": null,
+            "harmonized_value": "6",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "NA",
+            "source_encoding": null,
+            "harmonized_value": "NA",
+            "harmonized_encoding": null,
+            "note": null
+          }
+        ]
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "cogdx"
+      }
+    },
+    {
+      "source_label": "cogdx_rush",
+      "program": "AMP-AD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layout": {
+        "file_type": "csv",
+        "sheet": null
+      },
+      "layer_1_etl": {
+        "value_form": "continuous",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "cf3413543254f346264dd630f59d917557f828ebcf7c7117861c12f1d3076043",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 501297
+          }
+        ],
+        "value_map": []
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "cogdx"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "observation",
+      "defining_concept_id": {
+        "id": 46235850,
+        "name": "Cognitive function [Interpretation]",
+        "domain": "Observation",
+        "target_field": "observation_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": [
+        {
+          "harmonized_value": "2",
+          "value_as_concept_id": {
+            "id": 4297400,
+            "name": "Mild neurocognitive disorder"
+          }
+        },
+        {
+          "harmonized_value": "1",
+          "value_as_concept_id": {
+            "id": 45884350,
+            "name": "No impairment"
+          }
+        },
+        {
+          "harmonized_value": "3",
+          "value_as_concept_id": {
+            "id": 4297400,
+            "name": "Mild neurocognitive disorder"
+          },
+          "qualifier_concept_id": {
+            "id": 46235351,
+            "name": "Comorbid condition"
+          }
+        },
+        {
+          "harmonized_value": "4",
+          "value_as_concept_id": {
+            "id": 36311271,
+            "name": "Alzheimer's disease"
+          }
+        },
+        {
+          "harmonized_value": "5",
+          "value_as_concept_id": {
+            "id": 36311271,
+            "name": "Alzheimer's disease"
+          },
+          "qualifier_concept_id": {
+            "id": 46235351,
+            "name": "Comorbid condition"
+          }
+        },
+        {
+          "harmonized_value": "6",
+          "value_as_concept_id": {
+            "id": 36310643,
+            "name": "Cognitive loss/dementia"
+          }
+        }
+      ]
+    }
+  ]
+}

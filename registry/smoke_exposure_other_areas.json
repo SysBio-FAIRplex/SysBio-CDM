@@ -1,0 +1,78 @@
+{
+  "registry_id": 100689,
+  "schema_version": "harmonized-element/2.5",
+  "registry_label": "smoke_exposure_other_areas",
+  "definition": "How many hours a day are you exposed to the cigarette smoke of others (on average) in other areas?",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-PD"
+  ],
+  "harmonized_values": [
+    "<any in range>"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "smoke_exposure_other_areas",
+      "program": "AMP-PD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": "How many hours a day are you exposed to the cigarette smoke of others (on average) in other areas?.",
+      "layer_1_etl": {
+        "value_form": "continuous",
+        "datatype": "number",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "dd7732ea9d0dd2b29f64aed9435bf44cb728d0439ba446868c0de31548b15342",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 505194
+          }
+        ],
+        "range": {
+          "min": 0.0,
+          "max": 10.0
+        },
+        "value_map": []
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant_visit",
+        "attribute": "smoke_exposure_other_areas"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "observation",
+      "defining_concept_id": {
+        "id": 40766591,
+        "name": "For how many hours per day were you exposed to smoke from other peoples cigarettes or tobacco products during this time at this location [PhenX]",
+        "domain": "Observation",
+        "target_field": "observation_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map",
+        "visit_occurrence_id": "cdm.visit_occurrence"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": [
+        {
+          "harmonized_value": "<any in range>",
+          "value_as_number": "<value>"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,198 @@
+{
+  "registry_id": 100275,
+  "schema_version": "harmonized-element/2.5",
+  "registry_label": "lobular_inflammation",
+  "definition": "Assessment of inflammatory infiltrate within hepatic lobules.",
+  "one_per": [
+    "person"
+  ],
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-CMD"
+  ],
+  "harmonized_values": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "Lobular.inflammation",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "continuous",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "FNIH_Liver_scRNA_v1_Pseudobulk_Hepatocytes",
+            "id_type": "cmd_dataset",
+            "sha256": "01fa7b159e181b67458c775f9a3cf1debb1cdec24b8c699148678c6d6f91d6c1",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 502259
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "FNIH_Liver_scRNA_v1_Pseudobulk_Hepatocytes",
+            "id_type": "cmd_dataset",
+            "sha256": "01fa7b159e181b67458c775f9a3cf1debb1cdec24b8c699148678c6d6f91d6c1",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 502259
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "FNIH_Liver_scRNA_v1_Pseudobulk_Hepatocytes",
+            "id_type": "cmd_dataset",
+            "sha256": "01fa7b159e181b67458c775f9a3cf1debb1cdec24b8c699148678c6d6f91d6c1",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 502259
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "FNIH_Liver_scRNA_v1_Pseudobulk_Hepatocytes",
+            "id_type": "cmd_dataset",
+            "sha256": "01fa7b159e181b67458c775f9a3cf1debb1cdec24b8c699148678c6d6f91d6c1",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 502259
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "FNIH_Liver_scRNA_v1_Pseudobulk_Hepatocytes",
+            "id_type": "cmd_dataset",
+            "sha256": "01fa7b159e181b67458c775f9a3cf1debb1cdec24b8c699148678c6d6f91d6c1",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 502259
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "FNIH_Liver_scRNA_v1_Pseudobulk_Hepatocytes",
+            "id_type": "cmd_dataset",
+            "sha256": "01fa7b159e181b67458c775f9a3cf1debb1cdec24b8c699148678c6d6f91d6c1",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 502259
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "FNIH_Liver_scRNA_v1_Pseudobulk_Hepatocytes",
+            "id_type": "cmd_dataset",
+            "sha256": "01fa7b159e181b67458c775f9a3cf1debb1cdec24b8c699148678c6d6f91d6c1",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 502259
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "FNIH_Liver_scRNA_v1_Pseudobulk_Hepatocytes",
+            "id_type": "cmd_dataset",
+            "sha256": "01fa7b159e181b67458c775f9a3cf1debb1cdec24b8c699148678c6d6f91d6c1",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 502259
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "FNIH_Liver_scRNA_v1_Pseudobulk_Hepatocytes",
+            "id_type": "cmd_dataset",
+            "sha256": "01fa7b159e181b67458c775f9a3cf1debb1cdec24b8c699148678c6d6f91d6c1",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 502259
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "FNIH_Liver_scRNA_v1_Pseudobulk_Hepatocytes",
+            "id_type": "cmd_dataset",
+            "sha256": "01fa7b159e181b67458c775f9a3cf1debb1cdec24b8c699148678c6d6f91d6c1",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 502259
+          }
+        ],
+        "value_map": []
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "observation",
+      "defining_concept_id": {
+        "id": 4238978,
+        "name": "Chronic lobular hepatitis",
+        "domain": "Observation",
+        "target_field": "observation_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": [
+        {
+          "harmonized_value": "0",
+          "value_as_number": "0",
+          "value_as_string": "None"
+        },
+        {
+          "harmonized_value": "1",
+          "value_as_number": "1",
+          "value_as_string": "Minimal"
+        },
+        {
+          "harmonized_value": "2",
+          "value_as_number": "2",
+          "value_as_concept_id": {
+            "id": 45883535,
+            "name": "Mild"
+          },
+          "value_as_string": "Mild"
+        },
+        {
+          "harmonized_value": "3",
+          "value_as_number": "3",
+          "value_as_concept_id": {
+            "id": 45877983,
+            "name": "Moderate"
+          },
+          "value_as_string": "Moderate"
+        },
+        {
+          "harmonized_value": "4",
+          "value_as_number": "4",
+          "value_as_concept_id": {
+            "id": 45883536,
+            "name": "Severe"
+          },
+          "value_as_string": "Severe"
+        }
+      ]
+    }
+  ]
+}

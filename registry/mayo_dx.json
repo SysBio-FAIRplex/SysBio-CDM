@@ -1,0 +1,160 @@
+{
+  "registry_id": 100279,
+  "schema_version": "harmonized-element/2.5",
+  "registry_label": "mayo_dx",
+  "definition": "Mayo Clinic neuropathological diagnosis",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-AD"
+  ],
+  "harmonized_values": [
+    "alzheimers disease",
+    "control",
+    "other",
+    "not applicable"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "mayoDx",
+      "program": "AMP-AD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [
+        "DiverseCohorts_DataDictionary.pdf"
+      ],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn51757646",
+            "id_type": "synapse",
+            "sha256": "484b323b8d6d2eea95a7f65e6492c90755dcf8b007db621c2b01081798e7846b",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 502264
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn73713769",
+            "id_type": "synapse",
+            "sha256": "82a49077ccb8b78a1159fa089a91330da7e62fabea65dceaa342faeed56fd3ab",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 502265
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "AD",
+            "source_encoding": null,
+            "harmonized_value": "alzheimers disease",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Control",
+            "source_encoding": null,
+            "harmonized_value": "control",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Other",
+            "source_encoding": null,
+            "harmonized_value": "other",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "other",
+            "source_encoding": null,
+            "harmonized_value": "other",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "not applicable",
+            "source_encoding": null,
+            "harmonized_value": "not applicable",
+            "harmonized_encoding": null,
+            "note": null
+          }
+        ]
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "mayo_dx"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "observation",
+      "defining_concept_id": {
+        "id": 3187945,
+        "name": "Neuropathology observable entity",
+        "domain": "Observation",
+        "target_field": "observation_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": [
+        {
+          "harmonized_value": "alzheimers disease",
+          "value_as_concept_id": {
+            "id": 36311271,
+            "name": "Alzheimer's disease"
+          },
+          "value_as_string": "AD"
+        },
+        {
+          "harmonized_value": "control",
+          "value_as_concept_id": {
+            "id": 45884153,
+            "name": "Normal"
+          },
+          "value_as_string": "control"
+        },
+        {
+          "harmonized_value": "other",
+          "value_as_concept_id": {
+            "id": 45878142,
+            "name": "Other"
+          },
+          "value_as_string": "other"
+        },
+        {
+          "harmonized_value": "other",
+          "value_as_concept_id": {
+            "id": 45878142,
+            "name": "Other"
+          },
+          "value_as_string": "other"
+        },
+        {
+          "harmonized_value": "not applicable",
+          "value_as_concept_id": {
+            "id": 45882470,
+            "name": "Not applicable"
+          },
+          "value_as_string": "not applicable"
+        }
+      ]
+    }
+  ]
+}

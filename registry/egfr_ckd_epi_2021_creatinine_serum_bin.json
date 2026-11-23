@@ -1,0 +1,176 @@
+{
+  "registry_id": 100220,
+  "schema_version": "harmonized-element/2.7",
+  "registry_label": "egfr_ckd_epi_2021_creatinine_serum_bin",
+  "harmonized_element_curie": "LOINC:98979-8",
+  "definition": "The participant's baseline estimated glomerular filtration rate (CKD-EPI 2021 creatinine equation, ml/min/1.73 m2) reported as a predefined range rather than a number.",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-CMD"
+  ],
+  "harmonized_values": [
+    "40-49 ml/min/1.73m2",
+    "30-39 ml/min/1.73m2",
+    "50-59 ml/min/1.73m2",
+    "70-79 ml/min/1.73m2",
+    "60-69 ml/min/1.73m2",
+    "100-109 ml/min/1.73m2",
+    "90-99 ml/min/1.73m2",
+    "80-89 ml/min/1.73m2",
+    "110-119 ml/min/1.73m2",
+    "120-129 ml/min/1.73m2",
+    "20-29 ml/min/1.73m2",
+    "140-149 ml/min/1.73m2",
+    "10-19 ml/min/1.73m2"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "Baseline eGFR (ml/min/1.73m2) (Binned)",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "",
+            "id_type": "",
+            "sha256": "0843ef9d8dbce1d400ab88d2b71c69b245c2d992bf13746c9c716c752d073ba6",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 501513
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "40-49 ml/min/1.73m2",
+            "source_encoding": null,
+            "harmonized_value": "40-49 ml/min/1.73m2",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "30-39 ml/min/1.73m2",
+            "source_encoding": null,
+            "harmonized_value": "30-39 ml/min/1.73m2",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "50-59 ml/min/1.73m2",
+            "source_encoding": null,
+            "harmonized_value": "50-59 ml/min/1.73m2",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "70-79 ml/min/1.73m2",
+            "source_encoding": null,
+            "harmonized_value": "70-79 ml/min/1.73m2",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "60-69 ml/min/1.73m2",
+            "source_encoding": null,
+            "harmonized_value": "60-69 ml/min/1.73m2",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "100-109 ml/min/1.73m2",
+            "source_encoding": null,
+            "harmonized_value": "100-109 ml/min/1.73m2",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "90-99 ml/min/1.73m2",
+            "source_encoding": null,
+            "harmonized_value": "90-99 ml/min/1.73m2",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "80-89 ml/min/1.73m2",
+            "source_encoding": null,
+            "harmonized_value": "80-89 ml/min/1.73m2",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "110-119 ml/min/1.73m2",
+            "source_encoding": null,
+            "harmonized_value": "110-119 ml/min/1.73m2",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "120-129 ml/min/1.73m2",
+            "source_encoding": null,
+            "harmonized_value": "120-129 ml/min/1.73m2",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "20-29 ml/min/1.73m2",
+            "source_encoding": null,
+            "harmonized_value": "20-29 ml/min/1.73m2",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "140-149 ml/min/1.73m2",
+            "source_encoding": null,
+            "harmonized_value": "140-149 ml/min/1.73m2",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "10-19 ml/min/1.73m2",
+            "source_encoding": null,
+            "harmonized_value": "10-19 ml/min/1.73m2",
+            "harmonized_encoding": null,
+            "note": ""
+          }
+        ]
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "egfr_ckd_epi_2021_creatinine_serum_bin"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "measurement",
+      "defining_concept_id": {
+        "id": 1619025,
+        "name": "Glomerular filtration rate/1.73 sq M.predicted [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (CKD-EPI 2021)",
+        "domain": "Measurement",
+        "target_field": "measurement_concept_id",
+        "vocabulary_id": "LOINC",
+        "concept_code": "98979-8",
+        "vocabulary_version": "LOINC 2.78"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": []
+    }
+  ]
+}

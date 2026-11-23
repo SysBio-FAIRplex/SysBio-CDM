@@ -1,0 +1,155 @@
+{
+  "registry_id": 100240,
+  "schema_version": "harmonized-element/2.7",
+  "registry_label": "experimental_strategy",
+  "definition": "The assay performed, as KPMP names it. Lands as TEXT in cdm.assay.assay_type per DECISIONS section 1 (MODE A) - assay descriptors are seven TEXT fields, never concepts.",
+  "must_agree": false,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-CMD"
+  ],
+  "harmonized_values": [
+    "single-cell rna sequencing",
+    "whole genome sequencing",
+    "light microscopic whole slide images",
+    "single-nucleus rna sequencing",
+    "spatial transcriptomics",
+    "3d tissue imaging and cytometry",
+    "regional transcriptomics",
+    "10x multiome",
+    "CODEX",
+    "segmentation masks & pathomics vectors",
+    "bulk total or messenger rna sequencing",
+    "imaging mass cytometry",
+    "regional proteomics",
+    "spatial n-glycomics",
+    "atac sequencing",
+    "spatial lipidomics",
+    "dna methylation sequencing",
+    "spatial metabolomics"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "experimental_strategy",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "text",
+        "datatype": "string",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "",
+            "id_type": "",
+            "sha256": "c2ac4b9f767134cf8f1c58d73f26cf033663f9980c54c92d67cc538952ce51fb",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 501586
+          }
+        ],
+        "value_map": []
+      },
+      "loading_grain": {
+        "anchor": "file_id",
+        "entity": "file",
+        "attribute": "experimental_strategy"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "files",
+      "defining_concept_id": null,
+      "anchored_to": {
+        "file_id": "cdm.files"
+      },
+      "target_field": "experimental_strategy",
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": [
+        {
+          "harmonized_value": "single-cell rna sequencing",
+          "value_as_string": "single-cell rna sequencing"
+        },
+        {
+          "harmonized_value": "whole genome sequencing",
+          "value_as_string": "whole genome sequencing"
+        },
+        {
+          "harmonized_value": "light microscopic whole slide images",
+          "value_as_string": "light microscopic whole slide images"
+        },
+        {
+          "harmonized_value": "single-nucleus rna sequencing",
+          "value_as_string": "single-nucleus rna sequencing"
+        },
+        {
+          "harmonized_value": "spatial transcriptomics",
+          "value_as_string": "spatial transcriptomics"
+        },
+        {
+          "harmonized_value": "3d tissue imaging and cytometry",
+          "value_as_string": "3d tissue imaging and cytometry"
+        },
+        {
+          "harmonized_value": "regional transcriptomics",
+          "value_as_string": "regional transcriptomics"
+        },
+        {
+          "harmonized_value": "10x multiome",
+          "value_as_string": "10x multiome"
+        },
+        {
+          "harmonized_value": "CODEX",
+          "value_as_string": "CODEX"
+        },
+        {
+          "harmonized_value": "segmentation masks & pathomics vectors",
+          "value_as_string": "segmentation masks & pathomics vectors"
+        },
+        {
+          "harmonized_value": "bulk total or messenger rna sequencing",
+          "value_as_string": "bulk total or messenger rna sequencing"
+        },
+        {
+          "harmonized_value": "imaging mass cytometry",
+          "value_as_string": "imaging mass cytometry"
+        },
+        {
+          "harmonized_value": "regional proteomics",
+          "value_as_string": "regional proteomics"
+        },
+        {
+          "harmonized_value": "spatial n-glycomics",
+          "value_as_string": "spatial n-glycomics"
+        },
+        {
+          "harmonized_value": "atac sequencing",
+          "value_as_string": "atac sequencing"
+        },
+        {
+          "harmonized_value": "spatial lipidomics",
+          "value_as_string": "spatial lipidomics"
+        },
+        {
+          "harmonized_value": "dna methylation sequencing",
+          "value_as_string": "dna methylation sequencing"
+        },
+        {
+          "harmonized_value": "spatial metabolomics",
+          "value_as_string": "spatial metabolomics"
+        }
+      ],
+      "column": "experimental_strategy"
+    }
+  ]
+}

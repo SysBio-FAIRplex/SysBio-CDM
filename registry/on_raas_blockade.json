@@ -1,0 +1,148 @@
+{
+  "registry_id": 100520,
+  "schema_version": "harmonized-element/2.7",
+  "registry_label": "on_raas_blockade",
+  "definition": "on RAAS blockade (`raas_ynC`, section Medications). Yes if on RAAS blockade defined by the third level of ATC code from RxCUI (`medication`): ace inhibitors, angiotensin ii receptor blockers, or aldosterone antagonists; excluding Amlodipine (329526, 329527), hydrochlorothiazide (316049), chlorthalidone / triamterene (104248), and Hydrochlorothiazide / Triamterene (93253). permissible values: Yes = Yes; No = No.",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-CMD"
+  ],
+  "harmonized_values": [
+    "yes",
+    "no"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "On RAAS Blockade",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [
+        "KPMP_Clinical-Phenotyping-Data-Dictionary_v3_0_2024-01-12.pdf (v. 2024-01-12)"
+      ],
+      "src_definition": "on RAAS blockade (`raas_ynC`, section Medications)",
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "",
+            "id_type": "",
+            "sha256": "0843ef9d8dbce1d400ab88d2b71c69b245c2d992bf13746c9c716c752d073ba6",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503041
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "Yes",
+            "source_encoding": null,
+            "harmonized_value": "yes",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "No",
+            "source_encoding": null,
+            "harmonized_value": "no",
+            "harmonized_encoding": null,
+            "note": ""
+          }
+        ]
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "on_raas_blockade"
+      }
+    },
+    {
+      "source_label": "on_raas_blockade",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "",
+            "id_type": "",
+            "sha256": "c2ac4b9f767134cf8f1c58d73f26cf033663f9980c54c92d67cc538952ce51fb",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503042
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "Yes (rb)",
+            "source_encoding": null,
+            "harmonized_value": "yes",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "No (rb)",
+            "source_encoding": null,
+            "harmonized_value": "no",
+            "harmonized_encoding": null,
+            "note": ""
+          }
+        ]
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "on_raas_blockade"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "observation",
+      "defining_concept_id": {
+        "id": 3655681,
+        "name": "Renin-angiotensin system inhibitor",
+        "domain": "Observation",
+        "target_field": "observation_concept_id",
+        "vocabulary_id": "SNOMED"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": [
+        {
+          "harmonized_value": "yes",
+          "value_as_concept_id": {
+            "id": 45877994,
+            "name": "Yes"
+          }
+        },
+        {
+          "harmonized_value": "no",
+          "value_as_concept_id": {
+            "id": 45878245,
+            "name": "No"
+          }
+        }
+      ]
+    }
+  ]
+}

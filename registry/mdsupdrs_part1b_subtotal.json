@@ -1,0 +1,100 @@
+{
+  "registry_id": 100383,
+  "schema_version": "harmonized-element/2.5",
+  "registry_label": "mdsupdrs_part1b_subtotal",
+  "definition": "MDS-UPDRS Part I Patient Questionnaire Questions 7-13 Summary Sub-Score",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-PD"
+  ],
+  "harmonized_values": [
+    "<any in range>"
+  ],
+  "harmonized_with": [],
+  "links": [
+    {
+      "link_id": "1",
+      "kind": "derivation",
+      "linked_element_label": "mdsupdrs_part1_total",
+      "linked_element_id": "mds_updrs_part_i_summary_score",
+      "linked_table": "measurement",
+      "linking_mechanism": "MEASUREMENT.measurement_event_id",
+      "linking_mechanism_concept_id": {
+        "id": 1147138,
+        "name": "measurement.measurement_id"
+      },
+      "note": ""
+    }
+  ],
+  "sources": [
+    {
+      "source_label": "mds_updrs_part_i_pat_quest_sub_score",
+      "program": "AMP-PD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": "MDS-UPDRS Part I Patient Questionnaire Questions 7-13 Summary  Sub-Score.",
+      "layer_1_etl": {
+        "value_form": "continuous",
+        "datatype": "integer",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "064e9bc20ea626156595dc799a0ddff43ed34174b2bb4de76e917d45923bbf25",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 502402
+          }
+        ],
+        "range": {
+          "min": 0.0,
+          "max": 28.0
+        },
+        "value_map": []
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant_visit",
+        "attribute": "mdsupdrs_part1b_subtotal"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "measurement",
+      "defining_concept_id": {
+        "id": 46236408,
+        "name": "Mentation, behavior and mood panel [UPDRS]",
+        "domain": "Measurement",
+        "target_field": "measurement_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map",
+        "visit_occurrence_id": "cdm.visit_occurrence"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [
+        {
+          "role": "derivation",
+          "link_id": "1",
+          "status": "active",
+          "note": ""
+        }
+      ],
+      "value_map": [
+        {
+          "harmonized_value": "<any in range>",
+          "value_as_number": "<value>"
+        }
+      ]
+    }
+  ],
+  "status_note": ""
+}

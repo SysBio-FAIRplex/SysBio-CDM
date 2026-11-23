@@ -1,0 +1,72 @@
+{
+  "registry_id": 100395,
+  "schema_version": "harmonized-element/2.7",
+  "registry_label": "measurement_role",
+  "definition": "The role the dataset plays in the atlas as its metadata states it, such as a reference dataset.",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-CMD"
+  ],
+  "harmonized_values": [
+    "reference"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "dataset_role",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "DFF520384",
+            "id_type": "cmdga",
+            "sha256": "8d480d206f6a44e492bd25e1339caefbe465a8de77942af6991bd3d830dd0cb8",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 502574
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "Reference",
+            "source_encoding": null,
+            "harmonized_value": "reference",
+            "harmonized_encoding": null,
+            "note": ""
+          }
+        ]
+      },
+      "loading_grain": {
+        "anchor": "library_id",
+        "entity": "library",
+        "attribute": "measurement_role"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "assay",
+      "column": "measurement_role",
+      "anchored_to": {
+        "person_id": "staging.person_map",
+        "specimen_id": "staging.specimen_map"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": []
+    }
+  ]
+}

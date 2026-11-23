@@ -1,0 +1,119 @@
+{
+  "registry_id": 100384,
+  "schema_version": "harmonized-element/2.5",
+  "registry_label": "mdsupdrs_part2_info_source",
+  "definition": "MDS-UPDRS Part II Primary Source Of Information",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-PD"
+  ],
+  "harmonized_values": [
+    "patient",
+    "patient and caregiver - equal proportion",
+    "caregiver"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "mds_updrs_part_ii_primary_info_source",
+      "program": "AMP-PD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": "MDS-UPDRS Part II Primary Source Of Information.",
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "471c34f2407e023a1de43d918e0784c71a40c7438545c0367addeda3047cbb33",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 502403
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "Patient",
+            "source_encoding": null,
+            "harmonized_value": "patient",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Patient and Caregiver - Equal Proportion",
+            "source_encoding": null,
+            "harmonized_value": "patient and caregiver - equal proportion",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Caregiver",
+            "source_encoding": null,
+            "harmonized_value": "caregiver",
+            "harmonized_encoding": null,
+            "note": null
+          }
+        ]
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant_visit",
+        "attribute": "mdsupdrs_part2_info_source"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "measurement",
+      "defining_concept_id": {
+        "id": 3048270,
+        "name": "Information source",
+        "domain": "Measurement",
+        "target_field": "measurement_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map",
+        "visit_occurrence_id": "cdm.visit_occurrence"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": [
+        {
+          "harmonized_value": "patient",
+          "value_as_string": "patient",
+          "value_as_concept_id": {
+            "id": 45880001,
+            "name": "Patient"
+          }
+        },
+        {
+          "harmonized_value": "patient and caregiver - equal proportion",
+          "value_as_string": "patient and caregiver - equal proportion",
+          "value_as_concept_id": {
+            "id": 45883500,
+            "name": "Both"
+          }
+        },
+        {
+          "harmonized_value": "caregiver",
+          "value_as_string": "caregiver",
+          "value_as_concept_id": {
+            "id": 4039760,
+            "name": "Caregiver"
+          }
+        }
+      ]
+    }
+  ],
+  "status_note": ""
+}

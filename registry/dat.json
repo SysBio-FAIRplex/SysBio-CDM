@@ -1,0 +1,120 @@
+{
+  "registry_id": 100188,
+  "schema_version": "harmonized-element/2.5",
+  "registry_label": "dat",
+  "definition": "Dopamine transporter scan result.",
+  "one_per": [
+    "person",
+    "visit"
+  ],
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-PD"
+  ],
+  "harmonized_values": [
+    "Positive",
+    "Negative",
+    "NA"
+  ],
+  "harmonized_with": [
+    "datscan_visual_interpretation",
+    "scan_months_after_baseline"
+  ],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "dat",
+      "program": "AMP-PD",
+      "status": "approved",
+      "status_note": null,
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": "Dopamine transporter scan result.",
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "27ec4b1a5cda5045054805a63e301927b7b3fdc56d24c7982906b0b7537a084e",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 501395
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "Positive",
+            "source_encoding": null,
+            "harmonized_value": "Positive",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Negative",
+            "source_encoding": null,
+            "harmonized_value": "Negative",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "NA",
+            "source_encoding": null,
+            "harmonized_value": "NA",
+            "harmonized_encoding": null,
+            "note": null
+          }
+        ]
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "measurement",
+      "defining_concept_id": {
+        "id": 4327116,
+        "name": "Single photon emission computed tomography for dopamine transport",
+        "domain": "Procedure",
+        "target_field": "measurement_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map",
+        "visit_occurrence_id": "cdm.visit_occurrence"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": [
+        {
+          "harmonized_value": "Positive",
+          "value_as_concept_id": {
+            "id": 9191,
+            "name": "Positive"
+          },
+          "value_as_string": "Positive"
+        },
+        {
+          "harmonized_value": "Negative",
+          "value_as_concept_id": {
+            "id": 9189,
+            "name": "Negative"
+          },
+          "value_as_string": "Negative"
+        },
+        {
+          "harmonized_value": "NA",
+          "value_as_concept_id": {
+            "id": 35941270,
+            "name": "NA"
+          },
+          "value_as_string": "NA"
+        }
+      ]
+    }
+  ]
+}

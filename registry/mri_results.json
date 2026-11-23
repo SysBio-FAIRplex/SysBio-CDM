@@ -1,0 +1,110 @@
+{
+  "registry_id": 100489,
+  "schema_version": "harmonized-element/2.5",
+  "registry_label": "mri_results",
+  "definition": "MRI results.",
+  "one_per": [
+    "person",
+    "visit"
+  ],
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-PD"
+  ],
+  "harmonized_values": [
+    "Abnormal, not clinically significant",
+    "Normal",
+    "Abnormal, clinically significant"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "mri_results",
+      "program": "AMP-PD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": "MRI results.",
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "8b2b50ce042fa2062e779090cbf36adec8ab222133718b6b4e50b3ca97b617db",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 502925
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "Normal",
+            "source_encoding": null,
+            "harmonized_value": "Normal",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Abnormal, clinically significant",
+            "source_encoding": null,
+            "harmonized_value": "Abnormal, clinically significant",
+            "harmonized_encoding": null,
+            "note": null
+          }
+        ]
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "observation",
+      "defining_concept_id": {
+        "id": 4013636,
+        "name": "Magnetic resonance imaging",
+        "domain": "Procedure",
+        "target_field": "observation_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map",
+        "visit_occurrence_id": "cdm.visit_occurrence"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": [
+        {
+          "harmonized_value": "Abnormal, not clinically significant",
+          "value_as_string": "Abnormal, not clinically significant",
+          "value_as_concept_id": {
+            "id": 45878745,
+            "name": "Abnormal"
+          }
+        },
+        {
+          "harmonized_value": "Normal",
+          "value_as_string": "Normal",
+          "value_as_concept_id": {
+            "id": 45884153,
+            "name": "Normal"
+          }
+        },
+        {
+          "harmonized_value": "Abnormal, clinically significant",
+          "value_as_string": "Abnormal, clinically significant",
+          "value_as_concept_id": {
+            "id": 45878745,
+            "name": "Abnormal"
+          }
+        }
+      ]
+    }
+  ]
+}

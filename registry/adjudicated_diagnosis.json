@@ -1,0 +1,350 @@
+{
+  "registry_id": 100001,
+  "schema_version": "harmonized-element/2.7",
+  "registry_label": "adjudicated_diagnosis",
+  "definition": "A diagnosis confirmed, refuted, or revised using a standardized or defined protocol.",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-CMD",
+    "AMP-AD"
+  ],
+  "harmonized_values": [
+    "diabetic kidney disease",
+    "hypertensive kidney disease",
+    "cannot be determined",
+    "other",
+    "acute tubular injury",
+    "diabetic nephropathy resistor - no histologic abnormalities",
+    "acute interstitial nephritis",
+    "unknown",
+    "control",
+    "alzheimers disease"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "Primary Adjudicated Category",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "",
+            "id_type": "",
+            "sha256": "0843ef9d8dbce1d400ab88d2b71c69b245c2d992bf13746c9c716c752d073ba6",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 500001
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "Diabetic Kidney Disease",
+            "source_encoding": null,
+            "harmonized_value": "diabetic kidney disease",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "Hypertensive Kidney Disease",
+            "source_encoding": null,
+            "harmonized_value": "hypertensive kidney disease",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "Cannot be determined",
+            "source_encoding": null,
+            "harmonized_value": "cannot be determined",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "Other",
+            "source_encoding": null,
+            "harmonized_value": "other",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "Acute Tubular Injury",
+            "source_encoding": null,
+            "harmonized_value": "acute tubular injury",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "DM-R - no histologic abnormalities",
+            "source_encoding": null,
+            "harmonized_value": "diabetic nephropathy resistor - no histologic abnormalities",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "Acute Interstitial Nephritis",
+            "source_encoding": null,
+            "harmonized_value": "acute interstitial nephritis",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "",
+            "source_encoding": null,
+            "harmonized_value": "unknown",
+            "harmonized_encoding": null,
+            "note": ""
+          }
+        ]
+      },
+      "applies_to_rows": {
+        "require": "all",
+        "action": "exclude",
+        "conditions": [
+          {
+            "column": "Enrollment Category",
+            "match": "equals",
+            "token": "Healthy Reference",
+            "inequality": false,
+            "token_position": null,
+            "delimiters": []
+          }
+        ]
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "adjudicated_diagnosis"
+      }
+    },
+    {
+      "source_label": "Primary Adjudicated Category",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "",
+            "id_type": "",
+            "sha256": "0843ef9d8dbce1d400ab88d2b71c69b245c2d992bf13746c9c716c752d073ba6",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 500001
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "",
+            "source_encoding": null,
+            "harmonized_value": "control",
+            "harmonized_encoding": null,
+            "note": ""
+          }
+        ]
+      },
+      "applies_to_rows": {
+        "require": "all",
+        "action": "include",
+        "conditions": [
+          {
+            "column": "Enrollment Category",
+            "match": "equals",
+            "token": "Healthy Reference",
+            "inequality": false,
+            "token_position": null,
+            "delimiters": []
+          }
+        ]
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "adjudicated_diagnosis"
+      }
+    },
+    {
+      "source_label": "ADoutcome",
+      "program": "AMP-AD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [
+        "DiverseCohortsOutcomes.pdf",
+        "DiverseCohorts_DataDictionary.pdf"
+      ],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn51757646",
+            "id_type": "synapse",
+            "sha256": "484b323b8d6d2eea95a7f65e6492c90755dcf8b007db621c2b01081798e7846b",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 500002
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn73713769",
+            "id_type": "synapse",
+            "sha256": "82a49077ccb8b78a1159fa089a91330da7e62fabea65dceaa342faeed56fd3ab",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 500003
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "Other",
+            "source_encoding": null,
+            "harmonized_value": "other",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "AD",
+            "source_encoding": null,
+            "harmonized_value": "alzheimers disease",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Control",
+            "source_encoding": null,
+            "harmonized_value": "control",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "missing or unknown",
+            "source_encoding": null,
+            "harmonized_value": "unknown",
+            "harmonized_encoding": null,
+            "note": null
+          }
+        ]
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "adjudicated_diagnosis"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "observation",
+      "defining_concept_id": {
+        "id": 4049904,
+        "name": "Revised diagnosis",
+        "domain": "Observation",
+        "target_field": "observation_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": [
+        {
+          "harmonized_value": "diabetic kidney disease",
+          "value_as_concept_id": {
+            "id": 45883355,
+            "name": "Diabetic Kidney Disease"
+          }
+        },
+        {
+          "harmonized_value": "hypertensive kidney disease",
+          "value_as_concept_id": {
+            "id": 201313,
+            "name": "Hypertensive renal disease"
+          }
+        },
+        {
+          "harmonized_value": "cannot be determined",
+          "value_as_concept_id": {
+            "id": 45877986,
+            "name": "Unknown"
+          }
+        },
+        {
+          "harmonized_value": "other",
+          "value_as_concept_id": {
+            "id": 45878142,
+            "name": "Other"
+          }
+        },
+        {
+          "harmonized_value": "acute tubular injury",
+          "value_as_string": "Acute Tubular Injury",
+          "value_as_concept_id": {
+            "id": 444044,
+            "name": "Acute tubular necrosis"
+          },
+          "note": ""
+        },
+        {
+          "harmonized_value": "diabetic nephropathy resistor - no histologic abnormalities",
+          "value_as_string": "diabetic nephropathy resistor - no histologic abnormalities"
+        },
+        {
+          "harmonized_value": "acute interstitial nephritis",
+          "value_as_concept_id": {
+            "id": 4102631,
+            "name": "Acute tubulointerstitial nephritis"
+          }
+        },
+        {
+          "harmonized_value": "unknown",
+          "value_as_concept_id": {
+            "id": 45877986,
+            "name": "Unknown"
+          }
+        },
+        {
+          "harmonized_value": "control",
+          "value_as_concept_id": {
+            "id": 45884153,
+            "name": "Normal"
+          },
+          "qualifier_concept_id": {
+            "id": 44804027,
+            "name": "Control group"
+          }
+        },
+        {
+          "harmonized_value": "alzheimers disease",
+          "value_as_concept_id": {
+            "id": 36311271,
+            "name": "Alzheimer's disease"
+          },
+          "value_as_string": "alzheimers disease"
+        }
+      ]
+    }
+  ]
+}

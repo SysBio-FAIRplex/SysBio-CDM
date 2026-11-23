@@ -1,0 +1,95 @@
+{
+  "registry_id": 100797,
+  "schema_version": "harmonized-element/2.5",
+  "registry_label": "updrs_v3_part1_on_off_medication_state",
+  "definition": "UPDRS Part 1 - Clinical State On Medication",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-PD"
+  ],
+  "harmonized_values": [
+    "general",
+    "on"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "updrs1_on_medication",
+      "program": "AMP-PD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": "UPDRS Part 1 - Clinical State On Medication.",
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "a400fc24798412aac109d137a671add77afe467207ed576ede53def6cce2d7eb",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 506092
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "General",
+            "source_encoding": null,
+            "harmonized_value": "general",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "ON",
+            "source_encoding": null,
+            "harmonized_value": "on",
+            "harmonized_encoding": null,
+            "note": null
+          }
+        ]
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant_visit",
+        "attribute": "updrs_v3_part1_on_off_medication_state"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "observation",
+      "defining_concept_id": {
+        "id": 4132778,
+        "name": "General clinical state",
+        "domain": "Observation",
+        "target_field": "observation_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map",
+        "visit_occurrence_id": "cdm.visit_occurrence"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": [
+        {
+          "harmonized_value": "general",
+          "value_as_string": "general"
+        },
+        {
+          "harmonized_value": "on",
+          "value_as_string": "on"
+        }
+      ]
+    }
+  ],
+  "status_note": ""
+}

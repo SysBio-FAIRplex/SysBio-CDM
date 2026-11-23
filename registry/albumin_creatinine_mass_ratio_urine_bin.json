@@ -1,0 +1,145 @@
+{
+  "registry_id": 100014,
+  "schema_version": "harmonized-element/2.7",
+  "registry_label": "albumin_creatinine_mass_ratio_urine_bin",
+  "harmonized_element_curie": "LOINC:9318-7",
+  "definition": "uACR (mg/g cr) (`uacr_most_recentC`, section Laboratory Results). Most recent pre-biopsy uACR in mg/g cr from screening (`sc_dkd_uae02_nbr/units_01...02`, `sc_dkd_uae23_nbr/units_01`, `sc_hckd_uae01_ap_01`, `sc_hckd_uae01_nbr/units_01`, `sc_hckd_uae02_nbr/units_01...02`, `sc_hckd_uae23_nbr/units_01`, `sc_pdr_uae_nbr/units`) or enrollment (`lab_urn01...10_cr`, `lab_urn01...10_cr_units`, `lab_urn01...10_alb`, `lab_urn01...10_alb_units`). unit mg/g cr.",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-CMD"
+  ],
+  "harmonized_values": [
+    "[0,30)",
+    "[1000,inf)",
+    "[30,300)",
+    "[500,1000)",
+    "[300,500)"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "Albuminuria (mg) (Binned)",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [
+        "KPMP_Clinical-Phenotyping-Data-Dictionary_v3_0_2024-01-12.pdf (v. 2024-01-12)"
+      ],
+      "src_definition": "uACR (mg/g cr) (`uacr_most_recentC`, section Laboratory Results)",
+      "layer_1_etl": {
+        "value_form": "interval",
+        "datatype": "interval",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "",
+            "id_type": "",
+            "sha256": "0843ef9d8dbce1d400ab88d2b71c69b245c2d992bf13746c9c716c752d073ba6",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 500164
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "<30 mg/g cr",
+            "source_encoding": null,
+            "harmonized_value": "[0,30)",
+            "harmonized_encoding": null,
+            "note": "",
+            "interval": {
+              "low": 0,
+              "high": 30.0,
+              "low_inclusive": true,
+              "high_inclusive": false
+            }
+          },
+          {
+            "source_value": ">=1000 mg/g cr",
+            "source_encoding": null,
+            "harmonized_value": "[1000,inf)",
+            "harmonized_encoding": null,
+            "note": "",
+            "interval": {
+              "low": 1000.0,
+              "high": null,
+              "low_inclusive": true,
+              "high_inclusive": false
+            }
+          },
+          {
+            "source_value": "30 to <300 mg/g cr",
+            "source_encoding": null,
+            "harmonized_value": "[30,300)",
+            "harmonized_encoding": null,
+            "note": "",
+            "interval": {
+              "low": 30.0,
+              "high": 300.0,
+              "low_inclusive": true,
+              "high_inclusive": false
+            }
+          },
+          {
+            "source_value": "500 to <1000 mg/g cr",
+            "source_encoding": null,
+            "harmonized_value": "[500,1000)",
+            "harmonized_encoding": null,
+            "note": "",
+            "interval": {
+              "low": 500.0,
+              "high": 1000.0,
+              "low_inclusive": true,
+              "high_inclusive": false
+            }
+          },
+          {
+            "source_value": "300 to <500 mg/g cr",
+            "source_encoding": null,
+            "harmonized_value": "[300,500)",
+            "harmonized_encoding": null,
+            "note": "",
+            "interval": {
+              "low": 300.0,
+              "high": 500.0,
+              "low_inclusive": true,
+              "high_inclusive": false
+            }
+          }
+        ],
+        "unit": "mg/g creatinine"
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "albumin_creatinine_mass_ratio_urine_bin"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "measurement",
+      "defining_concept_id": {
+        "id": 3034485,
+        "name": "Albumin/Creatinine [Mass Ratio] in Urine",
+        "domain": "Measurement",
+        "target_field": "measurement_concept_id",
+        "vocabulary_id": "LOINC",
+        "concept_code": "9318-7",
+        "vocabulary_version": "LOINC 2.78"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": []
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "registry_id": 100108,
+  "schema_version": "harmonized-element/2.5",
+  "registry_label": "clinical_metadata_source",
+  "definition": "Source system or repository from which clinical metadata was derived",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-AD"
+  ],
+  "harmonized_values": [],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "clinicalMetadataSource",
+      "program": "AMP-AD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "text",
+        "datatype": "string",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn51757646",
+            "id_type": "synapse",
+            "sha256": "484b323b8d6d2eea95a7f65e6492c90755dcf8b007db621c2b01081798e7846b",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 501293
+          }
+        ],
+        "value_map": []
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "clinical_metadata_source"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "observation",
+      "defining_concept_id": {
+        "id": 42528934,
+        "name": "Participant identifier",
+        "domain": "Observation",
+        "target_field": "observation_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": []
+    }
+  ]
+}

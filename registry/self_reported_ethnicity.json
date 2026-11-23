@@ -1,0 +1,125 @@
+{
+  "registry_id": 100675,
+  "schema_version": "harmonized-element/2.5",
+  "registry_label": "self_reported_ethnicity",
+  "definition": "AMP-CMD self-reported race/ethnicity. Race axis (African American / European American); 'Hispanic or Latin' reported here is an ethnicity with no separate race.",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-CMD"
+  ],
+  "harmonized_values": [
+    "african american",
+    "european american",
+    "hispanic or latin"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "self_reported_ethnicity",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [
+        "cmd_value_set_schema.json"
+      ],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "08648660-9898-4644-a9a1-ff3a159a0041",
+            "id_type": "cellxgene",
+            "sha256": "417ba050dcc797d58c897169ca51ddfa840e6ceb67080041f63a993127256176",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 504566
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "4cd166f1-ef51-4137-869d-0a3688bc2bc8",
+            "id_type": "cellxgene",
+            "sha256": "e582fdbe0658dc846106f68e56d967aa550e51083466935d51cb66767c9bc9d2",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 504567
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "African American",
+            "source_encoding": null,
+            "harmonized_value": "african american",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "European American",
+            "source_encoding": null,
+            "harmonized_value": "european american",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Hispanic or Latin",
+            "source_encoding": null,
+            "harmonized_value": "hispanic or latin",
+            "harmonized_encoding": null,
+            "note": null
+          }
+        ]
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "self_reported_ethnicity"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "observation",
+      "defining_concept_id": {
+        "id": 3046853,
+        "name": "Race",
+        "domain": "Observation",
+        "target_field": "observation_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": [
+        {
+          "harmonized_value": "african american",
+          "value_as_concept_id": {
+            "id": 8516,
+            "name": "Black or African American"
+          },
+          "value_as_string": "african american"
+        },
+        {
+          "harmonized_value": "european american",
+          "value_as_concept_id": {
+            "id": 8527,
+            "name": "White"
+          },
+          "value_as_string": "european american"
+        },
+        {
+          "harmonized_value": "hispanic or latin",
+          "value_as_string": "Hispanic or Latino (self-reported; race not separately specified)"
+        }
+      ]
+    }
+  ]
+}

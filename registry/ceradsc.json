@@ -1,0 +1,448 @@
+{
+  "registry_id": 100094,
+  "schema_version": "harmonized-element/2.5",
+  "registry_label": "ceradsc",
+  "definition": "CERAD neuritic plaque score on the increasing scale: 0 none, 1 sparse, 2 moderate, 3 frequent.",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-AD",
+    "AMP-PD"
+  ],
+  "harmonized_values": [
+    "none",
+    "sparse",
+    "moderate",
+    "frequent"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "ceradsc",
+      "program": "AMP-AD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [
+        "[data file name withheld]_codebook.pdf"
+      ],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn3191087",
+            "id_type": "synapse",
+            "sha256": "5d9efbdc845990ed75a2f3a5784554c7afe0e1b04484e2aa4a9d9d01911e1b90",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 501277
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn27034471",
+            "id_type": "synapse",
+            "sha256": "9c2be87182338c6d25a0bf52b27d2d4fc51136929bd250e76bdbdb6024120d18",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 501278
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "1",
+            "source_encoding": null,
+            "harmonized_value": "frequent",
+            "harmonized_encoding": "3",
+            "note": null
+          },
+          {
+            "source_value": "2",
+            "source_encoding": null,
+            "harmonized_value": "moderate",
+            "harmonized_encoding": "2",
+            "note": null
+          },
+          {
+            "source_value": "3",
+            "source_encoding": null,
+            "harmonized_value": "sparse",
+            "harmonized_encoding": "1",
+            "note": null
+          },
+          {
+            "source_value": "4",
+            "source_encoding": null,
+            "harmonized_value": "none",
+            "harmonized_encoding": "0",
+            "note": null
+          }
+        ],
+        "missing_values": [
+          "NA"
+        ]
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "ceradsc"
+      }
+    },
+    {
+      "source_label": "cerad_rush",
+      "program": "AMP-AD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layout": {
+        "file_type": "csv",
+        "sheet": null
+      },
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "cf3413543254f346264dd630f59d917557f828ebcf7c7117861c12f1d3076043",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 501279
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "1",
+            "source_encoding": null,
+            "harmonized_value": "frequent",
+            "harmonized_encoding": "3",
+            "note": null
+          },
+          {
+            "source_value": "2",
+            "source_encoding": null,
+            "harmonized_value": "moderate",
+            "harmonized_encoding": "2",
+            "note": null
+          },
+          {
+            "source_value": "3",
+            "source_encoding": null,
+            "harmonized_value": "sparse",
+            "harmonized_encoding": "1",
+            "note": null
+          },
+          {
+            "source_value": "4",
+            "source_encoding": null,
+            "harmonized_value": "none",
+            "harmonized_encoding": "0",
+            "note": null
+          }
+        ]
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "ceradsc"
+      }
+    },
+    {
+      "source_label": "path_cerad",
+      "program": "AMP-PD",
+      "status": "approved",
+      "status_note": null,
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": "CERAD score.",
+      "layer_1_etl": {
+        "value_form": "ordinal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "00c27eafd2a4bf105b6c5dad3cf551595c5aa80de9d91986c7895faf78c7067b",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 503249
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "0",
+            "source_encoding": null,
+            "harmonized_value": "none",
+            "harmonized_encoding": "0",
+            "note": null
+          },
+          {
+            "source_value": "A",
+            "source_encoding": null,
+            "harmonized_value": "sparse",
+            "harmonized_encoding": "1",
+            "note": null
+          },
+          {
+            "source_value": "B",
+            "source_encoding": null,
+            "harmonized_value": "moderate",
+            "harmonized_encoding": "2",
+            "note": null
+          },
+          {
+            "source_value": "C",
+            "source_encoding": null,
+            "harmonized_value": "frequent",
+            "harmonized_encoding": "3",
+            "note": null
+          }
+        ],
+        "missing_values": [
+          "NA"
+        ]
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "ceradsc"
+      }
+    },
+    {
+      "source_label": "amyCerad",
+      "program": "AMP-AD",
+      "status": "approved",
+      "status_note": null,
+      "manual_approval": false,
+      "src_dictionary": [
+        "DiverseCohorts_DataDictionary.pdf"
+      ],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn51757646",
+            "id_type": "synapse",
+            "sha256": "484b323b8d6d2eea95a7f65e6492c90755dcf8b007db621c2b01081798e7846b",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 503250
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn73713769",
+            "id_type": "synapse",
+            "sha256": "82a49077ccb8b78a1159fa089a91330da7e62fabea65dceaa342faeed56fd3ab",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 503251
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn73713775",
+            "id_type": "synapse",
+            "sha256": "6dbbc9b9ecd74df91193deca12efa6b5affbd94e0b3642439d23b0669af45a53",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 503252
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn73713777",
+            "id_type": "synapse",
+            "sha256": "0b08ac7a739804df6964cba515eed3d65b0a29b47f0ded0512beaad2139c230b",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 503253
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn73713776",
+            "id_type": "synapse",
+            "sha256": "910e4c62e7c1662d6f2b51d34834eb1d20deb1def8fb6d1dc163fb8b749611bc",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 503254
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn73713767",
+            "id_type": "synapse",
+            "sha256": "a3d0ac04cefafedcf8b0e0aead1abb5004ddac2dd8edc1861b0cbb4f0631f9a9",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 503255
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn73713766",
+            "id_type": "synapse",
+            "sha256": "d3f00f5cd4aa8ddc9faf87f27a06861dd5e3977e94c233a7c8a6ad6550e24383",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 503256
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn73713770",
+            "id_type": "synapse",
+            "sha256": "aa056aa2149a9f245ff2c971a8d02f469dc5a3090d7f421f45050c62014041ed",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 503257
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn73713768",
+            "id_type": "synapse",
+            "sha256": "6ebec61ee5ebd81051fe1eac0abe6c2dc106acf9e499f818f4d1e855a1f1850f",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 503258
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn73713778",
+            "id_type": "synapse",
+            "sha256": "e4e1511a34ef4ad3350008e02189f983420d4aaf2584d194865d1e842e6fb038",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 503259
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn73713779",
+            "id_type": "synapse",
+            "sha256": "349ee951f2ac0cb4289e3c94a547235892e27a24935aa78598bc5172abdaafdb",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 503260
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "None/No AD/C0",
+            "source_encoding": null,
+            "harmonized_value": "none",
+            "harmonized_encoding": "0",
+            "note": null
+          },
+          {
+            "source_value": "Sparse/Possible/C1",
+            "source_encoding": null,
+            "harmonized_value": "sparse",
+            "harmonized_encoding": "1",
+            "note": null
+          },
+          {
+            "source_value": "Moderate/Probable/C2",
+            "source_encoding": null,
+            "harmonized_value": "moderate",
+            "harmonized_encoding": "2",
+            "note": null
+          },
+          {
+            "source_value": "Frequent/Definite/C3",
+            "source_encoding": null,
+            "harmonized_value": "frequent",
+            "harmonized_encoding": "3",
+            "note": null
+          }
+        ],
+        "missing_values": [
+          "Missing or unknown",
+          "missing or unknown"
+        ]
+      },
+      "src_entity": {
+        "entity": "subject",
+        "dictionaries": [
+          "ADKP_harmonized_data_dictionary",
+          "DiverseCohorts_DataDictionary"
+        ],
+        "ambiguous": false,
+        "evidence": "",
+        "status": "proposed"
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "ceradsc"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "measurement",
+      "defining_concept_id": {
+        "id": 3168054,
+        "name": "Consortium to Establish Registry for Alzheimer's Disease assessment tool",
+        "domain": "Measurement",
+        "target_field": "measurement_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": [
+        {
+          "harmonized_value": "none",
+          "value_as_concept_id": {
+            "id": 45878582,
+            "name": "None"
+          }
+        },
+        {
+          "harmonized_value": "sparse",
+          "value_as_concept_id": {
+            "id": 45882954,
+            "name": "Possible"
+          }
+        },
+        {
+          "harmonized_value": "moderate",
+          "value_as_concept_id": {
+            "id": 45877983,
+            "name": "Moderate"
+          }
+        },
+        {
+          "harmonized_value": "frequent",
+          "value_as_concept_id": {
+            "id": 45881627,
+            "name": "Definite"
+          }
+        }
+      ]
+    }
+  ]
+}

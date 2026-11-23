@@ -1,0 +1,219 @@
+{
+  "registry_id": 100051,
+  "schema_version": "harmonized-element/2.7",
+  "registry_label": "assay_type",
+  "definition": "The single-cell assay performed on the sample's library: single-cell RNA sequencing, single-nucleus RNA sequencing, or 10x multiome (joint RNA and chromatin accessibility profiling of the same nuclei).",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-CMD",
+    "AMP-AD"
+  ],
+  "harmonized_values": [
+    "single-cell rna sequencing",
+    "single-nucleus rna sequencing",
+    "10x multiome"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "technology",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "DFF520384",
+            "id_type": "cmdga",
+            "sha256": "8d480d206f6a44e492bd25e1339caefbe465a8de77942af6991bd3d830dd0cb8",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 500546
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "scRNAseq",
+            "source_encoding": null,
+            "harmonized_value": "single-cell rna sequencing",
+            "harmonized_encoding": null,
+            "note": ""
+          }
+        ]
+      },
+      "loading_grain": {
+        "anchor": "library_id",
+        "entity": "library",
+        "attribute": "assay_type"
+      }
+    },
+    {
+      "source_label": "technology",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "DFF963439",
+            "id_type": "cmdga",
+            "sha256": "831987cb98b993bd1ef977d8758b4201210189a55d5bd38260dc41df3eefb5ac",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 500547
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "DFF142690",
+            "id_type": "cmdga",
+            "sha256": "c1070bcc2011d593709d2bad78cf8a25b7caa913f58418cb6b28c6eab92eb1d9",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 500548
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "DFF003750",
+            "id_type": "cmdga",
+            "sha256": "c9912b8266deb23f6316c109f34dfe8d576f7efc4f0cfe53e4b9f7ea789eae5a",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 500549
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "snRNAseq",
+            "source_encoding": null,
+            "harmonized_value": "single-nucleus rna sequencing",
+            "harmonized_encoding": null,
+            "note": ""
+          }
+        ]
+      },
+      "loading_grain": {
+        "anchor": "library_id",
+        "entity": "library",
+        "attribute": "assay_type"
+      }
+    },
+    {
+      "source_label": "Purpose",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layout": {
+        "file_type": "xlsx",
+        "sheet": "1_donor_overview"
+      },
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "b46623c4d78f475a7ae9d4b771a3112cb39888718aa814a121f43cca71f8516e",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 500550
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "snRNAseq",
+            "source_encoding": null,
+            "harmonized_value": "single-nucleus rna sequencing",
+            "harmonized_encoding": null,
+            "note": null
+          }
+        ]
+      },
+      "loading_grain": {
+        "anchor": "library_id",
+        "entity": "library",
+        "attribute": "assay_type"
+      }
+    },
+    {
+      "source_label": "assay",
+      "program": "AMP-AD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layout": {
+        "file_type": "csv",
+        "sheet": null
+      },
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn51757645",
+            "id_type": "synapse",
+            "sha256": "9eaa383ee973146ebfe02915b8119e33cc5533c7dfb7623ef9bfbc8c4a9bc945",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 500551
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "10x multiome",
+            "source_encoding": null,
+            "harmonized_value": "10x multiome",
+            "harmonized_encoding": null
+          }
+        ]
+      },
+      "loading_grain": {
+        "anchor": "library_id",
+        "entity": "library",
+        "attribute": "assay_type"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "assay",
+      "column": "assay_type",
+      "anchored_to": {
+        "person_id": "staging.person_map",
+        "specimen_id": "staging.specimen_map"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": []
+    }
+  ]
+}

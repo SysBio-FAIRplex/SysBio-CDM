@@ -1,0 +1,156 @@
+{
+  "registry_id": 100574,
+  "schema_version": "harmonized-element/2.5",
+  "registry_label": "pdq39_mobility_item07_getting_around_in_public",
+  "definition": "PDQ-39-Q7: Had difficulty getting around in public places?",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-PD"
+  ],
+  "harmonized_values": [
+    "never",
+    "occasionally",
+    "sometimes",
+    "often",
+    "always or cannot do at all"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "pdq39_07_getting_around_in_public",
+      "program": "AMP-PD",
+      "status": "approved",
+      "status_note": null,
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": "",
+      "layer_1_etl": {
+        "value_form": "ordinal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "759eda58d077436a1ee5518607717ce902c987d9cb27768b981f23211876bc3c",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 503300
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "Never",
+            "source_encoding": null,
+            "harmonized_value": "never",
+            "harmonized_encoding": "0",
+            "note": null
+          },
+          {
+            "source_value": "Occasionally",
+            "source_encoding": null,
+            "harmonized_value": "occasionally",
+            "harmonized_encoding": "1",
+            "note": null
+          },
+          {
+            "source_value": "Sometimes",
+            "source_encoding": null,
+            "harmonized_value": "sometimes",
+            "harmonized_encoding": "2",
+            "note": null
+          },
+          {
+            "source_value": "Often",
+            "source_encoding": null,
+            "harmonized_value": "often",
+            "harmonized_encoding": "3",
+            "note": null
+          },
+          {
+            "source_value": "Always or cannot do at all",
+            "source_encoding": null,
+            "harmonized_value": "always or cannot do at all",
+            "harmonized_encoding": "4",
+            "note": null
+          }
+        ]
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant_visit",
+        "attribute": "pdq39_mobility_item07_getting_around_in_public"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "observation",
+      "defining_concept_id": {
+        "id": 42870053,
+        "name": "I have trouble getting around in public places in the past 7 days [FACIT]",
+        "domain": "Observation",
+        "target_field": "observation_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map",
+        "visit_occurrence_id": "cdm.visit_occurrence"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": [
+        {
+          "harmonized_value": "never",
+          "value_as_number": 0,
+          "value_as_concept_id": {
+            "id": 35821333,
+            "name": "Never"
+          },
+          "value_as_string": "never"
+        },
+        {
+          "harmonized_value": "occasionally",
+          "value_as_number": 1,
+          "value_as_concept_id": {
+            "id": 45879593,
+            "name": "Occasionally"
+          },
+          "value_as_string": "occasionally"
+        },
+        {
+          "harmonized_value": "sometimes",
+          "value_as_number": 2,
+          "value_as_concept_id": {
+            "id": 45882528,
+            "name": "Sometimes"
+          },
+          "value_as_string": "sometimes"
+        },
+        {
+          "harmonized_value": "often",
+          "value_as_number": 3,
+          "value_as_concept_id": {
+            "id": 45884455,
+            "name": "Often"
+          },
+          "value_as_string": "often"
+        },
+        {
+          "harmonized_value": "always or cannot do at all",
+          "value_as_number": 4,
+          "value_as_concept_id": {
+            "id": 45882536,
+            "name": "Always"
+          },
+          "value_as_string": "always or cannot do at all"
+        }
+      ]
+    }
+  ],
+  "status_note": ""
+}

@@ -1,0 +1,115 @@
+{
+  "schema_version": "harmonized-element/2.5",
+  "registry_id": "",
+  "registry_label": "tissue_weight",
+  "definition": "Weight of tissue sample collected.",
+  "one_per": [
+    "person",
+    "specimen"
+  ],
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-AD",
+    "AMP-CMD"
+  ],
+  "harmonized_values": [
+    "<any in range>"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "tissueWeight",
+      "program": "AMP-AD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "continuous",
+        "datatype": "number",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn21323366",
+            "id_type": "synapse",
+            "sha256": "80d6246e6837543317ce7824958d54c141025746ca54de6923c56a41f656ff87",
+            "access_groups": [
+              "AMP-AD"
+            ]
+          }
+        ],
+        "range": {
+          "min": 0.0,
+          "max": 88.0
+        },
+        "value_map": []
+      }
+    },
+    {
+      "source_label": "Brain.Weight",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layout": {
+        "file_type": "xlsx",
+        "sheet": "1_donor_overview"
+      },
+      "layer_1_etl": {
+        "value_form": "continuous",
+        "datatype": "number",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "b46623c4d78f475a7ae9d4b771a3112cb39888718aa814a121f43cca71f8516e",
+            "access_groups": [
+              "AMP-CMD"
+            ]
+          }
+        ],
+        "value_map": [],
+        "missing_values": [
+          "missing"
+        ]
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "measurement",
+      "defining_concept_id": {
+        "id": 3020366,
+        "name": "Weight of Tissue",
+        "domain": "Measurement",
+        "target_field": "measurement_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [
+        {
+          "role": "attribute",
+          "column": null,
+          "status": "candidate",
+          "note": ""
+        }
+      ],
+      "value_map": [
+        {
+          "harmonized_value": "<any in range>",
+          "value_as_number": "<value>"
+        }
+      ]
+    }
+  ]
+}

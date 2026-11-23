@@ -1,0 +1,107 @@
+{
+  "registry_id": 100484,
+  "schema_version": "harmonized-element/2.5",
+  "registry_label": "mod_se_adl_on_off_medication_state",
+  "definition": "Clinical State On Medication",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-PD"
+  ],
+  "harmonized_values": [
+    "on",
+    "off",
+    "general"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "mod_schwab_england_on_off_med",
+      "program": "AMP-PD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": "Clinical State On Medication.",
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "ce7404e4c5e077aa67d551737a0850560b9c88ed27a0d43ea6c82e00ffc96036",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 502918
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "On",
+            "source_encoding": null,
+            "harmonized_value": "on",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Off",
+            "source_encoding": null,
+            "harmonized_value": "off",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "General",
+            "source_encoding": null,
+            "harmonized_value": "general",
+            "harmonized_encoding": null,
+            "note": null
+          }
+        ]
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant_visit",
+        "attribute": "mod_se_adl_on_off_medication_state"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "observation",
+      "defining_concept_id": {
+        "id": 4132778,
+        "name": "General clinical state",
+        "domain": "Observation",
+        "target_field": "observation_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map",
+        "visit_occurrence_id": "cdm.visit_occurrence"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": [
+        {
+          "harmonized_value": "on",
+          "value_as_string": "on"
+        },
+        {
+          "harmonized_value": "off",
+          "value_as_string": "off"
+        },
+        {
+          "harmonized_value": "general",
+          "value_as_string": "general"
+        }
+      ]
+    }
+  ],
+  "status_note": ""
+}

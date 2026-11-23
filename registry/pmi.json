@@ -1,0 +1,123 @@
+{
+  "registry_id": 100595,
+  "schema_version": "harmonized-element/2.5",
+  "registry_label": "pmi",
+  "definition": "Post-Mortem Interval.",
+  "one_per": [
+    "person"
+  ],
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-AD",
+    "AMP-PD"
+  ],
+  "harmonized_values": [
+    "<any in range>"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "pmi",
+      "program": "AMP-AD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [
+        "DiverseCohorts_DataDictionary.pdf",
+        "ROSMAP_clinical_codebook.pdf"
+      ],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "continuous",
+        "datatype": "number",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn3191087",
+            "id_type": "synapse",
+            "sha256": "5d9efbdc845990ed75a2f3a5784554c7afe0e1b04484e2aa4a9d9d01911e1b90",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 503321
+          }
+        ],
+        "range": {
+          "min": 0.0,
+          "max": 99.0
+        },
+        "value_map": []
+      },
+      "src_entity": {
+        "entity": "subject",
+        "dictionaries": [
+          "DiverseCohorts_DataDictionary"
+        ],
+        "ambiguous": false,
+        "evidence": "",
+        "status": "proposed"
+      }
+    },
+    {
+      "source_label": "PMI_hours",
+      "program": "AMP-PD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layout": {
+        "file_type": "csv",
+        "sheet": null
+      },
+      "layer_1_etl": {
+        "value_form": "continuous",
+        "datatype": "number",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "37500633d6c2ec150cf19d3ae1de7635b3d2c0c6741db6f7aad55234e6e051b0",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 503322
+          }
+        ],
+        "value_map": [],
+        "range": {
+          "min": 0.0,
+          "max": 36.0
+        },
+        "unit": "hours"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "observation",
+      "defining_concept_id": {
+        "id": 4121980,
+        "name": "Postmortem period",
+        "domain": "Meas Value",
+        "target_field": "observation_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": [
+        {
+          "harmonized_value": "<any in range>",
+          "value_as_number": "<value>"
+        }
+      ]
+    }
+  ]
+}

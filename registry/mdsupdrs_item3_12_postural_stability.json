@@ -1,0 +1,217 @@
+{
+  "registry_id": 100347,
+  "schema_version": "harmonized-element/2.5",
+  "registry_label": "mdsupdrs_item3_12_postural_stability",
+  "definition": "3.12 MDS-UPDRS - Postural Stability (UPD2312)",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-PD"
+  ],
+  "harmonized_values": [
+    "mild",
+    "moderate",
+    "normal",
+    "severe",
+    "slight"
+  ],
+  "harmonized_with": [],
+  "links": [
+    {
+      "link_id": "1",
+      "kind": "derivation",
+      "linked_element_label": "mdsupdrs_part3_total",
+      "linked_element_id": "mds_updrs_part_iii_summary_score",
+      "linked_table": "measurement",
+      "linking_mechanism": "OBSERVATION.observation_event_id",
+      "linking_mechanism_concept_id": {
+        "id": 1147138,
+        "name": "measurement.measurement_id"
+      },
+      "note": ""
+    }
+  ],
+  "sources": [
+    {
+      "source_label": [
+        "upd2312_postural_stability",
+        "code_upd2312_postural_stability"
+      ],
+      "program": "AMP-PD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": "",
+      "layer_1_etl": {
+        "value_form": "ordinal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "4c16a16a80fcd4944d2a9ccfc907e9c7a469ef01f54ef21f63f3a3324fcf06e9",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_ids": [
+              502360,
+              502361
+            ]
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "Normal",
+            "source_encoding": "0",
+            "harmonized_value": "normal",
+            "harmonized_encoding": "0",
+            "note": null
+          },
+          {
+            "source_value": "Slight",
+            "source_encoding": "1",
+            "harmonized_value": "slight",
+            "harmonized_encoding": "1",
+            "note": null
+          },
+          {
+            "source_value": "Moderate",
+            "source_encoding": "3",
+            "harmonized_value": "moderate",
+            "harmonized_encoding": "3",
+            "note": null
+          },
+          {
+            "source_value": "Mild",
+            "source_encoding": "2",
+            "harmonized_value": "mild",
+            "harmonized_encoding": "2",
+            "note": null
+          },
+          {
+            "source_value": "Severe",
+            "source_encoding": "4",
+            "harmonized_value": "severe",
+            "harmonized_encoding": "4",
+            "note": null
+          }
+        ]
+      },
+      "applies_to_rows": {
+        "column": "upd23b_clinical_state_on_medication",
+        "token": "Off",
+        "token_position": 0,
+        "delimiters": []
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant_visit",
+        "attribute": "mdsupdrs_item3_12_postural_stability"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "observation",
+      "defining_concept_id": {
+        "id": 40768395,
+        "name": "Postural stability - retropulsion test [UPDRS]",
+        "domain": "Observation",
+        "target_field": "observation_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map",
+        "visit_occurrence_id": "cdm.visit_occurrence"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [
+        {
+          "role": "derivation",
+          "link_id": "1",
+          "status": "active",
+          "note": ""
+        }
+      ],
+      "value_map": [
+        {
+          "harmonized_value": "<any in range>",
+          "value_as_number": "<value>",
+          "qualifier_concept_id": {
+            "id": 1094256,
+            "name": "Was not on medication"
+          }
+        },
+        {
+          "harmonized_value": "normal",
+          "value_as_number": 0,
+          "value_as_concept_id": {
+            "id": 45884153,
+            "name": "Normal"
+          },
+          "value_as_string": "normal",
+          "qualifier_concept_id": {
+            "id": 1094256,
+            "name": "Was not on medication"
+          }
+        },
+        {
+          "harmonized_value": "slight",
+          "value_as_number": 1,
+          "value_as_concept_id": {
+            "id": 45880586,
+            "name": "Slight"
+          },
+          "value_as_string": "slight",
+          "qualifier_concept_id": {
+            "id": 1094256,
+            "name": "Was not on medication"
+          }
+        },
+        {
+          "harmonized_value": "moderate",
+          "value_as_number": 3,
+          "value_as_concept_id": {
+            "id": 45877983,
+            "name": "Moderate"
+          },
+          "value_as_string": "moderate",
+          "qualifier_concept_id": {
+            "id": 1094256,
+            "name": "Was not on medication"
+          }
+        },
+        {
+          "harmonized_value": "mild",
+          "value_as_number": 2,
+          "value_as_concept_id": {
+            "id": 45883535,
+            "name": "Mild"
+          },
+          "value_as_string": "mild",
+          "qualifier_concept_id": {
+            "id": 1094256,
+            "name": "Was not on medication"
+          }
+        },
+        {
+          "harmonized_value": "severe",
+          "value_as_number": 4,
+          "value_as_concept_id": {
+            "id": 45883536,
+            "name": "Severe"
+          },
+          "value_as_string": "severe",
+          "qualifier_concept_id": {
+            "id": 1094256,
+            "name": "Was not on medication"
+          }
+        }
+      ]
+    }
+  ],
+  "status_note": ""
+}

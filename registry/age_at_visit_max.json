@@ -1,0 +1,80 @@
+{
+  "registry_id": 100006,
+  "schema_version": "harmonized-element/2.5",
+  "registry_label": "age_at_visit_max",
+  "definition": "Maximum age of participant across all study visits",
+  "one_per": [
+    "person"
+  ],
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-AD"
+  ],
+  "harmonized_values": [
+    "<any in range>"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "age_at_visit_max",
+      "program": "AMP-AD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "continuous",
+        "datatype": "number",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn3191087",
+            "id_type": "synapse",
+            "sha256": "5d9efbdc845990ed75a2f3a5784554c7afe0e1b04484e2aa4a9d9d01911e1b90",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 500027
+          }
+        ],
+        "range": {
+          "min": 54.0,
+          "max": 90.0
+        },
+        "value_map": []
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "age_at_visit_max"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "observation",
+      "defining_concept_id": {
+        "id": 35815526,
+        "name": "Age at event",
+        "domain": "Observation",
+        "target_field": "observation_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": [
+        {
+          "harmonized_value": "<any in range>",
+          "value_as_number": "<value>"
+        }
+      ]
+    }
+  ]
+}

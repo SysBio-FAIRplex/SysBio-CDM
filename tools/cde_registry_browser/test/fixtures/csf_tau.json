@@ -1,0 +1,82 @@
+{
+  "schema_version": "harmonized-element/2.5",
+  "registry_id": "",
+  "registry_label": "csf_tau",
+  "definition": "Tau protein [Mass/volume] in Cerebral spinal fluid.",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-PD"
+  ],
+  "harmonized_values": [
+    "<any in range>"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "test_value",
+      "program": "AMP-PD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": "Biospecimen test result (numeric)",
+      "layer_1_etl": {
+        "value_form": "continuous",
+        "datatype": "number",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "72afa603cdf7356fca86691f8457ed8c788f0ae102bde007312c8ff44820726b",
+            "access_groups": [
+              "AMP-PD"
+            ]
+          }
+        ],
+        "range": {
+          "min": 0,
+          "max": 100000
+        },
+        "value_map": []
+      },
+      "applies_to_rows": {
+        "column": "test_name",
+        "token": "Tau",
+        "token_position": 0,
+        "delimiters": []
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "measurement",
+      "defining_concept_id": {
+        "id": 3000242,
+        "name": "Tau protein [Mass/volume] in Cerebral spinal fluid",
+        "domain": "Measurement",
+        "target_field": "measurement_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map",
+        "visit_occurrence_id": "cdm.visit_occurrence"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": [
+        {
+          "harmonized_value": "<any in range>",
+          "value_as_number": "<value>",
+          "unit_concept_id": {
+            "id": 8845,
+            "name": "picogram per milliliter"
+          }
+        }
+      ]
+    }
+  ]
+}

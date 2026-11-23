@@ -1,0 +1,103 @@
+{
+  "registry_id": 100507,
+  "schema_version": "harmonized-element/2.5",
+  "registry_label": "msq_v2011_item6_stops_breathing_in_sleep",
+  "definition": "MSQ Stop Breathing Q6",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-PD"
+  ],
+  "harmonized_values": [
+    "no",
+    "yes"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "msq06_stop_breathing",
+      "program": "AMP-PD",
+      "status": "approved",
+      "status_note": null,
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": "MSQ Stop Breathing Q6.",
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "4c6de4a9cd752197bca40057220123a4093a4485208f56a73c2f8e0076da9a03",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 502945
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "No",
+            "source_encoding": null,
+            "harmonized_value": "no",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Yes",
+            "source_encoding": null,
+            "harmonized_value": "yes",
+            "harmonized_encoding": null,
+            "note": null
+          }
+        ]
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant_visit",
+        "attribute": "msq_v2011_item6_stops_breathing_in_sleep"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "observation",
+      "defining_concept_id": {
+        "id": 40767199,
+        "name": "Has anyone noticed that you quit breathing during your sleep [PhenX]",
+        "domain": "Observation",
+        "target_field": "observation_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map",
+        "visit_occurrence_id": "cdm.visit_occurrence"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": [
+        {
+          "harmonized_value": "no",
+          "value_as_concept_id": {
+            "id": 45878245,
+            "name": "No"
+          },
+          "value_as_string": "no"
+        },
+        {
+          "harmonized_value": "yes",
+          "value_as_concept_id": {
+            "id": 45877994,
+            "name": "Yes"
+          },
+          "value_as_string": "yes"
+        }
+      ]
+    }
+  ],
+  "status_note": ""
+}

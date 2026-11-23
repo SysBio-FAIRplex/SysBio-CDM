@@ -1,0 +1,180 @@
+{
+  "registry_id": 100100,
+  "schema_version": "harmonized-element/2.5",
+  "registry_label": "cigarettes_packs_per_day",
+  "definition": "Average number packs of cigarettes smoked daily",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-PD"
+  ],
+  "harmonized_values": [
+    "unknown",
+    "0.5 pack or less",
+    "1 pack",
+    "0.5 pack",
+    "2 or more packs",
+    "1.5 pack"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "cigarettes_packs_per_day",
+      "program": "AMP-PD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": "Average number packs of cigarettes smoked daily.",
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "dd7732ea9d0dd2b29f64aed9435bf44cb728d0439ba446868c0de31548b15342",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 501285
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "Unknown",
+            "source_encoding": null,
+            "harmonized_value": "unknown",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "0.5 pack or less",
+            "source_encoding": null,
+            "harmonized_value": "0.5 pack or less",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "1 pack",
+            "source_encoding": null,
+            "harmonized_value": "1 pack",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "0.5 pack",
+            "source_encoding": null,
+            "harmonized_value": "0.5 pack",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "2 or more packs",
+            "source_encoding": null,
+            "harmonized_value": "2 or more packs",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "1.5 pack",
+            "source_encoding": null,
+            "harmonized_value": "1.5 pack",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "0.5 pack or less ",
+            "source_encoding": null,
+            "harmonized_value": "0.5 pack or less",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "0.5 or less pack",
+            "source_encoding": null,
+            "harmonized_value": "0.5 pack or less",
+            "harmonized_encoding": null,
+            "note": null
+          }
+        ]
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant_visit",
+        "attribute": "cigarettes_packs_per_day"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "observation",
+      "defining_concept_id": {
+        "id": 35810373,
+        "name": "Number of cigarettes currently smoked daily (current cigarette smokers)",
+        "domain": "Observation",
+        "target_field": "observation_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map",
+        "visit_occurrence_id": "cdm.visit_occurrence"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": [
+        {
+          "harmonized_value": "unknown",
+          "value_as_concept_id": {
+            "id": 45877986,
+            "name": "Unknown"
+          },
+          "value_as_string": "unknown"
+        },
+        {
+          "harmonized_value": "0.5 pack or less",
+          "value_as_string": "0.5 pack or less",
+          "value_as_concept_id": {
+            "id": 45883728,
+            "name": "6 to 15 cigarettes per day (about 1/2 pack)"
+          }
+        },
+        {
+          "harmonized_value": "1 pack",
+          "value_as_string": "1 pack",
+          "value_as_concept_id": {
+            "id": 45876409,
+            "name": "16 to 25 cigarettes per day (about 1 pack)"
+          }
+        },
+        {
+          "harmonized_value": "0.5 pack",
+          "value_as_string": "0.5 pack",
+          "value_as_concept_id": {
+            "id": 45883728,
+            "name": "6 to 15 cigarettes per day (about 1/2 pack)"
+          }
+        },
+        {
+          "harmonized_value": "2 or more packs",
+          "value_as_string": "2 or more packs",
+          "value_as_concept_id": {
+            "id": 45883456,
+            "name": "More than 35 cigarettes per day (about 2 packs or more)"
+          }
+        },
+        {
+          "harmonized_value": "1.5 pack",
+          "value_as_string": "1.5 pack",
+          "value_as_concept_id": {
+            "id": 45876770,
+            "name": "26 to 35 cigarettes per day (about 1 1/2 packs)"
+          }
+        }
+      ]
+    }
+  ]
+}

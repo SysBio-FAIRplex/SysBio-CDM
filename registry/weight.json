@@ -1,0 +1,137 @@
+{
+  "registry_id": 100821,
+  "schema_version": "harmonized-element/2.5",
+  "registry_label": "weight",
+  "definition": "Weight of subject. If value unknown, enter '-1'.",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-RA-SLE"
+  ],
+  "harmonized_values": [
+    "<any in range>"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "weight",
+      "program": "AMP-RA-SLE",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "continuous",
+        "datatype": "number",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn72107707",
+            "id_type": "synapse",
+            "sha256": "b08804a4c9d1ad82fc7b22b55bd290a717a62fe6715ef530cbc9b2941351e3f5",
+            "access_groups": [
+              "AMP-RA-SLE"
+            ],
+            "item_as_source_id": 506276
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn72108810",
+            "id_type": "synapse",
+            "sha256": "e0638843795298edcbd72c43e5e25a936136b1ef76da32083fb0f07b2c7634ed",
+            "access_groups": [
+              "AMP-RA-SLE"
+            ],
+            "item_as_source_id": 506277
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn72122099",
+            "id_type": "synapse",
+            "sha256": "369ae16a7adcf9c00867055ef65debe9ea3b65e44c3f8476e9892654a8a27a11",
+            "access_groups": [
+              "AMP-RA-SLE"
+            ],
+            "item_as_source_id": 506278
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn75080274",
+            "id_type": "synapse",
+            "sha256": "2a028d467997f1a181bd4229563d6a01e99c0eb4cde4c3c19fcc86f846ece7c8",
+            "access_groups": [
+              "AMP-RA-SLE"
+            ],
+            "item_as_source_id": 506279
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn75080282",
+            "id_type": "synapse",
+            "sha256": "ecf9586757876da610dc6acc40eb2bb8cd8bf983d4f3fc36f6c61d1eb671e51e",
+            "access_groups": [
+              "AMP-RA-SLE"
+            ],
+            "item_as_source_id": 506280
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "864de4f5775a590375a916e109fd9cfe011b568624e2f77e68865dcbb815edcc",
+            "access_groups": [
+              "AMP-RA-SLE"
+            ],
+            "item_as_source_id": 506281
+          }
+        ],
+        "range": {
+          "min": null,
+          "max": null
+        },
+        "value_map": []
+      },
+      "src_entity": {
+        "entity": "subject",
+        "dictionaries": [
+          "[data file name withheld]"
+        ],
+        "ambiguous": false,
+        "evidence": "",
+        "status": "proposed"
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant_visit",
+        "attribute": "weight"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "measurement",
+      "defining_concept_id": {
+        "id": 4099154,
+        "name": "Body weight",
+        "domain": "Measurement",
+        "target_field": "measurement_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map",
+        "visit_occurrence_id": "cdm.visit_occurrence"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": [
+        {
+          "harmonized_value": "<any in range>",
+          "value_as_number": "<value>"
+        }
+      ]
+    }
+  ]
+}

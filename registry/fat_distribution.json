@@ -1,0 +1,219 @@
+{
+  "registry_id": 100242,
+  "schema_version": "harmonized-element/2.5",
+  "registry_label": "fat_distribution",
+  "definition": "Body fat distribution",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-CMD"
+  ],
+  "harmonized_values": [
+    "abdominal or central",
+    "peripheral",
+    "generalized",
+    "normal"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "Fat.distribution",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "FNIH_Liver_scRNA_v1_Pseudobulk_NK",
+            "id_type": "cmd_dataset",
+            "sha256": "01fa7b159e181b67458c775f9a3cf1debb1cdec24b8c699148678c6d6f91d6c1",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 501588
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "FNIH_Liver_scRNA_v1_Pseudobulk_Mast",
+            "id_type": "cmd_dataset",
+            "sha256": "01fa7b159e181b67458c775f9a3cf1debb1cdec24b8c699148678c6d6f91d6c1",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 501588
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "FNIH_Liver_scRNA_v1_Pseudobulk_B",
+            "id_type": "cmd_dataset",
+            "sha256": "01fa7b159e181b67458c775f9a3cf1debb1cdec24b8c699148678c6d6f91d6c1",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 501588
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "FNIH_Liver_scRNA_v1_Pseudobulk_T",
+            "id_type": "cmd_dataset",
+            "sha256": "01fa7b159e181b67458c775f9a3cf1debb1cdec24b8c699148678c6d6f91d6c1",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 501588
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "FNIH_Liver_scRNA_v1_Pseudobulk_Myeloid",
+            "id_type": "cmd_dataset",
+            "sha256": "01fa7b159e181b67458c775f9a3cf1debb1cdec24b8c699148678c6d6f91d6c1",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 501588
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "FNIH_Liver_scRNA_v1_Pseudobulk_HSC",
+            "id_type": "cmd_dataset",
+            "sha256": "01fa7b159e181b67458c775f9a3cf1debb1cdec24b8c699148678c6d6f91d6c1",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 501588
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "FNIH_Liver_scRNA_v1_Pseudobulk_Schwann",
+            "id_type": "cmd_dataset",
+            "sha256": "01fa7b159e181b67458c775f9a3cf1debb1cdec24b8c699148678c6d6f91d6c1",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 501588
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "FNIH_Liver_scRNA_v1_Pseudobulk_Endothelial",
+            "id_type": "cmd_dataset",
+            "sha256": "01fa7b159e181b67458c775f9a3cf1debb1cdec24b8c699148678c6d6f91d6c1",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 501588
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "FNIH_Liver_scRNA_v1_Pseudobulk_Cholangiocyte",
+            "id_type": "cmd_dataset",
+            "sha256": "01fa7b159e181b67458c775f9a3cf1debb1cdec24b8c699148678c6d6f91d6c1",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 501588
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "FNIH_Liver_scRNA_v1_Pseudobulk_Hepatocytes",
+            "id_type": "cmd_dataset",
+            "sha256": "01fa7b159e181b67458c775f9a3cf1debb1cdec24b8c699148678c6d6f91d6c1",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 501588
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "Abdominal/Central",
+            "source_encoding": null,
+            "harmonized_value": "abdominal or central",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Peripheral",
+            "source_encoding": null,
+            "harmonized_value": "peripheral",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Generalized",
+            "source_encoding": null,
+            "harmonized_value": "generalized",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Normal",
+            "source_encoding": null,
+            "harmonized_value": "normal",
+            "harmonized_encoding": null,
+            "note": null
+          }
+        ]
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "fat_distribution"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "observation",
+      "defining_concept_id": {
+        "id": 4093857,
+        "name": "Distribution of body fat",
+        "domain": "Observation",
+        "target_field": "observation_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": [
+        {
+          "harmonized_value": "abdominal or central",
+          "value_as_string": "abdominal or central"
+        },
+        {
+          "harmonized_value": "peripheral",
+          "value_as_string": "peripheral",
+          "value_as_concept_id": {
+            "id": 21498362,
+            "name": "Peripheral"
+          }
+        },
+        {
+          "harmonized_value": "generalized",
+          "value_as_string": "generalized",
+          "value_as_concept_id": {
+            "id": 45881091,
+            "name": "Generalized"
+          }
+        },
+        {
+          "harmonized_value": "normal",
+          "value_as_concept_id": {
+            "id": 45884153,
+            "name": "Normal"
+          },
+          "value_as_string": "normal"
+        }
+      ]
+    }
+  ]
+}

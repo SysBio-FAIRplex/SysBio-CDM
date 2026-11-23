@@ -1,0 +1,129 @@
+{
+  "registry_id": 100253,
+  "schema_version": "harmonized-element/2.7",
+  "registry_label": "hemolysis_interference_index_serum",
+  "harmonized_element_curie": "LOINC:46424-8",
+  "definition": "Heme index, an indication of hemolysis in the sample",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-CMD"
+  ],
+  "harmonized_values": [
+    "0",
+    "1"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "Heme index",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [
+        "OP-BC AU5812-Plasma Serum-KPMP QC Data file Information-2022.v2.docx"
+      ],
+      "src_definition": "Heme index, an indication of hemolysis in the sample.",
+      "layer_1_etl": {
+        "value_form": "continuous",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "040b8349-b726-4012-b7fc-243c48bd2799",
+            "id_type": "kpmp",
+            "sha256": "a6bb002d606562e765d30489cb3b285a1f47a6b9e4479734181edfabe8c605ff",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 501717
+          }
+        ],
+        "value_map": []
+      },
+      "applies_to_rows": {
+        "require": "all",
+        "action": "include",
+        "conditions": [
+          {
+            "column": "Sample Type",
+            "token": "Serum"
+          }
+        ]
+      },
+      "loading_grain": {
+        "anchor": "specimen_id",
+        "entity": "specimen",
+        "attribute": "hemolysis_interference_index_serum"
+      }
+    },
+    {
+      "source_label": "Heme index",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [
+        "OP-BC AU5812-Serum and Plasma-KPMP QC Data file Information-2024.docx"
+      ],
+      "src_definition": "Heme index , an indication of hemolysis in the sample.",
+      "layer_1_etl": {
+        "value_form": "continuous",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "1bc63a62-9950-4395-ae9f-06d7e105ec8a",
+            "id_type": "kpmp",
+            "sha256": "d141b31bda63020b7c1d15e8069dbf264a9359cd485e3af93ea5e04bce28b953",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 501718
+          }
+        ],
+        "value_map": []
+      },
+      "applies_to_rows": {
+        "require": "all",
+        "action": "include",
+        "conditions": [
+          {
+            "column": "Sample Type",
+            "token": "Serum"
+          }
+        ]
+      },
+      "loading_grain": {
+        "anchor": "specimen_id",
+        "entity": "specimen",
+        "attribute": "hemolysis_interference_index_serum"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "measurement",
+      "defining_concept_id": {
+        "id": 3052851,
+        "name": "Hemolysis interference index of Serum or Plasma",
+        "domain": "Measurement",
+        "target_field": "measurement_concept_id",
+        "vocabulary_id": "LOINC",
+        "concept_code": "46424-8",
+        "vocabulary_version": "LOINC 2.78"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map",
+        "specimen_id": "staging.specimen_map"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": []
+    }
+  ]
+}

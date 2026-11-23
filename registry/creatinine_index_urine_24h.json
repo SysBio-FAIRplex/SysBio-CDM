@@ -1,0 +1,147 @@
+{
+  "registry_id": 100178,
+  "schema_version": "harmonized-element/2.7",
+  "registry_label": "creatinine_index_urine_24h",
+  "harmonized_element_curie": "LOINC:35654-3",
+  "definition": "Corrected Creatinine Index (milligram/kilogram/day) Calculation of urine creatinine (mg/day) with urine creatinine (mg/dL) and total hours, and then calculated creatinine index with weight (kg) (controlled access clinical data)",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-CMD"
+  ],
+  "harmonized_values": [],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "Creatinine Index(mg/kg/day)",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [
+        "OP-BC AU5812-Urine-KPMP QC Data file Information-2022.docx"
+      ],
+      "src_definition": "",
+      "layer_1_etl": {
+        "value_form": "continuous",
+        "datatype": "float",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "3e6899d9-6934-4630-b44b-d62864861dab",
+            "id_type": "kpmp",
+            "sha256": "fa592c5aa9f950f549da541830f7517e14999cfbf424ff93845750d08eecc8b2",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 501378
+          }
+        ],
+        "value_map": [],
+        "unit": "mg/kg/day"
+      },
+      "loading_grain": {
+        "anchor": "specimen_id",
+        "entity": "specimen",
+        "attribute": "creatinine_index_urine_24h"
+      }
+    },
+    {
+      "source_label": "Creatinine Index (mg/kg/day)",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [
+        "OP-BC AU5812-Urine-KPMP QC Data file Information-2024.docx"
+      ],
+      "src_definition": "",
+      "layer_1_etl": {
+        "value_form": "continuous",
+        "datatype": "float",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "b6ff159a-cbe1-42e2-894b-e3f5053c2e18",
+            "id_type": "kpmp",
+            "sha256": "1e69fd4ccdc3a6e7765b7414b3d3016053b35adfcfcb8595cd9145fcd44d9ae7",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 501379
+          }
+        ],
+        "value_map": [],
+        "unit": "mg/kg/day"
+      },
+      "loading_grain": {
+        "anchor": "specimen_id",
+        "entity": "specimen",
+        "attribute": "creatinine_index_urine_24h"
+      }
+    },
+    {
+      "source_label": "Creatinine Index (mg/kg/day)",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [
+        "OP-BC AU680-Urine-KPMP QC Data file Information-2022.docx"
+      ],
+      "src_definition": "",
+      "layer_1_etl": {
+        "value_form": "continuous",
+        "datatype": "float",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "55681d72-ddfe-45a8-b0ff-ee9a002e9710",
+            "id_type": "kpmp",
+            "sha256": "2775aa56c9703ec4ce5256fcd3642fcbb5615424e6e72fa843c8537cd101bb8a",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 501380
+          }
+        ],
+        "value_map": [],
+        "unit": "mg/kg/day"
+      },
+      "loading_grain": {
+        "anchor": "specimen_id",
+        "entity": "specimen",
+        "attribute": "creatinine_index_urine_24h"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "measurement",
+      "defining_concept_id": {
+        "id": 3036094,
+        "name": "Creatinine/Body weight [Mass/kg/time] in 24 hour Urine",
+        "domain": "Measurement",
+        "target_field": "measurement_concept_id",
+        "vocabulary_id": "LOINC",
+        "concept_code": "35654-3",
+        "vocabulary_version": "LOINC 2.78"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map",
+        "specimen_id": "staging.specimen_map"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": [
+        {
+          "harmonized_value": "<any in range>",
+          "value_as_number": "<value>"
+        }
+      ]
+    }
+  ]
+}

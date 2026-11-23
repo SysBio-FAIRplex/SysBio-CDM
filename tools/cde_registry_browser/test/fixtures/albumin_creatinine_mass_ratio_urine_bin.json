@@ -1,0 +1,49 @@
+{
+  "schema_version": "harmonized-element/2.7",
+  "registry_id": "",
+  "registry_label": "albumin_creatinine_mass_ratio_urine_bin",
+  "harmonized_element_curie": "LOINC:9318-7",
+  "definition": "uACR (mg/g cr) (`uacr_most_recentC`, section Laboratory Results)",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-CMD"
+  ],
+  "harmonized_values": [
+    "[0,30)",
+    "[1000,inf)",
+    "[30,300)",
+    "[500,1000)",
+    "[300,500)"
+  ],
+  "loading_grain": {
+    "anchor": "participant_id",
+    "entity": "baseline_clinical_labs",
+    "attribute": "albumin_creatinine_mass_ratio_urine_bin"
+  },
+  "harmonized_with": [],
+  "links": [],
+  "sources": [],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "measurement",
+      "defining_concept_id": {
+        "id": 3034485,
+        "name": "Albumin/Creatinine [Mass Ratio] in Urine, binned",
+        "domain": "Measurement",
+        "target_field": "measurement_concept_id",
+        "vocabulary_id": "LOINC",
+        "concept_code": "9318-7",
+        "vocabulary_version": "LOINC 2.78"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": []
+    }
+  ]
+}

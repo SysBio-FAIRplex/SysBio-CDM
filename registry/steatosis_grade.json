@@ -1,0 +1,435 @@
+{
+  "registry_id": 100704,
+  "schema_version": "harmonized-element/2.5",
+  "registry_label": "steatosis_grade",
+  "definition": "Histological grade of hepatic steatosis.",
+  "one_per": [
+    "person"
+  ],
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-CMD"
+  ],
+  "harmonized_values": [
+    "0",
+    "1",
+    "2",
+    "3"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "Steatosis.grade",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "continuous",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "FNIH_Liver_scRNA_v1_Pseudobulk_Hepatocytes",
+            "id_type": "cmd_dataset",
+            "sha256": "01fa7b159e181b67458c775f9a3cf1debb1cdec24b8c699148678c6d6f91d6c1",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 505339
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "FNIH_Liver_scRNA_v1_Pseudobulk_Hepatocytes",
+            "id_type": "cmd_dataset",
+            "sha256": "01fa7b159e181b67458c775f9a3cf1debb1cdec24b8c699148678c6d6f91d6c1",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 505339
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "FNIH_Liver_scRNA_v1_Pseudobulk_Hepatocytes",
+            "id_type": "cmd_dataset",
+            "sha256": "01fa7b159e181b67458c775f9a3cf1debb1cdec24b8c699148678c6d6f91d6c1",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 505339
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "FNIH_Liver_scRNA_v1_Pseudobulk_Hepatocytes",
+            "id_type": "cmd_dataset",
+            "sha256": "01fa7b159e181b67458c775f9a3cf1debb1cdec24b8c699148678c6d6f91d6c1",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 505339
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "FNIH_Liver_scRNA_v1_Pseudobulk_Hepatocytes",
+            "id_type": "cmd_dataset",
+            "sha256": "01fa7b159e181b67458c775f9a3cf1debb1cdec24b8c699148678c6d6f91d6c1",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 505339
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "FNIH_Liver_scRNA_v1_Pseudobulk_Hepatocytes",
+            "id_type": "cmd_dataset",
+            "sha256": "01fa7b159e181b67458c775f9a3cf1debb1cdec24b8c699148678c6d6f91d6c1",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 505339
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "FNIH_Liver_scRNA_v1_Pseudobulk_Hepatocytes",
+            "id_type": "cmd_dataset",
+            "sha256": "01fa7b159e181b67458c775f9a3cf1debb1cdec24b8c699148678c6d6f91d6c1",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 505339
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "FNIH_Liver_scRNA_v1_Pseudobulk_Hepatocytes",
+            "id_type": "cmd_dataset",
+            "sha256": "01fa7b159e181b67458c775f9a3cf1debb1cdec24b8c699148678c6d6f91d6c1",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 505339
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "FNIH_Liver_scRNA_v1_Pseudobulk_Hepatocytes",
+            "id_type": "cmd_dataset",
+            "sha256": "01fa7b159e181b67458c775f9a3cf1debb1cdec24b8c699148678c6d6f91d6c1",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 505339
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "FNIH_Liver_scRNA_v1_Pseudobulk_Hepatocytes",
+            "id_type": "cmd_dataset",
+            "sha256": "01fa7b159e181b67458c775f9a3cf1debb1cdec24b8c699148678c6d6f91d6c1",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 505339
+          }
+        ],
+        "value_map": []
+      }
+    },
+    {
+      "source_label": "Steatosis",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layout": {
+        "file_type": "xlsx",
+        "sheet": "STable 1"
+      },
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "562ecf93c8fc895b43d047e96662ee7ac8cfda539e69a6aa54514a62995fbb9e",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 505340
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "0",
+            "source_encoding": null,
+            "harmonized_value": "0",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "0.1",
+            "source_encoding": null,
+            "harmonized_value": "1",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "0.15",
+            "source_encoding": null,
+            "harmonized_value": "1",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "0.2",
+            "source_encoding": null,
+            "harmonized_value": "1",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "0.3",
+            "source_encoding": null,
+            "harmonized_value": "1",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "0.4",
+            "source_encoding": null,
+            "harmonized_value": "2",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "0.45",
+            "source_encoding": null,
+            "harmonized_value": "2",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "0.5",
+            "source_encoding": null,
+            "harmonized_value": "2",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "0.6",
+            "source_encoding": null,
+            "harmonized_value": "2",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "0.7",
+            "source_encoding": null,
+            "harmonized_value": "3",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "0.8",
+            "source_encoding": null,
+            "harmonized_value": "3",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "0.85",
+            "source_encoding": null,
+            "harmonized_value": "3",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "0.9",
+            "source_encoding": null,
+            "harmonized_value": "3",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "0.95",
+            "source_encoding": null,
+            "harmonized_value": "3",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "10",
+            "source_encoding": null,
+            "harmonized_value": "1",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "15",
+            "source_encoding": null,
+            "harmonized_value": "1",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "20-25%",
+            "source_encoding": null,
+            "harmonized_value": "1",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "25-30%",
+            "source_encoding": null,
+            "harmonized_value": "1",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "30",
+            "source_encoding": null,
+            "harmonized_value": "1",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "34-66%",
+            "source_encoding": null,
+            "harmonized_value": "2",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "40",
+            "source_encoding": null,
+            "harmonized_value": "2",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "45",
+            "source_encoding": null,
+            "harmonized_value": "2",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "5-33%",
+            "source_encoding": null,
+            "harmonized_value": "1",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "6-10%",
+            "source_encoding": null,
+            "harmonized_value": "1",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "60",
+            "source_encoding": null,
+            "harmonized_value": "2",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "70",
+            "source_encoding": null,
+            "harmonized_value": "3",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "8",
+            "source_encoding": null,
+            "harmonized_value": "1",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "80",
+            "source_encoding": null,
+            "harmonized_value": "3",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "90",
+            "source_encoding": null,
+            "harmonized_value": "3",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "<5%",
+            "source_encoding": null,
+            "harmonized_value": "0",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": ">66%",
+            "source_encoding": null,
+            "harmonized_value": "3",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "less than 5%",
+            "source_encoding": null,
+            "harmonized_value": "0",
+            "harmonized_encoding": null,
+            "note": null
+          }
+        ]
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "observation",
+      "defining_concept_id": {
+        "id": 1001762,
+        "name": "Liver steatosis grade in Serum or Plasma Qualitative",
+        "domain": "Observation",
+        "target_field": "observation_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": [
+        {
+          "harmonized_value": "0",
+          "value_as_number": "0",
+          "value_as_string": "<5% hepatocytes affected"
+        },
+        {
+          "harmonized_value": "1",
+          "value_as_number": "1",
+          "value_as_string": "5-33%"
+        },
+        {
+          "harmonized_value": "2",
+          "value_as_number": "2",
+          "value_as_string": "34-66%"
+        },
+        {
+          "harmonized_value": "3",
+          "value_as_number": "3",
+          "value_as_string": ">66%"
+        }
+      ]
+    }
+  ]
+}

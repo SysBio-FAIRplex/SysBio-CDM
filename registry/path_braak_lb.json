@@ -1,0 +1,113 @@
+{
+  "registry_id": 100533,
+  "schema_version": "harmonized-element/2.5",
+  "registry_label": "path_braak_lb",
+  "definition": "BRAAK stage for Lewy body pathology",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-PD"
+  ],
+  "harmonized_values": [
+    "3",
+    "5",
+    "6",
+    "1",
+    "2",
+    "4",
+    "0"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "path_braak_lb",
+      "program": "AMP-PD",
+      "status": "approved",
+      "status_note": null,
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": "BRAAK stage for Lewy body pathology.",
+      "layer_1_etl": {
+        "value_form": "continuous",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "00c27eafd2a4bf105b6c5dad3cf551595c5aa80de9d91986c7895faf78c7067b",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 503248
+          }
+        ],
+        "value_map": [],
+        "missing_values": [
+          "NA"
+        ]
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "path_braak_lb"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "measurement",
+      "defining_concept_id": {
+        "id": 3190069,
+        "name": "Braak pathology staging for Lewy body progression in Parkinsons disease",
+        "domain": "Measurement",
+        "target_field": "measurement_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": [
+        {
+          "harmonized_value": "3",
+          "value_as_number": 3,
+          "value_as_string": "3"
+        },
+        {
+          "harmonized_value": "5",
+          "value_as_number": 5,
+          "value_as_string": "5"
+        },
+        {
+          "harmonized_value": "6",
+          "value_as_number": 6,
+          "value_as_string": "6"
+        },
+        {
+          "harmonized_value": "1",
+          "value_as_number": 1,
+          "value_as_string": "1"
+        },
+        {
+          "harmonized_value": "2",
+          "value_as_number": 2,
+          "value_as_string": "2"
+        },
+        {
+          "harmonized_value": "4",
+          "value_as_number": 4,
+          "value_as_string": "4"
+        },
+        {
+          "harmonized_value": "0",
+          "value_as_number": 0,
+          "value_as_string": "0"
+        }
+      ]
+    }
+  ]
+}

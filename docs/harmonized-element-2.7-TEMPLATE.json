@@ -1,0 +1,314 @@
+{
+  "_template_notes": {
+    "what_this_is": "The reference TEMPLATE for a mapping file at harmonized-element/2.7. A mapping file is ONE element and carries BOTH layers: Layer 1 (source -> harmonized, under sources[]) and Layer 2 (harmonized -> CDM, under sysbio_etl and links). Every block and every field the schema allows is present here once, with its explanation in the _-prefixed key beside it. Values in <angle brackets> are placeholders describing what goes there. This file is not an element and is never loaded.",
+    "the_two_layers": "sources[].layer_1_etl.value_map is SOURCE SPELLING -> HARMONIZED VALUE, one block per contributing column of one pinned source. sysbio_etl is HARMONIZED VALUE -> CDM: a list of targets, one per kind of CDM row this element produces, each naming its table, its defining concept, the keys it hangs on and a value map that fans one harmonized value out to every CDM column of the row; links declares how rows of this element tie to rows of other elements. Layer 1's output is Layer 2's input; Layer 2 never reads a source file."
+  },
+  "schema_version": "harmonized-element/2.7",
+  "_schema_version": "Which template and reader apply. One version for the whole file: both layers travel together in one mapping file.",
+  "registry_id": null,
+  "_registry_id": "The element's minted registry id (integer). It is not the label.",
+  "registry_label": "<snake_case label, single underscores, under 50 characters>",
+  "_registry_label": "The element's column name in the Layer 1 tables and the name Layer 2 reads. 'label' ALWAYS means a column name. Lab measures follow the LOINC-derived grammar (component, property as plain words, system, time; the unit is never in the label).",
+  "role": "element",
+  "_role": "What this file is. 'element' (the default): a harmonized element that becomes a Layer 1 column and Layer 2 rows. 'lineage_blueprint': a file whose blocks read columns owned by other elements only to declare how specimens, libraries and files derive from one another; the loader uses its links and grain and never writes it as a column.",
+  "harmonized_element_curie": "<VOCAB:code, e.g. LOINC:35654-3, or null>",
+  "_harmonized_element_curie": "The element's Layer 1 vocabulary identity: the LOINC code (or other published code) chosen FIRST, from the source unit and material, with the label derived from it; verified Standard in the OMOP vocabulary before it is written. Distinct from the Layer 2 defining concept, which may differ.",
+  "definition": "<the definition>",
+  "_definition": "What the element means. The provider's own dictionary text where one source defines it (copied here from the block's src_definition); the LOINC long common name where no provider dictionary exists; harmonized prose only when the element spans programs or files. One plain sentence, no process notes. 'DRAFT - to be authored' marks a definition not yet written.",
+  "registry_etl_version": "<semver, e.g. 1.3.0>",
+  "registry_etl_version_date": "<YYYY-MM-DD>",
+  "_registry_etl_version": "The version of THIS element's mapping and the date it was set. Bumped on any change that alters the Layer 1 output.",
+  "programs_covered": [
+    "<AMP-CMD | AMP-PD | AMP-AD | AMP-RA-SLE>"
+  ],
+  "modality": "<clinical | scRNAseq | proteomics | wgs | ...>",
+  "_programs_modality": "Inventory. programs_covered: every AMP program a source block below belongs to. modality: the data modality the element describes.",
+  "harmonized_values": [
+    "<every harmonized value the value maps below produce, or the token '<any in range>' for a continuous measure>"
+  ],
+  "_harmonized_values": "The element's declared value domain: what every source block's value_map normalises onto. Check: every value_map.harmonized_value is in this list. Enumerated values, never free text. Spelling rules: full words, lower-case, no abbreviations (alzheimers disease, not AD) unless an ontology term requires its own form; kit and instrument values are the vendor's product names; every control or healthy-reference spelling collapses to the one value 'control'; disease labels never collapse into one another; binned values are half-open bracket intervals such as '[60,70)'.",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "<qc_flag | collapse_if_equal | prefer:<source_label>>",
+  "_agreement": "How several source blocks reconcile when they produce a value for the same key (same anchor identifier, same element). must_agree: they must reconcile; leaving it off is a silent tie-break (the first block read wins). null_is_agreement: a blank from one block is not a disagreement. on_conflict: what happens when they still differ. Precedence between blocks is declared on the blocks (fallback nesting, or the precedence integer), not here. Grain is declared on every source block, never for the whole file.",
+  "harmonized_with": [
+    "<registry_label of another element this one was merged with, if any>"
+  ],
+  "_harmonized_with": "Elements that answer the same question become ONE file carrying every source block of both; this records the merge. Harmonization is about purpose, never about value sets that look alike.",
+  "sources": [
+    {
+      "_block": "ONE SOURCE BLOCK = one column of one pinned source. A different file, a different value set or a different program is a separate block. Every block carries its own grain. Blocks reconcile at the harmonized vocabulary, never in a shared value map.",
+      "source_name": "<a short handle for this block, e.g. kpmp_open_access_clinical>",
+      "_source_name": "A handle so a note, a link or a fallback can point at this block. Optional.",
+      "program": "<the AMP program this source belongs to>",
+      "study": "<the study or cohort within the program, e.g. KPMP>",
+      "description": "<what this source is: the file, the sheet, the provider, the version>",
+      "source_label": "<the provider's column label, exactly as it appears in the file>",
+      "_source_label": "ONE column per source block, never a list of different columns. A value column and its code twin (rbd05_hurt_bed_partner and code_rbd05_hurt_bed_partner) are ONE label: they represent the same fact and the same instance of it, so the block reads the value column and the value map carries the code spelling in source_encoding. Where one file carries two conventions in one column, applies_to_rows splits them into two blocks.",
+      "status": "<draft | pending | approved | rejected>",
+      "status_note": "<free prose, not read by the ETL>",
+      "reviewed_by": null,
+      "reviewed_on": null,
+      "manual_approval": false,
+      "_review": "Review state of this block. A generated block is 'draft' until a person approves it.",
+      "dictionary": {
+        "file_name": "<the provider's data dictionary file, inside the package where the package carries one>",
+        "checksum": "<its sha256>",
+        "sourced_from": "<where the dictionary was obtained: the package zip, the portal page, the schema repository>"
+      },
+      "src_dictionary": [
+        "<the dictionary entry that defines this column, as <file>::<table>::<field> or the document's own label>"
+      ],
+      "src_definition": "<the provider's definition text, verbatim>",
+      "_dictionary": "THE PROVIDER'S OWN DESCRIPTION OF THIS COLUMN. dictionary pins the dictionary document; src_dictionary names the entry (or entries) in it; src_definition is the text, verbatim, including the provider's errors (annotated in a note, never silently corrected). Every document inside a package is opened before a column is called undocumented; instrument packages often carry a label-and-definition table in a separate document.",
+      "layout": {
+        "file_type": "<csv | tsv | xlsx | jsonl | rds | soft | sidecar | fields | ...>",
+        "sheet": "<workbook sheet name, when the file is a workbook>",
+        "table": "<table or record type within the file, when the file holds several>",
+        "header_row": "<1-based row holding the column names; absent = 1>",
+        "data_start": "<1-based first data row; absent = the row after the header>"
+      },
+      "_layout": "How to find the column inside the file. file_type names the reader: csv, tsv, xlsx, jsonl, rds, soft (GEO family file), sidecar (a JSON file of dataset-level constants), fields (a JSON file of per-record fields). header_row and data_start are stated only when a workbook or report does not start at row 1 (a title block above the header, notes between header and data).",
+      "loading_grain": {
+        "anchor": "<the identifier minted by the procedure that produced the thing: participant_id | specimen_id | library_id | assay_id | file_id | dataset_id>",
+        "entity": "<the node the identifier names, which is the Layer 1 table the value lands on: participant | participant_visit | specimen | library | assay | file | dataset>",
+        "attribute": "<this element's registry_label>"
+      },
+      "_loading_grain": "THE GRAIN, on EVERY source block, never for the whole file. A value is a fact about one thing, and the grain is that thing, named by the identifier minted by the procedure that produced it. Enrollment mints participant_id (sex, enrollment category). A visit mints the pair participant_id and visit name as the study writes it (scores, questionnaire answers); the key is the visit NAME, and months since baseline is an attribute, never the key. The harvest or a collection mints specimen_id (how the tissue was obtained, the organ, the site, a urine or serum sample and its analytes); every specimen, harvested or derived, is a node on one chain, each node minted by the procedure that produced it and pointing at its parent. Processing mints library_id: a library is a DERIVED specimen on that chain (suspension type, chemistry kit), and counts per cell type are attributes of the library. A sequencing run mints assay_id: the assay record (platform, read length, run facts) joins its libraries through assay_to_specimen and its outputs through assay_input_file. Analysis mints file_id. A fact stated once for a whole dataset (its reference genome, its sequencing site) has anchor dataset_id and entity dataset. entity names the node, which is the Layer 1 table the value lands on. attribute is the element. The same element may land on two tables from two blocks (eGFR: participant_visit from the clinical file, specimen from the serum workbooks). A unit, a CURIE and an encoding land beside the attribute as <label>_unit, <label>_curie, <label>_code. The grain here must agree with anchored_to on the Layer 2 target that reads this block. KEYS: only the four identity elements (participant_id, specimen_id, library_id, visit_name) declare key columns; the loader keys every pinned file by them, a file carrying both a library and a specimen identifier by the library (the specimen is then a column, its parent). Any other identifier-form element (a run name, an accession, a file id) is an attribute, never a key. A header column of a loaded file that no block reads is listed by the loader's coverage audit.",
+      "precedence": null,
+      "_precedence": "Order among blocks of this element that can produce a value for the same key, as an integer: 1 is read first, a higher number fills only where every lower one is blank. The granular source wins and the broad classification fills the gaps. Equivalent to nesting a lower-precedence block in fallback; one of the two forms is used per element, never both. Blocks with the same precedence reconcile under must_agree.",
+      "applies_to_rows": {
+        "require": "<all | any>",
+        "action": "<include | exclude | flag>",
+        "conditions": [
+          {
+            "column": "<a column of THIS source>",
+            "match": "<equals | in>",
+            "token": "<the value, a list of values when match is in, or an inequality expression when inequality is true>",
+            "inequality": false,
+            "token_position": null,
+            "delimiters": []
+          }
+        ]
+      },
+      "_applies_to_rows": "WHICH ROWS this block reads. Declared on the source block because it selects rows before Layer 1 runs. require: how several conditions combine. action: include the matching rows, exclude them, or flag them so the data manager sees when a required combination is not met. A condition tests a column of this source; token is compared whole (delimiters [] = the whole cell is one token) or at token_position after splitting on the declared delimiters (no default); deterministic, never pattern matching. inequality true means token holds an expression such as '>= 10' evaluated against the column value (an age column whose values under 10 are decade codes to be dropped). Example: 'Sample Type' equals Serum to read only the serum rows of an analyser workbook. A condition cannot test another file's column; that is a join declared in links. Absent means ALL rows. Older files carry the conditions flat on applies_to_rows or as a list; the loader reads those shapes too, new files use this one.",
+      "extract": [
+        {
+          "label": "<the source column holding a value embedded in a longer string; defaults to source_label>",
+          "delimiters": [
+            "<the characters to split on>"
+          ],
+          "token_position": 0,
+          "token": null,
+          "into": "<the Layer 1 column this piece becomes>"
+        }
+      ],
+      "_extract": "DETERMINISTIC EXTRACTION, one source field yielding several Layer 1 columns: '21 years old' -> age (piece 0) and age_unit (piece 1); 'GRCh38-2020-A' -> reference genome (piece 0) and annotation release (pieces 1-2). A piece is the token at a known position after splitting on declared delimiters, never pattern matching; into names the Layer 1 column the piece becomes, so several entries distribute one field into several columns. token is reserved and not yet defined. STATUS: declared here; no loader reads extract yet and no file carries it; the token mechanics that ARE implemented are the applies_to_rows conditions above.",
+      "layer_1_etl": {
+        "value_form": "<ordinal | nominal | continuous | text | identifier | date | binned>",
+        "datatype": "<integer | number | float | string | code | date | boolean>",
+        "_value_form_datatype": "value_form is decided from the provider's dictionary, never inferred from the values; datatype is copied from the provider's own type. value_form never decides whether a block has a value_map.",
+        "missing_values": [
+          "<sentinels this file uses, e.g. 99, -9, NA>"
+        ],
+        "_missing_values": "Cells thrown out BEFORE any parse or range check; unioned with the universal blanks, never replacing them.",
+        "range": {
+          "min": null,
+          "max": null
+        },
+        "_range": "The DICTIONARY's permissible range, continuous only; never the observed one. Out-of-range is reported as a finding, never dropped.",
+        "unit": "<the unit as the provider writes it, one spelling per element>",
+        "_unit": "The unit of this block's values (continuous blocks). Declared from the source, never flagged as missing when the source states it. Written beside the value as <label>_unit; the unit itself is never in the label and never its own element.",
+        "data_files": [
+          {
+            "file": "<bare provider file name, never a path>",
+            "source_id": "<the provider's accession for the file: a Synapse id, a CMDGA id, a repository accession; optional>",
+            "id_type": "<synapse | cmdga | cmd_dataset | zenodo | ...; optional>",
+            "sha256": "<sha256 of that file>",
+            "access_groups": [
+              "<the access group that may read this file>"
+            ],
+            "sheet": "<workbook sheet, when the file is a workbook and the block reads one sheet>"
+          }
+        ],
+        "_data_files": "THE FILE PIN. One object per file; a family of files (one logical table split across many same-schema files, e.g. the per-sample metadata workbooks) is many objects. A pin is identity only: file name, accession, hash, access group; no notes ride on it. Resolution is sha256 FIRST, accession when there is no hash, bare file name last. Only original provider files are pinned; when a provider re-issues a file the later version is pinned and the earlier one archived. In a public copy of the registry the file name may be withheld; the hash and the accession still identify the file.",
+        "value_map": [
+          {
+            "source_value": "<the spelling in the file>",
+            "source_encoding": "<the code the file pairs with it, or null>",
+            "harmonized_value": "<the harmonized value it means: one of harmonized_values>",
+            "harmonized_encoding": "<the harmonized code, only where a code system exists (instrument scores); never minted; or null>",
+            "harmonized_ord": null,
+            "harmonized_curie": "<the ontology id that RIDES this value, e.g. CL:0002306, or null>",
+            "interval": {
+              "low": null,
+              "high": null,
+              "low_inclusive": true,
+              "high_inclusive": false
+            },
+            "note": "<why, counts, provider note>"
+          }
+        ],
+        "_value_map": "THE VALUE MAP: one line per distinct source spelling, mapped directly to a harmonized string; there is no intermediate token. A pass-through is an entry whose harmonized_value equals its source_value; there is no other pass-through mechanism. harmonized_encoding is case by case, never applied to every element. harmonized_ord orders an ordinal set. harmonized_curie is the entity-attribute rule: an ontology id is an attribute of the value and rides its entry, never its own block, never its own element; the emitter writes it to <label>_curie. CURIE columns are for anatomy, specimens, files and assays, not demographics. interval, on binned elements only, states the numeric bounds the bin covers so the bin can be checked against the number it came from. A continuous block has an empty value_map and a range instead. Every layer of every mapping file carries a value_map.",
+        "_dates": "Not a field. For value_form date no calendar date is written: the earliest date among the date elements across the cohort becomes the sentinel 1900-01-01 and every date is the sentinel plus the days after it. Source serials and strings are parsed by the loader."
+      },
+      "fallback": null,
+      "_fallback": "PRECEDENCE BY NESTING: a lower-precedence source for the same element is a complete source block nested here, used only where this block yields no value for the key. The nesting order is the precedence. The flat alternative is the precedence integer above; an element uses one form."
+    }
+  ],
+  "conflicts": [],
+  "_conflicts": "The log the loader writes when blocks disagree under on_conflict = qc_flag: one entry per key with the values each block produced. Authored empty.",
+  "load_id": "<a name for the load job this element's targets belong to, optional>",
+  "_load_id": "A name for the load job this element's targets are emitted in, so several elements emitted together can be named as one load in logs and provenance. STATUS: declared here; not read by any loader yet and no file carries it.",
+  "shape": "<a named requirement profile, optional>",
+  "_shape": "A named requirement profile stating which blocks an element of a given kind must carry (an omics specimen element must have a specimen target and a links entry; a clinical measure must have a unit). STATUS: declared here; nothing enforces it yet and no file carries it; targets are decided case by case.",
+  "_sysbio_etl": "Layer 2. A LIST of targets; the single entry below is the annotated example of one OMOP-row target, with every field the schema allows (see _layer_2 inside it). Two other target forms exist. EXTENSION TABLE: {\"target_id\": \"\", \"table\": \"assay\" | \"file\", \"column\": \"<column of that table>\", \"anchored_to\": {...}} for library, sequencing and file technical facts that no OMOP table holds (platform, read length, yields, software versions, file format): the table and column name the landing, no OMOP concept is required, and the row joins its specimens through assay_to_specimen and its outputs through assay_input_file. RIDES PARENT: {\"target_id\": \"\", \"table\": \"parent\", \"parent_label\": \"<another element>\", \"column\": \"unit_concept_id\" | \"value_as_concept_id\" | \"value_source_value\" | ...} for a unit, an ontology identifier or an ontology label that stays its own Layer 1 column but, at Layer 2, is written into a column of the parent element's row rather than a row of its own. COMPANIONS land nothing of their own at Layer 2: a unit rides its parent's row as unit_concept_id; an ontology identifier or label stays a Layer 1 column. DEMOGRAPHIC facts (sex, race, ethnicity, ancestry, age) are observation rows whatever their concept's domain; the person table carries only the subject identifier as the anchor. A yes/no SYMPTOM keeps its observation row (the answer either way) beside a condition_occurrence row on the same concept that fires only on the affirmative value. The anchored_to of a row names every node its blocks sit on: person_id always, visit_occurrence_id for visit facts, specimen_id for specimen and library facts.",
+  "sysbio_etl": [
+    {
+      "_layer_2": "LAYER 2: harmonized value -> CDM. sysbio_etl is a LIST OF TARGETS. One target = one kind of CDM row this element produces: rows in one CDM table, defined by one concept, keyed the same way. An element that produces rows in several tables, or two kinds of row in one table, has several targets. A target reads this element's Layer 1 column, and through {column} placeholders other Layer 1 columns of the same row; it never reads a source file. This is the only place an OMOP concept id appears. Everything this element writes to the CDM is declared in its targets or in links.",
+      "target_id": "<a name for this target, unique within this file: procedure_biopsy | specimen_core | identifier_initial_sample | observation_item_score | ...>",
+      "_target_id": "WHAT IT NAMES. Exactly one target: one kind of CDM row this element produces. sample_acquisition produces three kinds of row and so has three targets: procedure_biopsy, the harvest written as a procedure_occurrence row whose concept is the specific procedure (needle biopsy of kidney); specimen_core, the harvested tissue written as a specimen row whose concept is the specific specimen (specimen from kidney obtained by core needle biopsy); identifier_initial_sample, the specimen's identifier row in measurement, the row that joins the procedure to the specimen because OMOP has no column that does. WHY IT EXISTS. (1) Reference: a record_attributes entry, a links entry, a review comment or a test has to say WHICH target it is about, and 'the measurement one' is ambiguous as soon as an element has two measurement targets of different meaning. (2) Identity across edits: a target's position in the list changes when targets are added or reordered; its name does not, so a reference survives the edit. (3) Reading: a reviewer sees what each row kind is for without decoding the concept. HOW IT IS FORMED. Unique within this file. Descriptive words joined by underscores that say what the row IS, not where it goes. Never a bare number; never reused for a different target after one is removed; never changed once a note or another file points at it. WHAT IT IS NOT. Not a CDM key: the CDM mints its own integer ids at load time and they never appear in a mapping file. Not the registry id or label. Not a concept. Never written into any CDM column.",
+      "table": "<CDM table this target writes: measurement | observation | specimen | procedure_occurrence | condition_occurrence | person | ...>",
+      "_table": "The one CDM table this target's rows go into. One target, one table; a second table is a second target. Every value_map key of this target must be a column of this table.",
+      "input": {
+        "element": "self | <registry_label@registry_etl_version>",
+        "hash": "<sha256 of that element's Layer 1 OUTPUT table>"
+      },
+      "_input": "WHICH LAYER 1 OUTPUT this target reads, pinned. Default, and the only case in use today: 'self', this element's own Layer 1 column. Declared form: the element as registry_label@registry_etl_version plus the sha256 of that element's Layer 1 OUTPUT TABLE - not of its mapping file and not of a source file; source files are pinned on the source blocks. Purpose: when Layer 1 is re-run and its output changes, a Layer 2 load still carrying the old hash fails loudly instead of emitting from stale values. STATUS: declared here; no loader reads it yet and no file carries it; a target without it reads self.",
+      "defining_concept_id": {
+        "id": null,
+        "name": "<concept name as in the vocabulary>",
+        "domain": "<the concept's domain_id: Measurement | Observation | Specimen | Procedure | ...>",
+        "target_field": "<the CDM concept column it fills: measurement_concept_id | observation_concept_id | specimen_concept_id | procedure_concept_id>",
+        "vocabulary_id": "<LOINC | SNOMED | ..., optional>",
+        "concept_code": "<the vocabulary's own code, optional>",
+        "vocabulary_version": "<e.g. LOINC 2.78, optional>"
+      },
+      "_defining_concept_id": "The concept that says WHAT this row is, written to target_field on every row of the target. RULE: the concept's domain must match the table. A concept written to measurement_concept_id has domain Measurement; to observation_concept_id, Observation; to specimen_concept_id, Specimen; to procedure_concept_id, Procedure. A row whose concept domain disagrees with its table asserts one kind of fact while sitting in the table for another, and nothing downstream reconciles the two; this outranks any specific concept anyone has named. RULE: Standard concepts only. RULE: chosen by granularity - the most specific statement that is true of every row of the target. When the specific concept varies with the value (the specimen concept differs by how the specimen was obtained), this field holds the common parent and each value_map entry writes the specific concept into the same column; when it varies over a vocabulary branch rather than an enumerated list, omop_value_set lists the allowed concepts. domain is written here, not looked up at load time, so the domain rule can be checked by reading the file. vocabulary_id, concept_code and vocabulary_version are optional provenance of the concept.",
+      "anchored_to": {
+        "person_id": "staging.person_map",
+        "visit_occurrence_id": "cdm.visit_occurrence",
+        "specimen_id": "staging.specimen_map"
+      },
+      "_anchored_to": "THE KEYS this row hangs on, and where each is resolved: CDM key column -> the table or map that supplies its value. person_id on every target, resolved through the participant identity map. visit_occurrence_id when the fact belongs to a visit, resolved from the visit table by participant and visit name as the study writes it. specimen_id when the fact belongs to a specimen, resolved through the specimen map. This is the Layer 2 statement of grain: person_id alone = one row per participant; person_id and visit_occurrence_id = one row per participant per visit; with specimen_id = one row per specimen. It must agree with the loading_grain declared on the source blocks that feed this target; when they disagree the file is wrong, not the data. The key values are CDM primary keys that exist only after load, so the loader resolves them; the emitter never guesses them.",
+      "grain": {
+        "group_by": [
+          "<Layer 1 columns the input rows collapse on - only when aggregating>"
+        ]
+      },
+      "_grain": "AGGREGATION, when this target collapses several Layer 1 rows into one CDM row. group_by lists the Layer 1 columns the input rows collapse on; the collapsed values are produced by emits entries with a measure. The case it exists for: per-cell rows collapsing to one row per library and cell type, with the count as the value. Absent or empty = one Layer 1 row in, one CDM row out, which is every target in use today. STATUS: declared here; no loader reads it yet; the aggregation done so far was done in code, which this field exists to replace with a declaration.",
+      "source_value": "<raw>",
+      "_source_value": "What the table's *_source_value column receives (measurement_source_value, observation_source_value, procedure_source_value, specimen_source_value). '<raw>' = the original source string exactly as read from the file, the normal case. A literal = that literal on every row. Absent = the column stays empty.",
+      "qualifier_concept_id": {
+        "id": null,
+        "name": "<concept name>"
+      },
+      "_qualifier_concept_id": "A qualifier written on EVERY row of this target: the condition the whole target is about (an element whose every value describes the prodromal phase). A qualifier that changes with the value goes on the value_map entry instead, never here.",
+      "omop_value_set": [
+        {
+          "concept_id": null,
+          "concept_name": "<concept name>"
+        }
+      ],
+      "_omop_value_set": "The closed set of Standard concepts a concept column of this target may take when its values come from a vocabulary branch rather than an enumerated value_map (every Brodmann area concept for anatomic_site_concept_id). Listed in full so the emitter can refuse any concept outside it. Paired with a record_attributes entry of role 'attribute' naming the column the set fills.",
+      "record_attributes": [
+        {
+          "role": "<derivation | scan | medication_state | qualifier | attribute>",
+          "link_id": "<a links[].link_id, when the attribute is a link>",
+          "column": "<a CDM column of this target, when the attribute is about a column>",
+          "status": "<proposed | draft | active | approved>",
+          "note": ""
+        }
+      ],
+      "_record_attributes": "Facts about the TARGET as a whole, as opposed to facts about one value. Each entry has a role and either a link_id (the fact is a link to another row; see links) or a column (the fact is about one CDM column of this target). Roles in use: 'derivation', with a link_id - this target's rows are derived from, or feed, the rows of another target (an item score and its total; a derived specimen and its parent). 'scan' and 'medication_state', with a link_id - the linked row is the CONTEXT under which this row's fact was produced (the imaging procedure an interpretation reads; the on-or-off-medication state a motor score was measured in), made a queryable row instead of a column. 'qualifier' - the target as a whole is qualified and the qualifier concepts sit on the value_map entries. 'attribute', with a column - that column is filled from omop_value_set or from a placeholder rather than from the value_map. status is the review state of the attribute; note is free text.",
+      "value_map": [
+        {
+          "harmonized_value": "<a harmonized value of this element, or '<any in range>' for a continuous measure>",
+          "value_as_number": "<a number, or '<value>' = the harmonized value itself as a number>",
+          "value_as_string": "<the string written to value_as_string>",
+          "value_as_concept_id": {
+            "id": null,
+            "name": "<concept name>",
+            "domain": "<optional>",
+            "vocabulary": "<optional>"
+          },
+          "qualifier_concept_id": {
+            "id": null,
+            "name": "<concept name>"
+          },
+          "unit_concept_id": {
+            "id": null,
+            "name": "<unit concept name>"
+          },
+          "unit_source_value": "<the unit as the provider writes it>",
+          "specimen_concept_id": {
+            "id": null,
+            "name": "<specimen concept>"
+          },
+          "anatomic_site_concept_id": {
+            "id": null,
+            "name": "<anatomic site concept>"
+          },
+          "anatomic_site_source_value": "<source wording>",
+          "disease_status_concept_id": "<concept object, or '{column}'>",
+          "disease_status_source_value": "<source wording, or '{column}'>",
+          "specimen_source_id": "{<Layer 1 column holding the specimen identifier>}",
+          "specimen_source_value": "<source wording>",
+          "quantity": "{<Layer 1 column holding the amount>}",
+          "note": ""
+        }
+      ],
+      "_value_map": "THE FAN-OUT. One entry per harmonized value of this element's Layer 1 column. Each entry names EVERY CDM column of this target's row that the value fills, and what it fills it with. One harmonized value therefore lands in several columns at once: its concept in value_as_concept_id, its number in value_as_number, its words in value_as_string, its unit in unit_concept_id and unit_source_value, a qualifier in qualifier_concept_id; for a specimen row the specimen concept, the anatomic site and its source value, the disease status and its source value, the specimen source id and source value, and the quantity. The entry's keys ARE the CDM column names of the target's table; a key that is not a column of that table is an error. A concept is an object with id and name (domain and vocabulary optional) so the file reads without the vocabulary open. Three conventions: harmonized_value '<any in range>' = one entry that every value of a continuous measure maps through; value_as_number '<value>' = the harmonized value itself, as a number; '{column}' as any value = take the value from that Layer 1 column of the same row (the specimen identifier, a count of cells, the diagnosis), which is how a target composes a row from several Layer 1 columns. Every concept is Standard and verified against the vocabulary before it is written. A harmonized value with no entry is a load error, never silently dropped. The same harmonized value may map differently in different targets: the acquisition wording maps to a procedure concept in the procedure target and to a specimen concept in the specimen target.",
+      "emits": [
+        {
+          "cdm_column": "<a CDM column of this target's table>",
+          "const": "<a literal written on every row, e.g. a type concept id>",
+          "template": "<'{a}:{b}' composed from Layer 1 columns of the same row>",
+          "measure": "<count_rows | sum | first_nonnull of:<column>, only under grain.group_by>"
+        }
+      ],
+      "_emits": "COLUMNS WHOSE VALUE DOES NOT DEPEND ON THE HARMONIZED VALUE. One entry per column; exactly one of const, template or measure per entry. const: a fixed literal on every row - the type concept id for a *_type_concept_id column, a unit the whole target shares. template: a string composed from Layer 1 columns of the same row into a source-value column; the '{column}' placeholder inside value_map covers the per-value case, template covers the whole-target case. measure: an aggregate computed under grain.group_by (count_rows, sum, first_nonnull of a column), meaningful only when group_by is set. STATUS: declared here; no loader reads emits yet; type concepts are supplied today by the emitter's own defaults and aggregates by code, both of which this field exists to make declared.",
+      "note": "",
+      "status_note": ""
+    }
+  ],
+  "_links": "LINEAGE AND LINKAGE: how rows of this element are tied to rows of another element, or of another target of this element, in the CDM. Pointed at from a target by record_attributes[].link_id. Two mechanisms, both built from Standard concepts. (1) AN EVENT POINTER, linking_mechanism 'MEASUREMENT.measurement_event_id' or 'OBSERVATION.observation_event_id': this row's *_event_id column holds the CDM primary key of the linked row, and its *_event_field_concept_id column holds the field concept naming which table that key belongs to; linking_mechanism_concept_id is that field concept ('procedure_occurrence.procedure_occurrence_id', 'observation.observation_id', 'measurement.measurement_id'). Used when a row is derived from or contextualised by another: an item score pointing at its total; a specimen's identifier row pointing at the procedure that produced the specimen; a motor score pointing at the medication-state row. (2) A FACT_RELATIONSHIP PAIR, linking_mechanism 'FACT_RELATIONSHIP': two reciprocal rows in fact_relationship with Standard relationship concepts; linking_mechanism_concept_id is the forward concept ('Measurement to Specimen', 'Measurement to Observation', 'Parent to Child Measurement') and inverse_concept_id the reciprocal. Used when two rows are peers that must be found from either side. kind: 'derivation' = the linked row is this row's source or product in a chain (parent and derived specimen; items and their total); 'realized' = the linked row is the context in which this row's fact was produced (the scan, the medication state). linked_element_label, linked_table, linked_defining_concept and linked_value_set describe the row at the other end so the link can be checked at load. The specimen chain of the lineage design is written entirely with these two mechanisms: every specimen has one identifier row in measurement whose event pointer names the procedure that produced it, tied to its own specimen row by the Measurement to Specimen pair, and tied to its parent's identifier row by the Child to Parent Measurement pair. The keys these mechanisms write are CDM primary keys that exist only after load, so the loader writes every link; the emitter never does.",
+  "links": [
+    {
+      "link_id": "<unique in this file; what record_attributes[].link_id points at>",
+      "kind": "<derivation | realized>",
+      "linked_element_label": "<registry_label of the element whose target this links to; may be this element>",
+      "linked_element_id": "<that element's registry id, optional>",
+      "linked_table": "<CDM table of the linked row>",
+      "linked_defining_concept": {
+        "id": null,
+        "name": "<concept>",
+        "domain": "<domain>",
+        "target_field": "<column>"
+      },
+      "linked_value_set": "<the value or range the linked row must carry: ['True'] | {'min': 0, 'max': 6} | []>",
+      "linking_mechanism": "<MEASUREMENT.measurement_event_id | OBSERVATION.observation_event_id | FACT_RELATIONSHIP>",
+      "linking_mechanism_concept_id": {
+        "id": null,
+        "name": "<the field concept naming the linked row's key, e.g. 'procedure_occurrence.procedure_occurrence_id'; or the forward relationship concept, e.g. 'Measurement to Specimen'>"
+      },
+      "inverse_concept_id": {
+        "id": null,
+        "name": "<the reciprocal relationship concept, FACT_RELATIONSHIP only>"
+      },
+      "note": ""
+    }
+  ],
+  "_policies": "GUARDS on emitted strings, checked at load. field: a CDM column written by a target in this file. split_on: delimiters the emitted value is split into tokens on ([] = the whole value is one token). assert 'no_token_in' with set: the load fails if any token is a member of the named set; the case it exists for is a participant identifier leaking into a source-value column. Structural checks only, never patterns. STATUS: declared here; no loader reads policies yet and no file carries one.",
+  "policies": [
+    {
+      "field": "<a CDM column of a target in this file, e.g. specimen_source_value>",
+      "split_on": [
+        "<delimiters>"
+      ],
+      "assert": "no_token_in",
+      "set": "<participant_ids | a named set>"
+    }
+  ],
+  "_annotations": "Keys beginning with _ are documentation: never read by the loader, never load-bearing. Promotion of an annotation to a field is a schema change, never an accident. Working annotations a generator writes follow the same rule and are removed from any public copy."
+}

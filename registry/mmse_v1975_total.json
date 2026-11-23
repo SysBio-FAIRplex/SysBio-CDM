@@ -1,0 +1,79 @@
+{
+  "registry_id": 100446,
+  "schema_version": "harmonized-element/2.5",
+  "registry_label": "mmse_v1975_total",
+  "definition": "MMSE - Total Score (MMS112)",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-PD"
+  ],
+  "harmonized_values": [
+    "<any in range>"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "mms112_total_score",
+      "program": "AMP-PD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": "MMSE - Total Score (MMS112)",
+      "layer_1_etl": {
+        "value_form": "continuous",
+        "datatype": "integer",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "47e8324d4a55b546df158c9fe2a1b700c0b190004729d7e3a26aacbeb2007b25",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 502880
+          }
+        ],
+        "range": {
+          "min": 13,
+          "max": 30
+        },
+        "value_map": []
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant_visit",
+        "attribute": "mmse_v1975_total"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "observation",
+      "defining_concept_id": {
+        "id": 42869860,
+        "name": "Total score [MMSE]",
+        "domain": "Observation",
+        "target_field": "observation_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map",
+        "visit_occurrence_id": "cdm.visit_occurrence"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": [
+        {
+          "harmonized_value": "<any in range>",
+          "value_as_number": "<value>"
+        }
+      ]
+    }
+  ],
+  "status_note": ""
+}

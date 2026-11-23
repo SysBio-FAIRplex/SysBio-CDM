@@ -1,0 +1,77 @@
+{
+  "registry_id": 100223,
+  "schema_version": "harmonized-element/2.5",
+  "registry_label": "enrollment_months_after_baseline",
+  "definition": "Number of months after baseline visit at which Enrollment occurred; negative values indicate Enrollment occurred before baseline",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-PD"
+  ],
+  "harmonized_values": [
+    "<any in range>"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "enrollment_months_after_baseline",
+      "program": "AMP-PD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": "Number of months after baseline visit at which Enrollment occurred; negative values indicate Enrollment occurred before baseline.",
+      "layer_1_etl": {
+        "value_form": "continuous",
+        "datatype": "number",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "c3fa64671f7e393016722019f507062cbdda9cee878411c375ba7576d676f8b5",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 501551
+          }
+        ],
+        "range": {
+          "min": -12.0,
+          "max": 11.0
+        },
+        "value_map": []
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "enrollment_months_after_baseline"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "observation",
+      "defining_concept_id": {
+        "id": 42528933,
+        "name": "Trial enrollment date",
+        "domain": "Observation",
+        "target_field": "observation_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": [
+        {
+          "harmonized_value": "<any in range>",
+          "value_as_number": "<value>"
+        }
+      ]
+    }
+  ]
+}

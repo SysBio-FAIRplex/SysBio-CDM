@@ -1,0 +1,74 @@
+{
+  "registry_id": 100265,
+  "schema_version": "harmonized-element/2.7",
+  "registry_label": "is_strand_specific",
+  "definition": "Strand specific: The preparation of the library uses a strand-specific protocol.",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-CMD"
+  ],
+  "harmonized_values": [
+    "false"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "strand_specificity",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [
+        "cmdga_profiles.json::Library::strand_specificity"
+      ],
+      "src_definition": "Strand specific: The preparation of the library uses a strand-specific protocol.",
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "",
+            "id_type": "cmdga",
+            "sha256": "5ac4bed6d3ae441dd059d333f0ba1fe932ca36d307540dc9a999546e8dea3bf5",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 501787
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "false",
+            "source_encoding": null,
+            "harmonized_value": "false",
+            "harmonized_encoding": null,
+            "note": ""
+          }
+        ]
+      },
+      "loading_grain": {
+        "anchor": "library_id",
+        "entity": "library",
+        "attribute": "is_strand_specific"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "assay",
+      "column": "is_strand_specific",
+      "anchored_to": {
+        "person_id": "staging.person_map",
+        "specimen_id": "staging.specimen_map"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": []
+    }
+  ]
+}

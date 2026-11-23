@@ -1,0 +1,176 @@
+{
+  "schema_version": "harmonized-element/2.5",
+  "registry_id": "",
+  "registry_label": "initial_diagnosis",
+  "definition": "Initial Diagnosis.",
+  "one_per": [
+    "person"
+  ],
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-PD"
+  ],
+  "harmonized_values": [
+    "Parkinson's Disease",
+    "Parkinson’s Disease",
+    "Parkinsonism",
+    "Multiple System Atrophy",
+    "Progressive Supranuclear Palsy",
+    "No PD Nor Other Neurological Disorder"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "initial_diagnosis",
+      "program": "AMP-PD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": "Initial Diagnosis.",
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "5c0e5e752a5e8468c949f13fa4a7d52a46c2aa1043ab14245ec611073cfdc5e0",
+            "access_groups": [
+              "AMP-PD"
+            ]
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "Parkinson's Disease",
+            "source_encoding": null,
+            "harmonized_value": "Parkinson's Disease",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Parkinson’s Disease",
+            "source_encoding": null,
+            "harmonized_value": "Parkinson’s Disease",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Parkinsonism",
+            "source_encoding": null,
+            "harmonized_value": "Parkinsonism",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Multiple System Atrophy",
+            "source_encoding": null,
+            "harmonized_value": "Multiple System Atrophy",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Progressive Supranuclear Palsy",
+            "source_encoding": null,
+            "harmonized_value": "Progressive Supranuclear Palsy",
+            "harmonized_encoding": null,
+            "note": null
+          }
+        ]
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "observation",
+      "defining_concept_id": {
+        "id": 4234469,
+        "name": "Diagnosis",
+        "domain": "Observation",
+        "target_field": "observation_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": [
+        {
+          "harmonized_value": "Parkinson's Disease",
+          "value_as_string": "Parkinson's Disease",
+          "value_as_concept_id": {
+            "id": 381270,
+            "name": "Parkinson's disease"
+          },
+          "qualifier_concept_id": {
+            "id": 1989833,
+            "name": "Admitting diagnosis"
+          },
+          "note": ""
+        },
+        {
+          "harmonized_value": "Parkinson’s Disease",
+          "value_as_string": "Parkinson’s Disease"
+        },
+        {
+          "harmonized_value": "Parkinsonism",
+          "value_as_string": "Parkinsonism",
+          "value_as_concept_id": {
+            "id": 4140090,
+            "name": "Parkinsonism"
+          },
+          "qualifier_concept_id": {
+            "id": 1989833,
+            "name": "Admitting diagnosis"
+          },
+          "note": ""
+        },
+        {
+          "harmonized_value": "Multiple System Atrophy",
+          "value_as_string": "Multiple System Atrophy",
+          "value_as_concept_id": {
+            "id": 4044053,
+            "name": "Multiple system atrophy"
+          },
+          "qualifier_concept_id": {
+            "id": 1989833,
+            "name": "Admitting diagnosis"
+          },
+          "note": ""
+        },
+        {
+          "harmonized_value": "Progressive Supranuclear Palsy",
+          "value_as_string": "Progressive Supranuclear Palsy",
+          "value_as_concept_id": {
+            "id": 40391011,
+            "name": "Progressive supranuclear palsy"
+          },
+          "qualifier_concept_id": {
+            "id": 1989833,
+            "name": "Admitting diagnosis"
+          },
+          "note": ""
+        },
+        {
+          "harmonized_value": "No PD Nor Other Neurological Disorder",
+          "value_as_string": "No PD Nor Other Neurological Disorder",
+          "value_as_concept_id": {
+            "id": 45884153,
+            "name": "Normal"
+          },
+          "qualifier_concept_id": {
+            "id": 44804027,
+            "name": "Control group"
+          },
+          "note": ""
+        }
+      ]
+    }
+  ]
+}

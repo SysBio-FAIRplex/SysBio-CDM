@@ -1,0 +1,173 @@
+{
+  "registry_id": 100611,
+  "schema_version": "harmonized-element/2.7",
+  "registry_label": "protocol",
+  "definition": "The KPMP recruitment protocol the participant was enrolled under.",
+  "one_per": [
+    "person",
+    "specimen"
+  ],
+  "must_agree": false,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-CMD"
+  ],
+  "harmonized_values": [
+    "KPMP Main Protocol",
+    "Other (non-KPMP) Protocol",
+    "HRT Living Donor Protocol",
+    "HRT Percutaneous Nephrolithotomy Protocol",
+    "BIDMC plastic surgery",
+    "BIDMC collection",
+    "UPMC collection"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "Protocol",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "0843ef9d8dbce1d400ab88d2b71c69b245c2d992bf13746c9c716c752d073ba6",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503459
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "KPMP Main Protocol",
+            "source_encoding": null,
+            "harmonized_value": "KPMP Main Protocol",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Other (non-KPMP) Protocol",
+            "source_encoding": null,
+            "harmonized_value": "Other (non-KPMP) Protocol",
+            "harmonized_encoding": null,
+            "note": null
+          }
+        ]
+      }
+    },
+    {
+      "source_label": "Protocol ID",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [
+        "HCA metadata schema: collection_protocol.protocol_core.protocol_id"
+      ],
+      "src_definition": "A unique ID for the protocol.",
+      "layout": {
+        "file_type": "xlsx",
+        "sheet": "Specimen from organism"
+      },
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "7f7222846ac56e7ba1e6f6407bdaa9c11dc702e518221e7efc64a57b69884024",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503460
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "bidmc_dropseq",
+            "source_encoding": null,
+            "harmonized_value": "BIDMC plastic surgery",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "bidmc_snuc",
+            "source_encoding": null,
+            "harmonized_value": "BIDMC collection",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "upmc_snuc",
+            "source_encoding": null,
+            "harmonized_value": "UPMC collection",
+            "harmonized_encoding": null,
+            "note": ""
+          }
+        ],
+        "key_columns": {}
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "observation",
+      "defining_concept_id": {
+        "id": 45877223,
+        "name": "Protocol",
+        "domain": "Meas Value",
+        "target_field": "observation_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": [
+        {
+          "harmonized_value": "KPMP Main Protocol",
+          "value_as_number": null,
+          "value_as_concept_id": null,
+          "value_as_string": "KPMP Main Protocol"
+        },
+        {
+          "harmonized_value": "Other (non-KPMP) Protocol",
+          "value_as_number": null,
+          "value_as_concept_id": null,
+          "value_as_string": "Other (non-KPMP) Protocol"
+        },
+        {
+          "harmonized_value": "HRT Living Donor Protocol",
+          "value_as_number": null,
+          "value_as_concept_id": null,
+          "value_as_string": "HRT Living Donor Protocol"
+        },
+        {
+          "harmonized_value": "HRT Percutaneous Nephrolithotomy Protocol",
+          "value_as_number": null,
+          "value_as_concept_id": null,
+          "value_as_string": "HRT Percutaneous Nephrolithotomy Protocol"
+        }
+      ]
+    }
+  ],
+  "loading_grain": {
+    "anchor": "participant_id",
+    "entity": "participant",
+    "attribute": "protocol"
+  }
+}

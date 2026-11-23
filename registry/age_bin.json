@@ -1,0 +1,732 @@
+{
+  "registry_id": 100007,
+  "schema_version": "harmonized-element/2.7",
+  "registry_label": "age_bin",
+  "definition": "Age reported as a predefined bin, harmonized as a half-open bracket interval in years ([60,70) = 60 to 69). A separate column from age; never filled from it; both carry a unit column.",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-CMD"
+  ],
+  "harmonized_values": [
+    "[60,70)",
+    "[30,40)",
+    "[50,60)",
+    "[40,50)",
+    "[70,80)",
+    "[20,30)",
+    "[80,90)",
+    "[10,20)"
+  ],
+  "loading_grain": {
+    "anchor": "participant_id",
+    "entity": "participant",
+    "attribute": "age_bin"
+  },
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": [
+        "Age_binned",
+        "development_stage"
+      ],
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": true,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "interval",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "DFF520384",
+            "id_type": "cmdga",
+            "sha256": "8d480d206f6a44e492bd25e1339caefbe465a8de77942af6991bd3d830dd0cb8",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_ids": [
+              500028,
+              500029
+            ]
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "seventh decade human stage",
+            "source_encoding": null,
+            "harmonized_value": "[60,70)",
+            "harmonized_encoding": null,
+            "note": "",
+            "interval": {
+              "low": 60.0,
+              "high": 70.0,
+              "low_inclusive": true,
+              "high_inclusive": false
+            }
+          },
+          {
+            "source_value": "fourth decade human stage",
+            "source_encoding": null,
+            "harmonized_value": "[30,40)",
+            "harmonized_encoding": null,
+            "note": "",
+            "interval": {
+              "low": 30.0,
+              "high": 40.0,
+              "low_inclusive": true,
+              "high_inclusive": false
+            }
+          },
+          {
+            "source_value": "sixth decade human stage",
+            "source_encoding": null,
+            "harmonized_value": "[50,60)",
+            "harmonized_encoding": null,
+            "note": "",
+            "interval": {
+              "low": 50.0,
+              "high": 60.0,
+              "low_inclusive": true,
+              "high_inclusive": false
+            }
+          },
+          {
+            "source_value": "fifth decade human stage",
+            "source_encoding": null,
+            "harmonized_value": "[40,50)",
+            "harmonized_encoding": null,
+            "note": "",
+            "interval": {
+              "low": 40.0,
+              "high": 50.0,
+              "low_inclusive": true,
+              "high_inclusive": false
+            }
+          },
+          {
+            "source_value": "eighth decade human stage",
+            "source_encoding": null,
+            "harmonized_value": "[70,80)",
+            "harmonized_encoding": null,
+            "note": "",
+            "interval": {
+              "low": 70.0,
+              "high": 80.0,
+              "low_inclusive": true,
+              "high_inclusive": false
+            }
+          },
+          {
+            "source_value": "third decade human stage",
+            "source_encoding": null,
+            "harmonized_value": "[20,30)",
+            "harmonized_encoding": null,
+            "note": "",
+            "interval": {
+              "low": 20.0,
+              "high": 30.0,
+              "low_inclusive": true,
+              "high_inclusive": false
+            }
+          },
+          {
+            "source_value": "nineth decade human stage",
+            "source_encoding": null,
+            "harmonized_value": "[80,90)",
+            "harmonized_encoding": null,
+            "note": "",
+            "interval": {
+              "low": 80.0,
+              "high": 90.0,
+              "low_inclusive": true,
+              "high_inclusive": false
+            }
+          },
+          {
+            "source_value": "seventh decade stage",
+            "source_encoding": null,
+            "harmonized_value": "[60,70)",
+            "harmonized_encoding": null,
+            "note": "",
+            "interval": {
+              "low": 60.0,
+              "high": 70.0,
+              "low_inclusive": true,
+              "high_inclusive": false
+            }
+          },
+          {
+            "source_value": "eighth decade stage",
+            "source_encoding": null,
+            "harmonized_value": "[70,80)",
+            "harmonized_encoding": null,
+            "note": "",
+            "interval": {
+              "low": 70.0,
+              "high": 80.0,
+              "low_inclusive": true,
+              "high_inclusive": false
+            }
+          },
+          {
+            "source_value": "fourth decade stage",
+            "source_encoding": null,
+            "harmonized_value": "[30,40)",
+            "harmonized_encoding": null,
+            "note": "",
+            "interval": {
+              "low": 30.0,
+              "high": 40.0,
+              "low_inclusive": true,
+              "high_inclusive": false
+            }
+          },
+          {
+            "source_value": "sixth decade stage",
+            "source_encoding": null,
+            "harmonized_value": "[50,60)",
+            "harmonized_encoding": null,
+            "note": "",
+            "interval": {
+              "low": 50.0,
+              "high": 60.0,
+              "low_inclusive": true,
+              "high_inclusive": false
+            }
+          },
+          {
+            "source_value": "fifth decade stage",
+            "source_encoding": null,
+            "harmonized_value": "[40,50)",
+            "harmonized_encoding": null,
+            "note": "",
+            "interval": {
+              "low": 40.0,
+              "high": 50.0,
+              "low_inclusive": true,
+              "high_inclusive": false
+            }
+          },
+          {
+            "source_value": "third decade stage",
+            "source_encoding": null,
+            "harmonized_value": "[20,30)",
+            "harmonized_encoding": null,
+            "note": "",
+            "interval": {
+              "low": 20.0,
+              "high": 30.0,
+              "low_inclusive": true,
+              "high_inclusive": false
+            }
+          },
+          {
+            "source_value": "ninth decade stage",
+            "source_encoding": null,
+            "harmonized_value": "[80,90)",
+            "harmonized_encoding": null,
+            "note": "",
+            "interval": {
+              "low": 80.0,
+              "high": 90.0,
+              "low_inclusive": true,
+              "high_inclusive": false
+            }
+          }
+        ],
+        "unit": "years"
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "age_bin"
+      }
+    },
+    {
+      "source_label": "development_stage",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": true,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "continuous",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "DFF142690",
+            "id_type": "cmdga",
+            "sha256": "c1070bcc2011d593709d2bad78cf8a25b7caa913f58418cb6b28c6eab92eb1d9",
+            "access_groups": [],
+            "item_as_source_id": 500030
+          }
+        ],
+        "value_map": [],
+        "range": {
+          "min": 0,
+          "max": 120
+        }
+      },
+      "applies_to_rows": {
+        "require": "all",
+        "action": "include",
+        "conditions": [
+          {
+            "column": "age",
+            "inequality": true,
+            "token": "< 10"
+          }
+        ]
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "age_bin"
+      }
+    },
+    {
+      "source_label": "age.range",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": true,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "interval",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "DFF963439",
+            "id_type": "cmdga",
+            "sha256": "831987cb98b993bd1ef977d8758b4201210189a55d5bd38260dc41df3eefb5ac",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 500031
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "50-60",
+            "source_encoding": null,
+            "harmonized_value": "[50,60)",
+            "harmonized_encoding": null,
+            "note": "",
+            "interval": {
+              "low": 50.0,
+              "high": 60.0,
+              "low_inclusive": true,
+              "high_inclusive": false
+            }
+          },
+          {
+            "source_value": "40-50",
+            "source_encoding": null,
+            "harmonized_value": "[40,50)",
+            "harmonized_encoding": null,
+            "note": "",
+            "interval": {
+              "low": 40.0,
+              "high": 50.0,
+              "low_inclusive": true,
+              "high_inclusive": false
+            }
+          },
+          {
+            "source_value": "30-40",
+            "source_encoding": null,
+            "harmonized_value": "[30,40)",
+            "harmonized_encoding": null,
+            "note": "",
+            "interval": {
+              "low": 30.0,
+              "high": 40.0,
+              "low_inclusive": true,
+              "high_inclusive": false
+            }
+          },
+          {
+            "source_value": "70-80",
+            "source_encoding": null,
+            "harmonized_value": "[70,80)",
+            "harmonized_encoding": null,
+            "note": "",
+            "interval": {
+              "low": 70.0,
+              "high": 80.0,
+              "low_inclusive": true,
+              "high_inclusive": false
+            }
+          },
+          {
+            "source_value": "60-70",
+            "source_encoding": null,
+            "harmonized_value": "[60,70)",
+            "harmonized_encoding": null,
+            "note": "",
+            "interval": {
+              "low": 60.0,
+              "high": 70.0,
+              "low_inclusive": true,
+              "high_inclusive": false
+            }
+          },
+          {
+            "source_value": "20-30",
+            "source_encoding": null,
+            "harmonized_value": "[20,30)",
+            "harmonized_encoding": null,
+            "note": "",
+            "interval": {
+              "low": 20.0,
+              "high": 30.0,
+              "low_inclusive": true,
+              "high_inclusive": false
+            }
+          }
+        ],
+        "unit": "years"
+      },
+      "applies_to_rows": {
+        "require": "all",
+        "action": "include",
+        "conditions": [
+          {
+            "column": "age",
+            "inequality": true,
+            "token": "< 10"
+          }
+        ]
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "age_bin"
+      }
+    },
+    {
+      "source_label": "Age (Years) (Binned)",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "interval",
+        "datatype": "interval",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "",
+            "id_type": "",
+            "sha256": "0843ef9d8dbce1d400ab88d2b71c69b245c2d992bf13746c9c716c752d073ba6",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 500032
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "60-69 Years",
+            "source_encoding": null,
+            "harmonized_value": "[60,70)",
+            "harmonized_encoding": null,
+            "note": "",
+            "interval": {
+              "low": 60.0,
+              "high": 70.0,
+              "low_inclusive": true,
+              "high_inclusive": false
+            }
+          },
+          {
+            "source_value": "50-59 Years",
+            "source_encoding": null,
+            "harmonized_value": "[50,60)",
+            "harmonized_encoding": null,
+            "note": "",
+            "interval": {
+              "low": 50.0,
+              "high": 60.0,
+              "low_inclusive": true,
+              "high_inclusive": false
+            }
+          },
+          {
+            "source_value": "70-79 Years",
+            "source_encoding": null,
+            "harmonized_value": "[70,80)",
+            "harmonized_encoding": null,
+            "note": "",
+            "interval": {
+              "low": 70.0,
+              "high": 80.0,
+              "low_inclusive": true,
+              "high_inclusive": false
+            }
+          },
+          {
+            "source_value": "40-49 Years",
+            "source_encoding": null,
+            "harmonized_value": "[40,50)",
+            "harmonized_encoding": null,
+            "note": "",
+            "interval": {
+              "low": 40.0,
+              "high": 50.0,
+              "low_inclusive": true,
+              "high_inclusive": false
+            }
+          },
+          {
+            "source_value": "30-39 Years",
+            "source_encoding": null,
+            "harmonized_value": "[30,40)",
+            "harmonized_encoding": null,
+            "note": "",
+            "interval": {
+              "low": 30.0,
+              "high": 40.0,
+              "low_inclusive": true,
+              "high_inclusive": false
+            }
+          },
+          {
+            "source_value": "20-29 Years",
+            "source_encoding": null,
+            "harmonized_value": "[20,30)",
+            "harmonized_encoding": null,
+            "note": "",
+            "interval": {
+              "low": 20.0,
+              "high": 30.0,
+              "low_inclusive": true,
+              "high_inclusive": false
+            }
+          },
+          {
+            "source_value": "80-89 Years",
+            "source_encoding": null,
+            "harmonized_value": "[80,90)",
+            "harmonized_encoding": null,
+            "note": "",
+            "interval": {
+              "low": 80.0,
+              "high": 90.0,
+              "low_inclusive": true,
+              "high_inclusive": false
+            }
+          },
+          {
+            "source_value": "10-19 Years",
+            "source_encoding": null,
+            "harmonized_value": "[10,20)",
+            "harmonized_encoding": null,
+            "note": "",
+            "interval": {
+              "low": 10.0,
+              "high": 20.0,
+              "low_inclusive": true,
+              "high_inclusive": false
+            }
+          }
+        ],
+        "unit": "years"
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant_visit",
+        "attribute": "age_bin"
+      }
+    },
+    {
+      "source_label": "age_binned",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "interval",
+        "datatype": "interval",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "",
+            "id_type": "",
+            "sha256": "c2ac4b9f767134cf8f1c58d73f26cf033663f9980c54c92d67cc538952ce51fb",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 500033
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "60-69 Years",
+            "source_encoding": null,
+            "harmonized_value": "[60,70)",
+            "harmonized_encoding": null,
+            "note": "",
+            "interval": {
+              "low": 60.0,
+              "high": 70.0,
+              "low_inclusive": true,
+              "high_inclusive": false
+            }
+          },
+          {
+            "source_value": "50-59 Years",
+            "source_encoding": null,
+            "harmonized_value": "[50,60)",
+            "harmonized_encoding": null,
+            "note": "",
+            "interval": {
+              "low": 50.0,
+              "high": 60.0,
+              "low_inclusive": true,
+              "high_inclusive": false
+            }
+          },
+          {
+            "source_value": "30-39 Years",
+            "source_encoding": null,
+            "harmonized_value": "[30,40)",
+            "harmonized_encoding": null,
+            "note": "",
+            "interval": {
+              "low": 30.0,
+              "high": 40.0,
+              "low_inclusive": true,
+              "high_inclusive": false
+            }
+          },
+          {
+            "source_value": "40-49 Years",
+            "source_encoding": null,
+            "harmonized_value": "[40,50)",
+            "harmonized_encoding": null,
+            "note": "",
+            "interval": {
+              "low": 40.0,
+              "high": 50.0,
+              "low_inclusive": true,
+              "high_inclusive": false
+            }
+          },
+          {
+            "source_value": "70-79 Years",
+            "source_encoding": null,
+            "harmonized_value": "[70,80)",
+            "harmonized_encoding": null,
+            "note": "",
+            "interval": {
+              "low": 70.0,
+              "high": 80.0,
+              "low_inclusive": true,
+              "high_inclusive": false
+            }
+          },
+          {
+            "source_value": "20-29 Years",
+            "source_encoding": null,
+            "harmonized_value": "[20,30)",
+            "harmonized_encoding": null,
+            "note": "",
+            "interval": {
+              "low": 20.0,
+              "high": 30.0,
+              "low_inclusive": true,
+              "high_inclusive": false
+            }
+          },
+          {
+            "source_value": "80-89 Years",
+            "source_encoding": null,
+            "harmonized_value": "[80,90)",
+            "harmonized_encoding": null,
+            "note": "",
+            "interval": {
+              "low": 80.0,
+              "high": 90.0,
+              "low_inclusive": true,
+              "high_inclusive": false
+            }
+          }
+        ],
+        "unit": "years"
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "age_bin"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "observation",
+      "defining_concept_id": {
+        "id": 3053159,
+        "name": "Age group",
+        "domain": "Observation",
+        "target_field": "observation_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": [
+        {
+          "harmonized_value": "20-29",
+          "value_as_string": "20-29"
+        },
+        {
+          "harmonized_value": "30-39",
+          "value_as_string": "30-39"
+        },
+        {
+          "harmonized_value": "40-49",
+          "value_as_string": "40-49"
+        },
+        {
+          "harmonized_value": "50-59",
+          "value_as_string": "50-59"
+        },
+        {
+          "harmonized_value": "60-69",
+          "value_as_string": "60-69"
+        },
+        {
+          "harmonized_value": "70-79",
+          "value_as_string": "70-79"
+        },
+        {
+          "harmonized_value": "80-89",
+          "value_as_string": "80-89"
+        },
+        {
+          "harmonized_value": "90-99",
+          "value_as_string": "90-99"
+        }
+      ],
+      "note": ""
+    }
+  ],
+  "unit": "years"
+}

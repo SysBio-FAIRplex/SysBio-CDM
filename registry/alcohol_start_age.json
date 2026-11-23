@@ -1,0 +1,77 @@
+{
+  "registry_id": 100028,
+  "schema_version": "harmonized-element/2.5",
+  "registry_label": "alcohol_start_age",
+  "definition": "Age in years when participant/subject started ingesting alcoholic beverages, including social drinking",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-PD"
+  ],
+  "harmonized_values": [
+    "<any in range>"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "alcohol_start_age",
+      "program": "AMP-PD",
+      "status": "approved",
+      "status_note": null,
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": "Age in years when participant/subject started ingesting alcoholic beverages, including social drinking.",
+      "layer_1_etl": {
+        "value_form": "continuous",
+        "datatype": "integer",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "dd7732ea9d0dd2b29f64aed9435bf44cb728d0439ba446868c0de31548b15342",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 500181
+          }
+        ],
+        "range": {
+          "min": 1,
+          "max": 75
+        },
+        "value_map": []
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "alcohol_start_age"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "observation",
+      "defining_concept_id": {
+        "id": 40766358,
+        "name": "About how old were you when you first started drinking, not counting small tastes or sips of alcohol [PhenX]",
+        "domain": "Observation",
+        "target_field": "observation_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": [
+        {
+          "harmonized_value": "<any in range>",
+          "value_as_number": "<value>"
+        }
+      ]
+    }
+  ]
+}

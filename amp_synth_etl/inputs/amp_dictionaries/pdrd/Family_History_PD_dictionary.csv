@@ -1,8 +1,0 @@
-TableName,ColumnName,Title,Description,Required,DataType,DataTypeRange,UniqueValues
-Family_History_PD.csv,participant_id,Study Subject ID,Study Subject ID,TRUE,String,,
-Family_History_PD.csv,GUID,Subject ID,Global Unique ID (USUBJID),FALSE,String,,
-Family_History_PD.csv,visit_name,Visit Name,"Visit name: M - in months, SC - screening visit, LOG - records without visit; #2 or #3 define repated records at the same visit or repeated visit",TRUE,String,,
-Family_History_PD.csv,visit_month,Visit Month,"Numeric visit in months; for visits prior baseline -1, -2 is an order of screening visits",FALSE,Float,,
-Family_History_PD.csv,biological_mother_with_pd,Family History PD,Mother Has Or Had Parkinson's Disease,FALSE,Enumeration,,No;Yes;Unknown
-Family_History_PD.csv,biological_father_with_pd,Family History PD,Father Has Or Had Parkinson's Disease,FALSE,Enumeration,,No;Yes;Unknown
-Family_History_PD.csv,other_relative_with_pd,Family History PD,Other Relative Has Or Had Parkinson's Disease,FALSE,Enumeration,,No;Yes;Unknown

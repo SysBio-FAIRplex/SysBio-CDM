@@ -1,0 +1,175 @@
+{
+  "registry_id": 100795,
+  "schema_version": "harmonized-element/2.5",
+  "registry_label": "updrs_v3_modified_hoehn_yahr_stage",
+  "definition": "UPDRS - Modified Hoehn and Yahr Staging (UPD143)",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-PD"
+  ],
+  "harmonized_values": [
+    "<any in range>",
+    "stage 2",
+    "stage 0",
+    "stage 1",
+    "stage 3",
+    "stage 2.5",
+    "stage 4",
+    "stage 5",
+    "stage 1.5"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "upd143_mod_hoehn_and_yahr_stage",
+      "program": "AMP-PD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": "UPDRS - Modified Hoehn and Yahr Staging (UPD143)",
+      "layer_1_etl": {
+        "value_form": "continuous",
+        "datatype": "number",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "a400fc24798412aac109d137a671add77afe467207ed576ede53def6cce2d7eb",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 502267
+          }
+        ],
+        "range": {
+          "min": 0.0,
+          "max": 5.0
+        },
+        "value_map": []
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant_visit",
+        "attribute": "updrs_v3_modified_hoehn_yahr_stage"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "observation",
+      "defining_concept_id": {
+        "id": 46236404,
+        "name": "Modified Hoen and Yahr stage [UPDRS]",
+        "domain": "Observation",
+        "target_field": "observation_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map",
+        "visit_occurrence_id": "cdm.visit_occurrence"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": [
+        {
+          "harmonized_value": "<any in range>",
+          "value_as_number": "<value>"
+        },
+        {
+          "harmonized_value": "stage 2",
+          "value_as_number": 2,
+          "value_as_string": "stage 2",
+          "value_as_concept_id": {
+            "id": 46237823,
+            "name": "Bilateral disease, without impairment of balance",
+            "domain": "Meas Value",
+            "vocabulary": "LOINC"
+          }
+        },
+        {
+          "harmonized_value": "stage 0",
+          "value_as_number": 0,
+          "value_as_string": "stage 0",
+          "value_as_concept_id": {
+            "id": 46237426,
+            "name": "No signs of disease",
+            "domain": "Meas Value",
+            "vocabulary": "LOINC"
+          }
+        },
+        {
+          "harmonized_value": "stage 1",
+          "value_as_number": 1,
+          "value_as_string": "stage 1",
+          "value_as_concept_id": {
+            "id": 46237457,
+            "name": "Unilateral disease",
+            "domain": "Meas Value",
+            "vocabulary": "LOINC"
+          }
+        },
+        {
+          "harmonized_value": "stage 3",
+          "value_as_number": 3,
+          "value_as_string": "stage 3",
+          "value_as_concept_id": {
+            "id": 46237984,
+            "name": "Mild to moderate bilateral disease; some postural instability; physically independent",
+            "domain": "Meas Value",
+            "vocabulary": "LOINC"
+          }
+        },
+        {
+          "harmonized_value": "stage 2.5",
+          "value_as_number": 2.5,
+          "value_as_string": "stage 2.5",
+          "value_as_concept_id": {
+            "id": 46237867,
+            "name": "Mild bilateral disease, with recovery on pull test",
+            "domain": "Meas Value",
+            "vocabulary": "LOINC"
+          }
+        },
+        {
+          "harmonized_value": "stage 4",
+          "value_as_number": 4,
+          "value_as_string": "stage 4",
+          "value_as_concept_id": {
+            "id": 46238167,
+            "name": "Severe disability; still able to walk or stand unassisted",
+            "domain": "Meas Value",
+            "vocabulary": "LOINC"
+          }
+        },
+        {
+          "harmonized_value": "stage 5",
+          "value_as_number": 5,
+          "value_as_string": "stage 5",
+          "value_as_concept_id": {
+            "id": 46237985,
+            "name": "Wheelchair bound or bedridden unless aided",
+            "domain": "Meas Value",
+            "vocabulary": "LOINC"
+          }
+        },
+        {
+          "harmonized_value": "stage 1.5",
+          "value_as_number": 1.5,
+          "value_as_string": "stage 1.5",
+          "value_as_concept_id": {
+            "id": 46237983,
+            "name": "Unilateral plus axial involvement",
+            "domain": "Meas Value",
+            "vocabulary": "LOINC"
+          }
+        }
+      ]
+    }
+  ],
+  "status_note": ""
+}

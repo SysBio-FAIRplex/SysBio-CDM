@@ -1,0 +1,98 @@
+{
+  "registry_id": 100666,
+  "schema_version": "harmonized-element/2.5",
+  "registry_label": "sampling_age",
+  "definition": "Age of participant at time of sample collection",
+  "one_per": [
+    "person",
+    "specimen"
+  ],
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-AD"
+  ],
+  "harmonized_values": [
+    "<any in range>"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "samplingAge",
+      "program": "AMP-AD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "continuous",
+        "datatype": "number",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn21323366",
+            "id_type": "synapse",
+            "sha256": "80d6246e6837543317ce7824958d54c141025746ca54de6923c56a41f656ff87",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 504469
+          }
+        ],
+        "range": {
+          "min": 58.0,
+          "max": 90.0
+        },
+        "value_map": []
+      },
+      "src_entity": {
+        "entity": "specimen",
+        "dictionaries": [
+          "[data file name withheld]"
+        ],
+        "ambiguous": false,
+        "evidence": "",
+        "status": "proposed"
+      },
+      "loading_grain": {
+        "anchor": "specimen_id",
+        "entity": "specimen",
+        "attribute": "sampling_age"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "observation",
+      "defining_concept_id": {
+        "id": 3034297,
+        "name": "Age at specimen collection",
+        "domain": "Observation",
+        "target_field": "observation_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map",
+        "specimen_id": "staging.specimen_map"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [
+        {
+          "role": "attribute",
+          "column": null,
+          "status": "candidate",
+          "note": ""
+        }
+      ],
+      "value_map": [
+        {
+          "harmonized_value": "<any in range>",
+          "value_as_number": "<value>"
+        }
+      ]
+    }
+  ]
+}

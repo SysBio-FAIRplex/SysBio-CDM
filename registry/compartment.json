@@ -1,0 +1,188 @@
+{
+  "registry_id": 100114,
+  "schema_version": "harmonized-element/2.5",
+  "registry_label": "compartment",
+  "definition": "Anatomical or cellular compartment where measurement or sample was obtained.",
+  "one_per": [
+    "person"
+  ],
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-CMD"
+  ],
+  "harmonized_values": [
+    "plasma",
+    "serum",
+    "whole blood",
+    "intracellular",
+    "extracellular",
+    "tissue",
+    "cell lysate",
+    "subcellular fraction"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "compartment",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "DFF963439",
+            "id_type": "cmdga",
+            "sha256": "831987cb98b993bd1ef977d8758b4201210189a55d5bd38260dc41df3eefb5ac",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 501314
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "plasma",
+            "source_encoding": null,
+            "harmonized_value": "plasma",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "serum",
+            "source_encoding": null,
+            "harmonized_value": "serum",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "whole blood",
+            "source_encoding": null,
+            "harmonized_value": "whole blood",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "intracellular",
+            "source_encoding": null,
+            "harmonized_value": "intracellular",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "extracellular",
+            "source_encoding": null,
+            "harmonized_value": "extracellular",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "tissue",
+            "source_encoding": null,
+            "harmonized_value": "tissue",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "cell lysate",
+            "source_encoding": null,
+            "harmonized_value": "cell lysate",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "subcellular fraction",
+            "source_encoding": null,
+            "harmonized_value": "subcellular fraction",
+            "harmonized_encoding": null,
+            "note": null
+          }
+        ]
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "observation",
+      "defining_concept_id": {
+        "id": 44783492,
+        "name": "Structure of anatomical compartment",
+        "domain": "Observation",
+        "target_field": "observation_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": [
+        {
+          "harmonized_value": "plasma",
+          "value_as_concept_id": {
+            "id": 4000626,
+            "name": "Plasma specimen"
+          },
+          "value_as_string": "plasma"
+        },
+        {
+          "harmonized_value": "serum",
+          "value_as_concept_id": {
+            "id": 4001181,
+            "name": "Serum specimen"
+          },
+          "value_as_string": "serum"
+        },
+        {
+          "harmonized_value": "whole blood",
+          "value_as_concept_id": {
+            "id": 4122283,
+            "name": "Whole blood specimen"
+          },
+          "value_as_string": "whole blood"
+        },
+        {
+          "harmonized_value": "intracellular",
+          "value_as_string": "intracellular",
+          "value_as_concept_id": {
+            "id": 4037486,
+            "name": "Intercellular space"
+          }
+        },
+        {
+          "harmonized_value": "extracellular",
+          "value_as_string": "extracellular",
+          "value_as_concept_id": {
+            "id": 4029777,
+            "name": "Extracellular space"
+          }
+        },
+        {
+          "harmonized_value": "tissue",
+          "value_as_string": "tissue",
+          "value_as_concept_id": {
+            "id": 4002890,
+            "name": "Tissue specimen"
+          },
+          "note": ""
+        },
+        {
+          "harmonized_value": "cell lysate",
+          "value_as_string": "cell lysate"
+        },
+        {
+          "harmonized_value": "subcellular fraction",
+          "value_as_string": "subcellular fraction"
+        }
+      ]
+    }
+  ]
+}

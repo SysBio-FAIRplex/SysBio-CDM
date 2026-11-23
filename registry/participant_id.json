@@ -1,0 +1,2071 @@
+{
+  "registry_id": 100531,
+  "schema_version": "harmonized-element/2.5",
+  "registry_label": "participant_id",
+  "definition": "Study Subject ID",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-AD",
+    "AMP-CMD",
+    "AMP-PD",
+    "AMP-RA-SLE"
+  ],
+  "harmonized_values": [
+    "<any identifier>"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "participant_id",
+      "program": "AMP-PD",
+      "status": "approved",
+      "status_note": null,
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": "Study Subject ID.",
+      "layer_1_etl": {
+        "value_form": "identifier",
+        "datatype": "string",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "72afa603cdf7356fca86691f8457ed8c788f0ae102bde007312c8ff44820726b",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 503126
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "a0e91c52b00c884c6736c7dc6d1961f3a9e6f5e02d7a3960cd085e1ec508c2a3",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 503127
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "a044c5a781a9457b287371c25494ecab9be9b849c3ef9dde3cd46b6ec11f5629",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 503128
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "96d714f11f4e93d2d10da6add2dfd04234587b5690d4dd01e131a4817147e0ba",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 503129
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "4169f8a20ebdbdfb8e36dec16d83641c9dcf24c4568639dcbabf1584a894c558",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 503130
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "876eb647b1546eef3ad91016729c5aa056ad5db28efde22e907601ea0f8d2003",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 503131
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "559acbefc61e4651d22eb8f8e0b9182e9ef3b76da1ba01d41f9dae65bc463f3c",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 503132
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "27ec4b1a5cda5045054805a63e301927b7b3fdc56d24c7982906b0b7537a084e",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 503133
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "00c27eafd2a4bf105b6c5dad3cf551595c5aa80de9d91986c7895faf78c7067b",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 503134
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "064e9bc20ea626156595dc799a0ddff43ed34174b2bb4de76e917d45923bbf25",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 503135
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "4c16a16a80fcd4944d2a9ccfc907e9c7a469ef01f54ef21f63f3a3324fcf06e9",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 503136
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "900c0ec436c15a06a5a9bf22ef8a04720fa572b8bb33cf47715ca3984a361c56",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 503137
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "47e8324d4a55b546df158c9fe2a1b700c0b190004729d7e3a26aacbeb2007b25",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 503138
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "ce7404e4c5e077aa67d551737a0850560b9c88ed27a0d43ea6c82e00ffc96036",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 503139
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "5c0e5e752a5e8468c949f13fa4a7d52a46c2aa1043ab14245ec611073cfdc5e0",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 503140
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "dd7732ea9d0dd2b29f64aed9435bf44cb728d0439ba446868c0de31548b15342",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 503141
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "a400fc24798412aac109d137a671add77afe467207ed576ede53def6cce2d7eb",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 503142
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "ecfdd4b3e9604f1d8270484893fcc5b820bb65b9f13a9091ee6f3ac64a5c3b0a",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 503143
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "081232b0d14d9f087bcc13b0dc957431d7f53fa795c1feceea31abcaf6ea5fb0",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 503144
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "fc3ccbfcc0289ae3194d832a20d1f940e86ca90f5bc0b610ea6638a8d1a3c387",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 503145
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "37500633d6c2ec150cf19d3ae1de7635b3d2c0c6741db6f7aad55234e6e051b0",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 503146
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "337db3cf4886000256cb43d3b58e557dbb271820fd585e4b0dea8e995af39b3c",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 503147
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "4f77515b518ee5cf3fdf5d61b06687c8236e33801f769caf45dca6e2f5e9a7f2",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 503148
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "e256c5e400ef308cddf38e66625398ef327bc169b79e8ef7e15b786daca5b06c",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 503149
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "714160ad90f74c558e496f1ebd49bf6ba22348c9d2d69420d757738b357acc68",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 503150
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "3a791b7b13dc9ab902d27e0d594cd9eb785fa476ea0d35c191da65e903fcf362",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 503151
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "39e7d15895f620be8965651a6d2725d6b64922485f33bc2db9593eed0c885957",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 503152
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "c3fa64671f7e393016722019f507062cbdda9cee878411c375ba7576d676f8b5",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 503153
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "471c34f2407e023a1de43d918e0784c71a40c7438545c0367addeda3047cbb33",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 503154
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "7917c590ef8a0f35d3bed77d7e07871d45cb82e8b96a4d6326ba44bb4dd25cde",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 503155
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "8b2b50ce042fa2062e779090cbf36adec8ab222133718b6b4e50b3ca97b617db",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 503156
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "759eda58d077436a1ee5518607717ce902c987d9cb27768b981f23211876bc3c",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 503157
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "4c6de4a9cd752197bca40057220123a4093a4485208f56a73c2f8e0076da9a03",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 503158
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "d1e33c9bee61392f5046ff08fb36433460048246ae30e907ca3ca8d77e318704",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 503159
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "f69b2bffe1a75a0aadf4dc32f1b6f0b0d89bfa2835790016f12d3c0036205acc",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 503160
+          }
+        ],
+        "value_map": []
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "participant_id"
+      }
+    },
+    {
+      "program": "AMP-AD",
+      "source_label": "individualID",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": "",
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "participant_id"
+      },
+      "layer_1_etl": {
+        "value_form": "identifier",
+        "datatype": "string",
+        "missing_values": [],
+        "value_map": [],
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "2c9d756e709c2eee4169d7075a4993f62eb4aa5e82a4729debffd3d18e52d05f",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 503161
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "9eaa383ee973146ebfe02915b8119e33cc5533c7dfb7623ef9bfbc8c4a9bc945",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 503162
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "cf3413543254f346264dd630f59d917557f828ebcf7c7117861c12f1d3076043",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 503163
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "82a49077ccb8b78a1159fa089a91330da7e62fabea65dceaa342faeed56fd3ab",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 503164
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "484b323b8d6d2eea95a7f65e6492c90755dcf8b007db621c2b01081798e7846b",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 503165
+          }
+        ]
+      }
+    },
+    {
+      "program": "AMP-CMD",
+      "source_label": "donor_id",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": "",
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "participant_id"
+      },
+      "layer_1_etl": {
+        "value_form": "identifier",
+        "datatype": "string",
+        "missing_values": [],
+        "value_map": [],
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "831987cb98b993bd1ef977d8758b4201210189a55d5bd38260dc41df3eefb5ac",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 501491
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "c1070bcc2011d593709d2bad78cf8a25b7caa913f58418cb6b28c6eab92eb1d9",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 501488
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "8d480d206f6a44e492bd25e1339caefbe465a8de77942af6991bd3d830dd0cb8",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 501487
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "01fa7b159e181b67458c775f9a3cf1debb1cdec24b8c699148678c6d6f91d6c1",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 501492
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "eac08c00fe30ffbbde76c8c61db382183b674f02f972888a05afac14d1855e4d",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 501489
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "c9912b8266deb23f6316c109f34dfe8d576f7efc4f0cfe53e4b9f7ea789eae5a",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 501490
+          }
+        ]
+      }
+    },
+    {
+      "program": "AMP-CMD",
+      "source_label": "SI:Subject_ID",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": "",
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "participant_id"
+      },
+      "layer_1_etl": {
+        "value_form": "identifier",
+        "datatype": "string",
+        "missing_values": [],
+        "value_map": [],
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "705f195139ec42379868f970a554352f9a80c312f7289325489d169a87019df3",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503166
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "08c4a724640d181a01b031cfdaf51ee7c8d62c78abc13a619ee02119bb53cb4b",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503167
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "6554d3d84599cb8f6c22cda6c2d050b9e13ed6ea24dd61d70c4ca12b851a978b",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503168
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "da44a53604e23f8760a3f1fce7e269e4ef06ebd5234aa96bbc78f6bb0a40c66e",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503169
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "f9042e17d0289585eaa8c0364fadcc6f7c8d31e30583068fb11d8b7185ad6167",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503170
+          }
+        ]
+      }
+    },
+    {
+      "program": "AMP-CMD",
+      "source_label": "Biomaterial ID (Required)",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": "",
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "participant_id"
+      },
+      "layer_1_etl": {
+        "value_form": "identifier",
+        "datatype": "string",
+        "missing_values": [],
+        "value_map": [],
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "7f7222846ac56e7ba1e6f6407bdaa9c11dc702e518221e7efc64a57b69884024",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503171
+          }
+        ]
+      },
+      "layout": {
+        "file_type": "xlsx",
+        "sheet": "Donor organism"
+      }
+    },
+    {
+      "program": "AMP-CMD",
+      "source_label": "donor_label",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": "",
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "participant_id"
+      },
+      "layer_1_etl": {
+        "value_form": "identifier",
+        "datatype": "string",
+        "missing_values": [],
+        "value_map": [],
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "b541ee4716781da729caf895f791e1ef79f7024bb601ead0d686324087684186",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503172
+          }
+        ]
+      }
+    },
+    {
+      "program": "AMP-CMD",
+      "source_label": "donor",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": "",
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "participant_id"
+      },
+      "layer_1_etl": {
+        "value_form": "identifier",
+        "datatype": "string",
+        "missing_values": [],
+        "value_map": [],
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "b46623c4d78f475a7ae9d4b771a3112cb39888718aa814a121f43cca71f8516e",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503173
+          }
+        ]
+      },
+      "layout": {
+        "file_type": "xlsx",
+        "sheet": "1_donor_overview"
+      }
+    },
+    {
+      "program": "AMP-CMD",
+      "source_label": "Donor_ID",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": "",
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "participant_id"
+      },
+      "layer_1_etl": {
+        "value_form": "identifier",
+        "datatype": "string",
+        "missing_values": [],
+        "value_map": [],
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "b46623c4d78f475a7ae9d4b771a3112cb39888718aa814a121f43cca71f8516e",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503174
+          }
+        ]
+      },
+      "layout": {
+        "file_type": "xlsx",
+        "sheet": "2_sample_overview"
+      }
+    },
+    {
+      "program": "AMP-CMD",
+      "source_label": "accession",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": "",
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "participant_id"
+      },
+      "layer_1_etl": {
+        "value_form": "identifier",
+        "datatype": "string",
+        "missing_values": [],
+        "value_map": [],
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "5a7e8abd1f56dfb74b51807230c0e84b58f6b5283f39f466d595613ec544d3d1",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503175
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "33de49ccf0e1a4ff54fa67fb197ea9f012f16da411c28abc421454f57055454b",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503176
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "e2f9d33037c8f94b58b5a6a22392a1cfd17018892afef6fd7396d8a231974bb5",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503177
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "72f3ef36f4181328012a059de1d4b2896357b724b9503514f3ea98a440650a53",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503178
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "8932c30ea7ed35e35b0844b54cab5a0aa6df0d4bf3bdc752b8271ce03c7c5b60",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503179
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "f977142c07c86fbc7eeadbc60ebd63686306c5b859b1dafd95c0d20e37dd8b47",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503180
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "80244d8e91404fe34561f175369985a7f19256e6ea5c1108919233a94a3f0aec",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503181
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "3b1c08542b947f7b113b59d700696d9d6d7e910f5b9a16ec349b4aa1478c100d",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503182
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "ca218124515c58c333f35ad8c3dab1c842301e270e553cef43802f07f0c251b6",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503183
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "ecf847d0b36faba72fe7e20d70d008af41ed379e87fd7d875a74301d71796ebb",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503184
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "c8c82627b0a36c2f252b40c6ba9c203bb748ef7e8ca2db69ba0df8f127e4fc8b",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503185
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "ab0ebe6b04a9b87db238f9af75543d1f4341f59ee576b23a278ca2b1e1665741",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503186
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "80eeafb288c359603458cb24a3684ac022c1b221b48193fe92cea681e7b0219e",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503187
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "0590cf8ade4f2a9dd797cd0c01c25b467bb7e53e4d68895bad22b59073d1107e",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503188
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "d94eed553b4c0b48a58fee4cd0d859674943ccd1277dd2f2d1271c197f4bd134",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503189
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "2a07c17fe338f028530e2d584ea823ebd408ed059480da940d372c94b9ac3019",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503190
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "91eb1ae56ef192c1a03e96767bb386ec79a110080144a778519b297094a3482b",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503191
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "040ea68994176dcac34d87fc41da6fbe8102b14e516df065e38e44ba67eac2eb",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503192
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "d5943f827b1cedc09a86489e4d94b73a8ff70db0ecc2bdd2de804e704415ecac",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503193
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "dc0352d0eb6bf19b7bd4815dc73ccc5fe32c3fac107cf63935f9b05289c57f79",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503194
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "796e5e1dea99b3581b2f6455b269552257ef26f2038d7988ade41b3d7b46c629",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503195
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "36f5fcfc3143966d088dbd5ebd4eaaa4c8b646ac1f2816942f559c786181fe83",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503196
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "f1342dd55c5b696d89c42e4e5352818159c72146e8c6d3abf5b8b60620ee5afe",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503197
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "b1369d7d3f3d03f6345089d7640dd71440696479fc2182caa697793b97936c7e",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503198
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "96e54f07cda735800f8de03aa2551a89dacaa40cbcb0b8be6671efbb375b220c",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503199
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "d28faff4ca4cbd27954674d660ccb0602e351c8d3c73a9da454c5ffdc666d4f8",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503200
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "ecbb408124ee7dfbed9aa8dd492efe63044d2761966ac90502b71dbd65a55789",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503201
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "de671a7b43dd7f929a1ffb0b416306e0b53e83864bd6e87813a3742b47fc259d",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503202
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "ec868c791459aed79ba16e20fb569cc26be76da40970392cb97b6db059d3d3d2",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503203
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "add29b92d68543946c7880fdaa599af5422c6603af1701e454dae5fc4e9e759b",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503204
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "59b971d66866ad10f9fdd7651e39592cbb07ebd3a80173ea61108941ac48dd48",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503205
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "a97bae77d0e69ef55a2400a3a24b24deb5080544ce47bed9bd35551be74dff05",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503206
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "4d13c883e72ccf2b423f0c7dd1ed16008913abf29b1736d362374998277f59b3",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503207
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "ccc9413bdd0ef6333155afd007bd26216327061c4731946c13760be7fefafa0a",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503208
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "cd0bd798e26e3a64a1a660e132599bdbd4d659d48dee5cf496d06fc1ea7669d8",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503209
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "b11f59a8b94a8876486775af9c62eb7c8806363d1a821b8ff1dd94575f5495f5",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503210
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "99082971a09be82f82d3db983a4dadae846b02e904b1f1e29b2b150cf699e83d",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503211
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "9d4e6c90e5727fef4a56562ed289761da80de0f60d93e132bbafbd87f0b7f58c",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503212
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "b198c5142fc07daafbec3f15cdc7062e7792c40d40cfbeba971976ce50b52558",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503213
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "d41003e4a5015fd845b4204873217bcc5e65c87c70428900eb1214cc17ccd139",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503214
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "f118032fef76ce85503a4ebebfa147d639d25b8b16dbcea616f0f70514e70acb",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503215
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "fee71e61d00065ea6e9536721cf37d509ff5f9f4e1bc04fc5537d6a2c42ba81b",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503216
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "20b56748bb502b8513d02b1a160ea96132d65f9028a2522e006762b1af6777f9",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503217
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "b9bbc2b778e12494be918100e8e64a966f45463560543b232bfbf6ee3177c1fd",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503218
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "0d6adf4293bd18670c41e2afba62ca094aa77aa91d54a310f8256e9d793c3e0e",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503219
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "e8ec00c794bb516b38635adf241c09c48fd20940a24e3fb7bf5925b30c8c935d",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503220
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "91786eca6f2777ebda99793a3443bdbe921888000d5d7f6c64e7aae9b6c33d79",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503221
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "f7233282b4ce15b1ffff6affc222eee63d674c12e58e22603102a21dec9cd481",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503222
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "faeb766427e362f787ba4a2068063be9cfd74bdf805509da46b053fe54e553a4",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503223
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "7acb4973ef6a328dcde766466c01bbb25743657742d1469bc5b3f30155447793",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503224
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "5afed41f01b873e00e9f7c9a456beba1025da209a7d710a7c061658602f5ee7e",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503225
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "431b67fda082d48ed35747bf7a76e1b962d1031ff7be0e1e8158d6240a56794e",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503226
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "acd6fae8edd35fb5f64db50df22bcaa8e0ba29aa23735541d96b645ae6f58e4c",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503227
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "f30c6ed403fcc6a4b4bdef8adfa81a4807bbcc4c888c279c78e0ba96dc586631",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503228
+          }
+        ]
+      }
+    },
+    {
+      "program": "AMP-CMD",
+      "source_label": "Accession",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": "",
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "participant_id"
+      },
+      "layer_1_etl": {
+        "value_form": "identifier",
+        "datatype": "string",
+        "missing_values": [],
+        "value_map": [],
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "82f0291f2a87f8acef0f3b1a2fd0af638abe8d777013285f789a7c146da2cdc1",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503229
+          }
+        ]
+      },
+      "layout": {
+        "file_type": "tsv",
+        "header_row": 2
+      }
+    },
+    {
+      "program": "AMP-CMD",
+      "source_label": "redcap_id",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": "",
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "participant_id"
+      },
+      "layer_1_etl": {
+        "value_form": "identifier",
+        "datatype": "string",
+        "missing_values": [],
+        "value_map": [],
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "c2ac4b9f767134cf8f1c58d73f26cf033663f9980c54c92d67cc538952ce51fb",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503230
+          }
+        ]
+      }
+    },
+    {
+      "program": "AMP-CMD",
+      "source_label": "Participant ID",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": "",
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "participant_id"
+      },
+      "layer_1_etl": {
+        "value_form": "identifier",
+        "datatype": "string",
+        "missing_values": [],
+        "value_map": [],
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "a6bb002d606562e765d30489cb3b285a1f47a6b9e4479734181edfabe8c605ff",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503231
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "d141b31bda63020b7c1d15e8069dbf264a9359cd485e3af93ea5e04bce28b953",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503232
+          }
+        ]
+      },
+      "layout": {
+        "file_type": "xlsx",
+        "sheet": "Serum Plasma"
+      }
+    },
+    {
+      "program": "AMP-CMD",
+      "source_label": "Participant ID",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": "",
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "participant_id"
+      },
+      "layer_1_etl": {
+        "value_form": "identifier",
+        "datatype": "string",
+        "missing_values": [],
+        "value_map": [],
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "a2537ef46d05b0ac90962579b3277d412eafff7986625e415610e193ae6b2346",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503233
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "59b56fc6d7c9c762f3e72ad1a709be9b476da76191700c020a8ffb4b6845269b",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503234
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "96a41d5b5dcc1af33b8752924106d899b82aa595c1c64513cc796cc1b46e1a95",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503235
+          }
+        ]
+      },
+      "layout": {
+        "file_type": "xlsx",
+        "sheet": "Batch-norm Imputed Data"
+      }
+    },
+    {
+      "program": "AMP-CMD",
+      "source_label": "Participant ID",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": "",
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "participant_id"
+      },
+      "layer_1_etl": {
+        "value_form": "identifier",
+        "datatype": "string",
+        "missing_values": [],
+        "value_map": [],
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "a2537ef46d05b0ac90962579b3277d412eafff7986625e415610e193ae6b2346",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503233
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "59b56fc6d7c9c762f3e72ad1a709be9b476da76191700c020a8ffb4b6845269b",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503234
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "96a41d5b5dcc1af33b8752924106d899b82aa595c1c64513cc796cc1b46e1a95",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503235
+          }
+        ]
+      },
+      "layout": {
+        "file_type": "xlsx",
+        "sheet": "Batch-normalized Data"
+      }
+    },
+    {
+      "program": "AMP-CMD",
+      "source_label": "Participant ID",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": "",
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "participant_id"
+      },
+      "layer_1_etl": {
+        "value_form": "identifier",
+        "datatype": "string",
+        "missing_values": [],
+        "value_map": [],
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "a2537ef46d05b0ac90962579b3277d412eafff7986625e415610e193ae6b2346",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503233
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "59b56fc6d7c9c762f3e72ad1a709be9b476da76191700c020a8ffb4b6845269b",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503234
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "96a41d5b5dcc1af33b8752924106d899b82aa595c1c64513cc796cc1b46e1a95",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503235
+          }
+        ]
+      },
+      "layout": {
+        "file_type": "xlsx",
+        "sheet": "Log Transformed Data"
+      }
+    },
+    {
+      "program": "AMP-CMD",
+      "source_label": "Participant ID",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": "",
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "participant_id"
+      },
+      "layer_1_etl": {
+        "value_form": "identifier",
+        "datatype": "string",
+        "missing_values": [],
+        "value_map": [],
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "a2537ef46d05b0ac90962579b3277d412eafff7986625e415610e193ae6b2346",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503233
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "59b56fc6d7c9c762f3e72ad1a709be9b476da76191700c020a8ffb4b6845269b",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503234
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "96a41d5b5dcc1af33b8752924106d899b82aa595c1c64513cc796cc1b46e1a95",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503235
+          }
+        ]
+      },
+      "layout": {
+        "file_type": "xlsx",
+        "sheet": "Peak Area Data"
+      }
+    },
+    {
+      "program": "AMP-CMD",
+      "source_label": "Participant ID",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": "",
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "participant_id"
+      },
+      "layer_1_etl": {
+        "value_form": "identifier",
+        "datatype": "string",
+        "missing_values": [],
+        "value_map": [],
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "a2537ef46d05b0ac90962579b3277d412eafff7986625e415610e193ae6b2346",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503233
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "59b56fc6d7c9c762f3e72ad1a709be9b476da76191700c020a8ffb4b6845269b",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503234
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "96a41d5b5dcc1af33b8752924106d899b82aa595c1c64513cc796cc1b46e1a95",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503235
+          }
+        ]
+      },
+      "layout": {
+        "file_type": "xlsx",
+        "sheet": "Sample Meta Data"
+      }
+    },
+    {
+      "program": "AMP-CMD",
+      "source_label": "Participant ID",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": "",
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "participant_id"
+      },
+      "layer_1_etl": {
+        "value_form": "identifier",
+        "datatype": "string",
+        "missing_values": [],
+        "value_map": [],
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "fa592c5aa9f950f549da541830f7517e14999cfbf424ff93845750d08eecc8b2",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503236
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "2775aa56c9703ec4ce5256fcd3642fcbb5615424e6e72fa843c8537cd101bb8a",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503237
+          }
+        ]
+      },
+      "layout": {
+        "file_type": "xlsx",
+        "sheet": "Sheet 1"
+      }
+    },
+    {
+      "program": "AMP-CMD",
+      "source_label": "Participant ID",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": "",
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "participant_id"
+      },
+      "layer_1_etl": {
+        "value_form": "identifier",
+        "datatype": "string",
+        "missing_values": [],
+        "value_map": [],
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "59b56fc6d7c9c762f3e72ad1a709be9b476da76191700c020a8ffb4b6845269b",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503234
+          }
+        ]
+      },
+      "layout": {
+        "file_type": "xlsx",
+        "sheet": "Osmolality-norm Data"
+      }
+    },
+    {
+      "program": "AMP-CMD",
+      "source_label": "Participant ID",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": "",
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "participant_id"
+      },
+      "layer_1_etl": {
+        "value_form": "identifier",
+        "datatype": "string",
+        "missing_values": [],
+        "value_map": [],
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "1e69fd4ccdc3a6e7765b7414b3d3016053b35adfcfcb8595cd9145fcd44d9ae7",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503238
+          }
+        ]
+      },
+      "layout": {
+        "file_type": "xlsx",
+        "sheet": "Urine"
+      }
+    },
+    {
+      "program": "AMP-CMD",
+      "source_label": "Participant ID",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": "",
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "participant_id"
+      },
+      "layer_1_etl": {
+        "value_form": "identifier",
+        "datatype": "string",
+        "missing_values": [],
+        "value_map": [],
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "0843ef9d8dbce1d400ab88d2b71c69b245c2d992bf13746c9c716c752d073ba6",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503239
+          }
+        ]
+      }
+    },
+    {
+      "program": "AMP-CMD",
+      "source_label": "Participant ID",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": "",
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "participant_id"
+      },
+      "layer_1_etl": {
+        "value_form": "identifier",
+        "datatype": "string",
+        "missing_values": [],
+        "value_map": [],
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "c8ef27710bbb61523bda67b18dbfd59722536073999992c9a7e67835996e50bd",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503240
+          }
+        ]
+      },
+      "layout": {
+        "file_type": "xlsx",
+        "sheet": "Data Table"
+      }
+    },
+    {
+      "program": "AMP-CMD",
+      "source_label": "Donor",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": "",
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "participant_id"
+      },
+      "layer_1_etl": {
+        "value_form": "identifier",
+        "datatype": "string",
+        "missing_values": [],
+        "value_map": [],
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "562ecf93c8fc895b43d047e96662ee7ac8cfda539e69a6aa54514a62995fbb9e",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503241
+          }
+        ]
+      },
+      "layout": {
+        "file_type": "xlsx",
+        "sheet": "STable 1"
+      }
+    },
+    {
+      "program": "AMP-RA-SLE",
+      "source_label": "individualID",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": "",
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "participant_id"
+      },
+      "layer_1_etl": {
+        "value_form": "identifier",
+        "datatype": "string",
+        "missing_values": [],
+        "value_map": [],
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "d07dc8c22335d720b6028386be8e0ca14f91fa763897f1bba9a45a5a2dea9ee4",
+            "access_groups": [
+              "AMP-RA-SLE"
+            ],
+            "item_as_source_id": 501729
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "a5203e27eeb64900d06fd6cfc3684860e7008efaade42c16f8dc897185cf9324",
+            "access_groups": [
+              "AMP-RA-SLE"
+            ],
+            "item_as_source_id": 501748
+          }
+        ]
+      }
+    },
+    {
+      "program": "AMP-RA-SLE",
+      "source_label": "AMP subject ID",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": "",
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "participant_id"
+      },
+      "layer_1_etl": {
+        "value_form": "identifier",
+        "datatype": "string",
+        "missing_values": [],
+        "value_map": [],
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "6545f7428465f8877cea9d64589552b692e5a79a9ecc4265f99118523555b972",
+            "access_groups": [
+              "AMP-RA-SLE"
+            ],
+            "item_as_source_id": 503242
+          }
+        ]
+      },
+      "layout": {
+        "file_type": "xlsx",
+        "sheet": "data"
+      }
+    },
+    {
+      "program": "AMP-CMD",
+      "source_label": "specimen_id",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": "",
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "participant_id"
+      },
+      "layer_1_etl": {
+        "value_form": "identifier",
+        "datatype": "string",
+        "missing_values": [],
+        "value_map": [],
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "cf9d1cdf47d5687d31c7be385b6d310e23728e489d7e5889b28d0ab2f94c3e74",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503243
+          }
+        ]
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "observation",
+      "defining_concept_id": {
+        "id": 40768976,
+        "name": "Participant [Identifier]",
+        "domain": "Observation",
+        "target_field": "observation_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map",
+        "visit_occurrence_id": "cdm.visit_occurrence"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": [
+        {
+          "harmonized_value": "<any identifier>",
+          "value_as_string": "<value>"
+        }
+      ]
+    }
+  ]
+}

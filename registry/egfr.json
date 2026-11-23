@@ -1,0 +1,81 @@
+{
+  "registry_id": 100215,
+  "schema_version": "harmonized-element/2.5",
+  "registry_label": "egfr",
+  "definition": "Estimated glomerular filtration rate at baseline, as a number. The KPMP open-access clinical file reports this continuously; the FNIH single-cell metadata reports only a band, which is the separate element eGFR_binned.",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-CMD"
+  ],
+  "harmonized_values": [
+    "<any in range>"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "Baseline eGFR (ml/min/1.73m2)",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "continuous",
+        "datatype": "number",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "0843ef9d8dbce1d400ab88d2b71c69b245c2d992bf13746c9c716c752d073ba6",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 501505
+          }
+        ],
+        "range": {
+          "min": 0,
+          "max": 200
+        },
+        "value_map": []
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "egfr"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "measurement",
+      "defining_concept_id": {
+        "id": 44806420,
+        "name": "Estimation of glomerular filtration rate",
+        "domain": "Measurement",
+        "target_field": "measurement_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": [
+        {
+          "harmonized_value": "<any in range>",
+          "value_as_number": "<value>",
+          "unit_concept_id": {
+            "id": 720870,
+            "name": "milliliter per minute per 1.73 square meter"
+          }
+        }
+      ]
+    }
+  ]
+}

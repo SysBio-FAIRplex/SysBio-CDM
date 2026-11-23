@@ -1,0 +1,1003 @@
+{
+  "registry_id": 100683,
+  "schema_version": "harmonized-element/2.7",
+  "registry_label": "sex",
+  "definition": "Participant sex, harmonized across all AMP programs.",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-AD",
+    "AMP-PD",
+    "AMP-CMD",
+    "AMP-RA-SLE"
+  ],
+  "harmonized_values": [
+    "Male",
+    "Female",
+    "Unknown"
+  ],
+  "loading_grain": {
+    "anchor": "participant_id",
+    "entity": "participant",
+    "attribute": "sex"
+  },
+  "harmonized_with": [
+    "msex"
+  ],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "sex",
+      "program": "AMP-AD | AMP-PD | AMP-CMD | AMP-RA-SLE",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": "Sex.",
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "4169f8a20ebdbdfb8e36dec16d83641c9dcf24c4568639dcbabf1584a894c558",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 505061
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "f7233282b4ce15b1ffff6affc222eee63d674c12e58e22603102a21dec9cd481",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 505062
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "Male",
+            "source_encoding": null,
+            "harmonized_value": "Male",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "male",
+            "source_encoding": null,
+            "harmonized_value": "Male",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Female",
+            "source_encoding": null,
+            "harmonized_value": "Female",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "female",
+            "source_encoding": null,
+            "harmonized_value": "Female",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Unknown",
+            "source_encoding": null,
+            "harmonized_value": "Unknown",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "unknown",
+            "source_encoding": null,
+            "harmonized_value": "Unknown",
+            "harmonized_encoding": null,
+            "note": null
+          }
+        ]
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "sex"
+      }
+    },
+    {
+      "source_label": "sex",
+      "program": "AMP-AD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn51757646",
+            "id_type": "synapse",
+            "sha256": "484b323b8d6d2eea95a7f65e6492c90755dcf8b007db621c2b01081798e7846b",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 505063
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn73713769",
+            "id_type": "synapse",
+            "sha256": "82a49077ccb8b78a1159fa089a91330da7e62fabea65dceaa342faeed56fd3ab",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 505064
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn26254722",
+            "id_type": "synapse",
+            "sha256": "db89d330541adf6e82154760f483ee05baec744a76e26783a55c8ed0a9618242",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 505065
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn73713775",
+            "id_type": "synapse",
+            "sha256": "6dbbc9b9ecd74df91193deca12efa6b5affbd94e0b3642439d23b0669af45a53",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 505066
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn73713777",
+            "id_type": "synapse",
+            "sha256": "0b08ac7a739804df6964cba515eed3d65b0a29b47f0ded0512beaad2139c230b",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 505067
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn73713776",
+            "id_type": "synapse",
+            "sha256": "910e4c62e7c1662d6f2b51d34834eb1d20deb1def8fb6d1dc163fb8b749611bc",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 505068
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn73713767",
+            "id_type": "synapse",
+            "sha256": "a3d0ac04cefafedcf8b0e0aead1abb5004ddac2dd8edc1861b0cbb4f0631f9a9",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 505069
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn29855549",
+            "id_type": "synapse",
+            "sha256": "647445cf84458dc4e88f7e11574e1b744dd3196d9cc2374b847471b41e916d1a",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 505070
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn73713770",
+            "id_type": "synapse",
+            "sha256": "aa056aa2149a9f245ff2c971a8d02f469dc5a3090d7f421f45050c62014041ed",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 505071
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn27000243",
+            "id_type": "synapse",
+            "sha256": "58a078a75bbb6635658c2b07e543c4faabe0275bcf9ff51c01e5c4edb54290f2",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 505072
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn27000373",
+            "id_type": "synapse",
+            "sha256": "7a6a22a76f0b83e5de7ce70813a3769c6aac806cf86256ff445150a1818570a6",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 505073
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn29855598",
+            "id_type": "synapse",
+            "sha256": "bfc191044f8e83075588b12e6b7f1ab98261faa225ed23aaa2c266f78e20d8b4",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 505074
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn73713778",
+            "id_type": "synapse",
+            "sha256": "e4e1511a34ef4ad3350008e02189f983420d4aaf2584d194865d1e842e6fb038",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 505075
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn73713779",
+            "id_type": "synapse",
+            "sha256": "349ee951f2ac0cb4289e3c94a547235892e27a24935aa78598bc5172abdaafdb",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 505076
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn73916709",
+            "id_type": "synapse",
+            "sha256": "c08564964a45c4cd35ba90d7b54c142cf3b81f5cf30ab2658c6caeafb05503d3",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 505077
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "female",
+            "source_encoding": null,
+            "harmonized_value": "Female",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "male",
+            "source_encoding": null,
+            "harmonized_value": "Male",
+            "harmonized_encoding": null,
+            "note": null
+          }
+        ]
+      },
+      "src_entity": {
+        "entity": "subject",
+        "dictionaries": [
+          "ADKP_harmonized_data_dictionary",
+          "DiverseCohorts_DataDictionary",
+          "IndividualHumanMetadataTemplate"
+        ],
+        "ambiguous": false,
+        "evidence": "",
+        "status": "proposed"
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "sex"
+      }
+    },
+    {
+      "source_label": [
+        "sex",
+        "Sex"
+      ],
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "string",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "d53eb7e3e9fb8423daf9ab746222577feda602efe9c349aa3c7ac5fe8d43c9ae",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_ids": [
+              505078,
+              505079
+            ]
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "16fb675153112872207aea3e49c5238e2d8a30f9b00a0bcf3f94e9f4251182b4",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_ids": [
+              505080,
+              505081
+            ]
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "DFF142690",
+            "id_type": "cmdga",
+            "sha256": "c1070bcc2011d593709d2bad78cf8a25b7caa913f58418cb6b28c6eab92eb1d9",
+            "access_groups": [],
+            "item_as_source_ids": [
+              505082,
+              505083
+            ]
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "133181ead6bfd29d6e0fe7b57f5a7907a4743316ab1ad361216237a2665a52a8",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_ids": [
+              505084,
+              505085
+            ]
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "DFF520384",
+            "id_type": "cmdga",
+            "sha256": "8d480d206f6a44e492bd25e1339caefbe465a8de77942af6991bd3d830dd0cb8",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_ids": [
+              505086,
+              505087
+            ]
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "FNIH_Liver_scRNA_v1",
+            "id_type": "cmd_dataset",
+            "sha256": "eac08c00fe30ffbbde76c8c61db382183b674f02f972888a05afac14d1855e4d",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_ids": [
+              505088,
+              505089
+            ]
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "DFF003750",
+            "id_type": "cmdga",
+            "sha256": "c9912b8266deb23f6316c109f34dfe8d576f7efc4f0cfe53e4b9f7ea789eae5a",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_ids": [
+              505090,
+              505091
+            ]
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "DFF963439",
+            "id_type": "cmdga",
+            "sha256": "831987cb98b993bd1ef977d8758b4201210189a55d5bd38260dc41df3eefb5ac",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_ids": [
+              505092,
+              505093
+            ]
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "FNIH_Liver_scRNA_v1_Pseudobulk_NK",
+            "id_type": "cmd_dataset",
+            "sha256": "01fa7b159e181b67458c775f9a3cf1debb1cdec24b8c699148678c6d6f91d6c1",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_ids": [
+              505094,
+              505095
+            ]
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "FNIH_Liver_scRNA_v1_Pseudobulk_Mast",
+            "id_type": "cmd_dataset",
+            "sha256": "01fa7b159e181b67458c775f9a3cf1debb1cdec24b8c699148678c6d6f91d6c1",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_ids": [
+              505094,
+              505095
+            ]
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "FNIH_Liver_scRNA_v1_Pseudobulk_B",
+            "id_type": "cmd_dataset",
+            "sha256": "01fa7b159e181b67458c775f9a3cf1debb1cdec24b8c699148678c6d6f91d6c1",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_ids": [
+              505094,
+              505095
+            ]
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "FNIH_Liver_scRNA_v1_Pseudobulk_T",
+            "id_type": "cmd_dataset",
+            "sha256": "01fa7b159e181b67458c775f9a3cf1debb1cdec24b8c699148678c6d6f91d6c1",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_ids": [
+              505094,
+              505095
+            ]
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "FNIH_Liver_scRNA_v1_Pseudobulk_Myeloid",
+            "id_type": "cmd_dataset",
+            "sha256": "01fa7b159e181b67458c775f9a3cf1debb1cdec24b8c699148678c6d6f91d6c1",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_ids": [
+              505094,
+              505095
+            ]
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "FNIH_Liver_scRNA_v1_Pseudobulk_HSC",
+            "id_type": "cmd_dataset",
+            "sha256": "01fa7b159e181b67458c775f9a3cf1debb1cdec24b8c699148678c6d6f91d6c1",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_ids": [
+              505094,
+              505095
+            ]
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "FNIH_Liver_scRNA_v1_Pseudobulk_Schwann",
+            "id_type": "cmd_dataset",
+            "sha256": "01fa7b159e181b67458c775f9a3cf1debb1cdec24b8c699148678c6d6f91d6c1",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_ids": [
+              505094,
+              505095
+            ]
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "FNIH_Liver_scRNA_v1_Pseudobulk_Endothelial",
+            "id_type": "cmd_dataset",
+            "sha256": "01fa7b159e181b67458c775f9a3cf1debb1cdec24b8c699148678c6d6f91d6c1",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_ids": [
+              505094,
+              505095
+            ]
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "FNIH_Liver_scRNA_v1_Pseudobulk_Cholangiocyte",
+            "id_type": "cmd_dataset",
+            "sha256": "01fa7b159e181b67458c775f9a3cf1debb1cdec24b8c699148678c6d6f91d6c1",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_ids": [
+              505094,
+              505095
+            ]
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "FNIH_Liver_scRNA_v1_Pseudobulk_Hepatocytes",
+            "id_type": "cmd_dataset",
+            "sha256": "01fa7b159e181b67458c775f9a3cf1debb1cdec24b8c699148678c6d6f91d6c1",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_ids": [
+              505094,
+              505095
+            ]
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "Male",
+            "source_encoding": null,
+            "harmonized_value": "Male",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "male",
+            "source_encoding": null,
+            "harmonized_value": "Male",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Female",
+            "source_encoding": null,
+            "harmonized_value": "Female",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "female",
+            "source_encoding": null,
+            "harmonized_value": "Female",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "unknown",
+            "source_encoding": null,
+            "harmonized_value": "Unknown",
+            "harmonized_encoding": null,
+            "note": null
+          }
+        ]
+      },
+      "src_entity": {
+        "entity": "subject",
+        "dictionaries": [
+          "HumanDonor"
+        ],
+        "ambiguous": false,
+        "evidence": "",
+        "status": "proposed"
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "sex"
+      }
+    },
+    {
+      "source_label": "sex",
+      "program": "AMP-RA-SLE",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn47136972",
+            "id_type": "synapse",
+            "sha256": "a5203e27eeb64900d06fd6cfc3684860e7008efaade42c16f8dc897185cf9324",
+            "access_groups": [
+              "AMP-RA-SLE"
+            ],
+            "item_as_source_id": 505096
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn63930511",
+            "id_type": "synapse",
+            "sha256": "f16dfd73e7bf0b3fcce69c263622e734a678730e5a07afaf11ac2071657e5f99",
+            "access_groups": [
+              "AMP-RA-SLE"
+            ],
+            "item_as_source_id": 505097
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn72107707",
+            "id_type": "synapse",
+            "sha256": "b08804a4c9d1ad82fc7b22b55bd290a717a62fe6715ef530cbc9b2941351e3f5",
+            "access_groups": [
+              "AMP-RA-SLE"
+            ],
+            "item_as_source_id": 505098
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn72108810",
+            "id_type": "synapse",
+            "sha256": "e0638843795298edcbd72c43e5e25a936136b1ef76da32083fb0f07b2c7634ed",
+            "access_groups": [
+              "AMP-RA-SLE"
+            ],
+            "item_as_source_id": 505099
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn72122099",
+            "id_type": "synapse",
+            "sha256": "369ae16a7adcf9c00867055ef65debe9ea3b65e44c3f8476e9892654a8a27a11",
+            "access_groups": [
+              "AMP-RA-SLE"
+            ],
+            "item_as_source_id": 505100
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn75080274",
+            "id_type": "synapse",
+            "sha256": "2a028d467997f1a181bd4229563d6a01e99c0eb4cde4c3c19fcc86f846ece7c8",
+            "access_groups": [
+              "AMP-RA-SLE"
+            ],
+            "item_as_source_id": 505101
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn75080282",
+            "id_type": "synapse",
+            "sha256": "ecf9586757876da610dc6acc40eb2bb8cd8bf983d4f3fc36f6c61d1eb671e51e",
+            "access_groups": [
+              "AMP-RA-SLE"
+            ],
+            "item_as_source_id": 505102
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "female",
+            "source_encoding": null,
+            "harmonized_value": "Female",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "male",
+            "source_encoding": null,
+            "harmonized_value": "Male",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "unknown",
+            "source_encoding": null,
+            "harmonized_value": "Unknown",
+            "harmonized_encoding": null,
+            "note": null
+          }
+        ]
+      },
+      "src_entity": {
+        "entity": "subject",
+        "dictionaries": [
+          "[data file name withheld]"
+        ],
+        "ambiguous": false,
+        "evidence": "",
+        "status": "proposed"
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "sex"
+      }
+    },
+    {
+      "source_label": "Sex",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "string",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "",
+            "id_type": "",
+            "sha256": "0843ef9d8dbce1d400ab88d2b71c69b245c2d992bf13746c9c716c752d073ba6",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 505103
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "Male",
+            "source_encoding": null,
+            "harmonized_value": "Male",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "Female",
+            "source_encoding": null,
+            "harmonized_value": "Female",
+            "harmonized_encoding": null,
+            "note": ""
+          }
+        ],
+        "unit": ""
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "sex"
+      }
+    },
+    {
+      "source_label": "sex",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "string",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "",
+            "id_type": "",
+            "sha256": "c2ac4b9f767134cf8f1c58d73f26cf033663f9980c54c92d67cc538952ce51fb",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 505104
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "Male",
+            "source_encoding": null,
+            "harmonized_value": "Male",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "Female",
+            "source_encoding": null,
+            "harmonized_value": "Female",
+            "harmonized_encoding": null,
+            "note": ""
+          }
+        ],
+        "unit": ""
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "sex"
+      }
+    },
+    {
+      "source_label": "GENDER",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "b1dfd550-0386-43fc-b0dd-a1406abc4471",
+            "id_type": "kpmp",
+            "sha256": "59b56fc6d7c9c762f3e72ad1a709be9b476da76191700c020a8ffb4b6845269b",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 505105
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "Female",
+            "source_encoding": "2",
+            "harmonized_value": "Female",
+            "harmonized_encoding": null,
+            "note": ""
+          }
+        ]
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "sex"
+      }
+    },
+    {
+      "source_label": "GENDER",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "07122e8a-a1e1-4be4-ba72-5c6a21906900",
+            "id_type": "kpmp",
+            "sha256": "a2537ef46d05b0ac90962579b3277d412eafff7986625e415610e193ae6b2346",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 505106
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "Female",
+            "source_encoding": "2",
+            "harmonized_value": "Female",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "Male",
+            "source_encoding": "1",
+            "harmonized_value": "Male",
+            "harmonized_encoding": null,
+            "note": ""
+          }
+        ]
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "sex"
+      }
+    },
+    {
+      "source_label": "GENDER",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "de647dbf-ce0c-413b-8c0c-9e75217dc5b5",
+            "id_type": "kpmp",
+            "sha256": "96a41d5b5dcc1af33b8752924106d899b82aa595c1c64513cc796cc1b46e1a95",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 505107
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "Female",
+            "source_encoding": "2",
+            "harmonized_value": "Female",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "Male",
+            "source_encoding": "1",
+            "harmonized_value": "Male",
+            "harmonized_encoding": null,
+            "note": ""
+          }
+        ]
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "sex"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "observation",
+      "defining_concept_id": {
+        "id": 3046965,
+        "name": "Sex",
+        "domain": "Observation",
+        "target_field": "observation_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": [
+        {
+          "harmonized_value": "Male",
+          "value_as_concept_id": {
+            "id": 8507,
+            "name": "MALE"
+          },
+          "value_as_string": "Male"
+        },
+        {
+          "harmonized_value": "Female",
+          "value_as_concept_id": {
+            "id": 8532,
+            "name": "FEMALE"
+          },
+          "value_as_string": "Female"
+        },
+        {
+          "harmonized_value": "Unknown",
+          "value_as_concept_id": {
+            "id": 45877986,
+            "name": "Unknown"
+          },
+          "value_as_string": "Unknown"
+        }
+      ]
+    }
+  ]
+}

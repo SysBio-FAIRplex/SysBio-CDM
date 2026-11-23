@@ -1,0 +1,166 @@
+{
+  "registry_id": 100717,
+  "schema_version": "harmonized-element/2.5",
+  "registry_label": "tissue",
+  "definition": "Tissue the biosample is a component of",
+  "one_per": [
+    "person",
+    "specimen"
+  ],
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-AD"
+  ],
+  "harmonized_values": [
+    "adipose tissue",
+    "liver tissue",
+    "muscle tissue",
+    "pancreatic tissue",
+    "kidney tissue",
+    "other"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "tissue",
+      "program": "AMP-AD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn21323366",
+            "id_type": "synapse",
+            "sha256": "80d6246e6837543317ce7824958d54c141025746ca54de6923c56a41f656ff87",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 505521
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "adipose tissue",
+            "source_encoding": null,
+            "harmonized_value": "adipose tissue",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "liver tissue",
+            "source_encoding": null,
+            "harmonized_value": "liver tissue",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "muscle tissue",
+            "source_encoding": null,
+            "harmonized_value": "muscle tissue",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "pancreatic tissue",
+            "source_encoding": null,
+            "harmonized_value": "pancreatic tissue",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "kidney tissue",
+            "source_encoding": null,
+            "harmonized_value": "kidney tissue",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "other",
+            "source_encoding": null,
+            "harmonized_value": "other",
+            "harmonized_encoding": null,
+            "note": null
+          }
+        ]
+      },
+      "src_entity": {
+        "entity": "specimen",
+        "dictionaries": [
+          "[data file name withheld]"
+        ],
+        "ambiguous": false,
+        "evidence": "",
+        "status": "proposed"
+      },
+      "loading_grain": {
+        "anchor": "specimen_id",
+        "entity": "specimen",
+        "attribute": "tissue"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "observation",
+      "defining_concept_id": {
+        "id": 596879,
+        "name": "Please specify tissue.",
+        "domain": "Observation",
+        "target_field": "observation_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map",
+        "specimen_id": "staging.specimen_map"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [
+        {
+          "role": "attribute",
+          "column": null,
+          "status": "candidate",
+          "note": ""
+        }
+      ],
+      "value_map": [
+        {
+          "harmonized_value": "adipose tissue",
+          "value_as_string": "adipose tissue"
+        },
+        {
+          "harmonized_value": "liver tissue",
+          "value_as_string": "liver tissue"
+        },
+        {
+          "harmonized_value": "muscle tissue",
+          "value_as_string": "muscle tissue"
+        },
+        {
+          "harmonized_value": "pancreatic tissue",
+          "value_as_string": "pancreatic tissue"
+        },
+        {
+          "harmonized_value": "kidney tissue",
+          "value_as_string": "kidney tissue"
+        },
+        {
+          "harmonized_value": "other",
+          "value_as_concept_id": {
+            "id": 45878142,
+            "name": "Other"
+          },
+          "value_as_string": "other"
+        }
+      ]
+    }
+  ]
+}

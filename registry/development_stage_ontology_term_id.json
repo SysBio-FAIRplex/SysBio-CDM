@@ -1,0 +1,314 @@
+{
+  "registry_id": 100195,
+  "schema_version": "harmonized-element/2.5",
+  "registry_label": "development_stage_ontology_term_id",
+  "definition": "Ontology term identifier for developmental stage",
+  "one_per": [
+    "person"
+  ],
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-CMD"
+  ],
+  "harmonized_values": [
+    "HsapDv:0000087",
+    "UBERON:0000113",
+    "HsapDv:0000123",
+    "HsapDv:0000144",
+    "HsapDv:0000153",
+    "HsapDv:0000157",
+    "HsapDv:0000161",
+    "HsapDv:0000209",
+    "HsapDv:0000214",
+    "HsapDv:0000217",
+    "HsapDv:0000218",
+    "HsapDv:0000220"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "development_stage_ontology_term_id",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "DFF520384",
+            "id_type": "cmdga",
+            "sha256": "8d480d206f6a44e492bd25e1339caefbe465a8de77942af6991bd3d830dd0cb8",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 501403
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "DFF142690",
+            "id_type": "cmdga",
+            "sha256": "c1070bcc2011d593709d2bad78cf8a25b7caa913f58418cb6b28c6eab92eb1d9",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 501404
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "HsapDv:0000087",
+            "source_encoding": null,
+            "harmonized_value": "HsapDv:0000087",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0000113",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0000113",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "HsapDv:0000124",
+            "source_encoding": null,
+            "harmonized_value": "HsapDv:0000124",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "HsapDv:0000125",
+            "source_encoding": null,
+            "harmonized_value": "HsapDv:0000125",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "HsapDv:0000129",
+            "source_encoding": null,
+            "harmonized_value": "HsapDv:0000129",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "HsapDv:0000133",
+            "source_encoding": null,
+            "harmonized_value": "HsapDv:0000133",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "HsapDv:0000134",
+            "source_encoding": null,
+            "harmonized_value": "HsapDv:0000134",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "HsapDv:0000135",
+            "source_encoding": null,
+            "harmonized_value": "HsapDv:0000135",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "HsapDv:0000136",
+            "source_encoding": null,
+            "harmonized_value": "HsapDv:0000136",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "HsapDv:0000141",
+            "source_encoding": null,
+            "harmonized_value": "HsapDv:0000141",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "HsapDv:0000142",
+            "source_encoding": null,
+            "harmonized_value": "HsapDv:0000142",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "HsapDv:0000143",
+            "source_encoding": null,
+            "harmonized_value": "HsapDv:0000143",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "HsapDv:0000146",
+            "source_encoding": null,
+            "harmonized_value": "HsapDv:0000146",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "HsapDv:0000147",
+            "source_encoding": null,
+            "harmonized_value": "HsapDv:0000147",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "HsapDv:0000150",
+            "source_encoding": null,
+            "harmonized_value": "HsapDv:0000150",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "HsapDv:0000151",
+            "source_encoding": null,
+            "harmonized_value": "HsapDv:0000151",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "HsapDv:0000160",
+            "source_encoding": null,
+            "harmonized_value": "HsapDv:0000160",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "HsapDv:0000237",
+            "source_encoding": null,
+            "harmonized_value": "HsapDv:0000237",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "HsapDv:0000238",
+            "source_encoding": null,
+            "harmonized_value": "HsapDv:0000238",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "HsapDv:0000239",
+            "source_encoding": null,
+            "harmonized_value": "HsapDv:0000239",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "HsapDv:0000240",
+            "source_encoding": null,
+            "harmonized_value": "HsapDv:0000240",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "HsapDv:0000241",
+            "source_encoding": null,
+            "harmonized_value": "HsapDv:0000241",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "HsapDv:0000242",
+            "source_encoding": null,
+            "harmonized_value": "HsapDv:0000242",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "HsapDv:0000243",
+            "source_encoding": null,
+            "harmonized_value": "HsapDv:0000243",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "HsapDv:0000123",
+            "source_encoding": null,
+            "harmonized_value": "HsapDv:0000123",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "HsapDv:0000144",
+            "source_encoding": null,
+            "harmonized_value": "HsapDv:0000144",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "HsapDv:0000153",
+            "source_encoding": null,
+            "harmonized_value": "HsapDv:0000153",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "HsapDv:0000157",
+            "source_encoding": null,
+            "harmonized_value": "HsapDv:0000157",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "HsapDv:0000161",
+            "source_encoding": null,
+            "harmonized_value": "HsapDv:0000161",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "HsapDv:0000209",
+            "source_encoding": null,
+            "harmonized_value": "HsapDv:0000209",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "HsapDv:0000214",
+            "source_encoding": null,
+            "harmonized_value": "HsapDv:0000214",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "HsapDv:0000217",
+            "source_encoding": null,
+            "harmonized_value": "HsapDv:0000217",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "HsapDv:0000218",
+            "source_encoding": null,
+            "harmonized_value": "HsapDv:0000218",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "HsapDv:0000220",
+            "source_encoding": null,
+            "harmonized_value": "HsapDv:0000220",
+            "harmonized_encoding": null,
+            "note": ""
+          }
+        ]
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "development_stage_ontology_term_id"
+      }
+    }
+  ],
+  "sysbio_etl": []
+}

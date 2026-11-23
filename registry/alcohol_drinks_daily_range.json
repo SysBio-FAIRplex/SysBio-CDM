@@ -1,0 +1,195 @@
+{
+  "registry_id": 100020,
+  "schema_version": "harmonized-element/2.5",
+  "registry_label": "alcohol_drinks_daily_range",
+  "definition": "Alcohol drinking day average drinks consumed range",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-PD",
+    "AMP-CMD"
+  ],
+  "harmonized_values": [
+    "less than 1",
+    "7 or more",
+    "3-4",
+    "5-6",
+    "1-2",
+    "2 or more",
+    "less than 2",
+    "unknown"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "alcohol_drinks_daily_range",
+      "program": "AMP-PD",
+      "status": "approved",
+      "status_note": null,
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": "Alcohol drinking day average drinks consumed range.",
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "string",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "dd7732ea9d0dd2b29f64aed9435bf44cb728d0439ba446868c0de31548b15342",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 500172
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "less than 1",
+            "source_encoding": null,
+            "harmonized_value": "less than 1",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "7 or more",
+            "source_encoding": null,
+            "harmonized_value": "7 or more",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "3-4",
+            "source_encoding": null,
+            "harmonized_value": "3-4",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "5-6",
+            "source_encoding": null,
+            "harmonized_value": "5-6",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "1-2",
+            "source_encoding": null,
+            "harmonized_value": "1-2",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Unknown",
+            "source_encoding": null,
+            "harmonized_value": "unknown",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "1 or 2",
+            "source_encoding": null,
+            "harmonized_value": "1-2",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "3 or 4",
+            "source_encoding": null,
+            "harmonized_value": "3-4",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "5 or 6",
+            "source_encoding": null,
+            "harmonized_value": "5-6",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "7, 8, or 9",
+            "source_encoding": null,
+            "harmonized_value": "7 or more",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "10 or more",
+            "source_encoding": null,
+            "harmonized_value": "7 or more",
+            "harmonized_encoding": null,
+            "note": null
+          }
+        ]
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant_visit",
+        "attribute": "alcohol_drinks_daily_range"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "observation",
+      "defining_concept_id": {
+        "id": 35811099,
+        "name": "Amount of alcohol drunk on a typical drinking day",
+        "domain": "Observation",
+        "target_field": "observation_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map",
+        "visit_occurrence_id": "cdm.visit_occurrence"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": [
+        {
+          "harmonized_value": "less than 1",
+          "value_as_string": "less than 1"
+        },
+        {
+          "harmonized_value": "7 or more",
+          "value_as_string": "7 or more"
+        },
+        {
+          "harmonized_value": "3-4",
+          "value_as_concept_id": {
+            "id": 45883428,
+            "name": "3 or 4"
+          },
+          "value_as_string": "3-4"
+        },
+        {
+          "harmonized_value": "5-6",
+          "value_as_concept_id": {
+            "id": 45877926,
+            "name": "5 or 6"
+          },
+          "value_as_string": "5-6"
+        },
+        {
+          "harmonized_value": "1-2",
+          "value_as_concept_id": {
+            "id": 45882591,
+            "name": "1 or 2"
+          },
+          "value_as_string": "1-2"
+        },
+        {
+          "harmonized_value": "unknown",
+          "value_as_concept_id": {
+            "id": 45877986,
+            "name": "Unknown"
+          }
+        }
+      ]
+    }
+  ]
+}

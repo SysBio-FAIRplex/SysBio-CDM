@@ -1,0 +1,918 @@
+{
+  "registry_id": 100073,
+  "schema_version": "harmonized-element/2.5",
+  "registry_label": "brodmann_area",
+  "definition": "Brodmann area designation for brain tissue sample or region of interest",
+  "one_per": [
+    "person",
+    "specimen"
+  ],
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-AD"
+  ],
+  "harmonized_values": [
+    "BA1",
+    "BA2",
+    "BA3",
+    "BA4",
+    "BA5",
+    "BA6",
+    "BA7",
+    "BA8",
+    "BA9",
+    "BA10",
+    "BA11",
+    "BA17",
+    "BA18",
+    "BA19",
+    "BA20",
+    "BA21",
+    "BA22",
+    "BA24",
+    "BA39",
+    "BA40",
+    "BA41",
+    "BA42",
+    "BA44",
+    "BA45",
+    "BA46",
+    "BA47"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "BrodmannArea",
+      "program": "AMP-AD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn51757645",
+            "id_type": "synapse",
+            "sha256": "9eaa383ee973146ebfe02915b8119e33cc5533c7dfb7623ef9bfbc8c4a9bc945",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 500834
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "BA1",
+            "source_encoding": null,
+            "harmonized_value": "BA1",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "BA2",
+            "source_encoding": null,
+            "harmonized_value": "BA2",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "BA3",
+            "source_encoding": null,
+            "harmonized_value": "BA3",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "BA4",
+            "source_encoding": null,
+            "harmonized_value": "BA4",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "BA5",
+            "source_encoding": null,
+            "harmonized_value": "BA5",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "BA6",
+            "source_encoding": null,
+            "harmonized_value": "BA6",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "BA7",
+            "source_encoding": null,
+            "harmonized_value": "BA7",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "BA8",
+            "source_encoding": null,
+            "harmonized_value": "BA8",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "BA9",
+            "source_encoding": null,
+            "harmonized_value": "BA9",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "BA10",
+            "source_encoding": null,
+            "harmonized_value": "BA10",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "BA11",
+            "source_encoding": null,
+            "harmonized_value": "BA11",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "BA17",
+            "source_encoding": null,
+            "harmonized_value": "BA17",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "BA18",
+            "source_encoding": null,
+            "harmonized_value": "BA18",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "BA19",
+            "source_encoding": null,
+            "harmonized_value": "BA19",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "BA20",
+            "source_encoding": null,
+            "harmonized_value": "BA20",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "BA21",
+            "source_encoding": null,
+            "harmonized_value": "BA21",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "BA22",
+            "source_encoding": null,
+            "harmonized_value": "BA22",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "BA24",
+            "source_encoding": null,
+            "harmonized_value": "BA24",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "BA39",
+            "source_encoding": null,
+            "harmonized_value": "BA39",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "BA40",
+            "source_encoding": null,
+            "harmonized_value": "BA40",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "BA41",
+            "source_encoding": null,
+            "harmonized_value": "BA41",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "BA42",
+            "source_encoding": null,
+            "harmonized_value": "BA42",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "BA44",
+            "source_encoding": null,
+            "harmonized_value": "BA44",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "BA45",
+            "source_encoding": null,
+            "harmonized_value": "BA45",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "BA46",
+            "source_encoding": null,
+            "harmonized_value": "BA46",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "BA47",
+            "source_encoding": null,
+            "harmonized_value": "BA47",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "NA",
+            "source_encoding": null,
+            "harmonized_value": "NA",
+            "harmonized_encoding": null,
+            "note": null
+          }
+        ]
+      },
+      "src_entity": {
+        "entity": "specimen",
+        "dictionaries": [
+          "[data file name withheld]"
+        ],
+        "ambiguous": false,
+        "evidence": "",
+        "status": "proposed"
+      },
+      "loading_grain": {
+        "anchor": "specimen_id",
+        "entity": "specimen",
+        "attribute": "brodmann_area"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "specimen",
+      "defining_concept_id": {
+        "id": 4297704,
+        "name": "Brodmann area",
+        "domain": "Spec Anatomic Site",
+        "target_field": "anatomic_site_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [
+        {
+          "role": "attribute",
+          "column": "anatomic_site_concept_id",
+          "status": "proposed",
+          "note": ""
+        }
+      ],
+      "omop_value_set": [
+        {
+          "concept_id": 4297704,
+          "concept_name": "Brodmann area"
+        },
+        {
+          "concept_id": 37114881,
+          "concept_name": "Entire Brodmann area"
+        },
+        {
+          "concept_id": 4293745,
+          "concept_name": "Entire Brodmann area 1"
+        },
+        {
+          "concept_id": 4293755,
+          "concept_name": "Entire Brodmann area 11"
+        },
+        {
+          "concept_id": 4293160,
+          "concept_name": "Entire Brodmann area 12"
+        },
+        {
+          "concept_id": 1243329,
+          "concept_name": "Entire Brodmann area 13 of superior temporal gyrus"
+        },
+        {
+          "concept_id": 4293756,
+          "concept_name": "Entire Brodmann area 17"
+        },
+        {
+          "concept_id": 4293161,
+          "concept_name": "Entire Brodmann area 18"
+        },
+        {
+          "concept_id": 1243339,
+          "concept_name": "Entire Brodmann area 18 of inferior temporal gyrus"
+        },
+        {
+          "concept_id": 4293757,
+          "concept_name": "Entire Brodmann area 19"
+        },
+        {
+          "concept_id": 1243333,
+          "concept_name": "Entire Brodmann area 19 of inferior temporal gyrus"
+        },
+        {
+          "concept_id": 1243294,
+          "concept_name": "Entire Brodmann area 19 of middle temporal gyrus"
+        },
+        {
+          "concept_id": 4298491,
+          "concept_name": "Entire Brodmann area 2"
+        },
+        {
+          "concept_id": 4298507,
+          "concept_name": "Entire Brodmann area 20"
+        },
+        {
+          "concept_id": 1243341,
+          "concept_name": "Entire Brodmann area 20 of inferior temporal gyrus"
+        },
+        {
+          "concept_id": 1243296,
+          "concept_name": "Entire Brodmann area 20 of middle temporal gyrus"
+        },
+        {
+          "concept_id": 4297713,
+          "concept_name": "Entire Brodmann area 21"
+        },
+        {
+          "concept_id": 1243337,
+          "concept_name": "Entire Brodmann area 21 of inferior temporal gyrus"
+        },
+        {
+          "concept_id": 1243323,
+          "concept_name": "Entire Brodmann area 21 of superior temporal gyrus"
+        },
+        {
+          "concept_id": 4297714,
+          "concept_name": "Entire Brodmann area 22"
+        },
+        {
+          "concept_id": 1243297,
+          "concept_name": "Entire Brodmann area 22 of middle temporal gyrus"
+        },
+        {
+          "concept_id": 1243331,
+          "concept_name": "Entire Brodmann area 22 of superior temporal gyrus"
+        },
+        {
+          "concept_id": 4297715,
+          "concept_name": "Entire Brodmann area 23"
+        },
+        {
+          "concept_id": 4298508,
+          "concept_name": "Entire Brodmann area 24"
+        },
+        {
+          "concept_id": 4293758,
+          "concept_name": "Entire Brodmann area 25"
+        },
+        {
+          "concept_id": 4297716,
+          "concept_name": "Entire Brodmann area 26"
+        },
+        {
+          "concept_id": 4293162,
+          "concept_name": "Entire Brodmann area 28"
+        },
+        {
+          "concept_id": 4293163,
+          "concept_name": "Entire Brodmann area 29"
+        },
+        {
+          "concept_id": 4293746,
+          "concept_name": "Entire Brodmann area 3"
+        },
+        {
+          "concept_id": 4298509,
+          "concept_name": "Entire Brodmann area 30"
+        },
+        {
+          "concept_id": 4293759,
+          "concept_name": "Entire Brodmann area 31"
+        },
+        {
+          "concept_id": 4298510,
+          "concept_name": "Entire Brodmann area 32"
+        },
+        {
+          "concept_id": 4298511,
+          "concept_name": "Entire Brodmann area 33"
+        },
+        {
+          "concept_id": 4293164,
+          "concept_name": "Entire Brodmann area 34"
+        },
+        {
+          "concept_id": 4293165,
+          "concept_name": "Entire Brodmann area 35"
+        },
+        {
+          "concept_id": 4298512,
+          "concept_name": "Entire Brodmann area 36"
+        },
+        {
+          "concept_id": 4293166,
+          "concept_name": "Entire Brodmann area 37"
+        },
+        {
+          "concept_id": 1243335,
+          "concept_name": "Entire Brodmann area 37 of inferior temporal gyrus"
+        },
+        {
+          "concept_id": 1243295,
+          "concept_name": "Entire Brodmann area 37 of middle temporal gyrus"
+        },
+        {
+          "concept_id": 4294335,
+          "concept_name": "Entire Brodmann area 38"
+        },
+        {
+          "concept_id": 1243298,
+          "concept_name": "Entire Brodmann area 38 of middle temporal gyrus"
+        },
+        {
+          "concept_id": 1243327,
+          "concept_name": "Entire Brodmann area 38 of superior temporal gyrus"
+        },
+        {
+          "concept_id": 4293167,
+          "concept_name": "Entire Brodmann area 39"
+        },
+        {
+          "concept_id": 1243299,
+          "concept_name": "Entire Brodmann area 39 of middle temporal gyrus"
+        },
+        {
+          "concept_id": 1243325,
+          "concept_name": "Entire Brodmann area 39 of superior temporal gyrus"
+        },
+        {
+          "concept_id": 4297705,
+          "concept_name": "Entire Brodmann area 4"
+        },
+        {
+          "concept_id": 4298619,
+          "concept_name": "Entire Brodmann area 40"
+        },
+        {
+          "concept_id": 4298620,
+          "concept_name": "Entire Brodmann area 41"
+        },
+        {
+          "concept_id": 1243321,
+          "concept_name": "Entire Brodmann area 41 of superior temporal gyrus"
+        },
+        {
+          "concept_id": 4297832,
+          "concept_name": "Entire Brodmann area 42"
+        },
+        {
+          "concept_id": 4293168,
+          "concept_name": "Entire Brodmann area 43"
+        },
+        {
+          "concept_id": 4298622,
+          "concept_name": "Entire Brodmann area 44"
+        },
+        {
+          "concept_id": 4298623,
+          "concept_name": "Entire Brodmann area 45"
+        },
+        {
+          "concept_id": 4298624,
+          "concept_name": "Entire Brodmann area 46"
+        },
+        {
+          "concept_id": 4293169,
+          "concept_name": "Entire Brodmann area 47"
+        },
+        {
+          "concept_id": 4293170,
+          "concept_name": "Entire Brodmann area 48"
+        },
+        {
+          "concept_id": 4293752,
+          "concept_name": "Entire Brodmann area 5"
+        },
+        {
+          "concept_id": 4297835,
+          "concept_name": "Entire Brodmann area 52"
+        },
+        {
+          "concept_id": 4298505,
+          "concept_name": "Entire Brodmann area 6"
+        },
+        {
+          "concept_id": 4298506,
+          "concept_name": "Entire Brodmann area 7"
+        },
+        {
+          "concept_id": 4297712,
+          "concept_name": "Entire Brodmann area 8"
+        },
+        {
+          "concept_id": 4293753,
+          "concept_name": "Entire Brodmann area 9"
+        },
+        {
+          "concept_id": 4293754,
+          "concept_name": "Entire Brodmann area10"
+        },
+        {
+          "concept_id": 4235474,
+          "concept_name": "Entire Brodmann areas 17 (striate cortex), 18 (parastriate cortex) and 19 (peristriate cortex) of occipital lobe"
+        },
+        {
+          "concept_id": 37152194,
+          "concept_name": "Structure of Brodmann area 1, intermediate postcentral"
+        },
+        {
+          "concept_id": 37156623,
+          "concept_name": "Structure of Brodmann area 10, frontopolar"
+        },
+        {
+          "concept_id": 37156628,
+          "concept_name": "Structure of Brodmann area 11, prefrontal"
+        },
+        {
+          "concept_id": 37156629,
+          "concept_name": "Structure of Brodmann area 12, prefrontal"
+        },
+        {
+          "concept_id": 1243328,
+          "concept_name": "Structure of Brodmann area 13 of superior temporal gyrus"
+        },
+        {
+          "concept_id": 1243338,
+          "concept_name": "Structure of Brodmann area 18 of inferior temporal gyrus"
+        },
+        {
+          "concept_id": 37156633,
+          "concept_name": "Structure of Brodmann area 18, parastriate"
+        },
+        {
+          "concept_id": 1243332,
+          "concept_name": "Structure of Brodmann area 19 of inferior temporal gyrus"
+        },
+        {
+          "concept_id": 1243277,
+          "concept_name": "Structure of Brodmann area 19 of middle temporal gyrus"
+        },
+        {
+          "concept_id": 37156634,
+          "concept_name": "Structure of Brodmann area 19, peristriate"
+        },
+        {
+          "concept_id": 37156635,
+          "concept_name": "Structure of Brodmann area 2, caudal postcentral"
+        },
+        {
+          "concept_id": 1243340,
+          "concept_name": "Structure of Brodmann area 20 of inferior temporal gyrus"
+        },
+        {
+          "concept_id": 1243279,
+          "concept_name": "Structure of Brodmann area 20 of middle temporal gyrus"
+        },
+        {
+          "concept_id": 37156636,
+          "concept_name": "Structure of Brodmann area 20, inferior temporal"
+        },
+        {
+          "concept_id": 1243336,
+          "concept_name": "Structure of Brodmann area 21 of inferior temporal gyrus"
+        },
+        {
+          "concept_id": 37156646,
+          "concept_name": "Structure of Brodmann area 21 of middle temporal gyrus"
+        },
+        {
+          "concept_id": 1243322,
+          "concept_name": "Structure of Brodmann area 21 of superior temporal gyrus"
+        },
+        {
+          "concept_id": 1243275,
+          "concept_name": "Structure of Brodmann area 22 of middle temporal gyrus"
+        },
+        {
+          "concept_id": 1243330,
+          "concept_name": "Structure of Brodmann area 22 of superior temporal gyrus"
+        },
+        {
+          "concept_id": 37156647,
+          "concept_name": "Structure of Brodmann area 22, superior temporal"
+        },
+        {
+          "concept_id": 37156648,
+          "concept_name": "Structure of Brodmann area 23, ventral posterior cingulate"
+        },
+        {
+          "concept_id": 37156652,
+          "concept_name": "Structure of Brodmann area 24, ventral anterior cingulate"
+        },
+        {
+          "concept_id": 37156653,
+          "concept_name": "Structure of Brodmann area 25, area subgenualis"
+        },
+        {
+          "concept_id": 37156654,
+          "concept_name": "Structure of Brodmann area 26, ectosplenial"
+        },
+        {
+          "concept_id": 37156655,
+          "concept_name": "Structure of Brodmann area 28, entorhinal"
+        },
+        {
+          "concept_id": 37152199,
+          "concept_name": "Structure of Brodmann area 29, granular retrolimbic"
+        },
+        {
+          "concept_id": 37152200,
+          "concept_name": "Structure of Brodmann area 3, rostral postcentral"
+        },
+        {
+          "concept_id": 37152201,
+          "concept_name": "Structure of Brodmann area 30, agranular retrolimbic"
+        },
+        {
+          "concept_id": 37152202,
+          "concept_name": "Structure of Brodmann area 31, dorsal posterior cingulate"
+        },
+        {
+          "concept_id": 37152203,
+          "concept_name": "Structure of Brodmann area 32, dorsal anterior cingulate"
+        },
+        {
+          "concept_id": 37152204,
+          "concept_name": "Structure of Brodmann area 33, pregenual"
+        },
+        {
+          "concept_id": 37152205,
+          "concept_name": "Structure of Brodmann area 34, dorsal entorhinal"
+        },
+        {
+          "concept_id": 37152206,
+          "concept_name": "Structure of Brodmann area 35, perirhinal"
+        },
+        {
+          "concept_id": 37152207,
+          "concept_name": "Structure of Brodmann area 36, ectorhinal"
+        },
+        {
+          "concept_id": 1243334,
+          "concept_name": "Structure of Brodmann area 37 of inferior temporal gyrus"
+        },
+        {
+          "concept_id": 1243278,
+          "concept_name": "Structure of Brodmann area 37 of middle temporal gyrus"
+        },
+        {
+          "concept_id": 37152208,
+          "concept_name": "Structure of Brodmann area 37, occipitotemporal"
+        },
+        {
+          "concept_id": 1243276,
+          "concept_name": "Structure of Brodmann area 38 of middle temporal gyrus"
+        },
+        {
+          "concept_id": 1243326,
+          "concept_name": "Structure of Brodmann area 38 of superior temporal gyrus"
+        },
+        {
+          "concept_id": 37152209,
+          "concept_name": "Structure of Brodmann area 38, temporopolar"
+        },
+        {
+          "concept_id": 1243271,
+          "concept_name": "Structure of Brodmann area 39 of middle temporal gyrus"
+        },
+        {
+          "concept_id": 1243324,
+          "concept_name": "Structure of Brodmann area 39 of superior temporal gyrus"
+        },
+        {
+          "concept_id": 37152210,
+          "concept_name": "Structure of Brodmann area 39, angular"
+        },
+        {
+          "concept_id": 37152211,
+          "concept_name": "Structure of Brodmann area 4, gigantopyramidal"
+        },
+        {
+          "concept_id": 37152212,
+          "concept_name": "Structure of Brodmann area 40, supramarginal"
+        },
+        {
+          "concept_id": 1243320,
+          "concept_name": "Structure of Brodmann area 41 of superior temporal gyrus"
+        },
+        {
+          "concept_id": 37152213,
+          "concept_name": "Structure of Brodmann area 41, anterior transverse temporal"
+        },
+        {
+          "concept_id": 37152214,
+          "concept_name": "Structure of Brodmann area 42, posterior transverse temporal"
+        },
+        {
+          "concept_id": 37156656,
+          "concept_name": "Structure of Brodmann area 43, subcentral"
+        },
+        {
+          "concept_id": 37156657,
+          "concept_name": "Structure of Brodmann area 44, opercular"
+        },
+        {
+          "concept_id": 37156658,
+          "concept_name": "Structure of Brodmann area 45, triangular"
+        },
+        {
+          "concept_id": 37156659,
+          "concept_name": "Structure of Brodmann area 46, middle frontal"
+        },
+        {
+          "concept_id": 37156662,
+          "concept_name": "Structure of Brodmann area 47, orbital"
+        },
+        {
+          "concept_id": 37156663,
+          "concept_name": "Structure of Brodmann area 48, retrosubicular"
+        },
+        {
+          "concept_id": 37156665,
+          "concept_name": "Structure of Brodmann area 5, preparietal"
+        },
+        {
+          "concept_id": 37156666,
+          "concept_name": "Structure of Brodmann area 52, parainsular"
+        },
+        {
+          "concept_id": 37156668,
+          "concept_name": "Structure of Brodmann area 6, agranular frontal"
+        },
+        {
+          "concept_id": 37156669,
+          "concept_name": "Structure of Brodmann area 7, superior parietal"
+        },
+        {
+          "concept_id": 37156670,
+          "concept_name": "Structure of Brodmann area 8, intermediate frontal"
+        },
+        {
+          "concept_id": 37156671,
+          "concept_name": "Structure of Brodmann area 9, granular frontal"
+        },
+        {
+          "concept_id": 37219200,
+          "concept_name": "Structure of Brodmann areas 17 (striate cortex) 18 (parastriate cortex) and 19 (peristriate cortex) of the left half of occipital lobe"
+        },
+        {
+          "concept_id": 37219202,
+          "concept_name": "Structure of Brodmann areas 17 (striate cortex) 18 (parastriate cortex) and 19 (peristriate cortex) of the right half of occipital lobe"
+        },
+        {
+          "concept_id": 4028249,
+          "concept_name": "Structure of Brodmann areas 17 (striate cortex), 18 (parastriate cortex) and 19 (peristriate cortex) of the occipital lobe"
+        }
+      ],
+      "value_map": [
+        {
+          "harmonized_value": "BA1",
+          "value_as_string": "BA1"
+        },
+        {
+          "harmonized_value": "BA2",
+          "value_as_string": "BA2"
+        },
+        {
+          "harmonized_value": "BA3",
+          "value_as_string": "BA3"
+        },
+        {
+          "harmonized_value": "BA4",
+          "value_as_string": "BA4"
+        },
+        {
+          "harmonized_value": "BA5",
+          "value_as_string": "BA5"
+        },
+        {
+          "harmonized_value": "BA6",
+          "value_as_string": "BA6"
+        },
+        {
+          "harmonized_value": "BA7",
+          "value_as_string": "BA7"
+        },
+        {
+          "harmonized_value": "BA8",
+          "value_as_string": "BA8"
+        },
+        {
+          "harmonized_value": "BA9",
+          "value_as_string": "BA9"
+        },
+        {
+          "harmonized_value": "BA10",
+          "value_as_string": "BA10"
+        },
+        {
+          "harmonized_value": "BA11",
+          "value_as_string": "BA11"
+        },
+        {
+          "harmonized_value": "BA17",
+          "value_as_string": "BA17"
+        },
+        {
+          "harmonized_value": "BA18",
+          "value_as_string": "BA18"
+        },
+        {
+          "harmonized_value": "BA19",
+          "value_as_string": "BA19"
+        },
+        {
+          "harmonized_value": "BA20",
+          "value_as_string": "BA20"
+        },
+        {
+          "harmonized_value": "BA21",
+          "value_as_string": "BA21"
+        },
+        {
+          "harmonized_value": "BA22",
+          "value_as_string": "BA22"
+        },
+        {
+          "harmonized_value": "BA24",
+          "value_as_string": "BA24"
+        },
+        {
+          "harmonized_value": "BA39",
+          "value_as_string": "BA39"
+        },
+        {
+          "harmonized_value": "BA40",
+          "value_as_string": "BA40"
+        },
+        {
+          "harmonized_value": "BA41",
+          "value_as_string": "BA41"
+        },
+        {
+          "harmonized_value": "BA42",
+          "value_as_string": "BA42"
+        },
+        {
+          "harmonized_value": "BA44",
+          "value_as_string": "BA44"
+        },
+        {
+          "harmonized_value": "BA45",
+          "value_as_string": "BA45"
+        },
+        {
+          "harmonized_value": "BA46",
+          "value_as_string": "BA46"
+        },
+        {
+          "harmonized_value": "BA47",
+          "value_as_string": "BA47"
+        }
+      ]
+    }
+  ]
+}

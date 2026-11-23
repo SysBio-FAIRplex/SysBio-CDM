@@ -1,0 +1,308 @@
+{
+  "registry_id": 100521,
+  "schema_version": "harmonized-element/2.5",
+  "registry_label": "organ",
+  "definition": "Organ or tissue type from which biospecimen was collected",
+  "one_per": [
+    "person",
+    "specimen"
+  ],
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-AD"
+  ],
+  "harmonized_values": [
+    "brain",
+    "heart",
+    "liver",
+    "kidney",
+    "lung",
+    "spleen",
+    "blood",
+    "cerebrospinal fluid",
+    "other"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "organ",
+      "program": "AMP-AD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn21323366",
+            "id_type": "synapse",
+            "sha256": "80d6246e6837543317ce7824958d54c141025746ca54de6923c56a41f656ff87",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 503043
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn51757645",
+            "id_type": "synapse",
+            "sha256": "9eaa383ee973146ebfe02915b8119e33cc5533c7dfb7623ef9bfbc8c4a9bc945",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 503044
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn26254721",
+            "id_type": "synapse",
+            "sha256": "aa67e93e52bc0d52c63e796303a0c97333902886b3453252b0380950b00a2f1d",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 503045
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn52430345",
+            "id_type": "synapse",
+            "sha256": "223f2e41f2cf2822fd2274170417c6657fd2a08e1d143789495299a8e9862d11",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 503046
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn21893059",
+            "id_type": "synapse",
+            "sha256": "e70e3a4dd534043d14d65690a4e1b42c6e69b3ca7874aa6f9988d926eb6ef180",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 503047
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn27000243",
+            "id_type": "synapse",
+            "sha256": "58a078a75bbb6635658c2b07e543c4faabe0275bcf9ff51c01e5c4edb54290f2",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 503048
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn27000373",
+            "id_type": "synapse",
+            "sha256": "7a6a22a76f0b83e5de7ce70813a3769c6aac806cf86256ff445150a1818570a6",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 503049
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn27034471",
+            "id_type": "synapse",
+            "sha256": "9c2be87182338c6d25a0bf52b27d2d4fc51136929bd250e76bdbdb6024120d18",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 503050
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "6eacfd62facbb1ca279eacd87ba62de04fb54df1a3f5aa123ed6ae80da7438fd",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 503051
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "Brain",
+            "source_encoding": null,
+            "harmonized_value": "brain",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Heart",
+            "source_encoding": null,
+            "harmonized_value": "heart",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Liver",
+            "source_encoding": null,
+            "harmonized_value": "liver",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Kidney",
+            "source_encoding": null,
+            "harmonized_value": "kidney",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Lung",
+            "source_encoding": null,
+            "harmonized_value": "lung",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Spleen",
+            "source_encoding": null,
+            "harmonized_value": "spleen",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Blood",
+            "source_encoding": null,
+            "harmonized_value": "blood",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CSF",
+            "source_encoding": null,
+            "harmonized_value": "cerebrospinal fluid",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Other",
+            "source_encoding": null,
+            "harmonized_value": "other",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "brain",
+            "source_encoding": null,
+            "harmonized_value": "brain",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "blood",
+            "source_encoding": null,
+            "harmonized_value": "blood",
+            "harmonized_encoding": null,
+            "note": null
+          }
+        ]
+      },
+      "src_entity": {
+        "entity": "specimen",
+        "dictionaries": [
+          "[data file name withheld]"
+        ],
+        "ambiguous": false,
+        "evidence": "",
+        "status": "proposed"
+      },
+      "loading_grain": {
+        "anchor": "specimen_id",
+        "entity": "specimen",
+        "attribute": "organ"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "observation",
+      "defining_concept_id": {
+        "id": 596878,
+        "name": "Please specify organ.",
+        "domain": "Observation",
+        "target_field": "observation_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map",
+        "specimen_id": "staging.specimen_map"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [
+        {
+          "role": "attribute",
+          "column": null,
+          "status": "candidate",
+          "note": ""
+        }
+      ],
+      "value_map": [
+        {
+          "harmonized_value": "brain",
+          "value_as_string": "brain"
+        },
+        {
+          "harmonized_value": "heart",
+          "value_as_string": "heart"
+        },
+        {
+          "harmonized_value": "liver",
+          "value_as_string": "liver"
+        },
+        {
+          "harmonized_value": "kidney",
+          "value_as_string": "kidney"
+        },
+        {
+          "harmonized_value": "lung",
+          "value_as_string": "lung"
+        },
+        {
+          "harmonized_value": "spleen",
+          "value_as_string": "spleen"
+        },
+        {
+          "harmonized_value": "blood",
+          "value_as_string": "blood"
+        },
+        {
+          "harmonized_value": "cerebrospinal fluid",
+          "value_as_concept_id": {
+            "id": 4124259,
+            "name": "Cerebrospinal fluid specimen"
+          },
+          "value_as_string": "cerebrospinal fluid"
+        },
+        {
+          "harmonized_value": "other",
+          "value_as_concept_id": {
+            "id": 45878142,
+            "name": "Other"
+          },
+          "value_as_string": "other"
+        },
+        {
+          "harmonized_value": "brain",
+          "value_as_string": "brain"
+        },
+        {
+          "harmonized_value": "blood",
+          "value_as_string": "blood"
+        }
+      ]
+    }
+  ]
+}

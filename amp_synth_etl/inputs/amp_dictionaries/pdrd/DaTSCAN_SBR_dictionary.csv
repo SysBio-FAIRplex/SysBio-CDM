@@ -1,9 +1,0 @@
-TableName,ColumnName,Title,Description,Required,DataType,DataTypeRange,UniqueValues
-DaTSCAN_SBR.csv,participant_id,Study Subject ID,Study Subject ID,TRUE,String,,
-DaTSCAN_SBR.csv,GUID,Subject ID,Global Unique ID (USUBJID),FALSE,String,,
-DaTSCAN_SBR.csv,visit_name,Visit Name,"Visit name: M - in months, SC - screening visit, LOG - records without visit; #2 or #3 define repated records at the same visit or repeated visit",TRUE,String,,
-DaTSCAN_SBR.csv,visit_month,Visit Month,"Numeric visit in months; for visits prior baseline -1, -2 is an order of screening visits",FALSE,Float,,
-DaTSCAN_SBR.csv,sbr_caudate_r,Striatal Binding Ratio,Brain region used for ROI sampling for SBR quantitative analysis - right caudate SBR,FALSE,Float,0-5,
-DaTSCAN_SBR.csv,sbr_caudate_l,Striatal Binding Ratio,Brain region used for ROI sampling for SBR quantitative analysis - left caudate SBR,FALSE,Float,0-5,
-DaTSCAN_SBR.csv,sbr_putamen_r,Striatal Binding Ratio,Brain region used for ROI sampling for SBR quantitative analysis - right putamen SBR,FALSE,Float,0-5,
-DaTSCAN_SBR.csv,sbr_putamen_l,Striatal Binding Ratio,Brain region used for ROI sampling for SBR quantitative analysis - left putamen SBR,FALSE,Float,0-5,

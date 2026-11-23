@@ -1,0 +1,203 @@
+{
+  "registry_id": 100486,
+  "schema_version": "harmonized-element/2.5",
+  "registry_label": "modality",
+  "definition": "Type or method of clinical assessment, diagnostic procedure, or imaging technique used",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-CMD"
+  ],
+  "harmonized_values": [
+    "magnetic resonance imaging",
+    "computed tomography",
+    "ultrasound",
+    "clinical examination",
+    "laboratory test",
+    "questionnaire",
+    "rna",
+    "atac"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "modality",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "DFF003750",
+            "id_type": "cmdga",
+            "sha256": "c9912b8266deb23f6316c109f34dfe8d576f7efc4f0cfe53e4b9f7ea789eae5a",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 502920
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "DFF571863",
+            "id_type": "cmdga",
+            "sha256": "c3ac2109034f84bde4d3a40ff5ec69cb7fca253b207198dbc8895a1d5a910902",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 502921
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "8eb197ba46fbef1bdf5631675b0bd5c524d65a42df9381db5919f0ce473c62fa",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 502922
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "MRI",
+            "source_encoding": null,
+            "harmonized_value": "magnetic resonance imaging",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CT",
+            "source_encoding": null,
+            "harmonized_value": "computed tomography",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Ultrasound",
+            "source_encoding": null,
+            "harmonized_value": "ultrasound",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Clinical Examination",
+            "source_encoding": null,
+            "harmonized_value": "clinical examination",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Laboratory Test",
+            "source_encoding": null,
+            "harmonized_value": "laboratory test",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Questionnaire",
+            "source_encoding": null,
+            "harmonized_value": "questionnaire",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "rna",
+            "source_encoding": null,
+            "harmonized_value": "rna",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "atac",
+            "source_encoding": null,
+            "harmonized_value": "atac",
+            "harmonized_encoding": null,
+            "note": ""
+          }
+        ]
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "modality"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "observation",
+      "defining_concept_id": {
+        "id": 44803445,
+        "name": "Method",
+        "domain": "Observation",
+        "target_field": "observation_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": [
+        {
+          "harmonized_value": "magnetic resonance imaging",
+          "value_as_concept_id": {
+            "id": 4013636,
+            "name": "Magnetic resonance imaging"
+          },
+          "value_as_string": "magnetic resonance imaging"
+        },
+        {
+          "harmonized_value": "computed tomography",
+          "value_as_string": "computed tomography"
+        },
+        {
+          "harmonized_value": "ultrasound",
+          "value_as_string": "ultrasound"
+        },
+        {
+          "harmonized_value": "clinical examination",
+          "value_as_string": "clinical examination"
+        },
+        {
+          "harmonized_value": "laboratory test",
+          "value_as_string": "laboratory test"
+        },
+        {
+          "harmonized_value": "questionnaire",
+          "value_as_concept_id": {
+            "id": 44804112,
+            "name": "Questionnaire"
+          },
+          "value_as_string": "questionnaire"
+        },
+        {
+          "harmonized_value": "rna",
+          "value_as_concept_id": {
+            "id": 1073466,
+            "name": "Nucleic acid sequencing technique"
+          },
+          "value_as_string": "rna",
+          "note": ""
+        },
+        {
+          "harmonized_value": "atac",
+          "value_as_concept_id": {
+            "id": 1073466,
+            "name": "Nucleic acid sequencing technique"
+          },
+          "value_as_string": "atac",
+          "note": ""
+        }
+      ]
+    }
+  ]
+}

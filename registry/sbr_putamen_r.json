@@ -1,0 +1,77 @@
+{
+  "registry_id": 100672,
+  "schema_version": "harmonized-element/2.5",
+  "registry_label": "sbr_putamen_r",
+  "definition": "Brain region used for ROI sampling for SBR quantitative analysis - right putamen SBR.",
+  "one_per": [
+    "person",
+    "visit"
+  ],
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-PD"
+  ],
+  "harmonized_values": [
+    "<any in range>"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "sbr_putamen_r",
+      "program": "AMP-PD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": "Brain region used for ROI sampling for SBR quantitative analysis - right putamen SBR.",
+      "layer_1_etl": {
+        "value_form": "continuous",
+        "datatype": "number",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "3a791b7b13dc9ab902d27e0d594cd9eb785fa476ea0d35c191da65e903fcf362",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 504478
+          }
+        ],
+        "range": {
+          "min": 0,
+          "max": 5
+        },
+        "value_map": []
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "measurement",
+      "defining_concept_id": {
+        "id": 4327116,
+        "name": "Single photon emission computed tomography for dopamine transport",
+        "domain": "Procedure",
+        "target_field": "measurement_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map",
+        "visit_occurrence_id": "cdm.visit_occurrence"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": [
+        {
+          "harmonized_value": "<any in range>",
+          "value_as_number": "<value>"
+        }
+      ]
+    }
+  ]
+}

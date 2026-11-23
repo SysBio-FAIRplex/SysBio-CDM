@@ -1,0 +1,103 @@
+{
+  "registry_id": 100492,
+  "schema_version": "harmonized-element/2.5",
+  "registry_label": "msq_v2011_info_source",
+  "definition": "MSQ Source Of Information",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-PD"
+  ],
+  "harmonized_values": [
+    "informant",
+    "subject served as informant"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "msq_info_source",
+      "program": "AMP-PD",
+      "status": "approved",
+      "status_note": null,
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": "MSQ Source Of Information.",
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "4c6de4a9cd752197bca40057220123a4093a4485208f56a73c2f8e0076da9a03",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 502930
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "Informant",
+            "source_encoding": null,
+            "harmonized_value": "informant",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Subject served as informant",
+            "source_encoding": null,
+            "harmonized_value": "subject served as informant",
+            "harmonized_encoding": null,
+            "note": null
+          }
+        ]
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant_visit",
+        "attribute": "msq_v2011_info_source"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "observation",
+      "defining_concept_id": {
+        "id": 42529257,
+        "name": "Respondent type",
+        "domain": "Observation",
+        "target_field": "observation_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map",
+        "visit_occurrence_id": "cdm.visit_occurrence"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": [
+        {
+          "harmonized_value": "informant",
+          "value_as_string": "informant",
+          "value_as_concept_id": {
+            "id": 45881752,
+            "name": "Interview with informant"
+          }
+        },
+        {
+          "harmonized_value": "subject served as informant",
+          "value_as_concept_id": {
+            "id": 603082,
+            "name": "Self reported"
+          },
+          "value_as_string": "subject served as informant"
+        }
+      ]
+    }
+  ],
+  "status_note": ""
+}

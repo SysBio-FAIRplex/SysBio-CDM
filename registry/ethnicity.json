@@ -1,0 +1,389 @@
+{
+  "registry_id": 100234,
+  "schema_version": "harmonized-element/2.5",
+  "registry_label": "ethnicity",
+  "definition": "Ethnicity",
+  "one_per": [
+    "person"
+  ],
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-AD",
+    "AMP-PD",
+    "AMP-CMD",
+    "AMP-RA-SLE"
+  ],
+  "harmonized_values": [
+    "Not Hispanic or Latino",
+    "Unknown",
+    "Hispanic or Latino",
+    "unknown"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "ethnicity",
+      "program": "AMP-AD | AMP-PD | AMP-CMD | AMP-RA-SLE",
+      "status": "approved",
+      "status_note": null,
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": "Ethnicity.",
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "4169f8a20ebdbdfb8e36dec16d83641c9dcf24c4568639dcbabf1584a894c558",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 501570
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "Not Hispanic or Latino",
+            "source_encoding": null,
+            "harmonized_value": "Not Hispanic or Latino",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Unknown",
+            "source_encoding": null,
+            "harmonized_value": "Unknown",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Hispanic or Latino",
+            "source_encoding": null,
+            "harmonized_value": "Hispanic or Latino",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "unknown",
+            "source_encoding": null,
+            "harmonized_value": "unknown",
+            "harmonized_encoding": null,
+            "note": null
+          }
+        ]
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "ethnicity"
+      }
+    },
+    {
+      "source_label": "ethnicity",
+      "program": "AMP-AD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn73916709",
+            "id_type": "synapse",
+            "sha256": "c08564964a45c4cd35ba90d7b54c142cf3b81f5cf30ab2658c6caeafb05503d3",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 501571
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "Not Hispanic or Latino",
+            "source_encoding": null,
+            "harmonized_value": "Not Hispanic or Latino",
+            "harmonized_encoding": null,
+            "note": null
+          }
+        ]
+      },
+      "src_entity": {
+        "entity": "subject",
+        "dictionaries": [
+          "IndividualHumanMetadataTemplate"
+        ],
+        "ambiguous": false,
+        "evidence": "",
+        "status": "proposed"
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "ethnicity"
+      }
+    },
+    {
+      "source_label": "ethnicity",
+      "program": "AMP-RA-SLE",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn47136972",
+            "id_type": "synapse",
+            "sha256": "a5203e27eeb64900d06fd6cfc3684860e7008efaade42c16f8dc897185cf9324",
+            "access_groups": [
+              "AMP-RA-SLE"
+            ],
+            "item_as_source_id": 501572
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn63930511",
+            "id_type": "synapse",
+            "sha256": "f16dfd73e7bf0b3fcce69c263622e734a678730e5a07afaf11ac2071657e5f99",
+            "access_groups": [
+              "AMP-RA-SLE"
+            ],
+            "item_as_source_id": 501573
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn72107707",
+            "id_type": "synapse",
+            "sha256": "b08804a4c9d1ad82fc7b22b55bd290a717a62fe6715ef530cbc9b2941351e3f5",
+            "access_groups": [
+              "AMP-RA-SLE"
+            ],
+            "item_as_source_id": 501574
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn72108810",
+            "id_type": "synapse",
+            "sha256": "e0638843795298edcbd72c43e5e25a936136b1ef76da32083fb0f07b2c7634ed",
+            "access_groups": [
+              "AMP-RA-SLE"
+            ],
+            "item_as_source_id": 501575
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn72122099",
+            "id_type": "synapse",
+            "sha256": "369ae16a7adcf9c00867055ef65debe9ea3b65e44c3f8476e9892654a8a27a11",
+            "access_groups": [
+              "AMP-RA-SLE"
+            ],
+            "item_as_source_id": 501576
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn75080274",
+            "id_type": "synapse",
+            "sha256": "2a028d467997f1a181bd4229563d6a01e99c0eb4cde4c3c19fcc86f846ece7c8",
+            "access_groups": [
+              "AMP-RA-SLE"
+            ],
+            "item_as_source_id": 501577
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn75080282",
+            "id_type": "synapse",
+            "sha256": "ecf9586757876da610dc6acc40eb2bb8cd8bf983d4f3fc36f6c61d1eb671e51e",
+            "access_groups": [
+              "AMP-RA-SLE"
+            ],
+            "item_as_source_id": 501578
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "Not Hispanic or Latino",
+            "source_encoding": null,
+            "harmonized_value": "Not Hispanic or Latino",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Hispanic or Latino",
+            "source_encoding": null,
+            "harmonized_value": "Hispanic or Latino",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "unknown",
+            "source_encoding": null,
+            "harmonized_value": "Unknown",
+            "harmonized_encoding": null,
+            "note": null
+          }
+        ]
+      },
+      "src_entity": {
+        "entity": "subject",
+        "dictionaries": [
+          "[data file name withheld]"
+        ],
+        "ambiguous": false,
+        "evidence": "",
+        "status": "proposed"
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "ethnicity"
+      }
+    },
+    {
+      "source_label": "isHispanic",
+      "program": "AMP-AD",
+      "status": "approved",
+      "status_note": null,
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "ordinal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn51757646",
+            "id_type": "synapse",
+            "sha256": "484b323b8d6d2eea95a7f65e6492c90755dcf8b007db621c2b01081798e7846b",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 501579
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn73713769",
+            "id_type": "synapse",
+            "sha256": "82a49077ccb8b78a1159fa089a91330da7e62fabea65dceaa342faeed56fd3ab",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 501580
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "FALSE",
+            "source_encoding": null,
+            "harmonized_value": "Not Hispanic or Latino",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "False",
+            "source_encoding": null,
+            "harmonized_value": "Not Hispanic or Latino",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "TRUE",
+            "source_encoding": null,
+            "harmonized_value": "Hispanic or Latino",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "True",
+            "source_encoding": null,
+            "harmonized_value": "Hispanic or Latino",
+            "harmonized_encoding": null,
+            "note": null
+          }
+        ]
+      },
+      "src_entity": {
+        "entity": "subject",
+        "dictionaries": [
+          "ADKP_harmonized_data_dictionary",
+          "DiverseCohorts_DataDictionary"
+        ],
+        "ambiguous": false,
+        "evidence": "",
+        "status": "proposed"
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "ethnicity"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "observation",
+      "defining_concept_id": {
+        "id": 40771985,
+        "name": "Ethnicity OMB.1997",
+        "domain": "Observation",
+        "target_field": "observation_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": [
+        {
+          "harmonized_value": "Not Hispanic or Latino",
+          "value_as_concept_id": {
+            "id": 38003564,
+            "name": "Not Hispanic or Latino"
+          },
+          "value_as_string": "Not Hispanic or Latino"
+        },
+        {
+          "harmonized_value": "Unknown",
+          "value_as_concept_id": {
+            "id": 45877986,
+            "name": "Unknown"
+          },
+          "value_as_string": "Unknown"
+        },
+        {
+          "harmonized_value": "Hispanic or Latino",
+          "value_as_concept_id": {
+            "id": 38003563,
+            "name": "Hispanic or Latino"
+          },
+          "value_as_string": "Hispanic or Latino"
+        },
+        {
+          "harmonized_value": "unknown",
+          "value_as_concept_id": {
+            "id": 45877986,
+            "name": "Unknown"
+          },
+          "value_as_string": "unknown"
+        }
+      ]
+    }
+  ]
+}

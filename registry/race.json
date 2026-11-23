@@ -1,0 +1,1002 @@
+{
+  "registry_id": 100614,
+  "schema_version": "harmonized-element/2.7",
+  "registry_label": "race",
+  "definition": "Race",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-AD",
+    "AMP-PD",
+    "AMP-CMD",
+    "AMP-RA-SLE"
+  ],
+  "harmonized_values": [
+    "white",
+    "black or african american",
+    "multiracial",
+    "asian",
+    "american indian or alaska native",
+    "unknown",
+    "other",
+    "native hawaiian or other pacific islander",
+    "arab",
+    "hispanic"
+  ],
+  "loading_grain": {
+    "anchor": "participant_id",
+    "entity": "participant",
+    "attribute": "race"
+  },
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "race",
+      "program": "AMP-AD | AMP-PD | AMP-CMD | AMP-RA-SLE",
+      "status": "approved",
+      "status_note": null,
+      "manual_approval": false,
+      "src_dictionary": [
+        "DiverseCohorts_DataDictionary.pdf"
+      ],
+      "src_definition": "Race.",
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "4169f8a20ebdbdfb8e36dec16d83641c9dcf24c4568639dcbabf1584a894c558",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 503544
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "White",
+            "source_encoding": null,
+            "harmonized_value": "white",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Black or African American",
+            "source_encoding": null,
+            "harmonized_value": "black or african american",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Multiracial",
+            "source_encoding": null,
+            "harmonized_value": "multiracial",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Asian",
+            "source_encoding": null,
+            "harmonized_value": "asian",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "American Indian or Alaska Native",
+            "source_encoding": null,
+            "harmonized_value": "american indian or alaska native",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Unknown",
+            "source_encoding": null,
+            "harmonized_value": "unknown",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Other",
+            "source_encoding": null,
+            "harmonized_value": "other",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Native Hawaiian or Other Pacific Islander",
+            "source_encoding": null,
+            "harmonized_value": "native hawaiian or other pacific islander",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Arab",
+            "source_encoding": null,
+            "harmonized_value": "arab",
+            "harmonized_encoding": null,
+            "note": null
+          }
+        ]
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "race"
+      }
+    },
+    {
+      "source_label": "race",
+      "program": "AMP-AD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn26254722",
+            "id_type": "synapse",
+            "sha256": "db89d330541adf6e82154760f483ee05baec744a76e26783a55c8ed0a9618242",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 503545
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn73713775",
+            "id_type": "synapse",
+            "sha256": "6dbbc9b9ecd74df91193deca12efa6b5affbd94e0b3642439d23b0669af45a53",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 503546
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn73713777",
+            "id_type": "synapse",
+            "sha256": "0b08ac7a739804df6964cba515eed3d65b0a29b47f0ded0512beaad2139c230b",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 503547
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn73713776",
+            "id_type": "synapse",
+            "sha256": "910e4c62e7c1662d6f2b51d34834eb1d20deb1def8fb6d1dc163fb8b749611bc",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 503548
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn27000373",
+            "id_type": "synapse",
+            "sha256": "7a6a22a76f0b83e5de7ce70813a3769c6aac806cf86256ff445150a1818570a6",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 503549
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn73713779",
+            "id_type": "synapse",
+            "sha256": "349ee951f2ac0cb4289e3c94a547235892e27a24935aa78598bc5172abdaafdb",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 503550
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn73916709",
+            "id_type": "synapse",
+            "sha256": "c08564964a45c4cd35ba90d7b54c142cf3b81f5cf30ab2658c6caeafb05503d3",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 503551
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn73713768",
+            "id_type": "synapse",
+            "sha256": "6ebec61ee5ebd81051fe1eac0abe6c2dc106acf9e499f818f4d1e855a1f1850f",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 503552
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn51757646",
+            "id_type": "synapse",
+            "sha256": "484b323b8d6d2eea95a7f65e6492c90755dcf8b007db621c2b01081798e7846b",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 503553
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn73713769",
+            "id_type": "synapse",
+            "sha256": "82a49077ccb8b78a1159fa089a91330da7e62fabea65dceaa342faeed56fd3ab",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 503554
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "White",
+            "source_encoding": null,
+            "harmonized_value": "white",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Black or African American",
+            "source_encoding": null,
+            "harmonized_value": "black or african american",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Asian",
+            "source_encoding": null,
+            "harmonized_value": "asian",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "American Indian or Alaska Native",
+            "source_encoding": null,
+            "harmonized_value": "american indian or alaska native",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Native Hawaiian or Other Pacific Islander",
+            "source_encoding": null,
+            "harmonized_value": "native hawaiian or other pacific islander",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Other",
+            "source_encoding": null,
+            "harmonized_value": "other",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "missing or unknown",
+            "source_encoding": null,
+            "harmonized_value": "unknown",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "other",
+            "source_encoding": null,
+            "harmonized_value": "other",
+            "harmonized_encoding": null,
+            "note": null
+          }
+        ]
+      },
+      "src_entity": {
+        "entity": "subject",
+        "dictionaries": [
+          "ADKP_harmonized_data_dictionary",
+          "DiverseCohorts_DataDictionary",
+          "IndividualHumanMetadataTemplate"
+        ],
+        "ambiguous": false,
+        "evidence": "",
+        "status": "proposed"
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "race"
+      }
+    },
+    {
+      "source_label": "race",
+      "program": "AMP-AD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": "ROSMAP: Race.",
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn3191087",
+            "id_type": "synapse",
+            "sha256": "5d9efbdc845990ed75a2f3a5784554c7afe0e1b04484e2aa4a9d9d01911e1b90",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 503555
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "1",
+            "source_encoding": null,
+            "harmonized_value": "white",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "2",
+            "source_encoding": null,
+            "harmonized_value": "black or african american",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "3",
+            "source_encoding": null,
+            "harmonized_value": "american indian or alaska native",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "4",
+            "source_encoding": null,
+            "harmonized_value": "native hawaiian or other pacific islander",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "5",
+            "source_encoding": null,
+            "harmonized_value": "asian",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "6",
+            "source_encoding": null,
+            "harmonized_value": "other",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "7",
+            "source_encoding": null,
+            "harmonized_value": "unknown",
+            "harmonized_encoding": null,
+            "note": ""
+          }
+        ],
+        "missing_values": [
+          "NA"
+        ]
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "race"
+      }
+    },
+    {
+      "source_label": "race",
+      "program": "AMP-RA-SLE",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn72107707",
+            "id_type": "synapse",
+            "sha256": "b08804a4c9d1ad82fc7b22b55bd290a717a62fe6715ef530cbc9b2941351e3f5",
+            "access_groups": [
+              "AMP-RA-SLE"
+            ],
+            "item_as_source_id": 503556
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn72108810",
+            "id_type": "synapse",
+            "sha256": "e0638843795298edcbd72c43e5e25a936136b1ef76da32083fb0f07b2c7634ed",
+            "access_groups": [
+              "AMP-RA-SLE"
+            ],
+            "item_as_source_id": 503557
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn47136972",
+            "id_type": "synapse",
+            "sha256": "a5203e27eeb64900d06fd6cfc3684860e7008efaade42c16f8dc897185cf9324",
+            "access_groups": [
+              "AMP-RA-SLE"
+            ],
+            "item_as_source_id": 503558
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "White",
+            "source_encoding": null,
+            "harmonized_value": "white",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Black or African American",
+            "source_encoding": null,
+            "harmonized_value": "black or african american",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Asian",
+            "source_encoding": null,
+            "harmonized_value": "asian",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "other",
+            "source_encoding": null,
+            "harmonized_value": "other",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "unknown",
+            "source_encoding": null,
+            "harmonized_value": "unknown",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "American Indian or Alaska Native",
+            "source_encoding": null,
+            "harmonized_value": "american indian or alaska native",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Native Hawaiian or Other Pacific Islander",
+            "source_encoding": null,
+            "harmonized_value": "native hawaiian or other pacific islander",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Mixed Race",
+            "source_encoding": null,
+            "harmonized_value": "multiracial",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Hispanic",
+            "source_encoding": null,
+            "harmonized_value": "hispanic",
+            "harmonized_encoding": null,
+            "note": null
+          }
+        ]
+      },
+      "src_entity": {
+        "entity": "subject",
+        "dictionaries": [
+          "[data file name withheld]"
+        ],
+        "ambiguous": false,
+        "evidence": "",
+        "status": "proposed"
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "race"
+      }
+    },
+    {
+      "source_label": [
+        "Race",
+        "ethnicity"
+      ],
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": true,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "string",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "DFF520384",
+            "id_type": "cmdga",
+            "sha256": "8d480d206f6a44e492bd25e1339caefbe465a8de77942af6991bd3d830dd0cb8",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_ids": [
+              503559,
+              503560
+            ]
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "White",
+            "source_encoding": null,
+            "harmonized_value": "white",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "Caucasian",
+            "source_encoding": null,
+            "harmonized_value": "white",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "BlackorAfrican-American",
+            "source_encoding": null,
+            "harmonized_value": "black or african american",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "Asian",
+            "source_encoding": null,
+            "harmonized_value": "asian",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "Unknown",
+            "source_encoding": null,
+            "harmonized_value": "unknown",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "Other",
+            "source_encoding": null,
+            "harmonized_value": "other",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "White-Other",
+            "source_encoding": null,
+            "harmonized_value": "white",
+            "harmonized_encoding": null,
+            "note": ""
+          }
+        ]
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "race"
+      }
+    },
+    {
+      "source_label": "Race",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "string",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "",
+            "id_type": "",
+            "sha256": "0843ef9d8dbce1d400ab88d2b71c69b245c2d992bf13746c9c716c752d073ba6",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503561
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "White",
+            "source_encoding": null,
+            "harmonized_value": "white",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "Black or African-American",
+            "source_encoding": null,
+            "harmonized_value": "black or african american",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "Asian",
+            "source_encoding": null,
+            "harmonized_value": "asian",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "Other",
+            "source_encoding": null,
+            "harmonized_value": "other",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "Don't Know",
+            "source_encoding": null,
+            "harmonized_value": "unknown",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "White, Other",
+            "source_encoding": null,
+            "harmonized_value": "white",
+            "harmonized_encoding": null,
+            "note": ""
+          }
+        ],
+        "unit": ""
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "race"
+      }
+    },
+    {
+      "source_label": "race",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "string",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "",
+            "id_type": "",
+            "sha256": "c2ac4b9f767134cf8f1c58d73f26cf033663f9980c54c92d67cc538952ce51fb",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503562
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "White",
+            "source_encoding": null,
+            "harmonized_value": "white",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "Black or African-American",
+            "source_encoding": null,
+            "harmonized_value": "black or african american",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "Asian",
+            "source_encoding": null,
+            "harmonized_value": "asian",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "White, Other",
+            "source_encoding": null,
+            "harmonized_value": "white",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "Don't Know",
+            "source_encoding": null,
+            "harmonized_value": "unknown",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "Other",
+            "source_encoding": null,
+            "harmonized_value": "other",
+            "harmonized_encoding": null,
+            "note": ""
+          }
+        ],
+        "unit": ""
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "race"
+      }
+    },
+    {
+      "source_label": "ancestry",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "DFF520384",
+            "id_type": "cmdga",
+            "sha256": "8d480d206f6a44e492bd25e1339caefbe465a8de77942af6991bd3d830dd0cb8",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 500220
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "European",
+            "source_encoding": null,
+            "harmonized_value": "white",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "African American",
+            "source_encoding": null,
+            "harmonized_value": "black or african american",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "Asian",
+            "source_encoding": null,
+            "harmonized_value": "asian",
+            "harmonized_encoding": null,
+            "note": ""
+          }
+        ]
+      },
+      "precedence": 3,
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "race"
+      }
+    },
+    {
+      "source_label": "race",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "string",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "DFF963439",
+            "id_type": "cmdga",
+            "sha256": "831987cb98b993bd1ef977d8758b4201210189a55d5bd38260dc41df3eefb5ac",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503563
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "Caucasian",
+            "source_encoding": null,
+            "harmonized_value": "white",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Black",
+            "source_encoding": null,
+            "harmonized_value": "black or african american",
+            "harmonized_encoding": null,
+            "note": null
+          }
+        ]
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "race"
+      }
+    },
+    {
+      "source_label": "ethnicity",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": null,
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "string",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "DFF142690",
+            "id_type": "cmdga",
+            "sha256": "c1070bcc2011d593709d2bad78cf8a25b7caa913f58418cb6b28c6eab92eb1d9",
+            "access_groups": [],
+            "item_as_source_id": 500224
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "Caucasian",
+            "source_encoding": null,
+            "harmonized_value": "white",
+            "harmonized_encoding": null,
+            "note": null
+          }
+        ]
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "race"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "observation",
+      "defining_concept_id": {
+        "id": 3046853,
+        "name": "Race",
+        "domain": "Observation",
+        "target_field": "observation_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": [
+        {
+          "harmonized_value": "White",
+          "value_as_concept_id": {
+            "id": 8527,
+            "name": "White"
+          },
+          "value_as_string": "White"
+        },
+        {
+          "harmonized_value": "Black or African American",
+          "value_as_concept_id": {
+            "id": 8516,
+            "name": "Black or African American"
+          },
+          "value_as_string": "Black or African American"
+        },
+        {
+          "harmonized_value": "Multiracial",
+          "value_as_string": "Multiracial",
+          "value_as_concept_id": {
+            "id": 1546847,
+            "name": "More than one race"
+          }
+        },
+        {
+          "harmonized_value": "Asian",
+          "value_as_concept_id": {
+            "id": 8515,
+            "name": "Asian"
+          },
+          "value_as_string": "Asian"
+        },
+        {
+          "harmonized_value": "American Indian or Alaska Native",
+          "value_as_concept_id": {
+            "id": 8657,
+            "name": "American Indian or Alaska Native"
+          },
+          "value_as_string": "American Indian or Alaska Native"
+        },
+        {
+          "harmonized_value": "Unknown",
+          "value_as_concept_id": {
+            "id": 45877986,
+            "name": "Unknown"
+          },
+          "value_as_string": "Unknown"
+        },
+        {
+          "harmonized_value": "unknown",
+          "value_as_concept_id": {
+            "id": 45877986,
+            "name": "Unknown"
+          }
+        },
+        {
+          "harmonized_value": "Other",
+          "value_as_concept_id": {
+            "id": 45878142,
+            "name": "Other"
+          },
+          "value_as_string": "Other"
+        },
+        {
+          "harmonized_value": "Native Hawaiian or Other Pacific Islander",
+          "value_as_concept_id": {
+            "id": 8557,
+            "name": "Native Hawaiian or Other Pacific Islander"
+          },
+          "value_as_string": "Native Hawaiian or Other Pacific Islander"
+        },
+        {
+          "harmonized_value": "Arab",
+          "value_as_concept_id": {
+            "id": 38003616,
+            "name": "Arab"
+          },
+          "value_as_string": "Arab"
+        }
+      ]
+    }
+  ]
+}

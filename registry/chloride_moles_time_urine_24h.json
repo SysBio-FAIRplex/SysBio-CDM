@@ -1,0 +1,79 @@
+{
+  "registry_id": 100097,
+  "schema_version": "harmonized-element/2.7",
+  "registry_label": "chloride_moles_time_urine_24h",
+  "harmonized_element_curie": "LOINC:2079-2",
+  "definition": "Urine chloride excretion rate (mmol/day) (KPMP, OP-BC AU680-Urine-KPMP QC Data file Information-2022.docx)",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-CMD"
+  ],
+  "harmonized_values": [],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "Cl (mmol/day)",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [
+        "OP-BC AU680-Urine-KPMP QC Data file Information-2022.docx"
+      ],
+      "src_definition": "Urine chloride excretion rate (mmol/day)",
+      "layer_1_etl": {
+        "value_form": "continuous",
+        "datatype": "float",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "55681d72-ddfe-45a8-b0ff-ee9a002e9710",
+            "id_type": "kpmp",
+            "sha256": "2775aa56c9703ec4ce5256fcd3642fcbb5615424e6e72fa843c8537cd101bb8a",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 501282
+          }
+        ],
+        "value_map": [],
+        "unit": "mmol/day"
+      },
+      "loading_grain": {
+        "anchor": "specimen_id",
+        "entity": "specimen",
+        "attribute": "chloride_moles_time_urine_24h"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "measurement",
+      "defining_concept_id": {
+        "id": 3006567,
+        "name": "Chloride [Moles/time] in 24 hour Urine",
+        "domain": "Measurement",
+        "target_field": "measurement_concept_id",
+        "vocabulary_id": "LOINC",
+        "concept_code": "2079-2",
+        "vocabulary_version": "LOINC 2.78"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map",
+        "specimen_id": "staging.specimen_map"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": [
+        {
+          "harmonized_value": "<any in range>",
+          "value_as_number": "<value>"
+        }
+      ]
+    }
+  ]
+}

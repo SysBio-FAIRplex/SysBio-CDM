@@ -1,0 +1,458 @@
+{
+  "registry_id": 100040,
+  "schema_version": "harmonized-element/2.5",
+  "registry_label": "ancestry",
+  "definition": "Genetic ancestry or ancestral background of the participant",
+  "one_per": [
+    "person"
+  ],
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-CMD"
+  ],
+  "harmonized_values": [
+    "European",
+    "African",
+    "East Asian",
+    "South Asian",
+    "Hispanic/Latino",
+    "Native American",
+    "Middle Eastern",
+    "Mixed"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "ancestry",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "DFF142690",
+            "id_type": "cmdga",
+            "sha256": "c1070bcc2011d593709d2bad78cf8a25b7caa913f58418cb6b28c6eab92eb1d9",
+            "access_groups": [],
+            "item_as_source_id": 500219
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "DFF520384",
+            "id_type": "cmdga",
+            "sha256": "8d480d206f6a44e492bd25e1339caefbe465a8de77942af6991bd3d830dd0cb8",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 500220
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "DFF963439",
+            "id_type": "cmdga",
+            "sha256": "831987cb98b993bd1ef977d8758b4201210189a55d5bd38260dc41df3eefb5ac",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 500221
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "European",
+            "source_encoding": null,
+            "harmonized_value": "European",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "African",
+            "source_encoding": null,
+            "harmonized_value": "African",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "East Asian",
+            "source_encoding": null,
+            "harmonized_value": "East Asian",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "South Asian",
+            "source_encoding": null,
+            "harmonized_value": "South Asian",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Hispanic/Latino",
+            "source_encoding": null,
+            "harmonized_value": "Hispanic/Latino",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Native American",
+            "source_encoding": null,
+            "harmonized_value": "Native American",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Middle Eastern",
+            "source_encoding": null,
+            "harmonized_value": "Middle Eastern",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Mixed",
+            "source_encoding": null,
+            "harmonized_value": "Mixed",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "African American",
+            "source_encoding": null,
+            "harmonized_value": "African",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "Asian",
+            "source_encoding": null,
+            "harmonized_value": "East Asian",
+            "harmonized_encoding": null,
+            "note": ""
+          }
+        ]
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "ancestry"
+      }
+    },
+    {
+      "source_label": "ethnicity",
+      "program": "AMP-CMD",
+      "manual_approval": false,
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "string",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "f7233282b4ce15b1ffff6affc222eee63d674c12e58e22603102a21dec9cd481",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 500222
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "DFF963439",
+            "id_type": "cmdga",
+            "sha256": "831987cb98b993bd1ef977d8758b4201210189a55d5bd38260dc41df3eefb5ac",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 500223
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "DFF142690",
+            "id_type": "cmdga",
+            "sha256": "c1070bcc2011d593709d2bad78cf8a25b7caa913f58418cb6b28c6eab92eb1d9",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 500224
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "Finnish",
+            "source_encoding": null,
+            "harmonized_value": "European",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "Caucasian",
+            "source_encoding": null,
+            "harmonized_value": "European",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "Unknown",
+            "source_encoding": null,
+            "harmonized_value": "Unknown",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "White",
+            "source_encoding": null,
+            "harmonized_value": "European",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "African American",
+            "source_encoding": null,
+            "harmonized_value": "African",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "Hispanic",
+            "source_encoding": null,
+            "harmonized_value": "Hispanic/Latino",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "European",
+            "source_encoding": null,
+            "harmonized_value": "European",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Asian",
+            "source_encoding": null,
+            "harmonized_value": "East Asian",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "Black or African-American",
+            "source_encoding": null,
+            "harmonized_value": "African",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "European ancestry",
+            "source_encoding": null,
+            "harmonized_value": "European",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "Mixed",
+            "source_encoding": null,
+            "harmonized_value": "Mixed",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Hispanic/Latino",
+            "source_encoding": null,
+            "harmonized_value": "Hispanic/Latino",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "East-Asian (Chinese)",
+            "source_encoding": null,
+            "harmonized_value": "East Asian",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "Pacific Islander",
+            "source_encoding": null,
+            "harmonized_value": "Pacific Islander",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": " Caucasian",
+            "source_encoding": null,
+            "harmonized_value": "European",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "Black",
+            "source_encoding": null,
+            "harmonized_value": "African",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "British Caucasian",
+            "source_encoding": null,
+            "harmonized_value": "European",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "African",
+            "source_encoding": null,
+            "harmonized_value": "African",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Yoruba",
+            "source_encoding": null,
+            "harmonized_value": "African",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "unkown",
+            "source_encoding": null,
+            "harmonized_value": "Unknown",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "Asian/Indian",
+            "source_encoding": null,
+            "harmonized_value": "South Asian",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "White, Other",
+            "source_encoding": null,
+            "harmonized_value": "European",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "OTHER",
+            "source_encoding": null,
+            "harmonized_value": null,
+            "harmonized_encoding": null,
+            "note": ""
+          }
+        ]
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "ancestry"
+      },
+      "status": "approved"
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "observation",
+      "defining_concept_id": {
+        "id": 3046853,
+        "name": "Race",
+        "domain": "Observation",
+        "target_field": "observation_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": [
+        {
+          "harmonized_value": "European",
+          "value_as_concept_id": {
+            "id": 8527,
+            "name": "White"
+          },
+          "value_as_string": "European"
+        },
+        {
+          "harmonized_value": "African",
+          "value_as_concept_id": {
+            "id": 8516,
+            "name": "Black or African American"
+          },
+          "value_as_string": "African"
+        },
+        {
+          "harmonized_value": "East Asian",
+          "value_as_concept_id": {
+            "id": 8515,
+            "name": "Asian"
+          },
+          "value_as_string": "East Asian"
+        },
+        {
+          "harmonized_value": "South Asian",
+          "value_as_concept_id": {
+            "id": 8515,
+            "name": "Asian"
+          },
+          "value_as_string": "South Asian"
+        },
+        {
+          "harmonized_value": "Hispanic/Latino",
+          "value_as_string": "Hispanic/Latino",
+          "value_as_concept_id": {
+            "id": 1546523,
+            "name": "Hispanic OR Latino"
+          }
+        },
+        {
+          "harmonized_value": "Native American",
+          "value_as_concept_id": {
+            "id": 8657,
+            "name": "American Indian or Alaska Native"
+          },
+          "value_as_string": "Native American"
+        },
+        {
+          "harmonized_value": "Middle Eastern",
+          "value_as_string": "Middle Eastern",
+          "value_as_concept_id": {
+            "id": 38003615,
+            "name": "Middle Eastern or North African"
+          }
+        },
+        {
+          "harmonized_value": "Mixed",
+          "value_as_string": "Mixed",
+          "value_as_concept_id": {
+            "id": 1546847,
+            "name": "More than one race"
+          }
+        },
+        {
+          "harmonized_value": "Pacific Islander",
+          "value_as_concept_id": {
+            "id": 8557,
+            "name": "Native Hawaiian or Other Pacific Islander"
+          },
+          "value_as_string": "Pacific Islander"
+        },
+        {
+          "harmonized_value": "Unknown",
+          "value_as_concept_id": {
+            "id": 45877986,
+            "name": "Unknown"
+          },
+          "value_as_string": "Unknown"
+        }
+      ]
+    }
+  ]
+}

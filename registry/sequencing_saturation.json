@@ -1,0 +1,874 @@
+{
+  "registry_id": 100681,
+  "schema_version": "harmonized-element/2.7",
+  "registry_label": "sequencing_saturation",
+  "definition": "Sheet 'Expression Matrix', group 'RNA Analysis': column 'Sequencing Saturation' - data type Numeric; Required. The template carries no definition text.",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-CMD"
+  ],
+  "harmonized_values": [],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "Sequencing Saturation",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [
+        "METADATA_Transcriptomics_Single-cell_v4 template (header rows 1-4: group, column, data type, requirement)"
+      ],
+      "src_definition": "Sheet 'Expression Matrix', group 'RNA Analysis': column 'Sequencing Saturation' - data type Numeric; Required.",
+      "layer_1_etl": {
+        "value_form": "continuous",
+        "datatype": "float",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "02921be3-2e09-4a42-91c2-9f0afb1e5040",
+            "id_type": "kpmp",
+            "sha256": "74f04a48c8a550ca9b68d388d80659a9823fc840ecd9312518421ba455ce8280",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 504979
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "02af1e3b-3490-43ac-bfb8-8dafa6470f37",
+            "id_type": "kpmp",
+            "sha256": "b562d951423d56221864de28aaebe44ce22b5e0cd54efec8ff721fa46118aace",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 504980
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "04bf6099-a046-4852-8f29-a43f06f6023d",
+            "id_type": "kpmp",
+            "sha256": "f223b530b1eaef2a23d04048e39788df1917da0f1b89b68905e1538b40cdedaa",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 504981
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "05435d4e-bf64-490a-8c54-4267c56e1799",
+            "id_type": "kpmp",
+            "sha256": "5648d6c49916c7d3a5406cc68a331b63550ebd2d887c7dd8b6b8cbf420911d47",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 504982
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "072283b4-a0fd-4682-a256-3b5a696af65b",
+            "id_type": "kpmp",
+            "sha256": "d48e338554d5d582991d338263763eaf37332957378acc52550ecb3691138d17",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 504983
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "11c10e14-bece-48a4-a926-c76f93e69eb8",
+            "id_type": "kpmp",
+            "sha256": "403c42d00b9b8d4e020e44e1b052e406252cea1056fcbc4b2cd355637ca7a8a5",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 504984
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "1d5a6926-6f38-4cba-9d57-cbf412f21cf2",
+            "id_type": "kpmp",
+            "sha256": "5ecac203830c65933e6c5f5c80955932cd59456bcd39326e6e49df20b505387d",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 504985
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "1f1edc2c-ea8e-48dc-9c1a-dada36bc26dd",
+            "id_type": "kpmp",
+            "sha256": "f95b4ed4157638d226213c62db55c3db2e1647d4e7a27aeadf5a317fb1fe99a0",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 504986
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "211cc8fa-8870-45bf-8470-8a8c457ceee7",
+            "id_type": "kpmp",
+            "sha256": "d0452253d3595363fdb9cb033e8f450a768ddb81b765d176c0bc78c65e1a0852",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 504987
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "2359008e-8339-4a12-9497-fa84967f9a25",
+            "id_type": "kpmp",
+            "sha256": "c3bbae0bbfc9d4bf89a204a482e7f5042e242157675cf4215059471beb495708",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 504988
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "287b644d-8e58-42c5-b7d4-a9753061c829",
+            "id_type": "kpmp",
+            "sha256": "aba37c01f073a4ce80caec1fac307e661c6669cf25c91ec046e65b1992340a85",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 504989
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "2a33a7f1-41f8-4ce2-a22a-ef75b63aa053",
+            "id_type": "kpmp",
+            "sha256": "d5b7fcd3a1d42d34097bf4a56f591f41c23152ec282e4a5806de96e2178ee1d7",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 504990
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "2d044db0-7fb1-4375-8e42-b2a0bf1d596e",
+            "id_type": "kpmp",
+            "sha256": "9a4cb130fbd8264cfb8722cf0afe82a7cf369440b4546efc4466ca44da30175b",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 504991
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "2f08838b-66ad-4f7d-a867-7c1b57c75271",
+            "id_type": "kpmp",
+            "sha256": "f5c1bccd167df6757cef7dfdf3cba05caa0bc64329fb9ca44049235e4fe2c77e",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 504992
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "315ae060-4417-44ff-88f5-01226fc7db4b",
+            "id_type": "kpmp",
+            "sha256": "dd255ea8f127c8f8487dd45f4e95098eddccb53919b426905ca7339371c9373d",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 504993
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "39263a48-07e4-4ec7-a24d-6b3f47af1ca9",
+            "id_type": "kpmp",
+            "sha256": "71075ce7903c040e46bc2b3c1db2babd6df81d3e427b1886929560182387103f",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 504994
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "39a26134-cd13-494b-99c5-cc640f56a51e",
+            "id_type": "kpmp",
+            "sha256": "373d8b8fe68dfed1dc2d64821f2a482e1d2b5cb261f993871b13b628a5c7b4db",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 504995
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "3ebdaf74-c867-4219-b3c7-d2ecb62c575e",
+            "id_type": "kpmp",
+            "sha256": "f02ed60a03b3aab40afcfd482e14fce37a48482aff9e6115d2a19b26d09edc64",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 504996
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "3f8de2eb-5c40-4ed5-8439-30236ad1d315",
+            "id_type": "kpmp",
+            "sha256": "604a283d72782aa6ec631f202b28137ada12ea83febba64641866089f24c0035",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 504997
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "42ae70d9-a93f-46ce-9a59-b71991c3ec83",
+            "id_type": "kpmp",
+            "sha256": "a551297dd5b398562f56bc6d182d7f5f353ee4ba26feadf83ec20c6c99f83448",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 504998
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "47454be4-61a2-4544-a82b-1f7315d734bf",
+            "id_type": "kpmp",
+            "sha256": "b09c1c9f6b151a5ff13c71a8ec3763c25eaef08e6672b530d978088c88ba72e0",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 504999
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "47487275-44ba-4710-9fa7-66b35c4ff26f",
+            "id_type": "kpmp",
+            "sha256": "6dc2eb81f726191fafb313bd99fc0a609b23a952b791762b0e44550943a23308",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 505000
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "4a70577c-12cd-4b31-987e-bd786aa4816c",
+            "id_type": "kpmp",
+            "sha256": "8a848b1f14ec0185a9aa3a0e5dac4fe087f2bcf1b01f13fe481acbe88fb2f069",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 505001
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "51cbe87c-dd31-48a3-b57f-5eccfc830e89",
+            "id_type": "kpmp",
+            "sha256": "f59b5b728847b6128644d3d36e357ec6a479928656d3476584706430f1d554e6",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 505002
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "5361fdbe-6319-460c-a332-0d88c52f6abf",
+            "id_type": "kpmp",
+            "sha256": "1c1269fcc55355b0769ccbbe8789c2765015488260f2932d4b69626bd2215425",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 505003
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "55ad81f3-3ba9-43c3-be50-dcb5385257a9",
+            "id_type": "kpmp",
+            "sha256": "da386848f1ca05d4e2a87418b97437a3b42109c5cc70a35e0188e34a3436dc05",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 505004
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "564be161-f17b-434e-9edd-a2d26f3aa3f8",
+            "id_type": "kpmp",
+            "sha256": "bbddb55d3aaf4879974f0bc6001ce0d7a9a299d4aecce7dc7f187ad9b0a2eef6",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 505005
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "5a9fe3a2-74eb-442b-b2dd-9423fe5e5dfd",
+            "id_type": "kpmp",
+            "sha256": "65ddef646e4fa73f7df0ffb2a203f7e45403bc7e575adf2c75f2fb542c70a03e",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 505006
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "5bd66186-e183-40ed-9af0-4922f2d03894",
+            "id_type": "kpmp",
+            "sha256": "0ce7263f6367f4eaff014c14ebd8988b24851c0b543f9a542a44fd7d7c36f5db",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 505007
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "5c9d870e-9ddf-4015-b9a1-d0024f2357af",
+            "id_type": "kpmp",
+            "sha256": "e262c7ddb4f94674994896530b32a5752a48f6e83d0c2231fdc37cfd21b5171b",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 505008
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "604dc901-ae62-4684-9bfa-945781b3a8c9",
+            "id_type": "kpmp",
+            "sha256": "07e8bb45cdf48255467348fbcfcef0dca8971a4c58d483d5d6ddc8a28695aee5",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 505009
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "67e8817c-a50a-4350-9fde-5a02ea9eefd5",
+            "id_type": "kpmp",
+            "sha256": "c8b33b511d46a8b8acb3aade6e57002a5e744e2fea378ceec1b49013e69901ae",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 505010
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "6abdbbac-a544-42e3-b1d2-5ca97059dcc5",
+            "id_type": "kpmp",
+            "sha256": "a335b780a999c5111286c1bd57a27b370d70c98d894bd0c12ba2d501ba5ed877",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 505011
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "6feeb29a-8c14-4b4d-8b3c-5b0ea1fd94cd",
+            "id_type": "kpmp",
+            "sha256": "26bbe9c1f68da815c617a9b9b0e82df397c0d001fd4238cdf9ebc403e60eedb8",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 505012
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "74ce836d-0886-4e1d-8d91-a1191ebfab00",
+            "id_type": "kpmp",
+            "sha256": "c6db0ca44063be295138752e374708100a8e92cb19f3f25a2d4444b8732362de",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 505013
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "78944940-9e4c-458a-9d9a-8ce6ebb5a637",
+            "id_type": "kpmp",
+            "sha256": "83e5a58031dbd374e615af7f72cefd4f586405ce660206c58fa2140f681d155f",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 505014
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "7bca08aa-ac4b-4aba-b6bd-a258cd225b31",
+            "id_type": "kpmp",
+            "sha256": "19657e11fb98838d53b6ecf9eee927ad20de7760cf645c9d832902fda2c6b860",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 505015
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "7c4eb0c3-fe1a-43b8-85a5-2405e1f6b63b",
+            "id_type": "kpmp",
+            "sha256": "3262091a3b8d3692a5f56faeace89bceaabd7aaa9ce8d815d0d0a26acfa5e9aa",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 505016
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "7e35b74d-bedd-492f-ae97-d8eba495844f",
+            "id_type": "kpmp",
+            "sha256": "a4a2beb504d277f0586fa8f908a3be71d7f5941dd6087448d43e3e000653b270",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 505017
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "86920a99-2638-4a51-b5e9-5e05c60113f8",
+            "id_type": "kpmp",
+            "sha256": "1f718b89936e6edb7b8e586a3cbc970bc37e6cd7a978695dd30fd4e001b9cde3",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 505018
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "8d164f2f-eed9-4bad-83e4-4850e6ceca0d",
+            "id_type": "kpmp",
+            "sha256": "ab498c6f40ee3f302899c347f1a9ae9c708cf0ddcc56cf5f4497ac99d78385c8",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 505019
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "9324a7d9-896b-4956-9d1c-c218215185cc",
+            "id_type": "kpmp",
+            "sha256": "edca50344ea3bff635df0343c4df16791a9ae0b3a7596d82f98f2030257c8150",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 505020
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "98d3119d-94da-4d22-a7af-b5b0e183cd4c",
+            "id_type": "kpmp",
+            "sha256": "0d89ce2b08096bc0825b614be05a7cfd011bf8a097eb407cc398fb1c63ad109d",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 505021
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "99a3a1d1-cee4-4681-81cf-d7e1f1380e98",
+            "id_type": "kpmp",
+            "sha256": "237370ec3a49a44798fa7d9c38e020190f736f85e32b803d8e7fa458b78ef855",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 505022
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "9ad9343d-b4fd-4f8a-b09b-bc258e1fa008",
+            "id_type": "kpmp",
+            "sha256": "90e34c1c855b03c4e8ed44583f345b90e9c1b83efb85473a449da75711a88ab8",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 505023
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "9c195265-dffd-4fee-9583-7ab5f10f2b53",
+            "id_type": "kpmp",
+            "sha256": "54a345cb96e2e6927ae92fb40fbf5fd89b10e84ad7a4f35075209a47810d76e2",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 505024
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "9c9f1b2d-8ad4-4731-90f0-96fc393e08e0",
+            "id_type": "kpmp",
+            "sha256": "493adb025dcc882d318a325a4d383ea95ce6d55b797ce57232e727946b57b63b",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 505025
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "9daff9c1-97a9-4b60-ab63-58e26be3386b",
+            "id_type": "kpmp",
+            "sha256": "1c4f77c186cc53c25a953aa959262d4200ce406239e20449e6ae6a9d943f782b",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 505026
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "a29db525-0469-4553-bef1-04dcbad1c61d",
+            "id_type": "kpmp",
+            "sha256": "a3f32c4de70775208801079307b657b8e823ecc53970b684d73b5c88ef4fdb6b",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 505027
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "a5bf17bd-db1b-4e39-9dbb-a6bb307dc47c",
+            "id_type": "kpmp",
+            "sha256": "754e983be190d0845ee09203a513df85e53f9b3b76d9c387e0947959568b92d5",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 505028
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "a8ab6fb5-a3ec-4688-9dfb-3a31225e22f8",
+            "id_type": "kpmp",
+            "sha256": "f6fe34b221ffe2672041ca8aab95ec0bcd4a4a8d8e49ba5bac34cc29dc78708d",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 505029
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "aa9c98fd-c66a-41ac-808a-46041375e954",
+            "id_type": "kpmp",
+            "sha256": "b11fff6d02dd6b84442e81b3037648e7281d88cebadb08554922d04fcc6dd006",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 505030
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "add7d4ca-815f-4e4e-ad6a-4174a27450cc",
+            "id_type": "kpmp",
+            "sha256": "8750166b58e65e2064cc24eaf9cfb2db4f298fe60b9b322547f5489c5f1d1159",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 505031
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "ae7d3727-0568-4808-afdf-e7a6ca2713c2",
+            "id_type": "kpmp",
+            "sha256": "2cbcc37c774d8b3384ee08067b1fe65dc9d85ffafe17079a0f239d993d19b804",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 505032
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "b5314f7e-aff2-4d88-9bf0-009efa6c2d50",
+            "id_type": "kpmp",
+            "sha256": "13e89dc58b0a256063172d03cd288d36af5ffc02afd883585ed30dd6cc0de40a",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 505033
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "b613313b-0509-4f5f-aa37-f5f983cfb8c1",
+            "id_type": "kpmp",
+            "sha256": "61b8a75bd7fc76b3385abc1d546a6848dd2fba80eb1b1124b04c1d30a6b1871b",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 505034
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "b866fe1f-f9a0-4d8b-b861-7174dc3acac0",
+            "id_type": "kpmp",
+            "sha256": "edd2563fddfc441a0468d52884352c8bc19fc3244809dc4623f3ed6f96bad4df",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 505035
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "b8ae652b-545e-4e3f-b9f1-00ab6f17197a",
+            "id_type": "kpmp",
+            "sha256": "38fc8c02dc38e8f0aed2b3de8c1f75eb03833d9a0c443d32503ba428f13c8eed",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 505036
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "b981f3d8-5d74-4eaa-a4ce-35c92405f69d",
+            "id_type": "kpmp",
+            "sha256": "c5384406957ad03a0c4166d5f0428103ad74046da877ae50dd3992ef0ac42c92",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 505037
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "cd863c06-c7cd-4168-9f82-f550b5ed6e02",
+            "id_type": "kpmp",
+            "sha256": "a8ab6279820d9b3cfc0dc3677a4c61ffb924a5c92e632128cd5f9e07545cfe28",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 505038
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "ce451638-932e-456e-b615-8ed6c886b65d",
+            "id_type": "kpmp",
+            "sha256": "e98f06eb3d2afe6bd9581aaa7ff9ef05ce674620f72712e8a72b3c45e6fc678a",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 505039
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "ceb75286-6fed-496e-8c43-f95f6818305b",
+            "id_type": "kpmp",
+            "sha256": "2a119ab21041135ad77028a57df8abb98c40a02576738d2f18534fac79799188",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 505040
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "cf37c0a5-2445-42e0-bba9-a76e346a7491",
+            "id_type": "kpmp",
+            "sha256": "576b9c3eae67fe951d4f2af65bc6d71fec16a70e73634c36e88546749a4b41ba",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 505041
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "d422ddca-f331-41bc-b1f0-d6867d665d10",
+            "id_type": "kpmp",
+            "sha256": "c7c17f4059157c17d0a744529238523671602a1c354dbffc905ee3ce2a8a89fd",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 505042
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "d55aa71c-9210-4846-ad33-2530a79df49c",
+            "id_type": "kpmp",
+            "sha256": "81ef64c78e4bec7f2bccfad1a16cbac832c9e728a99a61bb03d8a7c2b798a23b",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 505043
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "de1d1c11-4226-4003-9b83-61782bc4e758",
+            "id_type": "kpmp",
+            "sha256": "db884c540a52b33450231dcae867db290a655e60a313660b2ef28e56213e5810",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 505044
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "dff69fb3-746e-4217-b803-70c6d24c6513",
+            "id_type": "kpmp",
+            "sha256": "c3dcfa71dbc8f49fdee515deb9e43095d0e93af9d69e88ac880973a98b2f3f67",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 505045
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "e0620983-fc4d-47ba-a76b-592eb9dc01c7",
+            "id_type": "kpmp",
+            "sha256": "0b4da92059f5d75242f7ecdd391273804018429c917320e6090c0cb7a34a0f1c",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 505046
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "e3f174e9-8574-46a3-a070-f7900249d8f3",
+            "id_type": "kpmp",
+            "sha256": "8b2681f4127065991ca47aeb1805bb82bb17de683af12ef26a1acb78ec6176d1",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 505047
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "e66b2620-3749-4358-bb79-cbc72cfbda0e",
+            "id_type": "kpmp",
+            "sha256": "fd1d32e6e77df03326afe4d76b7ac5a31b1cf85786dcac97332211591cb149a4",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 505048
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "ed7d09eb-a945-49af-a4d0-35e583e2aa86",
+            "id_type": "kpmp",
+            "sha256": "8e18afb576b1f031ec62439c26ff6aeacb2cba87e4c9fca0d4a48103209ebb2b",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 505049
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "ee96609e-6365-4e99-8b26-e172a847cf01",
+            "id_type": "kpmp",
+            "sha256": "41edf131e72314e01efee4e22beca5e5237419fb212e2cda456a25a848a95125",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 505050
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "f04c3d30-3f91-4fb9-b4c0-cc4c416a438b",
+            "id_type": "kpmp",
+            "sha256": "8325261053a66d98b354d647bed89f427a6c03fd74d3f9421b407e43af17ec32",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 505051
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "f151bd0a-d493-440c-8cf5-0b8f9fbd6a22",
+            "id_type": "kpmp",
+            "sha256": "6fe7ff95955b16d7fb5a5eae57f67eefbba48bc21425d9b0d5af829c2a72d346",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 505052
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "f26ddefd-6771-449f-8974-f46e5188755e",
+            "id_type": "kpmp",
+            "sha256": "07938abd53df856a1d29c4126f38fda71d804a4ed2d500bfaad2ece827bc9560",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 505053
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "f34b8576-92ec-4e3f-833f-1805a85dc571",
+            "id_type": "kpmp",
+            "sha256": "45138ae7c051ddd4599a92e73cbf8b4da68cd7586c1c1ea8b0ec0feabd08c20e",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 505054
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "f4cb52c1-dce6-4e8d-ad83-13609e67981c",
+            "id_type": "kpmp",
+            "sha256": "50fe4e83fd760f2e16416aeed1ba11c39ca52035b7532e9a5d23a81c7e2f7ab0",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 505055
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "f6d66bdc-40ec-4bda-8776-2d63f66d49e3",
+            "id_type": "kpmp",
+            "sha256": "2082230b712708903a645197fcc828487ee86b072c0f594ab5fe5519d909b1a4",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 505056
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "f83db0a5-79c5-4610-a1c7-cd5ed2935e24",
+            "id_type": "kpmp",
+            "sha256": "f7b40bca6907b754c2d65b4c4a364248dfc1e779560b355ac85e05b7eed21261",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 505057
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "f8a9f6c0-ab9c-4ba6-a0ae-3637f486aa66",
+            "id_type": "kpmp",
+            "sha256": "d1cc43a1948be82071061719f319c6bc2276574c2b44ccdd6357782d35779b41",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 505058
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "fc2510e0-3f62-4352-887f-4dac486a5d75",
+            "id_type": "kpmp",
+            "sha256": "854afa0c8c8fa23d5189623e58a58ab8d742c73ee732424ac2d5117fa1afcb5d",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 505059
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "fc9a45f5-bdf7-4453-a18c-636e8ed1a5aa",
+            "id_type": "kpmp",
+            "sha256": "6daf275c6127721305616470e5b0eb8857b2713b13cdc601d7cb6f554b8f34f5",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 505060
+          }
+        ],
+        "value_map": []
+      },
+      "loading_grain": {
+        "anchor": "library_id",
+        "entity": "library",
+        "attribute": "sequencing_saturation"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "assay",
+      "column": "sequencing_saturation",
+      "anchored_to": {
+        "person_id": "staging.person_map",
+        "specimen_id": "staging.specimen_map"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": []
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "registry_id": 100818,
+  "schema_version": "harmonized-element/2.5",
+  "registry_label": "vitiligo_type",
+  "definition": "A high-level classification of vitiligo based on the distribution and patterning of lesions across the body.",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-RA-SLE"
+  ],
+  "harmonized_values": [
+    "segmental",
+    "non-segmental",
+    "mixed",
+    "unclassified"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "vitiligoType",
+      "program": "AMP-RA-SLE",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn72122099",
+            "id_type": "synapse",
+            "sha256": "369ae16a7adcf9c00867055ef65debe9ea3b65e44c3f8476e9892654a8a27a11",
+            "access_groups": [
+              "AMP-RA-SLE"
+            ],
+            "item_as_source_id": 506190
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "segmental",
+            "source_encoding": null,
+            "harmonized_value": "segmental",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "non-segmental",
+            "source_encoding": null,
+            "harmonized_value": "non-segmental",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "mixed",
+            "source_encoding": null,
+            "harmonized_value": "mixed",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "unclassified",
+            "source_encoding": null,
+            "harmonized_value": "unclassified",
+            "harmonized_encoding": null,
+            "note": null
+          }
+        ]
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "vitiligo_type"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "observation",
+      "defining_concept_id": {
+        "id": 4234469,
+        "name": "Diagnosis",
+        "domain": "Observation",
+        "target_field": "observation_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": [
+        {
+          "harmonized_value": "segmental",
+          "value_as_string": "segmental"
+        },
+        {
+          "harmonized_value": "non-segmental",
+          "value_as_string": "non-segmental"
+        },
+        {
+          "harmonized_value": "mixed",
+          "value_as_string": "mixed"
+        },
+        {
+          "harmonized_value": "unclassified",
+          "value_as_string": "unclassified"
+        }
+      ]
+    }
+  ]
+}

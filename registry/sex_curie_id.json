@@ -1,0 +1,82 @@
+{
+  "registry_id": 100684,
+  "schema_version": "harmonized-element/2.7",
+  "registry_label": "sex_curie_id",
+  "definition": "PATO identifier (CURIE) of the participant's/suspension's sex as reported in the FNIH kidney scRNA-seq metadata; paired with sex_curie_label.",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-CMD"
+  ],
+  "harmonized_values": [
+    "PATO:0000384",
+    "PATO:0000383"
+  ],
+  "loading_grain": {
+    "anchor": "participant_id",
+    "entity": "participant",
+    "attribute": "sex_curie_id"
+  },
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "sex_ontology_term_id",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [
+        "cellxgene_schema_definition.json (obs)::sex_ontology_term_id"
+      ],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "string",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "DFF520384",
+            "id_type": "cmdga",
+            "sha256": "8d480d206f6a44e492bd25e1339caefbe465a8de77942af6991bd3d830dd0cb8",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 505108
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "DFF142690",
+            "id_type": "cmdga",
+            "sha256": "c1070bcc2011d593709d2bad78cf8a25b7caa913f58418cb6b28c6eab92eb1d9",
+            "access_groups": [],
+            "item_as_source_id": 505109
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "PATO:0000384",
+            "source_encoding": null,
+            "harmonized_value": "PATO:0000384",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "PATO:0000383",
+            "source_encoding": null,
+            "harmonized_value": "PATO:0000383",
+            "harmonized_encoding": null,
+            "note": null
+          }
+        ]
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "sex_curie_id"
+      }
+    }
+  ],
+  "sysbio_etl": []
+}

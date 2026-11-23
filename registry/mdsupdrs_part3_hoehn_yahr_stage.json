@@ -1,0 +1,259 @@
+{
+  "registry_id": 100386,
+  "schema_version": "harmonized-element/2.5",
+  "registry_label": "mdsupdrs_part3_hoehn_yahr_stage",
+  "definition": "3.21 MDS-UPDRS - Hoehn And Yahr Stage (UPD2HY)",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-PD"
+  ],
+  "harmonized_values": [
+    "stage 0",
+    "stage 1",
+    "stage 1.5",
+    "stage 2",
+    "stage 2.5",
+    "stage 3",
+    "stage 4",
+    "stage 5"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": [
+        "upd2hy_hoehn_and_yahr_stage",
+        "code_upd2hy_hoehn_and_yahr_stage"
+      ],
+      "program": "AMP-PD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": "",
+      "layer_1_etl": {
+        "value_form": "ordinal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "4c16a16a80fcd4944d2a9ccfc907e9c7a469ef01f54ef21f63f3a3324fcf06e9",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_ids": [
+              502405,
+              502266
+            ]
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "Stage 2",
+            "source_encoding": "2",
+            "harmonized_value": "stage 2",
+            "harmonized_encoding": "2",
+            "note": null
+          },
+          {
+            "source_value": "Stage 0",
+            "source_encoding": "0",
+            "harmonized_value": "stage 0",
+            "harmonized_encoding": "0",
+            "note": null
+          },
+          {
+            "source_value": "Stage 1",
+            "source_encoding": "1",
+            "harmonized_value": "stage 1",
+            "harmonized_encoding": "1",
+            "note": null
+          },
+          {
+            "source_value": "Stage 3",
+            "source_encoding": "3",
+            "harmonized_value": "stage 3",
+            "harmonized_encoding": "3",
+            "note": null
+          },
+          {
+            "source_value": "Stage 2.5",
+            "source_encoding": "2.5",
+            "harmonized_value": "stage 2.5",
+            "harmonized_encoding": "2.5",
+            "note": null
+          },
+          {
+            "source_value": "Stage 4",
+            "source_encoding": "4",
+            "harmonized_value": "stage 4",
+            "harmonized_encoding": "4",
+            "note": null
+          },
+          {
+            "source_value": "Stage 5",
+            "source_encoding": "5",
+            "harmonized_value": "stage 5",
+            "harmonized_encoding": "5",
+            "note": null
+          },
+          {
+            "source_value": "Stage 1.5",
+            "source_encoding": "1.5",
+            "harmonized_value": "stage 1.5",
+            "harmonized_encoding": "1.5",
+            "note": null
+          }
+        ]
+      },
+      "applies_to_rows": {
+        "column": "upd23b_clinical_state_on_medication",
+        "token": "Off",
+        "token_position": 0,
+        "delimiters": []
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant_visit",
+        "attribute": "mdsupdrs_part3_hoehn_yahr_stage"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "observation",
+      "defining_concept_id": {
+        "id": 46236404,
+        "name": "Modified Hoen and Yahr stage [UPDRS]",
+        "domain": "Observation",
+        "target_field": "observation_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map",
+        "visit_occurrence_id": "cdm.visit_occurrence"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": [
+        {
+          "harmonized_value": "<any in range>",
+          "value_as_number": "<value>",
+          "qualifier_concept_id": {
+            "id": 1094256,
+            "name": "Was not on medication"
+          }
+        },
+        {
+          "harmonized_value": "stage 2",
+          "value_as_number": 2,
+          "value_as_string": "stage 2",
+          "value_as_concept_id": {
+            "id": 46237823,
+            "name": "Bilateral disease, without impairment of balance"
+          },
+          "qualifier_concept_id": {
+            "id": 1094256,
+            "name": "Was not on medication"
+          }
+        },
+        {
+          "harmonized_value": "stage 0",
+          "value_as_number": 0,
+          "value_as_string": "stage 0",
+          "value_as_concept_id": {
+            "id": 46237426,
+            "name": "No signs of disease"
+          },
+          "qualifier_concept_id": {
+            "id": 1094256,
+            "name": "Was not on medication"
+          }
+        },
+        {
+          "harmonized_value": "stage 1",
+          "value_as_number": 1,
+          "value_as_string": "stage 1",
+          "value_as_concept_id": {
+            "id": 46237457,
+            "name": "Unilateral disease"
+          },
+          "qualifier_concept_id": {
+            "id": 1094256,
+            "name": "Was not on medication"
+          }
+        },
+        {
+          "harmonized_value": "stage 3",
+          "value_as_number": 3,
+          "value_as_string": "stage 3",
+          "value_as_concept_id": {
+            "id": 46237984,
+            "name": "Mild to moderate bilateral disease; some postural instability; physically independent"
+          },
+          "qualifier_concept_id": {
+            "id": 1094256,
+            "name": "Was not on medication"
+          }
+        },
+        {
+          "harmonized_value": "stage 2.5",
+          "value_as_number": 2.5,
+          "value_as_string": "stage 2.5",
+          "value_as_concept_id": {
+            "id": 46237867,
+            "name": "Mild bilateral disease, with recovery on pull test"
+          },
+          "qualifier_concept_id": {
+            "id": 1094256,
+            "name": "Was not on medication"
+          }
+        },
+        {
+          "harmonized_value": "stage 4",
+          "value_as_number": 4,
+          "value_as_string": "stage 4",
+          "value_as_concept_id": {
+            "id": 46238167,
+            "name": "Severe disability; still able to walk or stand unassisted"
+          },
+          "qualifier_concept_id": {
+            "id": 1094256,
+            "name": "Was not on medication"
+          }
+        },
+        {
+          "harmonized_value": "stage 5",
+          "value_as_number": 5,
+          "value_as_string": "stage 5",
+          "value_as_concept_id": {
+            "id": 46237985,
+            "name": "Wheelchair bound or bedridden unless aided"
+          },
+          "qualifier_concept_id": {
+            "id": 1094256,
+            "name": "Was not on medication"
+          }
+        },
+        {
+          "harmonized_value": "stage 1.5",
+          "value_as_number": 1.5,
+          "value_as_string": "stage 1.5",
+          "value_as_concept_id": {
+            "id": 46237983,
+            "name": "Unilateral plus axial involvement"
+          },
+          "qualifier_concept_id": {
+            "id": 1094256,
+            "name": "Was not on medication"
+          }
+        }
+      ]
+    }
+  ],
+  "status_note": ""
+}

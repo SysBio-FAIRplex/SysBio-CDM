@@ -1,0 +1,96 @@
+{
+  "registry_id": 100189,
+  "schema_version": "harmonized-element/2.7",
+  "registry_label": "data_category",
+  "definition": "Molecular vs Pathology - the top split of KPMP's file taxonomy.",
+  "must_agree": false,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-CMD"
+  ],
+  "harmonized_values": [
+    "molecular",
+    "pathology",
+    "biomarker",
+    "clinical"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "data_category",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "",
+            "id_type": "",
+            "sha256": "c2ac4b9f767134cf8f1c58d73f26cf033663f9980c54c92d67cc538952ce51fb",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 501396
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "Molecular",
+            "source_encoding": null,
+            "harmonized_value": "molecular",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Pathology",
+            "source_encoding": null,
+            "harmonized_value": "pathology",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Biomarker",
+            "source_encoding": null,
+            "harmonized_value": "biomarker",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Clinical",
+            "source_encoding": null,
+            "harmonized_value": "clinical",
+            "harmonized_encoding": null,
+            "note": null
+          }
+        ]
+      },
+      "loading_grain": {
+        "anchor": "file_id",
+        "entity": "file",
+        "attribute": "data_category"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "file",
+      "column": "data_category",
+      "anchored_to": {
+        "person_id": "staging.person_map",
+        "file_id": "files.file_id"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": []
+    }
+  ]
+}

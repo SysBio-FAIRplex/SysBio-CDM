@@ -1,0 +1,258 @@
+{
+  "registry_id": 100488,
+  "schema_version": "harmonized-element/2.5",
+  "registry_label": "most_recent_diagnosis",
+  "definition": "Most recent diagnosis",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-PD"
+  ],
+  "harmonized_values": [
+    "parkinsons disease",
+    "parkinsonism",
+    "multiple system atrophy",
+    "progressive supranuclear palsy",
+    "dementia with lewy bodies",
+    "corticobasal degeneration",
+    "olivopontocerebellar atrophy",
+    "fahrs syndrome",
+    "no parkinsons disease nor other neurological disorder"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "most_recent_diagnosis",
+      "program": "AMP-PD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": "Most recent diagnosis.",
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "5c0e5e752a5e8468c949f13fa4a7d52a46c2aa1043ab14245ec611073cfdc5e0",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 502924
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "Parkinson's Disease",
+            "source_encoding": null,
+            "harmonized_value": "parkinsons disease",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Parkinsonism",
+            "source_encoding": null,
+            "harmonized_value": "parkinsonism",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Multiple System Atrophy",
+            "source_encoding": null,
+            "harmonized_value": "multiple system atrophy",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Progressive Supranuclear Palsy",
+            "source_encoding": null,
+            "harmonized_value": "progressive supranuclear palsy",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Dementia With Lewy Bodies",
+            "source_encoding": null,
+            "harmonized_value": "dementia with lewy bodies",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Corticobasal Degeneration",
+            "source_encoding": null,
+            "harmonized_value": "corticobasal degeneration",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Olivopontocerebellar Atrophy",
+            "source_encoding": null,
+            "harmonized_value": "olivopontocerebellar atrophy",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Fahr's Syndrome",
+            "source_encoding": null,
+            "harmonized_value": "fahrs syndrome",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "No PD Nor Other Neurological Disorder",
+            "source_encoding": null,
+            "harmonized_value": "no parkinsons disease nor other neurological disorder",
+            "harmonized_encoding": null,
+            "note": null
+          }
+        ]
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "most_recent_diagnosis"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "observation",
+      "defining_concept_id": {
+        "id": 4234469,
+        "name": "Diagnosis",
+        "domain": "Observation",
+        "target_field": "observation_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": [
+        {
+          "harmonized_value": "parkinsons disease",
+          "value_as_string": "parkinsons disease",
+          "value_as_concept_id": {
+            "id": 381270,
+            "name": "Parkinson's disease"
+          },
+          "qualifier_concept_id": {
+            "id": 1989833,
+            "name": "Admitting diagnosis"
+          },
+          "note": ""
+        },
+        {
+          "harmonized_value": "parkinsonism",
+          "value_as_string": "parkinsonism",
+          "value_as_concept_id": {
+            "id": 4140090,
+            "name": "Parkinsonism"
+          },
+          "qualifier_concept_id": {
+            "id": 1989833,
+            "name": "Admitting diagnosis"
+          },
+          "note": ""
+        },
+        {
+          "harmonized_value": "multiple system atrophy",
+          "value_as_string": "multiple system atrophy",
+          "value_as_concept_id": {
+            "id": 4044053,
+            "name": "Multiple system atrophy"
+          },
+          "qualifier_concept_id": {
+            "id": 1989833,
+            "name": "Admitting diagnosis"
+          },
+          "note": ""
+        },
+        {
+          "harmonized_value": "progressive supranuclear palsy",
+          "value_as_string": "progressive supranuclear palsy",
+          "value_as_concept_id": {
+            "id": 40391011,
+            "name": "Progressive supranuclear palsy"
+          },
+          "qualifier_concept_id": {
+            "id": 1989833,
+            "name": "Admitting diagnosis"
+          },
+          "note": ""
+        },
+        {
+          "harmonized_value": "dementia with lewy bodies",
+          "value_as_string": "dementia with lewy bodies",
+          "value_as_concept_id": {
+            "id": 4182210,
+            "name": "Dementia"
+          },
+          "qualifier_concept_id": {
+            "id": 380701,
+            "name": "Diffuse Lewy body disease"
+          },
+          "note": ""
+        },
+        {
+          "harmonized_value": "corticobasal degeneration",
+          "value_as_string": "corticobasal degeneration",
+          "value_as_concept_id": {
+            "id": 4077904,
+            "name": "Corticobasal degeneration"
+          },
+          "qualifier_concept_id": {
+            "id": 1989833,
+            "name": "Admitting diagnosis"
+          },
+          "note": ""
+        },
+        {
+          "harmonized_value": "olivopontocerebellar atrophy",
+          "value_as_string": "olivopontocerebellar atrophy",
+          "value_as_concept_id": {
+            "id": 4283390,
+            "name": "Olivopontocerebellar degeneration"
+          },
+          "qualifier_concept_id": {
+            "id": 1989833,
+            "name": "Admitting diagnosis"
+          },
+          "note": ""
+        },
+        {
+          "harmonized_value": "fahrs syndrome",
+          "value_as_string": "fahrs syndrome",
+          "value_as_concept_id": {
+            "id": 4006783,
+            "name": "Fahr's syndrome"
+          },
+          "qualifier_concept_id": {
+            "id": 1989833,
+            "name": "Admitting diagnosis"
+          },
+          "note": ""
+        },
+        {
+          "harmonized_value": "no parkinsons disease nor other neurological disorder",
+          "value_as_string": "no parkinsons disease nor other neurological disorder",
+          "value_as_concept_id": {
+            "id": 45884153,
+            "name": "Normal"
+          },
+          "qualifier_concept_id": {
+            "id": 44804027,
+            "name": "Control group"
+          },
+          "note": ""
+        }
+      ]
+    }
+  ]
+}

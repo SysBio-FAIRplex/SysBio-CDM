@@ -1,0 +1,68 @@
+{
+  "registry_id": 100211,
+  "schema_version": "harmonized-element/2.5",
+  "registry_label": "dti_measure",
+  "definition": "Brain tissue being measured",
+  "must_agree": false,
+  "null_is_agreement": true,
+  "on_conflict": "collapse_if_equal",
+  "programs_covered": [
+    "AMP-PD"
+  ],
+  "harmonized_values": [],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "dti_measure",
+      "program": "AMP-PD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": "Brain tissue being measured.",
+      "layer_1_etl": {
+        "value_form": "text",
+        "datatype": "string",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "714160ad90f74c558e496f1ebd49bf6ba22348c9d2d69420d757738b357acc68",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 501497
+          }
+        ],
+        "value_map": []
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant_visit",
+        "attribute": "dti_measure"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "procedure_occurrence",
+      "defining_concept_id": {
+        "id": 40489395,
+        "name": "Diffusion tensor magnetic resonance imaging of brain",
+        "domain": "Procedure",
+        "target_field": "procedure_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map",
+        "visit_occurrence_id": "cdm.visit_occurrence"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": [],
+      "note": ""
+    }
+  ]
+}

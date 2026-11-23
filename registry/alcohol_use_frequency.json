@@ -1,0 +1,213 @@
+{
+  "registry_id": 100030,
+  "schema_version": "harmonized-element/2.5",
+  "registry_label": "alcohol_use_frequency",
+  "definition": "The frequency of consumption of alcohol by the participant",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-PD"
+  ],
+  "harmonized_values": [
+    "not currently",
+    "daily or almost daily",
+    "weekly",
+    "monthly or less",
+    "4 or more times a week",
+    "2 to 3 times a week",
+    "2 to 4 times a month",
+    "never",
+    "unknown"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "alcohol_use_frequency",
+      "program": "AMP-PD",
+      "status": "approved",
+      "status_note": null,
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": "The frequency of consumption of alcohol by the participant.",
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "string",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "dd7732ea9d0dd2b29f64aed9435bf44cb728d0439ba446868c0de31548b15342",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 500183
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "Not currently",
+            "source_encoding": null,
+            "harmonized_value": "not currently",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Daily or almost daily",
+            "source_encoding": null,
+            "harmonized_value": "daily or almost daily",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Weekly",
+            "source_encoding": null,
+            "harmonized_value": "weekly",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Monthly or less",
+            "source_encoding": null,
+            "harmonized_value": "monthly or less",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Unknown",
+            "source_encoding": null,
+            "harmonized_value": "unknown",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "4 or more times a week",
+            "source_encoding": null,
+            "harmonized_value": "4 or more times a week",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "2 to 3 times a week",
+            "source_encoding": null,
+            "harmonized_value": "2 to 3 times a week",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "2 to 4 times a month",
+            "source_encoding": null,
+            "harmonized_value": "2 to 4 times a month",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Never",
+            "source_encoding": null,
+            "harmonized_value": "never",
+            "harmonized_encoding": null,
+            "note": null
+          }
+        ]
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant_visit",
+        "attribute": "alcohol_use_frequency"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "observation",
+      "defining_concept_id": {
+        "id": 35811110,
+        "name": "Frequency of drinking alcohol",
+        "domain": "Observation",
+        "target_field": "observation_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map",
+        "visit_occurrence_id": "cdm.visit_occurrence"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": [
+        {
+          "harmonized_value": "not currently",
+          "value_as_string": "not currently"
+        },
+        {
+          "harmonized_value": "daily or almost daily",
+          "value_as_concept_id": {
+            "id": 35817658,
+            "name": "Daily or almost daily"
+          },
+          "value_as_string": "daily or almost daily"
+        },
+        {
+          "harmonized_value": "weekly",
+          "value_as_concept_id": {
+            "id": 35825059,
+            "name": "Weekly"
+          },
+          "value_as_string": "weekly"
+        },
+        {
+          "harmonized_value": "monthly or less",
+          "value_as_concept_id": {
+            "id": 35821022,
+            "name": "Monthly or less"
+          },
+          "value_as_string": "monthly or less"
+        },
+        {
+          "harmonized_value": "unknown",
+          "value_as_concept_id": {
+            "id": 45877986,
+            "name": "Unknown"
+          }
+        },
+        {
+          "harmonized_value": "4 or more times a week",
+          "value_as_string": "4 or more times a week",
+          "value_as_concept_id": {
+            "id": 45885059,
+            "name": "4 or more times a week"
+          },
+          "note": ""
+        },
+        {
+          "harmonized_value": "2 to 3 times a week",
+          "value_as_string": "2 to 3 times a week",
+          "value_as_concept_id": {
+            "id": 35825059,
+            "name": "Weekly"
+          },
+          "note": ""
+        },
+        {
+          "harmonized_value": "2 to 4 times a month",
+          "value_as_string": "2 to 4 times a month",
+          "value_as_concept_id": {
+            "id": 35821022,
+            "name": "Monthly or less"
+          },
+          "note": ""
+        },
+        {
+          "harmonized_value": "never",
+          "value_as_string": "never",
+          "value_as_concept_id": {
+            "id": 45876662,
+            "name": "Never"
+          },
+          "note": ""
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,173 @@
+{
+  "registry_id": 100058,
+  "schema_version": "harmonized-element/2.5",
+  "registry_label": "binned_braak_score",
+  "definition": "Braak Staging as Binned Values.",
+  "one_per": [
+    "person"
+  ],
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-AD"
+  ],
+  "harmonized_values": [
+    "None",
+    "Braak Stage I-II",
+    "Braak Stage III-IV",
+    "Braak Stage V-VI",
+    "Missing or unknown",
+    "missing or unknown"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "bScore",
+      "program": "AMP-AD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [
+        "DiverseCohorts_DataDictionary.pdf"
+      ],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn51757646",
+            "id_type": "synapse",
+            "sha256": "484b323b8d6d2eea95a7f65e6492c90755dcf8b007db621c2b01081798e7846b",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 500564
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn73713777",
+            "id_type": "synapse",
+            "sha256": "0b08ac7a739804df6964cba515eed3d65b0a29b47f0ded0512beaad2139c230b",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 500565
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "None",
+            "source_encoding": null,
+            "harmonized_value": "None",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Braak Stage I-II",
+            "source_encoding": null,
+            "harmonized_value": "Braak Stage I-II",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Braak Stage III-IV",
+            "source_encoding": null,
+            "harmonized_value": "Braak Stage III-IV",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Braak Stage V-VI",
+            "source_encoding": null,
+            "harmonized_value": "Braak Stage V-VI",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Missing or unknown",
+            "source_encoding": null,
+            "harmonized_value": "Missing or unknown",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "missing or unknown",
+            "source_encoding": null,
+            "harmonized_value": "missing or unknown",
+            "harmonized_encoding": null,
+            "note": null
+          }
+        ]
+      },
+      "src_entity": {
+        "entity": "subject",
+        "dictionaries": [
+          "ADKP_harmonized_data_dictionary",
+          "DiverseCohorts_DataDictionary"
+        ],
+        "ambiguous": false,
+        "evidence": "",
+        "status": "proposed"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "observation",
+      "defining_concept_id": {
+        "id": 3172933,
+        "name": "Braak stage for presence of tau protein accompanying neurofibrillary degeneration in brain",
+        "domain": "Observation",
+        "target_field": "observation_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": [
+        {
+          "harmonized_value": "None",
+          "value_as_concept_id": {
+            "id": 45878582,
+            "name": "None"
+          },
+          "value_as_string": "None"
+        },
+        {
+          "harmonized_value": "Braak Stage I-II",
+          "value_as_string": "Braak Stage I-II"
+        },
+        {
+          "harmonized_value": "Braak Stage III-IV",
+          "value_as_string": "Braak Stage III-IV"
+        },
+        {
+          "harmonized_value": "Braak Stage V-VI",
+          "value_as_string": "Braak Stage V-VI"
+        },
+        {
+          "harmonized_value": "Missing or unknown",
+          "value_as_concept_id": {
+            "id": 45877986,
+            "name": "Unknown"
+          },
+          "value_as_string": "Missing or unknown"
+        },
+        {
+          "harmonized_value": "missing or unknown",
+          "value_as_concept_id": {
+            "id": 45877986,
+            "name": "Unknown"
+          },
+          "value_as_string": "missing or unknown"
+        }
+      ]
+    }
+  ]
+}

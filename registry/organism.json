@@ -1,0 +1,127 @@
+{
+  "registry_id": 100524,
+  "schema_version": "harmonized-element/2.5",
+  "registry_label": "organism",
+  "definition": "Organism that biosample originated from. Organism meta-data record must already exist in CMDGA",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-CMD"
+  ],
+  "harmonized_values": [
+    "homo sapiens",
+    "mus musculus",
+    "rattus norvegicus"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "organism",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "DFF142690",
+            "id_type": "cmdga",
+            "sha256": "c1070bcc2011d593709d2bad78cf8a25b7caa913f58418cb6b28c6eab92eb1d9",
+            "access_groups": [],
+            "item_as_source_id": 503066
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "DFF520384",
+            "id_type": "cmdga",
+            "sha256": "8d480d206f6a44e492bd25e1339caefbe465a8de77942af6991bd3d830dd0cb8",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503067
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "Homo sapiens",
+            "source_encoding": null,
+            "harmonized_value": "homo sapiens",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Mus musculus",
+            "source_encoding": null,
+            "harmonized_value": "mus musculus",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Rattus norvegicus",
+            "source_encoding": null,
+            "harmonized_value": "rattus norvegicus",
+            "harmonized_encoding": null,
+            "note": null
+          }
+        ]
+      },
+      "src_entity": {
+        "entity": null,
+        "dictionaries": [
+          "Biosample",
+          "HumanDonor"
+        ],
+        "ambiguous": true,
+        "evidence": "",
+        "status": "proposed"
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "organism"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "observation",
+      "defining_concept_id": {
+        "id": 4259632,
+        "name": "Organism",
+        "domain": "Observation",
+        "target_field": "observation_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": [
+        {
+          "harmonized_value": "homo sapiens",
+          "value_as_string": "homo sapiens",
+          "value_as_concept_id": {
+            "id": 4225446,
+            "name": "Homo sapiens"
+          }
+        },
+        {
+          "harmonized_value": "mus musculus",
+          "value_as_string": "mus musculus"
+        },
+        {
+          "harmonized_value": "rattus norvegicus",
+          "value_as_string": "rattus norvegicus"
+        }
+      ]
+    }
+  ]
+}

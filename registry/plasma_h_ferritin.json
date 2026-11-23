@@ -1,0 +1,99 @@
+{
+  "registry_id": 100592,
+  "schema_version": "harmonized-element/2.5",
+  "registry_label": "plasma_h_ferritin",
+  "definition": "H-ferritin (heavy-chain ferritin) concentration measured in plasma, one result per participant, visit and sample.",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-PD"
+  ],
+  "harmonized_values": [
+    "<any in range>"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "test_value",
+      "program": "AMP-PD",
+      "applies_to_rows": [
+        {
+          "column": "test_name",
+          "token": "H-Ferritin",
+          "token_position": 0,
+          "delimiters": []
+        },
+        {
+          "column": "sample_type",
+          "token": "Plasma",
+          "token_position": 0,
+          "delimiters": []
+        }
+      ],
+      "status": "approved",
+      "status_note": null,
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": "H-Ferritin, Plasma.",
+      "layer_1_etl": {
+        "value_form": "continuous",
+        "datatype": "number",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "sha256": "96d714f11f4e93d2d10da6add2dfd04234587b5690d4dd01e131a4817147e0ba",
+            "source_id": null,
+            "id_type": null,
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 501386
+          }
+        ],
+        "range": {
+          "min": 0,
+          "max": 100000
+        },
+        "value_map": []
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant_visit",
+        "attribute": "plasma_h_ferritin"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "measurement",
+      "defining_concept_id": {
+        "id": 4176561,
+        "name": "Ferritin measurement",
+        "domain": "Measurement",
+        "target_field": "measurement_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map",
+        "visit_occurrence_id": "cdm.visit_occurrence"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": [
+        {
+          "harmonized_value": "<any in range>",
+          "value_as_number": "<value>",
+          "unit_concept_id": {
+            "id": 8842,
+            "name": "nanogram per milliliter"
+          },
+          "value_as_concept_id": null,
+          "value_as_string": null,
+          "unit_source_value": "ng/mL"
+        }
+      ]
+    }
+  ]
+}

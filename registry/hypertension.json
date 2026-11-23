@@ -1,0 +1,250 @@
+{
+  "registry_id": 100256,
+  "schema_version": "harmonized-element/2.7",
+  "registry_label": "hypertension",
+  "definition": "Has a doctor or other health care provider ever told you that you have high blood pressure or hypertension? (`mh_ht_yn`, section Medical History)",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-CMD"
+  ],
+  "harmonized_values": [
+    "Yes",
+    "No",
+    "Don't know"
+  ],
+  "loading_grain": {
+    "anchor": "participant_id",
+    "entity": "participant",
+    "attribute": "hypertension"
+  },
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "hypertension",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "DFF520384",
+            "id_type": "cmdga",
+            "sha256": "8d480d206f6a44e492bd25e1339caefbe465a8de77942af6991bd3d830dd0cb8",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 501722
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "Yes",
+            "source_encoding": "1",
+            "harmonized_value": "Yes",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "No",
+            "source_encoding": "0",
+            "harmonized_value": "No",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "True",
+            "source_encoding": null,
+            "harmonized_value": "Yes",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "1",
+            "source_encoding": null,
+            "harmonized_value": "Yes",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "False",
+            "source_encoding": null,
+            "harmonized_value": "No",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "0",
+            "source_encoding": null,
+            "harmonized_value": "No",
+            "harmonized_encoding": null,
+            "note": ""
+          }
+        ]
+      }
+    },
+    {
+      "source_label": "Hypertension History",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [
+        "KPMP_Clinical-Phenotyping-Data-Dictionary_v3_0_2024-01-12.pdf (v. 2024-01-12)"
+      ],
+      "src_definition": "Has a doctor or other health care provider ever told you that you have high blood pressure or hypertension? (`mh_ht_yn`, section Medical History)",
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "",
+            "id_type": "",
+            "sha256": "0843ef9d8dbce1d400ab88d2b71c69b245c2d992bf13746c9c716c752d073ba6",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 501723
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "Yes",
+            "source_encoding": "1",
+            "harmonized_value": "Yes",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "No",
+            "source_encoding": "0",
+            "harmonized_value": "No",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "Don't know",
+            "source_encoding": "99",
+            "harmonized_value": "Don't know",
+            "harmonized_encoding": null,
+            "note": ""
+          }
+        ]
+      }
+    },
+    {
+      "source_label": "hypertension_history",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "",
+            "id_type": "",
+            "sha256": "c2ac4b9f767134cf8f1c58d73f26cf033663f9980c54c92d67cc538952ce51fb",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 501724
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "Yes (hh)",
+            "source_encoding": "1",
+            "harmonized_value": "Yes",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "No (hh)",
+            "source_encoding": "0",
+            "harmonized_value": "No",
+            "harmonized_encoding": null,
+            "note": ""
+          }
+        ]
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "observation",
+      "defining_concept_id": {
+        "id": 316866,
+        "name": "Hypertensive disorder",
+        "domain": "Observation",
+        "target_field": "observation_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": [
+        {
+          "harmonized_value": "Yes",
+          "value_as_concept_id": {
+            "id": 45877994,
+            "name": "Yes"
+          },
+          "value_as_string": "Yes"
+        },
+        {
+          "harmonized_value": "No",
+          "value_as_concept_id": {
+            "id": 45878245,
+            "name": "No"
+          },
+          "value_as_string": "No"
+        },
+        {
+          "harmonized_value": "Don't know",
+          "value_as_concept_id": {
+            "id": 45876636,
+            "name": "Don't know"
+          },
+          "value_as_string": "Don't know"
+        }
+      ]
+    },
+    {
+      "target_id": "",
+      "table": "condition_occurrence",
+      "defining_concept_id": {
+        "id": 316866,
+        "name": "Hypertensive disorder",
+        "domain": "Observation",
+        "target_field": "condition_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": [
+        {
+          "harmonized_value": "Yes"
+        }
+      ],
+      "note": ""
+    }
+  ]
+}

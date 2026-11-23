@@ -1,0 +1,304 @@
+{
+  "registry_id": 100263,
+  "schema_version": "harmonized-element/2.5",
+  "registry_label": "is_post_mortem",
+  "definition": "Indicator of whether the data or sample was collected post-mortem",
+  "one_per": [
+    "person",
+    "specimen"
+  ],
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-AD",
+    "AMP-CMD"
+  ],
+  "harmonized_values": [
+    "true",
+    "false"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "isPostMortem",
+      "program": "AMP-AD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn52430345",
+            "id_type": "synapse",
+            "sha256": "223f2e41f2cf2822fd2274170417c6657fd2a08e1d143789495299a8e9862d11",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 501776
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn53352733",
+            "id_type": "synapse",
+            "sha256": "1ed09619a8f3f6e68570a51e67c77f5f7776f0de27eba6aa4a240b2cef054c5c",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 501777
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn51757645",
+            "id_type": "synapse",
+            "sha256": "9eaa383ee973146ebfe02915b8119e33cc5533c7dfb7623ef9bfbc8c4a9bc945",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 501778
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn26254721",
+            "id_type": "synapse",
+            "sha256": "aa67e93e52bc0d52c63e796303a0c97333902886b3453252b0380950b00a2f1d",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 501779
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn21893059",
+            "id_type": "synapse",
+            "sha256": "e70e3a4dd534043d14d65690a4e1b42c6e69b3ca7874aa6f9988d926eb6ef180",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 501780
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn27000243",
+            "id_type": "synapse",
+            "sha256": "58a078a75bbb6635658c2b07e543c4faabe0275bcf9ff51c01e5c4edb54290f2",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 501781
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn27034471",
+            "id_type": "synapse",
+            "sha256": "9c2be87182338c6d25a0bf52b27d2d4fc51136929bd250e76bdbdb6024120d18",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 501782
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn21323366",
+            "id_type": "synapse",
+            "sha256": "80d6246e6837543317ce7824958d54c141025746ca54de6923c56a41f656ff87",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 501783
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "6eacfd62facbb1ca279eacd87ba62de04fb54df1a3f5aa123ed6ae80da7438fd",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 501784
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "True",
+            "source_encoding": null,
+            "harmonized_value": "true",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "TRUE",
+            "source_encoding": null,
+            "harmonized_value": "true",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "False",
+            "source_encoding": null,
+            "harmonized_value": "false",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "FALSE",
+            "source_encoding": null,
+            "harmonized_value": "false",
+            "harmonized_encoding": null,
+            "note": null
+          }
+        ]
+      },
+      "src_entity": {
+        "entity": "specimen",
+        "dictionaries": [
+          "[data file name withheld]"
+        ],
+        "ambiguous": false,
+        "evidence": "",
+        "status": "proposed"
+      },
+      "loading_grain": {
+        "anchor": "specimen_id",
+        "entity": "specimen",
+        "attribute": "is_post_mortem"
+      }
+    },
+    {
+      "source_label": "Alive at collection (Required)",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [
+        "HCA metadata schema: donor_organism.is_living"
+      ],
+      "src_definition": "Whether organism was alive at time of biomaterial collection.",
+      "layout": {
+        "file_type": "xlsx",
+        "sheet": "Donor organism",
+        "data_start": 6
+      },
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "7f7222846ac56e7ba1e6f6407bdaa9c11dc702e518221e7efc64a57b69884024",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 501785
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "yes",
+            "source_encoding": null,
+            "harmonized_value": "false",
+            "harmonized_encoding": null,
+            "note": ""
+          }
+        ]
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "is_post_mortem"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "observation",
+      "defining_concept_id": {
+        "id": 4160510,
+        "name": "Postmortem result",
+        "domain": "Condition",
+        "target_field": "observation_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map",
+        "specimen_id": "staging.specimen_map"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [
+        {
+          "role": "attribute",
+          "column": null,
+          "status": "candidate",
+          "note": ""
+        }
+      ],
+      "value_map": [
+        {
+          "harmonized_value": "true",
+          "value_as_concept_id": {
+            "id": 45877994,
+            "name": "Yes"
+          },
+          "value_as_string": "true"
+        },
+        {
+          "harmonized_value": "true",
+          "value_as_concept_id": {
+            "id": 45877994,
+            "name": "Yes"
+          },
+          "value_as_string": "true"
+        },
+        {
+          "harmonized_value": "false",
+          "value_as_concept_id": {
+            "id": 45878245,
+            "name": "No"
+          },
+          "value_as_string": "false"
+        },
+        {
+          "harmonized_value": "false",
+          "value_as_concept_id": {
+            "id": 45878245,
+            "name": "No"
+          },
+          "value_as_string": "false"
+        }
+      ]
+    },
+    {
+      "target_id": "",
+      "table": "condition_occurrence",
+      "defining_concept_id": {
+        "id": 4160510,
+        "name": "Postmortem result",
+        "domain": "Condition",
+        "target_field": "condition_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map",
+        "specimen_id": "staging.specimen_map"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": [
+        {
+          "harmonized_value": "true"
+        },
+        {
+          "harmonized_value": "true"
+        }
+      ],
+      "note": ""
+    }
+  ]
+}

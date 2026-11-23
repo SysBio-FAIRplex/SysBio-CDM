@@ -1,0 +1,139 @@
+{
+  "registry_id": 100391,
+  "schema_version": "harmonized-element/2.5",
+  "registry_label": "mdsupdrs_part3_total_on_rx",
+  "definition": "MDS-UPDRS Part III Summary Score",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-PD"
+  ],
+  "harmonized_values": [
+    "<any in range>"
+  ],
+  "harmonized_with": [
+    "mds_updrs_part_iii_summary_score"
+  ],
+  "links": [
+    {
+      "link_id": "1",
+      "kind": "realized",
+      "linked_element_label": "upd23b_clinical_state_on_medication_on_medication",
+      "linked_defining_concept": {
+        "id": 1094239,
+        "name": "Was on medication",
+        "domain": "Meas Value"
+      },
+      "linked_table": "observation",
+      "linked_value_set": [
+        "True"
+      ],
+      "linking_mechanism": "MEASUREMENT.measurement_event_id",
+      "linking_mechanism_concept_id": {
+        "id": 1147165,
+        "name": "observation.observation_id"
+      }
+    },
+    {
+      "link_id": "2",
+      "kind": "realized",
+      "linked_element_label": "upd23b_clinical_state_on_medication_on_medication",
+      "linked_defining_concept": {
+        "id": 1094239,
+        "name": "Was on medication",
+        "domain": "Meas Value"
+      },
+      "linked_table": "observation",
+      "linked_value_set": [
+        "True"
+      ],
+      "linking_mechanism": "FACT_RELATIONSHIP",
+      "linking_mechanism_concept_id": {
+        "id": 581411,
+        "name": "Measurement to Observation"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "source_label": "mds_updrs_part_iii_summary_score",
+      "program": "AMP-PD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": "MDS-UPDRS Part III Summary Score.",
+      "layer_1_etl": {
+        "value_form": "continuous",
+        "datatype": "integer",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "4c16a16a80fcd4944d2a9ccfc907e9c7a469ef01f54ef21f63f3a3324fcf06e9",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 502407
+          }
+        ],
+        "range": {
+          "min": 0.0,
+          "max": 132.0
+        },
+        "value_map": []
+      },
+      "applies_to_rows": {
+        "column": "upd23b_clinical_state_on_medication",
+        "token": "On",
+        "token_position": 0,
+        "delimiters": []
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant_visit",
+        "attribute": "mdsupdrs_part3_total_on_rx"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "measurement",
+      "defining_concept_id": {
+        "id": 46236410,
+        "name": "Motor examination panel [UPDRS]",
+        "domain": "Measurement",
+        "target_field": "measurement_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map",
+        "visit_occurrence_id": "cdm.visit_occurrence"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [
+        {
+          "role": "medication_state",
+          "link_id": "1",
+          "status": "active",
+          "note": ""
+        },
+        {
+          "role": "medication_state",
+          "link_id": "2",
+          "status": "active",
+          "note": ""
+        }
+      ],
+      "value_map": [
+        {
+          "harmonized_value": "<any in range>",
+          "value_as_number": "<value>"
+        }
+      ]
+    }
+  ],
+  "status_note": ""
+}

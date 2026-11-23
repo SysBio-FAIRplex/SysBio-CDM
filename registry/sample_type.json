@@ -1,0 +1,404 @@
+{
+  "registry_id": 100665,
+  "schema_version": "harmonized-element/2.7",
+  "registry_label": "sample_type",
+  "definition": "Kind of biospecimen analysed - CSF, Plasma, Serum, RNA.",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-PD",
+    "AMP-CMD"
+  ],
+  "harmonized_values": [
+    "CSF",
+    "Plasma",
+    "RNA",
+    "Serum",
+    "Whole blood",
+    "Spot Urine Supernatant",
+    "Timed Urine Supernatant",
+    "Stool: 0.5ml Cryo Lyophilized Stool",
+    "tissue",
+    "primary cell"
+  ],
+  "loading_grain": {
+    "anchor": "sample_id",
+    "entity": "sample",
+    "attribute": "sample_type"
+  },
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "sample_type",
+      "program": "AMP-PD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": "Type of biospecimen used for analysis, e.g.",
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "72afa603cdf7356fca86691f8457ed8c788f0ae102bde007312c8ff44820726b",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 504457
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "a0e91c52b00c884c6736c7dc6d1961f3a9e6f5e02d7a3960cd085e1ec508c2a3",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 504458
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "a044c5a781a9457b287371c25494ecab9be9b849c3ef9dde3cd46b6ec11f5629",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 504459
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "96d714f11f4e93d2d10da6add2dfd04234587b5690d4dd01e131a4817147e0ba",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 504460
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "CSF",
+            "source_encoding": null,
+            "harmonized_value": "CSF",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Plasma",
+            "source_encoding": null,
+            "harmonized_value": "Plasma",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "RNA",
+            "source_encoding": null,
+            "harmonized_value": "RNA",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Serum",
+            "source_encoding": null,
+            "harmonized_value": "Serum",
+            "harmonized_encoding": null,
+            "note": null
+          }
+        ]
+      }
+    },
+    {
+      "source_label": "Sample Type",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "040b8349-b726-4012-b7fc-243c48bd2799",
+            "id_type": "kpmp",
+            "sha256": "a6bb002d606562e765d30489cb3b285a1f47a6b9e4479734181edfabe8c605ff",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 504461
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "Serum",
+            "source_encoding": null,
+            "harmonized_value": "Serum",
+            "harmonized_encoding": null,
+            "note": ""
+          }
+        ]
+      }
+    },
+    {
+      "source_label": "Sample Type",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "1bc63a62-9950-4395-ae9f-06d7e105ec8a",
+            "id_type": "kpmp",
+            "sha256": "d141b31bda63020b7c1d15e8069dbf264a9359cd485e3af93ea5e04bce28b953",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 504462
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "Serum",
+            "source_encoding": null,
+            "harmonized_value": "Serum",
+            "harmonized_encoding": null,
+            "note": ""
+          }
+        ]
+      }
+    },
+    {
+      "source_label": "Sample Type",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "3e6899d9-6934-4630-b44b-d62864861dab",
+            "id_type": "kpmp",
+            "sha256": "fa592c5aa9f950f549da541830f7517e14999cfbf424ff93845750d08eecc8b2",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 504463
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "Spot Urine Supernatant",
+            "source_encoding": null,
+            "harmonized_value": "Spot Urine Supernatant",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "Timed Urine Supernatant",
+            "source_encoding": null,
+            "harmonized_value": "Timed Urine Supernatant",
+            "harmonized_encoding": null,
+            "note": ""
+          }
+        ]
+      }
+    },
+    {
+      "source_label": "Sample Type",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "b6ff159a-cbe1-42e2-894b-e3f5053c2e18",
+            "id_type": "kpmp",
+            "sha256": "1e69fd4ccdc3a6e7765b7414b3d3016053b35adfcfcb8595cd9145fcd44d9ae7",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 504464
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "Spot Urine Supernatant",
+            "source_encoding": null,
+            "harmonized_value": "Spot Urine Supernatant",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "Timed Urine Supernatant",
+            "source_encoding": null,
+            "harmonized_value": "Timed Urine Supernatant",
+            "harmonized_encoding": null,
+            "note": ""
+          }
+        ]
+      }
+    },
+    {
+      "source_label": "Sample Type",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [
+        "OP-BC AU680-Urine-KPMP QC Data file Information-2022.docx"
+      ],
+      "src_definition": "Plasma EDTA, Spot Urine Supernatant, Timed Urine Supernatant, Omnigene Stool, Stool, Serum.",
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "55681d72-ddfe-45a8-b0ff-ee9a002e9710",
+            "id_type": "kpmp",
+            "sha256": "2775aa56c9703ec4ce5256fcd3642fcbb5615424e6e72fa843c8537cd101bb8a",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 504465
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "Timed Urine Supernatant",
+            "source_encoding": null,
+            "harmonized_value": "Timed Urine Supernatant",
+            "harmonized_encoding": null,
+            "note": ""
+          }
+        ]
+      }
+    },
+    {
+      "source_label": "Sample Type",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layout": {
+        "file_type": "xlsx",
+        "sheet": "Sample Meta Data"
+      },
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "b1dfd550-0386-43fc-b0dd-a1406abc4471",
+            "id_type": "kpmp",
+            "sha256": "59b56fc6d7c9c762f3e72ad1a709be9b476da76191700c020a8ffb4b6845269b",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 504467
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "Timed Urine Supernatant",
+            "source_encoding": null,
+            "harmonized_value": "Timed Urine Supernatant",
+            "harmonized_encoding": null,
+            "note": ""
+          }
+        ]
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "specimen",
+      "defining_concept_id": {
+        "id": 45773156,
+        "name": "Specimen source",
+        "domain": "Observation",
+        "target_field": "specimen_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": [
+        {
+          "harmonized_value": "CSF",
+          "value_as_concept_id": {
+            "id": 4124259,
+            "name": "Cerebrospinal fluid specimen"
+          },
+          "value_as_string": "CSF"
+        },
+        {
+          "harmonized_value": "Plasma",
+          "value_as_concept_id": {
+            "id": 4000626,
+            "name": "Plasma specimen"
+          },
+          "value_as_string": "Plasma"
+        },
+        {
+          "harmonized_value": "RNA",
+          "value_as_string": "RNA",
+          "value_as_concept_id": {
+            "id": 40480050,
+            "name": "Ribonucleic acid specimen"
+          }
+        },
+        {
+          "harmonized_value": "Serum",
+          "value_as_concept_id": {
+            "id": 4001181,
+            "name": "Serum specimen"
+          },
+          "value_as_string": "Serum"
+        },
+        {
+          "harmonized_value": "Whole blood",
+          "value_as_concept_id": {
+            "id": 4122283,
+            "name": "Whole blood specimen"
+          },
+          "value_as_string": "Whole blood"
+        }
+      ],
+      "note": ""
+    }
+  ],
+  "status_note": ""
+}

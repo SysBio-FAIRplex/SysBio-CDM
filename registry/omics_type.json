@@ -1,0 +1,265 @@
+{
+  "registry_id": 100516,
+  "schema_version": "harmonized-element/2.7",
+  "registry_label": "omics_type",
+  "definition": "The omics family the file belongs to, as the KPMP Atlas index names it (data_type).",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-CMD"
+  ],
+  "harmonized_values": [
+    "transcriptomics",
+    "imaging",
+    "genetics",
+    "proteomics",
+    "biomarker data",
+    "epigenetics",
+    "metabolomics",
+    "pathology study data",
+    "clinical study data"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "data_type",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "",
+            "id_type": "",
+            "sha256": "c2ac4b9f767134cf8f1c58d73f26cf033663f9980c54c92d67cc538952ce51fb",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503034
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "Transcriptomics",
+            "source_encoding": null,
+            "harmonized_value": "transcriptomics",
+            "harmonized_encoding": null,
+            "note": ""
+          }
+        ]
+      },
+      "loading_grain": {
+        "anchor": "file_id",
+        "entity": "file",
+        "attribute": "omics_type"
+      }
+    },
+    {
+      "source_label": "data_type",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "ed0340670a29467352823e5845d831384bfd14d8f2020f0bfdaabe386be1ea49",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503035
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "Transcriptomics",
+            "source_encoding": null,
+            "harmonized_value": "transcriptomics",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Imaging",
+            "source_encoding": null,
+            "harmonized_value": "imaging",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Genetics",
+            "source_encoding": null,
+            "harmonized_value": "genetics",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Proteomics",
+            "source_encoding": null,
+            "harmonized_value": "proteomics",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Biomarker Data",
+            "source_encoding": null,
+            "harmonized_value": "biomarker data",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Epigenetics",
+            "source_encoding": null,
+            "harmonized_value": "epigenetics",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Metabolomics",
+            "source_encoding": null,
+            "harmonized_value": "metabolomics",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Pathology Study Data",
+            "source_encoding": null,
+            "harmonized_value": "pathology study data",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Clinical Study Data",
+            "source_encoding": null,
+            "harmonized_value": "clinical study data",
+            "harmonized_encoding": null,
+            "note": null
+          }
+        ]
+      },
+      "loading_grain": {
+        "anchor": "file_id",
+        "entity": "file",
+        "attribute": "omics_type"
+      }
+    },
+    {
+      "source_label": "!Sample_library_source",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [
+        "GEO SOFT family file: !Sample_library_source"
+      ],
+      "src_definition": "GEO sample library source (SRA library_source vocabulary)",
+      "layout": {
+        "file_type": "soft"
+      },
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "GSE176067",
+            "id_type": "geo",
+            "sha256": "67469e18603ed1d3206a7d4d3065f4bdf24202cf604a2936eb8bb368c43d1f3e",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503036
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "transcriptomic",
+            "source_encoding": null,
+            "harmonized_value": "transcriptomics",
+            "harmonized_encoding": null,
+            "note": ""
+          }
+        ],
+        "key_columns": {}
+      },
+      "loading_grain": {
+        "anchor": "file_id",
+        "entity": "file",
+        "attribute": "omics_type"
+      }
+    },
+    {
+      "source_label": "!Sample_library_source",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [
+        "GEO SOFT family file: !Sample_library_source"
+      ],
+      "src_definition": "GEO sample library source (SRA library_source vocabulary)",
+      "layout": {
+        "file_type": "soft"
+      },
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "GSE176171",
+            "id_type": "geo",
+            "sha256": "4d36fd103d09571a4337581c90b1233b7aba28c3bf773706844b8fda4fc913a6",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503037
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "transcriptomic",
+            "source_encoding": null,
+            "harmonized_value": "transcriptomics",
+            "harmonized_encoding": null,
+            "note": ""
+          }
+        ],
+        "key_columns": {}
+      },
+      "loading_grain": {
+        "anchor": "file_id",
+        "entity": "file",
+        "attribute": "omics_type"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "file",
+      "column": "omics_type",
+      "anchored_to": {
+        "person_id": "staging.person_map",
+        "file_id": "files.file_id"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": []
+    }
+  ]
+}

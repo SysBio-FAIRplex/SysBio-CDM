@@ -1,0 +1,177 @@
+{
+  "registry_id": 100037,
+  "schema_version": "harmonized-element/2.5",
+  "registry_label": "amy_any",
+  "definition": "Presence of any amyloid pathology",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-AD"
+  ],
+  "harmonized_values": [
+    "1",
+    "missing or unknown",
+    "0"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "amyAny",
+      "program": "AMP-AD",
+      "status": "approved",
+      "status_note": null,
+      "manual_approval": false,
+      "src_dictionary": [
+        "DiverseCohorts_DataDictionary.pdf"
+      ],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "ordinal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn51757646",
+            "id_type": "synapse",
+            "sha256": "484b323b8d6d2eea95a7f65e6492c90755dcf8b007db621c2b01081798e7846b",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 500202
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn73713775",
+            "id_type": "synapse",
+            "sha256": "6dbbc9b9ecd74df91193deca12efa6b5affbd94e0b3642439d23b0669af45a53",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 500203
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn73713777",
+            "id_type": "synapse",
+            "sha256": "0b08ac7a739804df6964cba515eed3d65b0a29b47f0ded0512beaad2139c230b",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 500204
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn73713776",
+            "id_type": "synapse",
+            "sha256": "910e4c62e7c1662d6f2b51d34834eb1d20deb1def8fb6d1dc163fb8b749611bc",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 500205
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn73713766",
+            "id_type": "synapse",
+            "sha256": "d3f00f5cd4aa8ddc9faf87f27a06861dd5e3977e94c233a7c8a6ad6550e24383",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 500206
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "1",
+            "source_encoding": null,
+            "harmonized_value": "1",
+            "harmonized_encoding": "1",
+            "note": null
+          },
+          {
+            "source_value": "Missing or unknown",
+            "source_encoding": null,
+            "harmonized_value": "missing or unknown",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "0",
+            "source_encoding": null,
+            "harmonized_value": "0",
+            "harmonized_encoding": "0",
+            "note": null
+          },
+          {
+            "source_value": "missing or unknown",
+            "source_encoding": null,
+            "harmonized_value": "missing or unknown",
+            "harmonized_encoding": null,
+            "note": null
+          }
+        ]
+      },
+      "src_entity": {
+        "entity": "subject",
+        "dictionaries": [
+          "ADKP_harmonized_data_dictionary",
+          "DiverseCohorts_DataDictionary"
+        ],
+        "ambiguous": false,
+        "evidence": "",
+        "status": "proposed"
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "amy_any"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "observation",
+      "defining_concept_id": {
+        "id": 4288616,
+        "name": "Amyloid deposition",
+        "domain": "Observation",
+        "target_field": "observation_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": [
+        {
+          "harmonized_value": "1",
+          "value_as_number": 1,
+          "value_as_string": "1"
+        },
+        {
+          "harmonized_value": "missing or unknown",
+          "value_as_concept_id": {
+            "id": 45877986,
+            "name": "Unknown"
+          },
+          "value_as_string": "missing or unknown"
+        },
+        {
+          "harmonized_value": "0",
+          "value_as_number": 0,
+          "value_as_string": "0"
+        },
+        {
+          "harmonized_value": "missing or unknown",
+          "value_as_concept_id": {
+            "id": 45877986,
+            "name": "Unknown"
+          }
+        }
+      ]
+    }
+  ]
+}

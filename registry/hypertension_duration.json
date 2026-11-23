@@ -1,0 +1,474 @@
+{
+  "registry_id": 100257,
+  "schema_version": "harmonized-element/2.7",
+  "registry_label": "hypertension_duration",
+  "definition": "Duration (years) (`ht_durationC`, section Medical History). Hypertension duration calculated as follows using `np_age` and `mh_ht_age`: np_age - mh_ht_age. conditional on mh_ht_yn = 1. unit years.",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-CMD"
+  ],
+  "harmonized_values": [
+    "[0,5)",
+    "[15,20)",
+    "[10,15)",
+    "[20,25)",
+    "[5,10)",
+    "[25,30)",
+    "[30,35)",
+    "[35,40)",
+    "[40,45)",
+    "[45,50)",
+    "[50,55)"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "Hypertension Duration (Years)",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [
+        "KPMP_Clinical-Phenotyping-Data-Dictionary_v3_0_2024-01-12.pdf (v. 2024-01-12)"
+      ],
+      "src_definition": "Duration (years) (`ht_durationC`, section Medical History)",
+      "layer_1_etl": {
+        "value_form": "interval",
+        "datatype": "interval",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "",
+            "id_type": "",
+            "sha256": "0843ef9d8dbce1d400ab88d2b71c69b245c2d992bf13746c9c716c752d073ba6",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 501725
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "0-4 Years",
+            "source_encoding": null,
+            "harmonized_value": "[0,5)",
+            "harmonized_encoding": null,
+            "note": "",
+            "interval": {
+              "low": 0.0,
+              "high": 5.0,
+              "low_inclusive": true,
+              "high_inclusive": false
+            }
+          },
+          {
+            "source_value": "15-19 Years",
+            "source_encoding": null,
+            "harmonized_value": "[15,20)",
+            "harmonized_encoding": null,
+            "note": "",
+            "interval": {
+              "low": 15.0,
+              "high": 20.0,
+              "low_inclusive": true,
+              "high_inclusive": false
+            }
+          },
+          {
+            "source_value": "10-14 Years",
+            "source_encoding": null,
+            "harmonized_value": "[10,15)",
+            "harmonized_encoding": null,
+            "note": "",
+            "interval": {
+              "low": 10.0,
+              "high": 15.0,
+              "low_inclusive": true,
+              "high_inclusive": false
+            }
+          },
+          {
+            "source_value": "20-24 Years",
+            "source_encoding": null,
+            "harmonized_value": "[20,25)",
+            "harmonized_encoding": null,
+            "note": "",
+            "interval": {
+              "low": 20.0,
+              "high": 25.0,
+              "low_inclusive": true,
+              "high_inclusive": false
+            }
+          },
+          {
+            "source_value": "5-9 Years",
+            "source_encoding": null,
+            "harmonized_value": "[5,10)",
+            "harmonized_encoding": null,
+            "note": "",
+            "interval": {
+              "low": 5.0,
+              "high": 10.0,
+              "low_inclusive": true,
+              "high_inclusive": false
+            }
+          },
+          {
+            "source_value": "25-29 Years",
+            "source_encoding": null,
+            "harmonized_value": "[25,30)",
+            "harmonized_encoding": null,
+            "note": "",
+            "interval": {
+              "low": 25.0,
+              "high": 30.0,
+              "low_inclusive": true,
+              "high_inclusive": false
+            }
+          },
+          {
+            "source_value": "30-34 Years",
+            "source_encoding": null,
+            "harmonized_value": "[30,35)",
+            "harmonized_encoding": null,
+            "note": "",
+            "interval": {
+              "low": 30.0,
+              "high": 35.0,
+              "low_inclusive": true,
+              "high_inclusive": false
+            }
+          },
+          {
+            "source_value": "35-39 Years",
+            "source_encoding": null,
+            "harmonized_value": "[35,40)",
+            "harmonized_encoding": null,
+            "note": "",
+            "interval": {
+              "low": 35.0,
+              "high": 40.0,
+              "low_inclusive": true,
+              "high_inclusive": false
+            }
+          },
+          {
+            "source_value": "40-44 Years",
+            "source_encoding": null,
+            "harmonized_value": "[40,45)",
+            "harmonized_encoding": null,
+            "note": "",
+            "interval": {
+              "low": 40.0,
+              "high": 45.0,
+              "low_inclusive": true,
+              "high_inclusive": false
+            }
+          },
+          {
+            "source_value": "45-49 Years",
+            "source_encoding": null,
+            "harmonized_value": "[45,50)",
+            "harmonized_encoding": null,
+            "note": "",
+            "interval": {
+              "low": 45.0,
+              "high": 50.0,
+              "low_inclusive": true,
+              "high_inclusive": false
+            }
+          },
+          {
+            "source_value": "50-54 Years",
+            "source_encoding": null,
+            "harmonized_value": "[50,55)",
+            "harmonized_encoding": null,
+            "note": "",
+            "interval": {
+              "low": 50.0,
+              "high": 55.0,
+              "low_inclusive": true,
+              "high_inclusive": false
+            }
+          }
+        ],
+        "unit": "years"
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "hypertension_duration"
+      }
+    },
+    {
+      "source_label": "hypertension_duration",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "interval",
+        "datatype": "interval",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "",
+            "id_type": "",
+            "sha256": "c2ac4b9f767134cf8f1c58d73f26cf033663f9980c54c92d67cc538952ce51fb",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 501726
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "0-4 Years (hd)",
+            "source_encoding": null,
+            "harmonized_value": "[0,5)",
+            "harmonized_encoding": null,
+            "note": "",
+            "interval": {
+              "low": 0.0,
+              "high": 5.0,
+              "low_inclusive": true,
+              "high_inclusive": false
+            }
+          },
+          {
+            "source_value": "30-34 Years (hd)",
+            "source_encoding": null,
+            "harmonized_value": "[30,35)",
+            "harmonized_encoding": null,
+            "note": "",
+            "interval": {
+              "low": 30.0,
+              "high": 35.0,
+              "low_inclusive": true,
+              "high_inclusive": false
+            }
+          },
+          {
+            "source_value": "20-24 Years (hd)",
+            "source_encoding": null,
+            "harmonized_value": "[20,25)",
+            "harmonized_encoding": null,
+            "note": "",
+            "interval": {
+              "low": 20.0,
+              "high": 25.0,
+              "low_inclusive": true,
+              "high_inclusive": false
+            }
+          },
+          {
+            "source_value": "15-19 Years (hd)",
+            "source_encoding": null,
+            "harmonized_value": "[15,20)",
+            "harmonized_encoding": null,
+            "note": "",
+            "interval": {
+              "low": 15.0,
+              "high": 20.0,
+              "low_inclusive": true,
+              "high_inclusive": false
+            }
+          },
+          {
+            "source_value": "25-29 Years (hd)",
+            "source_encoding": null,
+            "harmonized_value": "[25,30)",
+            "harmonized_encoding": null,
+            "note": "",
+            "interval": {
+              "low": 25.0,
+              "high": 30.0,
+              "low_inclusive": true,
+              "high_inclusive": false
+            }
+          },
+          {
+            "source_value": "10-14 Years (hd)",
+            "source_encoding": null,
+            "harmonized_value": "[10,15)",
+            "harmonized_encoding": null,
+            "note": "",
+            "interval": {
+              "low": 10.0,
+              "high": 15.0,
+              "low_inclusive": true,
+              "high_inclusive": false
+            }
+          },
+          {
+            "source_value": "5-9 Years (hd)",
+            "source_encoding": null,
+            "harmonized_value": "[5,10)",
+            "harmonized_encoding": null,
+            "note": "",
+            "interval": {
+              "low": 5.0,
+              "high": 10.0,
+              "low_inclusive": true,
+              "high_inclusive": false
+            }
+          },
+          {
+            "source_value": "35-39 Years (hd)",
+            "source_encoding": null,
+            "harmonized_value": "[35,40)",
+            "harmonized_encoding": null,
+            "note": "",
+            "interval": {
+              "low": 35.0,
+              "high": 40.0,
+              "low_inclusive": true,
+              "high_inclusive": false
+            }
+          },
+          {
+            "source_value": "45-49 Years (hd)",
+            "source_encoding": null,
+            "harmonized_value": "[45,50)",
+            "harmonized_encoding": null,
+            "note": "",
+            "interval": {
+              "low": 45.0,
+              "high": 50.0,
+              "low_inclusive": true,
+              "high_inclusive": false
+            }
+          }
+        ],
+        "unit": "years"
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "hypertension_duration"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "observation",
+      "defining_concept_id": {
+        "id": 1091723,
+        "name": "Condition Duration",
+        "domain": "Observation",
+        "target_field": "observation_concept_id",
+        "vocabulary_id": "LOINC"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [
+        {
+          "field": "qualifier_concept_id",
+          "value": {
+            "id": 316866,
+            "name": "Hypertensive disorder"
+          },
+          "note": ""
+        }
+      ],
+      "value_map": [
+        {
+          "harmonized_value": "[0,5)",
+          "value_as_string": "[0,5)",
+          "unit_concept_id": {
+            "id": 9448,
+            "name": "year"
+          }
+        },
+        {
+          "harmonized_value": "[5,10)",
+          "value_as_string": "[5,10)",
+          "unit_concept_id": {
+            "id": 9448,
+            "name": "year"
+          }
+        },
+        {
+          "harmonized_value": "[10,15)",
+          "value_as_string": "[10,15)",
+          "unit_concept_id": {
+            "id": 9448,
+            "name": "year"
+          }
+        },
+        {
+          "harmonized_value": "[15,20)",
+          "value_as_string": "[15,20)",
+          "unit_concept_id": {
+            "id": 9448,
+            "name": "year"
+          }
+        },
+        {
+          "harmonized_value": "[20,25)",
+          "value_as_string": "[20,25)",
+          "unit_concept_id": {
+            "id": 9448,
+            "name": "year"
+          }
+        },
+        {
+          "harmonized_value": "[25,30)",
+          "value_as_string": "[25,30)",
+          "unit_concept_id": {
+            "id": 9448,
+            "name": "year"
+          }
+        },
+        {
+          "harmonized_value": "[30,35)",
+          "value_as_string": "[30,35)",
+          "unit_concept_id": {
+            "id": 9448,
+            "name": "year"
+          }
+        },
+        {
+          "harmonized_value": "[35,40)",
+          "value_as_string": "[35,40)",
+          "unit_concept_id": {
+            "id": 9448,
+            "name": "year"
+          }
+        },
+        {
+          "harmonized_value": "[40,45)",
+          "value_as_string": "[40,45)",
+          "unit_concept_id": {
+            "id": 9448,
+            "name": "year"
+          }
+        },
+        {
+          "harmonized_value": "[45,50)",
+          "value_as_string": "[45,50)",
+          "unit_concept_id": {
+            "id": 9448,
+            "name": "year"
+          }
+        },
+        {
+          "harmonized_value": "[50,55)",
+          "value_as_string": "[50,55)",
+          "unit_concept_id": {
+            "id": 9448,
+            "name": "year"
+          }
+        }
+      ]
+    }
+  ]
+}

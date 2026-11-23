@@ -1,0 +1,299 @@
+{
+  "registry_id": 100110,
+  "schema_version": "harmonized-element/2.5",
+  "registry_label": "cohort",
+  "definition": "Cohort Identifier",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-AD"
+  ],
+  "harmonized_values": [
+    "MAP",
+    "ROS",
+    "Mayo Clinic",
+    "Mt Sinai Brain Bank",
+    "Emory",
+    "CLINCOR",
+    "MARS",
+    "Banner",
+    "UFL",
+    "UPenn",
+    "LATC"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "cohort",
+      "program": "AMP-AD",
+      "status": "approved",
+      "status_note": null,
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn51757646",
+            "id_type": "synapse",
+            "sha256": "484b323b8d6d2eea95a7f65e6492c90755dcf8b007db621c2b01081798e7846b",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 501298
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn73713768",
+            "id_type": "synapse",
+            "sha256": "6ebec61ee5ebd81051fe1eac0abe6c2dc106acf9e499f818f4d1e855a1f1850f",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 501299
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn73916709",
+            "id_type": "synapse",
+            "sha256": "c08564964a45c4cd35ba90d7b54c142cf3b81f5cf30ab2658c6caeafb05503d3",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 501300
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "MAP",
+            "source_encoding": null,
+            "harmonized_value": "MAP",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "ROS",
+            "source_encoding": null,
+            "harmonized_value": "ROS",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Mayo Clinic",
+            "source_encoding": null,
+            "harmonized_value": "Mayo Clinic",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Mt Sinai Brain Bank",
+            "source_encoding": null,
+            "harmonized_value": "Mt Sinai Brain Bank",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Emory",
+            "source_encoding": null,
+            "harmonized_value": "Emory",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CLINCOR",
+            "source_encoding": null,
+            "harmonized_value": "CLINCOR",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "MARS",
+            "source_encoding": null,
+            "harmonized_value": "MARS",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Banner",
+            "source_encoding": null,
+            "harmonized_value": "Banner",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UFL",
+            "source_encoding": null,
+            "harmonized_value": "UFL",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UPenn",
+            "source_encoding": null,
+            "harmonized_value": "UPenn",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "LATC",
+            "source_encoding": null,
+            "harmonized_value": "LATC",
+            "harmonized_encoding": null,
+            "note": null
+          }
+        ]
+      },
+      "src_entity": {
+        "entity": "subject",
+        "dictionaries": [
+          "ADKP_harmonized_data_dictionary",
+          "DiverseCohorts_DataDictionary",
+          "DiverseCohorts_DataDictionary_ExtNeuropath",
+          "IndividualHumanMetadataTemplate"
+        ],
+        "ambiguous": false,
+        "evidence": "",
+        "status": "proposed"
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "cohort"
+      }
+    },
+    {
+      "source_label": "cohort",
+      "program": "AMP-AD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layout": {
+        "file_type": "csv",
+        "sheet": null
+      },
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn73713769",
+            "id_type": "synapse",
+            "sha256": "82a49077ccb8b78a1159fa089a91330da7e62fabea65dceaa342faeed56fd3ab",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 501301
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "ROS",
+            "source_encoding": null,
+            "harmonized_value": "ROS",
+            "harmonized_encoding": null
+          },
+          {
+            "source_value": "MAP",
+            "source_encoding": null,
+            "harmonized_value": "MAP",
+            "harmonized_encoding": null
+          },
+          {
+            "source_value": "MARS",
+            "source_encoding": null,
+            "harmonized_value": "MARS",
+            "harmonized_encoding": null
+          },
+          {
+            "source_value": "CLINCOR",
+            "source_encoding": null,
+            "harmonized_value": "CLINCOR",
+            "harmonized_encoding": null
+          },
+          {
+            "source_value": "LATC",
+            "source_encoding": null,
+            "harmonized_value": "LATC",
+            "harmonized_encoding": null
+          }
+        ]
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "cohort"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "observation",
+      "defining_concept_id": {
+        "id": 44813056,
+        "name": "Cohort study",
+        "domain": "Observation",
+        "target_field": "observation_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": [
+        {
+          "harmonized_value": "MAP",
+          "value_as_string": "MAP"
+        },
+        {
+          "harmonized_value": "ROS",
+          "value_as_string": "ROS"
+        },
+        {
+          "harmonized_value": "Mayo Clinic",
+          "value_as_string": "Mayo Clinic"
+        },
+        {
+          "harmonized_value": "Mt Sinai Brain Bank",
+          "value_as_string": "Mt Sinai Brain Bank"
+        },
+        {
+          "harmonized_value": "Emory",
+          "value_as_string": "Emory"
+        },
+        {
+          "harmonized_value": "CLINCOR",
+          "value_as_string": "CLINCOR"
+        },
+        {
+          "harmonized_value": "MARS",
+          "value_as_string": "MARS"
+        },
+        {
+          "harmonized_value": "Banner",
+          "value_as_string": "Banner"
+        },
+        {
+          "harmonized_value": "UFL",
+          "value_as_string": "UFL"
+        },
+        {
+          "harmonized_value": "UPenn",
+          "value_as_string": "UPenn"
+        },
+        {
+          "harmonized_value": "LATC",
+          "value_as_string": "LATC"
+        }
+      ]
+    }
+  ]
+}

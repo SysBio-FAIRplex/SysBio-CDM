@@ -1,0 +1,194 @@
+{
+  "registry_id": 100522,
+  "schema_version": "harmonized-element/2.7",
+  "registry_label": "organ_curie_id",
+  "definition": "UBERON identifier (CURIE) of the organ the core was taken from, as reported in the FNIH kidney scRNA-seq metadata (pair of specimen_originating_organ).",
+  "one_per": [
+    "person"
+  ],
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-CMD"
+  ],
+  "harmonized_values": [
+    "UBERON:0002113",
+    "UBERON:0001013",
+    "UBERON:0000955",
+    "UBERON:0002107",
+    "UBERON:0005090"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "organ__ontology_id",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "DFF520384",
+            "id_type": "cmdga",
+            "sha256": "8d480d206f6a44e492bd25e1339caefbe465a8de77942af6991bd3d830dd0cb8",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503052
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "DFF963439",
+            "id_type": "cmdga",
+            "sha256": "831987cb98b993bd1ef977d8758b4201210189a55d5bd38260dc41df3eefb5ac",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503053
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "DFF142690",
+            "id_type": "cmdga",
+            "sha256": "c1070bcc2011d593709d2bad78cf8a25b7caa913f58418cb6b28c6eab92eb1d9",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503054
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "FNIH_Liver_scRNA_v1",
+            "id_type": "cmd_dataset",
+            "sha256": "eac08c00fe30ffbbde76c8c61db382183b674f02f972888a05afac14d1855e4d",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503055
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "FNIH_Liver_scRNA_v1_Pseudobulk_B",
+            "id_type": "cmd_dataset",
+            "sha256": "01fa7b159e181b67458c775f9a3cf1debb1cdec24b8c699148678c6d6f91d6c1",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503056
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "DFF003750",
+            "id_type": "cmdga",
+            "sha256": "c9912b8266deb23f6316c109f34dfe8d576f7efc4f0cfe53e4b9f7ea789eae5a",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503057
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "UBERON:0002113",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0002113",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "UBERON:0001013",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0001013",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "UBERON:0000955",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0000955",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "UBERON:0002107",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0002107",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "UBERON:0005090",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0005090",
+            "harmonized_encoding": null,
+            "note": ""
+          }
+        ]
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "organ_curie_id"
+      }
+    },
+    {
+      "source_label": "Organ ontology ID",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [
+        "HCA metadata schema: specimen_from_organism.organ.ontology"
+      ],
+      "src_definition": "An ontology term identifier in the form prefix:accession.",
+      "layout": {
+        "file_type": "xlsx",
+        "sheet": "Specimen from organism"
+      },
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "7f7222846ac56e7ba1e6f6407bdaa9c11dc702e518221e7efc64a57b69884024",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503058
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "UBERON:0001013",
+            "source_encoding": null,
+            "harmonized_value": "UBERON:0001013",
+            "harmonized_encoding": null,
+            "note": ""
+          }
+        ]
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "organ_curie_id"
+      }
+    }
+  ],
+  "sysbio_etl": [],
+  "loading_grain": {
+    "anchor": "specimen_id",
+    "entity": "specimen_acquisition",
+    "attribute": "organ_curie_id"
+  }
+}

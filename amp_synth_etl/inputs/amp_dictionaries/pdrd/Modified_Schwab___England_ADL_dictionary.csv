@@ -1,7 +1,0 @@
-TableName,ColumnName,Title,Description,Required,DataType,DataTypeRange,UniqueValues
-Modified_Schwab_&_England_ADL.csv,participant_id,Study Subject ID,Study Subject ID,TRUE,String,,
-Modified_Schwab_&_England_ADL.csv,GUID,Subject ID,Global Unique ID (USUBJID),FALSE,String,,
-Modified_Schwab_&_England_ADL.csv,visit_name,Visit Name,"Visit name: M - in months, SC - screening visit, LOG - records without visit; #2 or #3 define repated records at the same visit or repeated visit",TRUE,String,,
-Modified_Schwab_&_England_ADL.csv,visit_month,Visit Month,"Numeric visit in months; for visits prior baseline -1, -2 is an order of screening visits",FALSE,Float,,
-Modified_Schwab_&_England_ADL.csv,mod_schwab_england_pct_adl_score,Modified Schwab and England Activities of Daily Living Scale,Modified Schwab And England Percent ADL Score,FALSE,Integer,0 - 100,
-Modified_Schwab_&_England_ADL.csv,mod_schwab_england_on_off_med,Modified Schwab and England Activities of Daily Living Scale,Clinical State On Medication,FALSE,String,,

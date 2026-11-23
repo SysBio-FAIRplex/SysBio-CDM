@@ -1,0 +1,178 @@
+{
+  "registry_id": 100041,
+  "schema_version": "harmonized-element/2.7",
+  "registry_label": "ancestry_curie_id",
+  "definition": "Ontology identifier for participant ancestry",
+  "one_per": [
+    "person"
+  ],
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-CMD"
+  ],
+  "harmonized_values": [
+    "HANCESTRO:0008",
+    "HANCESTRO:0014",
+    "HANCESTRO:0005",
+    "HANCESTRO:0568"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "ancestry__ontology_id",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "DFF520384",
+            "id_type": "cmdga",
+            "sha256": "8d480d206f6a44e492bd25e1339caefbe465a8de77942af6991bd3d830dd0cb8",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 500225
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "DFF142690",
+            "id_type": "cmdga",
+            "sha256": "c1070bcc2011d593709d2bad78cf8a25b7caa913f58418cb6b28c6eab92eb1d9",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 500226
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "DFF963439",
+            "id_type": "cmdga",
+            "sha256": "831987cb98b993bd1ef977d8758b4201210189a55d5bd38260dc41df3eefb5ac",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 500227
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "HANCESTRO:0008",
+            "source_encoding": null,
+            "harmonized_value": "HANCESTRO:0008",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "HANCESTRO:0014",
+            "source_encoding": null,
+            "harmonized_value": "HANCESTRO:0014",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "HANCESTRO:0005",
+            "source_encoding": null,
+            "harmonized_value": "HANCESTRO:0005",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "HANCESTRO:0568",
+            "source_encoding": null,
+            "harmonized_value": "HANCESTRO:0568",
+            "harmonized_encoding": null,
+            "note": null
+          }
+        ]
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "ancestry_curie_id"
+      }
+    },
+    {
+      "source_label": "self_reported_ethnicity_ontology_term_id",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [
+        "cellxgene_schema_definition.json (obs)::self_reported_ethnicity_ontology_term_id",
+        "HANCESTRO:0568 label from OLS (https://www.ebi.ac.uk/ols4/ontologies/hancestro)"
+      ],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "DFF520384",
+            "id_type": "cmdga",
+            "sha256": "8d480d206f6a44e492bd25e1339caefbe465a8de77942af6991bd3d830dd0cb8",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 500228
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "DFF142690",
+            "id_type": "cmdga",
+            "sha256": "c1070bcc2011d593709d2bad78cf8a25b7caa913f58418cb6b28c6eab92eb1d9",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 500229
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "HANCESTRO:0568",
+            "source_encoding": null,
+            "harmonized_value": "HANCESTRO:0568",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "HANCESTRO:0005",
+            "source_encoding": null,
+            "harmonized_value": "HANCESTRO:0005",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "HANCESTRO:0008",
+            "source_encoding": null,
+            "harmonized_value": "HANCESTRO:0008",
+            "harmonized_encoding": null,
+            "note": ""
+          }
+        ]
+      },
+      "precedence": 2,
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "ancestry_curie_id"
+      }
+    }
+  ],
+  "sysbio_etl": [],
+  "loading_grain": {
+    "anchor": "participant_id",
+    "entity": "participant",
+    "attribute": "ancestry_curie_id"
+  }
+}

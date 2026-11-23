@@ -1,0 +1,97 @@
+{
+  "registry_id": 100185,
+  "schema_version": "harmonized-element/2.5",
+  "registry_label": "cts_mmse30_first_ad_dx",
+  "definition": "Mini-Mental State Examination (MMSE-30) score at first Alzheimer's disease diagnosis",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-AD"
+  ],
+  "harmonized_values": [
+    "<any in range>"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "cts_mmse30_first_ad_dx",
+      "program": "AMP-AD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "continuous",
+        "datatype": "number",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn3191087",
+            "id_type": "synapse",
+            "sha256": "5d9efbdc845990ed75a2f3a5784554c7afe0e1b04484e2aa4a9d9d01911e1b90",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 501387
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn27034471",
+            "id_type": "synapse",
+            "sha256": "9c2be87182338c6d25a0bf52b27d2d4fc51136929bd250e76bdbdb6024120d18",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 501388
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn73713768",
+            "id_type": "synapse",
+            "sha256": "6ebec61ee5ebd81051fe1eac0abe6c2dc106acf9e499f818f4d1e855a1f1850f",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 501389
+          }
+        ],
+        "range": {
+          "min": 0,
+          "max": 30
+        },
+        "value_map": []
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "cts_mmse30_first_ad_dx"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "measurement",
+      "defining_concept_id": {
+        "id": 4169175,
+        "name": "Mini-mental state examination",
+        "domain": "Measurement",
+        "target_field": "measurement_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": [
+        {
+          "harmonized_value": "<any in range>",
+          "value_as_number": "<value>"
+        }
+      ]
+    }
+  ]
+}

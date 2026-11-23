@@ -1,0 +1,145 @@
+{
+  "registry_id": 100198,
+  "schema_version": "harmonized-element/2.7",
+  "registry_label": "diabetes_history",
+  "definition": "History of diabetes mellitus diagnosis and treatment",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-CMD"
+  ],
+  "harmonized_values": [
+    "yes",
+    "no",
+    "dont know"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "diabetes_history",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "text",
+        "datatype": "string",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "DFF520384",
+            "id_type": "cmdga",
+            "sha256": "8d480d206f6a44e492bd25e1339caefbe465a8de77942af6991bd3d830dd0cb8",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 501460
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "Yes",
+            "source_encoding": null,
+            "harmonized_value": "yes",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "No",
+            "source_encoding": null,
+            "harmonized_value": "no",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Don't know",
+            "source_encoding": null,
+            "harmonized_value": "dont know",
+            "harmonized_encoding": null,
+            "note": null
+          }
+        ]
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "diabetes_history"
+      }
+    },
+    {
+      "source_label": "Diabetes History",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "",
+            "id_type": "",
+            "sha256": "0843ef9d8dbce1d400ab88d2b71c69b245c2d992bf13746c9c716c752d073ba6",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 501461
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "Yes",
+            "source_encoding": "1",
+            "harmonized_value": "yes",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "No",
+            "source_encoding": "0",
+            "harmonized_value": "no",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "Don't know",
+            "source_encoding": "99",
+            "harmonized_value": "dont know",
+            "harmonized_encoding": null,
+            "note": ""
+          }
+        ]
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "diabetes_history"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "observation",
+      "defining_concept_id": {
+        "id": 40769338,
+        "name": "History of Diabetes (regardless of treatment) [PhenX]",
+        "domain": "Observation",
+        "target_field": "observation_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": []
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "registry_id": 100802,
+  "schema_version": "harmonized-element/2.5",
+  "registry_label": "upsit_booklet1_score",
+  "definition": "UPSIT Score From Booklet #1",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-PD"
+  ],
+  "harmonized_values": [
+    "<any in range>"
+  ],
+  "harmonized_with": [
+    "score_from_booklet_2",
+    "score_from_booklet_3",
+    "score_from_booklet_4",
+    "upsit_performed"
+  ],
+  "links": [
+    {
+      "link_id": "1",
+      "kind": "derivation",
+      "linked_element_label": "upsit_total",
+      "linked_defining_concept": {
+        "id": 3654978,
+        "name": "Assessment using University of Pennsylvania Smell Identification Test",
+        "domain": "Measurement",
+        "target_field": "measurement_concept_id"
+      },
+      "linked_table": "measurement",
+      "linked_value_set": {
+        "min": 0,
+        "max": 40
+      },
+      "linking_mechanism": "MEASUREMENT.measurement_event_id",
+      "linking_mechanism_concept_id": {
+        "id": 1147138,
+        "name": "measurement.measurement_id"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "source_label": "score_from_booklet_1",
+      "program": "AMP-PD",
+      "status": "approved",
+      "status_note": null,
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": "UPSIT Score From Booklet #1.",
+      "layer_1_etl": {
+        "value_form": "continuous",
+        "datatype": "integer",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "f69b2bffe1a75a0aadf4dc32f1b6f0b0d89bfa2835790016f12d3c0036205acc",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 506097
+          }
+        ],
+        "range": {
+          "min": 0,
+          "max": 10
+        },
+        "value_map": []
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant_visit",
+        "attribute": "upsit_booklet1_score"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "measurement",
+      "defining_concept_id": {
+        "id": 3654978,
+        "name": "Assessment using University of Pennsylvania Smell Identification Test",
+        "domain": "Measurement",
+        "target_field": "measurement_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map",
+        "visit_occurrence_id": "cdm.visit_occurrence"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [
+        {
+          "role": "derivation",
+          "link_id": "1",
+          "status": "active",
+          "note": ""
+        }
+      ],
+      "value_map": [
+        {
+          "harmonized_value": "<any in range>",
+          "value_as_number": "<value>"
+        }
+      ]
+    }
+  ],
+  "status_note": ""
+}

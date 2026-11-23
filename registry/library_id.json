@@ -1,0 +1,175 @@
+{
+  "registry_id": 100269,
+  "schema_version": "harmonized-element/2.5",
+  "registry_label": "library_id",
+  "definition": "The sequencing library each cell came from. This is the specimen actually fed to single-cell RNA-seq.",
+  "must_agree": false,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-AD",
+    "AMP-CMD",
+    "AMP-RA-SLE"
+  ],
+  "harmonized_values": [],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "LibraryID",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "identifier",
+        "datatype": "string",
+        "value_map": [],
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "DFF520384",
+            "id_type": "cmdga",
+            "sha256": "8d480d206f6a44e492bd25e1339caefbe465a8de77942af6991bd3d830dd0cb8",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 501953
+          }
+        ]
+      },
+      "loading_grain": {
+        "anchor": "library_id",
+        "entity": "library",
+        "attribute": "library_id"
+      }
+    },
+    {
+      "program": "AMP-CMD",
+      "source_label": "library",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": "",
+      "loading_grain": {
+        "anchor": "library_id",
+        "entity": "library",
+        "attribute": "library_id"
+      },
+      "layer_1_etl": {
+        "value_form": "identifier",
+        "datatype": "string",
+        "missing_values": [],
+        "value_map": [],
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "c3ac2109034f84bde4d3a40ff5ec69cb7fca253b207198dbc8895a1d5a910902",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 501954
+          }
+        ]
+      }
+    },
+    {
+      "program": "AMP-RA-SLE",
+      "source_label": "file name prefix",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": "",
+      "loading_grain": {
+        "anchor": "library_id",
+        "entity": "library",
+        "attribute": "library_id"
+      },
+      "layer_1_etl": {
+        "value_form": "identifier",
+        "datatype": "string",
+        "missing_values": [],
+        "value_map": [],
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "6545f7428465f8877cea9d64589552b692e5a79a9ecc4265f99118523555b972",
+            "access_groups": [
+              "AMP-RA-SLE"
+            ],
+            "item_as_source_id": 501955
+          }
+        ]
+      },
+      "layout": {
+        "file_type": "xlsx",
+        "sheet": "data"
+      }
+    },
+    {
+      "program": "AMP-AD",
+      "source_label": "libraryID",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": "",
+      "loading_grain": {
+        "anchor": "library_id",
+        "entity": "library",
+        "attribute": "library_id"
+      },
+      "layer_1_etl": {
+        "value_form": "identifier",
+        "datatype": "string",
+        "missing_values": [],
+        "value_map": [],
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "0e7a28709debe2e899fd6ec203a346b1b5fad8f8f21035f2e5a2c56773ccd300",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 501956
+          }
+        ]
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "measurement",
+      "defining_concept_id": {
+        "id": 21493003,
+        "name": "Unique identifier for Current sample",
+        "domain": "Measurement",
+        "target_field": "measurement_concept_id",
+        "vocabulary_id": "LOINC"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map",
+        "specimen_id": "staging.specimen_map"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": [
+        {
+          "harmonized_value": "<identifier>",
+          "value_source_value": "<raw>"
+        }
+      ]
+    }
+  ]
+}

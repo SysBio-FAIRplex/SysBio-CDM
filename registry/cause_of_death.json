@@ -1,0 +1,197 @@
+{
+  "registry_id": 100082,
+  "schema_version": "harmonized-element/2.5",
+  "registry_label": "cause_of_death",
+  "definition": "Cause of death recorded for the donor.",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-CMD"
+  ],
+  "harmonized_values": [
+    "cholangiocarcinoma",
+    "sarcoma not otherwise specified",
+    "multiple strokes and acute renal failure and pneumonia",
+    "congestive cardiac failure and ischaemic heart disease and bipolar affective disorder",
+    "urinary tract infection and chronic obstructive pulmonary disease",
+    "pneumonia and frailty of old age",
+    "unknown (likely cardiac based on circumstances of death)",
+    "suicide",
+    "pulmonary embolism"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "COD",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layout": {
+        "file_type": "xlsx",
+        "sheet": "1_donor_overview"
+      },
+      "layer_1_etl": {
+        "value_form": "text",
+        "datatype": "string",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "b46623c4d78f475a7ae9d4b771a3112cb39888718aa814a121f43cca71f8516e",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 500845
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "CholangioCa",
+            "source_encoding": null,
+            "harmonized_value": "cholangiocarcinoma",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "Sarcoma NOS",
+            "source_encoding": null,
+            "harmonized_value": "sarcoma not otherwise specified",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "multiple strokes, acute renal failure, pneumonia",
+            "source_encoding": null,
+            "harmonized_value": "multiple strokes and acute renal failure and pneumonia",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "Congestive cardiac failure, ischaemic heart disease, bipolar affective disorder",
+            "source_encoding": null,
+            "harmonized_value": "congestive cardiac failure and ischaemic heart disease and bipolar affective disorder",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "UTI, COPD",
+            "source_encoding": null,
+            "harmonized_value": "urinary tract infection and chronic obstructive pulmonary disease",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "PNEUMONIA, FRAILTY OF OLD AGE",
+            "source_encoding": null,
+            "harmonized_value": "pneumonia and frailty of old age",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "Unknown (likely cardiac based on circumstances of death)",
+            "source_encoding": null,
+            "harmonized_value": "unknown (likely cardiac based on circumstances of death)",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Suicide",
+            "source_encoding": null,
+            "harmonized_value": "suicide",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Pulmonary embolism ",
+            "source_encoding": null,
+            "harmonized_value": "pulmonary embolism",
+            "harmonized_encoding": null,
+            "note": ""
+          }
+        ],
+        "missing_values": [
+          "missing"
+        ]
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "cause_of_death"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "observation",
+      "defining_concept_id": {
+        "id": 4083743,
+        "name": "Cause of death",
+        "domain": "Observation",
+        "target_field": "observation_concept_id",
+        "vocabulary_id": "SNOMED"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": [
+        {
+          "harmonized_value": "cholangiocarcinoma",
+          "value_as_concept_id": {
+            "id": 4208660,
+            "name": "Cholangiocarcinoma of biliary tract"
+          }
+        },
+        {
+          "harmonized_value": "sarcoma not otherwise specified",
+          "value_as_concept_id": {
+            "id": 4311439,
+            "name": "Sarcoma"
+          }
+        },
+        {
+          "harmonized_value": "pulmonary embolism",
+          "value_as_concept_id": {
+            "id": 440417,
+            "name": "Pulmonary embolism"
+          }
+        },
+        {
+          "harmonized_value": "suicide",
+          "value_as_concept_id": {
+            "id": 440925,
+            "name": "Suicide"
+          }
+        },
+        {
+          "harmonized_value": "multiple strokes and acute renal failure and pneumonia",
+          "value_as_string": "multiple strokes and acute renal failure and pneumonia"
+        },
+        {
+          "harmonized_value": "congestive cardiac failure and ischaemic heart disease and bipolar affective disorder",
+          "value_as_string": "congestive cardiac failure and ischaemic heart disease and bipolar affective disorder"
+        },
+        {
+          "harmonized_value": "urinary tract infection and chronic obstructive pulmonary disease",
+          "value_as_string": "urinary tract infection and chronic obstructive pulmonary disease"
+        },
+        {
+          "harmonized_value": "pneumonia and frailty of old age",
+          "value_as_string": "pneumonia and frailty of old age"
+        },
+        {
+          "harmonized_value": "unknown (likely cardiac based on circumstances of death)",
+          "value_as_string": "unknown (likely cardiac based on circumstances of death)"
+        }
+      ]
+    }
+  ]
+}

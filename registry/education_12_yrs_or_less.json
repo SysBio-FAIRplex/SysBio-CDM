@@ -1,0 +1,117 @@
+{
+  "registry_id": 100213,
+  "schema_version": "harmonized-element/2.5",
+  "registry_label": "education_12_yrs_or_less",
+  "definition": "Indicator Of Whether Subject Has Completed 12 Years Of Education",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-PD"
+  ],
+  "harmonized_values": [
+    "greater than 12 years of education",
+    "less than or equal to 12 years of education"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": [
+        "education_12years_complete",
+        "code_education_12years_complete"
+      ],
+      "program": "AMP-PD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": "Indicator Of Whether Subject Has Completed 12 Years Of Education.",
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "7917c590ef8a0f35d3bed77d7e07871d45cb82e8b96a4d6326ba44bb4dd25cde",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_ids": [
+              501502,
+              501503
+            ]
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "Greater than 12 years of education",
+            "source_encoding": "0",
+            "harmonized_value": "greater than 12 years of education",
+            "harmonized_encoding": "12",
+            "note": null
+          },
+          {
+            "source_value": "Less than or equal to 12 years of education",
+            "source_encoding": "1",
+            "harmonized_value": "less than or equal to 12 years of education",
+            "harmonized_encoding": "12",
+            "note": null
+          }
+        ]
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant_visit",
+        "attribute": "education_12_yrs_or_less"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "observation",
+      "defining_concept_id": {
+        "id": 42528764,
+        "name": "Years of education [#] - Reported",
+        "domain": "Observation",
+        "target_field": "observation_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map",
+        "visit_occurrence_id": "cdm.visit_occurrence"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": [
+        {
+          "harmonized_value": "greater than 12 years of education",
+          "value_as_number": 12,
+          "qualifier_concept_id": {
+            "id": 4172704,
+            "name": ">"
+          },
+          "value_as_concept_id": {
+            "id": 37079441,
+            "name": "More than high school"
+          }
+        },
+        {
+          "harmonized_value": "less than or equal to 12 years of education",
+          "value_as_number": 12,
+          "qualifier_concept_id": {
+            "id": 4171754,
+            "name": "<="
+          },
+          "value_as_concept_id": {
+            "id": 45876261,
+            "name": "High school"
+          }
+        }
+      ]
+    }
+  ],
+  "status_note": ""
+}

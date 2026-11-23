@@ -1,0 +1,198 @@
+{
+  "registry_id": 100101,
+  "schema_version": "harmonized-element/2.5",
+  "registry_label": "cigarettes_per_day",
+  "definition": "Average number cigarettes smoked daily",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-PD"
+  ],
+  "harmonized_values": [
+    "less than one cigarette",
+    "1 cigarette",
+    "2 to 5 cigarettes",
+    "6 to 15 cigarettes",
+    "16 to 25 cigarettes",
+    "26 to 35 cigarettes",
+    "more than 35 cigarettes",
+    "unknown"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "cigarettes_per_day",
+      "program": "AMP-PD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": "Average number cigarettes smoked daily.",
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "dd7732ea9d0dd2b29f64aed9435bf44cb728d0439ba446868c0de31548b15342",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 501286
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "Less than one cigarette",
+            "source_encoding": null,
+            "harmonized_value": "less than one cigarette",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "1 cigarette",
+            "source_encoding": null,
+            "harmonized_value": "1 cigarette",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "2 to 5 cigarettes",
+            "source_encoding": null,
+            "harmonized_value": "2 to 5 cigarettes",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "6 to 15 cigarettes",
+            "source_encoding": null,
+            "harmonized_value": "6 to 15 cigarettes",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "16 to 25 cigarettes",
+            "source_encoding": null,
+            "harmonized_value": "16 to 25 cigarettes",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "26 to 35 cigarettes",
+            "source_encoding": null,
+            "harmonized_value": "26 to 35 cigarettes",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "More than 35 cigarettes",
+            "source_encoding": null,
+            "harmonized_value": "more than 35 cigarettes",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Unknown",
+            "source_encoding": null,
+            "harmonized_value": "unknown",
+            "harmonized_encoding": null,
+            "note": null
+          }
+        ]
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant_visit",
+        "attribute": "cigarettes_per_day"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "observation",
+      "defining_concept_id": {
+        "id": 40766930,
+        "name": "On the average of the entire time you smoked, how many cigarettes did you smoke per day [PhenX]",
+        "domain": "Observation",
+        "target_field": "observation_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map",
+        "visit_occurrence_id": "cdm.visit_occurrence"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": [
+        {
+          "harmonized_value": "less than one cigarette",
+          "value_as_string": "less than one cigarette",
+          "value_as_concept_id": {
+            "id": 45876407,
+            "name": "Less than one cigarette per day"
+          }
+        },
+        {
+          "harmonized_value": "1 cigarette",
+          "value_as_string": "1 cigarette",
+          "value_as_concept_id": {
+            "id": 45876408,
+            "name": "1 cigarette per day"
+          }
+        },
+        {
+          "harmonized_value": "2 to 5 cigarettes",
+          "value_as_string": "2 to 5 cigarettes",
+          "value_as_concept_id": {
+            "id": 45881683,
+            "name": "2 to 5 cigarettes per day"
+          }
+        },
+        {
+          "harmonized_value": "6 to 15 cigarettes",
+          "value_as_string": "6 to 15 cigarettes",
+          "value_as_concept_id": {
+            "id": 45883728,
+            "name": "6 to 15 cigarettes per day (about 1/2 pack)"
+          }
+        },
+        {
+          "harmonized_value": "16 to 25 cigarettes",
+          "value_as_string": "16 to 25 cigarettes",
+          "value_as_concept_id": {
+            "id": 45876409,
+            "name": "16 to 25 cigarettes per day (about 1 pack)"
+          }
+        },
+        {
+          "harmonized_value": "26 to 35 cigarettes",
+          "value_as_string": "26 to 35 cigarettes",
+          "value_as_concept_id": {
+            "id": 45876770,
+            "name": "26 to 35 cigarettes per day (about 1 1/2 packs)"
+          }
+        },
+        {
+          "harmonized_value": "more than 35 cigarettes",
+          "value_as_string": "more than 35 cigarettes",
+          "value_as_concept_id": {
+            "id": 45883456,
+            "name": "More than 35 cigarettes per day (about 2 packs or more)"
+          }
+        },
+        {
+          "harmonized_value": "unknown",
+          "value_as_concept_id": {
+            "id": 45877986,
+            "name": "Unknown"
+          },
+          "value_as_string": "unknown"
+        }
+      ]
+    }
+  ]
+}

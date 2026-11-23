@@ -1,0 +1,212 @@
+{
+  "registry_id": 100003,
+  "schema_version": "harmonized-element/2.7",
+  "registry_label": "age_at_baseline",
+  "definition": "Age at BASELINE - one value per person. The age at a specific timepoint is the separate element age; a baseline visit may legitimately carry both, so a user can ask for baseline age or for the age at a given visit. DECISIONS 21i.",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-CMD",
+    "AMP-PD",
+    "AMP-RA-SLE"
+  ],
+  "harmonized_values": [
+    "<integer years>"
+  ],
+  "loading_grain": {
+    "anchor": "participant_id",
+    "entity": "participant",
+    "attribute": "age_at_baseline"
+  },
+  "unit": "years",
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "Donor age",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "continuous",
+        "datatype": "number",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "82f0291f2a87f8acef0f3b1a2fd0af638abe8d777013285f789a7c146da2cdc1",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 500017
+          }
+        ],
+        "range": {
+          "min": 18,
+          "max": 120
+        },
+        "value_map": []
+      },
+      "applies_to_rows": {
+        "column": "Donor age units",
+        "token": "year",
+        "token_position": 0,
+        "delimiters": []
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "age_at_baseline"
+      }
+    },
+    {
+      "source_label": "age_at_baseline",
+      "program": "AMP-PD",
+      "status": "approved",
+      "status_note": null,
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": "Age At Baseline.",
+      "layer_1_etl": {
+        "value_form": "continuous",
+        "datatype": "integer",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "4169f8a20ebdbdfb8e36dec16d83641c9dcf24c4568639dcbabf1584a894c558",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 500022
+          }
+        ],
+        "range": {
+          "min": 19,
+          "max": 100
+        },
+        "value_map": []
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant_visit",
+        "attribute": "age_at_baseline"
+      }
+    },
+    {
+      "source_label": "Age",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "continuous",
+        "datatype": "integer",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "DFF963439",
+            "id_type": "cmdga",
+            "sha256": "831987cb98b993bd1ef977d8758b4201210189a55d5bd38260dc41df3eefb5ac",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 500023
+          }
+        ],
+        "range": {
+          "min": 0,
+          "max": 120
+        },
+        "value_map": []
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "age_at_baseline"
+      }
+    },
+    {
+      "source_label": "age",
+      "program": "AMP-RA-SLE",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "continuous",
+        "datatype": "integer",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn47136972",
+            "id_type": "synapse",
+            "sha256": "a5203e27eeb64900d06fd6cfc3684860e7008efaade42c16f8dc897185cf9324",
+            "access_groups": [
+              "AMP-RA-SLE"
+            ],
+            "item_as_source_id": 500024
+          }
+        ],
+        "range": {
+          "min": 0.0,
+          "max": 120.0
+        },
+        "value_map": []
+      },
+      "src_entity": {
+        "entity": "subject",
+        "dictionaries": [
+          "[data file name withheld]"
+        ],
+        "ambiguous": false,
+        "evidence": "",
+        "status": "proposed"
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "age_at_baseline"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "observation",
+      "defining_concept_id": {
+        "id": 3022304,
+        "name": "Age",
+        "domain": "Observation",
+        "target_field": "observation_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map",
+        "visit_occurrence_id": "cdm.visit_occurrence"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": [
+        {
+          "harmonized_value": "<any in range>",
+          "value_as_number": "<value>",
+          "unit_concept_id": {
+            "id": 9448,
+            "name": "year",
+            "note": ""
+          }
+        }
+      ],
+      "note": ""
+    }
+  ]
+}

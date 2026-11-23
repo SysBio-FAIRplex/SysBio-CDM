@@ -1,0 +1,98 @@
+{
+  "registry_id": 100735,
+  "schema_version": "harmonized-element/2.5",
+  "registry_label": "upd23b_clinical_state_on_medication_on_medication",
+  "definition": "",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-PD"
+  ],
+  "harmonized_values": [
+    "Off",
+    "On"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "upd23b_clinical_state_on_medication",
+      "program": "AMP-PD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": "3b MDS-UPDRS - Clinical State On Medication (UPD23B)",
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "4c16a16a80fcd4944d2a9ccfc907e9c7a469ef01f54ef21f63f3a3324fcf06e9",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 506033
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "Off",
+            "source_encoding": null,
+            "harmonized_value": "Off",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "On",
+            "source_encoding": null,
+            "harmonized_value": "On",
+            "harmonized_encoding": null,
+            "note": null
+          }
+        ]
+      },
+      "applies_to_rows": {
+        "column": "upd23b_clinical_state_on_medication",
+        "token": "On",
+        "token_position": 0,
+        "delimiters": []
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "observation",
+      "defining_concept_id": {
+        "id": 1094239,
+        "name": "Was on medication",
+        "domain": "Meas Value",
+        "target_field": "observation_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map",
+        "visit_occurrence_id": "cdm.visit_occurrence"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": [
+        {
+          "harmonized_value": "On",
+          "value_as_concept_id": {
+            "id": 4135944,
+            "name": "True"
+          },
+          "value_as_string": "True",
+          "note": ""
+        }
+      ],
+      "note": ""
+    }
+  ],
+  "status_note": ""
+}

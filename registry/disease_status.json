@@ -1,0 +1,458 @@
+{
+  "registry_id": 100206,
+  "schema_version": "harmonized-element/2.7",
+  "registry_label": "disease_status",
+  "definition": "The disease state(s) of the individual donating the sample at the time of donation.",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-CMD",
+    "AMP-RA-SLE"
+  ],
+  "harmonized_values": [
+    "diabetic kidney disease",
+    "control",
+    "acute kidney injury",
+    "hypertensive chronic kidney disease",
+    "chronic kidney disease",
+    "diabetic nephropathy resistor",
+    "focal segmental glomerulosclerosis",
+    "case"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "sampletype",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "DFF520384",
+            "id_type": "cmdga",
+            "sha256": "8d480d206f6a44e492bd25e1339caefbe465a8de77942af6991bd3d830dd0cb8",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 501479
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "DKD",
+            "source_encoding": null,
+            "harmonized_value": "diabetic kidney disease",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "LD",
+            "source_encoding": null,
+            "harmonized_value": "control",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "AKI",
+            "source_encoding": null,
+            "harmonized_value": "acute kidney injury",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "HCKD",
+            "source_encoding": null,
+            "harmonized_value": "hypertensive chronic kidney disease",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "HRT",
+            "source_encoding": null,
+            "harmonized_value": "control",
+            "harmonized_encoding": null,
+            "note": ""
+          }
+        ]
+      },
+      "precedence": 1,
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "disease_status"
+      }
+    },
+    {
+      "source_label": "Enrollment Category",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "",
+            "id_type": "",
+            "sha256": "0843ef9d8dbce1d400ab88d2b71c69b245c2d992bf13746c9c716c752d073ba6",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 501480
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "CKD",
+            "source_encoding": null,
+            "harmonized_value": "chronic kidney disease",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "Healthy Reference",
+            "source_encoding": null,
+            "harmonized_value": "control",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "AKI",
+            "source_encoding": null,
+            "harmonized_value": "acute kidney injury",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "DM-R",
+            "source_encoding": null,
+            "harmonized_value": "diabetic nephropathy resistor",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "FSGS",
+            "source_encoding": null,
+            "harmonized_value": "focal segmental glomerulosclerosis",
+            "harmonized_encoding": null,
+            "note": ""
+          }
+        ]
+      },
+      "precedence": 2,
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "disease_status"
+      }
+    },
+    {
+      "source_label": "Disease Ontology term",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [
+        "cmdga_profiles.json::HumanDonor::disease_term_name"
+      ],
+      "src_definition": "Disease Ontology term: The term should match the ontology identifier specified in disease_term_id.",
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "",
+            "id_type": "",
+            "sha256": "82f0291f2a87f8acef0f3b1a2fd0af638abe8d777013285f789a7c146da2cdc1",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 501481
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "Chronic kidney disease (CKD)",
+            "source_encoding": null,
+            "harmonized_value": "chronic kidney disease",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "Acute kidney failure, unspecified",
+            "source_encoding": null,
+            "harmonized_value": "acute kidney injury",
+            "harmonized_encoding": null,
+            "note": ""
+          }
+        ]
+      },
+      "precedence": 3,
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "disease_status"
+      },
+      "layout": {
+        "file_type": "tsv",
+        "header_row": 2
+      }
+    },
+    {
+      "source_label": "Donor health status",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [
+        "cmdga_profiles.json::HumanDonor::health_status"
+      ],
+      "src_definition": "Donor health status.",
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "",
+            "id_type": "",
+            "sha256": "82f0291f2a87f8acef0f3b1a2fd0af638abe8d777013285f789a7c146da2cdc1",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 501482
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "Healthy",
+            "source_encoding": null,
+            "harmonized_value": "control",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "Chronic Kidney Disease (CKD)",
+            "source_encoding": null,
+            "harmonized_value": "chronic kidney disease",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "Acute Kidney Injury (AKI)",
+            "source_encoding": null,
+            "harmonized_value": "acute kidney injury",
+            "harmonized_encoding": null,
+            "note": ""
+          }
+        ]
+      },
+      "precedence": 3,
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "disease_status"
+      },
+      "layout": {
+        "file_type": "tsv",
+        "header_row": 2
+      }
+    },
+    {
+      "source_label": "health_status",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [
+        "cmdga_profiles.json::HumanDonor::health_status"
+      ],
+      "src_definition": "Donor health status.",
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "",
+            "id_type": "cmdga",
+            "sha256": "f787c47ca854b6398bf7ca9834b5274a1681e0dae796409381e3bb0ea88ed29a",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 501483
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "Healthy",
+            "source_encoding": null,
+            "harmonized_value": "control",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "Chronic Kidney Disease (CKD)",
+            "source_encoding": null,
+            "harmonized_value": "chronic kidney disease",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "Acute Kidney Injury (AKI)",
+            "source_encoding": null,
+            "harmonized_value": "acute kidney injury",
+            "harmonized_encoding": null,
+            "note": ""
+          }
+        ]
+      },
+      "precedence": 3,
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "disease_status"
+      }
+    },
+    {
+      "source_label": "sample type",
+      "program": "AMP-RA-SLE",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layout": {
+        "file_type": "xlsx",
+        "sheet": "data"
+      },
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn43078438",
+            "id_type": "synapse",
+            "sha256": "6545f7428465f8877cea9d64589552b692e5a79a9ecc4265f99118523555b972",
+            "access_groups": [
+              "AMP-RA-SLE"
+            ],
+            "item_as_source_id": 501484
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "Case",
+            "source_encoding": null,
+            "harmonized_value": "case",
+            "harmonized_encoding": null
+          },
+          {
+            "source_value": "Control",
+            "source_encoding": null,
+            "harmonized_value": "control",
+            "harmonized_encoding": null
+          }
+        ]
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "disease_status"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "observation",
+      "defining_concept_id": {
+        "id": 1989567,
+        "name": "Condition clinical status",
+        "domain": "Observation",
+        "target_field": "observation_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [
+        {
+          "role": "qualifier",
+          "column": null,
+          "status": "proposed",
+          "note": ""
+        }
+      ],
+      "value_map": [
+        {
+          "harmonized_value": "diabetic kidney disease",
+          "value_as_concept_id": {
+            "id": 45883355,
+            "name": "Diabetic Kidney Disease"
+          },
+          "value_as_string": "Diabetic Kidney Disease"
+        },
+        {
+          "harmonized_value": "control",
+          "value_as_concept_id": {
+            "id": 45884153,
+            "name": "Normal"
+          },
+          "value_as_string": "Control"
+        },
+        {
+          "harmonized_value": "acute kidney injury",
+          "value_as_concept_id": {
+            "id": 197320,
+            "name": "Acute kidney injury"
+          },
+          "value_as_string": "Acute Kidney Injury"
+        },
+        {
+          "harmonized_value": "hypertensive chronic kidney disease",
+          "value_as_concept_id": {
+            "id": 201313,
+            "name": "Hypertensive renal disease"
+          },
+          "value_as_string": "Hypertensive Chronic Kidney Disease"
+        },
+        {
+          "harmonized_value": "chronic kidney disease",
+          "value_as_concept_id": {
+            "id": 46271022,
+            "name": "Chronic kidney disease"
+          },
+          "value_as_string": "Chronic Kidney Disease"
+        },
+        {
+          "harmonized_value": "diabetic nephropathy resistor",
+          "value_as_string": "Diabetic Nephropathy Resistor"
+        },
+        {
+          "harmonized_value": "focal segmental glomerulosclerosis",
+          "value_as_concept_id": {
+            "id": 4030513,
+            "name": "Focal segmental glomerulosclerosis"
+          },
+          "value_as_string": "Focal Segmental Glomerulosclerosis"
+        }
+      ]
+    }
+  ]
+}

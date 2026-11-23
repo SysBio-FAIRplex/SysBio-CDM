@@ -1,0 +1,530 @@
+{
+  "registry_id": 100091,
+  "schema_version": "harmonized-element/2.7",
+  "registry_label": "cell_type_curie_id",
+  "definition": "Cell Ontology (CL) identifier (CURIE) of the participant's/suspension's cell type as reported in the FNIH kidney scRNA-seq metadata; paired with cell_type_curie_label.",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-CMD"
+  ],
+  "harmonized_values": [
+    "CL:1000412",
+    "CL:1001131",
+    "CL:1001005",
+    "CL:0002138",
+    "CL:1001033",
+    "CL:4030016",
+    "CL:4030017",
+    "CL:1001107",
+    "CL:4030012",
+    "CL:1001106",
+    "CL:4030020",
+    "CL:4030015",
+    "CL:0002201",
+    "CL:0020015",
+    "CL:1000714",
+    "CL:1000768",
+    "CL:4030018",
+    "CL:1000547",
+    "CL:1001431",
+    "CL:1000452",
+    "CL:0000653",
+    "CL:1000838",
+    "CL:4030011",
+    "CL:0002306",
+    "CL:1001109",
+    "CL:1001108",
+    "CL:0002518",
+    "CL:0000236",
+    "CL:0000786",
+    "CL:0000623",
+    "CL:4052055",
+    "CL:0000084",
+    "CL:0000910",
+    "CL:4033069",
+    "CL:1000695",
+    "CL:0000097",
+    "CL:0000113",
+    "CL:0000860",
+    "CL:0000990",
+    "CL:4033078",
+    "CL:0000875",
+    "CL:0001058",
+    "CL:1000692",
+    "CL:1000742",
+    "CL:1000691",
+    "CL:0000648",
+    "CL:1001066",
+    "CL:0008034",
+    "CL:0000499"
+  ],
+  "loading_grain": {
+    "anchor": "library_id",
+    "entity": "scrnaseq_libraries",
+    "attribute": "cell_type_curie_id"
+  },
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "author_cell_type",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [
+        "cellxgene_schema_definition.json (obs)::cell_type_ontology_term_id"
+      ],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "string",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "DFF520384",
+            "id_type": "cmdga",
+            "sha256": "8d480d206f6a44e492bd25e1339caefbe465a8de77942af6991bd3d830dd0cb8",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 501187
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "EC-AEA",
+            "source_encoding": null,
+            "harmonized_value": "CL:1000412",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "EC-AVR",
+            "source_encoding": null,
+            "harmonized_value": "CL:1001131",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "EC-GC",
+            "source_encoding": null,
+            "harmonized_value": "CL:1001005",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "EC-LYM",
+            "source_encoding": null,
+            "harmonized_value": "CL:0002138",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "EC-PTC",
+            "source_encoding": null,
+            "harmonized_value": "CL:1001033",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "DCT1",
+            "source_encoding": null,
+            "harmonized_value": "CL:4030016",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "DCT2",
+            "source_encoding": null,
+            "harmonized_value": "CL:4030017",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "ATL",
+            "source_encoding": null,
+            "harmonized_value": "CL:1001107",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "DTL1",
+            "source_encoding": null,
+            "harmonized_value": "CL:4030012",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "aTAL1",
+            "source_encoding": null,
+            "harmonized_value": "CL:1001106",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CNT-IC-A",
+            "source_encoding": null,
+            "harmonized_value": "CL:4030020",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "IC-A",
+            "source_encoding": null,
+            "harmonized_value": "CL:4030015",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "IC-B",
+            "source_encoding": null,
+            "harmonized_value": "CL:0002201",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "tPC-IC",
+            "source_encoding": null,
+            "harmonized_value": "CL:0020015",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CCD-PC",
+            "source_encoding": null,
+            "harmonized_value": "CL:1000714",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CNT",
+            "source_encoding": null,
+            "harmonized_value": "CL:1000768",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "CNT-PC",
+            "source_encoding": null,
+            "harmonized_value": "CL:4030018",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "IMCD",
+            "source_encoding": null,
+            "harmonized_value": "CL:1000547",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "PC",
+            "source_encoding": null,
+            "harmonized_value": "CL:1001431",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "dPC",
+            "source_encoding": null,
+            "harmonized_value": "CL:1001431",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "PEC",
+            "source_encoding": null,
+            "harmonized_value": "CL:1000452",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "POD",
+            "source_encoding": null,
+            "harmonized_value": "CL:0000653",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "PT-S1/S2",
+            "source_encoding": null,
+            "harmonized_value": "CL:1000838",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "PT-S3",
+            "source_encoding": null,
+            "harmonized_value": "CL:4030011",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "aPT",
+            "source_encoding": null,
+            "harmonized_value": "CL:0002306",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "dPT",
+            "source_encoding": null,
+            "harmonized_value": "CL:0002306",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "C-TAL",
+            "source_encoding": null,
+            "harmonized_value": "CL:1001109",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "M-TAL",
+            "source_encoding": null,
+            "harmonized_value": "CL:1001108",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "aTAL2",
+            "source_encoding": null,
+            "harmonized_value": "CL:1001106",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "cycEPI",
+            "source_encoding": null,
+            "harmonized_value": "CL:0002518",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "B",
+            "source_encoding": null,
+            "harmonized_value": "CL:0000236",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "PL",
+            "source_encoding": null,
+            "harmonized_value": "CL:0000786",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "NK1",
+            "source_encoding": null,
+            "harmonized_value": "CL:0000623",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "NKT",
+            "source_encoding": null,
+            "harmonized_value": "CL:4052055",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "T",
+            "source_encoding": null,
+            "harmonized_value": "CL:0000084",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "T-CYT",
+            "source_encoding": null,
+            "harmonized_value": "CL:0000910",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "cycT",
+            "source_encoding": null,
+            "harmonized_value": "CL:4033069",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "MAC-M2",
+            "source_encoding": null,
+            "harmonized_value": "CL:1000695",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "MAST",
+            "source_encoding": null,
+            "harmonized_value": "CL:0000097",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "MDC",
+            "source_encoding": null,
+            "harmonized_value": "CL:0000113",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "MON",
+            "source_encoding": null,
+            "harmonized_value": "CL:0000860",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "cDC",
+            "source_encoding": null,
+            "harmonized_value": "CL:0000990",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "cycMNP",
+            "source_encoding": null,
+            "harmonized_value": "CL:4033078",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "ncMON",
+            "source_encoding": null,
+            "harmonized_value": "CL:0000875",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "pDC",
+            "source_encoding": null,
+            "harmonized_value": "CL:0001058",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "FIB",
+            "source_encoding": null,
+            "harmonized_value": "CL:1000692",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "MC",
+            "source_encoding": null,
+            "harmonized_value": "CL:1000742",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "MyoF",
+            "source_encoding": null,
+            "harmonized_value": "CL:1000691",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "REN",
+            "source_encoding": null,
+            "harmonized_value": "CL:0000648",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "VSMC",
+            "source_encoding": null,
+            "harmonized_value": "CL:1001066",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "VSMC/P",
+            "source_encoding": null,
+            "harmonized_value": "CL:0008034",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "aFIB",
+            "source_encoding": null,
+            "harmonized_value": "CL:1000692",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "dFIB",
+            "source_encoding": null,
+            "harmonized_value": "CL:1000692",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "dVSMC",
+            "source_encoding": null,
+            "harmonized_value": "CL:1001066",
+            "harmonized_encoding": null,
+            "note": null
+          }
+        ]
+      },
+      "loading_grain": {
+        "anchor": "library_id",
+        "entity": "library",
+        "attribute": "cell_type_curie_id"
+      }
+    },
+    {
+      "source_label": "Cell type ontology ID",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [
+        "HCA metadata schema: cell_suspension.selected_cell_types.ontology"
+      ],
+      "src_definition": "An ontology term identifier in the form prefix:accession.",
+      "layout": {
+        "file_type": "xlsx",
+        "sheet": "Cell suspension"
+      },
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "string",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "7f7222846ac56e7ba1e6f6407bdaa9c11dc702e518221e7efc64a57b69884024",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 501188
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "CL:0000499",
+            "source_encoding": null,
+            "harmonized_value": "CL:0000499",
+            "harmonized_encoding": null,
+            "note": ""
+          }
+        ]
+      },
+      "loading_grain": {
+        "anchor": "library_id",
+        "entity": "library",
+        "attribute": "cell_type_curie_id"
+      }
+    }
+  ],
+  "sysbio_etl": []
+}

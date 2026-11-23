@@ -1,0 +1,154 @@
+{
+  "registry_id": 100707,
+  "schema_version": "harmonized-element/2.5",
+  "registry_label": "study",
+  "definition": "Identifier of the research study or cohort from which the data was collected",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-AD",
+    "AMP-PD"
+  ],
+  "harmonized_values": [],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "Study",
+      "program": "AMP-AD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "text",
+        "datatype": "string",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn3191087",
+            "id_type": "synapse",
+            "sha256": "5d9efbdc845990ed75a2f3a5784554c7afe0e1b04484e2aa4a9d9d01911e1b90",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 505505
+          }
+        ],
+        "value_map": []
+      },
+      "src_entity": {
+        "entity": "subject",
+        "dictionaries": [
+          "ADSP-PHC-Neuropath_DD_2026.02.18"
+        ],
+        "ambiguous": false,
+        "evidence": "",
+        "status": "proposed"
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "study"
+      }
+    },
+    {
+      "source_label": "data_product_code",
+      "program": "AMP-PD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "text",
+        "datatype": "string",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "4f77515b518ee5cf3fdf5d61b06687c8236e33801f769caf45dca6e2f5e9a7f2",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 505506
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "BR-RSNSR",
+            "source_encoding": null,
+            "harmonized_value": "BR-RSNSR",
+            "harmonized_encoding": null,
+            "note": null
+          }
+        ]
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "study"
+      }
+    },
+    {
+      "source_label": "data_product_code",
+      "program": "AMP-PD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "text",
+        "datatype": "string",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "337db3cf4886000256cb43d3b58e557dbb271820fd585e4b0dea8e995af39b3c",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 505507
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "BR-RSNSR",
+            "source_encoding": null,
+            "harmonized_value": "BR-RSNSR",
+            "harmonized_encoding": null,
+            "note": null
+          }
+        ]
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "study"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "observation",
+      "defining_concept_id": {
+        "id": 21492138,
+        "name": "Resource identifier [URI] for Study",
+        "domain": "Observation",
+        "target_field": "observation_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": []
+    }
+  ]
+}

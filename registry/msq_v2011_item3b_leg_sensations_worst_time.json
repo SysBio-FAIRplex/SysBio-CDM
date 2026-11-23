@@ -1,0 +1,102 @@
+{
+  "registry_id": 100504,
+  "schema_version": "harmonized-element/2.5",
+  "registry_label": "msq_v2011_item3b_leg_sensations_worst_time",
+  "definition": "MSQ Time Leg Sensations Worst Q3b.",
+  "one_per": [
+    "person",
+    "visit"
+  ],
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-PD"
+  ],
+  "harmonized_values": [
+    "After 6pm",
+    "Before 6pm"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "msq03b_time_leg_sensations_worst",
+      "program": "AMP-PD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": "MSQ Time Leg Sensations Worst Q3b.",
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "4c6de4a9cd752197bca40057220123a4093a4485208f56a73c2f8e0076da9a03",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 502942
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "After 6pm",
+            "source_encoding": null,
+            "harmonized_value": "After 6pm",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Before 6pm",
+            "source_encoding": null,
+            "harmonized_value": "Before 6pm",
+            "harmonized_encoding": null,
+            "note": null
+          }
+        ]
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "observation",
+      "defining_concept_id": {
+        "id": 73754,
+        "name": "Restless legs",
+        "domain": "Condition",
+        "target_field": "observation_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map",
+        "visit_occurrence_id": "cdm.visit_occurrence"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": [
+        {
+          "harmonized_value": "After 6pm",
+          "value_as_string": "After 6pm",
+          "value_as_concept_id": {
+            "id": 45883202,
+            "name": "Evening"
+          }
+        },
+        {
+          "harmonized_value": "Before 6pm",
+          "value_as_string": "Before 6pm",
+          "value_as_concept_id": {
+            "id": 4101405,
+            "name": "Daytime"
+          }
+        }
+      ]
+    }
+  ],
+  "status_note": ""
+}

@@ -1,0 +1,836 @@
+{
+  "registry_id": 100662,
+  "schema_version": "harmonized-element/2.7",
+  "registry_label": "sample_acquisition",
+  "definition": "HOW the specimen was obtained.",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-CMD"
+  ],
+  "harmonized_values": [
+    "Percutaneous Needle Biopsy",
+    "Transplant Pre-perfusion Biopsy",
+    "Tumor Nephrectomy",
+    "Deceased Donor Nephrectomy",
+    "Intra-operative Biopsy",
+    "Total Tumor Nephrectomy",
+    "Partial Tumor Nephrectomy",
+    "Transplant Surveillance Biopsy",
+    "Intra-operative Needle Biopsy",
+    "Biopsy",
+    "surgical resection",
+    "Abdominoplasty",
+    "Deep inferior epigastric perforators",
+    "Panniculectomy",
+    "Thighplasty",
+    "Cholecystectomy",
+    "Colon polyp surgery",
+    "Hernia surgery",
+    "Roux en Y Gastric Bypass",
+    "Total abdominal hysterectomy and bilateral salpingo-oophorectomy",
+    "Vertical Sleeve Gastrectomy"
+  ],
+  "loading_grain": {
+    "anchor": "specimen_id",
+    "entity": "specimen_acquisition",
+    "attribute": "sample_acquisition"
+  },
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "Sample Type",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "",
+            "id_type": "",
+            "sha256": "0843ef9d8dbce1d400ab88d2b71c69b245c2d992bf13746c9c716c752d073ba6",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 504422
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "Percutaneous Needle Biopsy",
+            "source_encoding": null,
+            "harmonized_value": "Percutaneous Needle Biopsy",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "Transplant Pre-perfusion Biopsy",
+            "source_encoding": null,
+            "harmonized_value": "Transplant Pre-perfusion Biopsy",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "Tumor Nephrectomy",
+            "source_encoding": null,
+            "harmonized_value": "Tumor Nephrectomy",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "Deceased Donor Nephrectomy",
+            "source_encoding": null,
+            "harmonized_value": "Deceased Donor Nephrectomy",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "Intra-operative Biopsy",
+            "source_encoding": null,
+            "harmonized_value": "Intra-operative Biopsy",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "Total Tumor Nephrectomy",
+            "source_encoding": null,
+            "harmonized_value": "Total Tumor Nephrectomy",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "Partial Tumor Nephrectomy",
+            "source_encoding": null,
+            "harmonized_value": "Partial Tumor Nephrectomy",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "Transplant Surveillance Biopsy",
+            "source_encoding": null,
+            "harmonized_value": "Transplant Surveillance Biopsy",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "Intra-operative Needle Biopsy",
+            "source_encoding": null,
+            "harmonized_value": "Intra-operative Needle Biopsy",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "Biopsy",
+            "source_encoding": null,
+            "harmonized_value": "Biopsy",
+            "harmonized_encoding": null,
+            "note": ""
+          }
+        ]
+      }
+    },
+    {
+      "source_label": "sample_type",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "",
+            "id_type": "",
+            "sha256": "c2ac4b9f767134cf8f1c58d73f26cf033663f9980c54c92d67cc538952ce51fb",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 504423
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "Percutaneous Needle Biopsy",
+            "source_encoding": null,
+            "harmonized_value": "Percutaneous Needle Biopsy",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "Transplant Pre-perfusion Biopsy",
+            "source_encoding": null,
+            "harmonized_value": "Transplant Pre-perfusion Biopsy",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "Intra-operative Biopsy",
+            "source_encoding": null,
+            "harmonized_value": "Intra-operative Biopsy",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "Tumor Nephrectomy",
+            "source_encoding": null,
+            "harmonized_value": "Tumor Nephrectomy",
+            "harmonized_encoding": null,
+            "note": ""
+          }
+        ]
+      }
+    },
+    {
+      "source_label": "Protocol ID",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [
+        "HCA metadata schema: collection_protocol.protocol_core.protocol_id"
+      ],
+      "src_definition": "A unique ID for the protocol.",
+      "layout": {
+        "file_type": "xlsx",
+        "sheet": "Specimen from organism"
+      },
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "7f7222846ac56e7ba1e6f6407bdaa9c11dc702e518221e7efc64a57b69884024",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 503460
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "bidmc_snuc",
+            "source_encoding": null,
+            "harmonized_value": "surgical resection",
+            "harmonized_encoding": null,
+            "harmonized_curie": "EFO:0009744",
+            "note": ""
+          },
+          {
+            "source_value": "upmc_snuc",
+            "source_encoding": null,
+            "harmonized_value": "surgical resection",
+            "harmonized_encoding": null,
+            "harmonized_curie": "EFO:0009744",
+            "note": ""
+          },
+          {
+            "source_value": "bidmc_dropseq",
+            "source_encoding": null,
+            "harmonized_value": "surgical resection",
+            "harmonized_encoding": null,
+            "harmonized_curie": "EFO:0009744",
+            "note": ""
+          }
+        ]
+      }
+    },
+    {
+      "source_label": "Process type (Required)",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [
+        "HCA metadata schema: collection_protocol.method.text"
+      ],
+      "src_definition": "The name of a process type being used.",
+      "layout": {
+        "file_type": "xlsx",
+        "sheet": "Collection protocol"
+      },
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "7f7222846ac56e7ba1e6f6407bdaa9c11dc702e518221e7efc64a57b69884024",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 504424
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "surgical resection",
+            "source_encoding": null,
+            "harmonized_value": "surgical resection",
+            "harmonized_encoding": null,
+            "harmonized_curie": "EFO:0009744",
+            "note": ""
+          }
+        ]
+      }
+    },
+    {
+      "source_label": "Transplant organ",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [
+        "HCA metadata schema: specimen_from_organism.transplant_organ"
+      ],
+      "src_definition": "Was the specimen collected after extraction for organ transplantation?.",
+      "layout": {
+        "file_type": "xlsx",
+        "sheet": "Specimen from organism"
+      },
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "7f7222846ac56e7ba1e6f6407bdaa9c11dc702e518221e7efc64a57b69884024",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 504425
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "False",
+            "source_encoding": null,
+            "harmonized_value": null,
+            "harmonized_encoding": null,
+            "note": ""
+          }
+        ]
+      }
+    },
+    {
+      "source_label": "!Sample_characteristics_ch1",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layout": {
+        "file_type": "soft.gz"
+      },
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "GSE176067",
+            "id_type": "geo",
+            "sha256": "67469e18603ed1d3206a7d4d3065f4bdf24202cf604a2936eb8bb368c43d1f3e",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 504426
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "surgery: Abdominoplasty",
+            "source_encoding": null,
+            "harmonized_value": "Abdominoplasty",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "surgery: DIEP",
+            "source_encoding": null,
+            "harmonized_value": "Deep inferior epigastric perforators",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "surgery: Panniculectomy",
+            "source_encoding": null,
+            "harmonized_value": "Panniculectomy",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "surgery: Thighplasty",
+            "source_encoding": null,
+            "harmonized_value": "Thighplasty",
+            "harmonized_encoding": null,
+            "note": null
+          }
+        ]
+      }
+    },
+    {
+      "source_label": "Surgery",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layout": {
+        "file_type": "html"
+      },
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "547300b502cfe5a4cc72b8bbd8d7942444eeac10fe51e6a8115afc673eca2a7d",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 504427
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "CCY",
+            "source_encoding": null,
+            "harmonized_value": "Cholecystectomy",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "Colon polyp",
+            "source_encoding": null,
+            "harmonized_value": "Colon polyp surgery",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "Hernia",
+            "source_encoding": null,
+            "harmonized_value": "Hernia surgery",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "RYGB",
+            "source_encoding": null,
+            "harmonized_value": "Roux en Y Gastric Bypass",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "TAH BSO",
+            "source_encoding": null,
+            "harmonized_value": "Total abdominal hysterectomy and bilateral salpingo-oophorectomy",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "VSG",
+            "source_encoding": null,
+            "harmonized_value": "Vertical Sleeve Gastrectomy",
+            "harmonized_encoding": null,
+            "note": ""
+          }
+        ]
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "procedure_occurrence",
+      "defining_concept_id": {
+        "id": 4335087,
+        "name": "Sampling of tissue specimen",
+        "domain": "Procedure",
+        "target_field": "procedure_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": [
+        {
+          "harmonized_value": "Percutaneous Needle Biopsy",
+          "value_as_number": null,
+          "value_as_concept_id": {
+            "id": 4173506,
+            "name": "Needle biopsy of kidney",
+            "domain": "Procedure",
+            "vocabulary": "SNOMED"
+          },
+          "value_as_string": "Percutaneous Needle Biopsy"
+        },
+        {
+          "harmonized_value": "Transplant Pre-perfusion Biopsy",
+          "value_as_number": null,
+          "value_as_concept_id": {
+            "id": 4164499,
+            "name": "Surgical biopsy of kidney",
+            "domain": "Procedure",
+            "vocabulary": "SNOMED"
+          },
+          "value_as_string": "Transplant Pre-perfusion Biopsy"
+        },
+        {
+          "harmonized_value": "Intra-operative Biopsy",
+          "value_as_number": null,
+          "value_as_concept_id": {
+            "id": 4221238,
+            "name": "Open biopsy of kidney",
+            "domain": "Procedure",
+            "vocabulary": "SNOMED"
+          },
+          "value_as_string": "Intra-operative Biopsy"
+        },
+        {
+          "harmonized_value": "Tumor Nephrectomy",
+          "value_as_number": null,
+          "value_as_concept_id": {
+            "id": 4021108,
+            "name": "Total nephrectomy",
+            "domain": "Procedure",
+            "vocabulary": "SNOMED"
+          },
+          "value_as_string": "Tumor Nephrectomy"
+        },
+        {
+          "harmonized_value": "Deceased Donor Nephrectomy",
+          "value_as_concept_id": {
+            "id": 4344635,
+            "name": "Cadaver donor nephrectomy",
+            "domain": "Procedure",
+            "vocabulary": "SNOMED"
+          },
+          "note": ""
+        },
+        {
+          "harmonized_value": "Total Tumor Nephrectomy",
+          "value_as_concept_id": {
+            "id": 4021108,
+            "name": "Total nephrectomy",
+            "domain": "Procedure",
+            "vocabulary": "SNOMED"
+          },
+          "note": ""
+        },
+        {
+          "harmonized_value": "Partial Tumor Nephrectomy",
+          "value_as_concept_id": {
+            "id": 4304536,
+            "name": "Partial nephrectomy",
+            "domain": "Procedure",
+            "vocabulary": "SNOMED"
+          },
+          "note": ""
+        },
+        {
+          "harmonized_value": "Transplant Surveillance Biopsy",
+          "value_as_concept_id": {
+            "id": 4217034,
+            "name": "Kidney biopsy",
+            "domain": "Procedure",
+            "vocabulary": "SNOMED"
+          },
+          "note": ""
+        },
+        {
+          "harmonized_value": "Intra-operative Needle Biopsy",
+          "value_as_concept_id": {
+            "id": 4173506,
+            "name": "Needle biopsy of kidney",
+            "domain": "Procedure",
+            "vocabulary": "SNOMED"
+          },
+          "note": ""
+        },
+        {
+          "harmonized_value": "Biopsy",
+          "value_as_concept_id": {
+            "id": 4217034,
+            "name": "Kidney biopsy",
+            "domain": "Procedure",
+            "vocabulary": "SNOMED"
+          },
+          "note": ""
+        }
+      ],
+      "note": ""
+    },
+    {
+      "target_id": "",
+      "table": "measurement",
+      "defining_concept_id": {
+        "id": 602279,
+        "name": "Specimen collection procedure",
+        "domain": "Observation",
+        "target_field": "measurement_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [
+        {
+          "role": "attribute",
+          "link_id": "2",
+          "status": "active",
+          "note": ""
+        }
+      ],
+      "value_map": [
+        {
+          "harmonized_value": "Percutaneous Needle Biopsy",
+          "value_as_number": null,
+          "value_as_concept_id": {
+            "id": 4173506,
+            "name": "Needle biopsy of kidney",
+            "domain": "Procedure",
+            "vocabulary": "SNOMED"
+          },
+          "value_as_string": "Percutaneous Needle Biopsy"
+        },
+        {
+          "harmonized_value": "Transplant Pre-perfusion Biopsy",
+          "value_as_number": null,
+          "value_as_concept_id": {
+            "id": 4164499,
+            "name": "Surgical biopsy of kidney",
+            "domain": "Procedure",
+            "vocabulary": "SNOMED"
+          },
+          "value_as_string": "Transplant Pre-perfusion Biopsy"
+        },
+        {
+          "harmonized_value": "Intra-operative Biopsy",
+          "value_as_number": null,
+          "value_as_concept_id": {
+            "id": 4221238,
+            "name": "Open biopsy of kidney",
+            "domain": "Procedure",
+            "vocabulary": "SNOMED"
+          },
+          "value_as_string": "Intra-operative Biopsy"
+        },
+        {
+          "harmonized_value": "Tumor Nephrectomy",
+          "value_as_number": null,
+          "value_as_concept_id": {
+            "id": 4021108,
+            "name": "Total nephrectomy",
+            "domain": "Procedure",
+            "vocabulary": "SNOMED"
+          },
+          "value_as_string": "Tumor Nephrectomy"
+        },
+        {
+          "harmonized_value": "Deceased Donor Nephrectomy",
+          "value_as_concept_id": {
+            "id": 4344635,
+            "name": "Cadaver donor nephrectomy",
+            "domain": "Procedure",
+            "vocabulary": "SNOMED"
+          },
+          "note": ""
+        },
+        {
+          "harmonized_value": "Total Tumor Nephrectomy",
+          "value_as_concept_id": {
+            "id": 4021108,
+            "name": "Total nephrectomy",
+            "domain": "Procedure",
+            "vocabulary": "SNOMED"
+          },
+          "note": ""
+        },
+        {
+          "harmonized_value": "Partial Tumor Nephrectomy",
+          "value_as_concept_id": {
+            "id": 4304536,
+            "name": "Partial nephrectomy",
+            "domain": "Procedure",
+            "vocabulary": "SNOMED"
+          },
+          "note": ""
+        },
+        {
+          "harmonized_value": "Transplant Surveillance Biopsy",
+          "value_as_concept_id": {
+            "id": 4217034,
+            "name": "Kidney biopsy",
+            "domain": "Procedure",
+            "vocabulary": "SNOMED"
+          },
+          "note": ""
+        },
+        {
+          "harmonized_value": "Intra-operative Needle Biopsy",
+          "value_as_concept_id": {
+            "id": 4173506,
+            "name": "Needle biopsy of kidney",
+            "domain": "Procedure",
+            "vocabulary": "SNOMED"
+          },
+          "note": ""
+        },
+        {
+          "harmonized_value": "Biopsy",
+          "value_as_concept_id": {
+            "id": 4217034,
+            "name": "Kidney biopsy",
+            "domain": "Procedure",
+            "vocabulary": "SNOMED"
+          },
+          "note": ""
+        }
+      ],
+      "note": ""
+    },
+    {
+      "target_id": "",
+      "table": "specimen",
+      "defining_concept_id": {
+        "id": 4133742,
+        "name": "Specimen from kidney",
+        "domain": "Specimen",
+        "vocabulary": "SNOMED",
+        "target_field": "specimen_concept_id"
+      },
+      "anchored_to": [
+        "person_id"
+      ],
+      "record_attributes": [],
+      "status_note": "",
+      "value_map": [
+        {
+          "harmonized_value": "Percutaneous Needle Biopsy",
+          "value_as_concept_id": {
+            "id": 4048980,
+            "name": "Specimen from kidney obtained by (core) needle biopsy",
+            "domain": "Specimen",
+            "vocabulary": "SNOMED"
+          },
+          "note": ""
+        },
+        {
+          "harmonized_value": "Transplant Pre-perfusion Biopsy",
+          "value_as_concept_id": {
+            "id": 4206376,
+            "name": "Specimen from transplanted kidney obtained by biopsy",
+            "domain": "Specimen",
+            "vocabulary": "SNOMED"
+          },
+          "note": ""
+        },
+        {
+          "harmonized_value": "Intra-operative Biopsy",
+          "value_as_concept_id": {
+            "id": 4045782,
+            "name": "Specimen from kidney obtained by incisional biopsy",
+            "domain": "Specimen",
+            "vocabulary": "SNOMED"
+          },
+          "note": ""
+        },
+        {
+          "harmonized_value": "Tumor Nephrectomy",
+          "value_as_concept_id": {
+            "id": 4021108,
+            "name": "Total nephrectomy",
+            "domain": "Specimen",
+            "vocabulary": "SNOMED"
+          },
+          "note": ""
+        },
+        {
+          "harmonized_value": "Deceased Donor Nephrectomy",
+          "value_as_concept_id": {
+            "id": 4205249,
+            "name": "Total nephrectomy specimen",
+            "domain": "Specimen",
+            "vocabulary": "SNOMED"
+          },
+          "note": ""
+        },
+        {
+          "harmonized_value": "Total Tumor Nephrectomy",
+          "value_as_concept_id": {
+            "id": 4205249,
+            "name": "Total nephrectomy specimen",
+            "domain": "Specimen",
+            "vocabulary": "SNOMED"
+          },
+          "note": ""
+        },
+        {
+          "harmonized_value": "Partial Tumor Nephrectomy",
+          "value_as_concept_id": {
+            "id": 4206133,
+            "name": "Partial nephrectomy specimen",
+            "domain": "Specimen",
+            "vocabulary": "SNOMED"
+          },
+          "note": ""
+        },
+        {
+          "harmonized_value": "Transplant Surveillance Biopsy",
+          "value_as_concept_id": {
+            "id": 4206376,
+            "name": "Specimen from transplanted kidney obtained by biopsy",
+            "domain": "Specimen",
+            "vocabulary": "SNOMED"
+          },
+          "note": ""
+        },
+        {
+          "harmonized_value": "Intra-operative Needle Biopsy",
+          "value_as_concept_id": {
+            "id": 4048980,
+            "name": "Specimen from kidney obtained by (core) needle biopsy",
+            "domain": "Specimen",
+            "vocabulary": "SNOMED"
+          },
+          "note": ""
+        },
+        {
+          "harmonized_value": "Biopsy",
+          "value_as_concept_id": {
+            "id": 4204351,
+            "name": "Kidney biopsy specimen",
+            "domain": "Specimen",
+            "vocabulary": "SNOMED"
+          },
+          "note": ""
+        }
+      ],
+      "source_value": "<raw>"
+    }
+  ]
+}

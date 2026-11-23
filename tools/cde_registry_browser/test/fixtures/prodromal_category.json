@@ -1,0 +1,71 @@
+{
+  "schema_version": "harmonized-element/2.5",
+  "registry_id": "",
+  "registry_label": "prodromal_category",
+  "definition": "At-risk for PD individuals having the same diagnosis as healthy controls with enrollment criterion hyposmia or REM Sleep Behavior Disorder.",
+  "one_per": [
+    "person"
+  ],
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-PD"
+  ],
+  "harmonized_values": [
+    "Hyposmia",
+    "REM Sleep Behavior Disorder",
+    "Unknown/Not collected as enrollment criterion"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "observation",
+      "defining_concept_id": {
+        "id": 4222638,
+        "name": "Prodrome",
+        "domain": "Observation",
+        "target_field": "observation_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": [
+        {
+          "harmonized_value": "Hyposmia",
+          "value_as_string": "Hyposmia",
+          "value_as_concept_id": {
+            "id": 4307095,
+            "name": "Sense of smell impaired"
+          },
+          "qualifier_concept_id": {
+            "id": 381270,
+            "name": "Parkinson's disease"
+          }
+        },
+        {
+          "harmonized_value": "REM Sleep Behavior Disorder",
+          "value_as_string": "REM Sleep Behavior Disorder",
+          "value_as_concept_id": {
+            "id": 439007,
+            "name": "REM sleep behavior disorder"
+          },
+          "qualifier_concept_id": {
+            "id": 381270,
+            "name": "Parkinson's disease"
+          }
+        }
+      ],
+      "qualifier_concept_id": {
+        "id": 4123534,
+        "name": "Prodromal phase"
+      },
+      "note": ""
+    }
+  ]
+}

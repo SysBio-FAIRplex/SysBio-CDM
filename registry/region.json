@@ -1,0 +1,69 @@
+{
+  "registry_id": 100644,
+  "schema_version": "harmonized-element/2.5",
+  "registry_label": "region",
+  "definition": "Anatomical or geographical region associated with the observation or sample.",
+  "one_per": [
+    "person"
+  ],
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-CMD",
+    "AMP-PD"
+  ],
+  "harmonized_values": [
+    "Dorsal motor nucleus of the Xth nerve",
+    "Brain Tissue - Globus pallidus interna",
+    "Brain Tissue - Prefrontal cortex",
+    "Brain Tissue - Primary motor cortex",
+    "Brain Tissue - Primary visual cortex"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "region",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "text",
+        "datatype": "string",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "DFF142690",
+            "id_type": "cmdga",
+            "sha256": "c1070bcc2011d593709d2bad78cf8a25b7caa913f58418cb6b28c6eab92eb1d9",
+            "access_groups": [],
+            "item_as_source_id": 503699
+          }
+        ],
+        "value_map": []
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "observation",
+      "defining_concept_id": {
+        "id": 4293159,
+        "name": "Brain region",
+        "domain": "Observation",
+        "target_field": "observation_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": []
+    }
+  ]
+}

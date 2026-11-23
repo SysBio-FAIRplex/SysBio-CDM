@@ -1,0 +1,108 @@
+{
+  "registry_id": 100468,
+  "schema_version": "harmonized-element/2.5",
+  "registry_label": "moca_v7_1_orientation_year",
+  "definition": "MOCA: 24. Orientation - Year Score",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-PD"
+  ],
+  "harmonized_values": [
+    "<any in range>"
+  ],
+  "harmonized_with": [],
+  "links": [
+    {
+      "link_id": "1",
+      "kind": "derivation",
+      "linked_element_label": "moca_v7_1_orientation_subtotal",
+      "linked_defining_concept": {
+        "id": 43054876,
+        "name": "Montreal Cognitive Assessment [MoCA]",
+        "domain": "Observation",
+        "target_field": "observation_concept_id"
+      },
+      "linked_table": "observation",
+      "linked_value_set": {
+        "min": 0,
+        "max": 6
+      },
+      "linking_mechanism": "OBSERVATION.observation_event_id",
+      "linking_mechanism_concept_id": {
+        "id": 1147165,
+        "name": "observation.observation_id"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "source_label": "moca24_orientation_year_score",
+      "program": "AMP-PD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": "MOCA: 24.",
+      "layer_1_etl": {
+        "value_form": "continuous",
+        "datatype": "integer",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "7917c590ef8a0f35d3bed77d7e07871d45cb82e8b96a4d6326ba44bb4dd25cde",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 502902
+          }
+        ],
+        "range": {
+          "min": 0,
+          "max": 1
+        },
+        "value_map": []
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant_visit",
+        "attribute": "moca_v7_1_orientation_year"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "observation",
+      "defining_concept_id": {
+        "id": 43054876,
+        "name": "Montreal Cognitive Assessment [MoCA]",
+        "domain": "Observation",
+        "target_field": "observation_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map",
+        "visit_occurrence_id": "cdm.visit_occurrence"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [
+        {
+          "role": "derivation",
+          "link_id": "1",
+          "status": "active",
+          "note": ""
+        }
+      ],
+      "value_map": [
+        {
+          "harmonized_value": "<any in range>",
+          "value_as_number": "<value>"
+        }
+      ]
+    }
+  ],
+  "status_note": ""
+}

@@ -1,0 +1,131 @@
+{
+  "registry_id": 100251,
+  "schema_version": "harmonized-element/2.7",
+  "registry_label": "hba1c_mass_fraction_blood_bin",
+  "harmonized_element_curie": "LOINC:4548-4",
+  "definition": "A1C (%) (`a1c_most_recentC`, section Laboratory Results). Most recent pre-biopsy A1C in % from screening (`sc_a1c_nbr_01`, `sc_a1c_nbr_02`) or enrollment (`lab_a1c_01`, `lab_a1c_02`, `lab_a1c_high`, `cmh_a1c_recent`, `cmh_a1c_early`, `cmh_a1c_high`). unit %.",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-CMD"
+  ],
+  "harmonized_values": [
+    "[0,6.5)",
+    "[6.5,7.5)",
+    "[8.5,inf)",
+    "[7.5,8.5)"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "A1c (%) (Binned)",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [
+        "KPMP_Clinical-Phenotyping-Data-Dictionary_v3_0_2024-01-12.pdf (v. 2024-01-12)"
+      ],
+      "src_definition": "",
+      "layer_1_etl": {
+        "value_form": "interval",
+        "datatype": "interval",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "",
+            "id_type": "",
+            "sha256": "0843ef9d8dbce1d400ab88d2b71c69b245c2d992bf13746c9c716c752d073ba6",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 501710
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "<6.5%",
+            "source_encoding": null,
+            "harmonized_value": "[0,6.5)",
+            "harmonized_encoding": null,
+            "note": "",
+            "interval": {
+              "low": 0,
+              "high": 6.5,
+              "low_inclusive": true,
+              "high_inclusive": false
+            }
+          },
+          {
+            "source_value": "6.5 to <7.5%",
+            "source_encoding": null,
+            "harmonized_value": "[6.5,7.5)",
+            "harmonized_encoding": null,
+            "note": "",
+            "interval": {
+              "low": 6.5,
+              "high": 7.5,
+              "low_inclusive": true,
+              "high_inclusive": false
+            }
+          },
+          {
+            "source_value": ">=8.5%",
+            "source_encoding": null,
+            "harmonized_value": "[8.5,inf)",
+            "harmonized_encoding": null,
+            "note": "",
+            "interval": {
+              "low": 8.5,
+              "high": null,
+              "low_inclusive": true,
+              "high_inclusive": false
+            }
+          },
+          {
+            "source_value": "7.5 to <8.5%",
+            "source_encoding": null,
+            "harmonized_value": "[7.5,8.5)",
+            "harmonized_encoding": null,
+            "note": "",
+            "interval": {
+              "low": 7.5,
+              "high": 8.5,
+              "low_inclusive": true,
+              "high_inclusive": false
+            }
+          }
+        ],
+        "unit": "%"
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "hba1c_mass_fraction_blood_bin"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "measurement",
+      "defining_concept_id": {
+        "id": 3004410,
+        "name": "Hemoglobin A1c/Hemoglobin.total in Blood",
+        "domain": "Measurement",
+        "target_field": "measurement_concept_id",
+        "vocabulary_id": "LOINC",
+        "concept_code": "4548-4",
+        "vocabulary_version": "LOINC 2.78"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": []
+    }
+  ]
+}

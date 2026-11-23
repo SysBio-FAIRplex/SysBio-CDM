@@ -1,0 +1,174 @@
+{
+  "registry_id": 100230,
+  "schema_version": "harmonized-element/2.5",
+  "registry_label": "ess_v1991_item6_sitting_talking",
+  "definition": "ESS - Sitting And Talking To Someone (ESS0106)",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-PD"
+  ],
+  "harmonized_values": [
+    "would never doze",
+    "slight chance of dozing",
+    "moderate chance of dozing",
+    "high chance of dozing"
+  ],
+  "harmonized_with": [],
+  "links": [
+    {
+      "link_id": "1",
+      "kind": "derivation",
+      "linked_element_label": "ess_v1991_total",
+      "linked_element_id": "ess_summary_score",
+      "linked_table": "measurement",
+      "linking_mechanism": "MEASUREMENT.measurement_event_id",
+      "linking_mechanism_concept_id": {
+        "id": 1147138,
+        "name": "measurement.measurement_id"
+      },
+      "note": ""
+    }
+  ],
+  "sources": [
+    {
+      "source_label": [
+        "ess0106_sitting_and_talking_to_someone",
+        "code_ess0106_sitting_and_talking_to_someone"
+      ],
+      "program": "AMP-PD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": "ESS - Sitting And Talking To Someone (ESS0106)",
+      "layer_1_etl": {
+        "value_form": "ordinal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "876eb647b1546eef3ad91016729c5aa056ad5db28efde22e907601ea0f8d2003",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_ids": [
+              501563,
+              501564
+            ]
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "Would Never Doze",
+            "source_encoding": "0",
+            "harmonized_value": "would never doze",
+            "harmonized_encoding": "0",
+            "note": null
+          },
+          {
+            "source_value": "Slight Chance Of Dozing",
+            "source_encoding": "1",
+            "harmonized_value": "slight chance of dozing",
+            "harmonized_encoding": "1",
+            "note": null
+          },
+          {
+            "source_value": "Moderate Chance Of Dozing",
+            "source_encoding": "2",
+            "harmonized_value": "moderate chance of dozing",
+            "harmonized_encoding": "2",
+            "note": null
+          },
+          {
+            "source_value": "High Chance Of Dozing",
+            "source_encoding": "3",
+            "harmonized_value": "high chance of dozing",
+            "harmonized_encoding": "3",
+            "note": null
+          }
+        ]
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant_visit",
+        "attribute": "ess_v1991_item6_sitting_talking"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "measurement",
+      "defining_concept_id": {
+        "id": 46273534,
+        "name": "Epworth Sleepiness Scale",
+        "domain": "Measurement",
+        "target_field": "measurement_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map",
+        "visit_occurrence_id": "cdm.visit_occurrence"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [
+        {
+          "role": "derivation",
+          "link_id": "1",
+          "status": "active",
+          "note": ""
+        }
+      ],
+      "value_map": [
+        {
+          "harmonized_value": "would never doze",
+          "value_as_number": 0,
+          "value_as_string": "would never doze",
+          "value_as_concept_id": {
+            "id": 1094298,
+            "name": "Not at all likely",
+            "domain": "Meas Value",
+            "vocabulary": "LOINC"
+          }
+        },
+        {
+          "harmonized_value": "slight chance of dozing",
+          "value_as_number": 1,
+          "value_as_string": "slight chance of dozing",
+          "value_as_concept_id": {
+            "id": 1094211,
+            "name": "Not too likely",
+            "domain": "Meas Value",
+            "vocabulary": "LOINC"
+          }
+        },
+        {
+          "harmonized_value": "moderate chance of dozing",
+          "value_as_number": 2,
+          "value_as_string": "moderate chance of dozing",
+          "value_as_concept_id": {
+            "id": 1094222,
+            "name": "Fairly likely",
+            "domain": "Meas Value",
+            "vocabulary": "LOINC"
+          }
+        },
+        {
+          "harmonized_value": "high chance of dozing",
+          "value_as_number": 3,
+          "value_as_string": "high chance of dozing",
+          "value_as_concept_id": {
+            "id": 45880190,
+            "name": "Very likely",
+            "domain": "Meas Value",
+            "vocabulary": "LOINC"
+          }
+        }
+      ]
+    }
+  ],
+  "status_note": ""
+}

@@ -1,7 +1,0 @@
-TableName,ColumnName,Title,Description,Required,DataType,DataTypeRange,UniqueValues
-Caffeine_history.csv,participant_id,Study Subject ID,Study Subject ID,TRUE,String,,
-Caffeine_history.csv,GUID,Subject ID,Global Unique ID (USUBJID),FALSE,String,,
-Caffeine_history.csv,visit_name,Visit Name,"Visit name: M - in months, SC - screening visit, LOG - records without visit; #2 or #3 define repated records at the same visit or repeated visit",TRUE,String,,
-Caffeine_history.csv,visit_month,Visit Month,"Numeric visit in months; for visits prior baseline -1, -2 is an order of screening visits",FALSE,Float,,
-Caffeine_history.csv,caff_drinks_ever_used_regularly,Caffeine Exposure,Indicator of whether subject has evere used caffeinated drinks,FALSE,Enumeration,,Yes;No;Unknown
-Caffeine_history.csv,caff_drinks_current_use,Caffeine Exposure,Current regular caffeinated drinks use indicator,FALSE,Enumeration,,Yes;No;Unknown

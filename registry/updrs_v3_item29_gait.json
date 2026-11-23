@@ -1,0 +1,129 @@
+{
+  "registry_id": 100781,
+  "schema_version": "harmonized-element/2.5",
+  "registry_label": "updrs_v3_item29_gait",
+  "definition": "UPDRS - Motor Examination: Gait (UPD129)",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-PD"
+  ],
+  "harmonized_values": [
+    "<any in range>",
+    "normal",
+    "slight",
+    "mild",
+    "moderate",
+    "severe"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "upd129_gait",
+      "program": "AMP-PD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": "UPDRS - Motor Examination: Gait (UPD129)",
+      "layer_1_etl": {
+        "value_form": "continuous",
+        "datatype": "number",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "a400fc24798412aac109d137a671add77afe467207ed576ede53def6cce2d7eb",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 506077
+          }
+        ],
+        "range": {
+          "min": 0.0,
+          "max": 4.0
+        },
+        "value_map": []
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant_visit",
+        "attribute": "updrs_v3_item29_gait"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "observation",
+      "defining_concept_id": {
+        "id": 40768394,
+        "name": "Gait - parkinsons [UPDRS]",
+        "domain": "Observation",
+        "target_field": "observation_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map",
+        "visit_occurrence_id": "cdm.visit_occurrence"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": [
+        {
+          "harmonized_value": "<any in range>",
+          "value_as_number": "<value>"
+        },
+        {
+          "harmonized_value": "normal",
+          "value_as_number": 0,
+          "value_as_concept_id": {
+            "id": 45884153,
+            "name": "Normal"
+          },
+          "value_as_string": "normal"
+        },
+        {
+          "harmonized_value": "slight",
+          "value_as_number": 1,
+          "value_as_concept_id": {
+            "id": 45880586,
+            "name": "Slight"
+          },
+          "value_as_string": "slight"
+        },
+        {
+          "harmonized_value": "mild",
+          "value_as_number": 2,
+          "value_as_concept_id": {
+            "id": 45883535,
+            "name": "Mild"
+          },
+          "value_as_string": "mild"
+        },
+        {
+          "harmonized_value": "moderate",
+          "value_as_number": 3,
+          "value_as_concept_id": {
+            "id": 45877983,
+            "name": "Moderate"
+          },
+          "value_as_string": "moderate"
+        },
+        {
+          "harmonized_value": "severe",
+          "value_as_number": 4,
+          "value_as_concept_id": {
+            "id": 45883536,
+            "name": "Severe"
+          },
+          "value_as_string": "severe"
+        }
+      ]
+    }
+  ],
+  "status_note": ""
+}

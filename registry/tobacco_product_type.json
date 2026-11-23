@@ -1,0 +1,263 @@
+{
+  "registry_id": 100726,
+  "schema_version": "harmonized-element/2.5",
+  "registry_label": "tobacco_product_type",
+  "definition": "Type of tobacco product that has been used",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-PD"
+  ],
+  "harmonized_values": [
+    "cigarettes",
+    "filtered cigarettes",
+    "non-filtered cigarettes",
+    "low tar cigarettes",
+    "cigar",
+    "pipe",
+    "chewing tobacco",
+    "smokeless tobacco",
+    "dip",
+    "more than one"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "tobacco_product_type",
+      "program": "AMP-PD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": "Type of tobacco product that has been used.",
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "dd7732ea9d0dd2b29f64aed9435bf44cb728d0439ba446868c0de31548b15342",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 505701
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "Cigarettes",
+            "source_encoding": null,
+            "harmonized_value": "cigarettes",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Filtered cigarettes",
+            "source_encoding": null,
+            "harmonized_value": "filtered cigarettes",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Non-filtered (plain) cigarettes",
+            "source_encoding": null,
+            "harmonized_value": "non-filtered cigarettes",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Low tar cigarettes",
+            "source_encoding": null,
+            "harmonized_value": "low tar cigarettes",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Cigar",
+            "source_encoding": null,
+            "harmonized_value": "cigar",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Pipe",
+            "source_encoding": null,
+            "harmonized_value": "pipe",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Chewing tobacco",
+            "source_encoding": null,
+            "harmonized_value": "chewing tobacco",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Smokeless tobacco",
+            "source_encoding": null,
+            "harmonized_value": "smokeless tobacco",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Non-filtered cigarettes",
+            "source_encoding": null,
+            "harmonized_value": "non-filtered cigarettes",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "dip",
+            "source_encoding": null,
+            "harmonized_value": "dip",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "skoll",
+            "source_encoding": null,
+            "harmonized_value": "dip",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "<multiple>",
+            "source_encoding": null,
+            "harmonized_value": "more than one",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "Cigar;Filtered cigarettes;Pipe",
+            "source_encoding": null,
+            "harmonized_value": "more than one",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "Cigar;Non-filtered (plain) cigarettes;Pipe",
+            "source_encoding": null,
+            "harmonized_value": "more than one",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "Cigar;Pipe;Filtered cigarettes",
+            "source_encoding": null,
+            "harmonized_value": "more than one",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "Filtered cigarettes;Cigar",
+            "source_encoding": null,
+            "harmonized_value": "more than one",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "Non-filtered (plain) cigarettes;Pipe",
+            "source_encoding": null,
+            "harmonized_value": "more than one",
+            "harmonized_encoding": null,
+            "note": ""
+          }
+        ]
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant_visit",
+        "attribute": "tobacco_product_type"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "observation",
+      "defining_concept_id": {
+        "id": 37172639,
+        "name": "Type of tobacco used",
+        "domain": "Observation",
+        "target_field": "observation_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map",
+        "visit_occurrence_id": "cdm.visit_occurrence"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": [
+        {
+          "harmonized_value": "cigarettes",
+          "value_as_string": "cigarettes"
+        },
+        {
+          "harmonized_value": "filtered cigarettes",
+          "value_as_string": "filtered cigarettes",
+          "value_as_concept_id": {
+            "id": 35820581,
+            "name": "Manufactured cigarettes"
+          }
+        },
+        {
+          "harmonized_value": "non-filtered cigarettes",
+          "value_as_string": "non-filtered cigarettes",
+          "value_as_concept_id": {
+            "id": 35819504,
+            "name": "Hand-rolled cigarettes"
+          }
+        },
+        {
+          "harmonized_value": "low tar cigarettes",
+          "value_as_string": "low tar cigarettes"
+        },
+        {
+          "harmonized_value": "cigar",
+          "value_as_string": "cigar",
+          "value_as_concept_id": {
+            "id": 35817176,
+            "name": "Cigars or pipes"
+          }
+        },
+        {
+          "harmonized_value": "pipe",
+          "value_as_string": "pipe",
+          "value_as_concept_id": {
+            "id": 35817176,
+            "name": "Cigars or pipes"
+          }
+        },
+        {
+          "harmonized_value": "chewing tobacco",
+          "value_as_string": "chewing tobacco",
+          "value_as_concept_id": {
+            "id": 4219234,
+            "name": "Chewing tobacco"
+          }
+        },
+        {
+          "harmonized_value": "smokeless tobacco",
+          "value_as_string": "smokeless tobacco"
+        },
+        {
+          "harmonized_value": "dip",
+          "value_as_string": "dip"
+        },
+        {
+          "harmonized_value": "more than one",
+          "value_as_string": "more than one",
+          "value_as_concept_id": {
+            "id": 37079172,
+            "name": "More than one"
+          }
+        }
+      ]
+    }
+  ]
+}

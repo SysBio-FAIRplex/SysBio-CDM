@@ -1,9 +1,0 @@
-TableName,ColumnName,Title,Description,Required,DataType,DataTypeRange,UniqueValues
-Enrollment.csv,participant_id,Study Subject ID,Study Subject ID,TRUE,String,,
-Enrollment.csv,GUID,Subject ID,Global Unique ID (USUBJID),FALSE,String,,
-Enrollment.csv,visit_name,Visit Name,"Visit name: M - in months, SC - screening visit, LOG - records without visit; #2 or #3 define repated records at the same visit or repeated visit",TRUE,String,,
-Enrollment.csv,visit_month,Visit Month,"Numeric visit in months; for visits prior baseline -1, -2 is an order of screening visits",FALSE,Float,,
-Enrollment.csv,enrollment_months_after_baseline,Enrollment Date,Number of months after baseline visit at which Enrollment occurred; negative values indicate Enrollment occurred before baseline,FALSE,Float,,
-Enrollment.csv,informed_consent_months_after_baseline,Informed Consent Date,Number of months after baseline visit at which Informed Consent occurred; negative values indicate Informed Consent occurred before baseline,FALSE,Float,,
-Enrollment.csv,prodromal_category,Prodromal Category,At-risk for PD individuals having the same diagnosis as healthy controls with enrollment criterion hyposmia or REM Sleep Behavior Disorder. The rest are Unknown/Not collected as enrollment criterion,FALSE,String,,
-Enrollment.csv,study_arm,Study Arm,"Cohort (PD, healthy control, subjects with Scans Without Evidence of Dopaminergic Deficit [SWEDD], Prodromal, Genetic Cohort PD, or Genetic Cohort Unaffected) determined by the inclusion/exclusion criteria established in the study protocol. A given participant's cohort does not change over time, even if the participant develops or is later found to have characteristics of another cohort .",FALSE,String,,

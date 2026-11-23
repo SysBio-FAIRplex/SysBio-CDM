@@ -1,0 +1,80 @@
+{
+  "schema_version": "harmonized-element/2.5",
+  "registry_id": "",
+  "registry_label": "specimen_id_source",
+  "definition": "Source system or organization that assigned the specimen identifier.",
+  "one_per": [
+    "person",
+    "specimen"
+  ],
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-AD"
+  ],
+  "harmonized_values": [],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "specimenIdSource",
+      "program": "AMP-AD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "text",
+        "datatype": "string",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn52430345",
+            "id_type": "synapse",
+            "sha256": "223f2e41f2cf2822fd2274170417c6657fd2a08e1d143789495299a8e9862d11",
+            "access_groups": [
+              "AMP-AD"
+            ]
+          }
+        ],
+        "value_map": []
+      },
+      "src_entity": {
+        "entity": "specimen",
+        "dictionaries": [
+          "BiospecimenMetadataTemplate"
+        ],
+        "ambiguous": false,
+        "evidence": "",
+        "status": "proposed"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "observation",
+      "defining_concept_id": {
+        "id": 45773156,
+        "name": "Specimen source",
+        "domain": "Observation",
+        "target_field": "observation_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [
+        {
+          "role": "attribute",
+          "column": null,
+          "status": "candidate",
+          "note": ""
+        }
+      ],
+      "value_map": []
+    }
+  ]
+}

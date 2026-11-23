@@ -1,0 +1,125 @@
+{
+  "registry_id": 100247,
+  "schema_version": "harmonized-element/2.5",
+  "registry_label": "genetic",
+  "definition": "Other genetic data available on patient.",
+  "one_per": [
+    "person",
+    "visit"
+  ],
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-PD"
+  ],
+  "harmonized_values": [
+    "Exome",
+    "SNP chip",
+    "Other",
+    "NA"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "genetic",
+      "program": "AMP-PD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": "Other genetic data available on patient.",
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "27ec4b1a5cda5045054805a63e301927b7b3fdc56d24c7982906b0b7537a084e",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 501674
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "Exome",
+            "source_encoding": null,
+            "harmonized_value": "Exome",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "SNP chip",
+            "source_encoding": null,
+            "harmonized_value": "SNP chip",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Other",
+            "source_encoding": null,
+            "harmonized_value": "Other",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "NA",
+            "source_encoding": null,
+            "harmonized_value": "NA",
+            "harmonized_encoding": null,
+            "note": null
+          }
+        ]
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "observation",
+      "defining_concept_id": {
+        "id": 4237017,
+        "name": "Genetic test",
+        "domain": "Observation",
+        "target_field": "observation_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map",
+        "visit_occurrence_id": "cdm.visit_occurrence"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": [
+        {
+          "harmonized_value": "Exome",
+          "value_as_string": "Exome"
+        },
+        {
+          "harmonized_value": "SNP chip",
+          "value_as_string": "SNP chip"
+        },
+        {
+          "harmonized_value": "Other",
+          "value_as_concept_id": {
+            "id": 45878142,
+            "name": "Other"
+          },
+          "value_as_string": "Other"
+        },
+        {
+          "harmonized_value": "NA",
+          "value_as_concept_id": {
+            "id": 35941270,
+            "name": "NA"
+          },
+          "value_as_string": "NA"
+        }
+      ]
+    }
+  ]
+}

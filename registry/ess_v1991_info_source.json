@@ -1,0 +1,119 @@
+{
+  "registry_id": 100224,
+  "schema_version": "harmonized-element/2.5",
+  "registry_label": "ess_v1991_info_source",
+  "definition": "ESS - Primary Source Of Information",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-PD"
+  ],
+  "harmonized_values": [
+    "patient",
+    "patient and caregiver",
+    "caregiver"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "ess_info_source",
+      "program": "AMP-PD",
+      "status": "approved",
+      "status_note": null,
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": "ESS - Primary Source Of Information.",
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "876eb647b1546eef3ad91016729c5aa056ad5db28efde22e907601ea0f8d2003",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 501552
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "Patient",
+            "source_encoding": null,
+            "harmonized_value": "patient",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Patient and Caregiver",
+            "source_encoding": null,
+            "harmonized_value": "patient and caregiver",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Caregiver",
+            "source_encoding": null,
+            "harmonized_value": "caregiver",
+            "harmonized_encoding": null,
+            "note": null
+          }
+        ]
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant_visit",
+        "attribute": "ess_v1991_info_source"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "measurement",
+      "defining_concept_id": {
+        "id": 3048270,
+        "name": "Information source",
+        "domain": "Measurement",
+        "target_field": "measurement_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map",
+        "visit_occurrence_id": "cdm.visit_occurrence"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": [
+        {
+          "harmonized_value": "patient",
+          "value_as_string": "patient",
+          "value_as_concept_id": {
+            "id": 45880001,
+            "name": "Patient"
+          }
+        },
+        {
+          "harmonized_value": "patient and caregiver",
+          "value_as_string": "patient and caregiver",
+          "value_as_concept_id": {
+            "id": 45883500,
+            "name": "Both"
+          }
+        },
+        {
+          "harmonized_value": "caregiver",
+          "value_as_string": "caregiver",
+          "value_as_concept_id": {
+            "id": 4039760,
+            "name": "Caregiver"
+          }
+        }
+      ]
+    }
+  ],
+  "status_note": ""
+}

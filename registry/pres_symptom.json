@@ -1,0 +1,336 @@
+{
+  "registry_id": 100600,
+  "schema_version": "harmonized-element/2.5",
+  "registry_label": "pres_symptom",
+  "definition": "Presenting symptom",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-PD"
+  ],
+  "harmonized_values": [
+    "cognitive symptoms",
+    "motor symptoms",
+    "both cognitive and motor symptoms",
+    "psychiatric (depression/anxiety/psychosis)",
+    "rapid eye movement sleep behavior disorder",
+    "autonomic failure",
+    "yes",
+    "no",
+    "more than one"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "pres_symptom",
+      "program": "AMP-PD",
+      "applies_to_rows": {
+        "column": "participant_id",
+        "token": "LB",
+        "token_position": 0,
+        "delimiters": [
+          "-",
+          "_"
+        ]
+      },
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": "Presenting symptom.",
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "27ec4b1a5cda5045054805a63e301927b7b3fdc56d24c7982906b0b7537a084e",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 503329
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "Cognitive symptoms",
+            "source_encoding": null,
+            "harmonized_value": "cognitive symptoms",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Motor symptoms",
+            "source_encoding": null,
+            "harmonized_value": "motor symptoms",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Both cognitive and motor symptoms",
+            "source_encoding": null,
+            "harmonized_value": "both cognitive and motor symptoms",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Both motor and cognitive symptoms",
+            "source_encoding": null,
+            "harmonized_value": "both cognitive and motor symptoms",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Psychiatric (depression/anxiety/psychosis)",
+            "source_encoding": null,
+            "harmonized_value": "psychiatric (depression/anxiety/psychosis)",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "RBD",
+            "source_encoding": null,
+            "harmonized_value": "rapid eye movement sleep behavior disorder",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Autonomic failure",
+            "source_encoding": null,
+            "harmonized_value": "autonomic failure",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Motor Symptoms",
+            "source_encoding": null,
+            "harmonized_value": "motor symptoms",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "Psychiatric",
+            "source_encoding": null,
+            "harmonized_value": "psychiatric (depression/anxiety/psychosis)",
+            "harmonized_encoding": null,
+            "note": ""
+          },
+          {
+            "source_value": "Both motor and cognitive",
+            "source_encoding": null,
+            "harmonized_value": "both cognitive and motor symptoms",
+            "harmonized_encoding": null,
+            "note": ""
+          }
+        ],
+        "multi_value_separator": ";",
+        "missing_values": [
+          "NA"
+        ]
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant_visit",
+        "attribute": "pres_symptom"
+      }
+    },
+    {
+      "source_label": "pres_symptom",
+      "program": "AMP-PD",
+      "applies_to_rows": {
+        "column": "participant_id",
+        "token": "MS",
+        "token_position": 1,
+        "delimiters": [
+          "-",
+          "_"
+        ]
+      },
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": "Presenting symptom.",
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "27ec4b1a5cda5045054805a63e301927b7b3fdc56d24c7982906b0b7537a084e",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 503329
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "Yes",
+            "source_encoding": null,
+            "harmonized_value": "yes",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "No",
+            "source_encoding": null,
+            "harmonized_value": "no",
+            "harmonized_encoding": null,
+            "note": null
+          }
+        ]
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant_visit",
+        "attribute": "pres_symptom"
+      }
+    },
+    {
+      "source_label": "pres_symptom",
+      "program": "AMP-PD",
+      "applies_to_rows": {
+        "column": "participant_id",
+        "token": "HA",
+        "token_position": 1,
+        "delimiters": [
+          "-",
+          "_"
+        ]
+      },
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": "Presenting symptom.",
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "27ec4b1a5cda5045054805a63e301927b7b3fdc56d24c7982906b0b7537a084e",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 503329
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "Motor Symptoms",
+            "source_encoding": null,
+            "harmonized_value": "motor symptoms",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Motor",
+            "source_encoding": null,
+            "harmonized_value": "motor symptoms",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Both motor and cognitive",
+            "source_encoding": null,
+            "harmonized_value": "both cognitive and motor symptoms",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Psychiatric",
+            "source_encoding": null,
+            "harmonized_value": "psychiatric (depression/anxiety/psychosis)",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "<multiple>",
+            "source_encoding": null,
+            "harmonized_value": "more than one",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Autonomic failure",
+            "source_encoding": null,
+            "harmonized_value": "autonomic failure",
+            "harmonized_encoding": null,
+            "note": null
+          }
+        ]
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant_visit",
+        "attribute": "pres_symptom"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "observation",
+      "defining_concept_id": {
+        "id": 40769095,
+        "name": "Main presenting symptom [PhenX]",
+        "domain": "Observation",
+        "target_field": "observation_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map",
+        "visit_occurrence_id": "cdm.visit_occurrence"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": [
+        {
+          "harmonized_value": "cognitive symptoms",
+          "value_as_string": "cognitive symptoms"
+        },
+        {
+          "harmonized_value": "motor symptoms",
+          "value_as_string": "motor symptoms"
+        },
+        {
+          "harmonized_value": "both cognitive and motor symptoms",
+          "value_as_string": "both cognitive and motor symptoms"
+        },
+        {
+          "harmonized_value": "psychiatric (depression/anxiety/psychosis)",
+          "value_as_string": "psychiatric (depression/anxiety/psychosis)"
+        },
+        {
+          "harmonized_value": "rapid eye movement sleep behavior disorder",
+          "value_as_string": "rapid eye movement sleep behavior disorder"
+        },
+        {
+          "harmonized_value": "autonomic failure",
+          "value_as_string": "autonomic failure"
+        },
+        {
+          "harmonized_value": "yes",
+          "value_as_string": "yes"
+        },
+        {
+          "harmonized_value": "no",
+          "value_as_string": "no"
+        },
+        {
+          "harmonized_value": "more than one",
+          "value_as_string": "more than one"
+        }
+      ]
+    }
+  ]
+}

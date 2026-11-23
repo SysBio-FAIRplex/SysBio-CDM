@@ -1,0 +1,111 @@
+{
+  "registry_id": 100193,
+  "schema_version": "harmonized-element/2.5",
+  "registry_label": "derived_outcome_based_on_mayo_dx",
+  "definition": "Derived clinical outcome classification based on Mayo Clinic diagnostic criteria",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-AD"
+  ],
+  "harmonized_values": [
+    "true",
+    "false"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "derivedOutcomeBasedOnMayoDx",
+      "program": "AMP-AD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn51757646",
+            "id_type": "synapse",
+            "sha256": "484b323b8d6d2eea95a7f65e6492c90755dcf8b007db621c2b01081798e7846b",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 501401
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn73713769",
+            "id_type": "synapse",
+            "sha256": "82a49077ccb8b78a1159fa089a91330da7e62fabea65dceaa342faeed56fd3ab",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 501402
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "TRUE",
+            "source_encoding": null,
+            "harmonized_value": "true",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "FALSE",
+            "source_encoding": null,
+            "harmonized_value": "false",
+            "harmonized_encoding": null,
+            "note": null
+          }
+        ]
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "derived_outcome_based_on_mayo_dx"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "observation",
+      "defining_concept_id": {
+        "id": 3187945,
+        "name": "Neuropathology observable entity",
+        "domain": "Observation",
+        "target_field": "observation_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": [
+        {
+          "harmonized_value": "true",
+          "value_as_concept_id": {
+            "id": 45877994,
+            "name": "Yes"
+          },
+          "value_as_string": "true"
+        },
+        {
+          "harmonized_value": "false",
+          "value_as_concept_id": {
+            "id": 45878245,
+            "name": "No"
+          },
+          "value_as_string": "false"
+        }
+      ]
+    }
+  ]
+}

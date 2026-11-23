@@ -1,0 +1,174 @@
+{
+  "registry_id": 100664,
+  "schema_version": "harmonized-element/2.5",
+  "registry_label": "sample_status",
+  "definition": "Current status or condition of the biological sample",
+  "one_per": [
+    "person",
+    "specimen"
+  ],
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-AD"
+  ],
+  "harmonized_values": [
+    "available",
+    "depleted",
+    "quarantined",
+    "in use",
+    "pending quality control",
+    "failed quality control",
+    "frozen"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "sampleStatus",
+      "program": "AMP-AD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn52430345",
+            "id_type": "synapse",
+            "sha256": "223f2e41f2cf2822fd2274170417c6657fd2a08e1d143789495299a8e9862d11",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 504456
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "Available",
+            "source_encoding": null,
+            "harmonized_value": "available",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Depleted",
+            "source_encoding": null,
+            "harmonized_value": "depleted",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Quarantined",
+            "source_encoding": null,
+            "harmonized_value": "quarantined",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "In Use",
+            "source_encoding": null,
+            "harmonized_value": "in use",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Pending QC",
+            "source_encoding": null,
+            "harmonized_value": "pending quality control",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Failed QC",
+            "source_encoding": null,
+            "harmonized_value": "failed quality control",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "frozen",
+            "source_encoding": null,
+            "harmonized_value": "frozen",
+            "harmonized_encoding": null,
+            "note": null
+          }
+        ]
+      },
+      "src_entity": {
+        "entity": "specimen",
+        "dictionaries": [
+          "[data file name withheld]"
+        ],
+        "ambiguous": false,
+        "evidence": "",
+        "status": "proposed"
+      },
+      "loading_grain": {
+        "anchor": "specimen_id",
+        "entity": "specimen",
+        "attribute": "sample_status"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "measurement",
+      "defining_concept_id": {
+        "id": 37021329,
+        "name": "Specimen condition [Type]",
+        "domain": "Measurement",
+        "target_field": "measurement_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map",
+        "specimen_id": "staging.specimen_map"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [
+        {
+          "role": "qualifier",
+          "column": null,
+          "status": "proposed",
+          "note": ""
+        }
+      ],
+      "value_map": [
+        {
+          "harmonized_value": "available",
+          "value_source_value": "Available"
+        },
+        {
+          "harmonized_value": "depleted",
+          "value_source_value": "Depleted"
+        },
+        {
+          "harmonized_value": "quarantined",
+          "value_source_value": "Quarantined"
+        },
+        {
+          "harmonized_value": "in use",
+          "value_source_value": "In Use"
+        },
+        {
+          "harmonized_value": "pending quality control",
+          "value_source_value": "pending quality control"
+        },
+        {
+          "harmonized_value": "failed quality control",
+          "value_source_value": "failed quality control"
+        },
+        {
+          "harmonized_value": "frozen",
+          "value_source_value": "frozen"
+        }
+      ]
+    }
+  ]
+}

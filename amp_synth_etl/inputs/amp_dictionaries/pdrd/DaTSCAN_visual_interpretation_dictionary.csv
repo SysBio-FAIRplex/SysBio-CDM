@@ -1,7 +1,0 @@
-TableName,ColumnName,Title,Description,Required,DataType,DataTypeRange,UniqueValues
-DaTSCAN_visual_interpretation.csv,participant_id,Study Subject ID,Study Subject ID,TRUE,String,,
-DaTSCAN_visual_interpretation.csv,GUID,Subject ID,Global Unique ID (USUBJID),FALSE,String,,
-DaTSCAN_visual_interpretation.csv,visit_name,Visit Name,"Visit name: M - in months, SC - screening visit, LOG - records without visit; #2 or #3 define repated records at the same visit or repeated visit",TRUE,String,,
-DaTSCAN_visual_interpretation.csv,visit_month,Visit Month,"Numeric visit in months; for visits prior baseline -1, -2 is an order of screening visits",FALSE,Float,,
-DaTSCAN_visual_interpretation.csv,scan_months_after_baseline,DaTSCAN Date,Number of months after baseline visit at which DaTSCAN scan occurred; negative values indicate scan occurred before baseline,FALSE,Float,,
-DaTSCAN_visual_interpretation.csv,datscan_visual_interpretation,DaTSCAN Visual Interpretation Report,DaTSCAN SPECT Visual Interpretation Assessment Report,FALSE,Enumeration,,Positive;Negative

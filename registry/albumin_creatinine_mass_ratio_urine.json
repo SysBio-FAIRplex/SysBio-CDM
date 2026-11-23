@@ -1,0 +1,113 @@
+{
+  "registry_id": 100013,
+  "schema_version": "harmonized-element/2.7",
+  "registry_label": "albumin_creatinine_mass_ratio_urine",
+  "harmonized_element_curie": "LOINC:9318-7",
+  "definition": "ACR is the albumin/creatinine ratio measured in milligrams/gram (KDIGO categories) Normal to mildly increased: <30 Moderately increased: 30 to 300 Severely increased: >300",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-CMD"
+  ],
+  "harmonized_values": [],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "ACR (mg/g)",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [
+        "OP-BC AU5812-Urine-KPMP QC Data file Information-2022.docx"
+      ],
+      "src_definition": "",
+      "layer_1_etl": {
+        "value_form": "continuous",
+        "datatype": "float",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "3e6899d9-6934-4630-b44b-d62864861dab",
+            "id_type": "kpmp",
+            "sha256": "fa592c5aa9f950f549da541830f7517e14999cfbf424ff93845750d08eecc8b2",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 500162
+          }
+        ],
+        "value_map": [],
+        "unit": "mg/g"
+      },
+      "loading_grain": {
+        "anchor": "specimen_id",
+        "entity": "specimen",
+        "attribute": "albumin_creatinine_mass_ratio_urine"
+      }
+    },
+    {
+      "source_label": "ACR (mg/g)",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [
+        "OP-BC AU5812-Urine-KPMP QC Data file Information-2024.docx"
+      ],
+      "src_definition": "",
+      "layer_1_etl": {
+        "value_form": "continuous",
+        "datatype": "float",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "b6ff159a-cbe1-42e2-894b-e3f5053c2e18",
+            "id_type": "kpmp",
+            "sha256": "1e69fd4ccdc3a6e7765b7414b3d3016053b35adfcfcb8595cd9145fcd44d9ae7",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 500163
+          }
+        ],
+        "value_map": [],
+        "unit": "mg/g"
+      },
+      "loading_grain": {
+        "anchor": "specimen_id",
+        "entity": "specimen",
+        "attribute": "albumin_creatinine_mass_ratio_urine"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "measurement",
+      "defining_concept_id": {
+        "id": 3034485,
+        "name": "Albumin/Creatinine [Mass Ratio] in Urine",
+        "domain": "Measurement",
+        "target_field": "measurement_concept_id",
+        "vocabulary_id": "LOINC",
+        "concept_code": "9318-7",
+        "vocabulary_version": "LOINC 2.78"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map",
+        "specimen_id": "staging.specimen_map"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": [
+        {
+          "harmonized_value": "<any in range>",
+          "value_as_number": "<value>"
+        }
+      ]
+    }
+  ]
+}

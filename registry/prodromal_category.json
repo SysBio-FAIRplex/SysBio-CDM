@@ -1,0 +1,122 @@
+{
+  "registry_id": 100603,
+  "schema_version": "harmonized-element/2.5",
+  "registry_label": "prodromal_category",
+  "definition": "At-risk for PD individuals having the same diagnosis as healthy controls with enrollment criterion hyposmia or REM Sleep Behavior Disorder. The rest are Unknown/Not collected as enrollment criterion",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-PD"
+  ],
+  "harmonized_values": [
+    "hyposmia",
+    "rapid eye movement sleep behavior disorder",
+    "unknown or not collected as enrollment criterion"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "prodromal_category",
+      "program": "AMP-PD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": "At-risk for PD individuals having the same diagnosis as healthy controls with enrollment criterion hyposmia or REM Sleep Behavior Disorder.",
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "c3fa64671f7e393016722019f507062cbdda9cee878411c375ba7576d676f8b5",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 503416
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "Hyposmia",
+            "source_encoding": null,
+            "harmonized_value": "hyposmia",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "REM Sleep Behavior Disorder",
+            "source_encoding": null,
+            "harmonized_value": "rapid eye movement sleep behavior disorder",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Unknown/Not collected as enrollment criterion",
+            "source_encoding": null,
+            "harmonized_value": "unknown or not collected as enrollment criterion",
+            "harmonized_encoding": null,
+            "note": null
+          }
+        ]
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "prodromal_category"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "observation",
+      "defining_concept_id": {
+        "id": 4222638,
+        "name": "Prodrome",
+        "domain": "Observation",
+        "target_field": "observation_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": [
+        {
+          "harmonized_value": "hyposmia",
+          "value_as_string": "hyposmia",
+          "value_as_concept_id": {
+            "id": 4307095,
+            "name": "Sense of smell impaired"
+          },
+          "qualifier_concept_id": {
+            "id": 381270,
+            "name": "Parkinson's disease"
+          }
+        },
+        {
+          "harmonized_value": "rapid eye movement sleep behavior disorder",
+          "value_as_string": "rapid eye movement sleep behavior disorder",
+          "value_as_concept_id": {
+            "id": 439007,
+            "name": "REM sleep behavior disorder"
+          },
+          "qualifier_concept_id": {
+            "id": 381270,
+            "name": "Parkinson's disease"
+          }
+        }
+      ],
+      "qualifier_concept_id": {
+        "id": 4123534,
+        "name": "Prodromal phase"
+      },
+      "note": ""
+    }
+  ]
+}

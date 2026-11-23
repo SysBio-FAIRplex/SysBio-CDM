@@ -1,0 +1,286 @@
+{
+  "registry_id": 100038,
+  "schema_version": "harmonized-element/2.5",
+  "registry_label": "amy_thal",
+  "definition": "Amyloid Thal phase score",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-AD"
+  ],
+  "harmonized_values": [
+    "missing or unknown",
+    "phase 5",
+    "none",
+    "phase 4",
+    "phase 1",
+    "phase 3",
+    "phase 2"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "amyThal",
+      "program": "AMP-AD",
+      "status": "approved",
+      "status_note": null,
+      "manual_approval": false,
+      "src_dictionary": [
+        "DiverseCohorts_DataDictionary.pdf"
+      ],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn51757646",
+            "id_type": "synapse",
+            "sha256": "484b323b8d6d2eea95a7f65e6492c90755dcf8b007db621c2b01081798e7846b",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 500207
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn73713769",
+            "id_type": "synapse",
+            "sha256": "82a49077ccb8b78a1159fa089a91330da7e62fabea65dceaa342faeed56fd3ab",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 500208
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn73713775",
+            "id_type": "synapse",
+            "sha256": "6dbbc9b9ecd74df91193deca12efa6b5affbd94e0b3642439d23b0669af45a53",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 500209
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn73713777",
+            "id_type": "synapse",
+            "sha256": "0b08ac7a739804df6964cba515eed3d65b0a29b47f0ded0512beaad2139c230b",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 500210
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn73713776",
+            "id_type": "synapse",
+            "sha256": "910e4c62e7c1662d6f2b51d34834eb1d20deb1def8fb6d1dc163fb8b749611bc",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 500211
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn73713767",
+            "id_type": "synapse",
+            "sha256": "a3d0ac04cefafedcf8b0e0aead1abb5004ddac2dd8edc1861b0cbb4f0631f9a9",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 500212
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn73713766",
+            "id_type": "synapse",
+            "sha256": "d3f00f5cd4aa8ddc9faf87f27a06861dd5e3977e94c233a7c8a6ad6550e24383",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 500213
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn73713770",
+            "id_type": "synapse",
+            "sha256": "aa056aa2149a9f245ff2c971a8d02f469dc5a3090d7f421f45050c62014041ed",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 500214
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn73713768",
+            "id_type": "synapse",
+            "sha256": "6ebec61ee5ebd81051fe1eac0abe6c2dc106acf9e499f818f4d1e855a1f1850f",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 500215
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn73713778",
+            "id_type": "synapse",
+            "sha256": "e4e1511a34ef4ad3350008e02189f983420d4aaf2584d194865d1e842e6fb038",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 500216
+          },
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "syn73713779",
+            "id_type": "synapse",
+            "sha256": "349ee951f2ac0cb4289e3c94a547235892e27a24935aa78598bc5172abdaafdb",
+            "access_groups": [
+              "AMP-AD"
+            ],
+            "item_as_source_id": 500217
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "missing or unknown",
+            "source_encoding": null,
+            "harmonized_value": "missing or unknown",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Phase 5",
+            "source_encoding": null,
+            "harmonized_value": "phase 5",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "None",
+            "source_encoding": null,
+            "harmonized_value": "none",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Phase 4",
+            "source_encoding": null,
+            "harmonized_value": "phase 4",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Phase 1",
+            "source_encoding": null,
+            "harmonized_value": "phase 1",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Phase 3",
+            "source_encoding": null,
+            "harmonized_value": "phase 3",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Phase 2",
+            "source_encoding": null,
+            "harmonized_value": "phase 2",
+            "harmonized_encoding": null,
+            "note": null
+          }
+        ]
+      },
+      "src_entity": {
+        "entity": "subject",
+        "dictionaries": [
+          "ADKP_harmonized_data_dictionary",
+          "DiverseCohorts_DataDictionary"
+        ],
+        "ambiguous": false,
+        "evidence": "",
+        "status": "proposed"
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant",
+        "attribute": "amy_thal"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "measurement",
+      "defining_concept_id": {
+        "id": 3170911,
+        "name": "Thal phase staging of amyloid plaques",
+        "domain": "Measurement",
+        "target_field": "measurement_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": [
+        {
+          "harmonized_value": "missing or unknown",
+          "value_as_concept_id": {
+            "id": 45877986,
+            "name": "Unknown"
+          }
+        },
+        {
+          "harmonized_value": "phase 5",
+          "value_as_concept_id": {
+            "id": 45878655,
+            "name": "Stage V"
+          }
+        },
+        {
+          "harmonized_value": "none",
+          "value_as_concept_id": {
+            "id": 45878582,
+            "name": "None"
+          }
+        },
+        {
+          "harmonized_value": "phase 4",
+          "value_as_concept_id": {
+            "id": 45880109,
+            "name": "Stage IV"
+          }
+        },
+        {
+          "harmonized_value": "phase 1",
+          "value_as_concept_id": {
+            "id": 45880980,
+            "name": "Stage I"
+          }
+        },
+        {
+          "harmonized_value": "phase 3",
+          "value_as_concept_id": {
+            "id": 45878643,
+            "name": "Stage III"
+          }
+        },
+        {
+          "harmonized_value": "phase 2",
+          "value_as_concept_id": {
+            "id": 45880979,
+            "name": "Stage II"
+          }
+        }
+      ]
+    }
+  ]
+}

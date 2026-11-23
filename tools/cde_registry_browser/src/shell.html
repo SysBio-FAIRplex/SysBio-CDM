@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="cdeb-relay-token" content="">
+<title>CDE Registry browser</title>
+<style>
+%%CSS%%
+</style>
+</head>
+<body>
+<div id="app">
+  <div id="topbar">
+    <h1>CDE Registry browser</h1>
+    <div class="tabs" id="tabs"></div>
+    <div class="searchwrap">
+      <input id="search" type="search" placeholder="Search every file  ( / )    ferritin  ·  unit:mg/dL  ·  table:specimen" autocomplete="off" spellcheck="false">
+      <div id="results" hidden></div>
+    </div>
+    <span class="spacer"></span>
+    <button class="pill" id="relay" title="Concept search goes through a relay on this computer">OMOP Hub: checking …</button>
+    <span id="folder" class="sub2"></span>
+    <button class="btn" id="openfolder">Open folder…</button>
+    <button class="btn pri" id="saveall" disabled title="Ctrl+Shift+S">Save all</button>
+  </div>
+  <div id="main">
+    <div id="library">
+      <div class="libhead">
+        <input type="text" id="libfilter" placeholder="Filter the library…" spellcheck="false" autocomplete="off">
+        <div class="row1">
+          <label class="sub2">Group by <select id="libgroup"></select></label>
+          <label class="sub2"><input type="checkbox" id="libedited"> edited only</label>
+        </div>
+        <div class="meta" id="libmeta"></div>
+      </div>
+      <div class="liblist" id="liblist"></div>
+    </div>
+    <div id="center"></div>
+    <div id="side"></div>
+  </div>
+</div>
+<div id="pop" class="pop" hidden></div>
+<div id="toast"></div>
+<input type="file" id="dirinput" webkitdirectory multiple hidden>
+<script id="core">
+%%CORE%%
+</script>
+<script id="app-js">
+"use strict";
+%%APP%%
+</script>
+</body>
+</html>

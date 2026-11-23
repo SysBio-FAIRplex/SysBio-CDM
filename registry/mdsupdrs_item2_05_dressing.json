@@ -1,0 +1,187 @@
+{
+  "registry_id": 100298,
+  "schema_version": "harmonized-element/2.5",
+  "registry_label": "mdsupdrs_item2_05_dressing",
+  "definition": "2.05 MDS-UPDRS - Dressing (UPD2205)",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-PD"
+  ],
+  "harmonized_values": [
+    "mild",
+    "moderate",
+    "normal",
+    "severe",
+    "slight"
+  ],
+  "harmonized_with": [],
+  "links": [
+    {
+      "link_id": "1",
+      "kind": "derivation",
+      "linked_element_label": "mdsupdrs_part2_total",
+      "linked_element_id": "mds_updrs_part_ii_summary_score",
+      "linked_table": "measurement",
+      "linking_mechanism": "MEASUREMENT.measurement_event_id",
+      "linking_mechanism_concept_id": {
+        "id": 1147138,
+        "name": "measurement.measurement_id"
+      },
+      "note": ""
+    }
+  ],
+  "sources": [
+    {
+      "source_label": [
+        "upd2205_dressing",
+        "code_upd2205_dressing"
+      ],
+      "program": "AMP-PD",
+      "status": "approved",
+      "status_note": null,
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": "",
+      "layer_1_etl": {
+        "value_form": "ordinal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "471c34f2407e023a1de43d918e0784c71a40c7438545c0367addeda3047cbb33",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_ids": [
+              502302,
+              502303
+            ]
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "Normal",
+            "source_encoding": "0",
+            "harmonized_value": "normal",
+            "harmonized_encoding": "0",
+            "note": null
+          },
+          {
+            "source_value": "Slight",
+            "source_encoding": "1",
+            "harmonized_value": "slight",
+            "harmonized_encoding": "1",
+            "note": null
+          },
+          {
+            "source_value": "Mild",
+            "source_encoding": "2",
+            "harmonized_value": "mild",
+            "harmonized_encoding": "2",
+            "note": null
+          },
+          {
+            "source_value": "Moderate",
+            "source_encoding": "3",
+            "harmonized_value": "moderate",
+            "harmonized_encoding": "3",
+            "note": null
+          },
+          {
+            "source_value": "Severe",
+            "source_encoding": "4",
+            "harmonized_value": "severe",
+            "harmonized_encoding": "4",
+            "note": null
+          }
+        ]
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant_visit",
+        "attribute": "mdsupdrs_item2_05_dressing"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "measurement",
+      "defining_concept_id": {
+        "id": 46236385,
+        "name": "Dressing scale [UPDRS]",
+        "domain": "Measurement",
+        "target_field": "measurement_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map",
+        "visit_occurrence_id": "cdm.visit_occurrence"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [
+        {
+          "role": "derivation",
+          "link_id": "1",
+          "status": "active",
+          "note": ""
+        }
+      ],
+      "value_map": [
+        {
+          "harmonized_value": "<any in range>",
+          "value_as_number": "<value>"
+        },
+        {
+          "harmonized_value": "normal",
+          "value_as_number": 0,
+          "value_as_concept_id": {
+            "id": 45884153,
+            "name": "Normal"
+          },
+          "value_as_string": "normal"
+        },
+        {
+          "harmonized_value": "slight",
+          "value_as_number": 1,
+          "value_as_concept_id": {
+            "id": 45880586,
+            "name": "Slight"
+          },
+          "value_as_string": "slight"
+        },
+        {
+          "harmonized_value": "mild",
+          "value_as_number": 2,
+          "value_as_concept_id": {
+            "id": 45883535,
+            "name": "Mild"
+          },
+          "value_as_string": "mild"
+        },
+        {
+          "harmonized_value": "moderate",
+          "value_as_number": 3,
+          "value_as_concept_id": {
+            "id": 45877983,
+            "name": "Moderate"
+          },
+          "value_as_string": "moderate"
+        },
+        {
+          "harmonized_value": "severe",
+          "value_as_number": 4,
+          "value_as_concept_id": {
+            "id": 45883536,
+            "name": "Severe"
+          },
+          "value_as_string": "severe"
+        }
+      ]
+    }
+  ],
+  "status_note": ""
+}

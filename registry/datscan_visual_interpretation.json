@@ -1,0 +1,148 @@
+{
+  "registry_id": 100191,
+  "schema_version": "harmonized-element/2.5",
+  "registry_label": "datscan_visual_interpretation",
+  "definition": "DaTSCAN SPECT Visual Interpretation Assessment Report",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-PD"
+  ],
+  "harmonized_values": [
+    "positive",
+    "negative"
+  ],
+  "harmonized_with": [
+    "dat",
+    "scan_months_after_baseline"
+  ],
+  "links": [
+    {
+      "link_id": "1",
+      "kind": "realized",
+      "linked_element_label": "datscan_visual_interpretation",
+      "linked_defining_concept": {
+        "id": 36685548,
+        "name": "SPECT brain dopamine transporter study using ioflupane (123-I)",
+        "domain": "Procedure"
+      },
+      "linked_table": "procedure_occurrence",
+      "linked_value_set": [],
+      "linking_mechanism": "OBSERVATION.observation_event_id",
+      "linking_mechanism_concept_id": {
+        "id": 1147082,
+        "name": "procedure_occurrence.procedure_occurrence_id"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "source_label": "datscan_visual_interpretation",
+      "program": "AMP-PD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": "DaTSCAN SPECT Visual Interpretation Assessment Report.",
+      "layer_1_etl": {
+        "value_form": "nominal",
+        "datatype": "code",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "39e7d15895f620be8965651a6d2725d6b64922485f33bc2db9593eed0c885957",
+            "access_groups": [
+              "AMP-PD"
+            ],
+            "item_as_source_id": 501398
+          }
+        ],
+        "value_map": [
+          {
+            "source_value": "Positive",
+            "source_encoding": null,
+            "harmonized_value": "positive",
+            "harmonized_encoding": null,
+            "note": null
+          },
+          {
+            "source_value": "Negative",
+            "source_encoding": null,
+            "harmonized_value": "negative",
+            "harmonized_encoding": null,
+            "note": null
+          }
+        ]
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant_visit",
+        "attribute": "datscan_visual_interpretation"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "measurement",
+      "defining_concept_id": {
+        "id": 4086692,
+        "name": "Imaging interpretation",
+        "domain": "Measurement",
+        "target_field": "measurement_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map",
+        "visit_occurrence_id": "cdm.visit_occurrence"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [
+        {
+          "role": "scan",
+          "link_id": "1",
+          "status": "active",
+          "note": ""
+        }
+      ],
+      "value_map": [
+        {
+          "harmonized_value": "positive",
+          "value_as_concept_id": {
+            "id": 9191,
+            "name": "Positive"
+          },
+          "value_source_value": "Positive"
+        },
+        {
+          "harmonized_value": "negative",
+          "value_as_concept_id": {
+            "id": 9189,
+            "name": "Negative"
+          },
+          "value_source_value": "Negative"
+        }
+      ]
+    },
+    {
+      "target_id": "",
+      "table": "procedure_occurrence",
+      "defining_concept_id": {
+        "id": 36685548,
+        "name": "SPECT brain dopamine transporter study using ioflupane (123-I)",
+        "domain": "Procedure",
+        "target_field": "procedure_concept_id"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map",
+        "visit_occurrence_id": "cdm.visit_occurrence"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": [],
+      "note": ""
+    }
+  ]
+}

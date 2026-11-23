@@ -1,0 +1,173 @@
+{
+  "registry_id": 100219,
+  "schema_version": "harmonized-element/2.7",
+  "registry_label": "egfr_ckd_epi_2021_creatinine_serum",
+  "harmonized_element_curie": "LOINC:98979-8",
+  "definition": "Estimated glomerular filtration rate at baseline, as a number. The KPMP open-access clinical file reports this continuously; the FNIH single-cell metadata reports only a band, which is the separate element eGFR_binned.",
+  "must_agree": true,
+  "null_is_agreement": true,
+  "on_conflict": "qc_flag",
+  "programs_covered": [
+    "AMP-CMD"
+  ],
+  "harmonized_values": [
+    "<any in range>"
+  ],
+  "harmonized_with": [],
+  "links": [],
+  "sources": [
+    {
+      "source_label": "Baseline eGFR (ml/min/1.73m2)",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "continuous",
+        "datatype": "number",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": null,
+            "id_type": null,
+            "sha256": "0843ef9d8dbce1d400ab88d2b71c69b245c2d992bf13746c9c716c752d073ba6",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 501505
+          }
+        ],
+        "range": {
+          "min": 0,
+          "max": 200
+        },
+        "value_map": [],
+        "unit": "mL/min/1.73m2"
+      },
+      "loading_grain": {
+        "anchor": "participant_id",
+        "entity": "participant_visit",
+        "attribute": "egfr_ckd_epi_2021_creatinine_serum"
+      }
+    },
+    {
+      "source_label": "eGFRCr",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "continuous",
+        "datatype": "float",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "040b8349-b726-4012-b7fc-243c48bd2799",
+            "id_type": "kpmp",
+            "sha256": "a6bb002d606562e765d30489cb3b285a1f47a6b9e4479734181edfabe8c605ff",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 501511
+          }
+        ],
+        "value_map": [],
+        "unit": "mL/min/1.73m2"
+      },
+      "applies_to_rows": {
+        "require": "all",
+        "action": "include",
+        "conditions": [
+          {
+            "column": "Sample Type",
+            "token": "Serum"
+          }
+        ]
+      },
+      "loading_grain": {
+        "anchor": "specimen_id",
+        "entity": "specimen",
+        "attribute": "egfr_ckd_epi_2021_creatinine_serum"
+      }
+    },
+    {
+      "source_label": "eGFRCr",
+      "program": "AMP-CMD",
+      "status": "approved",
+      "status_note": "",
+      "manual_approval": false,
+      "src_dictionary": [],
+      "src_definition": null,
+      "layer_1_etl": {
+        "value_form": "continuous",
+        "datatype": "float",
+        "data_files": [
+          {
+            "file": "withheld: AMP data file names are not shared under the current agreement",
+            "source_id": "1bc63a62-9950-4395-ae9f-06d7e105ec8a",
+            "id_type": "kpmp",
+            "sha256": "d141b31bda63020b7c1d15e8069dbf264a9359cd485e3af93ea5e04bce28b953",
+            "access_groups": [
+              "AMP-CMD"
+            ],
+            "item_as_source_id": 501512
+          }
+        ],
+        "value_map": [],
+        "unit": "mL/min/1.73m2"
+      },
+      "applies_to_rows": {
+        "require": "all",
+        "action": "include",
+        "conditions": [
+          {
+            "column": "Sample Type",
+            "token": "Serum"
+          }
+        ]
+      },
+      "loading_grain": {
+        "anchor": "specimen_id",
+        "entity": "specimen",
+        "attribute": "egfr_ckd_epi_2021_creatinine_serum"
+      }
+    }
+  ],
+  "sysbio_etl": [
+    {
+      "target_id": "",
+      "table": "measurement",
+      "defining_concept_id": {
+        "id": 1619025,
+        "name": "Glomerular filtration rate/1.73 sq M.predicted [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (CKD-EPI 2021)",
+        "domain": "Measurement",
+        "target_field": "measurement_concept_id",
+        "vocabulary_id": "LOINC",
+        "concept_code": "98979-8",
+        "vocabulary_version": "LOINC 2.78"
+      },
+      "anchored_to": {
+        "person_id": "staging.person_map",
+        "specimen_id": "staging.specimen_map",
+        "visit_occurrence_id": "cdm.visit_occurrence"
+      },
+      "source_value": "<raw>",
+      "record_attributes": [],
+      "value_map": [
+        {
+          "harmonized_value": "<any in range>",
+          "value_as_number": "<value>",
+          "unit_concept_id": {
+            "id": 720870,
+            "name": "milliliter per minute per 1.73 square meter"
+          }
+        }
+      ]
+    }
+  ],
+  "unit": "ml/min/1.73m2"
+}
