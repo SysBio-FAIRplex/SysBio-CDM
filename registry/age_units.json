@@ -239,7 +239,9 @@
         "id": 9448,
         "name": "year",
         "domain": "Unit",
-        "target_field": "observation_concept_id"
+        "target_field": "observation_concept_id",
+        "vocabulary_id": "UCUM",
+        "concept_code": "a"
       },
       "anchored_to": {
         "person_id": "staging.person_map"
@@ -259,7 +261,9 @@
           "value_as_string": "year",
           "value_as_concept_id": {
             "id": 9448,
-            "name": "year"
+            "name": "year",
+            "vocabulary_id": "UCUM",
+            "concept_code": "a"
           }
         }
       ]

@@ -234,7 +234,9 @@
         "id": 596878,
         "name": "Please specify organ.",
         "domain": "Observation",
-        "target_field": "observation_concept_id"
+        "target_field": "observation_concept_id",
+        "vocabulary_id": "PPI",
+        "concept_code": "otherorgan_freetextbox"
       },
       "anchored_to": {
         "person_id": "staging.person_map",
@@ -282,7 +284,9 @@
           "harmonized_value": "cerebrospinal fluid",
           "value_as_concept_id": {
             "id": 4124259,
-            "name": "Cerebrospinal fluid specimen"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "258450006"
           },
           "value_as_string": "cerebrospinal fluid"
         },
@@ -290,7 +294,9 @@
           "harmonized_value": "other",
           "value_as_concept_id": {
             "id": 45878142,
-            "name": "Other"
+            "name": "Other",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA46-8"
           },
           "value_as_string": "other"
         },

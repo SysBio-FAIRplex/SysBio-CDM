@@ -73,7 +73,9 @@
         "id": 1092320,
         "name": "Glucosylceramide [Mass/volume] in Plasma by LC/MS/MS",
         "domain": "Measurement",
-        "target_field": "measurement_concept_id"
+        "target_field": "measurement_concept_id",
+        "vocabulary_id": "LOINC",
+        "concept_code": "104645-7"
       },
       "anchored_to": {
         "person_id": "staging.person_map",
@@ -87,7 +89,9 @@
           "value_as_number": "<value>",
           "unit_concept_id": {
             "id": 8859,
-            "name": "microgram per milliliter"
+            "name": "microgram per milliliter",
+            "vocabulary_id": "UCUM",
+            "concept_code": "ug/mL"
           },
           "value_as_concept_id": null,
           "value_as_string": null,

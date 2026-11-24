@@ -147,9 +147,11 @@
       "table": "measurement",
       "defining_concept_id": {
         "id": 4099154,
-        "name": "Body weight",
+        "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
         "domain": "Measurement",
-        "target_field": "measurement_concept_id"
+        "target_field": "measurement_concept_id",
+        "vocabulary_id": "SNOMED",
+        "concept_code": "27113001"
       },
       "anchored_to": {
         "person_id": "staging.person_map"
@@ -168,7 +170,9 @@
           "harmonized_value": "lb",
           "unit_concept_id": {
             "id": 8739,
-            "name": "pound (US)"
+            "name": "pound (US)",
+            "vocabulary_id": "UCUM",
+            "concept_code": "[lb_us]"
           },
           "unit_source_value": "lb"
         },
@@ -176,7 +180,9 @@
           "harmonized_value": "kg",
           "unit_concept_id": {
             "id": 9529,
-            "name": "kilogram"
+            "name": "kilogram",
+            "vocabulary_id": "UCUM",
+            "concept_code": "kg"
           },
           "unit_source_value": "kg"
         },
@@ -184,7 +190,9 @@
           "harmonized_value": "g",
           "unit_concept_id": {
             "id": 8504,
-            "name": "gram"
+            "name": "gram",
+            "vocabulary_id": "UCUM",
+            "concept_code": "g"
           },
           "unit_source_value": "g"
         },
@@ -192,7 +200,9 @@
           "harmonized_value": "oz",
           "unit_concept_id": {
             "id": 9373,
-            "name": "ounce (avoirdupois)"
+            "name": "ounce (avoirdupois)",
+            "vocabulary_id": "UCUM",
+            "concept_code": "[oz_av]"
           },
           "unit_source_value": "oz"
         }

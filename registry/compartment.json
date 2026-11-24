@@ -115,9 +115,11 @@
       "table": "observation",
       "defining_concept_id": {
         "id": 44783492,
-        "name": "Structure of anatomical compartment",
+        "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
         "domain": "Observation",
-        "target_field": "observation_concept_id"
+        "target_field": "observation_concept_id",
+        "vocabulary_id": "SNOMED",
+        "concept_code": "699590003"
       },
       "anchored_to": {
         "person_id": "staging.person_map"
@@ -129,7 +131,9 @@
           "harmonized_value": "plasma",
           "value_as_concept_id": {
             "id": 4000626,
-            "name": "Plasma specimen"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "119361006"
           },
           "value_as_string": "plasma"
         },
@@ -137,7 +141,9 @@
           "harmonized_value": "serum",
           "value_as_concept_id": {
             "id": 4001181,
-            "name": "Serum specimen"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "119364003"
           },
           "value_as_string": "serum"
         },
@@ -145,7 +151,9 @@
           "harmonized_value": "whole blood",
           "value_as_concept_id": {
             "id": 4122283,
-            "name": "Whole blood specimen"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "258580003"
           },
           "value_as_string": "whole blood"
         },
@@ -154,7 +162,9 @@
           "value_as_string": "intracellular",
           "value_as_concept_id": {
             "id": 4037486,
-            "name": "Intercellular space"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "16247001"
           }
         },
         {
@@ -162,7 +172,9 @@
           "value_as_string": "extracellular",
           "value_as_concept_id": {
             "id": 4029777,
-            "name": "Extracellular space"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "13803006"
           }
         },
         {
@@ -170,7 +182,9 @@
           "value_as_string": "tissue",
           "value_as_concept_id": {
             "id": 4002890,
-            "name": "Tissue specimen"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "119376003"
           },
           "note": ""
         },

@@ -79,9 +79,11 @@
       "table": "measurement",
       "defining_concept_id": {
         "id": 4327116,
-        "name": "Single photon emission computed tomography for dopamine transport",
+        "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
         "domain": "Procedure",
-        "target_field": "measurement_concept_id"
+        "target_field": "measurement_concept_id",
+        "vocabulary_id": "SNOMED",
+        "concept_code": "429781007"
       },
       "anchored_to": {
         "person_id": "staging.person_map",
@@ -94,7 +96,9 @@
           "harmonized_value": "Positive",
           "value_as_concept_id": {
             "id": 9191,
-            "name": "Positive"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "10828004"
           },
           "value_as_string": "Positive"
         },
@@ -102,7 +106,9 @@
           "harmonized_value": "Negative",
           "value_as_concept_id": {
             "id": 9189,
-            "name": "Negative"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "260385009"
           },
           "value_as_string": "Negative"
         },
@@ -110,7 +116,9 @@
           "harmonized_value": "NA",
           "value_as_concept_id": {
             "id": 35941270,
-            "name": "NA"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "444@88"
           },
           "value_as_string": "NA"
         }

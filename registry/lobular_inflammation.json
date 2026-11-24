@@ -145,9 +145,11 @@
       "table": "observation",
       "defining_concept_id": {
         "id": 4238978,
-        "name": "Chronic lobular hepatitis",
+        "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
         "domain": "Observation",
-        "target_field": "observation_concept_id"
+        "target_field": "observation_concept_id",
+        "vocabulary_id": "SNOMED",
+        "concept_code": "57339008"
       },
       "anchored_to": {
         "person_id": "staging.person_map"
@@ -170,7 +172,9 @@
           "value_as_number": "2",
           "value_as_concept_id": {
             "id": 45883535,
-            "name": "Mild"
+            "name": "Mild",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA6752-5"
           },
           "value_as_string": "Mild"
         },
@@ -179,7 +183,9 @@
           "value_as_number": "3",
           "value_as_concept_id": {
             "id": 45877983,
-            "name": "Moderate"
+            "name": "Moderate",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA6751-7"
           },
           "value_as_string": "Moderate"
         },
@@ -188,7 +194,9 @@
           "value_as_number": "4",
           "value_as_concept_id": {
             "id": 45883536,
-            "name": "Severe"
+            "name": "Severe",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA6750-9"
           },
           "value_as_string": "Severe"
         }

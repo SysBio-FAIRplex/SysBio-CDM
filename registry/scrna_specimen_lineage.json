@@ -75,18 +75,24 @@
       "linked_defining_concept": {
         "id": 1176306,
         "name": "Unique identifier [Identifier] of Initial sample",
-        "domain": "Measurement"
+        "domain": "Measurement",
+        "vocabulary_id": "LOINC",
+        "concept_code": "89873-4"
       },
       "linked_table": "specimen",
       "linked_value_set": [],
       "linking_mechanism": "FACT_RELATIONSHIP",
       "linking_mechanism_concept_id": {
         "id": 32668,
-        "name": "Measurement to Specimen"
+        "name": "Measurement to Specimen",
+        "vocabulary_id": "Relationship",
+        "concept_code": "OMOP5217056"
       },
       "inverse_concept_id": {
         "id": 32669,
-        "name": "Specimen to Measurement"
+        "name": "Specimen to Measurement",
+        "vocabulary_id": "Relationship",
+        "concept_code": "OMOP5217057"
       }
     }
   ],
@@ -1588,9 +1594,11 @@
       "table": "specimen",
       "defining_concept_id": {
         "id": 4048980,
-        "name": "Specimen from kidney obtained by (core) needle biopsy",
+        "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
         "domain": "Specimen",
-        "target_field": "specimen_concept_id"
+        "target_field": "specimen_concept_id",
+        "vocabulary_id": "SNOMED",
+        "concept_code": "122670001"
       },
       "anchored_to": {
         "person_id": "staging.person_map"
@@ -1601,11 +1609,15 @@
           "harmonized_value": "Percutaneous Needle Biopsy",
           "specimen_concept_id": {
             "id": 4048980,
-            "name": "Specimen from kidney obtained by (core) needle biopsy"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "122670001"
           },
           "anatomic_site_concept_id": {
             "id": 4232766,
-            "name": "Structure of inferior pole of kidney"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "89658009"
           },
           "specimen_source_id": "{SpecimenID}",
           "specimen_source_value": "Percutaneous Needle Biopsy",
@@ -1614,18 +1626,24 @@
           "disease_status_source_value": "{diagnosis}",
           "value_as_concept_id": {
             "id": 4173506,
-            "name": "Needle biopsy of kidney"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "275155009"
           }
         },
         {
           "harmonized_value": "Transplant Pre-perfusion Biopsy",
           "specimen_concept_id": {
             "id": 4048980,
-            "name": "Specimen from kidney obtained by (core) needle biopsy"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "122670001"
           },
           "anatomic_site_concept_id": {
             "id": 4106394,
-            "name": "Structure of parenchyma of kidney"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "29704000"
           },
           "specimen_source_id": "{SpecimenID}",
           "specimen_source_value": "Transplant Pre-perfusion Biopsy",
@@ -1634,18 +1652,24 @@
           "disease_status_source_value": "{diagnosis}",
           "value_as_concept_id": {
             "id": 4164499,
-            "name": "Surgical biopsy of kidney"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "274358005"
           }
         },
         {
           "harmonized_value": "Intra-operative Biopsy",
           "specimen_concept_id": {
             "id": 4048982,
-            "name": "Specimen from kidney obtained by wedge biopsy"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "122673004"
           },
           "anatomic_site_concept_id": {
             "id": 4106394,
-            "name": "Structure of parenchyma of kidney"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "29704000"
           },
           "specimen_source_id": "{SpecimenID}",
           "specimen_source_value": "Intra-operative Biopsy",
@@ -1654,14 +1678,18 @@
           "disease_status_source_value": "{diagnosis}",
           "value_as_concept_id": {
             "id": 4221238,
-            "name": "Open biopsy of kidney"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "40134000"
           }
         },
         {
           "harmonized_value": "cell",
           "value_as_concept_id": {
             "id": 44806863,
-            "name": "Cell sample"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "803291000000106"
           },
           "value_as_string": "cell"
         },
@@ -1669,7 +1697,9 @@
           "harmonized_value": "Fibroblast",
           "value_as_concept_id": {
             "id": 4200843,
-            "name": "Fibroblast"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "52547004"
           },
           "value_as_string": "Fibroblast"
         },
@@ -1677,7 +1707,9 @@
           "harmonized_value": "Mast Cell",
           "value_as_concept_id": {
             "id": 4272652,
-            "name": "Mast cell"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "6445007"
           },
           "value_as_string": "Mast Cell"
         },
@@ -1685,7 +1717,9 @@
           "harmonized_value": "Mesangial Cell",
           "value_as_concept_id": {
             "id": 4087095,
-            "name": "Mesangial cell"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "24259000"
           },
           "value_as_string": "Mesangial Cell"
         },
@@ -1693,7 +1727,9 @@
           "harmonized_value": "Monocyte",
           "value_as_concept_id": {
             "id": 4208122,
-            "name": "Monocyte"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "55918008"
           },
           "value_as_string": "Monocyte"
         },
@@ -1701,7 +1737,9 @@
           "harmonized_value": "Myofibroblast",
           "value_as_concept_id": {
             "id": 4237003,
-            "name": "Myofibroblast"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "56790003"
           },
           "value_as_string": "Myofibroblast"
         },
@@ -1709,7 +1747,9 @@
           "harmonized_value": "Plasma Cell",
           "value_as_concept_id": {
             "id": 4034507,
-            "name": "Plasma cell"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "113335003"
           },
           "value_as_string": "Plasma Cell"
         }
@@ -1720,9 +1760,11 @@
       "table": "specimen",
       "defining_concept_id": {
         "id": 44806863,
-        "name": "Cell sample",
+        "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
         "domain": "Specimen",
-        "target_field": "specimen_concept_id"
+        "target_field": "specimen_concept_id",
+        "vocabulary_id": "SNOMED",
+        "concept_code": "803291000000106"
       },
       "anchored_to": {
         "person_id": "staging.person_map"
@@ -1740,11 +1782,15 @@
           "harmonized_value": "Percutaneous Needle Biopsy",
           "specimen_concept_id": {
             "id": 44806863,
-            "name": "Cell sample"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "803291000000106"
           },
           "anatomic_site_concept_id": {
             "id": 4232766,
-            "name": "Structure of inferior pole of kidney"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "89658009"
           },
           "specimen_source_id": "{SpecimenID}",
           "specimen_source_value": "cell",
@@ -1756,11 +1802,15 @@
           "harmonized_value": "Transplant Pre-perfusion Biopsy",
           "specimen_concept_id": {
             "id": 44806863,
-            "name": "Cell sample"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "803291000000106"
           },
           "anatomic_site_concept_id": {
             "id": 4106394,
-            "name": "Structure of parenchyma of kidney"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "29704000"
           },
           "specimen_source_id": "{SpecimenID}",
           "specimen_source_value": "cell",
@@ -1772,11 +1822,15 @@
           "harmonized_value": "Intra-operative Biopsy",
           "specimen_concept_id": {
             "id": 44806863,
-            "name": "Cell sample"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "803291000000106"
           },
           "anatomic_site_concept_id": {
             "id": 4106394,
-            "name": "Structure of parenchyma of kidney"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "29704000"
           },
           "specimen_source_id": "{SpecimenID}",
           "specimen_source_value": "cell",
@@ -1791,9 +1845,11 @@
       "table": "specimen",
       "defining_concept_id": {
         "id": 44806863,
-        "name": "Cell sample",
+        "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
         "domain": "Specimen",
-        "target_field": "specimen_concept_id"
+        "target_field": "specimen_concept_id",
+        "vocabulary_id": "SNOMED",
+        "concept_code": "803291000000106"
       },
       "anchored_to": {
         "person_id": "staging.person_map"
@@ -1811,16 +1867,22 @@
           "harmonized_value": "Ascending Thin Limb of Loop of Henle",
           "specimen_concept_id": {
             "id": 4035397,
-            "name": "Renal tubular epithelial cell"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "117287000"
           },
           "anatomic_site_concept_id": {
             "id": 4308735,
-            "name": "Structure of ascending limb of Henle's loop"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "83711003"
           },
           "quantity": "{Number of Cells Sequenced Post-QC}",
           "unit_concept_id": {
             "id": 45744812,
-            "name": "cells"
+            "name": "cells",
+            "vocabulary_id": "UCUM",
+            "concept_code": "{cells}"
           },
           "unit_source_value": "cells",
           "specimen_source_id": "{SpecimenID}",
@@ -1833,16 +1895,22 @@
           "harmonized_value": "B Cell",
           "specimen_concept_id": {
             "id": 4011536,
-            "name": "B lymphocyte"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "112130006"
           },
           "anatomic_site_concept_id": {
             "id": 4179022,
-            "name": "Structure of interstitial tissue of kidney"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "50235001"
           },
           "quantity": "{Number of Cells Sequenced Post-QC}",
           "unit_concept_id": {
             "id": 45744812,
-            "name": "cells"
+            "name": "cells",
+            "vocabulary_id": "UCUM",
+            "concept_code": "{cells}"
           },
           "unit_source_value": "cells",
           "specimen_source_id": "{SpecimenID}",
@@ -1855,16 +1923,22 @@
           "harmonized_value": "Cortical Thick Ascending Limb Cell",
           "specimen_concept_id": {
             "id": 4035397,
-            "name": "Renal tubular epithelial cell"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "117287000"
           },
           "anatomic_site_concept_id": {
             "id": 3667102,
-            "name": "Structure of cortical ascending limb of loop of Henle"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "840725008"
           },
           "quantity": "{Number of Cells Sequenced Post-QC}",
           "unit_concept_id": {
             "id": 45744812,
-            "name": "cells"
+            "name": "cells",
+            "vocabulary_id": "UCUM",
+            "concept_code": "{cells}"
           },
           "unit_source_value": "cells",
           "specimen_source_id": "{SpecimenID}",
@@ -1877,16 +1951,22 @@
           "harmonized_value": "Cortical Collecting Duct Principal Cell",
           "specimen_concept_id": {
             "id": 4035397,
-            "name": "Renal tubular epithelial cell"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "117287000"
           },
           "anatomic_site_concept_id": {
             "id": 4245296,
-            "name": "Structure of collecting tubule"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "60297009"
           },
           "quantity": "{Number of Cells Sequenced Post-QC}",
           "unit_concept_id": {
             "id": 45744812,
-            "name": "cells"
+            "name": "cells",
+            "vocabulary_id": "UCUM",
+            "concept_code": "{cells}"
           },
           "unit_source_value": "cells",
           "specimen_source_id": "{SpecimenID}",
@@ -1899,16 +1979,22 @@
           "harmonized_value": "Connecting Tubule Cell",
           "specimen_concept_id": {
             "id": 4035397,
-            "name": "Renal tubular epithelial cell"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "117287000"
           },
           "anatomic_site_concept_id": {
             "id": 4245296,
-            "name": "Structure of collecting tubule"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "60297009"
           },
           "quantity": "{Number of Cells Sequenced Post-QC}",
           "unit_concept_id": {
             "id": 45744812,
-            "name": "cells"
+            "name": "cells",
+            "vocabulary_id": "UCUM",
+            "concept_code": "{cells}"
           },
           "unit_source_value": "cells",
           "specimen_source_id": "{SpecimenID}",
@@ -1921,16 +2007,22 @@
           "harmonized_value": "Connecting Tubule Intercalated Cell Type A",
           "specimen_concept_id": {
             "id": 4035397,
-            "name": "Renal tubular epithelial cell"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "117287000"
           },
           "anatomic_site_concept_id": {
             "id": 4245296,
-            "name": "Structure of collecting tubule"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "60297009"
           },
           "quantity": "{Number of Cells Sequenced Post-QC}",
           "unit_concept_id": {
             "id": 45744812,
-            "name": "cells"
+            "name": "cells",
+            "vocabulary_id": "UCUM",
+            "concept_code": "{cells}"
           },
           "unit_source_value": "cells",
           "specimen_source_id": "{SpecimenID}",
@@ -1943,16 +2035,22 @@
           "harmonized_value": "Connecting Tubule Principal Cell",
           "specimen_concept_id": {
             "id": 4035397,
-            "name": "Renal tubular epithelial cell"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "117287000"
           },
           "anatomic_site_concept_id": {
             "id": 4245296,
-            "name": "Structure of collecting tubule"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "60297009"
           },
           "quantity": "{Number of Cells Sequenced Post-QC}",
           "unit_concept_id": {
             "id": 45744812,
-            "name": "cells"
+            "name": "cells",
+            "vocabulary_id": "UCUM",
+            "concept_code": "{cells}"
           },
           "unit_source_value": "cells",
           "specimen_source_id": "{SpecimenID}",
@@ -1965,16 +2063,22 @@
           "harmonized_value": "Distal Convoluted Tubule Cell Type 1",
           "specimen_concept_id": {
             "id": 4035397,
-            "name": "Renal tubular epithelial cell"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "117287000"
           },
           "anatomic_site_concept_id": {
             "id": 4048619,
-            "name": "Structure of convoluted portion of distal convoluted renal tubule"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "20648009"
           },
           "quantity": "{Number of Cells Sequenced Post-QC}",
           "unit_concept_id": {
             "id": 45744812,
-            "name": "cells"
+            "name": "cells",
+            "vocabulary_id": "UCUM",
+            "concept_code": "{cells}"
           },
           "unit_source_value": "cells",
           "specimen_source_id": "{SpecimenID}",
@@ -1987,16 +2091,22 @@
           "harmonized_value": "Distal Convoluted Tubule Cell Type 2",
           "specimen_concept_id": {
             "id": 4035397,
-            "name": "Renal tubular epithelial cell"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "117287000"
           },
           "anatomic_site_concept_id": {
             "id": 4048619,
-            "name": "Structure of convoluted portion of distal convoluted renal tubule"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "20648009"
           },
           "quantity": "{Number of Cells Sequenced Post-QC}",
           "unit_concept_id": {
             "id": 45744812,
-            "name": "cells"
+            "name": "cells",
+            "vocabulary_id": "UCUM",
+            "concept_code": "{cells}"
           },
           "unit_source_value": "cells",
           "specimen_source_id": "{SpecimenID}",
@@ -2009,16 +2119,22 @@
           "harmonized_value": "Descending Thin Limb Cell Type 1",
           "specimen_concept_id": {
             "id": 4035397,
-            "name": "Renal tubular epithelial cell"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "117287000"
           },
           "anatomic_site_concept_id": {
             "id": 4302464,
-            "name": "Structure of descending limb of Henle's loop"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "78486008"
           },
           "quantity": "{Number of Cells Sequenced Post-QC}",
           "unit_concept_id": {
             "id": 45744812,
-            "name": "cells"
+            "name": "cells",
+            "vocabulary_id": "UCUM",
+            "concept_code": "{cells}"
           },
           "unit_source_value": "cells",
           "specimen_source_id": "{SpecimenID}",
@@ -2031,16 +2147,22 @@
           "harmonized_value": "Afferent / Efferent Arteriole Endothelial Cell",
           "specimen_concept_id": {
             "id": 4165055,
-            "name": "Endothelial cell"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "45709008"
           },
           "anatomic_site_concept_id": {
             "id": 4237258,
-            "name": "Glomerular arteriole"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "360815005"
           },
           "quantity": "{Number of Cells Sequenced Post-QC}",
           "unit_concept_id": {
             "id": 45744812,
-            "name": "cells"
+            "name": "cells",
+            "vocabulary_id": "UCUM",
+            "concept_code": "{cells}"
           },
           "unit_source_value": "cells",
           "specimen_source_id": "{SpecimenID}",
@@ -2053,16 +2175,22 @@
           "harmonized_value": "Ascending Vasa Recta Endothelial Cell",
           "specimen_concept_id": {
             "id": 4165055,
-            "name": "Endothelial cell"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "45709008"
           },
           "anatomic_site_concept_id": {
             "id": 4076971,
-            "name": "Structure of venulae rectae of medulla of kidney"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "246081006"
           },
           "quantity": "{Number of Cells Sequenced Post-QC}",
           "unit_concept_id": {
             "id": 45744812,
-            "name": "cells"
+            "name": "cells",
+            "vocabulary_id": "UCUM",
+            "concept_code": "{cells}"
           },
           "unit_source_value": "cells",
           "specimen_source_id": "{SpecimenID}",
@@ -2075,16 +2203,22 @@
           "harmonized_value": "Glomerular Capillary Endothelial Cell",
           "specimen_concept_id": {
             "id": 4165055,
-            "name": "Endothelial cell"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "45709008"
           },
           "anatomic_site_concept_id": {
             "id": 4238740,
-            "name": "Structure of glomerular capillary endothelium"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "91264009"
           },
           "quantity": "{Number of Cells Sequenced Post-QC}",
           "unit_concept_id": {
             "id": 45744812,
-            "name": "cells"
+            "name": "cells",
+            "vocabulary_id": "UCUM",
+            "concept_code": "{cells}"
           },
           "unit_source_value": "cells",
           "specimen_source_id": "{SpecimenID}",
@@ -2097,16 +2231,22 @@
           "harmonized_value": "Lymphatic Endothelial Cell",
           "specimen_concept_id": {
             "id": 4165055,
-            "name": "Endothelial cell"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "45709008"
           },
           "anatomic_site_concept_id": {
             "id": 4088895,
-            "name": "Structure of lymphatic vessel of kidney"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "18518001"
           },
           "quantity": "{Number of Cells Sequenced Post-QC}",
           "unit_concept_id": {
             "id": 45744812,
-            "name": "cells"
+            "name": "cells",
+            "vocabulary_id": "UCUM",
+            "concept_code": "{cells}"
           },
           "unit_source_value": "cells",
           "specimen_source_id": "{SpecimenID}",
@@ -2119,16 +2259,22 @@
           "harmonized_value": "Peritubular Capillary Endothelial Cell",
           "specimen_concept_id": {
             "id": 4165055,
-            "name": "Endothelial cell"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "45709008"
           },
           "anatomic_site_concept_id": {
             "id": 4076906,
-            "name": "Structure of peritubular capillary plexus"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "275606004"
           },
           "quantity": "{Number of Cells Sequenced Post-QC}",
           "unit_concept_id": {
             "id": 45744812,
-            "name": "cells"
+            "name": "cells",
+            "vocabulary_id": "UCUM",
+            "concept_code": "{cells}"
           },
           "unit_source_value": "cells",
           "specimen_source_id": "{SpecimenID}",
@@ -2141,16 +2287,22 @@
           "harmonized_value": "Fibroblast",
           "specimen_concept_id": {
             "id": 4200843,
-            "name": "Fibroblast"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "52547004"
           },
           "anatomic_site_concept_id": {
             "id": 4179022,
-            "name": "Structure of interstitial tissue of kidney"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "50235001"
           },
           "quantity": "{Number of Cells Sequenced Post-QC}",
           "unit_concept_id": {
             "id": 45744812,
-            "name": "cells"
+            "name": "cells",
+            "vocabulary_id": "UCUM",
+            "concept_code": "{cells}"
           },
           "unit_source_value": "cells",
           "specimen_source_id": "{SpecimenID}",
@@ -2163,16 +2315,22 @@
           "harmonized_value": "Intercalated Cell Type A",
           "specimen_concept_id": {
             "id": 4035397,
-            "name": "Renal tubular epithelial cell"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "117287000"
           },
           "anatomic_site_concept_id": {
             "id": 4245296,
-            "name": "Structure of collecting tubule"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "60297009"
           },
           "quantity": "{Number of Cells Sequenced Post-QC}",
           "unit_concept_id": {
             "id": 45744812,
-            "name": "cells"
+            "name": "cells",
+            "vocabulary_id": "UCUM",
+            "concept_code": "{cells}"
           },
           "unit_source_value": "cells",
           "specimen_source_id": "{SpecimenID}",
@@ -2185,16 +2343,22 @@
           "harmonized_value": "Intercalated Cell Type B",
           "specimen_concept_id": {
             "id": 4035397,
-            "name": "Renal tubular epithelial cell"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "117287000"
           },
           "anatomic_site_concept_id": {
             "id": 4245296,
-            "name": "Structure of collecting tubule"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "60297009"
           },
           "quantity": "{Number of Cells Sequenced Post-QC}",
           "unit_concept_id": {
             "id": 45744812,
-            "name": "cells"
+            "name": "cells",
+            "vocabulary_id": "UCUM",
+            "concept_code": "{cells}"
           },
           "unit_source_value": "cells",
           "specimen_source_id": "{SpecimenID}",
@@ -2207,16 +2371,22 @@
           "harmonized_value": "Inner Medullary Collecting Duct Cell",
           "specimen_concept_id": {
             "id": 4035397,
-            "name": "Renal tubular epithelial cell"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "117287000"
           },
           "anatomic_site_concept_id": {
             "id": 4245296,
-            "name": "Structure of collecting tubule"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "60297009"
           },
           "quantity": "{Number of Cells Sequenced Post-QC}",
           "unit_concept_id": {
             "id": 45744812,
-            "name": "cells"
+            "name": "cells",
+            "vocabulary_id": "UCUM",
+            "concept_code": "{cells}"
           },
           "unit_source_value": "cells",
           "specimen_source_id": "{SpecimenID}",
@@ -2229,16 +2399,22 @@
           "harmonized_value": "Medullary Thick Ascending Limb Cell",
           "specimen_concept_id": {
             "id": 4035397,
-            "name": "Renal tubular epithelial cell"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "117287000"
           },
           "anatomic_site_concept_id": {
             "id": 3667100,
-            "name": "Structure of medullary thick ascending limb of loop of Henle"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "840723001"
           },
           "quantity": "{Number of Cells Sequenced Post-QC}",
           "unit_concept_id": {
             "id": 45744812,
-            "name": "cells"
+            "name": "cells",
+            "vocabulary_id": "UCUM",
+            "concept_code": "{cells}"
           },
           "unit_source_value": "cells",
           "specimen_source_id": "{SpecimenID}",
@@ -2251,16 +2427,22 @@
           "harmonized_value": "M2 Macrophage",
           "specimen_concept_id": {
             "id": 4243353,
-            "name": "Macrophage"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "58986001"
           },
           "anatomic_site_concept_id": {
             "id": 4179022,
-            "name": "Structure of interstitial tissue of kidney"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "50235001"
           },
           "quantity": "{Number of Cells Sequenced Post-QC}",
           "unit_concept_id": {
             "id": 45744812,
-            "name": "cells"
+            "name": "cells",
+            "vocabulary_id": "UCUM",
+            "concept_code": "{cells}"
           },
           "unit_source_value": "cells",
           "specimen_source_id": "{SpecimenID}",
@@ -2273,16 +2455,22 @@
           "harmonized_value": "Mast Cell",
           "specimen_concept_id": {
             "id": 4272652,
-            "name": "Mast cell"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "6445007"
           },
           "anatomic_site_concept_id": {
             "id": 4179022,
-            "name": "Structure of interstitial tissue of kidney"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "50235001"
           },
           "quantity": "{Number of Cells Sequenced Post-QC}",
           "unit_concept_id": {
             "id": 45744812,
-            "name": "cells"
+            "name": "cells",
+            "vocabulary_id": "UCUM",
+            "concept_code": "{cells}"
           },
           "unit_source_value": "cells",
           "specimen_source_id": "{SpecimenID}",
@@ -2295,16 +2483,22 @@
           "harmonized_value": "Mesangial Cell",
           "specimen_concept_id": {
             "id": 4087095,
-            "name": "Mesangial cell"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "24259000"
           },
           "anatomic_site_concept_id": {
             "id": 4090517,
-            "name": "Structure of glomerular mesangium"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "18602000"
           },
           "quantity": "{Number of Cells Sequenced Post-QC}",
           "unit_concept_id": {
             "id": 45744812,
-            "name": "cells"
+            "name": "cells",
+            "vocabulary_id": "UCUM",
+            "concept_code": "{cells}"
           },
           "unit_source_value": "cells",
           "specimen_source_id": "{SpecimenID}",
@@ -2317,16 +2511,22 @@
           "harmonized_value": "Monocyte-derived Cell",
           "specimen_concept_id": {
             "id": 4251201,
-            "name": "Phagocytic cell"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "73568005"
           },
           "anatomic_site_concept_id": {
             "id": 4179022,
-            "name": "Structure of interstitial tissue of kidney"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "50235001"
           },
           "quantity": "{Number of Cells Sequenced Post-QC}",
           "unit_concept_id": {
             "id": 45744812,
-            "name": "cells"
+            "name": "cells",
+            "vocabulary_id": "UCUM",
+            "concept_code": "{cells}"
           },
           "unit_source_value": "cells",
           "specimen_source_id": "{SpecimenID}",
@@ -2339,16 +2539,22 @@
           "harmonized_value": "Monocyte",
           "specimen_concept_id": {
             "id": 4208122,
-            "name": "Monocyte"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "55918008"
           },
           "anatomic_site_concept_id": {
             "id": 4179022,
-            "name": "Structure of interstitial tissue of kidney"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "50235001"
           },
           "quantity": "{Number of Cells Sequenced Post-QC}",
           "unit_concept_id": {
             "id": 45744812,
-            "name": "cells"
+            "name": "cells",
+            "vocabulary_id": "UCUM",
+            "concept_code": "{cells}"
           },
           "unit_source_value": "cells",
           "specimen_source_id": "{SpecimenID}",
@@ -2361,16 +2567,22 @@
           "harmonized_value": "Myofibroblast",
           "specimen_concept_id": {
             "id": 4237003,
-            "name": "Myofibroblast"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "56790003"
           },
           "anatomic_site_concept_id": {
             "id": 4179022,
-            "name": "Structure of interstitial tissue of kidney"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "50235001"
           },
           "quantity": "{Number of Cells Sequenced Post-QC}",
           "unit_concept_id": {
             "id": 45744812,
-            "name": "cells"
+            "name": "cells",
+            "vocabulary_id": "UCUM",
+            "concept_code": "{cells}"
           },
           "unit_source_value": "cells",
           "specimen_source_id": "{SpecimenID}",
@@ -2383,16 +2595,22 @@
           "harmonized_value": "Natural Killer T Cell Type 1",
           "specimen_concept_id": {
             "id": 4125090,
-            "name": "NK-cell"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "259717003"
           },
           "anatomic_site_concept_id": {
             "id": 4179022,
-            "name": "Structure of interstitial tissue of kidney"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "50235001"
           },
           "quantity": "{Number of Cells Sequenced Post-QC}",
           "unit_concept_id": {
             "id": 45744812,
-            "name": "cells"
+            "name": "cells",
+            "vocabulary_id": "UCUM",
+            "concept_code": "{cells}"
           },
           "unit_source_value": "cells",
           "specimen_source_id": "{SpecimenID}",
@@ -2405,16 +2623,22 @@
           "harmonized_value": "Natural Killer T Cell",
           "specimen_concept_id": {
             "id": 4238820,
-            "name": "T lymphocyte"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "57184004"
           },
           "anatomic_site_concept_id": {
             "id": 4179022,
-            "name": "Structure of interstitial tissue of kidney"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "50235001"
           },
           "quantity": "{Number of Cells Sequenced Post-QC}",
           "unit_concept_id": {
             "id": 45744812,
-            "name": "cells"
+            "name": "cells",
+            "vocabulary_id": "UCUM",
+            "concept_code": "{cells}"
           },
           "unit_source_value": "cells",
           "specimen_source_id": "{SpecimenID}",
@@ -2427,16 +2651,22 @@
           "harmonized_value": "Principal Cell",
           "specimen_concept_id": {
             "id": 4035397,
-            "name": "Renal tubular epithelial cell"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "117287000"
           },
           "anatomic_site_concept_id": {
             "id": 4245296,
-            "name": "Structure of collecting tubule"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "60297009"
           },
           "quantity": "{Number of Cells Sequenced Post-QC}",
           "unit_concept_id": {
             "id": 45744812,
-            "name": "cells"
+            "name": "cells",
+            "vocabulary_id": "UCUM",
+            "concept_code": "{cells}"
           },
           "unit_source_value": "cells",
           "specimen_source_id": "{SpecimenID}",
@@ -2449,16 +2679,22 @@
           "harmonized_value": "Parietal Epithelial Cell",
           "specimen_concept_id": {
             "id": 4019364,
-            "name": "Renal epithelial cell"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "115593006"
           },
           "anatomic_site_concept_id": {
             "id": 4147063,
-            "name": "Structure of parietal layer of Bowman's capsule"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "30249000"
           },
           "quantity": "{Number of Cells Sequenced Post-QC}",
           "unit_concept_id": {
             "id": 45744812,
-            "name": "cells"
+            "name": "cells",
+            "vocabulary_id": "UCUM",
+            "concept_code": "{cells}"
           },
           "unit_source_value": "cells",
           "specimen_source_id": "{SpecimenID}",
@@ -2471,16 +2707,22 @@
           "harmonized_value": "Plasma Cell",
           "specimen_concept_id": {
             "id": 4034507,
-            "name": "Plasma cell"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "113335003"
           },
           "anatomic_site_concept_id": {
             "id": 4179022,
-            "name": "Structure of interstitial tissue of kidney"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "50235001"
           },
           "quantity": "{Number of Cells Sequenced Post-QC}",
           "unit_concept_id": {
             "id": 45744812,
-            "name": "cells"
+            "name": "cells",
+            "vocabulary_id": "UCUM",
+            "concept_code": "{cells}"
           },
           "unit_source_value": "cells",
           "specimen_source_id": "{SpecimenID}",
@@ -2493,16 +2735,22 @@
           "harmonized_value": "Podocyte",
           "specimen_concept_id": {
             "id": 4019364,
-            "name": "Renal epithelial cell"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "115593006"
           },
           "anatomic_site_concept_id": {
             "id": 4003838,
-            "name": "Structure of visceral layer of Bowman's capsule"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "110001"
           },
           "quantity": "{Number of Cells Sequenced Post-QC}",
           "unit_concept_id": {
             "id": 45744812,
-            "name": "cells"
+            "name": "cells",
+            "vocabulary_id": "UCUM",
+            "concept_code": "{cells}"
           },
           "unit_source_value": "cells",
           "specimen_source_id": "{SpecimenID}",
@@ -2515,16 +2763,22 @@
           "harmonized_value": "Proximal Tubule Epithelial Cell Segment 1 and 2",
           "specimen_concept_id": {
             "id": 4035397,
-            "name": "Renal tubular epithelial cell"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "117287000"
           },
           "anatomic_site_concept_id": {
             "id": 4196544,
-            "name": "Proximal convoluted renal tubule structure"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "50468005"
           },
           "quantity": "{Number of Cells Sequenced Post-QC}",
           "unit_concept_id": {
             "id": 45744812,
-            "name": "cells"
+            "name": "cells",
+            "vocabulary_id": "UCUM",
+            "concept_code": "{cells}"
           },
           "unit_source_value": "cells",
           "specimen_source_id": "{SpecimenID}",
@@ -2537,16 +2791,22 @@
           "harmonized_value": "Proximal Tubule Epithelial Cell Segment 3",
           "specimen_concept_id": {
             "id": 4035397,
-            "name": "Renal tubular epithelial cell"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "117287000"
           },
           "anatomic_site_concept_id": {
             "id": 4252914,
-            "name": "Structure of straight renal tubule"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "74734005"
           },
           "quantity": "{Number of Cells Sequenced Post-QC}",
           "unit_concept_id": {
             "id": 45744812,
-            "name": "cells"
+            "name": "cells",
+            "vocabulary_id": "UCUM",
+            "concept_code": "{cells}"
           },
           "unit_source_value": "cells",
           "specimen_source_id": "{SpecimenID}",
@@ -2559,16 +2819,22 @@
           "harmonized_value": "Renin-positive Juxtaglomerular Granular Cell",
           "specimen_concept_id": {
             "id": 4206767,
-            "name": "Juxtaglomerular cell"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "56196004"
           },
           "anatomic_site_concept_id": {
             "id": 4316378,
-            "name": "Structure of afferent glomerular arteriole"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "9481009"
           },
           "quantity": "{Number of Cells Sequenced Post-QC}",
           "unit_concept_id": {
             "id": 45744812,
-            "name": "cells"
+            "name": "cells",
+            "vocabulary_id": "UCUM",
+            "concept_code": "{cells}"
           },
           "unit_source_value": "cells",
           "specimen_source_id": "{SpecimenID}",
@@ -2581,16 +2847,22 @@
           "harmonized_value": "T Cell",
           "specimen_concept_id": {
             "id": 4238820,
-            "name": "T lymphocyte"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "57184004"
           },
           "anatomic_site_concept_id": {
             "id": 4179022,
-            "name": "Structure of interstitial tissue of kidney"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "50235001"
           },
           "quantity": "{Number of Cells Sequenced Post-QC}",
           "unit_concept_id": {
             "id": 45744812,
-            "name": "cells"
+            "name": "cells",
+            "vocabulary_id": "UCUM",
+            "concept_code": "{cells}"
           },
           "unit_source_value": "cells",
           "specimen_source_id": "{SpecimenID}",
@@ -2603,16 +2875,22 @@
           "harmonized_value": "Cytotoxic T Cell",
           "specimen_concept_id": {
             "id": 4224865,
-            "name": "Cytotoxic T lymphocyte"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "420638008"
           },
           "anatomic_site_concept_id": {
             "id": 4179022,
-            "name": "Structure of interstitial tissue of kidney"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "50235001"
           },
           "quantity": "{Number of Cells Sequenced Post-QC}",
           "unit_concept_id": {
             "id": 45744812,
-            "name": "cells"
+            "name": "cells",
+            "vocabulary_id": "UCUM",
+            "concept_code": "{cells}"
           },
           "unit_source_value": "cells",
           "specimen_source_id": "{SpecimenID}",
@@ -2625,16 +2903,22 @@
           "harmonized_value": "Vascular Smooth Muscle Cell",
           "specimen_concept_id": {
             "id": 4046264,
-            "name": "Smooth muscle tissue"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "122447002"
           },
           "anatomic_site_concept_id": {
             "id": 4267864,
-            "name": "Tunica media vasorum"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "61695000"
           },
           "quantity": "{Number of Cells Sequenced Post-QC}",
           "unit_concept_id": {
             "id": 45744812,
-            "name": "cells"
+            "name": "cells",
+            "vocabulary_id": "UCUM",
+            "concept_code": "{cells}"
           },
           "unit_source_value": "cells",
           "specimen_source_id": "{SpecimenID}",
@@ -2647,16 +2931,22 @@
           "harmonized_value": "Vascular Smooth Muscle Cell / Pericyte",
           "specimen_concept_id": {
             "id": 4046264,
-            "name": "Smooth muscle tissue"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "122447002"
           },
           "anatomic_site_concept_id": {
             "id": 37219128,
-            "name": "Structure of intrarenal vasculature"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "786065008"
           },
           "quantity": "{Number of Cells Sequenced Post-QC}",
           "unit_concept_id": {
             "id": 45744812,
-            "name": "cells"
+            "name": "cells",
+            "vocabulary_id": "UCUM",
+            "concept_code": "{cells}"
           },
           "unit_source_value": "cells",
           "specimen_source_id": "{SpecimenID}",
@@ -2669,16 +2959,22 @@
           "harmonized_value": "Adaptive / Maladaptive / Repairing Fibroblast",
           "specimen_concept_id": {
             "id": 4200843,
-            "name": "Fibroblast"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "52547004"
           },
           "anatomic_site_concept_id": {
             "id": 4179022,
-            "name": "Structure of interstitial tissue of kidney"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "50235001"
           },
           "quantity": "{Number of Cells Sequenced Post-QC}",
           "unit_concept_id": {
             "id": 45744812,
-            "name": "cells"
+            "name": "cells",
+            "vocabulary_id": "UCUM",
+            "concept_code": "{cells}"
           },
           "unit_source_value": "cells",
           "specimen_source_id": "{SpecimenID}",
@@ -2691,16 +2987,22 @@
           "harmonized_value": "Adaptive / Maladaptive / Repairing Proximal Tubule Epithelial Cell",
           "specimen_concept_id": {
             "id": 4035397,
-            "name": "Renal tubular epithelial cell"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "117287000"
           },
           "anatomic_site_concept_id": {
             "id": 4196544,
-            "name": "Proximal convoluted renal tubule structure"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "50468005"
           },
           "quantity": "{Number of Cells Sequenced Post-QC}",
           "unit_concept_id": {
             "id": 45744812,
-            "name": "cells"
+            "name": "cells",
+            "vocabulary_id": "UCUM",
+            "concept_code": "{cells}"
           },
           "unit_source_value": "cells",
           "specimen_source_id": "{SpecimenID}",
@@ -2713,16 +3015,22 @@
           "harmonized_value": "Adaptive / Maladaptive / Repairing Thick Ascending Limb Cell",
           "specimen_concept_id": {
             "id": 4035397,
-            "name": "Renal tubular epithelial cell"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "117287000"
           },
           "anatomic_site_concept_id": {
             "id": 4070780,
-            "name": "Henle's loop structure"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "21694000"
           },
           "quantity": "{Number of Cells Sequenced Post-QC}",
           "unit_concept_id": {
             "id": 45744812,
-            "name": "cells"
+            "name": "cells",
+            "vocabulary_id": "UCUM",
+            "concept_code": "{cells}"
           },
           "unit_source_value": "cells",
           "specimen_source_id": "{SpecimenID}",
@@ -2735,16 +3043,22 @@
           "harmonized_value": "Classical Dendritic Cell",
           "specimen_concept_id": {
             "id": 4085582,
-            "name": "Interdigitating cell"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "24333000"
           },
           "anatomic_site_concept_id": {
             "id": 4179022,
-            "name": "Structure of interstitial tissue of kidney"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "50235001"
           },
           "quantity": "{Number of Cells Sequenced Post-QC}",
           "unit_concept_id": {
             "id": 45744812,
-            "name": "cells"
+            "name": "cells",
+            "vocabulary_id": "UCUM",
+            "concept_code": "{cells}"
           },
           "unit_source_value": "cells",
           "specimen_source_id": "{SpecimenID}",
@@ -2757,16 +3071,22 @@
           "harmonized_value": "Cycling Epithelial Cell",
           "specimen_concept_id": {
             "id": 4035397,
-            "name": "Renal tubular epithelial cell"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "117287000"
           },
           "anatomic_site_concept_id": {
             "id": 4034364,
-            "name": "Structure of straight portion of distal convoluted renal tubule"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "113289003"
           },
           "quantity": "{Number of Cells Sequenced Post-QC}",
           "unit_concept_id": {
             "id": 45744812,
-            "name": "cells"
+            "name": "cells",
+            "vocabulary_id": "UCUM",
+            "concept_code": "{cells}"
           },
           "unit_source_value": "cells",
           "specimen_source_id": "{SpecimenID}",
@@ -2779,16 +3099,22 @@
           "harmonized_value": "Cycling Mononuclear Phagocyte",
           "specimen_concept_id": {
             "id": 4251201,
-            "name": "Phagocytic cell"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "73568005"
           },
           "anatomic_site_concept_id": {
             "id": 4179022,
-            "name": "Structure of interstitial tissue of kidney"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "50235001"
           },
           "quantity": "{Number of Cells Sequenced Post-QC}",
           "unit_concept_id": {
             "id": 45744812,
-            "name": "cells"
+            "name": "cells",
+            "vocabulary_id": "UCUM",
+            "concept_code": "{cells}"
           },
           "unit_source_value": "cells",
           "specimen_source_id": "{SpecimenID}",
@@ -2801,16 +3127,22 @@
           "harmonized_value": "Cycling T Cell",
           "specimen_concept_id": {
             "id": 4238820,
-            "name": "T lymphocyte"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "57184004"
           },
           "anatomic_site_concept_id": {
             "id": 4179022,
-            "name": "Structure of interstitial tissue of kidney"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "50235001"
           },
           "quantity": "{Number of Cells Sequenced Post-QC}",
           "unit_concept_id": {
             "id": 45744812,
-            "name": "cells"
+            "name": "cells",
+            "vocabulary_id": "UCUM",
+            "concept_code": "{cells}"
           },
           "unit_source_value": "cells",
           "specimen_source_id": "{SpecimenID}",
@@ -2823,16 +3155,22 @@
           "harmonized_value": "Interstitial Fibroblast (degenerative)",
           "specimen_concept_id": {
             "id": 4200843,
-            "name": "Fibroblast"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "52547004"
           },
           "anatomic_site_concept_id": {
             "id": 4179022,
-            "name": "Structure of interstitial tissue of kidney"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "50235001"
           },
           "quantity": "{Number of Cells Sequenced Post-QC}",
           "unit_concept_id": {
             "id": 45744812,
-            "name": "cells"
+            "name": "cells",
+            "vocabulary_id": "UCUM",
+            "concept_code": "{cells}"
           },
           "unit_source_value": "cells",
           "specimen_source_id": "{SpecimenID}",
@@ -2845,16 +3183,22 @@
           "harmonized_value": "Degenerative Principal Cell",
           "specimen_concept_id": {
             "id": 4035397,
-            "name": "Renal tubular epithelial cell"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "117287000"
           },
           "anatomic_site_concept_id": {
             "id": 4245296,
-            "name": "Structure of collecting tubule"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "60297009"
           },
           "quantity": "{Number of Cells Sequenced Post-QC}",
           "unit_concept_id": {
             "id": 45744812,
-            "name": "cells"
+            "name": "cells",
+            "vocabulary_id": "UCUM",
+            "concept_code": "{cells}"
           },
           "unit_source_value": "cells",
           "specimen_source_id": "{SpecimenID}",
@@ -2867,16 +3211,22 @@
           "harmonized_value": "Degenerative Proximal Tubule Epithelial Cell",
           "specimen_concept_id": {
             "id": 4035397,
-            "name": "Renal tubular epithelial cell"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "117287000"
           },
           "anatomic_site_concept_id": {
             "id": 4196544,
-            "name": "Proximal convoluted renal tubule structure"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "50468005"
           },
           "quantity": "{Number of Cells Sequenced Post-QC}",
           "unit_concept_id": {
             "id": 45744812,
-            "name": "cells"
+            "name": "cells",
+            "vocabulary_id": "UCUM",
+            "concept_code": "{cells}"
           },
           "unit_source_value": "cells",
           "specimen_source_id": "{SpecimenID}",
@@ -2889,16 +3239,22 @@
           "harmonized_value": "Degenerative Vascular Smooth Muscle Cell",
           "specimen_concept_id": {
             "id": 4046264,
-            "name": "Smooth muscle tissue"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "122447002"
           },
           "anatomic_site_concept_id": {
             "id": 37219128,
-            "name": "Structure of intrarenal vasculature"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "786065008"
           },
           "quantity": "{Number of Cells Sequenced Post-QC}",
           "unit_concept_id": {
             "id": 45744812,
-            "name": "cells"
+            "name": "cells",
+            "vocabulary_id": "UCUM",
+            "concept_code": "{cells}"
           },
           "unit_source_value": "cells",
           "specimen_source_id": "{SpecimenID}",
@@ -2911,16 +3267,22 @@
           "harmonized_value": "Non-Classical Monocyte",
           "specimen_concept_id": {
             "id": 4208122,
-            "name": "Monocyte"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "55918008"
           },
           "anatomic_site_concept_id": {
             "id": 4179022,
-            "name": "Structure of interstitial tissue of kidney"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "50235001"
           },
           "quantity": "{Number of Cells Sequenced Post-QC}",
           "unit_concept_id": {
             "id": 45744812,
-            "name": "cells"
+            "name": "cells",
+            "vocabulary_id": "UCUM",
+            "concept_code": "{cells}"
           },
           "unit_source_value": "cells",
           "specimen_source_id": "{SpecimenID}",
@@ -2933,16 +3295,22 @@
           "harmonized_value": "Plasmacytoid Dendritic Cell",
           "specimen_concept_id": {
             "id": 4133454,
-            "name": "Dendritic cell system structure"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "127909008"
           },
           "anatomic_site_concept_id": {
             "id": 4179022,
-            "name": "Structure of interstitial tissue of kidney"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "50235001"
           },
           "quantity": "{Number of Cells Sequenced Post-QC}",
           "unit_concept_id": {
             "id": 45744812,
-            "name": "cells"
+            "name": "cells",
+            "vocabulary_id": "UCUM",
+            "concept_code": "{cells}"
           },
           "unit_source_value": "cells",
           "specimen_source_id": "{SpecimenID}",
@@ -2955,16 +3323,22 @@
           "harmonized_value": "Transitional Principal-Intercalated Cell",
           "specimen_concept_id": {
             "id": 4035397,
-            "name": "Renal tubular epithelial cell"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "117287000"
           },
           "anatomic_site_concept_id": {
             "id": 4245296,
-            "name": "Structure of collecting tubule"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "60297009"
           },
           "quantity": "{Number of Cells Sequenced Post-QC}",
           "unit_concept_id": {
             "id": 45744812,
-            "name": "cells"
+            "name": "cells",
+            "vocabulary_id": "UCUM",
+            "concept_code": "{cells}"
           },
           "unit_source_value": "cells",
           "specimen_source_id": "{SpecimenID}",

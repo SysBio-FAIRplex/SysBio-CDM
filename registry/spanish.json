@@ -101,7 +101,9 @@
         "id": 38003563,
         "name": "Hispanic or Latino",
         "domain": "Ethnicity",
-        "target_field": "observation_concept_id"
+        "target_field": "observation_concept_id",
+        "vocabulary_id": "Ethnicity",
+        "concept_code": "Hispanic"
       },
       "anchored_to": {
         "person_id": "staging.person_map"
@@ -114,7 +116,9 @@
           "value_as_number": 1,
           "value_as_concept_id": {
             "id": 45877994,
-            "name": "Yes"
+            "name": "Yes",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA33-6"
           }
         },
         {
@@ -122,14 +126,18 @@
           "value_as_number": 0,
           "value_as_concept_id": {
             "id": 45878245,
-            "name": "No"
+            "name": "No",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA32-8"
           }
         },
         {
           "harmonized_value": "NA",
           "value_as_concept_id": {
             "id": 35941270,
-            "name": "NA"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "444@88"
           }
         }
       ]

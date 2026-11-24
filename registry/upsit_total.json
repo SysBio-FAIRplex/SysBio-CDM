@@ -57,9 +57,11 @@
       "table": "measurement",
       "defining_concept_id": {
         "id": 3654978,
-        "name": "Assessment using University of Pennsylvania Smell Identification Test",
+        "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
         "domain": "Measurement",
-        "target_field": "measurement_concept_id"
+        "target_field": "measurement_concept_id",
+        "vocabulary_id": "SNOMED",
+        "concept_code": "840548001"
       },
       "anchored_to": {
         "person_id": "staging.person_map",

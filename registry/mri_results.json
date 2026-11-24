@@ -69,9 +69,11 @@
       "table": "observation",
       "defining_concept_id": {
         "id": 4013636,
-        "name": "Magnetic resonance imaging",
+        "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
         "domain": "Procedure",
-        "target_field": "observation_concept_id"
+        "target_field": "observation_concept_id",
+        "vocabulary_id": "SNOMED",
+        "concept_code": "113091000"
       },
       "anchored_to": {
         "person_id": "staging.person_map",
@@ -85,7 +87,9 @@
           "value_as_string": "Abnormal, not clinically significant",
           "value_as_concept_id": {
             "id": 45878745,
-            "name": "Abnormal"
+            "name": "Abnormal",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA12748-2"
           }
         },
         {
@@ -93,7 +97,9 @@
           "value_as_string": "Normal",
           "value_as_concept_id": {
             "id": 45884153,
-            "name": "Normal"
+            "name": "Normal",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA6626-1"
           }
         },
         {
@@ -101,7 +107,9 @@
           "value_as_string": "Abnormal, clinically significant",
           "value_as_concept_id": {
             "id": 45878745,
-            "name": "Abnormal"
+            "name": "Abnormal",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA12748-2"
           }
         }
       ]

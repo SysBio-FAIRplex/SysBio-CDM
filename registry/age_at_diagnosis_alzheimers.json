@@ -55,9 +55,11 @@
       "table": "condition_occurrence",
       "defining_concept_id": {
         "id": 378419,
-        "name": "Alzheimer's disease",
+        "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
         "domain": "Condition",
-        "target_field": "observation_concept_id"
+        "target_field": "observation_concept_id",
+        "vocabulary_id": "SNOMED",
+        "concept_code": "26929004"
       },
       "anchored_to": {
         "person_id": "staging.person_map",
@@ -79,7 +81,9 @@
         "id": 40766652,
         "name": "Age at diagnosis",
         "domain": "Observation",
-        "target_field": "observation_concept_id"
+        "target_field": "observation_concept_id",
+        "vocabulary_id": "LOINC",
+        "concept_code": "63932-8"
       },
       "anchored_to": {
         "person_id": "staging.person_map"

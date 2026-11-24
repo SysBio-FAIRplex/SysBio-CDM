@@ -141,7 +141,9 @@
         "id": 35811099,
         "name": "Amount of alcohol drunk on a typical drinking day",
         "domain": "Observation",
-        "target_field": "observation_concept_id"
+        "target_field": "observation_concept_id",
+        "vocabulary_id": "UK Biobank",
+        "concept_code": "20403"
       },
       "anchored_to": {
         "person_id": "staging.person_map",
@@ -162,7 +164,9 @@
           "harmonized_value": "3-4",
           "value_as_concept_id": {
             "id": 45883428,
-            "name": "3 or 4"
+            "name": "3 or 4",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA15695-2"
           },
           "value_as_string": "3-4"
         },
@@ -170,7 +174,9 @@
           "harmonized_value": "5-6",
           "value_as_concept_id": {
             "id": 45877926,
-            "name": "5 or 6"
+            "name": "5 or 6",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA18930-0"
           },
           "value_as_string": "5-6"
         },
@@ -178,7 +184,9 @@
           "harmonized_value": "1-2",
           "value_as_concept_id": {
             "id": 45882591,
-            "name": "1 or 2"
+            "name": "1 or 2",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA15694-5"
           },
           "value_as_string": "1-2"
         },
@@ -186,7 +194,9 @@
           "harmonized_value": "unknown",
           "value_as_concept_id": {
             "id": 45877986,
-            "name": "Unknown"
+            "name": "Unknown",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA4489-6"
           }
         }
       ]

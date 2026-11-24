@@ -93,9 +93,11 @@
       "table": "observation",
       "defining_concept_id": {
         "id": 4113167,
-        "name": "Difficulty showering self",
+        "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
         "domain": "Observation",
-        "target_field": "observation_concept_id"
+        "target_field": "observation_concept_id",
+        "vocabulary_id": "SNOMED",
+        "concept_code": "284796001"
       },
       "anchored_to": {
         "person_id": "staging.person_map",
@@ -109,7 +111,9 @@
           "value_as_number": 0,
           "value_as_concept_id": {
             "id": 35821333,
-            "name": "Never"
+            "name": "Never",
+            "vocabulary_id": "UK Biobank",
+            "concept_code": "523-1"
           },
           "value_as_string": "never"
         },
@@ -118,7 +122,9 @@
           "value_as_number": 1,
           "value_as_concept_id": {
             "id": 45879593,
-            "name": "Occasionally"
+            "name": "Occasionally",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA6483-7"
           },
           "value_as_string": "occasionally"
         },
@@ -127,7 +133,9 @@
           "value_as_number": 2,
           "value_as_concept_id": {
             "id": 45882528,
-            "name": "Sometimes"
+            "name": "Sometimes",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA10082-8"
           },
           "value_as_string": "sometimes"
         },
@@ -136,7 +144,9 @@
           "value_as_number": 3,
           "value_as_concept_id": {
             "id": 45884455,
-            "name": "Often"
+            "name": "Often",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA10044-8"
           },
           "value_as_string": "often"
         },
@@ -145,7 +155,9 @@
           "value_as_number": 4,
           "value_as_concept_id": {
             "id": 45882536,
-            "name": "Always"
+            "name": "Always",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA9933-8"
           },
           "value_as_string": "always or cannot do at all"
         }

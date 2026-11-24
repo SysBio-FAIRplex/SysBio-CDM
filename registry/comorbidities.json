@@ -306,9 +306,11 @@
       "table": "observation",
       "defining_concept_id": {
         "id": 4160039,
-        "name": "Co-morbid conditions",
+        "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
         "domain": "Observation",
-        "target_field": "observation_concept_id"
+        "target_field": "observation_concept_id",
+        "vocabulary_id": "SNOMED",
+        "concept_code": "398192003"
       },
       "anchored_to": {
         "person_id": "staging.person_map"
@@ -320,7 +322,9 @@
           "harmonized_value": "psoriatic arthritis",
           "value_as_concept_id": {
             "id": 40319772,
-            "name": "Psoriatic arthritis"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "156370009"
           },
           "value_as_string": "psoriatic arthritis"
         },
@@ -328,7 +332,9 @@
           "harmonized_value": "hashimotos thyroiditis",
           "value_as_concept_id": {
             "id": 135215,
-            "name": "Hashimoto thyroiditis"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "21983002"
           },
           "value_as_string": "hashimotos thyroiditis"
         },
@@ -336,7 +342,9 @@
           "harmonized_value": "psoriasis",
           "value_as_concept_id": {
             "id": 140168,
-            "name": "Psoriasis"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "9014002"
           },
           "value_as_string": "psoriasis"
         },
@@ -344,7 +352,9 @@
           "harmonized_value": "rheumatoid arthritis",
           "value_as_concept_id": {
             "id": 80809,
-            "name": "Rheumatoid arthritis"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "69896004"
           },
           "value_as_string": "rheumatoid arthritis"
         },
@@ -352,7 +362,9 @@
           "harmonized_value": "diabetes",
           "value_as_concept_id": {
             "id": 201820,
-            "name": "Diabetes mellitus"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "73211009"
           },
           "value_as_string": "diabetes"
         },
@@ -360,7 +372,9 @@
           "harmonized_value": "inflammatory bowel disease",
           "value_as_concept_id": {
             "id": 4074815,
-            "name": "Inflammatory bowel disease"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "24526004"
           },
           "value_as_string": "inflammatory bowel disease"
         },
@@ -368,7 +382,9 @@
           "harmonized_value": "other",
           "value_as_concept_id": {
             "id": 45878142,
-            "name": "Other"
+            "name": "Other",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA46-8"
           },
           "value_as_string": "other"
         },
@@ -376,7 +392,9 @@
           "harmonized_value": "cardiovascular disease",
           "value_as_concept_id": {
             "id": 134057,
-            "name": "Disorder of cardiovascular system"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "49601007"
           },
           "value_as_string": "cardiovascular disease"
         },
@@ -384,7 +402,9 @@
           "harmonized_value": "autoimmune thyroid disease",
           "value_as_concept_id": {
             "id": 4281109,
-            "name": "Autoimmune thyroiditis"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "66944004"
           },
           "value_as_string": "autoimmune thyroid disease"
         },
@@ -392,7 +412,9 @@
           "harmonized_value": "multiple sclerosis",
           "value_as_concept_id": {
             "id": 374919,
-            "name": "Multiple sclerosis"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "24700007"
           },
           "value_as_string": "multiple sclerosis"
         },
@@ -400,7 +422,9 @@
           "harmonized_value": "pulmonary disease",
           "value_as_concept_id": {
             "id": 257907,
-            "name": "Disorder of lung"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "19829001"
           },
           "value_as_string": "pulmonary disease"
         }

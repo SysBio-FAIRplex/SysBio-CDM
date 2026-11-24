@@ -61,7 +61,9 @@
         "id": 40766593,
         "name": "At the present time, how many hours per day are you exposed to the smoke of others [PhenX]",
         "domain": "Observation",
-        "target_field": "observation_concept_id"
+        "target_field": "observation_concept_id",
+        "vocabulary_id": "LOINC",
+        "concept_code": "63872-6"
       },
       "anchored_to": {
         "person_id": "staging.person_map",

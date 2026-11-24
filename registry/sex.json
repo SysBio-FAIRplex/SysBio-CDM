@@ -965,7 +965,9 @@
         "id": 3046965,
         "name": "Sex",
         "domain": "Observation",
-        "target_field": "observation_concept_id"
+        "target_field": "observation_concept_id",
+        "vocabulary_id": "LOINC",
+        "concept_code": "46098-0"
       },
       "anchored_to": {
         "person_id": "staging.person_map"
@@ -977,7 +979,9 @@
           "harmonized_value": "Male",
           "value_as_concept_id": {
             "id": 8507,
-            "name": "MALE"
+            "name": "MALE",
+            "vocabulary_id": "Gender",
+            "concept_code": "M"
           },
           "value_as_string": "Male"
         },
@@ -985,7 +989,9 @@
           "harmonized_value": "Female",
           "value_as_concept_id": {
             "id": 8532,
-            "name": "FEMALE"
+            "name": "FEMALE",
+            "vocabulary_id": "Gender",
+            "concept_code": "F"
           },
           "value_as_string": "Female"
         },
@@ -993,7 +999,9 @@
           "harmonized_value": "Unknown",
           "value_as_concept_id": {
             "id": 45877986,
-            "name": "Unknown"
+            "name": "Unknown",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA4489-6"
           },
           "value_as_string": "Unknown"
         }

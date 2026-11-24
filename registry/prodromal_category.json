@@ -77,9 +77,11 @@
       "table": "observation",
       "defining_concept_id": {
         "id": 4222638,
-        "name": "Prodrome",
+        "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
         "domain": "Observation",
-        "target_field": "observation_concept_id"
+        "target_field": "observation_concept_id",
+        "vocabulary_id": "SNOMED",
+        "concept_code": "83931009"
       },
       "anchored_to": {
         "person_id": "staging.person_map"
@@ -92,11 +94,15 @@
           "value_as_string": "hyposmia",
           "value_as_concept_id": {
             "id": 4307095,
-            "name": "Sense of smell impaired"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "83156004"
           },
           "qualifier_concept_id": {
             "id": 381270,
-            "name": "Parkinson's disease"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "49049000"
           }
         },
         {
@@ -104,17 +110,23 @@
           "value_as_string": "rapid eye movement sleep behavior disorder",
           "value_as_concept_id": {
             "id": 439007,
-            "name": "REM sleep behavior disorder"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "415238003"
           },
           "qualifier_concept_id": {
             "id": 381270,
-            "name": "Parkinson's disease"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "49049000"
           }
         }
       ],
       "qualifier_concept_id": {
         "id": 4123534,
-        "name": "Prodromal phase"
+        "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+        "vocabulary_id": "SNOMED",
+        "concept_code": "288480009"
       },
       "note": ""
     }

@@ -59,7 +59,9 @@
         "id": 40766591,
         "name": "For how many hours per day were you exposed to smoke from other peoples cigarettes or tobacco products during this time at this location [PhenX]",
         "domain": "Observation",
-        "target_field": "observation_concept_id"
+        "target_field": "observation_concept_id",
+        "vocabulary_id": "LOINC",
+        "concept_code": "63870-0"
       },
       "anchored_to": {
         "person_id": "staging.person_map",

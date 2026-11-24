@@ -117,7 +117,9 @@
         "id": 35810373,
         "name": "Number of cigarettes currently smoked daily (current cigarette smokers)",
         "domain": "Observation",
-        "target_field": "observation_concept_id"
+        "target_field": "observation_concept_id",
+        "vocabulary_id": "UK Biobank",
+        "concept_code": "3456"
       },
       "anchored_to": {
         "person_id": "staging.person_map",
@@ -130,7 +132,9 @@
           "harmonized_value": "unknown",
           "value_as_concept_id": {
             "id": 45877986,
-            "name": "Unknown"
+            "name": "Unknown",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA4489-6"
           },
           "value_as_string": "unknown"
         },
@@ -139,7 +143,9 @@
           "value_as_string": "0.5 pack or less",
           "value_as_concept_id": {
             "id": 45883728,
-            "name": "6 to 15 cigarettes per day (about 1/2 pack)"
+            "name": "6 to 15 cigarettes per day (about 1/2 pack)",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA15785-1"
           }
         },
         {
@@ -147,7 +153,9 @@
           "value_as_string": "1 pack",
           "value_as_concept_id": {
             "id": 45876409,
-            "name": "16 to 25 cigarettes per day (about 1 pack)"
+            "name": "16 to 25 cigarettes per day (about 1 pack)",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA15786-9"
           }
         },
         {
@@ -155,7 +163,9 @@
           "value_as_string": "0.5 pack",
           "value_as_concept_id": {
             "id": 45883728,
-            "name": "6 to 15 cigarettes per day (about 1/2 pack)"
+            "name": "6 to 15 cigarettes per day (about 1/2 pack)",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA15785-1"
           }
         },
         {
@@ -163,7 +173,9 @@
           "value_as_string": "2 or more packs",
           "value_as_concept_id": {
             "id": 45883456,
-            "name": "More than 35 cigarettes per day (about 2 packs or more)"
+            "name": "More than 35 cigarettes per day (about 2 packs or more)",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA15788-5"
           }
         },
         {
@@ -171,7 +183,9 @@
           "value_as_string": "1.5 pack",
           "value_as_concept_id": {
             "id": 45876770,
-            "name": "26 to 35 cigarettes per day (about 1 1/2 packs)"
+            "name": "26 to 35 cigarettes per day (about 1 1/2 packs)",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA15787-7"
           }
         }
       ]

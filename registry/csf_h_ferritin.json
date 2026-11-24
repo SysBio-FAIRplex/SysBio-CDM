@@ -71,9 +71,11 @@
       "table": "measurement",
       "defining_concept_id": {
         "id": 4176561,
-        "name": "Ferritin measurement",
+        "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
         "domain": "Measurement",
-        "target_field": "measurement_concept_id"
+        "target_field": "measurement_concept_id",
+        "vocabulary_id": "SNOMED",
+        "concept_code": "489004"
       },
       "anchored_to": {
         "person_id": "staging.person_map",
@@ -87,7 +89,9 @@
           "value_as_number": "<value>",
           "unit_concept_id": {
             "id": 8842,
-            "name": "nanogram per milliliter"
+            "name": "nanogram per milliliter",
+            "vocabulary_id": "UCUM",
+            "concept_code": "ng/mL"
           },
           "value_as_concept_id": null,
           "value_as_string": null,

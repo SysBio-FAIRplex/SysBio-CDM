@@ -9,6 +9,16 @@ ETL that loads them.
 This repository holds code and specifications only. It contains no participant or sample
 data, no identifiers and no data file names. Pinned source files are referenced by sha256.
 
+## Concept names
+
+Every OMOP concept a specification cites is given by `concept_id`, `vocabulary_id` and
+`concept_code`. Concept names from SNOMED CT (and its extensions) and from other vocabularies
+whose licence does not permit redistribution are not reproduced here: in their place stands
+`[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]` or
+`[LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]`. Resolve them through your own licensed copy of
+the OMOP vocabularies (Athena). Names from vocabularies that permit redistribution, such as LOINC,
+are kept.
+
 ## Layout
 
 - `docs/harmonized-element-2.7-TEMPLATE.json` — the mapping specification schema: one annotated

@@ -137,9 +137,11 @@
       "table": "observation",
       "defining_concept_id": {
         "id": 44803445,
-        "name": "Method",
+        "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
         "domain": "Observation",
-        "target_field": "observation_concept_id"
+        "target_field": "observation_concept_id",
+        "vocabulary_id": "SNOMED",
+        "concept_code": "721251000000107"
       },
       "anchored_to": {
         "person_id": "staging.person_map"
@@ -151,7 +153,9 @@
           "harmonized_value": "magnetic resonance imaging",
           "value_as_concept_id": {
             "id": 4013636,
-            "name": "Magnetic resonance imaging"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "113091000"
           },
           "value_as_string": "magnetic resonance imaging"
         },
@@ -175,7 +179,9 @@
           "harmonized_value": "questionnaire",
           "value_as_concept_id": {
             "id": 44804112,
-            "name": "Questionnaire"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "719091000000102"
           },
           "value_as_string": "questionnaire"
         },
@@ -183,7 +189,9 @@
           "harmonized_value": "rna",
           "value_as_concept_id": {
             "id": 1073466,
-            "name": "Nucleic acid sequencing technique"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "1304162005"
           },
           "value_as_string": "rna",
           "note": ""
@@ -192,7 +200,9 @@
           "harmonized_value": "atac",
           "value_as_concept_id": {
             "id": 1073466,
-            "name": "Nucleic acid sequencing technique"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "1304162005"
           },
           "value_as_string": "atac",
           "note": ""

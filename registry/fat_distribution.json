@@ -175,9 +175,11 @@
       "table": "observation",
       "defining_concept_id": {
         "id": 4093857,
-        "name": "Distribution of body fat",
+        "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
         "domain": "Observation",
-        "target_field": "observation_concept_id"
+        "target_field": "observation_concept_id",
+        "vocabulary_id": "SNOMED",
+        "concept_code": "248303006"
       },
       "anchored_to": {
         "person_id": "staging.person_map"
@@ -194,7 +196,9 @@
           "value_as_string": "peripheral",
           "value_as_concept_id": {
             "id": 21498362,
-            "name": "Peripheral"
+            "name": "Peripheral",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA24844-5"
           }
         },
         {
@@ -202,14 +206,18 @@
           "value_as_string": "generalized",
           "value_as_concept_id": {
             "id": 45881091,
-            "name": "Generalized"
+            "name": "Generalized",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA18721-3"
           }
         },
         {
           "harmonized_value": "normal",
           "value_as_concept_id": {
             "id": 45884153,
-            "name": "Normal"
+            "name": "Normal",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA6626-1"
           },
           "value_as_string": "normal"
         }

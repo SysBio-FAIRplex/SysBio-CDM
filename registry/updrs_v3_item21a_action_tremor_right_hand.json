@@ -60,7 +60,8 @@
         "name": "Postural tremor Upper extremity - right [UPDRS]",
         "domain": "Measurement",
         "target_field": "measurement_concept_id",
-        "vocabulary_id": "LOINC"
+        "vocabulary_id": "LOINC",
+        "concept_code": "66036-5"
       },
       "anchored_to": {
         "person_id": "staging.person_map",

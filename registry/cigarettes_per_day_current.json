@@ -59,7 +59,9 @@
         "id": 35810373,
         "name": "Number of cigarettes currently smoked daily (current cigarette smokers)",
         "domain": "Observation",
-        "target_field": "observation_concept_id"
+        "target_field": "observation_concept_id",
+        "vocabulary_id": "UK Biobank",
+        "concept_code": "3456"
       },
       "anchored_to": {
         "person_id": "staging.person_map",

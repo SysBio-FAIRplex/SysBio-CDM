@@ -116,7 +116,9 @@
         "id": 596879,
         "name": "Please specify tissue.",
         "domain": "Observation",
-        "target_field": "observation_concept_id"
+        "target_field": "observation_concept_id",
+        "vocabulary_id": "PPI",
+        "concept_code": "othertissue_freetextbox"
       },
       "anchored_to": {
         "person_id": "staging.person_map",
@@ -156,7 +158,9 @@
           "harmonized_value": "other",
           "value_as_concept_id": {
             "id": 45878142,
-            "name": "Other"
+            "name": "Other",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA46-8"
           },
           "value_as_string": "other"
         }

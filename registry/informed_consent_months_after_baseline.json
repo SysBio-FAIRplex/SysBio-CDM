@@ -59,7 +59,9 @@
         "id": 3018196,
         "name": "Informed consent obtained",
         "domain": "Observation",
-        "target_field": "observation_concept_id"
+        "target_field": "observation_concept_id",
+        "vocabulary_id": "LOINC",
+        "concept_code": "19826-7"
       },
       "anchored_to": {
         "person_id": "staging.person_map"

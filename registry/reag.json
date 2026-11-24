@@ -110,9 +110,11 @@
       "table": "observation",
       "defining_concept_id": {
         "id": 3187945,
-        "name": "Neuropathology observable entity",
+        "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
         "domain": "Observation",
-        "target_field": "observation_concept_id"
+        "target_field": "observation_concept_id",
+        "vocabulary_id": "Nebraska Lexicon",
+        "concept_code": "860301000004107"
       },
       "anchored_to": {
         "person_id": "staging.person_map"
@@ -125,7 +127,9 @@
           "value_as_number": 3,
           "value_as_concept_id": {
             "id": 764221,
-            "name": "Highly probable"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "452191000124100"
           }
         },
         {
@@ -133,7 +137,9 @@
           "value_as_number": 2,
           "value_as_concept_id": {
             "id": 764220,
-            "name": "Moderately probable"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "452181000124103"
           }
         },
         {
@@ -141,25 +147,33 @@
           "value_as_number": 1,
           "value_as_concept_id": {
             "id": 764219,
-            "name": "Slightly probable"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "452171000124101"
           }
         },
         {
           "harmonized_value": "no alzheimers disease",
           "value_as_concept_id": {
             "id": 45884153,
-            "name": "Normal"
+            "name": "Normal",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA6626-1"
           },
           "qualifier_concept_id": {
             "id": 44804027,
-            "name": "Control group"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "718601000000106"
           }
         },
         {
           "harmonized_value": "missing or unknown",
           "value_as_concept_id": {
             "id": 45877986,
-            "name": "Unknown"
+            "name": "Unknown",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA4489-6"
           },
           "value_as_string": "missing or unknown"
         }

@@ -57,9 +57,11 @@
       "table": "observation",
       "defining_concept_id": {
         "id": 4093835,
-        "name": "Mental alertness",
+        "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
         "domain": "Observation",
-        "target_field": "observation_concept_id"
+        "target_field": "observation_concept_id",
+        "vocabulary_id": "SNOMED",
+        "concept_code": "248233002"
       },
       "anchored_to": {
         "person_id": "staging.person_map",

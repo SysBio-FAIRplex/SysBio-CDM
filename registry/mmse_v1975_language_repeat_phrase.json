@@ -27,7 +27,9 @@
       "linking_mechanism": "OBSERVATION.observation_event_id",
       "linking_mechanism_concept_id": {
         "id": 1147165,
-        "name": "observation.observation_id"
+        "name": "observation.observation_id",
+        "vocabulary_id": "CDM",
+        "concept_code": "CDM221"
       },
       "note": ""
     }
@@ -70,9 +72,11 @@
       "table": "observation",
       "defining_concept_id": {
         "id": 4247506,
-        "name": "Repetition of phrases",
+        "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
         "domain": "Condition",
-        "target_field": "observation_concept_id"
+        "target_field": "observation_concept_id",
+        "vocabulary_id": "SNOMED",
+        "concept_code": "40628008"
       },
       "anchored_to": {
         "person_id": "staging.person_map",

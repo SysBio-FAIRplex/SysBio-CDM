@@ -59,7 +59,9 @@
         "id": 37020654,
         "name": "Age when stopped smoking cigarettes completely",
         "domain": "Observation",
-        "target_field": "observation_concept_id"
+        "target_field": "observation_concept_id",
+        "vocabulary_id": "LOINC",
+        "concept_code": "92659-2"
       },
       "anchored_to": {
         "person_id": "staging.person_map"

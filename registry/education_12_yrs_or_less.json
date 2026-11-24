@@ -77,7 +77,9 @@
         "id": 42528764,
         "name": "Years of education [#] - Reported",
         "domain": "Observation",
-        "target_field": "observation_concept_id"
+        "target_field": "observation_concept_id",
+        "vocabulary_id": "LOINC",
+        "concept_code": "82590-1"
       },
       "anchored_to": {
         "person_id": "staging.person_map",
@@ -91,11 +93,15 @@
           "value_as_number": 12,
           "qualifier_concept_id": {
             "id": 4172704,
-            "name": ">"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": ">"
           },
           "value_as_concept_id": {
             "id": 37079441,
-            "name": "More than high school"
+            "name": "More than high school",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA30193-9"
           }
         },
         {
@@ -103,11 +109,15 @@
           "value_as_number": 12,
           "qualifier_concept_id": {
             "id": 4171754,
-            "name": "<="
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "276137008"
           },
           "value_as_concept_id": {
             "id": 45876261,
-            "name": "High school"
+            "name": "High school",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA38-5"
           }
         }
       ]

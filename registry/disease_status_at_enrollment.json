@@ -688,7 +688,9 @@
         "id": 1989567,
         "name": "Condition clinical status",
         "domain": "Observation",
-        "target_field": "observation_concept_id"
+        "target_field": "observation_concept_id",
+        "vocabulary_id": "LOINC",
+        "concept_code": "99493-9"
       },
       "anchored_to": {
         "person_id": "staging.person_map"
@@ -701,7 +703,9 @@
           "value_as_string": "acute kidney injury",
           "value_as_concept_id": {
             "id": 197320,
-            "name": "Acute kidney injury"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "14669001"
           }
         },
         {
@@ -709,7 +713,9 @@
           "value_as_string": "chronic kidney disease",
           "value_as_concept_id": {
             "id": 46271022,
-            "name": "Chronic kidney disease"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "709044004"
           }
         },
         {
@@ -717,7 +723,9 @@
           "value_as_string": "control",
           "value_as_concept_id": {
             "id": 45884153,
-            "name": "Normal"
+            "name": "Normal",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA6626-1"
           }
         },
         {
@@ -725,7 +733,9 @@
           "value_as_string": "corticobasal degeneration",
           "value_as_concept_id": {
             "id": 4077904,
-            "name": "Corticobasal degeneration"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "18842008"
           }
         },
         {
@@ -733,7 +743,9 @@
           "value_as_string": "dementia with lewy bodies",
           "value_as_concept_id": {
             "id": 4182210,
-            "name": "Dementia"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "52448006"
           }
         },
         {
@@ -741,7 +753,9 @@
           "value_as_string": "diabetic kidney disease",
           "value_as_concept_id": {
             "id": 45883355,
-            "name": "Diabetic Kidney Disease"
+            "name": "Diabetic Kidney Disease",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA10570-2"
           }
         },
         {
@@ -753,7 +767,9 @@
           "value_as_string": "fahrs syndrome",
           "value_as_concept_id": {
             "id": 4006783,
-            "name": "Fahr's syndrome"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "110997000"
           }
         },
         {
@@ -761,7 +777,9 @@
           "value_as_string": "focal segmental glomerulosclerosis",
           "value_as_concept_id": {
             "id": 4030513,
-            "name": "Focal segmental glomerulosclerosis"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "236403004"
           }
         },
         {
@@ -769,7 +787,9 @@
           "value_as_string": "hypertensive chronic kidney disease",
           "value_as_concept_id": {
             "id": 201313,
-            "name": "Hypertensive renal disease"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "38481006"
           }
         },
         {
@@ -781,7 +801,9 @@
           "value_as_string": "metabolic dysfunction-associated steatohepatitis",
           "value_as_concept_id": {
             "id": 40484532,
-            "name": "Nonalcoholic steatohepatitis"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "442685003"
           }
         },
         {
@@ -789,7 +811,9 @@
           "value_as_string": "metabolic dysfunction-associated steatotic liver",
           "value_as_concept_id": {
             "id": 4026131,
-            "name": "Non-alcoholic fatty liver"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "197315008"
           }
         },
         {
@@ -801,7 +825,9 @@
           "value_as_string": "multiple system atrophy",
           "value_as_concept_id": {
             "id": 4044053,
-            "name": "Multiple system atrophy"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "230297002"
           }
         },
         {
@@ -817,7 +843,9 @@
           "value_as_string": "olivopontocerebellar atrophy",
           "value_as_concept_id": {
             "id": 4283390,
-            "name": "Olivopontocerebellar degeneration"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "67761004"
           }
         },
         {
@@ -825,7 +853,9 @@
           "value_as_string": "other",
           "value_as_concept_id": {
             "id": 45878142,
-            "name": "Other"
+            "name": "Other",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA46-8"
           }
         },
         {
@@ -833,7 +863,9 @@
           "value_as_string": "parkinsonism",
           "value_as_concept_id": {
             "id": 4140090,
-            "name": "Parkinsonism"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "32798002"
           }
         },
         {
@@ -841,7 +873,9 @@
           "value_as_string": "parkinsons disease",
           "value_as_concept_id": {
             "id": 381270,
-            "name": "Parkinson's disease"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "49049000"
           }
         },
         {
@@ -849,7 +883,9 @@
           "value_as_string": "progressive supranuclear palsy",
           "value_as_concept_id": {
             "id": 40391011,
-            "name": "Progressive supranuclear palsy"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "192976002"
           }
         },
         {

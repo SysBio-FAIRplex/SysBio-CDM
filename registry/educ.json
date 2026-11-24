@@ -89,7 +89,9 @@
         "id": 42528764,
         "name": "Years of education [#] - Reported",
         "domain": "Observation",
-        "target_field": "observation_concept_id"
+        "target_field": "observation_concept_id",
+        "vocabulary_id": "LOINC",
+        "concept_code": "82590-1"
       },
       "anchored_to": {
         "person_id": "staging.person_map"

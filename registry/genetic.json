@@ -84,9 +84,11 @@
       "table": "observation",
       "defining_concept_id": {
         "id": 4237017,
-        "name": "Genetic test",
+        "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
         "domain": "Observation",
-        "target_field": "observation_concept_id"
+        "target_field": "observation_concept_id",
+        "vocabulary_id": "SNOMED",
+        "concept_code": "405824009"
       },
       "anchored_to": {
         "person_id": "staging.person_map",
@@ -107,7 +109,9 @@
           "harmonized_value": "Other",
           "value_as_concept_id": {
             "id": 45878142,
-            "name": "Other"
+            "name": "Other",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA46-8"
           },
           "value_as_string": "Other"
         },
@@ -115,7 +119,9 @@
           "harmonized_value": "NA",
           "value_as_concept_id": {
             "id": 35941270,
-            "name": "NA"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "444@88"
           },
           "value_as_string": "NA"
         }

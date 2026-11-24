@@ -3156,7 +3156,9 @@
           "harmonized_value": "kidney",
           "value_as_concept_id": {
             "id": 4271678,
-            "name": "Kidney structure"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "64033007"
           },
           "value_as_string": "kidney"
         },
@@ -3164,7 +3166,9 @@
           "harmonized_value": "right lobe of liver",
           "value_as_concept_id": {
             "id": 4168794,
-            "name": "Structure of right lobe of liver"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "48521005"
           },
           "value_as_string": "right lobe of liver"
         },
@@ -3172,7 +3176,9 @@
           "harmonized_value": "omental fat pad",
           "value_as_concept_id": {
             "id": 4149520,
-            "name": "Greater omentum structure"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "35366003"
           },
           "value_as_string": "omental fat pad"
         },
@@ -3180,7 +3186,9 @@
           "harmonized_value": "heart left ventricle",
           "value_as_concept_id": {
             "id": 4339094,
-            "name": "Left cardiac ventricular structure"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "87878005"
           },
           "value_as_string": "heart left ventricle"
         }

@@ -125,9 +125,11 @@
       "table": "observation",
       "defining_concept_id": {
         "id": 4234469,
-        "name": "Diagnosis",
+        "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
         "domain": "Observation",
-        "target_field": "observation_concept_id"
+        "target_field": "observation_concept_id",
+        "vocabulary_id": "SNOMED",
+        "concept_code": "439401001"
       },
       "anchored_to": {
         "person_id": "staging.person_map"
@@ -140,11 +142,15 @@
           "value_as_string": "parkinsons disease",
           "value_as_concept_id": {
             "id": 381270,
-            "name": "Parkinson's disease"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "49049000"
           },
           "qualifier_concept_id": {
             "id": 1989833,
-            "name": "Admitting diagnosis"
+            "name": "Admitting diagnosis",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA32792-6"
           },
           "note": ""
         },
@@ -153,11 +159,15 @@
           "value_as_string": "parkinsonism",
           "value_as_concept_id": {
             "id": 4140090,
-            "name": "Parkinsonism"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "32798002"
           },
           "qualifier_concept_id": {
             "id": 1989833,
-            "name": "Admitting diagnosis"
+            "name": "Admitting diagnosis",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA32792-6"
           },
           "note": ""
         },
@@ -166,11 +176,15 @@
           "value_as_string": "multiple system atrophy",
           "value_as_concept_id": {
             "id": 4044053,
-            "name": "Multiple system atrophy"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "230297002"
           },
           "qualifier_concept_id": {
             "id": 1989833,
-            "name": "Admitting diagnosis"
+            "name": "Admitting diagnosis",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA32792-6"
           },
           "note": ""
         },
@@ -179,11 +193,15 @@
           "value_as_string": "progressive supranuclear palsy",
           "value_as_concept_id": {
             "id": 40391011,
-            "name": "Progressive supranuclear palsy"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "192976002"
           },
           "qualifier_concept_id": {
             "id": 1989833,
-            "name": "Admitting diagnosis"
+            "name": "Admitting diagnosis",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA32792-6"
           },
           "note": ""
         },
@@ -192,11 +210,15 @@
           "value_as_string": "dementia with lewy bodies",
           "value_as_concept_id": {
             "id": 4182210,
-            "name": "Dementia"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "52448006"
           },
           "qualifier_concept_id": {
             "id": 380701,
-            "name": "Diffuse Lewy body disease"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "80098002"
           },
           "note": ""
         },
@@ -205,11 +227,15 @@
           "value_as_string": "corticobasal degeneration",
           "value_as_concept_id": {
             "id": 4077904,
-            "name": "Corticobasal degeneration"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "18842008"
           },
           "qualifier_concept_id": {
             "id": 1989833,
-            "name": "Admitting diagnosis"
+            "name": "Admitting diagnosis",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA32792-6"
           },
           "note": ""
         },
@@ -218,11 +244,15 @@
           "value_as_string": "olivopontocerebellar atrophy",
           "value_as_concept_id": {
             "id": 4283390,
-            "name": "Olivopontocerebellar degeneration"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "67761004"
           },
           "qualifier_concept_id": {
             "id": 1989833,
-            "name": "Admitting diagnosis"
+            "name": "Admitting diagnosis",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA32792-6"
           },
           "note": ""
         },
@@ -231,11 +261,15 @@
           "value_as_string": "fahrs syndrome",
           "value_as_concept_id": {
             "id": 4006783,
-            "name": "Fahr's syndrome"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "110997000"
           },
           "qualifier_concept_id": {
             "id": 1989833,
-            "name": "Admitting diagnosis"
+            "name": "Admitting diagnosis",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA32792-6"
           },
           "note": ""
         },
@@ -244,11 +278,15 @@
           "value_as_string": "no parkinsons disease nor other neurological disorder",
           "value_as_concept_id": {
             "id": 45884153,
-            "name": "Normal"
+            "name": "Normal",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA6626-1"
           },
           "qualifier_concept_id": {
             "id": 44804027,
-            "name": "Control group"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "718601000000106"
           },
           "note": ""
         }

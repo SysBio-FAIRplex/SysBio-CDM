@@ -27,7 +27,9 @@
       "linking_mechanism": "OBSERVATION.observation_event_id",
       "linking_mechanism_concept_id": {
         "id": 1147138,
-        "name": "measurement.measurement_id"
+        "name": "measurement.measurement_id",
+        "vocabulary_id": "CDM",
+        "concept_code": "CDM194"
       },
       "note": ""
     }
@@ -121,7 +123,9 @@
         "id": 40768499,
         "name": "Body bradykinesia - hypokinesia [UPDRS]",
         "domain": "Observation",
-        "target_field": "observation_concept_id"
+        "target_field": "observation_concept_id",
+        "vocabulary_id": "LOINC",
+        "concept_code": "65811-2"
       },
       "anchored_to": {
         "person_id": "staging.person_map",
@@ -142,7 +146,9 @@
           "value_as_number": "<value>",
           "qualifier_concept_id": {
             "id": 1094239,
-            "name": "Was on medication"
+            "name": "Was on medication",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA34443-4"
           }
         },
         {
@@ -150,12 +156,16 @@
           "value_as_number": 0,
           "value_as_concept_id": {
             "id": 45884153,
-            "name": "Normal"
+            "name": "Normal",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA6626-1"
           },
           "value_as_string": "normal",
           "qualifier_concept_id": {
             "id": 1094239,
-            "name": "Was on medication"
+            "name": "Was on medication",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA34443-4"
           }
         },
         {
@@ -163,12 +173,16 @@
           "value_as_number": 1,
           "value_as_concept_id": {
             "id": 45880586,
-            "name": "Slight"
+            "name": "Slight",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA11910-9"
           },
           "value_as_string": "slight",
           "qualifier_concept_id": {
             "id": 1094239,
-            "name": "Was on medication"
+            "name": "Was on medication",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA34443-4"
           }
         },
         {
@@ -176,12 +190,16 @@
           "value_as_number": 2,
           "value_as_concept_id": {
             "id": 45883535,
-            "name": "Mild"
+            "name": "Mild",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA6752-5"
           },
           "value_as_string": "mild",
           "qualifier_concept_id": {
             "id": 1094239,
-            "name": "Was on medication"
+            "name": "Was on medication",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA34443-4"
           }
         },
         {
@@ -189,12 +207,16 @@
           "value_as_number": 3,
           "value_as_concept_id": {
             "id": 45877983,
-            "name": "Moderate"
+            "name": "Moderate",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA6751-7"
           },
           "value_as_string": "moderate",
           "qualifier_concept_id": {
             "id": 1094239,
-            "name": "Was on medication"
+            "name": "Was on medication",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA34443-4"
           }
         },
         {
@@ -202,12 +224,16 @@
           "value_as_number": 4,
           "value_as_concept_id": {
             "id": 45883536,
-            "name": "Severe"
+            "name": "Severe",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA6750-9"
           },
           "value_as_string": "severe",
           "qualifier_concept_id": {
             "id": 1094239,
-            "name": "Was on medication"
+            "name": "Was on medication",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA34443-4"
           }
         }
       ]

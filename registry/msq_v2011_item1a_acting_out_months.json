@@ -56,9 +56,11 @@
       "table": "observation",
       "defining_concept_id": {
         "id": 439007,
-        "name": "REM sleep behavior disorder",
+        "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
         "domain": "Condition",
-        "target_field": "observation_concept_id"
+        "target_field": "observation_concept_id",
+        "vocabulary_id": "SNOMED",
+        "concept_code": "415238003"
       },
       "anchored_to": {
         "person_id": "staging.person_map",

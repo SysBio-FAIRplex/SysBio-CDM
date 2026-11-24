@@ -79,7 +79,9 @@
         "id": 1988354,
         "name": "Diagnosis type",
         "domain": "Observation",
-        "target_field": "observation_concept_id"
+        "target_field": "observation_concept_id",
+        "vocabulary_id": "LOINC",
+        "concept_code": "99494-7"
       },
       "anchored_to": {
         "person_id": "staging.person_map"
@@ -99,7 +101,9 @@
           "harmonized_value": "unknown",
           "value_as_concept_id": {
             "id": 45877986,
-            "name": "Unknown"
+            "name": "Unknown",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA4489-6"
           },
           "value_as_string": "unknown"
         }

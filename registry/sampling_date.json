@@ -63,7 +63,9 @@
         "id": 3045429,
         "name": "Collection date of Specimen",
         "domain": "Observation",
-        "target_field": "observation_concept_id"
+        "target_field": "observation_concept_id",
+        "vocabulary_id": "LOINC",
+        "concept_code": "33882-2"
       },
       "anchored_to": {
         "person_id": "staging.person_map",

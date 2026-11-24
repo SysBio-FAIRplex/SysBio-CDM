@@ -847,7 +847,8 @@
         "name": "Ambulatory Research Clinic / Center",
         "domain": "Visit",
         "target_field": "visit_concept_id",
-        "vocabulary_id": "Visit"
+        "vocabulary_id": "Visit",
+        "concept_code": "261QR1100X"
       },
       "anchored_to": {
         "person_id": "staging.person_map"

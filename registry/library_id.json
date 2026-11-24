@@ -156,7 +156,8 @@
         "name": "Unique identifier for Current sample",
         "domain": "Measurement",
         "target_field": "measurement_concept_id",
-        "vocabulary_id": "LOINC"
+        "vocabulary_id": "LOINC",
+        "concept_code": "80398-1"
       },
       "anchored_to": {
         "person_id": "staging.person_map",

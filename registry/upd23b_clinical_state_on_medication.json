@@ -72,7 +72,9 @@
         "id": 1094256,
         "name": "Was not on medication",
         "domain": "Meas Value",
-        "target_field": "observation_concept_id"
+        "target_field": "observation_concept_id",
+        "vocabulary_id": "LOINC",
+        "concept_code": "LA34444-2"
       },
       "anchored_to": {
         "person_id": "staging.person_map",
@@ -85,7 +87,9 @@
           "harmonized_value": "Off",
           "value_as_concept_id": {
             "id": 4135944,
-            "name": "True"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "31874001"
           },
           "value_as_string": "True",
           "note": ""

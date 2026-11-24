@@ -871,7 +871,8 @@
         "name": "Viable cells/100 cells in Specimen",
         "domain": "Measurement",
         "target_field": "measurement_concept_id",
-        "vocabulary_id": "LOINC"
+        "vocabulary_id": "LOINC",
+        "concept_code": "33194-2"
       },
       "anchored_to": {
         "person_id": "staging.person_map",
@@ -885,7 +886,9 @@
           "value_as_number": "<value>",
           "unit_concept_id": {
             "id": 8554,
-            "name": "percent"
+            "name": "percent",
+            "vocabulary_id": "UCUM",
+            "concept_code": "%"
           }
         }
       ]

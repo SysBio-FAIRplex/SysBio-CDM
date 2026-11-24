@@ -23,7 +23,9 @@
       "linking_mechanism": "MEASUREMENT.measurement_event_id",
       "linking_mechanism_concept_id": {
         "id": 1147165,
-        "name": "observation.observation_id"
+        "name": "observation.observation_id",
+        "vocabulary_id": "CDM",
+        "concept_code": "CDM221"
       },
       "note": ""
     }
@@ -71,9 +73,11 @@
       "table": "measurement",
       "defining_concept_id": {
         "id": 4158754,
-        "name": "Serial sevens test",
+        "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
         "domain": "Measurement",
-        "target_field": "measurement_concept_id"
+        "target_field": "measurement_concept_id",
+        "vocabulary_id": "SNOMED",
+        "concept_code": "273798003"
       },
       "anchored_to": {
         "person_id": "staging.person_map",

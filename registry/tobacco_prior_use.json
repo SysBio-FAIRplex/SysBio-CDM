@@ -79,7 +79,9 @@
         "id": 3012697,
         "name": "History of Tobacco use",
         "domain": "Observation",
-        "target_field": "observation_concept_id"
+        "target_field": "observation_concept_id",
+        "vocabulary_id": "LOINC",
+        "concept_code": "11367-0"
       },
       "anchored_to": {
         "person_id": "staging.person_map"
@@ -91,7 +93,9 @@
           "harmonized_value": "yes",
           "value_as_concept_id": {
             "id": 45877994,
-            "name": "Yes"
+            "name": "Yes",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA33-6"
           },
           "value_as_string": "yes"
         },
@@ -99,7 +103,9 @@
           "harmonized_value": "no",
           "value_as_concept_id": {
             "id": 45878245,
-            "name": "No"
+            "name": "No",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA32-8"
           },
           "value_as_string": "no"
         },
@@ -107,7 +113,9 @@
           "harmonized_value": "unknown",
           "value_as_concept_id": {
             "id": 45877986,
-            "name": "Unknown"
+            "name": "Unknown",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA4489-6"
           },
           "value_as_string": "unknown"
         }

@@ -76,9 +76,11 @@
       "table": "observation",
       "defining_concept_id": {
         "id": 2212019,
-        "name": "Brain imaging, positron emission tomography (PET); perfusion evaluation",
+        "name": "[LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
         "domain": "Procedure",
-        "target_field": "observation_concept_id"
+        "target_field": "observation_concept_id",
+        "vocabulary_id": "CPT4",
+        "concept_code": "78609"
       },
       "anchored_to": {
         "person_id": "staging.person_map",
@@ -91,7 +93,9 @@
           "harmonized_value": "Yes",
           "value_as_concept_id": {
             "id": 45877994,
-            "name": "Yes"
+            "name": "Yes",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA33-6"
           },
           "value_as_string": "Yes"
         },
@@ -99,7 +103,9 @@
           "harmonized_value": "No",
           "value_as_concept_id": {
             "id": 45878245,
-            "name": "No"
+            "name": "No",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA32-8"
           },
           "value_as_string": "No"
         },
@@ -107,7 +113,9 @@
           "harmonized_value": "NA",
           "value_as_concept_id": {
             "id": 35941270,
-            "name": "NA"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "444@88"
           },
           "value_as_string": "NA"
         }

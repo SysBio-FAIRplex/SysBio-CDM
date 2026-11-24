@@ -59,7 +59,9 @@
         "id": 35810326,
         "name": "Number of cigarettes previously smoked daily",
         "domain": "Observation",
-        "target_field": "observation_concept_id"
+        "target_field": "observation_concept_id",
+        "vocabulary_id": "UK Biobank",
+        "concept_code": "2887"
       },
       "anchored_to": {
         "person_id": "staging.person_map",

@@ -91,7 +91,9 @@
         "id": 3046853,
         "name": "Race",
         "domain": "Observation",
-        "target_field": "observation_concept_id"
+        "target_field": "observation_concept_id",
+        "vocabulary_id": "LOINC",
+        "concept_code": "32624-9"
       },
       "anchored_to": {
         "person_id": "staging.person_map"
@@ -103,7 +105,9 @@
           "harmonized_value": "african american",
           "value_as_concept_id": {
             "id": 8516,
-            "name": "Black or African American"
+            "name": "Black or African American",
+            "vocabulary_id": "Race",
+            "concept_code": "3"
           },
           "value_as_string": "african american"
         },
@@ -111,7 +115,9 @@
           "harmonized_value": "european american",
           "value_as_concept_id": {
             "id": 8527,
-            "name": "White"
+            "name": "White",
+            "vocabulary_id": "Race",
+            "concept_code": "5"
           },
           "value_as_string": "european american"
         },

@@ -59,7 +59,9 @@
         "id": 40771104,
         "name": "How many standard drinks containing alcohol do you have on a typical day",
         "domain": "Observation",
-        "target_field": "observation_concept_id"
+        "target_field": "observation_concept_id",
+        "vocabulary_id": "LOINC",
+        "concept_code": "68519-8"
       },
       "anchored_to": {
         "person_id": "staging.person_map",

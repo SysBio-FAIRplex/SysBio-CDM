@@ -385,7 +385,9 @@
         "id": 1989567,
         "name": "Condition clinical status",
         "domain": "Observation",
-        "target_field": "observation_concept_id"
+        "target_field": "observation_concept_id",
+        "vocabulary_id": "LOINC",
+        "concept_code": "99493-9"
       },
       "anchored_to": {
         "person_id": "staging.person_map"
@@ -404,7 +406,9 @@
           "harmonized_value": "diabetic kidney disease",
           "value_as_concept_id": {
             "id": 45883355,
-            "name": "Diabetic Kidney Disease"
+            "name": "Diabetic Kidney Disease",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA10570-2"
           },
           "value_as_string": "Diabetic Kidney Disease"
         },
@@ -412,7 +416,9 @@
           "harmonized_value": "control",
           "value_as_concept_id": {
             "id": 45884153,
-            "name": "Normal"
+            "name": "Normal",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA6626-1"
           },
           "value_as_string": "Control"
         },
@@ -420,7 +426,9 @@
           "harmonized_value": "acute kidney injury",
           "value_as_concept_id": {
             "id": 197320,
-            "name": "Acute kidney injury"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "14669001"
           },
           "value_as_string": "Acute Kidney Injury"
         },
@@ -428,7 +436,9 @@
           "harmonized_value": "hypertensive chronic kidney disease",
           "value_as_concept_id": {
             "id": 201313,
-            "name": "Hypertensive renal disease"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "38481006"
           },
           "value_as_string": "Hypertensive Chronic Kidney Disease"
         },
@@ -436,7 +446,9 @@
           "harmonized_value": "chronic kidney disease",
           "value_as_concept_id": {
             "id": 46271022,
-            "name": "Chronic kidney disease"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "709044004"
           },
           "value_as_string": "Chronic Kidney Disease"
         },
@@ -448,7 +460,9 @@
           "harmonized_value": "focal segmental glomerulosclerosis",
           "value_as_concept_id": {
             "id": 4030513,
-            "name": "Focal segmental glomerulosclerosis"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "236403004"
           },
           "value_as_string": "Focal Segmental Glomerulosclerosis"
         }

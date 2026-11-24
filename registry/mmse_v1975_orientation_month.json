@@ -24,7 +24,9 @@
       "linking_mechanism": "OBSERVATION.observation_event_id",
       "linking_mechanism_concept_id": {
         "id": 1147165,
-        "name": "observation.observation_id"
+        "name": "observation.observation_id",
+        "vocabulary_id": "CDM",
+        "concept_code": "CDM221"
       },
       "note": ""
     }
@@ -91,7 +93,9 @@
         "id": 42869861,
         "name": "Mini-Mental State Examination [MMSE]",
         "domain": "Observation",
-        "target_field": "observation_concept_id"
+        "target_field": "observation_concept_id",
+        "vocabulary_id": "LOINC",
+        "concept_code": "72107-6"
       },
       "anchored_to": {
         "person_id": "staging.person_map",
@@ -112,7 +116,9 @@
           "value_as_number": 1,
           "value_as_concept_id": {
             "id": 45880253,
-            "name": "Correct"
+            "name": "Correct",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA9960-1"
           },
           "value_as_string": "correct"
         },
@@ -121,7 +127,9 @@
           "value_as_number": 0,
           "value_as_concept_id": {
             "id": 45885185,
-            "name": "Incorrect"
+            "name": "Incorrect",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA7342-4"
           },
           "value_as_string": "incorrect"
         }

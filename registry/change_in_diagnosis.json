@@ -69,9 +69,11 @@
       "table": "observation",
       "defining_concept_id": {
         "id": 4049904,
-        "name": "Revised diagnosis",
+        "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
         "domain": "Observation",
-        "target_field": "observation_concept_id"
+        "target_field": "observation_concept_id",
+        "vocabulary_id": "SNOMED",
+        "concept_code": "15874002"
       },
       "anchored_to": {
         "person_id": "staging.person_map"
@@ -83,7 +85,9 @@
           "harmonized_value": "no",
           "value_as_concept_id": {
             "id": 45878245,
-            "name": "No"
+            "name": "No",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA32-8"
           },
           "value_as_string": "no"
         },
@@ -91,7 +95,9 @@
           "harmonized_value": "yes",
           "value_as_concept_id": {
             "id": 45877994,
-            "name": "Yes"
+            "name": "Yes",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA33-6"
           },
           "value_as_string": "yes"
         }

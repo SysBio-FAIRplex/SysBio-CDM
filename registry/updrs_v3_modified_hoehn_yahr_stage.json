@@ -67,7 +67,9 @@
         "id": 46236404,
         "name": "Modified Hoen and Yahr stage [UPDRS]",
         "domain": "Observation",
-        "target_field": "observation_concept_id"
+        "target_field": "observation_concept_id",
+        "vocabulary_id": "LOINC",
+        "concept_code": "77714-4"
       },
       "anchored_to": {
         "person_id": "staging.person_map",
@@ -88,7 +90,9 @@
             "id": 46237823,
             "name": "Bilateral disease, without impairment of balance",
             "domain": "Meas Value",
-            "vocabulary": "LOINC"
+            "vocabulary": "LOINC",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA23664-8"
           }
         },
         {
@@ -99,7 +103,9 @@
             "id": 46237426,
             "name": "No signs of disease",
             "domain": "Meas Value",
-            "vocabulary": "LOINC"
+            "vocabulary": "LOINC",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA23661-4"
           }
         },
         {
@@ -110,7 +116,9 @@
             "id": 46237457,
             "name": "Unilateral disease",
             "domain": "Meas Value",
-            "vocabulary": "LOINC"
+            "vocabulary": "LOINC",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA23662-2"
           }
         },
         {
@@ -121,7 +129,9 @@
             "id": 46237984,
             "name": "Mild to moderate bilateral disease; some postural instability; physically independent",
             "domain": "Meas Value",
-            "vocabulary": "LOINC"
+            "vocabulary": "LOINC",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA23666-3"
           }
         },
         {
@@ -132,7 +142,9 @@
             "id": 46237867,
             "name": "Mild bilateral disease, with recovery on pull test",
             "domain": "Meas Value",
-            "vocabulary": "LOINC"
+            "vocabulary": "LOINC",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA23665-5"
           }
         },
         {
@@ -143,7 +155,9 @@
             "id": 46238167,
             "name": "Severe disability; still able to walk or stand unassisted",
             "domain": "Meas Value",
-            "vocabulary": "LOINC"
+            "vocabulary": "LOINC",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA23667-1"
           }
         },
         {
@@ -154,7 +168,9 @@
             "id": 46237985,
             "name": "Wheelchair bound or bedridden unless aided",
             "domain": "Meas Value",
-            "vocabulary": "LOINC"
+            "vocabulary": "LOINC",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA23668-9"
           }
         },
         {
@@ -165,7 +181,9 @@
             "id": 46237983,
             "name": "Unilateral plus axial involvement",
             "domain": "Meas Value",
-            "vocabulary": "LOINC"
+            "vocabulary": "LOINC",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA23663-0"
           }
         }
       ]

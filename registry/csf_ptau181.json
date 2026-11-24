@@ -65,7 +65,9 @@
         "id": 43055225,
         "name": "Phosphorylated tau 181 [Mass/volume] in Cerebral spinal fluid by Immunoassay",
         "domain": "Measurement",
-        "target_field": "measurement_concept_id"
+        "target_field": "measurement_concept_id",
+        "vocabulary_id": "LOINC",
+        "concept_code": "72260-3"
       },
       "anchored_to": {
         "person_id": "staging.person_map",
@@ -79,7 +81,9 @@
           "value_as_number": "<value>",
           "unit_concept_id": {
             "id": 8845,
-            "name": "picogram per milliliter"
+            "name": "picogram per milliliter",
+            "vocabulary_id": "UCUM",
+            "concept_code": "pg/mL"
           }
         }
       ]

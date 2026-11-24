@@ -189,9 +189,11 @@
       "table": "observation",
       "defining_concept_id": {
         "id": 316866,
-        "name": "Hypertensive disorder",
+        "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
         "domain": "Observation",
-        "target_field": "observation_concept_id"
+        "target_field": "observation_concept_id",
+        "vocabulary_id": "SNOMED",
+        "concept_code": "38341003"
       },
       "anchored_to": {
         "person_id": "staging.person_map"
@@ -203,7 +205,9 @@
           "harmonized_value": "Yes",
           "value_as_concept_id": {
             "id": 45877994,
-            "name": "Yes"
+            "name": "Yes",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA33-6"
           },
           "value_as_string": "Yes"
         },
@@ -211,7 +215,9 @@
           "harmonized_value": "No",
           "value_as_concept_id": {
             "id": 45878245,
-            "name": "No"
+            "name": "No",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA32-8"
           },
           "value_as_string": "No"
         },
@@ -219,7 +225,9 @@
           "harmonized_value": "Don't know",
           "value_as_concept_id": {
             "id": 45876636,
-            "name": "Don't know"
+            "name": "Don't know",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA12688-0"
           },
           "value_as_string": "Don't know"
         }
@@ -230,9 +238,11 @@
       "table": "condition_occurrence",
       "defining_concept_id": {
         "id": 316866,
-        "name": "Hypertensive disorder",
+        "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
         "domain": "Observation",
-        "target_field": "condition_concept_id"
+        "target_field": "condition_concept_id",
+        "vocabulary_id": "SNOMED",
+        "concept_code": "38341003"
       },
       "anchored_to": {
         "person_id": "staging.person_map"

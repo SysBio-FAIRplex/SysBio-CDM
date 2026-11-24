@@ -59,7 +59,9 @@
         "id": 46236384,
         "name": "Utensils scale [UPDRS]",
         "domain": "Measurement",
-        "target_field": "measurement_concept_id"
+        "target_field": "measurement_concept_id",
+        "vocabulary_id": "LOINC",
+        "concept_code": "77694-8"
       },
       "anchored_to": {
         "person_id": "staging.person_map",

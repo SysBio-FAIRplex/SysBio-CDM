@@ -82,9 +82,11 @@
       "table": "measurement",
       "defining_concept_id": {
         "id": 3654978,
-        "name": "Assessment using University of Pennsylvania Smell Identification Test",
+        "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
         "domain": "Measurement",
-        "target_field": "measurement_concept_id"
+        "target_field": "measurement_concept_id",
+        "vocabulary_id": "SNOMED",
+        "concept_code": "840548001"
       },
       "anchored_to": {
         "person_id": "staging.person_map",
@@ -97,7 +99,9 @@
           "harmonized_value": "completed",
           "value_as_concept_id": {
             "id": 45879244,
-            "name": "Completed"
+            "name": "Completed",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA6637-8"
           },
           "value_source_value": "Completed"
         },
@@ -105,7 +109,9 @@
           "harmonized_value": "not completed",
           "value_as_concept_id": {
             "id": 45884119,
-            "name": "Not performed"
+            "name": "Not performed",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA7304-4"
           },
           "value_source_value": "Not completed"
         },
@@ -113,7 +119,9 @@
           "harmonized_value": "partially completed",
           "value_as_concept_id": {
             "id": 45877779,
-            "name": "Task attempted but not completed"
+            "name": "Task attempted but not completed",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA10092-7"
           },
           "value_source_value": "Partially completed"
         }

@@ -56,9 +56,11 @@
       "table": "measurement",
       "defining_concept_id": {
         "id": 4327116,
-        "name": "Single photon emission computed tomography for dopamine transport",
+        "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
         "domain": "Procedure",
-        "target_field": "measurement_concept_id"
+        "target_field": "measurement_concept_id",
+        "vocabulary_id": "SNOMED",
+        "concept_code": "429781007"
       },
       "anchored_to": {
         "person_id": "staging.person_map",

@@ -260,9 +260,11 @@
       "table": "observation",
       "defining_concept_id": {
         "id": 4049904,
-        "name": "Revised diagnosis",
+        "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
         "domain": "Observation",
-        "target_field": "observation_concept_id"
+        "target_field": "observation_concept_id",
+        "vocabulary_id": "SNOMED",
+        "concept_code": "15874002"
       },
       "anchored_to": {
         "person_id": "staging.person_map"
@@ -274,28 +276,36 @@
           "harmonized_value": "diabetic kidney disease",
           "value_as_concept_id": {
             "id": 45883355,
-            "name": "Diabetic Kidney Disease"
+            "name": "Diabetic Kidney Disease",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA10570-2"
           }
         },
         {
           "harmonized_value": "hypertensive kidney disease",
           "value_as_concept_id": {
             "id": 201313,
-            "name": "Hypertensive renal disease"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "38481006"
           }
         },
         {
           "harmonized_value": "cannot be determined",
           "value_as_concept_id": {
             "id": 45877986,
-            "name": "Unknown"
+            "name": "Unknown",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA4489-6"
           }
         },
         {
           "harmonized_value": "other",
           "value_as_concept_id": {
             "id": 45878142,
-            "name": "Other"
+            "name": "Other",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA46-8"
           }
         },
         {
@@ -303,7 +313,9 @@
           "value_as_string": "Acute Tubular Injury",
           "value_as_concept_id": {
             "id": 444044,
-            "name": "Acute tubular necrosis"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "35455006"
           },
           "note": ""
         },
@@ -315,32 +327,42 @@
           "harmonized_value": "acute interstitial nephritis",
           "value_as_concept_id": {
             "id": 4102631,
-            "name": "Acute tubulointerstitial nephritis"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "28637003"
           }
         },
         {
           "harmonized_value": "unknown",
           "value_as_concept_id": {
             "id": 45877986,
-            "name": "Unknown"
+            "name": "Unknown",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA4489-6"
           }
         },
         {
           "harmonized_value": "control",
           "value_as_concept_id": {
             "id": 45884153,
-            "name": "Normal"
+            "name": "Normal",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA6626-1"
           },
           "qualifier_concept_id": {
             "id": 44804027,
-            "name": "Control group"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "718601000000106"
           }
         },
         {
           "harmonized_value": "alzheimers disease",
           "value_as_concept_id": {
             "id": 36311271,
-            "name": "Alzheimer's disease"
+            "name": "Alzheimer's disease",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA22313-3"
           },
           "value_as_string": "alzheimers disease"
         }

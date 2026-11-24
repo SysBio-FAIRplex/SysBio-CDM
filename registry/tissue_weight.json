@@ -102,7 +102,9 @@
         "id": 3020366,
         "name": "Weight of Tissue",
         "domain": "Measurement",
-        "target_field": "measurement_concept_id"
+        "target_field": "measurement_concept_id",
+        "vocabulary_id": "LOINC",
+        "concept_code": "29638-4"
       },
       "anchored_to": {
         "person_id": "staging.person_map",

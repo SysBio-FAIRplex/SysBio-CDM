@@ -22,7 +22,9 @@
         "id": 43054876,
         "name": "Montreal Cognitive Assessment [MoCA]",
         "domain": "Observation",
-        "target_field": "observation_concept_id"
+        "target_field": "observation_concept_id",
+        "vocabulary_id": "LOINC",
+        "concept_code": "72133-2"
       },
       "linked_table": "observation",
       "linked_value_set": {
@@ -32,7 +34,9 @@
       "linking_mechanism": "OBSERVATION.observation_event_id",
       "linking_mechanism_concept_id": {
         "id": 1147165,
-        "name": "observation.observation_id"
+        "name": "observation.observation_id",
+        "vocabulary_id": "CDM",
+        "concept_code": "CDM221"
       }
     },
     {
@@ -43,7 +47,9 @@
         "id": 43054876,
         "name": "Montreal Cognitive Assessment [MoCA]",
         "domain": "Observation",
-        "target_field": "observation_concept_id"
+        "target_field": "observation_concept_id",
+        "vocabulary_id": "LOINC",
+        "concept_code": "72133-2"
       },
       "linked_table": "observation",
       "linked_value_set": {
@@ -53,7 +59,9 @@
       "linking_mechanism": "OBSERVATION.observation_event_id",
       "linking_mechanism_concept_id": {
         "id": 1147165,
-        "name": "observation.observation_id"
+        "name": "observation.observation_id",
+        "vocabulary_id": "CDM",
+        "concept_code": "CDM221"
       }
     },
     {
@@ -64,7 +72,9 @@
         "id": 43054876,
         "name": "Montreal Cognitive Assessment [MoCA]",
         "domain": "Observation",
-        "target_field": "observation_concept_id"
+        "target_field": "observation_concept_id",
+        "vocabulary_id": "LOINC",
+        "concept_code": "72133-2"
       },
       "linked_table": "observation",
       "linked_value_set": {
@@ -74,7 +84,9 @@
       "linking_mechanism": "OBSERVATION.observation_event_id",
       "linking_mechanism_concept_id": {
         "id": 1147165,
-        "name": "observation.observation_id"
+        "name": "observation.observation_id",
+        "vocabulary_id": "CDM",
+        "concept_code": "CDM221"
       }
     },
     {
@@ -85,7 +97,9 @@
         "id": 43054876,
         "name": "Montreal Cognitive Assessment [MoCA]",
         "domain": "Observation",
-        "target_field": "observation_concept_id"
+        "target_field": "observation_concept_id",
+        "vocabulary_id": "LOINC",
+        "concept_code": "72133-2"
       },
       "linked_table": "observation",
       "linked_value_set": {
@@ -95,7 +109,9 @@
       "linking_mechanism": "OBSERVATION.observation_event_id",
       "linking_mechanism_concept_id": {
         "id": 1147165,
-        "name": "observation.observation_id"
+        "name": "observation.observation_id",
+        "vocabulary_id": "CDM",
+        "concept_code": "CDM221"
       }
     },
     {
@@ -106,7 +122,9 @@
         "id": 43054876,
         "name": "Montreal Cognitive Assessment [MoCA]",
         "domain": "Observation",
-        "target_field": "observation_concept_id"
+        "target_field": "observation_concept_id",
+        "vocabulary_id": "LOINC",
+        "concept_code": "72133-2"
       },
       "linked_table": "observation",
       "linked_value_set": {
@@ -116,7 +134,9 @@
       "linking_mechanism": "OBSERVATION.observation_event_id",
       "linking_mechanism_concept_id": {
         "id": 1147165,
-        "name": "observation.observation_id"
+        "name": "observation.observation_id",
+        "vocabulary_id": "CDM",
+        "concept_code": "CDM221"
       }
     },
     {
@@ -127,7 +147,9 @@
         "id": 43054876,
         "name": "Montreal Cognitive Assessment [MoCA]",
         "domain": "Observation",
-        "target_field": "observation_concept_id"
+        "target_field": "observation_concept_id",
+        "vocabulary_id": "LOINC",
+        "concept_code": "72133-2"
       },
       "linked_table": "observation",
       "linked_value_set": {
@@ -137,7 +159,9 @@
       "linking_mechanism": "OBSERVATION.observation_event_id",
       "linking_mechanism_concept_id": {
         "id": 1147165,
-        "name": "observation.observation_id"
+        "name": "observation.observation_id",
+        "vocabulary_id": "CDM",
+        "concept_code": "CDM221"
       }
     },
     {
@@ -149,7 +173,9 @@
       "linking_mechanism": "OBSERVATION.observation_event_id",
       "linking_mechanism_concept_id": {
         "id": 1147165,
-        "name": "observation.observation_id"
+        "name": "observation.observation_id",
+        "vocabulary_id": "CDM",
+        "concept_code": "CDM221"
       },
       "note": ""
     }
@@ -199,7 +225,9 @@
         "id": 43054876,
         "name": "Montreal Cognitive Assessment [MoCA]",
         "domain": "Observation",
-        "target_field": "observation_concept_id"
+        "target_field": "observation_concept_id",
+        "vocabulary_id": "LOINC",
+        "concept_code": "72133-2"
       },
       "anchored_to": {
         "person_id": "staging.person_map",

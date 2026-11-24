@@ -121,9 +121,11 @@
       "table": "observation",
       "defining_concept_id": {
         "id": 3172933,
-        "name": "Braak stage for presence of tau protein accompanying neurofibrillary degeneration in brain",
+        "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
         "domain": "Observation",
-        "target_field": "observation_concept_id"
+        "target_field": "observation_concept_id",
+        "vocabulary_id": "Nebraska Lexicon",
+        "concept_code": "757761000004101"
       },
       "anchored_to": {
         "person_id": "staging.person_map"
@@ -135,7 +137,9 @@
           "harmonized_value": "None",
           "value_as_concept_id": {
             "id": 45878582,
-            "name": "None"
+            "name": "None",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA137-2"
           },
           "value_as_string": "None"
         },
@@ -155,7 +159,9 @@
           "harmonized_value": "Missing or unknown",
           "value_as_concept_id": {
             "id": 45877986,
-            "name": "Unknown"
+            "name": "Unknown",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA4489-6"
           },
           "value_as_string": "Missing or unknown"
         },
@@ -163,7 +169,9 @@
           "harmonized_value": "missing or unknown",
           "value_as_concept_id": {
             "id": 45877986,
-            "name": "Unknown"
+            "name": "Unknown",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA4489-6"
           },
           "value_as_string": "missing or unknown"
         }

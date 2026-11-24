@@ -208,9 +208,11 @@
       "table": "specimen",
       "defining_concept_id": {
         "id": 44806863,
-        "name": "Cell sample",
+        "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
         "domain": "Specimen",
-        "target_field": "specimen_concept_id"
+        "target_field": "specimen_concept_id",
+        "vocabulary_id": "SNOMED",
+        "concept_code": "803291000000106"
       },
       "anchored_to": {
         "person_id": "staging.person_map",
@@ -223,7 +225,9 @@
           "harmonized_value": "cell",
           "value_as_concept_id": {
             "id": 44806863,
-            "name": "Cell sample"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "803291000000106"
           },
           "value_as_string": "cell"
         }

@@ -104,9 +104,11 @@
       "table": "observation",
       "defining_concept_id": {
         "id": 3187945,
-        "name": "Neuropathology observable entity",
+        "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
         "domain": "Observation",
-        "target_field": "observation_concept_id"
+        "target_field": "observation_concept_id",
+        "vocabulary_id": "Nebraska Lexicon",
+        "concept_code": "860301000004107"
       },
       "anchored_to": {
         "person_id": "staging.person_map"
@@ -118,7 +120,9 @@
           "harmonized_value": "alzheimers disease",
           "value_as_concept_id": {
             "id": 36311271,
-            "name": "Alzheimer's disease"
+            "name": "Alzheimer's disease",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA22313-3"
           },
           "value_as_string": "AD"
         },
@@ -126,7 +130,9 @@
           "harmonized_value": "control",
           "value_as_concept_id": {
             "id": 45884153,
-            "name": "Normal"
+            "name": "Normal",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA6626-1"
           },
           "value_as_string": "control"
         },
@@ -134,7 +140,9 @@
           "harmonized_value": "other",
           "value_as_concept_id": {
             "id": 45878142,
-            "name": "Other"
+            "name": "Other",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA46-8"
           },
           "value_as_string": "other"
         },
@@ -142,7 +150,9 @@
           "harmonized_value": "other",
           "value_as_concept_id": {
             "id": 45878142,
-            "name": "Other"
+            "name": "Other",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA46-8"
           },
           "value_as_string": "other"
         },
@@ -150,7 +160,9 @@
           "harmonized_value": "not applicable",
           "value_as_concept_id": {
             "id": 45882470,
-            "name": "Not applicable"
+            "name": "Not applicable",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA4720-4"
           },
           "value_as_string": "not applicable"
         }

@@ -380,9 +380,11 @@
       "table": "observation",
       "defining_concept_id": {
         "id": 3172933,
-        "name": "Braak stage for presence of tau protein accompanying neurofibrillary degeneration in brain",
+        "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
         "domain": "Observation",
-        "target_field": "observation_concept_id"
+        "target_field": "observation_concept_id",
+        "vocabulary_id": "Nebraska Lexicon",
+        "concept_code": "757761000004101"
       },
       "anchored_to": {
         "person_id": "staging.person_map"
@@ -394,56 +396,72 @@
           "harmonized_value": "Stage V",
           "value_as_concept_id": {
             "id": 45878655,
-            "name": "Stage V"
+            "name": "Stage V",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA3647-0"
           }
         },
         {
           "harmonized_value": "Stage IV",
           "value_as_concept_id": {
             "id": 45880109,
-            "name": "Stage IV"
+            "name": "Stage IV",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA3651-2"
           }
         },
         {
           "harmonized_value": "Stage III",
           "value_as_concept_id": {
             "id": 45878643,
-            "name": "Stage III"
+            "name": "Stage III",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA3657-9"
           }
         },
         {
           "harmonized_value": "Stage II",
           "value_as_concept_id": {
             "id": 45880979,
-            "name": "Stage II"
+            "name": "Stage II",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA3661-1"
           }
         },
         {
           "harmonized_value": "Stage I",
           "value_as_concept_id": {
             "id": 45880980,
-            "name": "Stage I"
+            "name": "Stage I",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA3664-5"
           }
         },
         {
           "harmonized_value": "Missing or unknown",
           "value_as_concept_id": {
             "id": 45877986,
-            "name": "Unknown"
+            "name": "Unknown",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA4489-6"
           }
         },
         {
           "harmonized_value": "Stage VI",
           "value_as_concept_id": {
             "id": 3188117,
-            "name": "Stage 6"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "Nebraska Lexicon",
+            "concept_code": "839681000004105"
           }
         },
         {
           "harmonized_value": "Stave VI",
           "value_as_concept_id": {
             "id": 3188117,
-            "name": "Stage 6"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "Nebraska Lexicon",
+            "concept_code": "839681000004105"
           }
         },
         {
@@ -451,7 +469,9 @@
           "value_as_number": 5,
           "value_as_concept_id": {
             "id": 45878655,
-            "name": "Stage V"
+            "name": "Stage V",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA3647-0"
           },
           "value_as_string": "5"
         },
@@ -460,7 +480,9 @@
           "value_as_number": 4,
           "value_as_concept_id": {
             "id": 45880109,
-            "name": "Stage IV"
+            "name": "Stage IV",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA3651-2"
           },
           "value_as_string": "4"
         },
@@ -469,7 +491,9 @@
           "value_as_number": 3,
           "value_as_concept_id": {
             "id": 45878643,
-            "name": "Stage III"
+            "name": "Stage III",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA3657-9"
           },
           "value_as_string": "3"
         },
@@ -478,7 +502,9 @@
           "value_as_number": 2,
           "value_as_concept_id": {
             "id": 45880979,
-            "name": "Stage II"
+            "name": "Stage II",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA3661-1"
           },
           "value_as_string": "2"
         },
@@ -487,7 +513,9 @@
           "value_as_number": 0,
           "value_as_concept_id": {
             "id": 45878582,
-            "name": "None"
+            "name": "None",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA137-2"
           },
           "value_as_string": "0"
         },
@@ -496,7 +524,9 @@
           "value_as_number": 1,
           "value_as_concept_id": {
             "id": 45880980,
-            "name": "Stage I"
+            "name": "Stage I",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA3664-5"
           },
           "value_as_string": "1"
         },
@@ -505,7 +535,9 @@
           "value_as_number": 6,
           "value_as_concept_id": {
             "id": 3188117,
-            "name": "Stage 6"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "Nebraska Lexicon",
+            "concept_code": "839681000004105"
           },
           "value_as_string": "6"
         }

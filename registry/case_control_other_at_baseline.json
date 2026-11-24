@@ -77,9 +77,11 @@
       "table": "observation",
       "defining_concept_id": {
         "id": 44804212,
-        "name": "Case control study",
+        "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
         "domain": "Observation",
-        "target_field": "observation_concept_id"
+        "target_field": "observation_concept_id",
+        "vocabulary_id": "SNOMED",
+        "concept_code": "719561000000104"
       },
       "anchored_to": {
         "person_id": "staging.person_map"
@@ -95,7 +97,9 @@
           "harmonized_value": "control",
           "value_as_concept_id": {
             "id": 45884153,
-            "name": "Normal"
+            "name": "Normal",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA6626-1"
           },
           "value_as_string": "control"
         },
@@ -103,7 +107,9 @@
           "harmonized_value": "other",
           "value_as_concept_id": {
             "id": 45878142,
-            "name": "Other"
+            "name": "Other",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA46-8"
           },
           "value_as_string": "other"
         }

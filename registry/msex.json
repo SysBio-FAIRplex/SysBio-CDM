@@ -101,7 +101,9 @@
         "id": 3046965,
         "name": "Sex",
         "domain": "Observation",
-        "target_field": "observation_concept_id"
+        "target_field": "observation_concept_id",
+        "vocabulary_id": "LOINC",
+        "concept_code": "46098-0"
       },
       "anchored_to": {
         "person_id": "staging.person_map"
@@ -113,21 +115,27 @@
           "harmonized_value": "1",
           "value_as_concept_id": {
             "id": 8507,
-            "name": "MALE"
+            "name": "MALE",
+            "vocabulary_id": "Gender",
+            "concept_code": "M"
           }
         },
         {
           "harmonized_value": "0",
           "value_as_concept_id": {
             "id": 8532,
-            "name": "FEMALE"
+            "name": "FEMALE",
+            "vocabulary_id": "Gender",
+            "concept_code": "F"
           }
         },
         {
           "harmonized_value": "NA",
           "value_as_concept_id": {
             "id": 35941270,
-            "name": "NA"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "444@88"
           }
         }
       ]

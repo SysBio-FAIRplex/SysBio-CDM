@@ -132,10 +132,11 @@
       "table": "observation",
       "defining_concept_id": {
         "id": 4083743,
-        "name": "Cause of death",
+        "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
         "domain": "Observation",
         "target_field": "observation_concept_id",
-        "vocabulary_id": "SNOMED"
+        "vocabulary_id": "SNOMED",
+        "concept_code": "184305005"
       },
       "anchored_to": {
         "person_id": "staging.person_map"
@@ -147,28 +148,36 @@
           "harmonized_value": "cholangiocarcinoma",
           "value_as_concept_id": {
             "id": 4208660,
-            "name": "Cholangiocarcinoma of biliary tract"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "312104005"
           }
         },
         {
           "harmonized_value": "sarcoma not otherwise specified",
           "value_as_concept_id": {
             "id": 4311439,
-            "name": "Sarcoma"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "424413001"
           }
         },
         {
           "harmonized_value": "pulmonary embolism",
           "value_as_concept_id": {
             "id": 440417,
-            "name": "Pulmonary embolism"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "59282003"
           }
         },
         {
           "harmonized_value": "suicide",
           "value_as_concept_id": {
             "id": 440925,
-            "name": "Suicide"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "44301001"
           }
         },
         {

@@ -26,7 +26,9 @@
       "linking_mechanism": "MEASUREMENT.measurement_event_id",
       "linking_mechanism_concept_id": {
         "id": 1147138,
-        "name": "measurement.measurement_id"
+        "name": "measurement.measurement_id",
+        "vocabulary_id": "CDM",
+        "concept_code": "CDM194"
       },
       "note": ""
     }
@@ -105,9 +107,11 @@
       "table": "measurement",
       "defining_concept_id": {
         "id": 46273534,
-        "name": "Epworth Sleepiness Scale",
+        "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
         "domain": "Measurement",
-        "target_field": "measurement_concept_id"
+        "target_field": "measurement_concept_id",
+        "vocabulary_id": "SNOMED",
+        "concept_code": "708735004"
       },
       "anchored_to": {
         "person_id": "staging.person_map",
@@ -131,7 +135,9 @@
             "id": 1094298,
             "name": "Not at all likely",
             "domain": "Meas Value",
-            "vocabulary": "LOINC"
+            "vocabulary": "LOINC",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA34069-7"
           }
         },
         {
@@ -142,7 +148,9 @@
             "id": 1094211,
             "name": "Not too likely",
             "domain": "Meas Value",
-            "vocabulary": "LOINC"
+            "vocabulary": "LOINC",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA34068-9"
           }
         },
         {
@@ -153,7 +161,9 @@
             "id": 1094222,
             "name": "Fairly likely",
             "domain": "Meas Value",
-            "vocabulary": "LOINC"
+            "vocabulary": "LOINC",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA34067-1"
           }
         },
         {
@@ -164,7 +174,9 @@
             "id": 45880190,
             "name": "Very likely",
             "domain": "Meas Value",
-            "vocabulary": "LOINC"
+            "vocabulary": "LOINC",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA15586-3"
           }
         }
       ]

@@ -225,7 +225,9 @@
         "id": 1091862,
         "name": "Diagnosis category",
         "domain": "Observation",
-        "target_field": "observation_concept_id"
+        "target_field": "observation_concept_id",
+        "vocabulary_id": "LOINC",
+        "concept_code": "104963-4"
       },
       "anchored_to": {
         "person_id": "staging.person_map"
@@ -237,7 +239,9 @@
           "harmonized_value": "normal",
           "value_as_concept_id": {
             "id": 45884153,
-            "name": "Normal"
+            "name": "Normal",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA6626-1"
           },
           "value_as_string": "normal"
         },
@@ -245,7 +249,9 @@
           "harmonized_value": "chronic kidney disease",
           "value_as_concept_id": {
             "id": 46271022,
-            "name": "Chronic kidney disease"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "709044004"
           },
           "value_as_string": "chronic kidney disease"
         },
@@ -253,7 +259,9 @@
           "harmonized_value": "acute kidney failure",
           "value_as_concept_id": {
             "id": 197320,
-            "name": "Acute kidney injury"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "14669001"
           },
           "value_as_string": "acute kidney failure"
         },
@@ -261,7 +269,9 @@
           "harmonized_value": "metabolic dysfunction-associated steatotic liver",
           "value_as_concept_id": {
             "id": 4026131,
-            "name": "Non-alcoholic fatty liver"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "197315008"
           },
           "value_as_string": "MASL"
         },
@@ -269,7 +279,9 @@
           "harmonized_value": "metabolic dysfunction-associated steatohepatitis",
           "value_as_concept_id": {
             "id": 40484532,
-            "name": "Nonalcoholic steatohepatitis"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "442685003"
           },
           "value_as_string": "MASH"
         },

@@ -103,9 +103,11 @@
       "table": "observation",
       "defining_concept_id": {
         "id": 4203251,
-        "name": "Patient data status",
+        "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
         "domain": "Observation",
-        "target_field": "observation_concept_id"
+        "target_field": "observation_concept_id",
+        "vocabulary_id": "SNOMED",
+        "concept_code": "308342008"
       },
       "anchored_to": {
         "person_id": "staging.person_map",
@@ -125,7 +127,9 @@
           "harmonized_value": "true",
           "value_as_concept_id": {
             "id": 45877994,
-            "name": "Yes"
+            "name": "Yes",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA33-6"
           },
           "value_as_string": "true"
         },
@@ -133,7 +137,9 @@
           "harmonized_value": "true",
           "value_as_concept_id": {
             "id": 45877994,
-            "name": "Yes"
+            "name": "Yes",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA33-6"
           },
           "value_as_string": "true"
         },
@@ -141,7 +147,9 @@
           "harmonized_value": "1",
           "value_as_concept_id": {
             "id": 45877994,
-            "name": "Yes"
+            "name": "Yes",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA33-6"
           },
           "value_as_string": "1"
         },
@@ -149,7 +157,9 @@
           "harmonized_value": "false",
           "value_as_concept_id": {
             "id": 45878245,
-            "name": "No"
+            "name": "No",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA32-8"
           },
           "value_as_string": "false"
         },
@@ -157,7 +167,9 @@
           "harmonized_value": "false",
           "value_as_concept_id": {
             "id": 45878245,
-            "name": "No"
+            "name": "No",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA32-8"
           },
           "value_as_string": "false"
         },
@@ -165,7 +177,9 @@
           "harmonized_value": "0",
           "value_as_concept_id": {
             "id": 45878245,
-            "name": "No"
+            "name": "No",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA32-8"
           },
           "value_as_string": "0"
         }

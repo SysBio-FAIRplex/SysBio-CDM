@@ -130,7 +130,9 @@
         "id": 45877223,
         "name": "Protocol",
         "domain": "Meas Value",
-        "target_field": "observation_concept_id"
+        "target_field": "observation_concept_id",
+        "vocabulary_id": "LOINC",
+        "concept_code": "LA17190-2"
       },
       "anchored_to": {
         "person_id": "staging.person_map"

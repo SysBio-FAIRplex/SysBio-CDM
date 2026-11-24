@@ -182,9 +182,11 @@
       "table": "observation",
       "defining_concept_id": {
         "id": 37172639,
-        "name": "Type of tobacco used",
+        "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
         "domain": "Observation",
-        "target_field": "observation_concept_id"
+        "target_field": "observation_concept_id",
+        "vocabulary_id": "SNOMED",
+        "concept_code": "53661000146106"
       },
       "anchored_to": {
         "person_id": "staging.person_map",
@@ -202,7 +204,9 @@
           "value_as_string": "filtered cigarettes",
           "value_as_concept_id": {
             "id": 35820581,
-            "name": "Manufactured cigarettes"
+            "name": "Manufactured cigarettes",
+            "vocabulary_id": "UK Biobank",
+            "concept_code": "100351-1"
           }
         },
         {
@@ -210,7 +214,9 @@
           "value_as_string": "non-filtered cigarettes",
           "value_as_concept_id": {
             "id": 35819504,
-            "name": "Hand-rolled cigarettes"
+            "name": "Hand-rolled cigarettes",
+            "vocabulary_id": "UK Biobank",
+            "concept_code": "100351-2"
           }
         },
         {
@@ -222,7 +228,9 @@
           "value_as_string": "cigar",
           "value_as_concept_id": {
             "id": 35817176,
-            "name": "Cigars or pipes"
+            "name": "Cigars or pipes",
+            "vocabulary_id": "UK Biobank",
+            "concept_code": "100351-3"
           }
         },
         {
@@ -230,7 +238,9 @@
           "value_as_string": "pipe",
           "value_as_concept_id": {
             "id": 35817176,
-            "name": "Cigars or pipes"
+            "name": "Cigars or pipes",
+            "vocabulary_id": "UK Biobank",
+            "concept_code": "100351-3"
           }
         },
         {
@@ -238,7 +248,9 @@
           "value_as_string": "chewing tobacco",
           "value_as_concept_id": {
             "id": 4219234,
-            "name": "Chewing tobacco"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "81911001"
           }
         },
         {
@@ -254,7 +266,9 @@
           "value_as_string": "more than one",
           "value_as_concept_id": {
             "id": 37079172,
-            "name": "More than one"
+            "name": "More than one",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA30123-6"
           }
         }
       ]

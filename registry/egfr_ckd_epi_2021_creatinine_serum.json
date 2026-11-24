@@ -163,7 +163,9 @@
           "value_as_number": "<value>",
           "unit_concept_id": {
             "id": 720870,
-            "name": "milliliter per minute per 1.73 square meter"
+            "name": "milliliter per minute per 1.73 square meter",
+            "vocabulary_id": "UCUM",
+            "concept_code": "mL/min/(173.10*-2.m2)"
           }
         }
       ]

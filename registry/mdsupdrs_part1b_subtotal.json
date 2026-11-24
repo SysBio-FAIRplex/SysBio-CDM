@@ -23,7 +23,9 @@
       "linking_mechanism": "MEASUREMENT.measurement_event_id",
       "linking_mechanism_concept_id": {
         "id": 1147138,
-        "name": "measurement.measurement_id"
+        "name": "measurement.measurement_id",
+        "vocabulary_id": "CDM",
+        "concept_code": "CDM194"
       },
       "note": ""
     }
@@ -73,7 +75,9 @@
         "id": 46236408,
         "name": "Mentation, behavior and mood panel [UPDRS]",
         "domain": "Measurement",
-        "target_field": "measurement_concept_id"
+        "target_field": "measurement_concept_id",
+        "vocabulary_id": "LOINC",
+        "concept_code": "77718-5"
       },
       "anchored_to": {
         "person_id": "staging.person_map",

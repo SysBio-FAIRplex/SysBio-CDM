@@ -363,7 +363,8 @@
         "name": "Condition Duration",
         "domain": "Observation",
         "target_field": "observation_concept_id",
-        "vocabulary_id": "LOINC"
+        "vocabulary_id": "LOINC",
+        "concept_code": "106175-3"
       },
       "anchored_to": {
         "person_id": "staging.person_map"
@@ -374,7 +375,9 @@
           "field": "qualifier_concept_id",
           "value": {
             "id": 316866,
-            "name": "Hypertensive disorder"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "38341003"
           },
           "note": ""
         }
@@ -385,7 +388,9 @@
           "value_as_string": "[0,5)",
           "unit_concept_id": {
             "id": 9448,
-            "name": "year"
+            "name": "year",
+            "vocabulary_id": "UCUM",
+            "concept_code": "a"
           }
         },
         {
@@ -393,7 +398,9 @@
           "value_as_string": "[5,10)",
           "unit_concept_id": {
             "id": 9448,
-            "name": "year"
+            "name": "year",
+            "vocabulary_id": "UCUM",
+            "concept_code": "a"
           }
         },
         {
@@ -401,7 +408,9 @@
           "value_as_string": "[10,15)",
           "unit_concept_id": {
             "id": 9448,
-            "name": "year"
+            "name": "year",
+            "vocabulary_id": "UCUM",
+            "concept_code": "a"
           }
         },
         {
@@ -409,7 +418,9 @@
           "value_as_string": "[15,20)",
           "unit_concept_id": {
             "id": 9448,
-            "name": "year"
+            "name": "year",
+            "vocabulary_id": "UCUM",
+            "concept_code": "a"
           }
         },
         {
@@ -417,7 +428,9 @@
           "value_as_string": "[20,25)",
           "unit_concept_id": {
             "id": 9448,
-            "name": "year"
+            "name": "year",
+            "vocabulary_id": "UCUM",
+            "concept_code": "a"
           }
         },
         {
@@ -425,7 +438,9 @@
           "value_as_string": "[25,30)",
           "unit_concept_id": {
             "id": 9448,
-            "name": "year"
+            "name": "year",
+            "vocabulary_id": "UCUM",
+            "concept_code": "a"
           }
         },
         {
@@ -433,7 +448,9 @@
           "value_as_string": "[30,35)",
           "unit_concept_id": {
             "id": 9448,
-            "name": "year"
+            "name": "year",
+            "vocabulary_id": "UCUM",
+            "concept_code": "a"
           }
         },
         {
@@ -441,7 +458,9 @@
           "value_as_string": "[35,40)",
           "unit_concept_id": {
             "id": 9448,
-            "name": "year"
+            "name": "year",
+            "vocabulary_id": "UCUM",
+            "concept_code": "a"
           }
         },
         {
@@ -449,7 +468,9 @@
           "value_as_string": "[40,45)",
           "unit_concept_id": {
             "id": 9448,
-            "name": "year"
+            "name": "year",
+            "vocabulary_id": "UCUM",
+            "concept_code": "a"
           }
         },
         {
@@ -457,7 +478,9 @@
           "value_as_string": "[45,50)",
           "unit_concept_id": {
             "id": 9448,
-            "name": "year"
+            "name": "year",
+            "vocabulary_id": "UCUM",
+            "concept_code": "a"
           }
         },
         {
@@ -465,7 +488,9 @@
           "value_as_string": "[50,55)",
           "unit_concept_id": {
             "id": 9448,
-            "name": "year"
+            "name": "year",
+            "vocabulary_id": "UCUM",
+            "concept_code": "a"
           }
         }
       ]

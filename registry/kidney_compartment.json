@@ -944,9 +944,11 @@
       "table": "specimen",
       "defining_concept_id": {
         "id": 4271678,
-        "name": "Kidney structure",
+        "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
         "domain": "Spec Anatomic Site",
-        "target_field": "anatomic_site_concept_id"
+        "target_field": "anatomic_site_concept_id",
+        "vocabulary_id": "SNOMED",
+        "concept_code": "64033007"
       },
       "anchored_to": {
         "person_id": "staging.person_map",
@@ -959,7 +961,9 @@
           "harmonized_value": "glomerulus",
           "value_as_concept_id": {
             "id": 4195524,
-            "name": "Glomerulus structure"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "68288006"
           },
           "value_as_number": null,
           "value_as_string": "glomerulus"
@@ -968,7 +972,9 @@
           "harmonized_value": "tubulointerstitium",
           "value_as_concept_id": {
             "id": 4179022,
-            "name": "Structure of interstitial tissue of kidney"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "50235001"
           },
           "value_as_number": null,
           "value_as_string": "tubulointerstitium"
@@ -977,7 +983,9 @@
           "harmonized_value": "interstitium",
           "value_as_concept_id": {
             "id": 4179022,
-            "name": "Structure of interstitial tissue of kidney"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "50235001"
           },
           "value_as_number": null,
           "value_as_string": "interstitium"
@@ -986,7 +994,9 @@
           "harmonized_value": "proximal tubule",
           "value_as_concept_id": {
             "id": 4241597,
-            "name": "Renal tubule structure"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "58471003"
           },
           "value_as_number": null,
           "value_as_string": "proximal tubule"
@@ -995,7 +1005,9 @@
           "harmonized_value": "proximal convoluted tubule",
           "value_as_concept_id": {
             "id": 4196544,
-            "name": "Proximal convoluted renal tubule structure"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "50468005"
           },
           "value_as_number": null,
           "value_as_string": "proximal convoluted tubule"
@@ -1004,7 +1016,9 @@
           "harmonized_value": "thick ascending limb",
           "value_as_concept_id": {
             "id": 4308735,
-            "name": "Structure of ascending limb of Henle's loop"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "83711003"
           },
           "value_as_number": null,
           "value_as_string": "thick ascending limb"
@@ -1013,7 +1027,9 @@
           "harmonized_value": "distal convoluted tubule",
           "value_as_concept_id": {
             "id": 4217459,
-            "name": "Distal convoluted renal tubule structure"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "81495001"
           },
           "value_as_number": null,
           "value_as_string": "distal convoluted tubule"
@@ -1022,7 +1038,9 @@
           "harmonized_value": "collecting duct",
           "value_as_concept_id": {
             "id": 4245296,
-            "name": "Structure of collecting tubule"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "60297009"
           },
           "value_as_number": null,
           "value_as_string": "collecting duct"
@@ -1031,7 +1049,9 @@
           "harmonized_value": "renal vasculature",
           "value_as_concept_id": {
             "id": 37219128,
-            "name": "Structure of intrarenal vasculature"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "786065008"
           },
           "value_as_number": null,
           "value_as_string": "renal vasculature"
@@ -1040,7 +1060,9 @@
           "harmonized_value": "kidney",
           "value_as_concept_id": {
             "id": 4271678,
-            "name": "Kidney structure"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "64033007"
           },
           "value_as_number": null,
           "value_as_string": "kidney"
@@ -1049,7 +1071,9 @@
           "harmonized_value": "renal cortex",
           "value_as_concept_id": {
             "id": 4177348,
-            "name": "Structure of cortex of kidney"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "50403003"
           },
           "value_as_number": null,
           "value_as_string": null,
@@ -1059,7 +1083,9 @@
           "harmonized_value": "renal medulla",
           "value_as_concept_id": {
             "id": 4148798,
-            "name": "Structure of medulla of kidney"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "30737000"
           },
           "value_as_number": null,
           "value_as_string": null,

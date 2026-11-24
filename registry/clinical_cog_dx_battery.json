@@ -64,7 +64,9 @@
         "id": 46235850,
         "name": "Cognitive function [Interpretation]",
         "domain": "Observation",
-        "target_field": "observation_concept_id"
+        "target_field": "observation_concept_id",
+        "vocabulary_id": "LOINC",
+        "concept_code": "75275-8"
       },
       "anchored_to": {
         "person_id": "staging.person_map",
@@ -77,50 +79,66 @@
           "harmonized_value": "1",
           "value_as_concept_id": {
             "id": 45884350,
-            "name": "No impairment"
+            "name": "No impairment",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA9606-0"
           }
         },
         {
           "harmonized_value": "2",
           "value_as_concept_id": {
             "id": 4297400,
-            "name": "Mild neurocognitive disorder"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "386805003"
           }
         },
         {
           "harmonized_value": "3",
           "value_as_concept_id": {
             "id": 45878929,
-            "name": "Cognitive impairment"
+            "name": "Cognitive impairment",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA15213-4"
           },
           "qualifier_concept_id": {
             "id": 46235351,
-            "name": "Comorbid condition"
+            "name": "Comorbid condition",
+            "vocabulary_id": "LOINC",
+            "concept_code": "75618-9"
           }
         },
         {
           "harmonized_value": "4",
           "value_as_concept_id": {
             "id": 36311271,
-            "name": "Alzheimer's disease"
+            "name": "Alzheimer's disease",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA22313-3"
           }
         },
         {
           "harmonized_value": "5",
           "value_as_concept_id": {
             "id": 36311271,
-            "name": "Alzheimer's disease"
+            "name": "Alzheimer's disease",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA22313-3"
           },
           "qualifier_concept_id": {
             "id": 46235351,
-            "name": "Comorbid condition"
+            "name": "Comorbid condition",
+            "vocabulary_id": "LOINC",
+            "concept_code": "75618-9"
           }
         },
         {
           "harmonized_value": "6",
           "value_as_concept_id": {
             "id": 36310643,
-            "name": "Cognitive loss/dementia"
+            "name": "Cognitive loss/dementia",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA28159-4"
           }
         }
       ]

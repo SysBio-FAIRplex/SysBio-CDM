@@ -59,7 +59,9 @@
         "id": 44786670,
         "name": "Number of years alcohol consumed [Time]",
         "domain": "Observation",
-        "target_field": "observation_concept_id"
+        "target_field": "observation_concept_id",
+        "vocabulary_id": "LOINC",
+        "concept_code": "74012-6"
       },
       "anchored_to": {
         "person_id": "staging.person_map"

@@ -127,7 +127,9 @@
         "id": 35811110,
         "name": "Frequency of drinking alcohol",
         "domain": "Observation",
-        "target_field": "observation_concept_id"
+        "target_field": "observation_concept_id",
+        "vocabulary_id": "UK Biobank",
+        "concept_code": "20414"
       },
       "anchored_to": {
         "person_id": "staging.person_map",
@@ -144,7 +146,9 @@
           "harmonized_value": "daily or almost daily",
           "value_as_concept_id": {
             "id": 35817658,
-            "name": "Daily or almost daily"
+            "name": "Daily or almost daily",
+            "vocabulary_id": "UK Biobank",
+            "concept_code": "523-5"
           },
           "value_as_string": "daily or almost daily"
         },
@@ -152,7 +156,9 @@
           "harmonized_value": "weekly",
           "value_as_concept_id": {
             "id": 35825059,
-            "name": "Weekly"
+            "name": "Weekly",
+            "vocabulary_id": "UK Biobank",
+            "concept_code": "523-4"
           },
           "value_as_string": "weekly"
         },
@@ -160,7 +166,9 @@
           "harmonized_value": "monthly or less",
           "value_as_concept_id": {
             "id": 35821022,
-            "name": "Monthly or less"
+            "name": "Monthly or less",
+            "vocabulary_id": "UK Biobank",
+            "concept_code": "521-1"
           },
           "value_as_string": "monthly or less"
         },
@@ -168,7 +176,9 @@
           "harmonized_value": "unknown",
           "value_as_concept_id": {
             "id": 45877986,
-            "name": "Unknown"
+            "name": "Unknown",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA4489-6"
           }
         },
         {
@@ -176,7 +186,9 @@
           "value_as_string": "4 or more times a week",
           "value_as_concept_id": {
             "id": 45885059,
-            "name": "4 or more times a week"
+            "name": "4 or more times a week",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA18929-2"
           },
           "note": ""
         },
@@ -185,7 +197,9 @@
           "value_as_string": "2 to 3 times a week",
           "value_as_concept_id": {
             "id": 35825059,
-            "name": "Weekly"
+            "name": "Weekly",
+            "vocabulary_id": "UK Biobank",
+            "concept_code": "523-4"
           },
           "note": ""
         },
@@ -194,7 +208,9 @@
           "value_as_string": "2 to 4 times a month",
           "value_as_concept_id": {
             "id": 35821022,
-            "name": "Monthly or less"
+            "name": "Monthly or less",
+            "vocabulary_id": "UK Biobank",
+            "concept_code": "521-1"
           },
           "note": ""
         },
@@ -203,7 +219,9 @@
           "value_as_string": "never",
           "value_as_concept_id": {
             "id": 45876662,
-            "name": "Never"
+            "name": "Never",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA6270-8"
           },
           "note": ""
         }

@@ -909,7 +909,9 @@
         "id": 3046853,
         "name": "Race",
         "domain": "Observation",
-        "target_field": "observation_concept_id"
+        "target_field": "observation_concept_id",
+        "vocabulary_id": "LOINC",
+        "concept_code": "32624-9"
       },
       "anchored_to": {
         "person_id": "staging.person_map"
@@ -921,7 +923,9 @@
           "harmonized_value": "White",
           "value_as_concept_id": {
             "id": 8527,
-            "name": "White"
+            "name": "White",
+            "vocabulary_id": "Race",
+            "concept_code": "5"
           },
           "value_as_string": "White"
         },
@@ -929,7 +933,9 @@
           "harmonized_value": "Black or African American",
           "value_as_concept_id": {
             "id": 8516,
-            "name": "Black or African American"
+            "name": "Black or African American",
+            "vocabulary_id": "Race",
+            "concept_code": "3"
           },
           "value_as_string": "Black or African American"
         },
@@ -938,14 +944,18 @@
           "value_as_string": "Multiracial",
           "value_as_concept_id": {
             "id": 1546847,
-            "name": "More than one race"
+            "name": "More than one race",
+            "vocabulary_id": "Race",
+            "concept_code": "OMOP5558986"
           }
         },
         {
           "harmonized_value": "Asian",
           "value_as_concept_id": {
             "id": 8515,
-            "name": "Asian"
+            "name": "Asian",
+            "vocabulary_id": "Race",
+            "concept_code": "2"
           },
           "value_as_string": "Asian"
         },
@@ -953,7 +963,9 @@
           "harmonized_value": "American Indian or Alaska Native",
           "value_as_concept_id": {
             "id": 8657,
-            "name": "American Indian or Alaska Native"
+            "name": "American Indian or Alaska Native",
+            "vocabulary_id": "Race",
+            "concept_code": "1"
           },
           "value_as_string": "American Indian or Alaska Native"
         },
@@ -961,7 +973,9 @@
           "harmonized_value": "Unknown",
           "value_as_concept_id": {
             "id": 45877986,
-            "name": "Unknown"
+            "name": "Unknown",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA4489-6"
           },
           "value_as_string": "Unknown"
         },
@@ -969,14 +983,18 @@
           "harmonized_value": "unknown",
           "value_as_concept_id": {
             "id": 45877986,
-            "name": "Unknown"
+            "name": "Unknown",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA4489-6"
           }
         },
         {
           "harmonized_value": "Other",
           "value_as_concept_id": {
             "id": 45878142,
-            "name": "Other"
+            "name": "Other",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA46-8"
           },
           "value_as_string": "Other"
         },
@@ -984,7 +1002,9 @@
           "harmonized_value": "Native Hawaiian or Other Pacific Islander",
           "value_as_concept_id": {
             "id": 8557,
-            "name": "Native Hawaiian or Other Pacific Islander"
+            "name": "Native Hawaiian or Other Pacific Islander",
+            "vocabulary_id": "Race",
+            "concept_code": "4"
           },
           "value_as_string": "Native Hawaiian or Other Pacific Islander"
         },
@@ -992,7 +1012,9 @@
           "harmonized_value": "Arab",
           "value_as_concept_id": {
             "id": 38003616,
-            "name": "Arab"
+            "name": "Arab",
+            "vocabulary_id": "Race",
+            "concept_code": "5.03"
           },
           "value_as_string": "Arab"
         }

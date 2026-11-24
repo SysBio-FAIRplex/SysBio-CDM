@@ -56,7 +56,9 @@
         "id": 40771985,
         "name": "Ethnicity OMB.1997",
         "domain": "Observation",
-        "target_field": "observation_concept_id"
+        "target_field": "observation_concept_id",
+        "vocabulary_id": "LOINC",
+        "concept_code": "69490-1"
       },
       "anchored_to": {
         "person_id": "staging.person_map"

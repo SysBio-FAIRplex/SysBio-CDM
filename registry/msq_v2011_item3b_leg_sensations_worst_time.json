@@ -68,9 +68,11 @@
       "table": "observation",
       "defining_concept_id": {
         "id": 73754,
-        "name": "Restless legs",
+        "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
         "domain": "Condition",
-        "target_field": "observation_concept_id"
+        "target_field": "observation_concept_id",
+        "vocabulary_id": "SNOMED",
+        "concept_code": "32914008"
       },
       "anchored_to": {
         "person_id": "staging.person_map",
@@ -84,7 +86,9 @@
           "value_as_string": "After 6pm",
           "value_as_concept_id": {
             "id": 45883202,
-            "name": "Evening"
+            "name": "Evening",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA14972-6"
           }
         },
         {
@@ -92,7 +96,9 @@
           "value_as_string": "Before 6pm",
           "value_as_concept_id": {
             "id": 4101405,
-            "name": "Daytime"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "28017001"
           }
         }
       ]

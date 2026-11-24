@@ -51,9 +51,11 @@
       "table": "procedure_occurrence",
       "defining_concept_id": {
         "id": 40489395,
-        "name": "Diffusion tensor magnetic resonance imaging of brain",
+        "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
         "domain": "Procedure",
-        "target_field": "procedure_concept_id"
+        "target_field": "procedure_concept_id",
+        "vocabulary_id": "SNOMED",
+        "concept_code": "448306001"
       },
       "anchored_to": {
         "person_id": "staging.person_map",

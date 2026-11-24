@@ -95,7 +95,9 @@
         "id": 42528764,
         "name": "Years of education [#] - Reported",
         "domain": "Observation",
-        "target_field": "observation_concept_id"
+        "target_field": "observation_concept_id",
+        "vocabulary_id": "LOINC",
+        "concept_code": "82590-1"
       },
       "anchored_to": {
         "person_id": "staging.person_map"
@@ -108,11 +110,15 @@
           "value_as_number": 0,
           "qualifier_concept_id": {
             "id": 4172703,
-            "name": "="
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "276136004"
           },
           "value_as_concept_id": {
             "id": 1620964,
-            "name": "No formal education"
+            "name": "No formal education",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA32465-9"
           }
         },
         {
@@ -120,11 +126,15 @@
           "value_as_number": 12,
           "qualifier_concept_id": {
             "id": 4171756,
-            "name": "<"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "276139006"
           },
           "value_as_concept_id": {
             "id": 37079293,
-            "name": "Less than high school degree"
+            "name": "Less than high school degree",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA30191-3"
           }
         },
         {
@@ -132,11 +142,15 @@
           "value_as_number": 12,
           "qualifier_concept_id": {
             "id": 4171755,
-            "name": ">="
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "276138003"
           },
           "value_as_concept_id": {
             "id": 45884464,
-            "name": "High school graduate"
+            "name": "High school graduate",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA15564-0"
           },
           "note": ""
         },
@@ -145,18 +159,24 @@
           "value_as_number": 16,
           "qualifier_concept_id": {
             "id": 4172704,
-            "name": ">"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": ">"
           },
           "value_as_concept_id": {
             "id": 1620472,
-            "name": "Postgraduate degree"
+            "name": "Postgraduate degree",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA32470-9"
           }
         },
         {
           "harmonized_value": "unknown",
           "value_as_concept_id": {
             "id": 45877986,
-            "name": "Unknown"
+            "name": "Unknown",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA4489-6"
           }
         }
       ]

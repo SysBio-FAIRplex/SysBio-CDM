@@ -59,7 +59,9 @@
         "id": 40765292,
         "name": "PhenX - tobacco - age of initiation of use - adolescent protocol 030701",
         "domain": "Measurement",
-        "target_field": "measurement_concept_id"
+        "target_field": "measurement_concept_id",
+        "vocabulary_id": "LOINC",
+        "concept_code": "62556-6"
       },
       "anchored_to": {
         "person_id": "staging.person_map"

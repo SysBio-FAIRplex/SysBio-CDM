@@ -23,7 +23,9 @@
       "linked_defining_concept": {
         "id": 1094239,
         "name": "Was on medication",
-        "domain": "Meas Value"
+        "domain": "Meas Value",
+        "vocabulary_id": "LOINC",
+        "concept_code": "LA34443-4"
       },
       "linked_table": "observation",
       "linked_value_set": [
@@ -32,7 +34,9 @@
       "linking_mechanism": "MEASUREMENT.measurement_event_id",
       "linking_mechanism_concept_id": {
         "id": 1147165,
-        "name": "observation.observation_id"
+        "name": "observation.observation_id",
+        "vocabulary_id": "CDM",
+        "concept_code": "CDM221"
       }
     },
     {
@@ -42,7 +46,9 @@
       "linked_defining_concept": {
         "id": 1094239,
         "name": "Was on medication",
-        "domain": "Meas Value"
+        "domain": "Meas Value",
+        "vocabulary_id": "LOINC",
+        "concept_code": "LA34443-4"
       },
       "linked_table": "observation",
       "linked_value_set": [
@@ -51,7 +57,9 @@
       "linking_mechanism": "FACT_RELATIONSHIP",
       "linking_mechanism_concept_id": {
         "id": 581411,
-        "name": "Measurement to Observation"
+        "name": "Measurement to Observation",
+        "vocabulary_id": "Relationship",
+        "concept_code": "OMOP5217059"
       }
     }
   ],
@@ -106,7 +114,9 @@
         "id": 46236410,
         "name": "Motor examination panel [UPDRS]",
         "domain": "Measurement",
-        "target_field": "measurement_concept_id"
+        "target_field": "measurement_concept_id",
+        "vocabulary_id": "LOINC",
+        "concept_code": "77720-1"
       },
       "anchored_to": {
         "person_id": "staging.person_map",

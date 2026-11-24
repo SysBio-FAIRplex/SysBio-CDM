@@ -135,7 +135,8 @@
         "name": "Disease stage",
         "domain": "Observation",
         "target_field": "observation_concept_id",
-        "vocabulary_id": "LOINC"
+        "vocabulary_id": "LOINC",
+        "concept_code": "67213-9"
       },
       "anchored_to": {
         "person_id": "staging.person_map"
@@ -147,21 +148,27 @@
           "harmonized_value": "stage 1",
           "value_as_concept_id": {
             "id": 45879332,
-            "name": "Stage 1"
+            "name": "Stage 1",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA6383-9"
           }
         },
         {
           "harmonized_value": "stage 2",
           "value_as_concept_id": {
             "id": 45883074,
-            "name": "Stage 2"
+            "name": "Stage 2",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA6384-7"
           }
         },
         {
           "harmonized_value": "stage 3",
           "value_as_concept_id": {
             "id": 45877755,
-            "name": "Stage 3"
+            "name": "Stage 3",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA6385-4"
           }
         }
       ]

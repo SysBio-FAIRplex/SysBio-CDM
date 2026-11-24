@@ -24,15 +24,19 @@
       "linked_element_label": "datscan_visual_interpretation",
       "linked_defining_concept": {
         "id": 36685548,
-        "name": "SPECT brain dopamine transporter study using ioflupane (123-I)",
-        "domain": "Procedure"
+        "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+        "domain": "Procedure",
+        "vocabulary_id": "SNOMED",
+        "concept_code": "1099181000000103"
       },
       "linked_table": "procedure_occurrence",
       "linked_value_set": [],
       "linking_mechanism": "OBSERVATION.observation_event_id",
       "linking_mechanism_concept_id": {
         "id": 1147082,
-        "name": "procedure_occurrence.procedure_occurrence_id"
+        "name": "procedure_occurrence.procedure_occurrence_id",
+        "vocabulary_id": "CDM",
+        "concept_code": "CDM138"
       }
     }
   ],
@@ -90,9 +94,11 @@
       "table": "measurement",
       "defining_concept_id": {
         "id": 4086692,
-        "name": "Imaging interpretation",
+        "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
         "domain": "Measurement",
-        "target_field": "measurement_concept_id"
+        "target_field": "measurement_concept_id",
+        "vocabulary_id": "SNOMED",
+        "concept_code": "282290005"
       },
       "anchored_to": {
         "person_id": "staging.person_map",
@@ -112,7 +118,9 @@
           "harmonized_value": "positive",
           "value_as_concept_id": {
             "id": 9191,
-            "name": "Positive"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "10828004"
           },
           "value_source_value": "Positive"
         },
@@ -120,7 +128,9 @@
           "harmonized_value": "negative",
           "value_as_concept_id": {
             "id": 9189,
-            "name": "Negative"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "260385009"
           },
           "value_source_value": "Negative"
         }
@@ -131,9 +141,11 @@
       "table": "procedure_occurrence",
       "defining_concept_id": {
         "id": 36685548,
-        "name": "SPECT brain dopamine transporter study using ioflupane (123-I)",
+        "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
         "domain": "Procedure",
-        "target_field": "procedure_concept_id"
+        "target_field": "procedure_concept_id",
+        "vocabulary_id": "SNOMED",
+        "concept_code": "1099181000000103"
       },
       "anchored_to": {
         "person_id": "staging.person_map",

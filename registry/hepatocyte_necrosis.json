@@ -183,9 +183,11 @@
       "table": "observation",
       "defining_concept_id": {
         "id": 4280654,
-        "name": "Necrosis",
+        "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
         "domain": "Observation",
-        "target_field": "observation_concept_id"
+        "target_field": "observation_concept_id",
+        "vocabulary_id": "SNOMED",
+        "concept_code": "6574001"
       },
       "anchored_to": {
         "person_id": "staging.person_map"
@@ -197,7 +199,9 @@
           "harmonized_value": "absent",
           "value_as_concept_id": {
             "id": 4132135,
-            "name": "Absent"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "2667000"
           },
           "value_as_string": "absent"
         },
@@ -206,14 +210,18 @@
           "value_as_string": "minimal",
           "value_as_concept_id": {
             "id": 4114688,
-            "name": "Minimal"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "255605001"
           }
         },
         {
           "harmonized_value": "mild",
           "value_as_concept_id": {
             "id": 45883535,
-            "name": "Mild"
+            "name": "Mild",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA6752-5"
           },
           "value_as_string": "mild"
         },
@@ -221,7 +229,9 @@
           "harmonized_value": "moderate",
           "value_as_concept_id": {
             "id": 45877983,
-            "name": "Moderate"
+            "name": "Moderate",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA6751-7"
           },
           "value_as_string": "moderate"
         },
@@ -229,7 +239,9 @@
           "harmonized_value": "severe",
           "value_as_concept_id": {
             "id": 45883536,
-            "name": "Severe"
+            "name": "Severe",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA6750-9"
           },
           "value_as_string": "severe"
         }

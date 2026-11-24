@@ -422,9 +422,11 @@
       "table": "specimen",
       "defining_concept_id": {
         "id": 4271678,
-        "name": "Kidney structure",
+        "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
         "domain": "Spec Anatomic Site",
-        "target_field": "anatomic_site_concept_id"
+        "target_field": "anatomic_site_concept_id",
+        "vocabulary_id": "SNOMED",
+        "concept_code": "64033007"
       },
       "anchored_to": {
         "person_id": "staging.person_map",
@@ -437,7 +439,9 @@
           "harmonized_value": "kidney",
           "value_as_concept_id": {
             "id": 4271678,
-            "name": "Kidney structure"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "64033007"
           },
           "value_as_string": "kidney"
         }

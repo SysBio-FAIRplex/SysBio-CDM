@@ -59,7 +59,9 @@
         "id": 40766358,
         "name": "About how old were you when you first started drinking, not counting small tastes or sips of alcohol [PhenX]",
         "domain": "Observation",
-        "target_field": "observation_concept_id"
+        "target_field": "observation_concept_id",
+        "vocabulary_id": "LOINC",
+        "concept_code": "63634-0"
       },
       "anchored_to": {
         "person_id": "staging.person_map"

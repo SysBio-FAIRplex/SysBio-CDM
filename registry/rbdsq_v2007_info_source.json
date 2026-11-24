@@ -85,7 +85,9 @@
         "id": 3048270,
         "name": "Information source",
         "domain": "Measurement",
-        "target_field": "measurement_concept_id"
+        "target_field": "measurement_concept_id",
+        "vocabulary_id": "LOINC",
+        "concept_code": "48766-0"
       },
       "anchored_to": {
         "person_id": "staging.person_map",
@@ -99,7 +101,9 @@
           "value_as_string": "patient",
           "value_as_concept_id": {
             "id": 45880001,
-            "name": "Patient"
+            "name": "Patient",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA4634-7"
           }
         },
         {
@@ -107,7 +111,9 @@
           "value_as_string": "patient and caregiver",
           "value_as_concept_id": {
             "id": 45883500,
-            "name": "Both"
+            "name": "Both",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA14331-5"
           }
         },
         {
@@ -115,7 +121,9 @@
           "value_as_string": "caregiver",
           "value_as_concept_id": {
             "id": 4039760,
-            "name": "Caregiver"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "229774002"
           }
         }
       ]

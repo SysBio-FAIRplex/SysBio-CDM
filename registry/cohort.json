@@ -239,9 +239,11 @@
       "table": "observation",
       "defining_concept_id": {
         "id": 44813056,
-        "name": "Cohort study",
+        "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
         "domain": "Observation",
-        "target_field": "observation_concept_id"
+        "target_field": "observation_concept_id",
+        "vocabulary_id": "SNOMED",
+        "concept_code": "719581000000108"
       },
       "anchored_to": {
         "person_id": "staging.person_map"

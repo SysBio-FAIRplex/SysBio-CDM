@@ -133,7 +133,9 @@
         "id": 40768319,
         "name": "Do you ever move so much during your sleep that you accidentally hit your bed partner, if any, or hurt yourself? [PhenX]",
         "domain": "Observation",
-        "target_field": "observation_concept_id"
+        "target_field": "observation_concept_id",
+        "vocabulary_id": "LOINC",
+        "concept_code": "65627-2"
       },
       "anchored_to": {
         "person_id": "staging.person_map",
@@ -146,7 +148,9 @@
           "harmonized_value": "no",
           "value_as_concept_id": {
             "id": 45878245,
-            "name": "No"
+            "name": "No",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA32-8"
           },
           "value_as_string": "no"
         },
@@ -154,7 +158,9 @@
           "harmonized_value": "yes",
           "value_as_concept_id": {
             "id": 45877994,
-            "name": "Yes"
+            "name": "Yes",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA33-6"
           },
           "value_as_string": "yes"
         },
@@ -163,7 +169,9 @@
           "value_as_string": "no bedpartner",
           "value_as_concept_id": {
             "id": 45882470,
-            "name": "Not applicable"
+            "name": "Not applicable",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA4720-4"
           }
         }
       ]

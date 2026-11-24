@@ -404,9 +404,11 @@
       "table": "measurement",
       "defining_concept_id": {
         "id": 3168054,
-        "name": "Consortium to Establish Registry for Alzheimer's Disease assessment tool",
+        "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
         "domain": "Measurement",
-        "target_field": "measurement_concept_id"
+        "target_field": "measurement_concept_id",
+        "vocabulary_id": "Nebraska Lexicon",
+        "concept_code": "860231000004107"
       },
       "anchored_to": {
         "person_id": "staging.person_map"
@@ -418,28 +420,36 @@
           "harmonized_value": "none",
           "value_as_concept_id": {
             "id": 45878582,
-            "name": "None"
+            "name": "None",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA137-2"
           }
         },
         {
           "harmonized_value": "sparse",
           "value_as_concept_id": {
             "id": 45882954,
-            "name": "Possible"
+            "name": "Possible",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA15097-1"
           }
         },
         {
           "harmonized_value": "moderate",
           "value_as_concept_id": {
             "id": 45877983,
-            "name": "Moderate"
+            "name": "Moderate",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA6751-7"
           }
         },
         {
           "harmonized_value": "frequent",
           "value_as_concept_id": {
             "id": 45881627,
-            "name": "Definite"
+            "name": "Definite",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA12745-8"
           }
         }
       ]

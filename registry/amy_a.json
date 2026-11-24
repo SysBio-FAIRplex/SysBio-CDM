@@ -212,9 +212,11 @@
       "table": "measurement",
       "defining_concept_id": {
         "id": 3170911,
-        "name": "Thal phase staging of amyloid plaques",
+        "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
         "domain": "Measurement",
-        "target_field": "measurement_concept_id"
+        "target_field": "measurement_concept_id",
+        "vocabulary_id": "Nebraska Lexicon",
+        "concept_code": "839761000004109"
       },
       "anchored_to": {
         "person_id": "staging.person_map"
@@ -226,7 +228,9 @@
           "harmonized_value": "none",
           "value_as_concept_id": {
             "id": 45878582,
-            "name": "None"
+            "name": "None",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA137-2"
           }
         },
         {
@@ -242,14 +246,18 @@
           "harmonized_value": "missing or unknown",
           "value_as_concept_id": {
             "id": 45877986,
-            "name": "Unknown"
+            "name": "Unknown",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA4489-6"
           }
         },
         {
           "harmonized_value": "missing or unknown",
           "value_as_concept_id": {
             "id": 45877986,
-            "name": "Unknown"
+            "name": "Unknown",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA4489-6"
           }
         }
       ]

@@ -346,9 +346,11 @@
       "table": "specimen",
       "defining_concept_id": {
         "id": 45773156,
-        "name": "Specimen source",
+        "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
         "domain": "Observation",
-        "target_field": "specimen_concept_id"
+        "target_field": "specimen_concept_id",
+        "vocabulary_id": "SNOMED",
+        "concept_code": "703065002"
       },
       "anchored_to": {
         "person_id": "staging.person_map"
@@ -360,7 +362,9 @@
           "harmonized_value": "CSF",
           "value_as_concept_id": {
             "id": 4124259,
-            "name": "Cerebrospinal fluid specimen"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "258450006"
           },
           "value_as_string": "CSF"
         },
@@ -368,7 +372,9 @@
           "harmonized_value": "Plasma",
           "value_as_concept_id": {
             "id": 4000626,
-            "name": "Plasma specimen"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "119361006"
           },
           "value_as_string": "Plasma"
         },
@@ -377,14 +383,18 @@
           "value_as_string": "RNA",
           "value_as_concept_id": {
             "id": 40480050,
-            "name": "Ribonucleic acid specimen"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "441673008"
           }
         },
         {
           "harmonized_value": "Serum",
           "value_as_concept_id": {
             "id": 4001181,
-            "name": "Serum specimen"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "119364003"
           },
           "value_as_string": "Serum"
         },
@@ -392,7 +402,9 @@
           "harmonized_value": "Whole blood",
           "value_as_concept_id": {
             "id": 4122283,
-            "name": "Whole blood specimen"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "258580003"
           },
           "value_as_string": "Whole blood"
         }

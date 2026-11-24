@@ -532,7 +532,9 @@
         "id": 3022304,
         "name": "Age",
         "domain": "Observation",
-        "target_field": "observation_concept_id"
+        "target_field": "observation_concept_id",
+        "vocabulary_id": "LOINC",
+        "concept_code": "30525-0"
       },
       "anchored_to": {
         "person_id": "staging.person_map",
@@ -547,7 +549,9 @@
           "unit_concept_id": {
             "id": 9448,
             "name": "year",
-            "note": ""
+            "note": "",
+            "vocabulary_id": "UCUM",
+            "concept_code": "a"
           }
         }
       ],

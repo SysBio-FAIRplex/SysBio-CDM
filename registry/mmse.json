@@ -59,7 +59,9 @@
         "id": 42869861,
         "name": "Mini-Mental State Examination [MMSE]",
         "domain": "Observation",
-        "target_field": "observation_concept_id"
+        "target_field": "observation_concept_id",
+        "vocabulary_id": "LOINC",
+        "concept_code": "72107-6"
       },
       "anchored_to": {
         "person_id": "staging.person_map",

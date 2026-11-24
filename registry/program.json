@@ -421,7 +421,9 @@
         "id": 42528934,
         "name": "Participant identifier",
         "domain": "Observation",
-        "target_field": "observation_concept_id"
+        "target_field": "observation_concept_id",
+        "vocabulary_id": "LOINC",
+        "concept_code": "82787-3"
       },
       "anchored_to": {
         "person_id": "staging.person_map"

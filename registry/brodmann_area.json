@@ -281,9 +281,11 @@
       "table": "specimen",
       "defining_concept_id": {
         "id": 4297704,
-        "name": "Brodmann area",
+        "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
         "domain": "Spec Anatomic Site",
-        "target_field": "anatomic_site_concept_id"
+        "target_field": "anatomic_site_concept_id",
+        "vocabulary_id": "SNOMED",
+        "concept_code": "384717008"
       },
       "anchored_to": {
         "person_id": "staging.person_map"

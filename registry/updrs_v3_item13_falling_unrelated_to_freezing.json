@@ -59,7 +59,9 @@
         "id": 46236388,
         "name": "Fall scale [UPDRS]",
         "domain": "Measurement",
-        "target_field": "measurement_concept_id"
+        "target_field": "measurement_concept_id",
+        "vocabulary_id": "LOINC",
+        "concept_code": "77698-9"
       },
       "anchored_to": {
         "person_id": "staging.person_map",

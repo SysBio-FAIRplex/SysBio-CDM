@@ -57,9 +57,11 @@
       "table": "measurement",
       "defining_concept_id": {
         "id": 44806420,
-        "name": "Estimation of glomerular filtration rate",
+        "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
         "domain": "Measurement",
-        "target_field": "measurement_concept_id"
+        "target_field": "measurement_concept_id",
+        "vocabulary_id": "SNOMED",
+        "concept_code": "791801000000102"
       },
       "anchored_to": {
         "person_id": "staging.person_map"
@@ -72,7 +74,9 @@
           "value_as_number": "<value>",
           "unit_concept_id": {
             "id": 720870,
-            "name": "milliliter per minute per 1.73 square meter"
+            "name": "milliliter per minute per 1.73 square meter",
+            "vocabulary_id": "UCUM",
+            "concept_code": "mL/min/(173.10*-2.m2)"
           }
         }
       ]

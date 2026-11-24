@@ -467,9 +467,11 @@
       "table": "procedure_occurrence",
       "defining_concept_id": {
         "id": 4335087,
-        "name": "Sampling of tissue specimen",
+        "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
         "domain": "Procedure",
-        "target_field": "procedure_concept_id"
+        "target_field": "procedure_concept_id",
+        "vocabulary_id": "SNOMED",
+        "concept_code": "433465004"
       },
       "anchored_to": {
         "person_id": "staging.person_map"
@@ -482,9 +484,11 @@
           "value_as_number": null,
           "value_as_concept_id": {
             "id": 4173506,
-            "name": "Needle biopsy of kidney",
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
             "domain": "Procedure",
-            "vocabulary": "SNOMED"
+            "vocabulary": "SNOMED",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "275155009"
           },
           "value_as_string": "Percutaneous Needle Biopsy"
         },
@@ -493,9 +497,11 @@
           "value_as_number": null,
           "value_as_concept_id": {
             "id": 4164499,
-            "name": "Surgical biopsy of kidney",
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
             "domain": "Procedure",
-            "vocabulary": "SNOMED"
+            "vocabulary": "SNOMED",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "274358005"
           },
           "value_as_string": "Transplant Pre-perfusion Biopsy"
         },
@@ -504,9 +510,11 @@
           "value_as_number": null,
           "value_as_concept_id": {
             "id": 4221238,
-            "name": "Open biopsy of kidney",
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
             "domain": "Procedure",
-            "vocabulary": "SNOMED"
+            "vocabulary": "SNOMED",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "40134000"
           },
           "value_as_string": "Intra-operative Biopsy"
         },
@@ -515,9 +523,11 @@
           "value_as_number": null,
           "value_as_concept_id": {
             "id": 4021108,
-            "name": "Total nephrectomy",
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
             "domain": "Procedure",
-            "vocabulary": "SNOMED"
+            "vocabulary": "SNOMED",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "175905003"
           },
           "value_as_string": "Tumor Nephrectomy"
         },
@@ -525,9 +535,11 @@
           "harmonized_value": "Deceased Donor Nephrectomy",
           "value_as_concept_id": {
             "id": 4344635,
-            "name": "Cadaver donor nephrectomy",
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
             "domain": "Procedure",
-            "vocabulary": "SNOMED"
+            "vocabulary": "SNOMED",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "240325001"
           },
           "note": ""
         },
@@ -535,9 +547,11 @@
           "harmonized_value": "Total Tumor Nephrectomy",
           "value_as_concept_id": {
             "id": 4021108,
-            "name": "Total nephrectomy",
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
             "domain": "Procedure",
-            "vocabulary": "SNOMED"
+            "vocabulary": "SNOMED",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "175905003"
           },
           "note": ""
         },
@@ -545,9 +559,11 @@
           "harmonized_value": "Partial Tumor Nephrectomy",
           "value_as_concept_id": {
             "id": 4304536,
-            "name": "Partial nephrectomy",
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
             "domain": "Procedure",
-            "vocabulary": "SNOMED"
+            "vocabulary": "SNOMED",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "81516001"
           },
           "note": ""
         },
@@ -555,9 +571,11 @@
           "harmonized_value": "Transplant Surveillance Biopsy",
           "value_as_concept_id": {
             "id": 4217034,
-            "name": "Kidney biopsy",
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
             "domain": "Procedure",
-            "vocabulary": "SNOMED"
+            "vocabulary": "SNOMED",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "7246002"
           },
           "note": ""
         },
@@ -565,9 +583,11 @@
           "harmonized_value": "Intra-operative Needle Biopsy",
           "value_as_concept_id": {
             "id": 4173506,
-            "name": "Needle biopsy of kidney",
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
             "domain": "Procedure",
-            "vocabulary": "SNOMED"
+            "vocabulary": "SNOMED",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "275155009"
           },
           "note": ""
         },
@@ -575,9 +595,11 @@
           "harmonized_value": "Biopsy",
           "value_as_concept_id": {
             "id": 4217034,
-            "name": "Kidney biopsy",
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
             "domain": "Procedure",
-            "vocabulary": "SNOMED"
+            "vocabulary": "SNOMED",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "7246002"
           },
           "note": ""
         }
@@ -589,9 +611,11 @@
       "table": "measurement",
       "defining_concept_id": {
         "id": 602279,
-        "name": "Specimen collection procedure",
+        "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
         "domain": "Observation",
-        "target_field": "measurement_concept_id"
+        "target_field": "measurement_concept_id",
+        "vocabulary_id": "SNOMED",
+        "concept_code": "2620001000004108"
       },
       "anchored_to": {
         "person_id": "staging.person_map"
@@ -611,9 +635,11 @@
           "value_as_number": null,
           "value_as_concept_id": {
             "id": 4173506,
-            "name": "Needle biopsy of kidney",
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
             "domain": "Procedure",
-            "vocabulary": "SNOMED"
+            "vocabulary": "SNOMED",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "275155009"
           },
           "value_as_string": "Percutaneous Needle Biopsy"
         },
@@ -622,9 +648,11 @@
           "value_as_number": null,
           "value_as_concept_id": {
             "id": 4164499,
-            "name": "Surgical biopsy of kidney",
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
             "domain": "Procedure",
-            "vocabulary": "SNOMED"
+            "vocabulary": "SNOMED",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "274358005"
           },
           "value_as_string": "Transplant Pre-perfusion Biopsy"
         },
@@ -633,9 +661,11 @@
           "value_as_number": null,
           "value_as_concept_id": {
             "id": 4221238,
-            "name": "Open biopsy of kidney",
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
             "domain": "Procedure",
-            "vocabulary": "SNOMED"
+            "vocabulary": "SNOMED",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "40134000"
           },
           "value_as_string": "Intra-operative Biopsy"
         },
@@ -644,9 +674,11 @@
           "value_as_number": null,
           "value_as_concept_id": {
             "id": 4021108,
-            "name": "Total nephrectomy",
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
             "domain": "Procedure",
-            "vocabulary": "SNOMED"
+            "vocabulary": "SNOMED",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "175905003"
           },
           "value_as_string": "Tumor Nephrectomy"
         },
@@ -654,9 +686,11 @@
           "harmonized_value": "Deceased Donor Nephrectomy",
           "value_as_concept_id": {
             "id": 4344635,
-            "name": "Cadaver donor nephrectomy",
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
             "domain": "Procedure",
-            "vocabulary": "SNOMED"
+            "vocabulary": "SNOMED",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "240325001"
           },
           "note": ""
         },
@@ -664,9 +698,11 @@
           "harmonized_value": "Total Tumor Nephrectomy",
           "value_as_concept_id": {
             "id": 4021108,
-            "name": "Total nephrectomy",
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
             "domain": "Procedure",
-            "vocabulary": "SNOMED"
+            "vocabulary": "SNOMED",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "175905003"
           },
           "note": ""
         },
@@ -674,9 +710,11 @@
           "harmonized_value": "Partial Tumor Nephrectomy",
           "value_as_concept_id": {
             "id": 4304536,
-            "name": "Partial nephrectomy",
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
             "domain": "Procedure",
-            "vocabulary": "SNOMED"
+            "vocabulary": "SNOMED",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "81516001"
           },
           "note": ""
         },
@@ -684,9 +722,11 @@
           "harmonized_value": "Transplant Surveillance Biopsy",
           "value_as_concept_id": {
             "id": 4217034,
-            "name": "Kidney biopsy",
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
             "domain": "Procedure",
-            "vocabulary": "SNOMED"
+            "vocabulary": "SNOMED",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "7246002"
           },
           "note": ""
         },
@@ -694,9 +734,11 @@
           "harmonized_value": "Intra-operative Needle Biopsy",
           "value_as_concept_id": {
             "id": 4173506,
-            "name": "Needle biopsy of kidney",
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
             "domain": "Procedure",
-            "vocabulary": "SNOMED"
+            "vocabulary": "SNOMED",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "275155009"
           },
           "note": ""
         },
@@ -704,9 +746,11 @@
           "harmonized_value": "Biopsy",
           "value_as_concept_id": {
             "id": 4217034,
-            "name": "Kidney biopsy",
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
             "domain": "Procedure",
-            "vocabulary": "SNOMED"
+            "vocabulary": "SNOMED",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "7246002"
           },
           "note": ""
         }
@@ -718,10 +762,12 @@
       "table": "specimen",
       "defining_concept_id": {
         "id": 4133742,
-        "name": "Specimen from kidney",
+        "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
         "domain": "Specimen",
         "vocabulary": "SNOMED",
-        "target_field": "specimen_concept_id"
+        "target_field": "specimen_concept_id",
+        "vocabulary_id": "SNOMED",
+        "concept_code": "127473003"
       },
       "anchored_to": [
         "person_id"
@@ -733,9 +779,11 @@
           "harmonized_value": "Percutaneous Needle Biopsy",
           "value_as_concept_id": {
             "id": 4048980,
-            "name": "Specimen from kidney obtained by (core) needle biopsy",
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
             "domain": "Specimen",
-            "vocabulary": "SNOMED"
+            "vocabulary": "SNOMED",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "122670001"
           },
           "note": ""
         },
@@ -743,9 +791,11 @@
           "harmonized_value": "Transplant Pre-perfusion Biopsy",
           "value_as_concept_id": {
             "id": 4206376,
-            "name": "Specimen from transplanted kidney obtained by biopsy",
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
             "domain": "Specimen",
-            "vocabulary": "SNOMED"
+            "vocabulary": "SNOMED",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "438661003"
           },
           "note": ""
         },
@@ -753,9 +803,11 @@
           "harmonized_value": "Intra-operative Biopsy",
           "value_as_concept_id": {
             "id": 4045782,
-            "name": "Specimen from kidney obtained by incisional biopsy",
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
             "domain": "Specimen",
-            "vocabulary": "SNOMED"
+            "vocabulary": "SNOMED",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "122672009"
           },
           "note": ""
         },
@@ -763,9 +815,11 @@
           "harmonized_value": "Tumor Nephrectomy",
           "value_as_concept_id": {
             "id": 4021108,
-            "name": "Total nephrectomy",
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
             "domain": "Specimen",
-            "vocabulary": "SNOMED"
+            "vocabulary": "SNOMED",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "175905003"
           },
           "note": ""
         },
@@ -773,9 +827,11 @@
           "harmonized_value": "Deceased Donor Nephrectomy",
           "value_as_concept_id": {
             "id": 4205249,
-            "name": "Total nephrectomy specimen",
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
             "domain": "Specimen",
-            "vocabulary": "SNOMED"
+            "vocabulary": "SNOMED",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "309497005"
           },
           "note": ""
         },
@@ -783,9 +839,11 @@
           "harmonized_value": "Total Tumor Nephrectomy",
           "value_as_concept_id": {
             "id": 4205249,
-            "name": "Total nephrectomy specimen",
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
             "domain": "Specimen",
-            "vocabulary": "SNOMED"
+            "vocabulary": "SNOMED",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "309497005"
           },
           "note": ""
         },
@@ -793,9 +851,11 @@
           "harmonized_value": "Partial Tumor Nephrectomy",
           "value_as_concept_id": {
             "id": 4206133,
-            "name": "Partial nephrectomy specimen",
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
             "domain": "Specimen",
-            "vocabulary": "SNOMED"
+            "vocabulary": "SNOMED",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "309498000"
           },
           "note": ""
         },
@@ -803,9 +863,11 @@
           "harmonized_value": "Transplant Surveillance Biopsy",
           "value_as_concept_id": {
             "id": 4206376,
-            "name": "Specimen from transplanted kidney obtained by biopsy",
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
             "domain": "Specimen",
-            "vocabulary": "SNOMED"
+            "vocabulary": "SNOMED",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "438661003"
           },
           "note": ""
         },
@@ -813,9 +875,11 @@
           "harmonized_value": "Intra-operative Needle Biopsy",
           "value_as_concept_id": {
             "id": 4048980,
-            "name": "Specimen from kidney obtained by (core) needle biopsy",
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
             "domain": "Specimen",
-            "vocabulary": "SNOMED"
+            "vocabulary": "SNOMED",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "122670001"
           },
           "note": ""
         },
@@ -823,9 +887,11 @@
           "harmonized_value": "Biopsy",
           "value_as_concept_id": {
             "id": 4204351,
-            "name": "Kidney biopsy specimen",
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
             "domain": "Specimen",
-            "vocabulary": "SNOMED"
+            "vocabulary": "SNOMED",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "309269002"
           },
           "note": ""
         }

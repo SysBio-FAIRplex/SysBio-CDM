@@ -25,7 +25,9 @@
       "linked_defining_concept": {
         "id": 1094256,
         "name": "Was not on medication",
-        "domain": "Meas Value"
+        "domain": "Meas Value",
+        "vocabulary_id": "LOINC",
+        "concept_code": "LA34444-2"
       },
       "linked_table": "observation",
       "linked_value_set": [
@@ -34,7 +36,9 @@
       "linking_mechanism": "MEASUREMENT.measurement_event_id",
       "linking_mechanism_concept_id": {
         "id": 1147165,
-        "name": "observation.observation_id"
+        "name": "observation.observation_id",
+        "vocabulary_id": "CDM",
+        "concept_code": "CDM221"
       }
     },
     {
@@ -44,7 +48,9 @@
       "linked_defining_concept": {
         "id": 1094256,
         "name": "Was not on medication",
-        "domain": "Meas Value"
+        "domain": "Meas Value",
+        "vocabulary_id": "LOINC",
+        "concept_code": "LA34444-2"
       },
       "linked_table": "observation",
       "linked_value_set": [
@@ -53,7 +59,9 @@
       "linking_mechanism": "FACT_RELATIONSHIP",
       "linking_mechanism_concept_id": {
         "id": 581411,
-        "name": "Measurement to Observation"
+        "name": "Measurement to Observation",
+        "vocabulary_id": "Relationship",
+        "concept_code": "OMOP5217059"
       }
     },
     {
@@ -65,7 +73,9 @@
       "linking_mechanism": "MEASUREMENT.measurement_event_id",
       "linking_mechanism_concept_id": {
         "id": 1147138,
-        "name": "measurement.measurement_id"
+        "name": "measurement.measurement_id",
+        "vocabulary_id": "CDM",
+        "concept_code": "CDM194"
       },
       "note": ""
     }
@@ -159,7 +169,9 @@
         "id": 40768873,
         "name": "Rigidity Upper extremity - right [UPDRS]",
         "domain": "Measurement",
-        "target_field": "measurement_concept_id"
+        "target_field": "measurement_concept_id",
+        "vocabulary_id": "LOINC",
+        "concept_code": "66192-6"
       },
       "anchored_to": {
         "person_id": "staging.person_map",
@@ -196,7 +208,9 @@
           "value_as_number": 0,
           "value_as_concept_id": {
             "id": 45884153,
-            "name": "Normal"
+            "name": "Normal",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA6626-1"
           },
           "value_as_string": "normal"
         },
@@ -205,7 +219,9 @@
           "value_as_number": 1,
           "value_as_concept_id": {
             "id": 45880586,
-            "name": "Slight"
+            "name": "Slight",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA11910-9"
           },
           "value_as_string": "slight"
         },
@@ -214,7 +230,9 @@
           "value_as_number": 2,
           "value_as_concept_id": {
             "id": 45883535,
-            "name": "Mild"
+            "name": "Mild",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA6752-5"
           },
           "value_as_string": "mild"
         },
@@ -223,7 +241,9 @@
           "value_as_number": 3,
           "value_as_concept_id": {
             "id": 45877983,
-            "name": "Moderate"
+            "name": "Moderate",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA6751-7"
           },
           "value_as_string": "moderate"
         },
@@ -232,7 +252,9 @@
           "value_as_number": 4,
           "value_as_concept_id": {
             "id": 45883536,
-            "name": "Severe"
+            "name": "Severe",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA6750-9"
           },
           "value_as_string": "severe"
         }

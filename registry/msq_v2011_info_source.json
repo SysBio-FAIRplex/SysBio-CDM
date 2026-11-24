@@ -71,7 +71,9 @@
         "id": 42529257,
         "name": "Respondent type",
         "domain": "Observation",
-        "target_field": "observation_concept_id"
+        "target_field": "observation_concept_id",
+        "vocabulary_id": "LOINC",
+        "concept_code": "83129-7"
       },
       "anchored_to": {
         "person_id": "staging.person_map",
@@ -85,14 +87,18 @@
           "value_as_string": "informant",
           "value_as_concept_id": {
             "id": 45881752,
-            "name": "Interview with informant"
+            "name": "Interview with informant",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA14872-8"
           }
         },
         {
           "harmonized_value": "subject served as informant",
           "value_as_concept_id": {
             "id": 603082,
-            "name": "Self reported"
+            "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
+            "vocabulary_id": "SNOMED",
+            "concept_code": "1156040003"
           },
           "value_as_string": "subject served as informant"
         }

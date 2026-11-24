@@ -136,9 +136,11 @@
       "table": "observation",
       "defining_concept_id": {
         "id": 4288616,
-        "name": "Amyloid deposition",
+        "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
         "domain": "Observation",
-        "target_field": "observation_concept_id"
+        "target_field": "observation_concept_id",
+        "vocabulary_id": "SNOMED",
+        "concept_code": "68790008"
       },
       "anchored_to": {
         "person_id": "staging.person_map"
@@ -155,7 +157,9 @@
           "harmonized_value": "missing or unknown",
           "value_as_concept_id": {
             "id": 45877986,
-            "name": "Unknown"
+            "name": "Unknown",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA4489-6"
           },
           "value_as_string": "missing or unknown"
         },
@@ -168,7 +172,9 @@
           "harmonized_value": "missing or unknown",
           "value_as_concept_id": {
             "id": 45877986,
-            "name": "Unknown"
+            "name": "Unknown",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA4489-6"
           }
         }
       ]

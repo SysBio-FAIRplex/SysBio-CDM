@@ -17,6 +17,52 @@ LABEL = "withheld: AMP data file names are not shared under the current agreemen
 COMMENTARY_KEYS = {"status_note", "note", "notes", "_open_questions", "reviewed_by", "reviewed_on", "why", "rationale", "comment", "comments", "history", "what_reads_it_instead", "surfaced_by", "classified_on", "ruled_by", "excluded_by", "excluded_on", "enforced_by", "added_by", "added_on", "changed_by", "changed_on", "evidence", "reason"}
 DROP_KEYS = {"participant_value_drops", "expected_participants"}          # per-record exceptions and run-derived counts: not specification
 RECORD_KEYS = {"participant_id", "sample_id", "specimen_id", "donor_id"}
+# Concept names from vocabularies whose licence does not permit redistribution are withheld in the public copies; the
+# concept_id, vocabulary_id and concept_code stay so a reader resolves the name from their own licensed vocabulary.
+# The vocabulary of each concept comes from a private table (CDM_CONCEPT_VOCAB: concept_id, vocabulary_id, concept_code).
+SNOMED_FAMILY = {"SNOMED", "Nebraska Lexicon"}
+LICENSED_OTHER = {"CPT4", "HCPCS"}
+SNOMED_PLACEHOLDER = "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]"
+LICENSED_PLACEHOLDER = "[LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]"
+UNRESOLVED_PLACEHOLDER = "[LABEL-WITHHELD-VOCABULARY-NOT-RESOLVED]"
+
+
+def concept_vocabulary():
+    """The private concept_id -> (vocabulary_id, concept_code) table, or an empty dict when none is given."""
+    path = os.environ.get("CDM_CONCEPT_VOCAB", "")
+    out = {}
+    if path and os.path.exists(path):
+        with open(path, encoding="utf-8", newline="") as f:
+            for r in csv.DictReader(f, delimiter="\t"):
+                try:
+                    out[int(r["concept_id"])] = (r["vocabulary_id"], r["concept_code"])
+                except (KeyError, ValueError):
+                    continue
+    return out
+
+
+def withhold_licensed_names(node, vocab, counts=None):
+    """Walk a spec; every concept object ({id: int, name: str, ...}) gets vocabulary_id and concept_code, and its name is
+    replaced by a placeholder when the vocabulary is SNOMED (or a SNOMED extension), another licensed vocabulary, or unknown.
+    concept id 0 (no concept) is left alone. counts, if given, receives one entry per placeholder written."""
+    if isinstance(node, dict):
+        if isinstance(node.get("id"), int) and isinstance(node.get("name"), str) and node["id"] != 0:
+            v = vocab.get(node["id"])
+            if v:
+                node.setdefault("vocabulary_id", v[0]); node.setdefault("concept_code", v[1])
+                ph = SNOMED_PLACEHOLDER if v[0] in SNOMED_FAMILY else (LICENSED_PLACEHOLDER if v[0] in LICENSED_OTHER else None)
+            else:
+                ph = UNRESOLVED_PLACEHOLDER
+            if ph:
+                node["name"] = ph
+                if counts is not None: counts[ph] = counts.get(ph, 0) + 1
+        for v_ in node.values(): withhold_licensed_names(v_, vocab, counts)
+    elif isinstance(node, list):
+        for v_ in node: withhold_licensed_names(v_, vocab, counts)
+    return node
+
+
+VOCAB = concept_vocabulary()
 PIN_KEYS = {"file", "source_id", "id_type", "sha256", "access_groups", "sheet", "item_as_source_id", "item_as_source_ids"}      # a pin is identity only; no notes ride on it
 FREE_TEXT_WORDS = 4          # a source value of this many words or more is a per-record text, not a category
 DEFINITION_MAX = 160         # a first sentence longer than this is rationale, not a definition
@@ -159,6 +205,7 @@ def main():
         j["sources"] = [s_ for s_ in (j.get("sources") or []) if str(s_.get("status") or "").lower() not in NOT_LOADED]
         for s_ in j["sources"]: s_["status"] = "approved"
         if "status" in j: j["status"] = "approved"
+        withhold_licensed_names(j, VOCAB)
         open(dest, "w", encoding="utf-8").write(json.dumps(j, indent=2, ensure_ascii=False) + "\n")
         recorded[label] = {"element": label, "private_registry_file": os.path.basename(p), "sha256_of_private_original": hashlib.sha256(open(p, "rb").read()).hexdigest(), "pins_redacted": str(redacted), "public_sha256": hashlib.sha256(open(dest, "rb").read()).hexdigest()}
     with open(manifest, "w", encoding="utf-8", newline="") as f:

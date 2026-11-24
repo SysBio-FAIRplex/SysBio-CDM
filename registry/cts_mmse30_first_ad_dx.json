@@ -77,9 +77,11 @@
       "table": "measurement",
       "defining_concept_id": {
         "id": 4169175,
-        "name": "Mini-mental state examination",
+        "name": "[SNOMED-LABEL-WITHHELD-MUST-HAVE-LICENSE-TO-RESOLVE]",
         "domain": "Measurement",
-        "target_field": "measurement_concept_id"
+        "target_field": "measurement_concept_id",
+        "vocabulary_id": "SNOMED",
+        "concept_code": "273617000"
       },
       "anchored_to": {
         "person_id": "staging.person_map"

@@ -343,7 +343,9 @@
         "id": 40771985,
         "name": "Ethnicity OMB.1997",
         "domain": "Observation",
-        "target_field": "observation_concept_id"
+        "target_field": "observation_concept_id",
+        "vocabulary_id": "LOINC",
+        "concept_code": "69490-1"
       },
       "anchored_to": {
         "person_id": "staging.person_map"
@@ -355,7 +357,9 @@
           "harmonized_value": "Not Hispanic or Latino",
           "value_as_concept_id": {
             "id": 38003564,
-            "name": "Not Hispanic or Latino"
+            "name": "Not Hispanic or Latino",
+            "vocabulary_id": "Ethnicity",
+            "concept_code": "Not Hispanic"
           },
           "value_as_string": "Not Hispanic or Latino"
         },
@@ -363,7 +367,9 @@
           "harmonized_value": "Unknown",
           "value_as_concept_id": {
             "id": 45877986,
-            "name": "Unknown"
+            "name": "Unknown",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA4489-6"
           },
           "value_as_string": "Unknown"
         },
@@ -371,7 +377,9 @@
           "harmonized_value": "Hispanic or Latino",
           "value_as_concept_id": {
             "id": 38003563,
-            "name": "Hispanic or Latino"
+            "name": "Hispanic or Latino",
+            "vocabulary_id": "Ethnicity",
+            "concept_code": "Hispanic"
           },
           "value_as_string": "Hispanic or Latino"
         },
@@ -379,7 +387,9 @@
           "harmonized_value": "unknown",
           "value_as_concept_id": {
             "id": 45877986,
-            "name": "Unknown"
+            "name": "Unknown",
+            "vocabulary_id": "LOINC",
+            "concept_code": "LA4489-6"
           },
           "value_as_string": "unknown"
         }
